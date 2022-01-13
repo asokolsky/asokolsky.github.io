@@ -1,0 +1,23 @@
+[Unit]
+Description=VictoriaMetrics
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+StartLimitBurst=5
+StartLimitInterval=0
+Restart=on-failure
+RestartSec=1
+PIDFile=/var/run/victoria-metrics.pid
+ExecStart=/usr/local/bin/victoria-metrics \
+    -storageDataPath /var/lib/victoria-metrics \
+    -graphiteListenAddr=:2003 \
+    -retentionPeriod 6
+
+#   -promscrape.config /etc/prometheus/prometheus.yml \
+
+[Install]
+WantedBy=multi-user.target

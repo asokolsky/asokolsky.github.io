@@ -1,0 +1,41 @@
+# prometheus global config
+global:
+  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  scrape_timeout: 15s      # global default is 10s.
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+remote_write:
+  - url: http://localhost:8428/api/v1/write
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+    - targets: ['localhost:9090']
+    
+  - job_name: 'grafana'
+    static_configs:
+    - targets: ['localhost:3000']
+
+  - job_name: 'node_exporter'
+    static_configs:
+    - targets: ['localhost:9100']
+    
+  - job_name: 'wmi_exporter'
+    static_configs:
+    - targets: ['exi:9182']
+    
+  - job_name: 'victoria-metrics'
+    static_configs:
+    - targets: ['localhost:8428']

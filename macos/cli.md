@@ -1,0 +1,36 @@
+# Useful Commands
+
+## List Hardware
+
+```
+asokolsky in ~ > system_profiler -detailLevel full SPEthernetDataType
+system_profiler -detailLevel full SPEthernetDataType
+Ethernet:
+
+    Apple T2 Controller:
+
+      Bus: USB
+      Vendor Name: Apple Inc.
+      Product Name: Apple T2 Controller
+      Vendor ID: 0x05ac
+      Product ID: 0x8233
+      USB Link Speed: Up to 480 Mb/s
+      Driver: com.apple.driver.usb.cdc.ncm
+      BSD Device Name: en5
+      MAC Address: ac:de:48:00:11:22
+      AVB Support: No
+      Maximum Link Speed: 2.5 Gb/s
+
+    USB 10/100/1000 LAN:
+
+      Bus: USB
+      Vendor Name: Realtek
+      Product Name: USB 10/100/1000 LAN
+      Vendor ID: 0x0bda
+      Product ID: 0x8153
+      USB Link Speed: Up to 5 Gb/s
+      Driver: com.apple.DriverKit.AppleUserECM
+      BSD Device Name: en7
+      MAC Address: 00:00:00:00:00:00
+      AVB Support: No
+```
