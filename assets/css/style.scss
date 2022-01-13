@@ -4,5 +4,13 @@
 @import "{{ site.theme }}";
 
 ul li {
-  list-style-image: none;
+    list-style-image: none;
+}
+ul li::before {
+    content: "\2022";
+    color: #b5e853;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
