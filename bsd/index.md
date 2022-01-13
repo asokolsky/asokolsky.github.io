@@ -1,5 +1,10 @@
 # FreeBSD Stuff
 
+## More Files
+
+* driveid.sh
+* systemps.sh
+
 ## Display Partition Table in FreeBSD
 
 ```
