@@ -1,6 +1,6 @@
 # MacOS Customization
 
-This is pretty much all about making keayboard useful.
+This is pretty much all about making keyboard useful.
 
 ## Pre-existing Keyboard Accelerators
 
@@ -11,7 +11,7 @@ This is pretty much all about making keayboard useful.
 
 To customize:
 
-https://www.macworld.com/article/217325/how-to-keep-track-of-keyboard-shortcuts.html
+[how to keep track of keyboard shortcuts](https://www.macworld.com/article/217325/how-to-keep-track-of-keyboard-shortcuts.html)
 
 ## Custom System-wide Keyboard Accelerators - BAD IDEA
 
@@ -29,7 +29,7 @@ do it in karabiner only - see below.
 
 Differentiate Let/Right Ctrl, Swap Ctrl and CapsLock, support for Home/End, etc:
 
-[karabiner-elements](https://karabiner-elements.pqrs.org/) + 
+[karabiner-elements](https://karabiner-elements.pqrs.org/) +
 [karabiner-windows-mode](https://github.com/rux616/karabiner-windows-mode)
 
 ## Differentiate TouchPad and Mouse Scroll Direction
@@ -42,3 +42,9 @@ Use:
 
 * [spectacle](https://www.spectacleapp), [sources](https://github.com/eczarny/spectacle)
 * or better yet [Rectangle](https://github.com/rxhanson/Rectangle)
+
+## More
+
+* [cli](cli.html)
+* [exiftool](exiftool.html)
+* [jenkins](jenkins.html)
