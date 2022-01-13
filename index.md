@@ -2,31 +2,28 @@
 
 ### General
 
-* api-gateways.md
-* ldap.md
-* ubiquity.md
-* wireguard.md
-* zfs.md
+* [api-gateways](api-gateways.html)
+* [ldap](ldap.html)
+* [ubiquity](ldap.html)
+* [wireguard](wireguard.html)
+* [zfs](zfs.html)
 
 ### Linux
 
-* cli.md
-* iperf.md
-* ipmi.md
-* prometheus-grafana.md
-* remote.md
-* rsync.md
-* speed-test.sh
-* ssh.md
+* [cli](cli.html)
+* [iperf](iperf.html)
+* [ipmi](ipmi.html)
+* [prometheus-grafana](prometheus-grafana.html)
+* [remote](remote.html)
+* [rsync](rsync.html)
+* [speed-test.sh](speed-test.sh)
+* [ssh](ssh.html)
 
-### BSD
+### More
 
-### CentOS
-
-### MacOS
-
-### Programming
-
-### Proxmox
-
-### Windows
+* [bsd](bsd/)
+* [centos](centos/)
+* [macos](macos/)
+* [programming](programming/)
+* [proxmox](proxmox)
+* [windows](windows)
