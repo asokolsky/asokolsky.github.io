@@ -1,7 +1,14 @@
 ---
-tags:
-    - linux
+title: Start Here and Now
+tags: linux
 ---
-# Start Here and Now
 
 Why not?
+
+Variables:
+
+* title: {{ page.title }}
+* url: {{ page.url }}
+* date: {{ page.date }}
+* id: {{ page.id }}
+* author: {{ page.author }}
