@@ -2,7 +2,7 @@
 # Blog Posts
 
 {% for post in site.posts %}
-### {{post.date}} [{{ post.title }}]({{ post.url }})
+### [{{post.date[0,10]}}]({{ post.url }}) {{ post.title }}
 
 > {{ post.excerpt }}
 
