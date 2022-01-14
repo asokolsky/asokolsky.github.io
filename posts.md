@@ -2,7 +2,7 @@
 # Blog Posts
 
 {% for post in site.posts %}
-### {{post.date.strftime("%F")}} [{{ post.title }}]({{ post.url }})
+### {{post.date | date: "%Y-%m-%d"}} [{{ post.title }}]({{ post.url }})
 
 > {{ post.excerpt }}
 
