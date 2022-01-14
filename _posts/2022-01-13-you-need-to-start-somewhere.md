@@ -12,3 +12,5 @@ Variables:
 * date: {{ page.date }}
 * id: {{ page.id }}
 * author: {{ page.author }}
+
+Body of the post goes here.
