@@ -19,11 +19,32 @@
 * [speed-test.sh](speed-test.sh)
 * [ssh](ssh.html)
 
-### More
+### BSD
 
-* [bsd](bsd/)
-* [centos](centos/)
-* [macos](macos/)
-* [programming](programming/)
-* [proxmox](proxmox)
-* [windows](windows)
+* [all](bsd/)
+
+### CentOS
+
+* [all](centos/)
+
+
+### MacOS
+
+* [cli](macos/cli.html)
+* [exiftool](macos/exiftool.html)
+* [jenkins](macos/jenkins.html)
+* [more](macos/)
+
+### Programming
+
+* [https](programming/https.html)
+* [python-string-enum](programming/python-string-enum.html)
+* [more](programming/)
+
+### ProxMox
+
+* [all](proxmox/)
+
+### Windows
+
+* [all](windows/)
