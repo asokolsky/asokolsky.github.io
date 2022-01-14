@@ -1,5 +1,3 @@
-## Content
-
 ### General
 
 * [api-gateways](api-gateways.html)
@@ -19,14 +17,9 @@
 * [speed-test.sh](speed-test.sh)
 * [ssh](ssh.html)
 
-### BSD
+[BSD](bsd/)
 
-* [all](bsd/)
-
-### CentOS
-
-* [all](centos/)
-
+[CentOS](centos/)
 
 ### MacOS
 
@@ -39,15 +32,10 @@
 
 * [https](programming/https.html)
 * [python-string-enum](programming/python-string-enum.html)
-* [more](programming/)
 
-### ProxMox
+[ProxMox](proxmox/)
 
-* [all](proxmox/)
-
-### Windows
-
-* [all](windows/)
+[Windows](windows/)
 
 
 [blog posts](posts.html)
