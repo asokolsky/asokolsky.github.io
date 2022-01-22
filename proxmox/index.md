@@ -131,27 +131,6 @@ Add connection to the NFS server:  Datacenter\Storage Add NFS
 
 Datacenter\Backup, Add
 
-
-## Container Manipulation
-
-List containers:
-```
- pct list
-```
-Start and enter into a container (without password):
-```
- pct start VMID
- pct enter VMID
-```
-
-## Container Templates
-
-```
- pveam update
- pveam available
- pveam download local ubuntu-18.10-standard_18.10-2_amd64.tar.gz
-```
-
 ## Cron
 
 ## /etc/cron.daily
@@ -174,49 +153,14 @@ fstrim
 /usr/sbin/fstrim --all || true
 ```
 
-## VM Manipulation
-
-Show VMs:
-
-```
-cat /etc/pve/.vmlist
-```
-
-Delete VM by id:
-
-```
-qm destroy <vmid>
-```
-
-If the above fails because the machine is locked:
-
-```
-qm unlock <VMID>
-```
-
-# Old Kernel Cleanup
-
-From the [forum post](https://forum.proxmox.com/threads/clean-old-kernels.42040/#post-204417)
-
-Start with upgrading to the latest kernel `apt update && apt dist-upgrade` and
-then rebooting.
-
-Learn the kernel version you are using `uname -a`.
-
-Show the kernels installed:  `dpkg --list|grep pve-kernel`
-
-You only want to remove kernel packages of the form `pve-kernel-x.xx.xx-x-pve`!
-
-Do it with `apt purge pve-kernel-4.13.16-1-pve`
-
-Observe the results with `ls -l /boot`
-
 ## More
 
 * [centos7](centos7.html)
+* [cli](cli.html)
 * [cloud-init](cloud-init.html)
 * [file-server](file-server.html)
 * [gpu-passthrough](gpu-passthrough.html)
+* [kernels](kernels.html)
 * [nas](nas.html)
 * [network](network.html)
 * [nut](nut.html)
