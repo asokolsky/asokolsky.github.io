@@ -3,6 +3,7 @@
 * [api-gateways](api-gateways.html)
 * [ldap](ldap.html)
 * [ubiquity](ldap.html)
+* [.vscode](dot.vscode.html)
 * [wireguard](wireguard.html)
 * [zfs](zfs.html)
 
