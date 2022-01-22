@@ -179,36 +179,6 @@ Alternatively:
 ```
 More: http://www.noah.org/wiki/CapsLock_Remap_Howto
 
-## Kernel Tuning
-
-To make those changes persisent, edit  /etc/sysctl.conf
-
-### No Swapping
-
-To set it:
-
-```
-sudo sysctl vm.swappiness=10
-
-```
-Check it
-```
-cat /proc/sys/vm/swappiness
-```
-
-### Adjusting Cache
-
-For iO serer is makes sense allow more dirty pages, less dirty cache:
-
-https://youtu.be/7dkSze52i-o?t=1607
-
-https://lonesysadmin.net/2013/12/22/better-linux-disk-caching-performance-vm-dirty_ratio/
-
-```
-vm.dirty_background_ratio = 5
-vm.dirty_ratio = 80
-```
-
 ## Java Tuning
 
 It's all about GC. At least Java 7 update 51.
@@ -219,4 +189,3 @@ Choose Garbage First (G1) Collector
 * set target GC pause time.
 
 https://youtu.be/7dkSze52i-o?t=1771
-

@@ -12,6 +12,7 @@
 * [cli](cli.html)
 * [iperf](iperf.html)
 * [ipmi](ipmi.html)
+* [kernel tuning](kernel-tuning.html)
 * [prometheus-grafana](prometheus-grafana.html)
 * [remote](remote.html)
 * [rsync](rsync.html)
