@@ -2,7 +2,8 @@
 
 ## Source
 
-https://www.howtoforge.com/tutorial/configure-postfix-to-use-gmail-as-a-mail-relay/
+[Configure postfix to use gmail as a mail
+relay](https://www.howtoforge.com/tutorial/configure-postfix-to-use-gmail-as-a-mail-relay/).
 
 ## Extra Step
 

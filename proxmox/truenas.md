@@ -18,10 +18,11 @@ Note VM id: 101.
 
 # Passthrough
 
-Ideally you would pass through the entire host bus adapter.
+1. Ideally you would pass through the entire host bus adapter.
 
-If you do not have a host bus adapter and want to just pass SATA drives,
-https://pve.proxmox.com/wiki/Passthrough_Physical_Disk_to_Virtual_Machine_(VM)
+2. If you do not have a host bus adapter and want to just pass SATA drives, do
+[passthrough
+disk](https://pve.proxmox.com/wiki/Passthrough_Physical_Disk_to_Virtual_Machine_(VM)).
 
 The rest of the doc deals with the second approach.
 

@@ -2,13 +2,13 @@
 
 ## Sources
 
-https://wiki.archlinux.org/title/CPU_frequency_scaling
-https://forum.proxmox.com/threads/fix-always-high-cpu-frequency-in-proxmox-host.84270/
-https://forum.proxmox.com/threads/cpu-power-throttle-back-to-save-energy.27510/
+* [CPU frequency
+scaling](https://wiki.archlinux.org/title/CPU_frequency_scaling)
+* [thread1](https://forum.proxmox.com/threads/fix-always-high-cpu-frequency-in-proxmox-host.84270/)
+* [thread2](https://forum.proxmox.com/threads/cpu-power-throttle-back-to-save-energy.27510/)
 
-The problem statement here is relevant for AMD CPUs:
-https://forum.level1techs.com/t/gigabyte-server-activity-corner-proxmox-docker-and-config-notes/167614
-
+Just in case you have AMD CPUs:
+[thread3](https://forum.level1techs.com/t/gigabyte-server-activity-corner-proxmox-docker-and-config-notes/167614).
 
 ## Enable Power Saving
 

@@ -1,7 +1,9 @@
 # String Enum in Python3
 
 
-[Bare Python's enum](https://docs.python.org/3/library/enum.html) is not good enough: Int representation may be efficient, but it is not human readable after it is serialized.
+[Bare Python's enum](https://docs.python.org/3/library/enum.html) is not good
+enough: Int representation may be efficient, but it is not human readable after
+it is serialized.
 
 It would be nice to have a string enum.  Multiple inheritance to the resque!
 
@@ -22,7 +24,7 @@ class Color( str, Enum ):
     @classmethod
     def is_primary( cls, st: Union[ str, 'Color' ] ) -> bool:
         return st in [ cls.red, cls.green, cls.black  ]
-        
+
     @classmethod
     def is_valid( cls, st: Union[ str, 'Color' ] ) -> bool:
         return st in Color._value2member_map_

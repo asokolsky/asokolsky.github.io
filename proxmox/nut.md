@@ -4,10 +4,10 @@
 
 ## Configure UPS
 
-[howto-configure-ups-on-proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
-https://networkupstools.org/
-https://wiki.archlinux.org/index.php/Network_UPS_Tools
-https://zackreed.me/installing-nut-on-ubuntu/
+* [howto-configure-ups-on-proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
+* https://networkupstools.org/
+* https://wiki.archlinux.org/index.php/Network_UPS_Tools
+* https://zackreed.me/installing-nut-on-ubuntu/
 
 ## Install
 
@@ -150,7 +150,7 @@ Check out status of nut-server, nut-client, ups-monitor:
 
 ```
 root@fuji:/etc/nut# service ups-monitor status -l
-● ups-monitor.service - LSB: Network UPS Tools monitor initscript
+ ups-monitor.service - LSB: Network UPS Tools monitor initscript
    Loaded: loaded (/etc/init.d/ups-monitor; generated)
    Active: active (exited) since Sat 2021-04-03 12:37:37 PDT; 40s ago
      Docs: man:systemd-sysv-generator(8)

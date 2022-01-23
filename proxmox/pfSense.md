@@ -2,11 +2,12 @@
 
 ## Sources
 
-https://pfstore.com.au/blogs/guides/run-pfsense-in-proxmox
+[run pfsense in
+proxmox](https://pfstore.com.au/blogs/guides/run-pfsense-in-proxmox)
 
-## pfSense VM Setup
+## VM Setup
 
-Defaults are safe.  To make it better:
+Defaults are safe.  Make it better:
 
 * CPU - enable pdpe1gb, aes
 * Hard Disk\IO Thread enabled

@@ -96,7 +96,8 @@ Name:	unicon.lan
 Address: 192.168.10.11
 ```
 
-2. Use the above URL to derive a hex value for DHCP option 43: 01:04:c0:a8:0a:0b
+2. Use the above URL to derive a hex value for DHCP option 43:
+01:04:c0:a8:0a:0b
 
 3. Update DHCP server setting.
 
