@@ -85,3 +85,10 @@ Continue proxmox config and setup control web GUI on vmbr0.20.
 |6|20
 |7|20
 |8|20
+
+## unbound Instability
+
+My install was affected by [unbound
+instability](https://redmine.pfsense.org/issues/11316).
+For now in `Services/DNS Resolver/General Settings` I UNchecked
+`Register DHCP leases in the DNS Resolver`.

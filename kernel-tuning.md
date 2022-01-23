@@ -34,3 +34,10 @@ In `/etc/sysctl.conf` set:
 vm.dirty_background_ratio = 5
 vm.dirty_ratio = 80
 ```
+
+## IPv6
+
+I see no reason not to set in `/etc/sysctl.conf`:
+```
+net.ipv6.conf.all.disable_ipv6 = 1
+```
