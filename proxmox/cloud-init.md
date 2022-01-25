@@ -2,20 +2,17 @@
 
 ## Sources
 
-https://austinsnerdythings.com/2021/08/30/how-to-create-a-proxmox-ubuntu-cloud-init-image/
-https://austinsnerdythings.com/2021/09/01/how-to-deploy-vms-in-proxmox-with-terraform/
+* [how to create a proxmox ubuntu cloud init
+image](https://austinsnerdythings.com/2021/08/30/how-to-create-a-proxmox-ubuntu-cloud-init-image/)
+* [how to deploy VMs in proxmox with terraform](https://austinsnerdythings.com/2021/09/01/how-to-deploy-vms-in-proxmox-with-terraform/)
 
 
 ## Get the OS Image
 
-Use Proxmox GUI to download image from URL
-
-```
-https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img
-```
+Use Proxmox GUI to download image from
+`https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img`
 
 ## Add Packages to the Image
-
 
 Prepare proxmox:
 
@@ -107,7 +104,7 @@ qm stop 999 && qm destroy 999
 
 ## Install Terraform on Proxmox Server
 
-From https://learn.hashicorp.com/tutorials/terraform/install-cli
+From [tutorial](https://learn.hashicorp.com/tutorials/terraform/install-cli):
 
 
 ```
