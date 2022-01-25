@@ -39,5 +39,6 @@ vm.dirty_ratio = 80
 
 I see no reason not to set in `/etc/sysctl.conf`:
 ```
-net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.all.disable_ipv6=1
+net.ipv6.conf.default.disable_ipv6=1
 ```
