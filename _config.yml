@@ -4,3 +4,5 @@ description: Alex Sokolsky's Notes on Computers and Programming
 author:
   name: Alex Sokolsky
   url: http://alexsokolsky.com
+plugins:
+  - jekyll-sitemap
