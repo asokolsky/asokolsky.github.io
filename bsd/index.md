@@ -2,8 +2,8 @@
 
 ## More Files
 
-* driveid.sh
-* systemps.sh
+* [driveid.sh](driveid.sh)
+* [systemps.sh](systemps.sh)
 
 ## Display Partition Table in FreeBSD
 

@@ -3,21 +3,21 @@
 * [api-gateways](api-gateways.html)
 * [ldap](ldap.html)
 * [ubiquity](ldap.html)
-* [.vscode](dot.vscode.html)
+* [Visual Studio Code](dot.vscode.html)
 * [wireguard](wireguard.html)
 * [zfs](zfs.html)
 
 ### Linux
 
-* [cli](cli.html)
-* [iperf](iperf.html)
+* cli: [netstat, systemctl, find](cli.html), [iperf](iperf.html),
+[rsync](rsync.html)
 * [ipmi](ipmi.html)
 * [kernel tuning](kernel-tuning.html)
 * [prometheus-grafana](prometheus-grafana.html)
 * [remote](remote.html)
-* [rsync](rsync.html)
-* [speed-test.sh](speed-test.sh)
-* [ssh](ssh.html)
+* Benchmark: [speed-test.sh](speed-test.sh)
+* [ssh key authentication](ssh.html)
+* [tmux](tmux.html)
 
 [BSD](bsd/)
 

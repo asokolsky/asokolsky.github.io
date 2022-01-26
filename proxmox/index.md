@@ -156,17 +156,17 @@ fstrim
 ## More
 
 * [centos7](centos7.html)
-* [cli](cli.html)
-* [cloud-init](cloud-init.html)
+* cli: [vm, container, template manipulation](cli.html),
+[systemps.sh](systemps.sh)
+* [Cloud Init and Terraform](cloud-init.html)
 * [file-server](file-server.html)
 * [gpu-passthrough](gpu-passthrough.html)
-* [kernels](kernels.html)
+* [kernels cleanup](kernels.html)
 * [nas](nas.html)
 * [network](network.html)
 * [nut](nut.html)
 * [pfSense](pfSense.html)
-* [postfix](postfix.html)
-* [power](power.html)
-* [systemps.sh](systemps.sh)
+* [postfix as forwarder](postfix.html)
+* [enable power saving](power.html)
 * [truenas](truenas.html)
 * [unifi](unifi.html)
