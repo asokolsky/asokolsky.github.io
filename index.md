@@ -1,11 +1,11 @@
 ### General
 
 * [api-gateways](api-gateways.html)
-* [ldap](ldap.html)
+* [LDAP](ldap.html)
 * [ubiquity](ldap.html)
 * [Visual Studio Code](dot.vscode.html)
 * [wireguard](wireguard.html)
-* [zfs](zfs.html)
+* [ZFS](zfs.html)
 
 ### Linux
 
@@ -25,7 +25,7 @@
 
 ### MacOS
 
-* [cli](macos/cli.html)
+* cli: [system_profiler](macos/cli.html)
 * [exiftool](macos/exiftool.html)
 * [jenkins](macos/jenkins.html)
 * [more](macos/)

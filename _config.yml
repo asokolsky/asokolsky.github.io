@@ -4,5 +4,10 @@ description: Alex Sokolsky's Notes on Computers and Programming
 author:
   name: Alex Sokolsky
   url: http://alexsokolsky.com
+  location : "Campbell, CA, USA"
 plugins:
   - jekyll-sitemap
+search: true
+social_links:
+  github: asokolsky
+  linkedin: asokolsky
