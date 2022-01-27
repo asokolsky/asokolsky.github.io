@@ -23,13 +23,20 @@
         {{ content }}
       </section>
     </div>
-    <footer>
-      <form method="get" action="http://www.google.com/search" target="_blank">
-        <input type="hidden" name="sitesearch" value="asokolsky.github.io"/>
-        <input type="text" name="q" maxlength="255"
-        placeholder="Search with Google"/>
-      </form>
-      <a href="https://www.linkedin.com/in/{{ site.social_links.linkedin }}">linkedin</a>
-    </footer>
+    <footer class="footer-distributed">
+			<div class="footer-left">
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+			<div class="footer-right">
+        <form method="get" action="http://www.google.com/search" target="_blank">
+          <input type="hidden" name="sitesearch" value="asokolsky.github.io"/>
+          <input type="text" name="q" maxlength="255"
+          placeholder="Search with Google"/>
+        </form>
+			</div>
+		</footer>
   </body>
 </html>
