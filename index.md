@@ -1,17 +1,17 @@
 ### General
 
 * [api-gateways](api-gateways.html)
-* [LDAP](ldap.html)
+* [LDAP and AD search commands](ldap.html)
 * [ubiquity](ldap.html)
 * [Visual Studio Code](dot.vscode.html)
 * [wireguard](wireguard.html)
-* [ZFS](zfs.html)
+* [ZFS setup and commands](zfs.html)
 
 ### Linux
 
 * cli: [netstat, systemctl, find](cli.html), [iperf](iperf.html),
 [rsync](rsync.html)
-* [ipmi](ipmi.html)
+* [ipmi config and cli](ipmi.html)
 * [kernel tuning](kernel-tuning.html)
 * [prometheus-grafana](prometheus-grafana.html)
 * [remote](remote.html)
