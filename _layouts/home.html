@@ -23,5 +23,13 @@
         {{ content }}
       </section>
     </div>
+    <footer>
+      <form method="get" action="http://www.google.com/search" target="_blank">
+        <input type="hidden" name="sitesearch" value="asokolsky.github.io"/>
+        <input type="text" name="q" maxlength="255"
+        placeholder="Search with Google"/>
+      </form>
+      < a href="https://www.linkedin.com/in/{{ site.social_links.linkedin }}">linkedin</a>
+    </footer>
   </body>
 </html>
