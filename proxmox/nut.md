@@ -4,9 +4,9 @@
 
 * [howto configure ups on
 proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
-* [networkupstools.org](https://networkupstools.org/)
-* [https://wiki.archlinux.org/index.php/Network_UPS_Tools](https://wiki.archlinux.org/index.php/Network_UPS_Tools)
-* [https://zackreed.me/installing-nut-on-ubuntu/](https://zackreed.me/installing-nut-on-ubuntu/)
+* [network ups tools](https://networkupstools.org/)
+* [archlinux Network UPS Tools](https://wiki.archlinux.org/index.php/Network_UPS_Tools)
+* [installing nut on ubuntu/](https://zackreed.me/installing-nut-on-ubuntu/)
 
 ## Install
 
@@ -46,7 +46,6 @@ permissions:
 # Rule for the UPS - use lsusb for idVendor and idProduct
 ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="051d", ATTR{idProduct}=="0002", MODE="0660", GROUP="nut"
 ```
-
 or even more elaborate to fight periodic disconnect:
 ```
 SUBSYSTEM!="usb", GOTO="nut-usbups_rules_end"
@@ -56,7 +55,6 @@ ACTION=="add|change", SUBSYSTEM=="usb|usb_device", SUBSYSTEMS=="usb|usb_device",
 
 LABEL="nut-usbups_rules_end"
 ```
-
 Restart the udev service with `service udev restart`.
 
 ## Configure UPSD
@@ -77,6 +75,7 @@ Set NUT into a stand-alone mode by editing `/etc/nut/nut.conf`
 #  You MUST NOT use spaces around the equal sign!
 MODE=standalone
 ```
+## Configure UPSD
 
 Configure UPSD via `/etc/nut/upsd.conf`:
 
@@ -84,6 +83,7 @@ Configure UPSD via `/etc/nut/upsd.conf`:
 LISTEN 127.0.0.1 3493
 LISTEN ::1 3493
 ```
+## Configure UPSMon
 
 Configure UPSMon via `/etc/nut/upsmon.conf`:
 
@@ -111,8 +111,6 @@ actions = SET
 instcmds = ALL
 upsmon master
 ```
-
-Continue as described in the above links.
 
 ## Testing
 
@@ -166,7 +164,6 @@ ups.timer.reboot: 0
 ups.timer.shutdown: -1
 ups.vendorid: 051d
 ```
-
 or just:
 
 ```
@@ -198,9 +195,7 @@ test.panel.start - Start testing the UPS panel
 test.panel.stop - Stop a UPS panel test
 ```
 
-## Continue
-
-as described in the above links:
+Continue as described in the above links:
 
 ```
 systemctl enable nut-server.service
@@ -208,8 +203,6 @@ systemctl enable nut-client.service
 service nut-server start
 service nut-client start
 ```
-
-## Testing
 
 Check out status of nut-server, nut-client, ups-monitor:
 

@@ -2,11 +2,14 @@
 
 ## Font
 
-I like really [Source Code Pro](https://en.wikipedia.org/wiki/Source_Code_Pro).
-by Adobe, [repo](https://github.com/adobe-fonts/source-code-pro),
-[latest release](https://github.com/adobe-fonts/source-code-pro/releases/latest).
+I really like [Source Code Pro](https://en.wikipedia.org/wiki/Source_Code_Pro)
+by Adobe:
 
-Installation [on Mac](https://titanwolf.org/Network/Articles/Article?AID=09204517-16d0-48eb-a201-a96d69b5160f).
+* [repo](https://github.com/adobe-fonts/source-code-pro);
+* download the [latest
+release](https://github.com/adobe-fonts/source-code-pro/releases/latest);
+* installation [on
+Mac](https://titanwolf.org/Network/Articles/Article?AID=09204517-16d0-48eb-a201-a96d69b5160f).
 
 ## Settings
 
@@ -23,7 +26,6 @@ My `setings.json`:
     "editor.fontFamily": "'Source Code Pro',Consolas",
     "editor.fontLigatures": true,
     "editor.rulers": [80],
-    "editor.wordWrap": "wordWrapColumn",
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
@@ -35,7 +37,7 @@ My `setings.json`:
 }
 ```
 
-## Keyboard
+## Custom Keybindings
 
 On macOS I also have `keybindings.json`:
 
