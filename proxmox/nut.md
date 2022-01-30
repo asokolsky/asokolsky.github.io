@@ -78,9 +78,45 @@ Set NUT into a stand-alone mode by editing `/etc/nut/nut.conf`
 MODE=standalone
 ```
 
-## Verify UPS Connection with upsc and upscmd
+Configure UPSD via `/etc/nut/upsd.conf`:
 
-Use `upsc` to display the UPS information:
+```
+LISTEN 127.0.0.1 3493
+LISTEN ::1 3493
+```
+
+Configure UPSMon via `/etc/nut/upsmon.conf`:
+
+```
+MINSUPPLIES 1
+SHUTDOWNCMD "/sbin/shutdown -h +0"
+POLLFREQ 5
+POLLFREQALERT 5
+HOSTSYNC 15
+DEADTIME 15
+POWERDOWNFLAG /etc/killpower
+RBWARNTIME 43200
+NOCOMMWARNTIME 300
+FINALDELAY 5
+MONITOR theUPS@localhost 1 upsmonitor PASSWORD master
+POWERDOWNFLAG /etc/killpower
+SHUTDOWNCMD "/sbin/shutdown -h now"
+```
+
+Finally `/etc/nut/upsd.users`:
+```
+[upsmonitor]
+password = PASSWORD
+actions = SET
+instcmds = ALL
+upsmon master
+```
+
+Continue as described in the above links.
+
+## Testing
+
+Use upsc to display the UPS information:
 
 ```
 root@fuji:/etc/nut# upsc theUPS
