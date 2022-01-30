@@ -5,7 +5,7 @@ layout: home
 
 * [api-gateways](api-gateways.html)
 * [LDAP and AD search commands](ldap.html)
-* [ubiquity](ldap.html)
+* [ubiquity](ubiquity.html)
 * [Visual Studio Code](dot.vscode.html)
 * [wireguard](wireguard.html)
 * [ZFS setup and commands](zfs.html)
@@ -22,7 +22,7 @@ layout: home
 * [ssh key authentication](ssh.html)
 * [tmux](tmux.html)
 
-[BSD](bsd/)
+[BSD geom, gpart, driveid, system temps](bsd/)
 
 [CentOS](centos/)
 
