@@ -46,5 +46,7 @@ layout: home
 [blog posts](posts.html)
 
 
-[![Linkedin
+[![LinkedIn
 Badge](https://img.shields.io/badge/-asokolsky-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/asokolsky/)
+[![GitHub
+Badge](https://img.shields.io/badge/-asokolsky-grey?style=flat&logo=Github&logoColor=white)](https://github.com/asokolsky)
