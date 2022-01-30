@@ -3,11 +3,11 @@ layout: home
 ---
 ### General
 
-* [api-gateways](api-gateways.html)
+* [API Gateways](api-gateways.html)
 * [LDAP and AD search commands](ldap.html)
-* [ubiquity](ubiquity.html)
+* [Ubiquity EdgeRouter X](ubiquity.html)
 * [Visual Studio Code](dot.vscode.html)
-* [wireguard](wireguard.html)
+* [Lan-to-Lan Wireguard](wireguard.html)
 * [ZFS setup and commands](zfs.html)
 
 ### Linux
