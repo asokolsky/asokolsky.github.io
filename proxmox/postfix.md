@@ -62,6 +62,11 @@ Then create /etc/postfix/sasl_passwd.db
 % postmap /etc/postfix/sasl_passwd
 ```
 
+Create `/etc/alias.db`
+```
+$ postalias /etc/aliases
+```
+
 ## Restart Postfix
 
 ```

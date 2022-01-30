@@ -2,33 +2,20 @@
 
 ## Sources
 
-## Configure UPS
-
-* [howto-configure-ups-on-proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
-* https://networkupstools.org/
-* https://wiki.archlinux.org/index.php/Network_UPS_Tools
-* https://zackreed.me/installing-nut-on-ubuntu/
+* [howto configure ups on
+proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
+* [network ups tools](https://networkupstools.org/)
+* [archlinux Network UPS Tools](https://wiki.archlinux.org/index.php/Network_UPS_Tools)
+* [installing nut on ubuntu/](https://zackreed.me/installing-nut-on-ubuntu/)
 
 ## Install
 
 ```
 root@fuji:~# apt install nut
 ```
+## Identify the UPS
 
-## Configuration
-
-Configure the UPS:
-
-```
-root@fuji:~# cat /etc/nut/ups.conf
-maxretry = 3
-[theUPS]
-driver = usbhid-ups
-port = auto
-desc = "the server UPS"
-```
-
-Find the UPS device ID:
+Find the UPS vendorID (051d) and productID (0002):
 
 ```
 root@fuji:~# lsusb
@@ -37,28 +24,58 @@ Bus 001 Device 002: ID 051d:0002 American Power Conversion Uninterruptible Power
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
 
-Now ensure the UPS device ID is used for a "udev rule to allow nut user access to the driver":
+## Configure UPS
 
+Configure the UPS via `/etc/nut/ups.conf`
 ```
-root@fuji:/etc/nut# cat /etc/udev/rules.d/90-nut-ups.rules
+maxretry = 3
+pollinterval = 1
+
+[theUPS]
+driver = usbhid-ups
+port = auto
+desc = "the server UPS"
+# these two are optional
+vendorid = 051d
+productid = 0002
+```
+
+Create `/etc/udev/rules.d/90-nut-ups.rules` to set proper device file
+permissions:
+```
 # Rule for the UPS - use lsusb for idVendor and idProduct
 ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="051d", ATTR{idProduct}=="0002", MODE="0660", GROUP="nut"
 ```
-
-Restart the udev service:
+or even more elaborate to fight periodic disconnect:
 ```
-service udev restart
+SUBSYSTEM!="usb", GOTO="nut-usbups_rules_end"
+
+# Rule for the UPS - use lsusb for idVendor and idProduct
+ACTION=="add|change", SUBSYSTEM=="usb|usb_device", SUBSYSTEMS=="usb|usb_device", ATTR{idVendor}=="0764", ATTR{idProduct}=="0501", MODE="0664", GROUP="nut", RUN+="/sbin/upsdrvctl stop; /sbin/upsdrvctl start"
+
+LABEL="nut-usbups_rules_end"
+```
+Restart the udev service with `service udev restart`.
+
+## Configure UPSD
+
+Edit `/etc/nut/upsd.conf`
+```
+LISTEN 127.0.0.1 3493
+LISTEN 192.168.10.20 3493
+#LISTEN ::1 3493
 ```
 
-Set NUT into a stand-alone mode:
+## Configure NUT
 
+Set NUT into a stand-alone mode by editing `/etc/nut/nut.conf`
 ```
-root@fuji:/etc/nut# cat /etc/nut/nut.conf
 # IMPORTANT NOTE:
 #  This file is intended to be sourced by shell scripts.
 #  You MUST NOT use spaces around the equal sign!
 MODE=standalone
 ```
+## Configure UPSD
 
 Configure UPSD via `/etc/nut/upsd.conf`:
 
@@ -66,6 +83,7 @@ Configure UPSD via `/etc/nut/upsd.conf`:
 LISTEN 127.0.0.1 3493
 LISTEN ::1 3493
 ```
+## Configure UPSMon
 
 Configure UPSMon via `/etc/nut/upsmon.conf`:
 
@@ -93,8 +111,6 @@ actions = SET
 instcmds = ALL
 upsmon master
 ```
-
-Continue as described in the above links.
 
 ## Testing
 
@@ -148,6 +164,14 @@ ups.timer.reboot: 0
 ups.timer.shutdown: -1
 ups.vendorid: 051d
 ```
+or just:
+
+```
+root@suprox:/etc/nut# upsc theUPS@localhost ups.status
+Init SSL without certificate database
+OL
+```
+`OL` here indicates that the system is running 'on line' power.
 
 Use upscmd to issue commands to UPS:
 
@@ -169,6 +193,15 @@ test.battery.start.quick - Start a quick battery test
 test.battery.stop - Stop the battery test
 test.panel.start - Start testing the UPS panel
 test.panel.stop - Stop a UPS panel test
+```
+
+Continue as described in the above links:
+
+```
+systemctl enable nut-server.service
+systemctl enable nut-client.service
+service nut-server start
+service nut-client start
 ```
 
 Check out status of nut-server, nut-client, ups-monitor:
