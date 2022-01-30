@@ -14,13 +14,13 @@ layout: home
 
 * cli: [netstat, systemctl, find](cli.html), [iperf](iperf.html),
 [rsync](rsync.html)
-* [ipmi config and cli](ipmi.html)
-* [kernel tuning](kernel-tuning.html)
-* [prometheus-grafana](prometheus-grafana.html)
-* [remote](remote.html)
+* [IPMI Config and cli](ipmi.html)
+* [Kernel Tuning](kernel-tuning.html)
+* [Prometheus+Grafana](prometheus-grafana.html)
+* [Remote Key Mapping](remote.html)
 * Benchmark: [speed-test.sh](speed-test.sh)
-* [ssh key authentication](ssh.html)
-* [tmux](tmux.html)
+* [Configure SSH for Key Authentication](ssh.html)
+* [tmux cheat sheet](tmux.html)
 
 [BSD geom, gpart, driveid, system temps](bsd/)
 
@@ -36,7 +36,7 @@ layout: home
 ### Programming
 
 * [https](programming/https.html)
-* [python-string-enum](programming/python-string-enum.html)
+* [Better enum in Python](programming/python-string-enum.html)
 
 [ProxMox](proxmox/)
 
@@ -44,3 +44,7 @@ layout: home
 
 
 [blog posts](posts.html)
+
+
+[![Linkedin
+Badge](https://img.shields.io/badge/-asokolsky-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/asokolsky/)
