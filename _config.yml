@@ -1,6 +1,7 @@
 theme: jekyll-theme-hacker
 title: Notes to Self
-description: Alex Sokolsky's Notes on Computers and Programming
+tagline: Alex Sokolsky's Notes on Computers and Programming
+description: Random Notes on Computers and Programming (mostly Python), Linux and Proxmox
 author:
   name: Alex Sokolsky
   url: http://alexsokolsky.com
@@ -8,6 +9,12 @@ author:
 plugins:
   - jekyll-sitemap
 search: true
+google_site_verification: google3ad2904e499c26f9.html
+social:
+  name: Alex Sokolsky
+  links:
+    - https://www.linkedin.com/in/asokolsky
+    - https://github.com/asokolsky
 social_links:
   github: asokolsky
   linkedin: asokolsky

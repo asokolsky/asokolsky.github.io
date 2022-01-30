@@ -18,3 +18,6 @@ sitemap](https://qbituniverse.com/web-hosting/adding-sitemap-to-jekyll-github-pa
 console](https://search.google.com/search-console?resource_id=https%3A%2F%2Fasokolsky.github.io%2F)
 
 Alternative: https://github.com/jekylltools/jekyll-tipue-search
+
+[SEO
+usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md)
