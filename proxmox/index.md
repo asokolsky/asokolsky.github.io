@@ -50,13 +50,13 @@ deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 ### Configure lm-sensors
 
 ```
-sensors-detect
+# sensors-detect
 ```
 
 And finally:
 
 ```
-watch -n 1 sensors
+# watch -n 1 sensors
 ```
 or just
 ```
@@ -133,7 +133,7 @@ Datacenter\Backup, Add
 
 ## Cron
 
-## /etc/cron.daily
+### /etc/cron.daily
 
 smart
 
@@ -143,7 +143,7 @@ smart
 /usr/sbin/smartctl -t long /dev/sdb
 ```
 
-## /etc/cron.weekly
+### /etc/cron.weekly
 
 fstrim
 
@@ -158,15 +158,14 @@ fstrim
 * [centos7](centos7.html)
 * cli: [vm, container, template manipulation](cli.html),
 [systemps.sh](systemps.sh)
-* [Cloud Init and Terraform](cloud-init.html)
-* [file-server](file-server.html)
-* [gpu-passthrough](gpu-passthrough.html)
-* [kernels cleanup](kernels.html)
-* [nas](nas.html)
+* [Rapid VM Deployment with Cloud Init and Terraform](cloud-init.html)
+* ProxMox as [file server](file-server.html) and [nas](nas.html)
+* [GPU passthrough](gpu-passthrough.html)
+* [Kernels cleanup](kernels.html)
 * [network](network.html)
 * [nut](nut.html)
-* [pfSense](pfSense.html)
-* [postfix as forwarder](postfix.html)
-* [enable power saving](power.html)
-* [truenas](truenas.html)
-* [unifi](unifi.html)
+* [pfSense in a VM](pfSense.html)
+* [Postfix as forwarder](postfix.html)
+* [Power Saving](power.html)
+* [TrueNAS Core in a VM](truenas.html)
+* [Unifi Controller in a Containter](unifi.html)

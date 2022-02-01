@@ -1,8 +1,8 @@
-# Sharing Files in ProxMox
+# ProxMox as File Server
 
 ## Sources
 
-https://forum.proxmox.com/threads/step-by-step-install-w-efi-zfs-ssd-cache-file-server.41619/
+[step-by-step-install-w-efi-zfs-ssd-cache-file-server](https://forum.proxmox.com/threads/step-by-step-install-w-efi-zfs-ssd-cache-file-server.41619/)
 
 ## Proxmox Storage Config
 
@@ -19,7 +19,7 @@ tank on /tank type zfs (rw,xattr,noacl)
 
 ## Get Container Template
 
-I downloaded debian-10-turnkey-fileserver_16.1-1_amd64.tar.gz from 
+I downloaded debian-10-turnkey-fileserver_16.1-1_amd64.tar.gz from
 http://mirror.turnkeylinux.org/turnkeylinux/images/proxmox/
 
 ## Create Container
@@ -47,5 +47,3 @@ Web shell:       https://192.168.10.143:12320
 Webmin:          https://192.168.10.143:12321
 SMB/CIFS:        \\192.168.10.143 (ports 139/445)
 SSH/SFTP:        root@192.168.10.143 (port 22)
-
-

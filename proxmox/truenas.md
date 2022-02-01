@@ -1,4 +1,4 @@
-# TrueNAS in VM on ProxMox
+# TrueNAS Core in a VM on ProxMox
 
 # Create a VM
 
