@@ -11,9 +11,11 @@ release](https://github.com/adobe-fonts/source-code-pro/releases/latest);
 * installation [on
 Mac](https://titanwolf.org/Network/Articles/Article?AID=09204517-16d0-48eb-a201-a96d69b5160f).
 
-## Settings
+## User Settings
 
-Depending on the platform, the user `settings.json` is in:
+Depending on the platform, the [user
+settings](https://code.visualstudio.com/docs/getstarted/settings)
+are stored in `settings.json` in the folloing directory:
 
 * Windows:  `%APPDATA%\Code\User\`
 * macOS: `/Users/{username}/Library/Application Support/Code/User/`
@@ -59,3 +61,31 @@ On macOS I also have `keybindings.json`:
     },
 ]
 ```
+
+## Workspace Settings - Python
+
+```
+{
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyArgs": [
+        "--ignore-missing-imports",
+        "--follow-imports=silent",
+        "--show-column-numbers",
+        "--strict"
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./src",
+        "-p",
+        "*_test.py"
+    ],
+    "python.testing.unittestEnabled": true
+}
+```
+You can tell I like unittest and mypy, not pylint and pytest.

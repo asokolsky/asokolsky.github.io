@@ -1,11 +1,11 @@
-# String Enum in Python3
+# String Enum in Python
 
 
-[Bare Python's enum](https://docs.python.org/3/library/enum.html) is not good
-enough: Int representation may be efficient, but it is not human readable after
-it is serialized.
+[Bare Python enum](https://docs.python.org/3/library/enum.html) is not good
+enough: Int representation may be efficient, but it is not human readable,
+especially after it is serialized.
 
-It would be nice to have a string enum.  Multiple inheritance to the resque!
+Wouldn't it be nice to have a string enum?  Multiple inheritance to the resque!
 
 ```
 from enum import Enum
