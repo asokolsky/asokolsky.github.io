@@ -18,5 +18,6 @@ DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename
 
 Uninstall:
 ```
-DISM.exe /Online /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Xbox.TCUI_1.23.28002.0_neutral_~_8wekyb3d8bbwe 
+DISM.exe /Online /Remove-ProvisionedAppxPackage \
+    /PackageName:Microsoft.Xbox.TCUI_1.23.28002.0_neutral_~_8wekyb3d8bbwe
 ```

@@ -53,7 +53,8 @@ Move to next session|ctrl-b )
 
 ## Windows
 
-By default, window info is displayed int he status bar on the left, e.g. `0:bash*`, where:
+By default, window info is displayed int he status bar on the left, e.g.
+`0:bash*`, where:
 
 * `0` - window # in this session;
 * `bash` - name of the process running;

@@ -34,8 +34,8 @@ zfs create POOL/ISO
     * 1M for collections 5-9MB JPG files and GB+ movies;
     * the default 128K is good enough.
 * sync=disabled - for a huge performance gain;
-* xattr=sa - set the Linux extended attributes, this will stop the file system from
-writing tiny files and write directly to the inodes;
+* xattr=sa - set the Linux extended attributes, this will stop the file system
+from writing tiny files and write directly to the inodes;
 
 To turn compression on for the pool:
 

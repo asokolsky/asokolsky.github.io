@@ -8,14 +8,15 @@ Multiple LAN nodes will have node_exporter installed.  These are running:
 * Linux - Ubuntu
 * Windows 10
 
-A server (CENTOS) will run Prometheus scraping the nodes and exposing the data to Grafana
-The same server (CENTOS) will run Grafana dashboard with cute GUI
+A server (CENTOS) will run Prometheus scraping the nodes and exposing the data
+to Grafana. The same server (CENTOS) will run Grafana dashboard with cute GUI.
 
 ## Install node_exporter
 
 ### node_exporter on pfSense
 
-Available as a module now. To verify the install point your browser to: http://pfsense:9100/metrics
+Available as a module now. To verify the install point your browser to:
+http://pfsense:9100/metrics
 
 ### node_exporter CENTOS 7
 
@@ -155,7 +156,8 @@ systemctl status prometheus.service
 Configure firewalld:
 
 ```
-sudo firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="192.168.1.0/24" port protocol="tcp" port="9090" accept'
+sudo firewall-cmd --permanent --add-rich-rule \
+  'rule family="ipv4" source address="192.168.1.0/24" port protocol="tcp" port="9090" accept'
 sudo firewall-cmd --reload
 ```
 
@@ -203,7 +205,3 @@ systemctl status grafana-server
 ```
 
 Configure the Grafana server to start at boot: `systemctl enable grafana-server`
-
-
-
-
