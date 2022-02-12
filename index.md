@@ -9,6 +9,7 @@ layout: default
 * [Visual Studio Code](dot.vscode.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
 * [ZFS setup and commands](zfs.html)
+* [Convert photos to PDF](image2pdf.html)
 
 ### Linux
 
