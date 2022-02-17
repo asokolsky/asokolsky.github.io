@@ -10,6 +10,11 @@ Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS-Cer
 Sheet](https://jayendrapatil.com/aws-certification-exam-cheat-sheet/)
 * [Jayendra's Cloud Certification Blog](https://jayendrapatil.com/)
 
+White Papers"
+
+* Amazon Well-Architected
+Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/wellarchitected-framework.pdf)
+
 Courses:
 * CloudGuru [AWS Certified Solutions Architect - Associate
 (SAA-C02)](https://learn.acloud.guru/course/certified-solutions-architect-associate/overview)
