@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-### General
+## Programming
+
+* [Server and Client-side Certificates for Python
+Programmer](programming/https.html)
+* [Better enum in Python](programming/python-string-enum.html)
+
+## Applications
 
 * [API Gateways](api-gateways.html)
 * [LDAP and AD search commands](ldap.html)
@@ -11,7 +17,7 @@ layout: default
 * [ZFS setup and commands](zfs.html)
 * [Convert photos to PDF](image2pdf.html)
 
-### Linux
+## Linux
 
 * cli: [netstat, systemctl, find](cli.html), [iperf](iperf.html),
 [rsync](rsync.html)
@@ -22,24 +28,18 @@ layout: default
 * Benchmark: [speed-test.sh](speed-test.sh)
 * [Configure SSH for Key Authentication](ssh.html)
 * [tmux cheat sheet](tmux.html)
+* [CentOS Customization](centos/)
+* [ProxMox](proxmox/)
 
-[BSD geom, gpart, driveid, system temps](bsd/)
+## MacOS
 
-[CentOS](centos/)
-
-### MacOS
-
+* [Better Keyboard Support](macos/keyboard.html)
 * cli: [system_profiler](macos/cli.html)
 * [exiftool](macos/exiftool.html)
 * [jenkins](macos/jenkins.html)
 * [more](macos/)
 
-### Programming
-
-* [https](programming/https.html)
-* [Better enum in Python](programming/python-string-enum.html)
-
-[ProxMox](proxmox/)
+[BSD geom, gpart, driveid, system temps](bsd/)
 
 [Windows](windows/)
 
