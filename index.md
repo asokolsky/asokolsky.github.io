@@ -3,33 +3,34 @@ layout: default
 ---
 ## Programming
 
+* [Better enum in Python](programming/python-string-enum.html)
 * [Server and Client-side Certificates for Python
 Programmer](programming/https.html)
-* [Better enum in Python](programming/python-string-enum.html)
+* [more](programming/)
 
 ## Applications
 
 * [API Gateways](api-gateways.html)
+* [Convert photos to PDF](image2pdf.html)
+* [Lan-to-Lan Wireguard](wireguard.html)
 * [LDAP and AD search commands](ldap.html)
 * [Ubiquity EdgeRouter X](ubiquity.html)
 * [Visual Studio Code](dot.vscode.html)
-* [Lan-to-Lan Wireguard](wireguard.html)
 * [ZFS setup and commands](zfs.html)
-* [Convert photos to PDF](image2pdf.html)
 
 ## Linux
 
+* Benchmark: [speed-test.sh](speed-test.sh)
+* [CentOS Customization](centos/)
 * cli: [netstat, systemctl, find](cli.html), [iperf](iperf.html),
 [rsync](rsync.html)
+* [Configure SSH for Key Authentication](ssh.html)
 * [IPMI Config and cli](ipmi.html)
 * [Kernel Tuning](kernel-tuning.html)
 * [Prometheus+Grafana](prometheus-grafana.html)
-* [Remote Key Mapping](remote.html)
-* Benchmark: [speed-test.sh](speed-test.sh)
-* [Configure SSH for Key Authentication](ssh.html)
-* [tmux cheat sheet](tmux.html)
-* [CentOS Customization](centos/)
 * [ProxMox](proxmox/)
+* [Remote Key Mapping](remote.html)
+* [tmux cheat sheet](tmux.html)
 
 ## MacOS
 
