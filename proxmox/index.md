@@ -96,7 +96,7 @@ in /etc/default/grub:
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt intel_pstate=disable"
 ```
 
-where intel_pstate=disable needed to [manage power](power.md).
+where `intel_pstate=disable` needed to [manage power](power.md).
 
 Then:
 
@@ -113,7 +113,6 @@ vfio_iommu_type1
 vfio_pci
 vfio_virqfd
 ```
-
 
 ## Add the server to Datacenter/Cluster
 
@@ -158,14 +157,14 @@ fstrim
 * [centos7](centos7.html)
 * cli: [vm, container, template manipulation](cli.html),
 [systemps.sh](systemps.sh)
-* [Rapid VM Deployment with Cloud Init and Terraform](cloud-init.html)
-* ProxMox as [file server](file-server.html) and [nas](nas.html)
 * [GPU passthrough](gpu-passthrough.html)
 * [Kernels cleanup](kernels.html)
 * [network](network.html)
 * [nut](nut.html)
+* ProxMox as [file server](file-server.html) and [nas](nas.html)
 * [pfSense in a VM](pfSense.html)
 * [Postfix as forwarder](postfix.html)
 * [Power Saving](power.html)
+* [Rapid VM Deployment with Cloud Init and Terraform](cloud-init.html)
 * [TrueNAS Core in a VM](truenas.html)
 * [Unifi Controller in a Containter](unifi.html)

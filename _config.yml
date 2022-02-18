@@ -8,6 +8,7 @@ author:
   location : "Campbell, CA, USA"
 plugins:
   - jekyll-sitemap
+  - jekyll-spaceship
 search: true
 google_site_verification: google3ad2904e499c26f9.html
 social:
