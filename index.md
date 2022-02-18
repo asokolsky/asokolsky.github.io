@@ -14,6 +14,9 @@ Programmer](programming/https.html)
 * [Convert photos to PDF](image2pdf.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
 * [LDAP and AD search commands](ldap.html)
+* [Prometheus+Grafana](prometheus-grafana.html)
+* [Remote Key Mapping](remote.html)
+* [tmux cheat sheet](tmux.html)
 * [Ubiquity EdgeRouter X](ubiquity.html)
 * [Visual Studio Code](dot.vscode.html)
 * [ZFS setup and commands](zfs.html)
@@ -22,15 +25,12 @@ Programmer](programming/https.html)
 
 * Benchmark: [speed-test.sh](speed-test.sh)
 * [CentOS Customization](centos/)
-* cli: [netstat, systemctl, find](cli.html), [iperf](iperf.html),
+* cli: [netstat, systemctl](cli.html), [find](find.html), [iperf](iperf.html),
 [rsync](rsync.html)
 * [Configure SSH for Key Authentication](ssh.html)
 * [IPMI Config and cli](ipmi.html)
 * [Kernel Tuning](kernel-tuning.html)
-* [Prometheus+Grafana](prometheus-grafana.html)
 * [ProxMox](proxmox/)
-* [Remote Key Mapping](remote.html)
-* [tmux cheat sheet](tmux.html)
 
 ## MacOS
 
