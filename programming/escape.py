@@ -1,3 +1,6 @@
+from enum import Enum
+from typing import List
+
 #
 # Console output embellished with the following color chars
 #
@@ -28,4 +31,3 @@ class Escapes(str, Enum):
                 out.append(inp[0:1])
                 inp = inp[1:]
         return ''.join(out)
-    
