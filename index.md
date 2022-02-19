@@ -8,13 +8,13 @@ layout: default
 Programmer](programming/https.html)
 * [more](programming/)
 
-## Applications
+## Applications & Tasks
 
 * [API Gateways](api-gateways.html)
-* [Convert photos to PDF](image2pdf.html)
+* Conversion [audio](convert.audio.html), [photos to PDF](convert.image2pdf.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
-* [LDAP and AD search commands](ldap.html)
-* [Prometheus+Grafana](prometheus-grafana.html)
+* [LDAP & AD search](ldap.html)
+* [Prometheus & Grafana](prometheus-grafana.html)
 * [Remote Key Mapping](remote.html)
 * [tmux cheat sheet](tmux.html)
 * [Ubiquity EdgeRouter X](ubiquity.html)
