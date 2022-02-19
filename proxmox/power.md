@@ -14,13 +14,13 @@ Just in case you have AMD CPUs:
 
 To enable powersave (instead of Performance) governor:
 
-```
+```console
 % echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
 
 To monitor CPU frequency:
 
-```
+```console
 % cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
 ```
 
@@ -29,7 +29,7 @@ To monitor CPU frequency:
 More on these utilities:
 https://www.hreniuc.dev/2019/03/28/how-to-use-cpupower-cpu-governors/
 
-```
+```console
 % cpupower
 WARNING: cpupower not found for kernel 5.4.0-66
 
@@ -49,7 +49,7 @@ or
 ```
 
 Then
-```
+```console
 root@fuji:~# cpupower frequency-info
 analyzing CPU 0:
   driver: intel_pstate
@@ -70,14 +70,14 @@ analyzing CPU 0:
 
 Just make sure that:
 
-```
+```console
 root@duo:~# cat /sys/devices/system/cpu/intel_pstate/no_turbo
 0
 ```
 
 To change governor:
 
-```
+```console
 root@suprox:~# cpupower frequency-set -g powersave
 Setting cpu: 0
 Setting cpu: 1

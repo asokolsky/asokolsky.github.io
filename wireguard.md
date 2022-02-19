@@ -63,7 +63,7 @@ https://unix.stackexchange.com/questions/653495/oracle-free-tier-wireguard-and-i
 
 Then
 
-```
+```console
 sudo iptables-restore < /etc/iptables/rules.v4
 ```
 
@@ -71,20 +71,20 @@ sudo iptables-restore < /etc/iptables/rules.v4
 
 Enable
 
-```
+```console
 root@instance-20210930-1149:/etc# sudo systemctl enable wg-quick@wg0.service
 Created symlink /etc/systemd/system/multi-user.target.wants/wg-quick@wg0.service → /lib/systemd/system/wg-quick@.service.
 ```
 
 Start
 
-```
+```console
 root@instance-20210930-1149:/etc# sudo systemctl start wg-quick@wg0.service
 ```
 
 Check status
 
-```
+```console
 root@instance-20210930-1149:/etc# sudo systemctl status wg-quick@wg0.service
 ● wg-quick@wg0.service - WireGuard via wg-quick(8) for wg0
      Loaded: loaded (/lib/systemd/system/wg-quick@.service; enabled; vendor preset: enabled)

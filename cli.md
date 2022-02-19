@@ -5,7 +5,7 @@
 [netstat](https://www.linux.org/docs/man8/netstat.html) prints network
 connections, etc.
 
-```
+```console
 sudo netstat -plutn
 ```
 
@@ -15,7 +15,7 @@ sudo netstat -plutn
 
 Show how much space is used by directories in this folder:
 
-```
+```console
 du -sh -- *
 ```
 
@@ -26,18 +26,18 @@ du -sh -- *
 
 Restart x11vnc service:
 
-```
+```console
 sudo systemctl start x11vnc.service
 ```
 
 Show running services:
 
-```
+```console
 systemctl list-units --type=service | grep running
 ```
 
 Show ntpdate service status
 
-```
+```console
 systemctl status ntpdate.service
 ```

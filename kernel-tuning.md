@@ -6,18 +6,17 @@ Edit `/etc/sysctl.conf` to make changes persistent.
 
 To set it:
 
-```
+```console
 sudo sysctl vm.swappiness=10
-
 ```
 Check it
-```
+```console
 cat /proc/sys/vm/swappiness
 ```
 
 Set in `/etc/sysctl.conf`:
 
-```
+```console
 vm.swappiness = 0
 ```
 
@@ -31,7 +30,7 @@ performance](https://lonesysadmin.net/2013/12/22/better-linux-disk-caching-perfo
 
 defaults:
 
-```
+```console
 $ sudo sysctl -a | grep -i 'vm.dirty'
 vm.dirty_background_bytes = 0
 vm.dirty_background_ratio = 10
@@ -43,7 +42,7 @@ vm.dirtytime_expire_seconds = 43200
 ```
 
 In `/etc/sysctl.conf` set:
-```
+```console
 vm.dirty_background_ratio = 5
 vm.dirty_ratio = 80
 ```
@@ -51,7 +50,7 @@ vm.dirty_ratio = 80
 ## IPv6
 
 I see no reason not to set in `/etc/sysctl.conf`:
-```
+```console
 net.ipv6.conf.all.disable_ipv6=1
 net.ipv6.conf.default.disable_ipv6=1
 ```

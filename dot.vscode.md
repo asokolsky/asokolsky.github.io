@@ -23,7 +23,7 @@ are stored in `settings.json` in the folloing directory:
 
 My `setings.json`:
 
-```
+```json
 {
     "editor.fontFamily": "'Source Code Pro',Consolas",
     "editor.fontLigatures": true,
@@ -43,7 +43,7 @@ My `setings.json`:
 
 On macOS I also have `keybindings.json`:
 
-```
+```json
 [
     { "key": "ctrl+z",       "command": "undo" },
     { "key": "ctrl+a",       "command": "editor.action.selectAll" },
@@ -64,7 +64,7 @@ On macOS I also have `keybindings.json`:
 
 ## Workspace Settings - Python
 
-```
+```json
 {
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": false,

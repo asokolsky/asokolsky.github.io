@@ -1,8 +1,6 @@
-# Content
+# Windows Stuff
 
-* [cli](cli.html)
-* [nas.cmd](nas.cmd)
-* [SwapCapsCtrl.reg](SwapCapsCtrl.reg)
+[Useful Commands](cli.html)
 
 ## Disable IPv6
 
@@ -23,3 +21,15 @@ Reboot.
 
 This doesn't remove the IPv6 loopback - but it does keep from sending out any
 IPv6 on the interfaces.
+
+## (re)Mount NAS Network Share
+
+```cmd
+{% include_relative nas.cmd %}
+```
+
+## SwapCapsCtrl.reg
+
+```cmd
+{% include_relative SwapCapsCtrl.reg %}
+```

@@ -3,7 +3,7 @@
 This helped to lower the fan rpm threshold - something SuperMicro IPMI web does
 not allowed to do. https://calvin.me/quick-how-to-decrease-ipmi-fan-threshold
 
-```
+```console
 ipmitool -I lan -U ADMIN -H 10.0.0.4 sensor thresh FAN1 lower 150 225 300
 ```
 
@@ -15,7 +15,7 @@ More:
 
 Playing with ipmitool:
 
-```
+```console
 [alex@nass ~]$ ipmitool -I lan -U XXX -P XXX -H 192.168.1.35 sdr elist full
 CPU Temp         | 01h | ok  |  3.1 | 54 degrees C
 System Temp      | 0Bh | ok  |  7.11 | 55 degrees C
@@ -67,7 +67,7 @@ DIMMB2 Temp      | B5h | ns  | 32.69 | No Reading
 
 Get the current fan duty value from CPU-zone (0x00), then peripheral-zone (0x01).
 
-```
+```console
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x00 0x00
  14
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x00 0x01
@@ -76,7 +76,7 @@ alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0
 
 Change case fan duty:
 
-```
+```console
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x01 0x00 0x10
 
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x00 0x01
@@ -86,7 +86,7 @@ alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0
 ```
 
 And then:
-```
+```console
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x01 0x01 0x10
 
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x00 0x00
@@ -98,7 +98,7 @@ alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P RSQCQKFTSB -H 192.168.11.22 raw
 Apparently control works only in FULL mode:
 https://forums.servethehome.com/index.php?resources/supermicro-x9-x10-x11-fan-speed-control.20/
 
-```
+```console
 #set fan mode to "full"
 ipmitool raw 0x30 0x45 0x01 0x01
 

@@ -4,7 +4,7 @@ Start server, e.g. on pfSense.
 
 Then:
 
-```
+```console
 alex@latitude7490:~$ iperf3 -v
 iperf 3.7 (cJSON 1.5.2)
 Linux latitude7490 5.4.0-88-generic #99-Ubuntu SMP Thu Sep 23 17:29:00 UTC 2021 x86_64
