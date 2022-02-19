@@ -10,14 +10,14 @@ proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
 
 ## Install
 
-```
+```console
 root@fuji:~# apt install nut
 ```
 ## Identify the UPS
 
 Find the UPS vendorID (051d) and productID (0002):
 
-```
+```console
 root@fuji:~# lsusb
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 002: ID 051d:0002 American Power Conversion Uninterruptible Power Supply
@@ -116,7 +116,7 @@ upsmon master
 
 Use upsc to display the UPS information:
 
-```
+```console
 root@fuji:/etc/nut# upsc theUPS
 Init SSL without certificate database
 battery.charge: 100
@@ -166,7 +166,7 @@ ups.vendorid: 051d
 ```
 or just:
 
-```
+```console
 root@suprox:/etc/nut# upsc theUPS@localhost ups.status
 Init SSL without certificate database
 OL
@@ -175,7 +175,7 @@ OL
 
 Use upscmd to issue commands to UPS:
 
-```
+```console
 root@fuji:/etc/nut# upscmd -l theUPS
 Instant commands supported on UPS [theUPS]:
 
@@ -206,7 +206,7 @@ service nut-client start
 
 Check out status of nut-server, nut-client, ups-monitor:
 
-```
+```console
 root@fuji:/etc/nut# service ups-monitor status -l
  ups-monitor.service - LSB: Network UPS Tools monitor initscript
    Loaded: loaded (/etc/init.d/ups-monitor; generated)

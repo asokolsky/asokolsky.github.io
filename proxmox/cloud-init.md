@@ -16,13 +16,13 @@ Use Proxmox GUI to download image from
 
 Prepare proxmox:
 
-```
+```console
 root@duo:~# apt update -y && apt install libguestfs-tools -y
 ```
 
 Install qemu-guest-agent into the image:
 
-```
+```console
 root@duo:/# find . -type f -name 'focal-server-*'
 find: ‘./var/lib/lxcfs/cgroup’: Input/output error
 ./var/lib/vz/template/iso/focal-server-cloudimg-amd64.img
@@ -44,7 +44,7 @@ virt-customize: warning: random seed could not be set for this type of guest
 
 ## Create a Proxmox VM
 
-```
+```console
 root@duo:/var/lib/vz/template/iso# qm create 9000 --name "ubuntu-2004-cloudinit-template" --memory 2048 --cores 2 --net0 virtio,bridge=vmbr0
 root@duo:/var/lib/vz/template/iso# qm importdisk 9000 focal-server-cloudimg-amd64.img local-lvm
 importing disk 'focal-server-cloudimg-amd64.img' to VM 9000 ...
@@ -66,7 +66,7 @@ update VM 9000: -agent 1
 
 ## Convert the VM into a Template
 
-```
+```console
 root@duo:~# qm template 9000
   Renamed "vm-9000-disk-0" to "base-9000-disk-0" in volume group "pve"
   Logical volume pve/base-9000-disk-0 changed.
@@ -77,7 +77,7 @@ root@duo:~#
 ## Test VM Creation from Template
 
 
-```
+```console
 qm clone 9000 999 --name test-clone-cloud-init
 qm set 999 --sshkey ~/.ssh/id_rsa.pub
 qm set 999 --ipconfig0 ip=192.168.10.96/24,gw=192.168.10.1
@@ -86,19 +86,19 @@ qm start 999
 
 Now login into the newly created VM.  First remove known host because SSH key changed:
 
-```
+```console
 ssh-keygen -f "~/.ssh/known_hosts" -R 192.168.10.96
 ```
 
 Now we can procceed with login:
 
-```
+```console
 ssh -i ~/.ssh/id_rsa ubuntu@192.168.10.96
 ```
 
 ## VM Cleanup
 
-```
+```console
 qm stop 999 && qm destroy 999
 ```
 
@@ -107,23 +107,23 @@ qm stop 999 && qm destroy 999
 From [tutorial](https://learn.hashicorp.com/tutorials/terraform/install-cli):
 
 
-```
+```console
 apt -y install lsb-release software-properties-common
 ```
 
 Add the HashiCorp GPG key:
 
-```
+```console
 # curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
 ```
 
 Add the repository:
-```
+```console
 apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 ```
 
 Install Terraform:
-```
+```console
 apt update && apt install -y terraform
 ```
 
@@ -144,7 +144,7 @@ Propagate=true
 
 ## Terraform Basic Info and Provider Installation
 
-```
+```console
 oot@duo:~/terraform# pwd
 /root/terraform
 root@duo:~/terraform# ls -la
@@ -197,7 +197,7 @@ Customize it.
 
 ## Testing
 
-```
+```console
 root@duo:~/terraform# ssh -i ~/.ssh/id_rsa ubuntu@192.168.10.81
 Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-89-generic x86_64)
 
@@ -227,7 +227,7 @@ Connection to 192.168.10.81 closed.
 
 Edit main.tf ans set count to 0.  Then:
 
-```
+```console
 oot@duo:~/terraform# terraform apply
 proxmox_vm_qemu.test_server[0]: Refreshing state... [id=duo/qemu/100]
 
@@ -255,3 +255,4 @@ proxmox_vm_qemu.test_server[0]: Destruction complete after 4s
 
 Apply complete! Resources: 0 added, 0 changed, 1 destroyed.
 ```
+console

@@ -8,7 +8,7 @@
 
 I have:
 
-```
+```console
 root@fuji:~# zpool list -v
 NAME        SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
 tank        464G   688K   464G        -         -     0%     0%  1.00x    ONLINE  -

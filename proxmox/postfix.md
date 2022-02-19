@@ -7,7 +7,7 @@ relay](https://www.howtoforge.com/tutorial/configure-postfix-to-use-gmail-as-a-m
 
 ## Extra Step
 
-```
+```console
 % apt install libsasl2-modules
 ```
 
@@ -63,24 +63,24 @@ Then create /etc/postfix/sasl_passwd.db
 ```
 
 Create `/etc/alias.db`
-```
+```console
 $ postalias /etc/aliases
 ```
 
 ## Restart Postfix
 
-```
+```console
 % systemctl restart postfix.service
 ```
 
 ## Test
 
-```
+```console
 # ls -la >/tmp/crap
 # mail -s "test" asokolsky@yahoo.com < /tmp/crap
 ```
 
 Then check output of:
-```
+```console
 # journalctl
 ```

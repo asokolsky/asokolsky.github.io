@@ -2,7 +2,7 @@
 
 ## Installation
 
-```
+```console
 $ brew install jenkins-lts
 $ brew services start jenkins-lts
 ```
@@ -37,7 +37,7 @@ though they prooved to be insufficient:
 2 Launch the agent agent1 - note use of host port 2222 being mapped to
 container's port 22:
 
-```
+```console
 docker run -d --rm --name=agent1 -p 2222:22 -e "JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AA....oabGtj7XFU= asokolsky@USSJC-ASOKOLSKY" jenkins/ssh-agent:alpine
 VARS1="HOME=|USER=|MAIL=|LC_ALL=|LS_COLORS=|LANG="
 VARS2="HOSTNAME=|PWD=|TERM=|SHLVL=|LANGUAGE=|_="

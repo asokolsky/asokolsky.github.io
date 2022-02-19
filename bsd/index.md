@@ -45,12 +45,12 @@ gpart: No such geom: ada5.
 
 ## driveid
 
-```console
+```sh
 {% include_relative driveid.sh %}
 ```
 
 ## systemps
 
-```console
+```sh
 {% include_relative systemps.sh %}
 ```

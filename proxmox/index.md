@@ -43,23 +43,23 @@ deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 
 ## Install usefull tools
 
-```
+```console
 # apt install ifupdown2 silversearcher-ag emacs-nox htop lm-sensors hddtemp nvme-cli
 ```
 
 ### Configure lm-sensors
 
-```
+```console
 # sensors-detect
 ```
 
 And finally:
 
-```
+```console
 # watch -n 1 sensors
 ```
 or just
-```
+```console
 root@pve02:/etc/apt/sources.list.d# sensors
 coretemp-isa-0000
 Adapter: ISA adapter
@@ -92,7 +92,7 @@ See [gpu-passthrough.md](gpu-passthrough.md).
 ### Grub
 
 in /etc/default/grub:
-```
+```sh
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt intel_pstate=disable"
 ```
 
@@ -100,7 +100,7 @@ where `intel_pstate=disable` needed to [manage power](power.md).
 
 Then:
 
-```
+```console
 # update-grub
 ```
 
@@ -136,20 +136,22 @@ Datacenter\Backup, Add
 
 smart
 
-```
-#!/bin/sh
-/usr/sbin/smartctl -t long /dev/sda
-/usr/sbin/smartctl -t long /dev/sdb
+```sh
+{% include_relative cron.daily %}
 ```
 
 ### /etc/cron.weekly
 
 fstrim
 
+```sh
+{% include_relative cron.weekly %}
 ```
-#!/bin/sh
-# trim all the mounted file systems which support it
-/usr/sbin/fstrim --all || true
+
+## systemps script
+
+```sh
+{% include_relative systemps.sh %}
 ```
 
 ## More

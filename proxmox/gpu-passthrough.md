@@ -10,20 +10,20 @@ Sources:
 
 Edit /etc/default/grub:
 
-```
+```console
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
 ```
 
 Then:
 
-```
+```console
 # update-grub
 ```
 
 Reboot.
 Verify IOMMU enabled:
 
-```
+```console
 root@fuji:~# dmesg | grep -e DMAR -e IOMMU
 [    0.008035] ACPI: DMAR 0x0000000087ACAD28 000070 (v01 INTEL  SKL      00000001 INTL 00000001)
 [    0.019700] DMAR: IOMMU enabled
@@ -43,7 +43,7 @@ root@fuji:~# dmesg | grep -e DMAR -e IOMMU
 ## VFIO Modules
 
 Edit /etc/modules:
-```
+```sh
 # /etc/modules: kernel modules to load at boot time.
 #
 # This file contains the names of kernel modules that should be loaded
@@ -56,7 +56,7 @@ vfio_virqfd
 
 Reboot.  Then:
 
-```
+```console
 root@fuji:~# lsmod|grep vfio
 vfio_pci               53248  0
 vfio_virqfd            16384  1 vfio_pci
@@ -68,14 +68,14 @@ vfio                   32768  2 vfio_iommu_type1,vfio_pci
 
 Verify remapping is enabled:
 
-```
+```console
 root@fuji:~# dmesg | grep 'remapping'
 [    0.048727] DMAR-IR: Queued invalidation will be enabled to support x2apic and Intr-remapping.
 [    0.050142] DMAR-IR: Enabled IRQ remapping in x2apic mode
 ```
 
 List PCI devices:
-```
+```console
 root@fuji:~# lspci
 00:00.0 Host bridge: Intel Corporation Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers (rev 05)
 00:01.0 PCI bridge: Intel Corporation Skylake PCIe Controller (x16) (rev 05)
@@ -101,7 +101,7 @@ root@fuji:~# lspci
 ```
 
 After VGA install and on another PC:
-```
+```console
 root@duo:~# lspci
 00:00.0 Host bridge: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers (rev 07)
 00:01.0 PCI bridge: Intel Corporation Skylake PCIe Controller (x16) (rev 07)
@@ -133,7 +133,7 @@ The latter is important.
 ## Blacklist Drivers
 
 Prevent host from using GT710:
-```
+```sh
 echo "blacklist radeon" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist nvidia" >> /etc/modprobe.d/blacklist.conf
@@ -145,7 +145,7 @@ reboot
 
 Note that GT710 (pci device 05:00:0x) has a dedicated iommu group:
 
-```
+```console
 root@fuji:~# find /sys/kernel/iommu_groups/ -type l
 /sys/kernel/iommu_groups/7/devices/0000:00:1c.6
 /sys/kernel/iommu_groups/5/devices/0000:00:1c.0
@@ -172,7 +172,7 @@ root@fuji:~# find /sys/kernel/iommu_groups/ -type l
 
 Use vendor ids for the GPU determined before:
 
-```
+```console
 root@duo:~# lspci -n -s 01:00
 01:00.0 0300: 10de:1d01 (rev a1)
 01:00.1 0403: 10de:0fb8 (rev a1)
@@ -204,7 +204,7 @@ Once GPU passthrough is configures, proxmox console (novnc) stops functioning.
 You need to passthrough keyboard/mouse to the guest:
 https://pve.proxmox.com/wiki/USB_physical_port_mapping
 
-```
+```console
 root@duo:~# qm show 400 --pretty
 /usr/bin/kvm \
   -id 400 \
@@ -252,7 +252,7 @@ qm> info pci
 
 After NVIDIA driver install HDMI Audio was not appearing in the Settings/Sounds.
 This solved it:
-```
+```console
 pulseaudio -k
 ```
 https://forum.proxmox.com/threads/gpu-passthrough-hdmi-audio.55740/
