@@ -7,7 +7,7 @@ especially after it is serialized.
 
 Wouldn't it be nice to have a string enum?  Multiple inheritance to the resque!
 
-```
+```python
 {% include_relative color.py %}
 ```
 
