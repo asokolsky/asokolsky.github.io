@@ -22,6 +22,11 @@ Either way:
 
 After VM created - add another NIC.
 
+## Guest agent
+
+[Install guest
+agent](https://forum.netgate.com/topic/162083/pfsense-vm-on-proxmox-qemu-agent-installation).
+
 ## pfSense Setup
 
 System\Advanced\Networking
