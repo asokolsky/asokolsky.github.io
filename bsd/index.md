@@ -1,13 +1,8 @@
 # FreeBSD Stuff
 
-## More Files
-
-* [driveid.sh](driveid.sh)
-* [systemps.sh](systemps.sh)
-
 ## Display Partition Table in FreeBSD
 
-```
+```console
 # geom disk list
 # geom disk list ada5
 ```
@@ -18,7 +13,7 @@ More: https://www.cyberciti.biz/faq/freebsd-hard-disk-information/
 
 Show all the partitions:
 
-```
+```console
 root@nass[~]# gpart show
 =>      40  61865904  ada6  GPT  (30G)
         40    532480     1  efi  (260M)
@@ -46,4 +41,16 @@ root@nass[~]# gpart destroy ada5
 ada5 destroyed
 root@nass[~]# gpart show ada5
 gpart: No such geom: ada5.
+```
+
+## driveid
+
+```console
+{% include_relative driveid.sh %}
+```
+
+## systemps
+
+```console
+{% include_relative systemps.sh %}
 ```
