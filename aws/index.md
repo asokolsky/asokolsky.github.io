@@ -1,6 +1,4 @@
-# AWS Certified Solutions Architect
-
-## Associate Exam
+# AWS Certified Solutions Architect Associate Exam
 
 Useful links:
 
@@ -14,6 +12,8 @@ White Papers
 
 * [Amazon Well-Architected
 Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/wellarchitected-framework.pdf)
+* [More](https://aws.amazon.com/whitepapers/)
+
 
 Courses:
 * CloudGuru [AWS Certified Solutions Architect - Associate
