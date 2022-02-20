@@ -1,6 +1,6 @@
 # find cheat sheet
 
-[find](https://www.linux.org/docs/man1/find.html) searched for files.
+[find](https://www.linux.org/docs/man1/find.html) searches for files.
 
 
 ## Search Examples
@@ -63,12 +63,23 @@ Display the files older than 30 days:
 find . -mtime +30 -print
 ```
 
-Calculate LOCs:
-```console
-find . -name '*.py' | xargs wc -l
-```
-
 Remove all the files from /tmp owned by a.sokolsky:
 ```console
-find /tmp/* -user a.sokolsky -exec rm -fr {} \;
+find /tmp/* -user jdoe -exec rm -fr {} \;
+```
+
+## Find and Act Using xargs
+
+`find -exec`
+[may not](https://www.everythingcli.org/find-exec-vs-find-xargs/)
+[be enough](https://danielmiessler.com/blog/linux-xargs-vs-exec/).
+
+[xargs](https://man7.org/linux/man-pages/man1/xargs.1.html) takes the results of
+a command (one per line) and calls another command N times, one per line,
+injecting the line value as an argument.
+[Using xargs](https://shapeshed.com/unix-xargs/).
+
+Calculate [LOC](https://en.wikipedia.org/wiki/Source_lines_of_code)s:
+```console
+find . -name '*.py' | xargs wc -l
 ```

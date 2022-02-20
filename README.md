@@ -21,3 +21,6 @@ Alternative: https://github.com/jekylltools/jekyll-tipue-search
 
 [SEO
 usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md)
+
+Good examples:
+https://github.com/silvae86/silvae86.github.io/blob/master/_config.yml

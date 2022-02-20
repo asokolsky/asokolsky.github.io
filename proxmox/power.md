@@ -6,9 +6,21 @@
 scaling](https://wiki.archlinux.org/title/CPU_frequency_scaling)
 * [thread1](https://forum.proxmox.com/threads/fix-always-high-cpu-frequency-in-proxmox-host.84270/)
 * [thread2](https://forum.proxmox.com/threads/cpu-power-throttle-back-to-save-energy.27510/)
+* https://silvae86.github.io/2020/06/13/switching-to-acpi-power/
 
 Just in case you have AMD CPUs:
 [thread3](https://forum.level1techs.com/t/gigabyte-server-activity-corner-proxmox-docker-and-config-notes/167614).
+
+## Monitor CPU frequency
+
+```console
+% cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
+```
+
+better yet:
+```console
+watch grep \"cpu MHz\" /proc/cpuinfo
+```
 
 ## Enable Power Saving
 
@@ -16,12 +28,6 @@ To enable powersave (instead of Performance) governor:
 
 ```console
 % echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-```
-
-To monitor CPU frequency:
-
-```console
-% cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
 ```
 
 ## Enable CPU Turbo Boost
@@ -68,6 +74,22 @@ analyzing CPU 0:
     Active: yes
 ```
 
+[About
+governors](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/power_management_guide/cpufreq_governors):
+
+* cpufreq_performance - offers no power saving benefit;
+* cpufreq_powersave - forces the CPU to use the lowest possible clock frequency,
+this frequency will be statically set, and will not change. This is more of a
+speed limiter than a power saver.
+* cpufreq_ondemand - a dynamic governor that allows the CPU to achieve maximum
+clock frequency when system load is high, and also minimum clock frequency when
+the system is idle.
+* cpufreq_conservative - like the ondemand governor, adjusts the frequency,
+however more gradually.
+* cpufreq_userspace - allows userspace programs to set the frequency, used
+with the cpuspeed daemon.
+
+
 Just make sure that:
 
 ```console
@@ -84,3 +106,10 @@ Setting cpu: 1
 Setting cpu: 2
 Setting cpu: 3
 ```
+
+## intel-pstate vs acpi-cpufreq
+
+Apparently [acpi-cpufreq is
+better](https://www.phoronix.com/scan.php?page=article&item=intel_pstate_linux315&num=10).
+
+Switch the governor [to acpi-cpufreq](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/).

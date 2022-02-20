@@ -1,0 +1,22 @@
+# Fonts
+
+Install/remove fonts on
+[Mac](https://support.apple.com/en-us/HT201749),
+[Windows](https://support.microsoft.com/en-us/windows/how-to-install-or-remove-a-font-in-windows-f12d0657-2fc8-7613-c76f-88d043b334b8),
+[Linux](https://community.linuxmint.com/tutorial/view/29).
+
+## Fixed Width
+
+I really like [Source Code Pro](https://en.wikipedia.org/wiki/Source_Code_Pro)
+by Adobe:
+
+* [repo](https://github.com/adobe-fonts/source-code-pro)
+* download the [latest
+release](https://github.com/adobe-fonts/source-code-pro/releases/latest)
+* installation [on
+Mac](https://titanwolf.org/Network/Articles/Article?AID=09204517-16d0-48eb-a201-a96d69b5160f).
+
+
+## More Fonts
+
+https://github.com/perrychan1/fonts
