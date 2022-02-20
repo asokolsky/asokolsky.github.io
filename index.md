@@ -28,6 +28,7 @@ Programmer](programming/https.html)
 * cli: [netstat, systemctl](cli.html), [find](find.html), [iperf](iperf.html),
 [rsync](rsync.html)
 * [Configure SSH for Key Authentication](ssh.html)
+* [dot files](dot.files.md)
 * [IPMI Config and cli](ipmi.html)
 * [Kernel Tuning](kernel-tuning.html)
 * [ProxMox](proxmox/)

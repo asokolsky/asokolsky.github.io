@@ -16,7 +16,7 @@ cat /proc/sys/vm/swappiness
 
 Set in `/etc/sysctl.conf`:
 
-```console
+```
 vm.swappiness = 0
 ```
 
@@ -42,7 +42,7 @@ vm.dirtytime_expire_seconds = 43200
 ```
 
 In `/etc/sysctl.conf` set:
-```console
+```
 vm.dirty_background_ratio = 5
 vm.dirty_ratio = 80
 ```
@@ -50,7 +50,7 @@ vm.dirty_ratio = 80
 ## IPv6
 
 I see no reason not to set in `/etc/sysctl.conf`:
-```console
+```
 net.ipv6.conf.all.disable_ipv6=1
 net.ipv6.conf.default.disable_ipv6=1
 ```

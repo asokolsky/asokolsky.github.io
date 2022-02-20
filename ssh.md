@@ -6,7 +6,7 @@ e.g. https://austinsnerdythings.com/2021/04/02/ssh-key-tutorial/
 
 ## Generate SSH Key Pair
 
-```
+```console
 alex@latitude7490:~$ ssh-keygen -t ed25519
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/home/alex/.ssh/id_ed25519):
@@ -31,7 +31,7 @@ usermod -s /bin/bash $uname
 
 ## Copy ID to a Remote Computer
 
-```
+```console
 alex@latitude7490:~$ ssh-copy-id alex@fuji
 /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
 /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
