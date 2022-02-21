@@ -20,6 +20,8 @@ Either way:
 * Model - VirtIO (paravirtualized)
 * Multiqueue - 8
 
+Options: QEMU Guest Agent: Enabled
+
 After VM created - add another NIC.
 
 ## Guest agent
@@ -27,11 +29,55 @@ After VM created - add another NIC.
 [Install guest
 agent](https://forum.netgate.com/topic/162083/pfsense-vm-on-proxmox-qemu-agent-installation).
 
+1. In shell:
+
+```console
+pkg install qemu-guest-agent
+```
+
+2. In web gui:
+
+* From System / PackageManager install package "Shellcmd";
+* From Service / Shellcmd create an "earlyshellcmd"
+`service qemu-guest-agent start`
+* From Settings / Advanced: Tunables -> Add tunable: `virtio_console_load`,
+value: `YES`
+
+3. In shell `edit /etc/rc.conf.local`:
+```console
+qemu_guest_agent_enable="YES"
+qemu_guest_agent_flags="-d -v -l /var/log/qemu-ga.log"
+```
+4. In shell `reboot`
+
 ## pfSense Setup
 
-System\Advanced\Networking
+### System/Advanced/Networking
 
 Disable all the offloading
+
+### Services/DHCP Server
+
+Besides obvious...
+
+LAN/Other Options
+
+NTP Server 1: _pfSense IP_
+
+Additional BOOTP/DHCP Options: Option 43, String, _value_,
+
+where _value_ is
+[calculated](https://tcpip.wtf/en/unifi-l3-adoption-with-dhcp-option-43-on-pfsense-mikrotik-and-others.htm)
+
+### Services/DNS Resolver/General Settings
+
+To ensure that UniFi controller DNS name is unifi, add host override:
+
+* Host: unifi
+* Domain: lan
+* IP Address: 192.168.x.y
+* Description UniFi Cotnroller
+* Additional name for the host: unicon
 
 ## Proxmox with a single NIC running pfSense + USB Ethernet dongle
 

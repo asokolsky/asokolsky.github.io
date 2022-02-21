@@ -2,7 +2,7 @@
 
 ## UniFi Controller Ports
 
-This is not exhaustive list.
+This is not an exhaustive list.
 
 Incoming traffic:
 
@@ -77,7 +77,7 @@ Step 1/6: Name controller: Apricot960
 
 etc
 
-## Update DHCP Server Option 43
+## Set DHCP Server Option 43
 
 [Unifi L3 Adoption with DHCP Option 43](https://tcpip.wtf/en/unifi-l3-adoption-with-dhcp-option-43-on-pfsense-mikrotik-and-others.htm)
 
@@ -100,6 +100,10 @@ Address: 192.168.10.11
 01:04:c0:a8:0a:0b
 
 3. Update DHCP server setting.
+
+## Add DNS Alias
+
+Make sure UniFi controller is at DNS name unifi.
 
 ## Allow for root to ssh
 
