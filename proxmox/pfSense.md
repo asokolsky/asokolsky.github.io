@@ -29,26 +29,26 @@ After VM created - add another NIC.
 [Install guest
 agent](https://forum.netgate.com/topic/162083/pfsense-vm-on-proxmox-qemu-agent-installation).
 
-1. In shell:
+* In shell:
 
 ```console
 pkg install qemu-guest-agent
 ```
 
-2. In web gui:
+* In web gui:
 
-* From System / PackageManager install package "Shellcmd";
-* From Service / Shellcmd create an "earlyshellcmd"
+* From System / PackageManager - install package "Shellcmd";
+* From Services / Shellcmd - create an "earlyshellcmd"
 `service qemu-guest-agent start`
-* From Settings / Advanced: Tunables -> Add tunable: `virtio_console_load`,
+* From System / Advanced / System Tunables - add tunable: `virtio_console_load`,
 value: `YES`
 
-3. In shell `edit /etc/rc.conf.local`:
+* In shell `edit /etc/rc.conf.local`:
 ```console
 qemu_guest_agent_enable="YES"
 qemu_guest_agent_flags="-d -v -l /var/log/qemu-ga.log"
 ```
-4. In shell `reboot`
+* In shell `reboot`
 
 ## pfSense Setup
 

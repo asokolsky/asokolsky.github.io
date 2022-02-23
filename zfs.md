@@ -10,7 +10,9 @@ https://blog.quindorian.org/2019/08/how-to-install-proxmox-and-setup-a-zfs-pool.
 To setup a RAIDz2 pool:
 
 ```
-zpool create NAME -o ashift=12 raidz2 /dev/disk/by-id/DISK1 /dev/disk/by-id/DISK2 /dev/disk/by-id/DISK3 /dev/disk/by-id/DISK4 /dev/disk/by-id/DISK5
+zpool create NAME -o ashift=12 raidz2 \
+    /dev/disk/by-id/DISK1 /dev/disk/by-id/DISK2 /dev/disk/by-id/DISK3 \
+    /dev/disk/by-id/DISK4 /dev/disk/by-id/DISK5
 ```
 
 To look at the pool status:

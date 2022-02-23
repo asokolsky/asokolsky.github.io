@@ -11,14 +11,14 @@ https://pve.proxmox.com/wiki/Network_Configuration
 Do NOT edit the /etc/sysctl.conf file.
 Instead create /etc/sysctl.d/disable-ipv6.conf:
 
-```sh
+```
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 ```
 
 For a particular adapter enp0s3 add this in /etc/sysctl.conf:
 
-```sh
+```
 net.ipv6.conf.enp0s3.disable_ipv6 = 1
 ```
 
@@ -53,7 +53,7 @@ Follow up on this with the switch configuration.
 
 Just edit /etc/network/interfaces:
 
-```
+```sh
 auto lo
 iface lo inet loopback
 

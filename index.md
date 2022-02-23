@@ -11,26 +11,27 @@ Programmer](programming/https.html)
 ## Applications & Tasks
 
 * [API Gateways](api-gateways.html)
-* Conversion [audio](convert.audio.html), [photos to PDF](convert.image2pdf.html)
+* Conversion [audio](linux/convert.audio.html),
+[photos to PDF](linux/convert.image2pdf.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
 * [LDAP & AD search](ldap.html)
-* [Prometheus & Grafana](prometheus-grafana.html)
-* [Remote Key Mapping](remote.html)
-* [tmux cheat sheet](tmux.html)
+* [Prometheus & Grafana](linux/prometheus-grafana.html)
+* [Remote Key Mapping](linux/remote.html)
+* [tmux cheat sheet](linux/tmux.html)
 * [Ubiquity EdgeRouter X](ubiquity.html)
 * [Visual Studio Code](dot.vscode.html)
 * [ZFS setup and commands](zfs.html)
 
 ## Linux
 
-* Benchmark: [speed-test.sh](speed-test.sh)
+* Benchmark: [speed-test.sh](linux/speed-test.sh)
 * [CentOS Customization](centos/)
-* cli: [netstat, systemctl](cli.html), [find](find.html), [iperf](iperf.html),
-[rsync](rsync.html)
-* [Configure SSH for Key Authentication](ssh.html)
-* [dot files](dot.files.md)
-* [IPMI Config and cli](ipmi.html)
-* [Kernel Tuning](kernel-tuning.html)
+* cli: [netstat, systemctl](linux/cli.html), [find](linux/find.html),
+[iperf](linux/iperf.html), [rsync](linux/rsync.html)
+* [Configure SSH for Key Authentication](linux/ssh.html)
+* [dot files](linux/dot.files.md)
+* [IPMI Config and cli](linux/ipmi.html)
+* [Kernel Tuning](linux/kernel-tuning.html)
 * [ProxMox](proxmox/)
 
 ## MacOS
