@@ -13,6 +13,7 @@ Programmer](programming/https.html)
 * [API Gateways](api-gateways.html)
 * Conversion [audio](linux/convert.audio.html),
 [photos to PDF](linux/convert.image2pdf.html)
+* [ipcalc](linux/ipcalc.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
 * [LDAP & AD search](ldap.html)
 * [Prometheus & Grafana](linux/prometheus-grafana.html)
