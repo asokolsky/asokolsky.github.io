@@ -1,5 +1,22 @@
 # Audio Format Conversion
 
+
+## Cut flac into tracks on cue
+
+[Source](https://wiki.archlinux.org/title/CUE_Splitting).
+
+Install [cuetools](https://github.com/svend/cuetools) and shntool:
+
+```sh
+$ sudo apt install cuetools shntool
+```
+
+Use:
+
+```sh
+$ shnsplit -f file.cue -t %n-%t -o flac file.flac
+```
+
 ## flac -> m4a lossless
 
 Convert all [flac](https://en.wikipedia.org/wiki/FLAC) files in the directory to
