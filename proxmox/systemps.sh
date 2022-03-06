@@ -8,15 +8,17 @@ now=$(date +"%Y%m%d_%H%M%S")
 TMPFILE="/tmp/temps_$now"
 (
     #echo "To: your email address"
-    #echo "Subject: System Temperatures INFO"
+    subject="`hostname` temperatures `date +'%Y-%m-%d %H:%M:%S'`"
+    #echo "Subject: $subject"
     #echo " "
-    echo System temperatures - `date`
+    echo $subject
     echo "$(uname -nsrm), $(uptime -p)"
     cat /proc/loadavg | awk '{ print "System load:",$1,$2,$3 }'
 
     # this does not work if CPU is virtualized
     temp=$(sensors|grep Package|awk '{print $4}')
-    echo "CPU: $temp"
+    freqs=$(grep "cpu MHz" /proc/cpuinfo|awk -F'[\.| ]' '{print $3}'|paste -sd ' ')
+    echo "CPU: $temp, $freqs MHz"
 
     temp=$(nvme smart-log /dev/nvme0|grep temperature|awk '{print $3}')
     echo "NVME: $temp°C"
