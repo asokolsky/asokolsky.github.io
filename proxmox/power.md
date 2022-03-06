@@ -6,7 +6,8 @@
 scaling](https://wiki.archlinux.org/title/CPU_frequency_scaling)
 * [thread1](https://forum.proxmox.com/threads/fix-always-high-cpu-frequency-in-proxmox-host.84270/)
 * [thread2](https://forum.proxmox.com/threads/cpu-power-throttle-back-to-save-energy.27510/)
-* https://silvae86.github.io/2020/06/13/switching-to-acpi-power/
+* [switch to acpi-cpufreq
+governor](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/).
 
 Just in case you have AMD CPUs:
 [thread3](https://forum.level1techs.com/t/gigabyte-server-activity-corner-proxmox-docker-and-config-notes/167614).
@@ -22,18 +23,10 @@ better yet:
 watch grep \"cpu MHz\" /proc/cpuinfo
 ```
 
-## Enable Power Saving
+## Install cpupower
 
-To enable powersave (instead of Performance) governor:
-
-```console
-% echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-```
-
-## Enable CPU Turbo Boost
-
-More on these utilities:
-https://www.hreniuc.dev/2019/03/28/how-to-use-cpupower-cpu-governors/
+[More on
+cpupower](https://www.hreniuc.dev/2019/03/28/how-to-use-cpupower-cpu-governors/).
 
 ```console
 % cpupower
@@ -47,7 +40,7 @@ WARNING: cpupower not found for kernel 5.4.0-66
     linux-tools-generic
     linux-cloud-tools-generic
 
-% sudo apt install linux-tools-common
+% apt install linux-tools-common
 ```
 or
 ```
@@ -89,6 +82,13 @@ however more gradually.
 * cpufreq_userspace - allows userspace programs to set the frequency, used
 with the cpuspeed daemon.
 
+## Show Scaling Driver
+
+```console
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_driver
+```
+
+## Enable CPU Turbo Boost
 
 Just make sure that:
 
@@ -109,7 +109,26 @@ Setting cpu: 3
 
 ## intel-pstate vs acpi-cpufreq
 
-Apparently [acpi-cpufreq is
+Is this still true? [acpi-cpufreq is
 better](https://www.phoronix.com/scan.php?page=article&item=intel_pstate_linux315&num=10).
+Switch the governor [to
+acpi-cpufreq](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/).
 
-Switch the governor [to acpi-cpufreq](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/).
+## Enable Power Saving
+
+To enable PowerSave (instead of Performance) governor:
+
+```console
+% echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+```
+
+## Switch back to intel_pstate Governor
+
+Ensure `intel_pstate=enable` is there for `GRUB_CMDLINE_LINUX_DEFAULT`
+in `/etc/default/grub`.  Then `sudo update-grub` and reboot.
+
+To check:
+
+```console
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_driver
+```
