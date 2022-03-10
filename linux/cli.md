@@ -24,7 +24,7 @@ du -sh -- *
 [systemctl](https://www.linux.org/docs/man1/systemctl.html) is a cli to
 [systemd](https://www.linux.org/docs/man1/systemd.html).
 
-Restart x11vnc service:
+Start x11vnc service:
 
 ```console
 sudo systemctl start x11vnc.service

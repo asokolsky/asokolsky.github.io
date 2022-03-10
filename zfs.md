@@ -2,27 +2,27 @@
 
 ## Sources
 
-https://blog.quindorian.org/2019/08/how-to-install-proxmox-and-setup-a-zfs-pool.html/#more-2962
+[how-to-install-proxmox-and-setup-a-zfs-pool](https://blog.quindorian.org/2019/08/how-to-install-proxmox-and-setup-a-zfs-pool.html/#more-2962)
 
 
 ## zpool CLI
 
 To setup a RAIDz2 pool:
 
-```
+```sh
 zpool create NAME -o ashift=12 raidz2 \
     /dev/disk/by-id/DISK1 /dev/disk/by-id/DISK2 /dev/disk/by-id/DISK3 \
     /dev/disk/by-id/DISK4 /dev/disk/by-id/DISK5
 ```
 
 To look at the pool status:
-```
+```sh
 zpool status
 ```
 
 Create a dataset for ISO storage:
 
-```
+```sh
 zfs create POOL/ISO
 ```
 
@@ -41,22 +41,22 @@ from writing tiny files and write directly to the inodes;
 
 To turn compression on for the pool:
 
-```
+```sh
 zfs set compression=lz4 POOLNAME
 ```
 
 Check:
 
-```
-nas% zpool get ashift tank
+```sh
+$ zpool get ashift tank
 NAME  PROPERTY  VALUE   SOURCE
 tank  ashift    12      local
 ```
 
 or
 
-```
-nas% zpool get all tank
+```sh
+$ zpool get all tank
 NAME  PROPERTY                       VALUE                          SOURCE
 tank  size                           5.45T                          -
 tank  capacity                       0%                             -
@@ -121,8 +121,8 @@ tank  feature@zstd_compress          enabled                        local
 
 Or using zdb:
 
-```
-nas% sudo zdb -e -C tank
+```sh
+$ sudo zdb -e -C tank
 MOS Configuration:
         version: 5000
         name: 'tank'
@@ -172,8 +172,8 @@ MOS Configuration:
 
 atime details:
 
-```
-nas% mount|grep tank
+```sh
+$ mount|grep tank
 tank on /mnt/tank (zfs, local, noatime, nfsv4acls)
 tank/home on /mnt/tank/home (zfs, local, noatime, nfsv4acls)
 tank/music on /mnt/tank/music (zfs, local, noatime, nfsv4acls)
@@ -193,7 +193,7 @@ tank/iocage/templates on /mnt/tank/iocage/templates (zfs, local, noatime, nfsv4a
 
 On my (old) nass:
 
-```
+```sh
 zpool create -f tank raidz2 /dev/ada0 /dev/ada1 /dev/ada2 /dev/ada3 /dev/ada4
 zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensitivity=sensitive -o compression=lz4 -o dedup=off -o sync=standard tank/home
 zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensitivity=sensitive -o compression=lz4 -o dedup=off -o sync=standard tank/downloads
@@ -211,19 +211,19 @@ zpool import -d /dev -f -a
 
 And:
 
-```
-[alex@nass /dev]$ zdb -C | grep ashift
+```sh
+$ zdb -C | grep ashift
             ashift: 12
 ```
 
 ## Replace a disk
 
-```
+```sh
 zpool offline vault da3
 shutdown
 ```
 replace the disk
-```
+```sh
 zpool replace vault 1464662681387557667 /dev/da4
 ```
 
@@ -231,8 +231,8 @@ zpool replace vault 1464662681387557667 /dev/da4
 
 A mirror:
 
-```
-nas: / # zpool status tank
+```sh
+# zpool status tank
   pool: tank
  state: ONLINE
   scan: scrub repaired 0 in 0h0m with 0 errors on Thu Apr 26 17:10:10 2012
@@ -249,11 +249,11 @@ errors: No known data errors
 
 Make it a 3-way mirror:
 
-```
-nas: / # zpool attach tank da0 da2
-nas: / # zpool detach tank da0
-nas:  # zpool set autoexpand=on tank
-nas:  # zpool online -e tank da0
+```sh
+# zpool attach tank da0 da2
+# zpool detach tank da0
+# zpool set autoexpand=on tank
+# zpool online -e tank da0
 ```
 
 Insert disk.  Then in GUI Disgnostics\Information now has:
@@ -288,7 +288,7 @@ Done!
 * Create virtual device VeryTemp with one HD.
 * Create a pool VeryTemp from that virtual device
 
-```
+```sh
 $ cp -pR /mnt/vault/movies .
 ```
 
