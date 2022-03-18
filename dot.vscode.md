@@ -57,6 +57,8 @@ On macOS I also have `keybindings.json`:
 
 ## Workspace Settings - Python
 
+Python workspace `.vscode/settings.json`:
+
 ```json
 {
     "python.linting.enabled": true,
@@ -72,13 +74,10 @@ On macOS I also have `keybindings.json`:
     "python.linting.pylintUseMinimalCheckers": false,
     "python.testing.pytestEnabled": false,
     "python.testing.unittestArgs": [
-        "-v",
-        "-s",
-        "./src",
-        "-p",
-        "*_test.py"
+        "-v", "-s", "./src", "-p", "*_test.py"
     ],
     "python.testing.unittestEnabled": true
 }
 ```
+
 You can tell I like unittest and mypy, not pylint and pytest.
