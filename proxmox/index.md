@@ -163,6 +163,7 @@ fstrim
 * [Kernels cleanup](kernels.html)
 * [network](network.html)
 * [nut](nut.html)
+* [octoprint](octoprint.html)
 * ProxMox as [file server](file-server.html) and [nas](nas.html)
 * [pfSense in a VM](pfSense.html)
 * [Postfix as forwarder](postfix.html)
