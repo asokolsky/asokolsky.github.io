@@ -15,7 +15,7 @@ Programmer](programming/https.html)
 [photos to PDF](linux/convert.image2pdf.html)
 * [ipcalc](linux/ipcalc.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
-* [LDAP & AD search](ldap.html)
+* [LDAP & AD search](cli-ldap.html)
 * [Prometheus & Grafana](linux/prometheus-grafana.html)
 * [Remote Key Mapping](linux/remote.html)
 * [tmux cheat sheet](linux/tmux.html)
@@ -27,11 +27,11 @@ Programmer](programming/https.html)
 
 * Benchmark: [speed-test.sh](linux/speed-test.sh)
 * [CentOS Customization](centos/)
-* cli: [netstat, systemctl](linux/cli.html), [find](linux/find.html),
-[iperf](linux/iperf.html), [rsync](linux/rsync.html)
+* cli: [netstat, systemctl](linux/cli.html), [find](linux/cli-find.html),
+[iperf](linux/cli-iperf.html), [rsync](linux/cli-rsync.html)
 * [Configure SSH for Key Authentication](linux/ssh.html)
 * [dot files](linux/dot.files.md)
-* [IPMI Config and cli](linux/ipmi.html)
+* [IPMI Config and cli](linux/cli-ipmi.html)
 * [Kernel Tuning](linux/kernel-tuning.html)
 * [ProxMox](proxmox/)
 
