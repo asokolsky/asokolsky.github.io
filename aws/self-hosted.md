@@ -2,6 +2,21 @@
 
 Would it not be nice to host AWS on your (home) LAN?
 
+## AWS CLI Client
+
+[Install](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html):
+
+```sh
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+Verify the version:
+```
+aws --version
+aws-cli/2.4.29 Python/3.8.8 Linux/5.13.0-37-generic exe/x86_64.linuxmint.20 prompt/off
+```
+
 ## S3
 
 [minio](https://min.io/) is S3-compatible and is
@@ -9,6 +24,26 @@ Would it not be nice to host AWS on your (home) LAN?
 It works with AWS
 [cli client](https://docs.min.io/docs/aws-cli-with-minio.html),
 [python client](https://docs.min.io/docs/how-to-use-aws-sdk-for-python-with-minio-server.html).
+
+Configure the install using the `aws_access_key_id` and `aws_secret_access_key`
+from the minio install:
+
+```sh
+aws configure
+aws configure set default.s3.signature_version s3v4
+```
+
+Verify the install:
+```
+alex@latitude7490:/tmp/ > aws --endpoint-url https://nass:9000 s3 ls
+
+SSL validation failed for https://nass:9000/ [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1125)
+
+alex@latitude7490:/tmp/ > aws --no-verify-ssl --endpoint-url https://nass:9000 s3 ls
+urllib3/connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'nass'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+2022-02-22 10:41:47 bucket1
+2022-02-22 10:41:47 bucket2
+```
 
 ## DynamoDB
 
