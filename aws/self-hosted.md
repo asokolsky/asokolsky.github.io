@@ -12,4 +12,42 @@ It works with AWS
 
 ## DynamoDB
 
-https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
+[AWS DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
+
+### Installation
+
+In LXC container:
+
+```
+apt update
+apt upgrade
+```
+
+Install OpenJDK JRE:
+```
+apt install default-jre
+```
+
+Verify:
+```
+root@dynamo:~# java -version
+openjdk version "11.0.14" 2022-01-18
+OpenJDK Runtime Environment (build 11.0.14+9-Ubuntu-0ubuntu2.20.04)
+OpenJDK 64-Bit Server VM (build 11.0.14+9-Ubuntu-0ubuntu2.20.04, mixed mode, sharing)
+```
+
+Install [DynamoDB
+Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html):
+```
+wget https://s3.us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_latest.tar.gz
+tar xfz dynamodb_local_latest.tar.gz
+```
+
+Run it:
+```
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+```
+
+### Use
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.UsageNotes.html
