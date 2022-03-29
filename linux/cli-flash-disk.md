@@ -49,7 +49,7 @@ sudo parted /dev/sda --script -- mklabel msdos
 ```
 Create a primary partition of type fat32 taking all the space:
 ```
-sudo parted /dev/sdb --script -- mkpart primary fat32 1MiB 100%
+sudo parted /dev/sda --script -- mkpart primary fat32 1MiB 100%
 ```
 Format it:
 ```
