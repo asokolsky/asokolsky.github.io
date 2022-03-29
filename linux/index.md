@@ -21,3 +21,7 @@
 [Proxmox Notes](../proxmox/)
 
 [Programming](../programming/)
+
+## Sources
+
+[SysOps Handbook](https://abarrak.gitbook.io/linux-sysops-handbook/)
