@@ -1,5 +1,11 @@
 # Useful Linux Commands
 
+## Process Command Line
+
+```
+cat /proc/_pid_/cmdline |xargs -0 echo
+```
+
 ## netstat
 
 [netstat](https://www.linux.org/docs/man8/netstat.html) prints network
