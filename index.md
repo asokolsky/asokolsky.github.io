@@ -11,8 +11,8 @@ Programmer](programming/https.html)
 ## Applications & Tasks
 
 * [API Gateways](api-gateways.html)
-* Conversion [audio](linux/convert.audio.html),
-[photos to PDF](linux/convert.image2pdf.html)
+* Conversion [audio](linux/convert-audio.html),
+[photos to PDF](linux/convert-image2pdf.html)
 * [ipcalc](linux/cli-ipcalc.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
 * [LDAP & AD search](cli-ldap.html)
@@ -21,7 +21,7 @@ Programmer](programming/https.html)
 * [tmux cheat sheet](linux/tmux.html)
 * [Ubiquity EdgeRouter X](ubiquity.html)
 * [vi cheat sheet](vi.html)
-* [Visual Studio Code](dot.vscode.html)
+* [Visual Studio Code](dot-vscode.html)
 * [ZFS setup and commands](zfs.html)
 
 ## Linux
@@ -31,7 +31,7 @@ Programmer](programming/https.html)
 * cli: [netstat, systemctl](linux/cli.html), [find](linux/cli-find.html),
 [iperf](linux/cli-iperf.html), [rsync](linux/cli-rsync.html)
 * [Configure SSH for Key Authentication](linux/ssh.html)
-* [dot files](linux/dot.files.md)
+* [dot files](linux/dot-files.md)
 * [IPMI Config and cli](linux/cli-ipmi.html)
 * [Kernel Tuning](linux/kernel-tuning.html)
 * [ProxMox](proxmox/)

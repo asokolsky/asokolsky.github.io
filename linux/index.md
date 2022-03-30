@@ -10,6 +10,7 @@
 [more...](cli.html)
 * Conversion [audio](convert-audio.html),
 [photos to PDF](convert-image2pdf.html)
+* [dot files](dot-files.html)
 * [kernel tuning](kernel-tuning.html)
 * [Prometheus & Grafana](prometheus-grafana.html)
 * [Remote Key Mapping](remote.html)
