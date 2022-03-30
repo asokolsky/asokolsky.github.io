@@ -7,6 +7,6 @@ Differentiate touch pad and mouse scroll direction using
 Also:
 
 * [cli](cli.html)
-* [exiftool](exiftool.html)
+* [exiftool](cli-exiftool.html)
 * use of [keyboard](keyboard.html)
 * [jenkins](jenkins.html)

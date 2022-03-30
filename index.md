@@ -40,7 +40,7 @@ Programmer](programming/https.html)
 
 * [Better Keyboard Support](macos/keyboard.html)
 * cli: [system_profiler](macos/cli.html)
-* [exiftool](macos/exiftool.html)
+* [exiftool](macos/cli-exiftool.html)
 * [jenkins](macos/jenkins.html)
 * [more](macos/)
 

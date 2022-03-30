@@ -1,14 +1,14 @@
 # Python Virtual Environment
 
-Three is [more than one
-way](https://bas.codes/posts/python-virtualenv-venv-pip-pyenv-poetry) to skin
-the cat:
+There is [more than one
+way](https://bas.codes/posts/python-virtualenv-venv-pip-pyenv-poetry) to
+[skin the cat](https://www.youtube.com/watch?v=o1Vue9CWRxU):
 
 * venv
 * [virtulaenv](https://virtualenv.pypa.io/en/latest/)
 * [pyenv](https://github.com/pyenv/pyenv) with
 [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) -
-read [How pyenv decides on a python
+see [How pyenv decides on a python
 version](https://github.com/pyenv/pyenv#choosing-the-python-version).
 
 ## Install pyenv+pyenv-virtualenv on MacOS
