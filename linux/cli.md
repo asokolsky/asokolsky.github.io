@@ -3,7 +3,7 @@
 ## Process Command Line
 
 ```
-cat /proc/_pid_/cmdline |xargs -0 echo
+cat /proc/_pid_/cmdline|xargs -0
 ```
 
 ## netstat

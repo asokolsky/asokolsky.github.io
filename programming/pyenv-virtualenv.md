@@ -1,13 +1,17 @@
-# Total Isolation with pyenv and pyenv-virtualenv
+# Python Virtual Environment
 
-[pyenv](https://github.com/pyenv/pyenv) allows for isolating from system python installed
-while [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) adds support to
-virtual environments.
+Three is [more than one
+way](https://bas.codes/posts/python-virtualenv-venv-pip-pyenv-poetry) to skin
+the cat:
 
-For more information read [How pyenv decides on a python
+* venv
+* [virtulaenv](https://virtualenv.pypa.io/en/latest/)
+* [pyenv](https://github.com/pyenv/pyenv) with
+[pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) -
+read [How pyenv decides on a python
 version](https://github.com/pyenv/pyenv#choosing-the-python-version).
 
-## Installation on MacOS
+## Install pyenv+pyenv-virtualenv on MacOS
 
 [Install pyenv](https://github.com/pyenv/pyenv#homebrew-in-macos):
 
@@ -33,4 +37,3 @@ python version from `.python-version`;
 * `pyenv-virtualenv` [creates and
 uses](https://github.com/pyenv/pyenv-virtualenv#activate-virtualenv)
 python virtual environment named after `.python-version`.
-
