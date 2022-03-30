@@ -28,8 +28,8 @@ ses = requests.Session()
 ses.verify = '/path/to/CAs'
 r = ses.get( 'https://server', verify=False )
 ```
-More on that:
-https://requests.readthedocs.io/en/master/user/advanced/#ssl-cert-verification
+More on [ssl certificate
+verification](https://requests.readthedocs.io/en/master/user/advanced/#ssl-cert-verification).
 
 
 ## HTTPS Client with a Certificate to HTTPS Server

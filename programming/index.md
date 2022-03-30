@@ -1,4 +1,4 @@
-# Content
+# Programming
 
 * [Configuring vscode](../dot.vscode.html)
 * [Color your console output](color-console.md)
