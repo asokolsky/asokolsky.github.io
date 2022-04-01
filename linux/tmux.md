@@ -1,4 +1,4 @@
-# tmux cheatsheet
+# tmux Terminal Multiplexer - Cheat Sheet
 
 tmux is [awesome and is highly
 recommended](https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/).

@@ -35,3 +35,7 @@ Use:
 
 * [spectacle](https://www.spectacleapp), [sources](https://github.com/eczarny/spectacle)
 * or better yet [Rectangle](https://github.com/rxhanson/Rectangle)
+
+## Terminal Emulator
+
+I use [iTerm2](iTerm2.html).

@@ -41,7 +41,7 @@ deb http://security.debian.org buster/updates main contrib
 deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 ```
 
-## Install usefull tools
+## Install useful tools
 
 ```console
 # apt install ifupdown2 silversearcher-ag emacs-nox htop lm-sensors hddtemp nvme-cli
