@@ -3,9 +3,9 @@
 Commands:
 
 * [bluetooth](cli-bluetooth.html)
-* [cli-disk-format](cli-disk-format.html)
-* [cli-disk](cli-disk.html)
-* [cli-find](cli-find.html)
+* [disk](cli-disk.html)
+* [format (flash) disk](cli-disk-format.html)
+* [find](cli-find.html)
 * [ipcalc](cli-ipcalc.html)
 * [iperf](cli-iperf.html)
 * [ipmi](cli-ipmi.html)
