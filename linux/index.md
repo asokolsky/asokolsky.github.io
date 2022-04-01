@@ -1,14 +1,24 @@
 # Linux Notes
 
-* CLI: [bluetooth](cli-bluetooth.html),
-[find](cli-find.html),
-[flash disk format](cli-flash-disk.html),
-[ipcalc](cli-ipcalc.html),
-[iperf](cli-iperf.html),
-[ipmi](cli-ipmi.html),
-[bulk rename](cli-rename-files.html),
-[more...](cli.html)
-* Conversion [audio](convert-audio.html),
+Commands:
+
+* [bluetooth](cli-bluetooth.html)
+* [cli-disk-format](cli-disk-format.html)
+* [cli-disk](cli-disk.html)
+* [cli-find](cli-find.html)
+* [ipcalc](cli-ipcalc.html)
+* [iperf](cli-iperf.html)
+* [ipmi](cli-ipmi.html)
+* [netstat](cli-netstat.html)
+* [pdsh](cli-pdsh.html)
+* [bulk rename](cli-rename-files.html)
+* [rsync](cli-rsync.html)
+* [systemctl](cli-systemctl.html)
+* [more...](cli.html)
+
+Tasks:
+
+* Convert [audio](convert-audio.html),
 [photos to PDF](convert-image2pdf.html)
 * [dot files](dot-files.html)
 * [kernel tuning](kernel-tuning.html)
