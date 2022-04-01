@@ -5,6 +5,15 @@ I use [iTerm2](https://iterm2.com/).
 Here is a cheat sheet from
 [here](https://github.com/vikashvverma/Goodies/blob/master/Shortcuts/Iterm2.md).
 
+## Keys
+
+* Cmd ⌘
+* Shift ⇧
+* Opt (or Alt) ⌥
+* Ctrl ⌃
+* Caps Lock ⇪
+* Fn
+
 ## Tabs and Panes
 
 |Function|Shortcut

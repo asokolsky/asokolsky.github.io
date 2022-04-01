@@ -1,11 +1,27 @@
 # Better Keyboard Support in MacOS
 
+## Keys
+
+* Cmd ⌘
+* Shift ⇧
+* Opt (or Alt) ⌥
+* Ctrl ⌃
+* Caps Lock ⇪
+* Fn
+
 ## Pre-existing Accelerators
 
-* Command-Option-D - Hide and unhide the Dock
-* Command-Space - activate Spotlight’s menu bar drop-down
-* Shift-Command-3 - take a screenshot
-* Control-Up Arrow - show Mission Control
+[Standard Mac keyboard
+shortcuts](https://support.apple.com/en-us/HT201236).
+
+Here are few:
+
+* Cmd-Option-D - Hide and unhide the Dock
+* Cm-Space - activate Spotlight’s menu bar drop-down
+* Shift-Cmd-3 - take a screenshot
+* Ctrl-↑ - show Mission Control
+
+
 
 To customize: [how to keep track of keyboard
 shortcuts](https://www.macworld.com/article/217325/how-to-keep-track-of-keyboard-shortcuts.html)
@@ -19,8 +35,8 @@ I experimented with system-wide accelerators for:
 * Copy - Ctrl+C
 * Paste - Ctrl+V
 
-This proved to be a BAD idea.  Instead of defining accelerators in multiple
-places, do it in karabiner only - see below.
+This proved to be a BAD idea.  Instead of defining accelerators in
+multiple places, do it in karabiner only - see below.
 
 ## Proper Keyboard Support
 
