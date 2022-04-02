@@ -4,7 +4,7 @@
 Differentiate touch pad and mouse scroll direction using
 [scroll reverser](https://pilotmoon.com/scrollreverser/).
 
-* cli: [exiftool](cli-exiftool.html), [system_profiler](cli.html)
+* cli: [exiftool](cli-exiftool.html), and [more...](cli.html)
 * use of [keyboard](keyboard.html)
 * [iTerm2](iTerm2.html) Terminal Emulator
 * [Java](java.html)

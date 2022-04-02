@@ -34,3 +34,41 @@ Ethernet:
       MAC Address: 00:00:00:00:00:00
       AVB Support: No
 ```
+
+## Show hidden files and folders
+
+```sh
+defaults write com.apple.finder AppleShowAllFiles -bool true
+```
+
+## Enable Check for Updates
+
+```
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+```
+
+## Prevent sleep mode
+
+Keep your Mac from falling asleep:
+
+```sh
+caffeinate
+```
+
+## Copy Files & Directories
+
+
+ditto preserves:
+
+* ownership attributes and permissions
+* file resource forks
+* file and folder metadata
+
+```sh
+ditto ~/Desktop/FluffyBackups /Volumes/FluffyBackups/
+```
+
+Merge the directories:
+```sh
+ditto ~/Pictures/Fall2015/ /Volumes/PhotoBackup/2015/
+```
