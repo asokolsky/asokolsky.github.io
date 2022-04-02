@@ -2,7 +2,7 @@
 
 ## Installation
 
-```console
+```sh
 $ brew install jenkins-lts
 $ brew services start jenkins-lts
 ```
@@ -13,7 +13,7 @@ Point your browser to `http://localhost:8080` and login using password from
 `~/.jenkins/secrets/initialAdminPassword`
 Create admin username/password.
 
-Procceed with installation of the suggested plugins, iInstall s3 publisher
+Proceed with installation of the suggested plugins: iInstall s3 publisher
 plugin.
 
 Next:
@@ -33,12 +33,14 @@ I generally followed
 [these instructions](https://www.jenkins.io/doc/book/using/using-agents/)
 though they prooved to be insufficient:
 
-1 Create jenkins_agent_key pair;
-2 Launch the agent agent1 - note use of host port 2222 being mapped to
+1. Create jenkins_agent_key pair;
+2. Launch the agent agent1 - note use of host port 2222 being mapped to
 container's port 22:
 
-```console
-docker run -d --rm --name=agent1 -p 2222:22 -e "JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AA....oabGtj7XFU= asokolsky@USSJC-ASOKOLSKY" jenkins/ssh-agent:alpine
+```sh
+docker run -d --rm --name=agent1 -p 2222:22 \
+    -e "JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AA....oFU= asokolsky@USSJC-ASOKOLSKY"\
+    jenkins/ssh-agent:alpine
 VARS1="HOME=|USER=|MAIL=|LC_ALL=|LS_COLORS=|LANG="
 VARS2="HOSTNAME=|PWD=|TERM=|SHLVL=|LANGUAGE=|_="
 VARS="${VARS1}|${VARS2}"

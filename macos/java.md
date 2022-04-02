@@ -4,20 +4,20 @@ You should have brew installed.
 
 1. Install OpenJDK:
 
-```console
+```sh
 brew tap AdoptOpenJDK/openjdk
 brew install --cask adoptopenjdk8
 ```
 
 2. Install [jenv](https://github.com/jenv/jenv):
 
-```console
+```sh
 brew install jenv
 ```
 
 3. Add the installed Java to jenv:
 
-```console
+```sh
 jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 jenv global 1.8
 ```
@@ -39,7 +39,7 @@ jenv_set_java_home
 
 You should be good to go:
 
-```console
+```sh
 java -version
 ```
 

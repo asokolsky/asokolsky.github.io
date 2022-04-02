@@ -2,26 +2,71 @@
 
 ## Keys
 
-* Cmd ⌘
-* Shift ⇧
-* Opt (or Alt) ⌥
-* Ctrl ⌃
 * Caps Lock ⇪
+* Cmd ⌘
+* Ctrl ⌃
 * Fn
+* Opt (or Alt) ⌥
+* Shift ⇧
 
 ## Pre-existing Accelerators
 
 [Standard Mac keyboard
-shortcuts](https://support.apple.com/en-us/HT201236).
+shortcuts](https://support.apple.com/en-us/HT201236), here are few:
 
-Here are few:
+|Shortcut|Document Function
+-------- | -------
+⌘ + N|New
+⌘ + O|Open
+⌘ + P|Print
+⌘ + S|Save
 
-* Cmd-Option-D - Hide and unhide the Dock
-* Cm-Space - activate Spotlight’s menu bar drop-down
-* Shift-Cmd-3 - take a screenshot
-* Ctrl-↑ - show Mission Control
+|Shortcut|Edit Function
+-------- | -------
+⌘ + Z|Undo
+⌘ + Shift + Z|Redo
+⌘ + X|Cut
+⌘ + C|Copy
+⌘ + V|Paste
+⌘ + A|Select All
+
+|Shortcut|Find Function
+-------- | -------
+⌘ + F|Find items in a document or open a Find window.
+⌘ + G|Find next
+⌘ + Shift + G|Find the previous
+
+|Shortcut|Window Function
+-------- | -------
+⌘ + H|Hide the windows of the front app
+⌘ + Opt + H|View the front app but hide all other apps
+⌘ + M|Minimize the front window to the Dock
+⌘ + Opt + M|Minimize all windows of the front app
+⌘ + T|Open a new tab
+⌘ + W|Close the front window
+⌘ + Opt + W|Close all windows of the app
+⌘ + Ctrl + F|Full screen
 
 
+|Shortcut|Application Function
+-------- | -------
+⌘ + Q|Quit an app
+⌘ + Opt + Esc|Force quit an app
+
+|Shortcut|Application/Finder Function
+-------- | -------
+⌘ + Space|Show or hide the Spotlight search field
+⌘ + Opt + Space|Spotlight search from Finder
+⌘ + Ctrl + Space|Show the Character Viewer, to pick emoji and other symbols
+Space|Use Quick Look to preview the selected item
+⌘ + Tab|Switch to the next most recently used app among your open apps
+⌘ + Shift + 3|Take a screenshot
+⌘ + Shift + 4|Take a screenshot
+⌘ + Shift + 5|Take a screenshot or make a screen recording
+⌘ + Shift + N|Create a new folder in the Finder
+⌘ + ,|Open preferences for the front app
+⌘ + Opt + D|Hide and unhide the Dock
+Ctrl + ↑|Show Mission Control
 
 To customize: [how to keep track of keyboard
 shortcuts](https://www.macworld.com/article/217325/how-to-keep-track-of-keyboard-shortcuts.html)
@@ -30,10 +75,12 @@ shortcuts](https://www.macworld.com/article/217325/how-to-keep-track-of-keyboard
 
 I experimented with system-wide accelerators for:
 
-* Undo - Ctrl+Z
-* Cut - Ctrl+X
-* Copy - Ctrl+C
-* Paste - Ctrl+V
+|Shortcut|Function
+-------- | -------
+Ctrl + Z|Undo
+Ctrl + X|Cut
+Ctrl + C|Copy
+Ctrl + V|Paste
 
 This proved to be a BAD idea.  Instead of defining accelerators in
 multiple places, do it in karabiner only - see below.
@@ -42,14 +89,15 @@ multiple places, do it in karabiner only - see below.
 
 Differentiate Let/Right Ctrl, Swap Ctrl and CapsLock, support for Home/End, etc:
 
-* [karabiner-elements](https://karabiner-elements.pqrs.org/) +
+* [karabiner-elements](https://karabiner-elements.pqrs.org/) with
 * [karabiner-windows-mode](https://github.com/rux616/karabiner-windows-mode)
 
 ## Tile Windows using Keyboard only
 
 Use:
 
-* [spectacle](https://www.spectacleapp), [sources](https://github.com/eczarny/spectacle)
+* [spectacle](https://www.spectacleapp),
+[sources](https://github.com/eczarny/spectacle)
 * or better yet [Rectangle](https://github.com/rxhanson/Rectangle)
 
 ## Terminal Emulator

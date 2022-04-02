@@ -1,53 +1,57 @@
 ---
 layout: default
 ---
+
 ## Programming
 
-* [Better enum in Python](programming/python-string-enum.html)
-* [Server and Client-side Certificates for Python
-Programmer](programming/https.html)
-* [more](programming/)
+* Python: [Better enum](programming/python-string-enum.html),
+[Server and Client-side Certificates](programming/https.html),
+[Virtual Environments](programming/pyenv-virtualenv.html)
+* [more...](programming/)
 
 ## Applications & Tasks
 
 * [API Gateways](api-gateways.html)
 * Conversion [audio](linux/convert-audio.html),
 [photos to PDF](linux/convert-image2pdf.html)
-* [ipcalc](linux/cli-ipcalc.html)
+* Network [planning with ipcalc](linux/cli-ipcalc.html) and
+[performance testing with iperf](linux/cli-iperf.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
 * [LDAP & AD search](cli-ldap.html)
 * [Prometheus & Grafana](linux/prometheus-grafana.html)
 * [Remote Key Mapping](linux/remote.html)
-* [tmux cheat sheet](linux/tmux.html)
 * [Ubiquity EdgeRouter X](ubiquity.html)
-* [vi cheat sheet](vi.html)
+* Cheat sheets: [tmux](linux/tmux.html), [vi](vi.html)
 * [Visual Studio Code](dot-vscode.html)
 * [ZFS setup and commands](zfs.html)
 
 ## Linux
 
 * Benchmark: [speed-test.sh](linux/speed-test.sh)
-* [CentOS Customization](centos/)
-* cli: [netstat, systemctl](linux/cli.html), [find](linux/cli-find.html),
-[iperf](linux/cli-iperf.html), [rsync](linux/cli-rsync.html)
+* cli: [bluetooth](linux/cli-bluetooth.html), [disk](linux/cli-disk.html),
+[format (flash) disk](linux/cli-disk-format.html),[find](linux/cli-find.html),
+[netstat](linux/cli-netstat.html),
+[pdsh](linux/cli-pdsh.html), [bulk rename](linux/cli-rename-files.html),
+[rsync](linux/cli-rsync.html), [systemctl](linux/cli-systemctl.html),
+and [more...](cli.html)
+* [IPMI Config and cli](linux/cli-ipmi.html)
 * [Configure SSH for Key Authentication](linux/ssh.html)
 * [dot files](linux/dot-files.md)
-* [IPMI Config and cli](linux/cli-ipmi.html)
 * [Kernel Tuning](linux/kernel-tuning.html)
-* [ProxMox](proxmox/)
+* Customize [CentOS](centos/), [ProxMox](proxmox/)
+* [more...](linux/)
 
 ## MacOS
 
 * [Better Keyboard Support](macos/keyboard.html)
-* cli: [system_profiler](macos/cli.html)
-* [exiftool](macos/cli-exiftool.html)
-* [jenkins](macos/jenkins.html)
-* [more](macos/)
+* cli: [exiftool](macos/cli-exiftool.html), [system_profiler](macos/cli.html)
+* [iTerm2 Terminal Emulator](iTerm2.html)
+* [Jenkins](macos/jenkins.html)
+* [more...](macos/)
 
 [BSD geom, gpart, driveid, system temps](bsd/)
 
 [Windows](windows/)
-
 
 [blog posts](posts.html)
 

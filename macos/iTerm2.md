@@ -26,8 +26,8 @@ Go to pane by direction|⌘ + Opt + _arrow_
 Go to pane by order| ⌘ + ], ⌘ + [
 Split pane Horizontally (same profile) | ⌘ + D
 Split pane Vertically (same profile) | ⌘ + d
-Split pane Horizontally (new profile) | Opt + ⌘ + H
-Split pane Vertically (new profile) | Opt + ⌘ + V
+Split pane Horizontally (new profile) | ⌘ + Opt + H
+Split pane Vertically (new profile) | ⌘ + Opt + V
 Set Mark | ⌘ + M
 Jump to Mark | ⌘ + J
 
@@ -67,7 +67,7 @@ Loop through and paste the last argument of previous commands | Opt + .
 
 |Function|Shortcut
 -------- | --------
-Search as you type | Ctrl + r and type the search term; Repeat Ctrl + r to loop through result
+Incremental search| Ctrl + r and type, repeat Ctrl + r to loop
 Search the last remembered search term | Ctrl + r Ctrl + r
 End the search at current history entry  | Ctrl + y
 Cancel the search and restore original line | Ctrl + g
