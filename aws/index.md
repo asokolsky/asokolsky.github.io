@@ -1,6 +1,11 @@
 # AWS Topics
 
-* [certification](certification.html)
-* [cloud-nuke](cloud-nuke.html)
-* [credstash](credstash.html)
-* [self-hosted AWS components](self-hosted.html)
+[Certification](certification.html)
+
+[Self-hosted AWS components](self-hosted.html)
+
+Utils:
+
+* [CLI Client](cli.html)
+* [Cloud Nuke](cloud-nuke.html)
+* [CredStash](credstash.html)

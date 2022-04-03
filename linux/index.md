@@ -1,5 +1,11 @@
 # Linux Notes
 
+Administering:
+
+* [CentOS](../centos/)
+* [Proxmox](../proxmox/).
+* [SysOps Handbook](https://abarrak.gitbook.io/linux-sysops-handbook/)
+
 Commands:
 
 * [bluetooth](cli-bluetooth.html)
@@ -26,13 +32,8 @@ Tasks:
 * [Remote Key Mapping](remote.html)
 * [tmux cheat sheet](tmux.html)
 
+Internals:
 
-[CentOS](../centos/)
-
-[Proxmox Notes](../proxmox/)
+* [Process States](https://raw.githubusercontent.com/abarrak/linux-sysops-handbook/main/images/process-states.png)
 
 [Programming](../programming/)
-
-## Sources
-
-[SysOps Handbook](https://abarrak.gitbook.io/linux-sysops-handbook/)

@@ -2,21 +2,6 @@
 
 Would it not be nice to host AWS on your (home) LAN?
 
-## AWS CLI Client
-
-[Install](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html):
-
-```sh
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-```
-Verify the version:
-```
-aws --version
-aws-cli/2.4.29 Python/3.8.8 Linux/5.13.0-37-generic exe/x86_64.linuxmint.20 prompt/off
-```
-
 ## S3
 
 [minio](https://min.io/) is S3-compatible and is
@@ -25,7 +10,7 @@ It works with AWS
 [cli client](https://docs.min.io/docs/aws-cli-with-minio.html),
 [python client](https://docs.min.io/docs/how-to-use-aws-sdk-for-python-with-minio-server.html).
 
-Configure the install using the `aws_access_key_id` and `aws_secret_access_key`
+Configure the client using the `aws_access_key_id` and `aws_secret_access_key`
 from the minio install:
 
 ```sh
@@ -35,11 +20,11 @@ aws configure set default.s3.signature_version s3v4
 
 Verify the install:
 ```
-alex@latitude7490:/tmp/ > aws --endpoint-url https://nass:9000 s3 ls
+> aws --endpoint-url https://nass:9000 s3 ls
 
 SSL validation failed for https://nass:9000/ [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1125)
 
-alex@latitude7490:/tmp/ > aws --no-verify-ssl --endpoint-url https://nass:9000 s3 ls
+> aws --no-verify-ssl --endpoint-url https://nass:9000 s3 ls
 urllib3/connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'nass'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
 2022-02-22 10:41:47 bucket1
 2022-02-22 10:41:47 bucket2
@@ -75,6 +60,9 @@ Install [DynamoDB
 Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html):
 ```
 wget https://s3.us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_latest.tar.gz
+mkdir -p /usr/lib/dynamodb
+mv dynamodb_local_latest.tar.gz /usr/lib/dynamodb
+cd /usr/lib/dynamodb
 tar xfz dynamodb_local_latest.tar.gz
 ```
 
@@ -83,6 +71,51 @@ Run it:
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
 ```
 
+Make it a service.  Create `/etc/systemd/system/dynamodb.service`:
+
+```
+[Unit]
+Description=Dynamo DB Local Service
+[Service]
+User=root
+# The configuration file application.properties should be here:
+#change this to your workspace
+WorkingDirectory=/usr/lib/dynamodb
+#path to executable.
+#executable is a bash script which calls jar file
+ExecStart=/usr/lib/dynamodb/dynamodb
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+[Install]
+WantedBy=multi-user.target
+```
+
+Create `/usr/lib/dynamodb/dynamodb`:
+
+```sh
+#!/bin/sh
+sudo /usr/bin/java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+```
+
+Register the service:
+```sh
+systemctl daemon-reload
+systemctl enable dynamodb
+systemctl start dynamodb
+```
+
+
 ### Use
 
 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.UsageNotes.html
+
+
+```
+PS C:\Users\asoko> aws dynamodb list-tables --endpoint-url http://dynamo:8000
+{
+    "TableNames": []
+}
+PS C:\Users\asoko>
+```
