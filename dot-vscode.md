@@ -14,7 +14,7 @@ are stored in `settings.json` in the folloing directory:
 * macOS: `/Users/{username}/Library/Application Support/Code/User/`
 * Linux: `$HOME/.config/Code/User/`
 
-My `setings.json`:
+### settings.json
 
 ```json
 {
@@ -32,9 +32,27 @@ My `setings.json`:
 }
 ```
 
-## Custom Keybindings
+### keybindings.json
 
-On macOS I also have `keybindings.json`:
+On Windows:
+
+```json
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "deleteRight",
+        "when": "editorFocus"
+    }
+]
+```
+
+On MacOS:
 
 ```json
 [
