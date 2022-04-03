@@ -11,6 +11,7 @@ layout: default
 
 ## Applications & Tasks
 
+* [AWS](aws/)
 * [API Gateways](api-gateways.html)
 * Conversion [audio](linux/convert-audio.html),
 [photos to PDF](linux/convert-image2pdf.html)
@@ -28,7 +29,7 @@ layout: default
 ## Linux
 
 * Benchmark: [speed-test.sh](linux/speed-test.sh)
-* cli: [bluetooth](linux/cli-bluetooth.html), [disk](linux/cli-disk.html),
+* CLI: [bluetooth](linux/cli-bluetooth.html), [disk](linux/cli-disk.html),
 [format (flash) disk](linux/cli-disk-format.html),[find](linux/cli-find.html),
 [netstat](linux/cli-netstat.html),
 [pdsh](linux/cli-pdsh.html), [bulk rename](linux/cli-rename-files.html),
@@ -44,7 +45,7 @@ and [more...](cli.html)
 ## MacOS
 
 * [Better Keyboard Support](macos/keyboard.html)
-* cli: [exiftool](macos/cli-exiftool.html), [system_profiler](macos/cli.html)
+* CLI: [exiftool](macos/cli-exiftool.html), [system_profiler](macos/cli.html)
 * [iTerm2 Terminal Emulator](iTerm2.html)
 * [Jenkins](macos/jenkins.html)
 * [more...](macos/)
