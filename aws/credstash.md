@@ -1,9 +1,7 @@
 # Credstash
 
 https://github.com/fugue/credstash
-
-or 
-
+or
 https://github.com/LuminalOSS/credstash
 
 ## Installation
@@ -89,4 +87,3 @@ credstash-read-secrets - read only, uses default credstash DDB table
 
 credstash-write-secrets - write only, uses default credstash DDB table
 ‘credential-store’
-

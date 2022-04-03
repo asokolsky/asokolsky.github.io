@@ -2,7 +2,8 @@
 
 ## Sources
 
-[how-to-install-proxmox-and-setup-a-zfs-pool](https://blog.quindorian.org/2019/08/how-to-install-proxmox-and-setup-a-zfs-pool.html/#more-2962)
+[HOWTO install Proxmox and setup a ZFS
+pool](https://blog.quindorian.org/2019/08/how-to-install-proxmox-and-setup-a-zfs-pool.html/#more-2962)
 
 
 ## zpool CLI

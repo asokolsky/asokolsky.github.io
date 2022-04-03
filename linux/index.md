@@ -30,7 +30,7 @@ Tasks:
 * [kernel tuning](kernel-tuning.html)
 * [Prometheus & Grafana](prometheus-grafana.html)
 * [Remote Key Mapping](remote.html)
-* [tmux cheat sheet](tmux.html)
+* Cheat sheets: [tmux](tmux.html), [vi](../vi.html)
 
 Internals:
 

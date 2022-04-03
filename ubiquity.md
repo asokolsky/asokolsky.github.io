@@ -11,8 +11,10 @@ Proved useful:
 
 Used web GUI to offload to hardware the following:
 
-* set system offload hwnat enable
-* set system offload ipsec enable
+```
+set system offload hwnat enable
+set system offload ipsec enable
+```
 
 In order for DNS to resolve LAN computers registered via DHCP:
 
