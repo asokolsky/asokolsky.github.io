@@ -9,3 +9,5 @@ Differentiate touch pad and mouse scroll direction using
 * [iTerm2](iTerm2.html) Terminal Emulator
 * [Java](java.html)
 * [Jenkins](jenkins.html)
+
+Also relevant: [dot-files](../linux/dot-files/)

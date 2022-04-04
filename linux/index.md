@@ -27,7 +27,7 @@ Tasks:
 * Benchmark: [speed-test.sh](speed-test.sh)
 * Convert [audio](convert-audio.html),
 [photos to PDF](convert-image2pdf.html)
-* [dot files](dot-files.html)
+* [dot files](/dot-files)
 * [kernel tuning](kernel-tuning.html)
 * [Prometheus & Grafana](prometheus-grafana.html)
 * [Remote Key Mapping](remote.html)

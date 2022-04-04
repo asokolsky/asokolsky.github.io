@@ -16,7 +16,7 @@ According to the zsh documentation:
 > .zprofile is meant as an alternative to .zlogin for ksh fans;
 > the two are not intended to be used together,
 > although this could certainly be done if desired.
-  
+
 `.zshrc` is for interactive shell configuration. You set options for the interactive shell there with the
 setopt and unsetopt commands. You can also:
 
@@ -29,3 +29,20 @@ You also set any variables that are only used in the interactive shell (e.g. $LS
 
 `.zlogin` is sourced on the start of a login shell but after `.zshrc` if the shell is also interactive.
 This file is often used to start X. Some systems start X on boot, so this file is not always very useful.
+
+### .zshenv
+
+```sh
+{% include_relative zshenv %}
+```
+### .zprofile
+
+```sh
+{% include_relative zprofile %}
+```
+
+### .zshrc
+
+```sh
+{% include_relative zshrc %}
+```

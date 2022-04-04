@@ -36,7 +36,7 @@ layout: default
 and [more...](cli.html)
 * [IPMI Config and cli](linux/cli-ipmi.html)
 * [Configure SSH for Key Authentication](linux/ssh.html)
-* [dot files](linux/dot-files.md)
+* [dot files](linux/dot-files/)
 * [Kernel Tuning](linux/kernel-tuning.html)
 * Customize [CentOS](centos/), [ProxMox](proxmox/)
 * [more...](linux/)
