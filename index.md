@@ -28,7 +28,6 @@ layout: default
 
 ## Linux
 
-* Benchmark: [speed-test.sh](linux/speed-test.sh)
 * CLI: [bluetooth](linux/cli-bluetooth.html), [disk](linux/cli-disk.html),
 [format (flash) disk](linux/cli-disk-format.html),[find](linux/cli-find.html),
 [netstat](linux/cli-netstat.html),
