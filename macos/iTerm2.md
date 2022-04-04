@@ -1,7 +1,7 @@
 # iTerm2 Terminal Emulator
 
 I use [iTerm2](https://iterm2.com/). Consider this
-[vscode color theme](https://github.com/tallpants/vscode-theme-iterm2)
+[vscode color theme](https://github.com/tallpants/vscode-theme-iterm2).
 
 Here is a cheat sheet from
 [here](https://github.com/vikashvverma/Goodies/blob/master/Shortcuts/Iterm2.md).
