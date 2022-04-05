@@ -1,5 +1,6 @@
 # .zshrc is sourced in interactive shells.
-# Should contain commands to set up aliases, functions, options, key bindings, etc.
+# Should contain commands to set up aliases, functions, options, key bindings,
+# etc.
 
 # Set up the prompt
 autoload -Uz promptinit

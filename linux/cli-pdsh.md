@@ -5,7 +5,8 @@ Parallel ssh.
 
 ## Install
 
-add to you .bashrc or .zshrc
+Add to you `.bashrc` or `.zshrc` (or better yet to `.zshenv`):
+
 ```
 export PDSH_RCMD_TYPE=ssh
 ```
