@@ -1,5 +1,8 @@
 # vi cheat sheet
 
+[vi in wikipedia](https://en.wikipedia.org/wiki/Vi),
+[original article](https://docs.freebsd.org/44doc/usd/12.vi/paper.html).
+
 ## Command Line
 
 |Command|Action
@@ -13,15 +16,22 @@
 
 ## Modes
 
-vi starts in _command mode_. Navigation commands operate only
-in _command mode_. To switch to _input mode_ enter one of the input commands.
-Once in _input mode_, any character you type is added to the file. To exit
-_input mode_, press the Esc key.
+vi starts in _command mode_. Navigation commands operate in _command mode_.
+To switch to _input mode_ enter one of the input commands.
+Once in _input mode_, any character you type is added to the file.
+To exit the _input mode_, press the Esc key.
 
 ```
                   /->-Input Command->-\
 [Start]-->[Command mode]         [Input mode]
                   \-<-----Esc-------<-/
+```
+
+```mermaid
+graph LR;
+A[Start]-->B[Command Mode];
+B-- Input Command -->C[Input Mode];
+C-- Esc -->B;
 ```
 
 ## Save, Exit
