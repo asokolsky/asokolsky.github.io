@@ -14,24 +14,20 @@
 |vi + _file_|edit _file_, cursor at last line
 |vi +_n_ _file_|edit _file_, cursor at line _n_
 
-## Modes
+## Modes: Command & Input
 
 vi starts in _command mode_. Navigation commands operate in _command mode_.
 To switch to _input mode_ enter one of the input commands.
 Once in _input mode_, any character you type is added to the file.
 To exit the _input mode_, press the Esc key.
 
-```
-                  /->-Input Command->-\
-[Start]-->[Command mode]         [Input mode]
-                  \-<-----Esc-------<-/
-```
-
 ```mermaid
-graph LR;
-A[Start]-->B[Command Mode];
-B-- Input Command -->C[Input Mode];
-C-- Esc -->B;
+graph LR
+    A[Start] --> B(Command Mode)
+    B -- Navigation --> B
+    B -- Deletion --> B
+    B -- Input Command --> D(Input Mode)
+    D --Esc--> B
 ```
 
 ## Save, Exit
