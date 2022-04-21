@@ -1,10 +1,10 @@
-# asokolsky.GitHub.io
+# asokolsky.github.io
 
 This is GitHub pages site [asokolsky.github.io](https://asokolsky.github.io).
 
 [Theme](https://github.com/pages-themes/hacker)
 
-Jekil [variables](https://jekyllrb.com/docs/variables/)
+Jekyll [variables](https://jekyllrb.com/docs/variables/)
 
 [Primer](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/).
 
@@ -22,5 +22,5 @@ Alternative: https://github.com/jekylltools/jekyll-tipue-search
 [SEO
 usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md)
 
-Good examples:
-https://github.com/silvae86/silvae86.github.io/blob/master/_config.yml
+Good example of
+[_config.yml](https://github.com/silvae86/silvae86.github.io/blob/master/_config.yml)
