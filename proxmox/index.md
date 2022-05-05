@@ -154,20 +154,28 @@ fstrim
 {% include_relative systemps.sh %}
 ```
 
-## More
+## Proxmox Tasks
 
-* [centos7](centos7.html)
 * cli: [vm, container, template manipulation](cli.html),
 [systemps.sh](systemps.sh)
 * [PCIe passthrough](pcie-passthrough.html)
 * [Kernels cleanup](kernels.html)
 * [network](network.html)
 * [nut](nut.html)
-* [octoprint](octoprint.html)
 * ProxMox as [file server](file-server.html) and [nas](nas.html)
-* [pfSense in a VM](pfSense.html)
 * [Postfix as forwarder](postfix.html)
 * [Power Saving](power.html)
 * [Rapid VM Deployment with Cloud Init and Terraform](cloud-init.html)
+
+## Guest Tasks
+
+* [disk resize](guest-disk-resize.html)
+* [performance optimization](guest-performance.html)
+
+## By Guest Type
+
+* [centos7](centos7.html)
+* [octoprint](octoprint.html)
+* [pfSense in a VM](pfSense.html)
 * [TrueNAS Core in a VM](truenas.html)
-* [Unifi Controller in a Containter](unifi.html)
+* [Unifi Controller in a Container](unifi.html)
