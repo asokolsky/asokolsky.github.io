@@ -87,7 +87,7 @@ Involves:
 * changing boot command line
 * adding kernel modules to load and, possibly, blacklist
 
-See [gpu-passthrough.md](gpu-passthrough.md).
+See [pcie-passthrough.md](pcie-passthrough.md).
 
 ### Grub
 
@@ -159,7 +159,7 @@ fstrim
 * [centos7](centos7.html)
 * cli: [vm, container, template manipulation](cli.html),
 [systemps.sh](systemps.sh)
-* [GPU passthrough](gpu-passthrough.html)
+* [PCIe passthrough](pcie-passthrough.html)
 * [Kernels cleanup](kernels.html)
 * [network](network.html)
 * [nut](nut.html)

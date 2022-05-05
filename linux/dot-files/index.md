@@ -1,6 +1,11 @@
 # Linux Dot Files
 
-For now - here is [Jay's repo](https://github.com/jaybocc2/dotfiles).
+[The best way to store your
+dotfiles](https://www.atlassian.com/git/tutorials/dotfiles)
+
+[Jay's repo](https://github.com/jaybocc2/dotfiles)
+
+[Another repo](https://gitlab.com/dwt1/dotfiles)
 
 ## zsh startup
 

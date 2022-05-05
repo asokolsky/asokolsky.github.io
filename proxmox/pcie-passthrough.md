@@ -1,10 +1,11 @@
-# Proxmox GPU Pass Through
+# Proxmox PCIe Pass Through
 
 Sources:
 
-* https://pve.proxmox.com/wiki/Pci_passthrough
-* https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/
+* [Pci_passthrough](https://pve.proxmox.com/wiki/Pci_passthrough)
+* [guide_to_gpu_passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
 * https://www.youtube.com/watch?reload=9&v=fgx3NMk6F54
+* [how-to-pass-through-pcie-with-proxmox](https://www.servethehome.com/how-to-pass-through-pcie-nics-with-proxmox-ve-on-intel-and-amd/)
 
 ## Grub Kernel Boot Command Line
 
