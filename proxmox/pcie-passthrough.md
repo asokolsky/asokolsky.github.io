@@ -1,11 +1,16 @@
 # Proxmox PCIe Pass Through
 
-Sources:
+Passing through PCIe adapter is beneficial for a VM relying on specific
+hardware, e.g. NIC, storage controller or GPU.
 
-* [Pci_passthrough](https://pve.proxmox.com/wiki/Pci_passthrough)
+From [pci_passthrough](https://pve.proxmox.com/wiki/Pci_passthrough):
+"VMs with passthroughed devices cannot be migrated."
+
+More Info:
+
+* [pass-through-pcie-with-proxmox](https://www.servethehome.com/how-to-pass-through-pcie-nics-with-proxmox-ve-on-intel-and-amd/)
 * [guide_to_gpu_passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
 * https://www.youtube.com/watch?reload=9&v=fgx3NMk6F54
-* [how-to-pass-through-pcie-with-proxmox](https://www.servethehome.com/how-to-pass-through-pcie-nics-with-proxmox-ve-on-intel-and-amd/)
 
 ## Grub Kernel Boot Command Line
 
@@ -14,6 +19,8 @@ Edit /etc/default/grub:
 ```console
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
 ```
+
+You may also add `intel_pstate=disable` - see [power management](power.md).
 
 Then:
 

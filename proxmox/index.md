@@ -82,39 +82,9 @@ temp1:        +44.0°C
 
 ## PCI Pass Through Config
 
-Involves:
-
-* changing boot command line
-* adding kernel modules to load and, possibly, blacklist
-
 See [pcie-passthrough.md](pcie-passthrough.md).
 
-### Grub
-
-in /etc/default/grub:
-```sh
-GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt intel_pstate=disable"
-```
-
-where `intel_pstate=disable` needed to [manage power](power.md).
-
-Then:
-
-```console
-# update-grub
-```
-
-### VFIO Modules
-
-Edit /etc/modules:
-```
-vfio
-vfio_iommu_type1
-vfio_pci
-vfio_virqfd
-```
-
-## Add the server to Datacenter/Cluster
+## Add the server to Datacenter / Cluster
 
 Make sure the host has:
 
@@ -156,7 +126,7 @@ fstrim
 
 ## Proxmox Tasks
 
-* cli: [vm, container, template manipulation](cli.html),
+* cli: [vm, container, template manipulation](cli-proxmox.html),
 [systemps.sh](systemps.sh)
 * [PCIe passthrough](pcie-passthrough.html)
 * [Kernels cleanup](kernels.html)
