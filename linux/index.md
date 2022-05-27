@@ -38,3 +38,13 @@ Internals:
 * [Process States](https://raw.githubusercontent.com/abarrak/linux-sysops-handbook/main/images/process-states.png)
 
 [Programming](../programming/)
+
+
+Books:
+
+* [Networking2](http://nnc3.com/mags/networking/)
+* [Networking2](http://nnc3.com/mags/Networking2/)
+* [Unix](http://nnc3.com/mags/unix3/)
+* [Linux web server](http://nnc3.com/mags/lnXwwwsvr/)
+* [Linux Journal](http://nnc3.com/mags/LM18/LJ/tocindex.html
+* [Linux Magazine](http://nnc3.com/mags/LM10/)
