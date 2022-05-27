@@ -18,14 +18,16 @@ are stored in `settings.json` in the folloing directory:
 
 ```json
 {
-    "editor.fontFamily": "'Source Code Pro',Consolas",
+    "editor.fontFamily": "'Source Code Pro',Consolas,monospace",
     "editor.fontLigatures": true,
     "editor.rulers": [80],
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
     "git.confirmSync": false,
+    "git.enableSmartCommit": true,
     "security.workspace.trust.untrustedFiles": "newWindow",
+    "terminal.integrated.scrollback": 10000,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
