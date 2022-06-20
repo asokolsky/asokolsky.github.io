@@ -1,4 +1,6 @@
-# Thunderbolt Dock
+# Thunderbolt Support in my Hardware
+
+## Dell Latitude 7490
 
 Apparently my Dell Latitude 7490 has no thunderbolt controller:
 
@@ -30,9 +32,29 @@ Apparently my Dell Latitude 7490 has no thunderbolt controller:
 
 No changes when dock is plugged in.
 
-## Thunderbolt Driver
+## Linux Management Software
 
-Installed the package using `sudo apt install bolt`.
+Installed the
+[boltctl](https://manpages.ubuntu.com/manpages/jammy/man1/boltctl.1.html)
+using `sudo apt install bolt`.  Yet
+
+```
+> boltctl list
+>
+```
+
+## Amazon Basics Thunderbolt Hub
+
+I use [Amazon Basics
+hub](https://www.amazon.com/gp/product/B086H3FMPZ/ref=ppx_yo_dt_b_search_asin_title).
+It does the job.  Realtek 8153 USB-to-Ethernet chip stopped working though.
+I wish it were 2.5 Gbps Ethernet but it is not.  I use the hub with Macbook Pro.
+
+## Dell Thunderbolt Hub
+
+I end up using [Dell WD19TB Thunderbolt
+Dock](https://www.dell.com/en-us/work/shop/dell-thunderbolt-dock-wd19tbs/apd/210-azbi/pc-accessories)
+as a USB3 hub.  It does power the laptop though.
 
 ## USB
 
