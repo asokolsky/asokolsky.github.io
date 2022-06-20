@@ -56,7 +56,7 @@ I end up using [Dell WD19TB Thunderbolt
 Dock](https://www.dell.com/en-us/work/shop/dell-thunderbolt-dock-wd19tbs/apd/210-azbi/pc-accessories)
 as a USB3 hub.  It does power the laptop though.
 
-## USB
+### USB
 
 Nothing but laptop
 
@@ -86,7 +86,7 @@ Bus 001 Device 010: ID 0bda:5487 Realtek Semiconductor Corp. Dell dock
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
 
-## RTL8153 Gigabit Ethernet Adapter
+### RTL8153 Gigabit Ethernet Adapter
 
 Driver
 
