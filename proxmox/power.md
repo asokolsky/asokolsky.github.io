@@ -40,10 +40,6 @@ WARNING: cpupower not found for kernel 5.4.0-66
     linux-tools-generic
     linux-cloud-tools-generic
 
-% apt install linux-tools-common
-```
-or
-```
 % apt install linux-cpupower cpufrequtils
 ```
 
@@ -97,7 +93,7 @@ root@duo:~# cat /sys/devices/system/cpu/intel_pstate/no_turbo
 0
 ```
 
-To change governor:
+To change governor until reboot:
 
 ```console
 root@suprox:~# cpupower frequency-set -g powersave
@@ -105,6 +101,14 @@ Setting cpu: 0
 Setting cpu: 1
 Setting cpu: 2
 Setting cpu: 3
+```
+
+To change governor permanently:
+
+```console
+cat << 'EOF' > /etc/default/cpufrequtils
+GOVERNOR="powersave"
+EOF
 ```
 
 ## intel-pstate vs acpi-cpufreq
