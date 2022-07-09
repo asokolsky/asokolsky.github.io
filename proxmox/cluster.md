@@ -57,5 +57,48 @@ I rebooted the node here. The documentation suggests this shouldn’t be require
 Ceph needs its own storage - Object Storage Daemon (OSD).  You will need to dedicate the entire disk to its exclusive use.
 
 
+### CLI
+
+Find out versions of the components:
+
+```console
+root@pmox1:~# ceph versions
+{
+    "mon": {
+        "ceph version 16.2.9 (a569859f5e07da0c4c39da81d5fb5675cd95da49) pacific (stable)": 1
+    },
+    "mgr": {
+        "ceph version 16.2.9 (a569859f5e07da0c4c39da81d5fb5675cd95da49) pacific (stable)": 1
+    },
+    "osd": {
+        "ceph version 16.2.9 (a569859f5e07da0c4c39da81d5fb5675cd95da49) pacific (stable)": 1
+    },
+    "mds": {},
+    "overall": {
+        "ceph version 16.2.9 (a569859f5e07da0c4c39da81d5fb5675cd95da49) pacific (stable)": 3
+    }
+}
+```
+
+Status display:
+```console
+root@pmox1:~# ceph status
+  cluster:
+    id:     2b45cd07-668d-49da-91eb-ee8d1dd41883
+    health: HEALTH_WARN
+            OSD count 1 < osd_pool_default_size 3
+ 
+  services:
+    mon: 1 daemons, quorum pmox1 (age 8m)
+    mgr: pmox1(active, since 7m)
+    osd: 1 osds: 1 up (since 8m), 1 in (since 3d)
+ 
+  data:
+    pools:   0 pools, 0 pgs
+    objects: 0 objects, 0 B
+    usage:   5.4 MiB used, 119 GiB / 119 GiB avail
+    pgs:     
+ ```
+
 
 
