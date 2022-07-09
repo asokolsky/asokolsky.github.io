@@ -94,3 +94,40 @@ Then
 root@pve:/etc/network# ifdown vmbr1
 root@pve:/etc/network# ifup vmbr1
 ```
+
+## Use ethtool
+
+Getting MAC address
+```console
+root@pmox2:~# ethtool -P eno1
+Permanent address: 6c:2b:59:f8:0d:f6
+root@pmox2:~# ethtool -P vmbr0
+Permanent address: not set
+```
+
+Display the driver used:
+```console
+root@pmox2:~# ethtool -i eno1
+driver: e1000e
+version: 5.15.39-1-pve
+firmware-version: 0.5-4
+expansion-rom-version: 
+bus-info: 0000:00:1f.6
+supports-statistics: yes
+supports-test: yes
+supports-eeprom-access: yes
+supports-register-dump: yes
+supports-priv-flags: yes
+root@pmox2:~# ethtool -i vmbr0
+driver: bridge
+version: 2.3
+firmware-version: N/A
+expansion-rom-version: 
+bus-info: N/A
+supports-statistics: no
+supports-test: no
+supports-eeprom-access: no
+supports-register-dump: no
+supports-priv-flags: no
+```
+
