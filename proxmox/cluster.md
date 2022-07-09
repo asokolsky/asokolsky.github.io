@@ -25,6 +25,8 @@ More:
 "software-defined storage platform that implements object storage on a single distributed computer cluster and provides 3-in-1 interfaces for
 object-, block- and file-level storage."
 
+Proxmox doc: https://pve.proxmox.com/wiki/Deploy_Hyper-Converged_Ceph_Cluster
+
 More: https://www.apalrd.net/posts/2022/cluster_ceph/
 
 ### Before you begin
