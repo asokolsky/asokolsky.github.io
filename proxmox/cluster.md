@@ -101,6 +101,42 @@ root@pmox1:~# ceph status
     usage:   5.4 MiB used, 119 GiB / 119 GiB avail
     pgs:     
  ```
+And then after
+
+* another node is added into the cluster
+* metadata servers are created 
+* CephFS is created
+
+we have:
+```console
+root@pmox1:~# ceph status
+  cluster:
+    id:     2b45cd07-668d-49da-91eb-ee8d1dd41883
+    health: HEALTH_WARN
+            Degraded data redundancy: 22/66 objects degraded (33.333%), 13 pgs degraded, 288 pgs undersized
+            OSD count 2 < osd_pool_default_size 3
+            too many PGs per OSD (288 > max 250)
+ 
+  services:
+    mon: 1 daemons, quorum pmox1 (age 25m)
+    mgr: pmox1(active, since 25m)
+    mds: 1/1 daemons up, 1 standby
+    osd: 2 osds: 2 up (since 13m), 2 in (since 13m)
+ 
+  data:
+    volumes: 1/1 healthy
+    pools:   3 pools, 288 pgs
+    objects: 22 objects, 12 KiB
+    usage:   13 MiB used, 231 GiB / 231 GiB avail
+    pgs:     22/66 objects degraded (33.333%)
+             275 active+undersized
+             13  active+undersized+degraded
+ 
+  progress:
+    Global Recovery Event (0s)
+      [............................] 
+ 
+```
 
 
 
