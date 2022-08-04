@@ -112,7 +112,7 @@ instcmds = ALL
 upsmon master
 ```
 
-## Testing
+## First Start
 
 Use upsc to display the
 [UPS information](https://networkupstools.org/docs/developer-guide.chunked/apas02.html):
@@ -196,9 +196,9 @@ test.panel.start - Start testing the UPS panel
 test.panel.stop - Stop a UPS panel test
 ```
 
-Continue as described in the above links:
+Continue as described in the above links and start the services
 
-```
+```sh
 systemctl enable nut-server.service
 systemctl enable nut-client.service
 service nut-server start
@@ -218,6 +218,11 @@ root@fuji:/etc/nut# service ups-monitor status -l
 Apr 03 12:37:37 fuji systemd[1]: Starting LSB: Network UPS Tools monitor initscript...
 Apr 03 12:37:37 fuji ups-monitor[7225]: Starting NUT - power device monitor and shutdown controller: nut-client failed!
 Apr 03 12:37:37 fuji systemd[1]: Started LSB: Network UPS Tools monitor initscript.
+```
+
+ Nut processes log into `/var/log/daemon.log`.
+ 
+```sh
 root@fuji:/etc/nut# service --status-all
  [ + ]  apparmor
  [ - ]  console-setup.sh
