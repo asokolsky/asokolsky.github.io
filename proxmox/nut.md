@@ -114,7 +114,8 @@ upsmon master
 
 ## Testing
 
-Use upsc to display the UPS information:
+Use upsc to display the
+[UPS information](https://networkupstools.org/docs/developer-guide.chunked/apas02.html):
 
 ```console
 root@fuji:/etc/nut# upsc theUPS
@@ -249,4 +250,37 @@ root@fuji:/etc/nut# service --status-all
  [ + ]  udev
  [ + ]  ups-monitor
  [ - ]  x11-common
+```
+
+## Using it
+
+Issue quick test command:
+
+```sh
+alex@fuji:~$ sudo upscmd -u upsmonitor -p UpsMonitor theUPS test.battery.start.quick
+OK
+```
+
+or better yet
+
+```sh
+alex@fuji:~$ sudo upscmd -u upsmonitor -p UpsMonitor theUPS test.battery.start.deep
+OK
+```
+
+And then monitor
+[changes to](https://networkupstools.org/docs/developer-guide.chunked/apas02.html):
+
+* `battery.charge` - Battery charge (percent);
+* `battery.runtime` - Battery runtime (seconds);
+* `battery.runtime.low` - Remaining battery runtime when UPS switches to LB (seconds);
+* `battery.voltage` - Battery voltage (V)
+* `ups.load` - Load on UPS (percent)
+* `ups.power` - Current value of apparent power (Volt-Amps)
+* `ups.power.nominal` - Nominal value of apparent power (Volt-Amps)
+* `ups.realpower` - Current value of real power (Watts)
+* `ups.realpower.nominal` - Nominal value of real power (Watts)
+
+```sh
+alex@fuji:~$ watch -d sudo upsc theUPS
 ```
