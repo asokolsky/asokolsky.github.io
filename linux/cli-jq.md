@@ -1,8 +1,10 @@
 # jq
 
-https://www.linode.com/docs/guides/using-jq-to-process-json-on-the-command-line/
+[Repo](https://github.com/stedolan/jq)
 
-https://github.com/stedolan/jq
+[Manual](https://stedolan.github.io/jq/manual/)
+
+https://www.linode.com/docs/guides/using-jq-to-process-json-on-the-command-line/
 
 ## Pretty print
 

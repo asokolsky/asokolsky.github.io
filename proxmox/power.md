@@ -40,10 +40,6 @@ WARNING: cpupower not found for kernel 5.4.0-66
     linux-tools-generic
     linux-cloud-tools-generic
 
-% apt install linux-tools-common
-```
-or
-```
 % apt install linux-cpupower cpufrequtils
 ```
 
@@ -67,6 +63,8 @@ analyzing CPU 0:
     Active: yes
 ```
 
+## CPU Governor
+
 [About
 governors](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/power_management_guide/cpufreq_governors):
 
@@ -82,22 +80,16 @@ however more gradually.
 * cpufreq_userspace - allows userspace programs to set the frequency, used
 with the cpuspeed daemon.
 
-## Show Scaling Driver
+### Show Scaling Driver
 
 ```console
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_driver
 ```
 
-## Enable CPU Turbo Boost
+### Change Governor
 
-Just make sure that:
 
-```console
-root@duo:~# cat /sys/devices/system/cpu/intel_pstate/no_turbo
-0
-```
-
-To change governor:
+To change governor until reboot:
 
 ```console
 root@suprox:~# cpupower frequency-set -g powersave
@@ -107,6 +99,14 @@ Setting cpu: 2
 Setting cpu: 3
 ```
 
+To change governor permanently:
+
+```console
+cat << 'EOF' > /etc/default/cpufrequtils
+GOVERNOR="powersave"
+EOF
+```
+
 ## intel-pstate vs acpi-cpufreq
 
 Is this still true? [acpi-cpufreq is
@@ -114,7 +114,7 @@ better](https://www.phoronix.com/scan.php?page=article&item=intel_pstate_linux31
 Switch the governor [to
 acpi-cpufreq](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/).
 
-## Enable Power Saving
+### Enable Power Saving Governor
 
 To enable PowerSave (instead of Performance) governor:
 
@@ -132,3 +132,19 @@ To check:
 ```console
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_driver
 ```
+
+## Enable CPU Turbo Boost
+
+Just make sure that:
+
+```console
+root@duo:~# cat /sys/devices/system/cpu/intel_pstate/no_turbo
+0
+```
+To change it:
+```
+root@pmox2:~# echo 0 | tee /sys/devices/system/cpu/intel_pstate/no_turbo
+```
+
+If you get  `tee: /sys/devices/system/cpu/intel_pstate/no_turbo: Operation not permitted`
+this means turbo is disabled in BIOS.

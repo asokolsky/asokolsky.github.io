@@ -118,26 +118,26 @@ Continue proxmox config and setup control web GUI on vmbr0.20.
 
 802.1Q VLAN Configuration:
 
-|VLAN ID|VLAN Name|Member Ports|Tagged Ports|Untagged Ports|
-|-------|---------|------------|------------|--------------|
-|1	    |Default  |1-8         |1-8         |n/a|
-|10     |WAN      |1-2         |2           |1|
-|20     |LAN      |2-8         |2           |3-8|
+VLAN ID|VLAN Name|Member Ports|Tagged Ports|Untagged Ports|
+-------|---------|------------|------------|--------------|
+1	    |Default  |1-8         |1-8         |n/a|
+10     |WAN      |1-2         |2           |1|
+20     |LAN      |2-8         |2           |3-8|
 
 802.1Q VLAN PVID Setting:
 
-|Port|PVID|
-|----|----|
-|1|10
-|2|1
-|3|20
-|4|20
-|5|20
-|6|20
-|7|20
-|8|20
+Port|PVID|
+----|----|
+1|10
+2|1
+3|20
+4|20
+5|20
+6|20
+7|20
+8|20
 
-## unbound Instability
+## Unbound Instability
 
 My install was affected by [unbound
 instability](https://redmine.pfsense.org/issues/11316).

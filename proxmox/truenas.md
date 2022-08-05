@@ -54,7 +54,6 @@ scsi2: /dev/disk/by-id/ata-KINGSTON_SV300S37A120G_50026B773A0059B3,size=11722082
 scsi3: /dev/disk/by-id/ata-MKNSSDSR120GB_MB2002101005FEB0D,size=117220824K,serial=MB2002101005FEB0D
 ```
 
-
 ## Install TrueNAS
 
 As usual.

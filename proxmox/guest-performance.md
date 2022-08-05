@@ -1,5 +1,9 @@
 # Optimizing Guest Performance
 
+## Options Section
+
+Uncheck the 'use tablet for pointer' checkbox.
+
 ## Hard Disk Performance
 
 ### SCSI Controller
