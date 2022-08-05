@@ -1,6 +1,9 @@
 # Windows Stuff
 
-[Useful Commands](cli.html)
+Useful Commands:
+
+* [wmic](wmic.html)
+* [the rest](cli.html)
 
 ## Disable IPv6
 
