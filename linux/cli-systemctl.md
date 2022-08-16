@@ -2,13 +2,14 @@
 
 [systemctl](https://www.linux.org/docs/man1/systemctl.html) is a cli to
 [systemd](https://www.linux.org/docs/man1/systemd.html).
+Reasonable [intro](https://skyyy.hashnode.dev/systemctl-linux-command).
 
 The pager defaults to `less`.  To disable it use `--no-pager` or
 `export SYSTEMD_PAGER=`.
 
 # Types of Daemons
 
-To list the types of daemons:
+To list the unit (daemon) types:
 
 ```sh
 $ systemctl -t help
@@ -42,6 +43,12 @@ $ systemctl list-units --type=path --all
 $ systemctl list-unit-files
 ```
 
+Also check out:
+
+```
+systemctl list-unit-files
+```
+
 ## Start Service
 
 Start x11vnc service:
@@ -61,5 +68,5 @@ systemctl list-units --type=service | grep running
 
 
 ```sh
-systemctl status Service
+systemctl status _service-name_
 ```
