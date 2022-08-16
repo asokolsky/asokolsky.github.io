@@ -250,3 +250,33 @@ root@fuji:/etc/nut# service --status-all
  [ + ]  ups-monitor
  [ - ]  x11-common
 ```
+
+## upssched
+
+Customize `upssched.conf`:
+
+```
+AT ONBATT * EXECUTE emailonbatt
+AT ONBATT * START-TIMER upsonbatt 300
+AT ONLINE * EXECUTE emailonline
+AT ONLINE * CANCEL-TIMER upsonbatt upsonline
+```
+The script could be something like:
+
+```
+#!/bin/bash
+case $1 in
+        emailonbatt)
+                  mail -s "UPS on battery power" your@email.com
+                  ;;
+        emailonline)
+                  mail -s "UPS on line power" your@email.com
+                  ;;
+        upsonbatt)
+                  ssh root@nas shutdown -h +0
+                  ;;
+        upsonline)
+                  etherwake 01:23:45:AB:CD:EF
+                  ;;
+esac
+```
