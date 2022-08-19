@@ -115,19 +115,22 @@ gcloud-crc32c 1.0.0
 gsutil 5.12
 ```
 
-## To Be Used Later
+## Preparation for the exercise
 
 Created `main.py` as advised.
 
-
-Preview with port forwarding. Start a tcp tunnel on port 8080 with
+Looks like these have to be set although this fact so far was never mentioned:
 
 ```
 export PROJECT=cw-devs-aug22
 export WORKSTATION_CLUSTER_REGION=us-central1
 export WORKSTATION_CLUSTER_ID=uxr-cluster
 export WORKSTATION_ID=??
+```
 
+Preview with port forwarding. Start a tcp tunnel on port 8080 with
+
+```
 gcloud alpha workstations start-tcp-tunnel --project=${PROJECT} \
     --region=${WORKSTATION_CLUSTER_REGION} \
     --cluster=${WORKSTATION_CLUSTER_ID} \
@@ -141,11 +144,12 @@ USE THE FOLLOWING INSTRUCTIONS FOR THE TASK:
 Connect to your workstation via SSH.
 Start a tcp tunnel on remote port 22
 
+```
 gcloud alpha workstations start-tcp-tunnel --project=${PROJECT} \
     --region=${WORKSTATION_CLUSTER_REGION} \
     --cluster=${WORKSTATION_CLUSTER_ID} \
     ${WORKSTATION_ID} 22 --local-host-port=127.0.0.1:2222
-
+```
 
 Then run
 
