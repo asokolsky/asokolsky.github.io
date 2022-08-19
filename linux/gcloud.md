@@ -125,7 +125,7 @@ Looks like these have to be set although this fact so far was never mentioned:
 export PROJECT=cw-devs-aug22
 export WORKSTATION_CLUSTER_REGION=us-central1
 export WORKSTATION_CLUSTER_ID=uxr-cluster
-export WORKSTATION_ID=??
+export WORKSTATION_ID=ws-cw-devs-aug22-p10-l70rpujd
 ```
 
 Preview with port forwarding. Start a tcp tunnel on port 8080 with
@@ -226,3 +226,15 @@ Status: inactive
 ```
 
 All to no avail.  Looks like attempt to communicate to the survey server fails.
+
+Looked into chrole log - sdk.split.io was inacessible.  Looks like my privacy
+filters were prohibiting access to it.
+
+Finally:
+```
+alex@latitude7490:~/ > ping sdk.split.io
+PING e3.shared.global.fastly.net (151.101.43.9) 56(84) bytes of data.
+64 bytes from 151.101.43.9 (151.101.43.9): icmp_seq=1 ttl=56 time=14.6 ms
+64 bytes from 151.101.43.9 (151.101.43.9): icmp_seq=2 ttl=56 time=14.9 ms
+64 bytes from 151.101.43.9 (151.101.43.9): icmp_seq=3 ttl=56 time=10.1 ms
+```
