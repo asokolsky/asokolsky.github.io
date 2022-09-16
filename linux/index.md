@@ -30,7 +30,6 @@ Tasks:
 * [dot files](/dot-files)
 * [kernel tuning](kernel-tuning.html)
 * [Prometheus & Grafana](prometheus-grafana.html)
-* [Remote Key Mapping](remote.html)
 * Cheat sheets: [tmux](tmux.html), [vi](../vi.html)
 
 Internals:
