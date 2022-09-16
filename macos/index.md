@@ -10,4 +10,7 @@ Differentiate touch pad and mouse scroll direction using
 * [Java](java.html)
 * [Jenkins](jenkins.html)
 
-Also relevant: [dot-files](../linux/dot-files/)
+Also relevant:
+
+* [dot-files](../linux/dot-files/)
+* [emacs colors](../linux/emacs.html)

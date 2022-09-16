@@ -1,12 +1,18 @@
 # iTerm2 Terminal Emulator
 
-I use [iTerm2](https://iterm2.com/). Consider this
-[vscode color theme](https://github.com/tallpants/vscode-theme-iterm2).
+I use [iTerm2](https://iterm2.com/).
+
+## Themes
+
+* [vscode color theme](https://github.com/tallpants/vscode-theme-iterm2)
+* [dracula](https://github.com/dracula/iterm)
+
+## Cheat Sheet
 
 Here is a cheat sheet from
 [here](https://github.com/vikashvverma/Goodies/blob/master/Shortcuts/Iterm2.md).
 
-## Keys
+### Keys
 
 * Cmd ⌘
 * Shift ⇧
@@ -15,7 +21,7 @@ Here is a cheat sheet from
 * Caps Lock ⇪
 * Fn
 
-## Tabs and Panes
+### Tabs and Panes
 
 |Function|Shortcut
 -------- | -------
@@ -32,7 +38,7 @@ Split pane Vertically (new profile) | ⌘ + Opt + V
 Set Mark | ⌘ + M
 Jump to Mark | ⌘ + J
 
-## Basic Moves
+### Basic Moves
 
 |Function|Shortcut
 -------- | --------
@@ -42,7 +48,7 @@ Delete current character | Ctrl + d
 Delete previous character | Backspace
 Undo | Ctrl + -
 
-## Moving Faster
+### Moving Faster
 
 |Function|Shortcut
 -------- | --------
@@ -52,7 +58,7 @@ Move forward a word | Opt + f
 Move backward a word | Opt + b
 Clear the screen | ⌘ + k
 
-## Cut and Paste
+### Cut and Paste
 
 |Function|Shortcut
 -------- | --------
@@ -64,7 +70,7 @@ Paste the last cut text | Ctrl + w
 Loop through and paste previously cut text | Opt + y
 Loop through and paste the last argument of previous commands | Opt + .
 
-## Search the Command History
+### Search the Command History
 
 |Function|Shortcut
 -------- | --------

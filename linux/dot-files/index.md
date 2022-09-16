@@ -3,10 +3,6 @@
 [The best way to store your
 dotfiles](https://www.atlassian.com/git/tutorials/dotfiles)
 
-[Jay's repo](https://github.com/jaybocc2/dotfiles)
-
-[Another repo](https://gitlab.com/dwt1/dotfiles)
-
 ## zsh startup
 
 `.zshenv` → [`.zprofile` if login] → [`.zshrc` if interactive] → [`.zlogin` if login] → [`.zlogout` sometimes]
@@ -53,3 +49,9 @@ start X on boot, so this file is not always very useful.
 ```sh
 {% include_relative zshrc %}
 ```
+
+## More
+
+* [jaybocc2/dotfiles](https://github.com/jaybocc2/dotfiles)
+* [dwt1/dotfiles](https://gitlab.com/dwt1/dotfiles)
+* [daviwil/dotfiles](https://github.com/daviwil/dotfiles)
