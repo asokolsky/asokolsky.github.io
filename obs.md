@@ -7,4 +7,5 @@
 Locations on MacOS
 
 * `/Library/Application Support/obs-studio/plugins`
-* 
+* `~/Library/Application Support/obs-studio/plugins`
+
