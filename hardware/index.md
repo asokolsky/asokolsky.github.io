@@ -6,5 +6,8 @@
 * [Logitech Brio 4k](brio.html)
 * [Logitech Presenter R800 Remote Control](remote.md)
 * [Panasonic GH5](gh5.html)
+* [rpi4](rpi4.html)
 * [Thunderbolt](thunderbolt.html)
 * [Realtek RTL8125 2.5 GB Ethernet](../proxmox/network-r8125.md) - don't use it!
+* [Remote Key Mapping](../linux/remote.html)
+* [Ubiquity EdgeRouter X](ubiquity.html)

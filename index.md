@@ -9,7 +9,7 @@ layout: default
 [Virtual Environments](programming/pyenv-virtualenv.html)
 * [more...](programming/)
 
-## Applications & Tasks
+## Apps & Tasks
 
 * [AWS](aws/)
 * [API Gateways](api-gateways.html)
@@ -20,8 +20,6 @@ layout: default
 * [Lan-to-Lan Wireguard](wireguard.html)
 * [LDAP & AD search](cli-ldap.html)
 * [Prometheus & Grafana](linux/prometheus-grafana.html)
-* [Remote Key Mapping](linux/remote.html)
-* [Ubiquity EdgeRouter X](ubiquity.html)
 * Cheat sheets: [tmux](linux/tmux.html), [vi](vi.html)
 * [Visual Studio Code](dot-vscode.html)
 * [ZFS setup and commands](zfs.html)
@@ -52,6 +50,8 @@ and [more...](cli.html)
 [BSD geom, gpart, driveid, system temps](bsd/)
 
 [Windows](windows/)
+
+[Hardware](hardware/)
 
 [blog posts](posts.html)
 
