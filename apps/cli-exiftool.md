@@ -33,3 +33,7 @@ To strip EXIF metadata from the image:
 ```
 exiftool -all= foo.jpg
 ```
+
+Alternatively, to remove geographical coordinates embedded in the photo:
+
+exiftool -geotag= foo.jpg

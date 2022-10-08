@@ -14,8 +14,8 @@ layout: default
 * [AWS](aws/)
 * [API Gateways](apps/api-gateways.html)
 * Conversion of [audio](linux/convert-audio.html),
-[images](linux/convert-image2pdf.html)
-* Network [planning with ipcalc](linux/cli-ipcalc.html),ss
+[images](linux/convert-image.html)
+* Network [planning with ipcalc](linux/cli-ipcalc.html),
 [performance testing with iperf](linux/cli-iperf.html)
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
