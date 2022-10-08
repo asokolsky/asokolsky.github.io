@@ -1,6 +1,18 @@
-# Using exiftool
+# exiftool
 
 [exiftool](https://github.com/exiftool/exiftool) is pretty awesome!
+
+## Installation
+
+On Linux:
+
+```sh
+sudo apt install exiftool
+```
+
+On MacOS: <whatever>
+
+## Use
 
 Here are commands I found useful:
 
@@ -14,4 +26,10 @@ And then to actually rename the files:
 
 ```console
 exiftool -d '%Y-%m-%d' '-Filename<${DateTimeOriginal}.${FileSequence;$_=sprintf("%03d", $_ )}.%le' *.*
+```
+
+To strip EXIF metadata from the image:
+
+```
+exiftool -all= foo.jpg
 ```

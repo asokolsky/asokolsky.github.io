@@ -1,4 +1,4 @@
-# Useful Commands
+# MacOS CLI Tips
 
 ## List Hardware
 
