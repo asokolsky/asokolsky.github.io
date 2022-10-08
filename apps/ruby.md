@@ -1,6 +1,5 @@
 # Ruby
 
-
 Install [rbenv](https://github.com/rbenv/rbenv):
 ```sh
 sudo apt install rbenv

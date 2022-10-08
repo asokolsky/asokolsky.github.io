@@ -13,14 +13,14 @@ layout: default
 
 * [AWS](aws/)
 * [API Gateways](apps/api-gateways.html)
-* Conversion [audio](linux/convert-audio.html),
-[photos to PDF](linux/convert-image2pdf.html)
-* Network [planning with ipcalc](linux/cli-ipcalc.html) and
+* Conversion of [audio](linux/convert-audio.html),
+[images](linux/convert-image2pdf.html)
+* Network [planning with ipcalc](linux/cli-ipcalc.html),ss
 [performance testing with iperf](linux/cli-iperf.html)
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](linux/prometheus-grafana.html)
-* Cheat sheets: [tmux](linux/tmux.html), [emacs](apps/emacs.html),
+* Cheat sheets: [tmux](apps/tmux.html), [emacs](apps/emacs.html),
 [vi](apps/vi.html)
 * Convert [audio](linux/convert-audio.html), [images](linux/convert-image.html)
 * [Visual Studio Code](apps/dot-vscode.html)
