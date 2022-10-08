@@ -9,7 +9,7 @@ According to https://streamgeeks.us/the-best-audio-filters-for-obs/
 Filters in the following order:
 
 * Noise suppression
-* Gate
+* Noise Gate
 * EQ
 * Compression
 
@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=DZnkyq4kqkE
 
 * disable low light enhancement - removes ghosting effects
 
-## Plugins
+## OBS Plugins
 
 [List](https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/)
 
