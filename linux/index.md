@@ -29,8 +29,6 @@ Tasks:
 [photos to PDF](convert-image2pdf.html)
 * [dot files](/dot-files)
 * [kernel tuning](kernel-tuning.html)
-* [Prometheus & Grafana](prometheus-grafana.html)
-* Cheat sheets: [tmux](tmux.html), [vi](../vi.html)
 
 Internals:
 
