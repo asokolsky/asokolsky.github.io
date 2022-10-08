@@ -25,9 +25,8 @@ Commands:
 Tasks:
 
 * Benchmark: [speed-test.sh](speed-test.sh)
-* Convert [audio](convert-audio.html),
-[photos to PDF](convert-image2pdf.html)
-* [dot files](/dot-files)
+* Convert [audio](convert-audio.html), [images](convert-image.html)
+* [dot files](../apps/dot-files)
 * [kernel tuning](kernel-tuning.html)
 
 Internals:

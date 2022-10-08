@@ -20,7 +20,9 @@ layout: default
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](linux/prometheus-grafana.html)
-* Cheat sheets: [tmux](linux/tmux.html), [vi](apps/vi.html)
+* Cheat sheets: [tmux](linux/tmux.html), [emacs](apps/emacs.html),
+[vi](apps/vi.html)
+* Convert [audio](linux/convert-audio.html), [images](linux/convert-image.html)
 * [Visual Studio Code](apps/dot-vscode.html)
 * [ZFS setup and commands](apps/zfs.html)
 * [more...](apps/)
