@@ -30,10 +30,12 @@ exiftool -d '%Y-%m-%d' '-Filename<${DateTimeOriginal}.${FileSequence;$_=sprintf(
 
 To strip EXIF metadata from the image:
 
-```
+```sh
 exiftool -all= foo.jpg
 ```
 
 Alternatively, to remove geographical coordinates embedded in the photo:
 
+```sh
 exiftool -geotag= foo.jpg
+```
