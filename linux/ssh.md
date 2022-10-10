@@ -2,7 +2,10 @@
 
 ## Sources
 
-e.g. https://austinsnerdythings.com/2021/04/02/ssh-key-tutorial/
+* [SSH Key Tutorial](https://austinsnerdythings.com/2021/04/02/ssh-key-tutorial/)
+* [ssh man page](https://man7.org/linux/man-pages/man1/ssh.1.html)
+* [ssh-keygen man page](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html)
+* [ssh-add man page](https://man7.org/linux/man-pages/man1/ssh-add.1.html0)
 
 ## Generate SSH Key Pair
 
@@ -18,7 +21,7 @@ Your public key has been saved in /home/alex/.ssh/id_ed25519.pub
 
 Verify:
 
-```
+```console
 $ ls -la ~/.ssh
 total 48
 drwx------  2 alex alex  4096 Dec 16 14:17 .
@@ -45,7 +48,7 @@ $ ssh-add -l
 
 ## Create Account on a Remote Computer
 
-```
+```sh
 uname=alex
 useradd -m $uname
 passwd $uname
@@ -54,7 +57,6 @@ usermod -aG sudo $uname
 usermod -aG adm $uname
 usermod -s /bin/bash $uname
 ```
-
 
 ## Copy ID to a Remote Computer
 
@@ -71,7 +73,7 @@ and check to make sure that only the key(s) you wanted were added.
 ```
 ## Enjoy it
 
-```
+```console
 alex@latitude7490:~$ ssh alex@fuji
 Linux fuji 5.4.114-1-pve #1 SMP PVE 5.4.114-1 (Sun, 09 May 2021 17:13:05 +0200) x86_64
 

@@ -26,3 +26,5 @@ To strip EXIF:
 ```sh
 convert in.jpg -auto-orient -strip out.jpg
 ```
+
+Alternatively on can use [exiftool](../apps/cli-exiftool.html).
