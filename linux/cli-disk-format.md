@@ -34,7 +34,7 @@ alex@latitude7490:~/ > sudo dd if=/dev/zero of=/dev/sda bs=4096 status=progress
 1332854784 bytes (1.3 GB, 1.2 GiB) copied, 44.9295 s, 29.7 MB/s
 ```
 
-## Partition
+## Partition it
 
 You may need to unmount flash:
 
@@ -42,16 +42,33 @@ You may need to unmount flash:
 sudo umount /dev/sda1
 ```
 
-Then partition it:
+Then partition it using
+[GNU parted](https://www.gnu.org/software/parted/manual/parted.html):
 
 ```sh
 sudo parted /dev/sda --script -- mklabel msdos
 ```
 Create a primary partition of type fat32 taking all the space:
-```
+```sh
 sudo parted /dev/sda --script -- mkpart primary fat32 1MiB 100%
 ```
-Format it:
+
+## Format it
+
+Format disk as exfat:
+```sh
+sudo mkfs.exfat -n LABEL /dev/sda1
+```
+
+As vfat:
+
 ```
 sudo mkfs.vfat -F32 /dev/sda1
+```
+
+## fsck
+
+Depends on the file system used in the previous step, e.g.:
+```sh
+sudo fsck.exfat /dev/sda1
 ```

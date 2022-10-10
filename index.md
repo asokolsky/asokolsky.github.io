@@ -9,22 +9,23 @@ layout: default
 [Virtual Environments](programming/pyenv-virtualenv.html)
 * [more...](programming/)
 
-## Applications & Tasks
+## Apps & Tasks
 
 * [AWS](aws/)
-* [API Gateways](api-gateways.html)
-* Conversion [audio](linux/convert-audio.html),
-[photos to PDF](linux/convert-image2pdf.html)
-* Network [planning with ipcalc](linux/cli-ipcalc.html) and
+* [API Gateways](apps/api-gateways.html)
+* Conversion of [audio](linux/convert-audio.html),
+[images](linux/convert-image.html)
+* Network [planning with ipcalc](linux/cli-ipcalc.html),
 [performance testing with iperf](linux/cli-iperf.html)
-* [Lan-to-Lan Wireguard](wireguard.html)
-* [LDAP & AD search](cli-ldap.html)
+* [Lan-to-Lan Wireguard](apps/wireguard.html)
+* [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](linux/prometheus-grafana.html)
-* [Remote Key Mapping](linux/remote.html)
-* [Ubiquity EdgeRouter X](ubiquity.html)
-* Cheat sheets: [tmux](linux/tmux.html), [vi](vi.html)
-* [Visual Studio Code](dot-vscode.html)
-* [ZFS setup and commands](zfs.html)
+* Cheat sheets: [tmux](apps/tmux.html), [emacs](apps/emacs.html),
+[vi](apps/vi.html)
+* Convert [audio](linux/convert-audio.html), [images](linux/convert-image.html)
+* [Visual Studio Code](apps/dot-vscode.html)
+* [ZFS setup and commands](apps/zfs.html)
+* [more...](apps/)
 
 ## Linux
 
@@ -33,7 +34,7 @@ layout: default
 [netstat](linux/cli-netstat.html),
 [pdsh](linux/cli-pdsh.html), [bulk rename](linux/cli-rename-files.html),
 [rsync](linux/cli-rsync.html), [systemctl](linux/cli-systemctl.html),
-and [more...](cli.html)
+and [more...](linux/cli.html)
 * [IPMI Config and cli](linux/cli-ipmi.html)
 * [Configure SSH for Key Authentication](linux/ssh.html)
 * [dot files](linux/dot-files/)
@@ -52,6 +53,8 @@ and [more...](cli.html)
 [BSD geom, gpart, driveid, system temps](bsd/)
 
 [Windows](windows/)
+
+[Hardware](hardware/)
 
 [blog posts](posts.html)
 

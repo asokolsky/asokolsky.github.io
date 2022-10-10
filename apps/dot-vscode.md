@@ -8,9 +8,10 @@ I really like [Source Code Pro](fonts.html) by Adobe.
 
 Depending on the platform, the [user
 settings](https://code.visualstudio.com/docs/getstarted/settings)
-are stored in `settings.json` in the folloing directory:
+are stored in `settings.json` in the following directory:
 
-* Windows:  `%APPDATA%\Code\User\`
+* Windows:  `%APPDATA%\Code\User\`, where `%APPDATA%` is usually
+`C:\Users\_username_\AppData\Roaming`.
 * macOS: `/Users/{username}/Library/Application Support/Code/User/`
 * Linux: `$HOME/.config/Code/User/`
 
@@ -32,6 +33,33 @@ are stored in `settings.json` in the folloing directory:
         "*.ipynb": "jupyter.notebook.ipynb"
     },
 }
+```
+
+On Windows I also have:
+```json
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+
+        "Ubuntu-22.04 (WSL)": {
+            "path": "C:\\WINDOWS\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu-22.04"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Ubuntu-22.04 (WSL)",
 ```
 
 ### keybindings.json

@@ -25,13 +25,9 @@ Commands:
 Tasks:
 
 * Benchmark: [speed-test.sh](speed-test.sh)
-* Convert [audio](convert-audio.html),
-[photos to PDF](convert-image2pdf.html)
-* [dot files](/dot-files)
+* Convert [audio](convert-audio.html), [images](convert-image.html)
+* [dot files](../apps/dot-files)
 * [kernel tuning](kernel-tuning.html)
-* [Prometheus & Grafana](prometheus-grafana.html)
-* [Remote Key Mapping](remote.html)
-* Cheat sheets: [tmux](tmux.html), [vi](../vi.html)
 
 Internals:
 
@@ -46,5 +42,5 @@ Books:
 * [Networking2](http://nnc3.com/mags/Networking2/)
 * [Unix](http://nnc3.com/mags/unix3/)
 * [Linux web server](http://nnc3.com/mags/lnXwwwsvr/)
-* [Linux Journal](http://nnc3.com/mags/LM18/LJ/tocindex.html
+* [Linux Journal](http://nnc3.com/mags/LM18/LJ/tocindex.html)
 * [Linux Magazine](http://nnc3.com/mags/LM10/)

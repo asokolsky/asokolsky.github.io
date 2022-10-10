@@ -39,7 +39,7 @@ container's port 22:
 
 ```sh
 docker run -d --rm --name=agent1 -p 2222:22 \
-    -e "JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AA....oFU= asokolsky@USSJC-ASOKOLSKY"\
+    -e "JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AA..."\
     jenkins/ssh-agent:alpine
 VARS1="HOME=|USER=|MAIL=|LC_ALL=|LS_COLORS=|LANG="
 VARS2="HOSTNAME=|PWD=|TERM=|SHLVL=|LANGUAGE=|_="

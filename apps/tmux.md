@@ -2,6 +2,7 @@
 
 tmux is [awesome and is highly
 recommended](https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/).
+Here is a [man page](https://www.man7.org/linux/man-pages/man1/tmux.1.html).
 
 ## Architecture
 
@@ -11,6 +12,23 @@ Session < Window < Pane:
 sysadmin, may have more than one window;
 * Window - for projects within that theme, may have more than one pane;
 * Pane - for view within your current project.
+
+## CLI
+
+You can run `tmux _command_`.  The following are excerpts from the man page.
+
+Command|Description
+---|--
+`attach-session [-t target-session]`|Create a new client in the current terminal and attach it to the target-session.
+`detach-client [-s target-session] [-t target-client]`|Detach the current client if bound to a key, the client specified with `-t`, or all clients currently attached to the session specified by `-s`.
+`info`|Show every session, window, pane, etc...
+`kill-server`|Kill the tmux server and clients and destroy all sessions.
+`kill-session [-aC] [-t target-session]`|Destroy the given session, closing any windows linked to it and no other sessions, and detaching all clients attached to it.  If -a is given, all sessions but the specified one is killed.  The -C flag clears alerts (bell, activity, or silence) in all windows linked to the session.
+`list-clients [-t target-session]`|List clients attached to the server. If target-session is specified, list only clients connected to that session.
+`list-commands [command]`|List the syntax of command or - if omitted - of all commands supported by tmux.
+`list-sessions`|List all sessions managed by the server.
+
+Also see CLI column below.
 
 ## Modes
 
@@ -167,7 +185,3 @@ Ctrl + b ]|Paste contents of buffer_0
 `: delete-buffer -b 1` Delete buffer_1
 
 `: set -g OPTION` Set OPTION for all sessions
-
-## Misc CLI
-
-`$ tmux info` Show every session, window, pane, etc...
