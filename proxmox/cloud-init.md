@@ -5,22 +5,26 @@
 * [how to create a proxmox ubuntu cloud init
 image](https://austinsnerdythings.com/2021/08/30/how-to-create-a-proxmox-ubuntu-cloud-init-image/)
 * [how to deploy VMs in proxmox with terraform](https://austinsnerdythings.com/2021/09/01/how-to-deploy-vms-in-proxmox-with-terraform/)
-
+* https://www.learnlinux.tv/proxmox-ve-how-to-build-an-ubuntu-22-04-template-updated-method/
 
 ## Get the OS Image
 
-Use Proxmox GUI to download image from
-`https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img`
+Use Proxmox GUI to download
+[20.04 image](https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img).
+Alternatively use
+[22.04 image](https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img).
+
 
 ## Add Packages to the Image
 
-Prepare proxmox:
+Prepare proxmox and install
+[libguestfs-tools](https://www.libguestfs.org/):
 
-```console
-root@duo:~# apt update -y && apt install libguestfs-tools -y
+```sh
+apt update -y && apt install libguestfs-tools -y
 ```
 
-Install qemu-guest-agent into the image:
+Install qemu-guest-agent into the downloaded image:
 
 ```console
 root@duo:/# find . -type f -name 'focal-server-*'
@@ -71,13 +75,12 @@ root@duo:~# qm template 9000
   Renamed "vm-9000-disk-0" to "base-9000-disk-0" in volume group "pve"
   Logical volume pve/base-9000-disk-0 changed.
   WARNING: Combining activation change with other commands is not advised.
-root@duo:~#
 ```
 
 ## Test VM Creation from Template
 
 
-```console
+```sh
 qm clone 9000 999 --name test-clone-cloud-init
 qm set 999 --sshkey ~/.ssh/id_rsa.pub
 qm set 999 --ipconfig0 ip=192.168.10.96/24,gw=192.168.10.1
@@ -86,19 +89,19 @@ qm start 999
 
 Now login into the newly created VM.  First remove known host because SSH key changed:
 
-```console
+```sh
 ssh-keygen -f "~/.ssh/known_hosts" -R 192.168.10.96
 ```
 
 Now we can procceed with login:
 
-```console
+```sh
 ssh -i ~/.ssh/id_rsa ubuntu@192.168.10.96
 ```
 
 ## VM Cleanup
 
-```console
+```sh
 qm stop 999 && qm destroy 999
 ```
 
@@ -107,23 +110,23 @@ qm stop 999 && qm destroy 999
 From [tutorial](https://learn.hashicorp.com/tutorials/terraform/install-cli):
 
 
-```console
+```sh
 apt -y install lsb-release software-properties-common
 ```
 
 Add the HashiCorp GPG key:
 
-```console
-# curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
+```sh
+curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
 ```
 
 Add the repository:
-```console
+```sh
 apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 ```
 
 Install Terraform:
-```console
+```sh
 apt update && apt install -y terraform
 ```
 

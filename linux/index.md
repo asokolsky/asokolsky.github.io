@@ -3,7 +3,7 @@
 Administering:
 
 * [CentOS](../centos/)
-* [Proxmox](../proxmox/).
+* [Proxmox](../proxmox/)
 * [SysOps Handbook](https://abarrak.gitbook.io/linux-sysops-handbook/)
 
 Commands:
