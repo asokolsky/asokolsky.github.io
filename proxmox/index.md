@@ -49,7 +49,7 @@ deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 
 ### Set the CPU governor
 
-```console
+```sh
 cat << 'EOF' > /etc/default/cpufrequtils
 GOVERNOR="powersave"
 EOF
@@ -57,14 +57,14 @@ EOF
 
 ### Configure lm-sensors
 
-```console
-# sensors-detect
+```sh
+sensors-detect
 ```
 
 And finally:
 
-```console
-# watch -n 1 sensors
+```sh
+watch -n 1 sensors
 ```
 or just
 ```console
@@ -90,7 +90,7 @@ temp1:        +44.0°C
 
 ## PCI Pass Through Config
 
-See [pcie-passthrough.md](pcie-passthrough.md).
+See [pcie-passthrough.md](pcie-passthrough.html).
 
 ## Add the server to Datacenter / Cluster
 

@@ -20,7 +20,7 @@ Edit /etc/default/grub:
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
 ```
 
-You may also add `intel_pstate=disable` - see [power management](power.md).
+You may also add `intel_pstate=disable` - see [power management](power.html).
 
 Then:
 

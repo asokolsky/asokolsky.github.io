@@ -55,3 +55,4 @@ start X on boot, so this file is not always very useful.
 * [jaybocc2/dotfiles](https://github.com/jaybocc2/dotfiles)
 * [dwt1/dotfiles](https://gitlab.com/dwt1/dotfiles)
 * [daviwil/dotfiles](https://github.com/daviwil/dotfiles)
+* [notthebee/dotfiles](https://github.com/notthebee/dotfiles)

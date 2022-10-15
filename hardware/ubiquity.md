@@ -22,4 +22,4 @@ In order for DNS to resolve LAN computers registered via DHCP:
 * use localdomain for domain in DHCP and in System tab
 
 There is NO integration with Ubiquity UniFi Controller.
-For the latter see [proxmox/unifi.md](proxmox/unifi.md)
+For the latter see [proxmox/unifi](proxmox/unifi.html)

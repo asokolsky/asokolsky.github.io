@@ -1,49 +1,54 @@
 # Proxmox Power Saving
 
-## Sources
+Concepts
+
+* [Processor P-states and C-states](https://www.thomas-krenn.com/en/wiki/Processor_P-states_and_C-states)
+* [`intel_pstate` CPU Performance Scaling Driver](https://docs.kernel.org/admin-guide/pm/intel_pstate.html)
+* [ASPM](https://en.wikipedia.org/wiki/Active_State_Power_Management)
+
+Apps
+
+* [powertop](https://linrunner.de/tlp/faq/powertop.html),
+[repo](https://github.com/fenrus75/powertop)
+* [cpupower](https://hreniuc.dev/how-to-use-cpupower-cpu-governors)
+
+Install on ubuntu:
+```
+sudo apt install powertop linux-tools-`uname -r`
+```
+Install on debian:
+```
+sudo apt install powertop linux-cpupower
+```
+
+Info:
 
 * [CPU frequency
 scaling](https://wiki.archlinux.org/title/CPU_frequency_scaling)
 * [thread1](https://forum.proxmox.com/threads/fix-always-high-cpu-frequency-in-proxmox-host.84270/)
 * [thread2](https://forum.proxmox.com/threads/cpu-power-throttle-back-to-save-energy.27510/)
 * [switch to acpi-cpufreq
-governor](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/).
+governor](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/)
+* [Building a Power Efficient Home Server](https://www.youtube.com/watch?v=MucGkPUMjNo)
 
 Just in case you have AMD CPUs:
 [thread3](https://forum.level1techs.com/t/gigabyte-server-activity-corner-proxmox-docker-and-config-notes/167614).
 
-## Monitor CPU frequency
+## Monitoring
 
-```console
-% cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
+CPU frequency
+
+```sh
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
 ```
 
 better yet:
-```console
+```sh
 watch grep \"cpu MHz\" /proc/cpuinfo
 ```
 
-## Install cpupower
+## Use cpupower
 
-[More on
-cpupower](https://www.hreniuc.dev/2019/03/28/how-to-use-cpupower-cpu-governors/).
-
-```console
-% cpupower
-WARNING: cpupower not found for kernel 5.4.0-66
-
-  You may need to install the following packages for this specific kernel:
-    linux-tools-5.4.0-66-generic
-    linux-cloud-tools-5.4.0-66-generic
-
-  You may also want to install one of the following packages to keep up to date:
-    linux-tools-generic
-    linux-cloud-tools-generic
-
-% apt install linux-cpupower cpufrequtils
-```
-
-Then
 ```console
 root@fuji:~# cpupower frequency-info
 analyzing CPU 0:
@@ -82,12 +87,11 @@ with the cpuspeed daemon.
 
 ### Show Scaling Driver
 
-```console
+```sh
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_driver
 ```
 
 ### Change Governor
-
 
 To change governor until reboot:
 
@@ -101,7 +105,7 @@ Setting cpu: 3
 
 To change governor permanently:
 
-```console
+```sh
 cat << 'EOF' > /etc/default/cpufrequtils
 GOVERNOR="powersave"
 EOF
@@ -118,8 +122,8 @@ acpi-cpufreq](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/).
 
 To enable PowerSave (instead of Performance) governor:
 
-```console
-% echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+```sh
+echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
 
 ## Switch back to intel_pstate Governor
@@ -129,7 +133,7 @@ in `/etc/default/grub`.  Then `sudo update-grub` and reboot.
 
 To check:
 
-```console
+```sh
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_driver
 ```
 
@@ -142,9 +146,34 @@ root@duo:~# cat /sys/devices/system/cpu/intel_pstate/no_turbo
 0
 ```
 To change it:
-```
-root@pmox2:~# echo 0 | tee /sys/devices/system/cpu/intel_pstate/no_turbo
+```sh
+echo 0 | tee /sys/devices/system/cpu/intel_pstate/no_turbo
 ```
 
-If you get  `tee: /sys/devices/system/cpu/intel_pstate/no_turbo: Operation not permitted`
+If you get
+`tee: /sys/devices/system/cpu/intel_pstate/no_turbo: Operation not permitted`
 this means turbo is disabled in BIOS.
+
+## Addressing `powertop` Recommendations
+
+Add to `/etc/sysctl.conf`:
+
+```
+# recommended by powertop
+kernel.nmi_watchdog=0
+vm.dirty_writeback_centisecs=1500
+```
+
+Create `/etc/udev/rules.d/10-runtime-pm.rules`:
+
+```
+SUBSYSTEM!="pci", GOTO="power_runtime_rules_end"
+ACTION!="add", GOTO="power_runtime_rules_end"
+
+KERNEL=="????:??:??.?"
+PROGRAM="/bin/sleep 0.1"
+
+ATTR{power/control}=="*", ATTR{power/control}="auto"
+
+LABEL="power_runtime_rules_end"
+```
