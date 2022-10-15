@@ -1,7 +1,5 @@
 # Emacs Customization and Cheat Sheet
 
-Must have color Theme: [Dracula](https://draculatheme.com/emacs)
-
 [Emacs Configuration](https://github.com/daviwil/dotfiles/blob/master/Emacs.org)
 
 ## Concepts
@@ -151,3 +149,8 @@ Undo | C-x u |
 Undo all changes since the last save | | M-x revert-buffer
 Shell| | M-x shell
 Cancel current command | C-g |
+
+## Color Theme
+
+Must have [Color Theme](./color-themes.md), e.g.
+[Dracula](https://draculatheme.com/emacs)!

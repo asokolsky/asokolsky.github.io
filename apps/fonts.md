@@ -17,6 +17,14 @@ release](https://github.com/adobe-fonts/source-code-pro/releases/latest)
 Mac](https://titanwolf.org/Network/Articles/Article?AID=09204517-16d0-48eb-a201-a96d69b5160f).
 
 
+More options:
+
+* [Iosevka](https://github.com/be5invis/Iosevka)
+* [Fira Code](https://github.com/tonsky/FiraCode)
+* [Cascadia Code](https://github.com/microsoft/cascadia-code)
+* [SF Mono](https://developer.apple.com/fonts/)
+* [Comic Mono](https://github.com/dtinth/comic-mono-font)
+
 ## More Fonts
 
 https://github.com/perrychan1/fonts

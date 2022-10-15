@@ -19,7 +19,7 @@ layout: default
 [performance testing with iperf](linux/cli-iperf.html)
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
-* [Prometheus & Grafana](linux/prometheus-grafana.html)
+* [Prometheus & Grafana](apps/prometheus-grafana.html)
 * Cheat sheets: [tmux](apps/tmux.html), [emacs](apps/emacs.html),
 [vi](apps/vi.html)
 * Convert [audio](linux/convert-audio.html), [images](linux/convert-image.html)
