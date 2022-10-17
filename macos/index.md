@@ -14,3 +14,6 @@ Also relevant:
 
 * [dot-files](../apps/dot-files/)
 * [emacs colors](../apps/emacs.html)
+
+[hidden-macos-features-or-tips-and-tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
+
