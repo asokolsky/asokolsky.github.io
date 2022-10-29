@@ -42,3 +42,7 @@ In this case:
 apt purge linux-image-5.10.0-14-amd64
 update-grub2
 ```
+
+## More
+
+https://github.com/tteck/Proxmox/blob/main/misc/kernel-clean.sh

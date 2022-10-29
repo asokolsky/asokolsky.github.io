@@ -13,7 +13,7 @@ Wouldn't it be nice to have a string enum?  Multiple inheritance to the resque!
 
 Let's see how this works for Color user...
 
-```
+```console
 >>> r = Color.red
 >>> r == 'Red'
 True

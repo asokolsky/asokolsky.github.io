@@ -24,7 +24,7 @@ layout: default
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
 * Cheat sheets: [tmux](apps/tmux.html), [emacs](apps/emacs.html),
 [vi](apps/vi.html)
-* [Visual Studio Code](apps/dot-vscode.html)
+* [Visual Studio Code](apps/vscode.html)
 * [ZFS setup and commands](apps/zfs.html)
 * [more...](apps/)
 

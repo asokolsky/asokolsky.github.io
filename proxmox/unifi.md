@@ -1,5 +1,9 @@
 # Proxmox Containter with Unifi Controller
 
+Maybe better yet:
+* install: https://github.com/tteck/Proxmox/raw/main/ct/unifi-v4.sh
+* update: https://github.com/tteck/Proxmox/blob/main/misc/unifi-update.sh
+
 ## UniFi Controller Ports
 
 This is not an exhaustive list.

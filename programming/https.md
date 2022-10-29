@@ -23,7 +23,7 @@ handshake](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handsha
 Python code to establish HTTS connection with a server,
 which relies on a custom CA:
 
-```
+```python
 ses = requests.Session()
 ses.verify = '/path/to/CAs'
 r = ses.get( 'https://server', verify=False )
@@ -37,7 +37,7 @@ verification](https://requests.readthedocs.io/en/master/user/advanced/#ssl-cert-
 Need to associate a client certificate AND a private key
 with a session:
 
-```
+```python
 ses = requests.Session()
 ses.verify = '/path/to/CAs'
 ses.cert = '/path/client.cert'

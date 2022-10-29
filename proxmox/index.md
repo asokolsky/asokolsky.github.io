@@ -157,3 +157,13 @@ fstrim
 * [pfSense in a VM](pfSense.html)
 * [TrueNAS Core in a VM](truenas.html)
 * [Unifi Controller in a Container](unifi.html)
+
+# More
+
+From [Proxmox scripts](https://github.com/tteck/Proxmox/):
+
+* [Update All LXC's Fast & Easy](https://github.com/tteck/Proxmox/blob/main/misc/update-lxcs.sh)
+* [MQTT lxc](https://github.com/tteck/Proxmox/blob/main/ct/mqtt-v4.sh)
+* [MariaDB lxc](https://github.com/tteck/Proxmox/blob/main/ct/mariadb-v4.sh)
+* [Prometheus lxc](https://github.com/tteck/Proxmox/blob/main/ct/prometheus-v4.sh)
+* [Graphana lxc](https://github.com/tteck/Proxmox/raw/main/ct/grafana-v4.sh)

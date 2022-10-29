@@ -15,7 +15,7 @@ version](https://github.com/pyenv/pyenv#choosing-the-python-version).
 
 [Install pyenv](https://github.com/pyenv/pyenv#homebrew-in-macos):
 
-```
+```sh
 brew update
 brew install pyenv
 echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
@@ -23,7 +23,8 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```
 
 [Install pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv#installing-with-homebrew-for-macos-users):
-```
+
+```sh
 brew install pyenv-virtualenv
 echo 'eval eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 ```

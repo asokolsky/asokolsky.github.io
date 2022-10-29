@@ -24,12 +24,9 @@ You may also add `intel_pstate=disable` - see [power management](power.html).
 
 Then:
 
-```console
-# update-grub
-```
-
-Reboot.
-Verify IOMMU enabled:
+* `update-grub`
+* reboot
+* verify that IOMMU enabled:
 
 ```console
 root@fuji:~# dmesg | grep -e DMAR -e IOMMU
@@ -259,10 +256,8 @@ qm> info pci
 ### Guest Problems with HDMI Audio
 
 After NVIDIA driver install HDMI Audio was not appearing in the Settings/Sounds.
-This solved it:
-```console
-pulseaudio -k
-```
+This solved it: `pulseaudio -k`.
+
 https://forum.proxmox.com/threads/gpu-passthrough-hdmi-audio.55740/
 
 After that (and before NVIDIA driver install) - crackling/broken as in

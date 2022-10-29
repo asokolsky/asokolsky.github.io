@@ -10,10 +10,11 @@ Depending on the platform, the [user
 settings](https://code.visualstudio.com/docs/getstarted/settings)
 are stored in `settings.json` in the following directory:
 
-* Windows:  `%APPDATA%\Code\User\`, where `%APPDATA%` is usually
-`C:\Users\_username_\AppData\Roaming`.
-* macOS: `/Users/{username}/Library/Application Support/Code/User/`
-* Linux: `$HOME/.config/Code/User/`
+OS|Path
+--|---
+Windows | `%APPDATA%\Code\User\`, where `%APPDATA%` is usually `C:\Users\_username_\AppData\Roaming`
+macOS | `/Users/_username_/Library/Application Support/Code/User/`
+Linux | `~/.config/Code/User/`
 
 ### settings.json
 
@@ -50,7 +51,6 @@ On Windows I also have:
             "args": [],
             "icon": "terminal-cmd"
         },
-
         "Ubuntu-22.04 (WSL)": {
             "path": "C:\\WINDOWS\\System32\\wsl.exe",
             "args": [
@@ -67,7 +67,7 @@ On Windows I also have:
 On Windows:
 
 ```json
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
     {
         "key": "ctrl+d",
@@ -128,4 +128,8 @@ Python workspace `.vscode/settings.json`:
 }
 ```
 
-You can tell I like unittest and mypy, not pylint and pytest.
+You can tell I like unittest and `mypy`, not `pylint` and `pytest`.
+
+## Keyboard Bindings
+
+[vscode-keys](vscode-keys.html)

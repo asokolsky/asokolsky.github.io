@@ -20,7 +20,10 @@ Commands:
 * [bulk rename](cli-rename-files.html)
 * [rsync](cli-rsync.html)
 * [systemctl](cli-systemctl.html)
-* [more...](cli.html)
+* show top 10 CPU consuming processes:
+`ps -eo pcpu,pid,user,args|sort -k 1 -nr|head -10`
+* show process command line: `cat /proc/_pid_/cmdline|xargs -0`
+* reload DNS resolver: `sudo killall -USR2 systemd-resolved`
 
 Tasks:
 
@@ -33,7 +36,10 @@ Internals:
 
 * [Process States](https://raw.githubusercontent.com/abarrak/linux-sysops-handbook/main/images/process-states.png)
 
-[Programming](../programming/)
+See also:
+
+* [Programming](../programming/)
+* [CLI](cli.html)
 
 
 Books:
