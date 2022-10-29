@@ -57,3 +57,10 @@ jq '.values.root_module.child_modules[0].resources[-1].values.private_key_pem' t
 You can also “slice” the array to show only a portion of it:
 [first:last].  The first is inclusive, while the last is exclusive.
 E.g. to display the first two items of an array, use [0:2].
+
+## Sorting
+
+Extract container environment and sort it.
+```
+sudo docker inspect cc43cbfa4153|jq ".[0].Config.Env|sort[]"
+```

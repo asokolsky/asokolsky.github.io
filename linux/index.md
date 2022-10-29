@@ -15,6 +15,7 @@ Commands:
 * [ipcalc](cli-ipcalc.html)
 * [iperf](cli-iperf.html)
 * [ipmi](cli-ipmi.html)
+* [jq](cli-jq.html)
 * [netstat](cli-netstat.html)
 * [pdsh](cli-pdsh.html)
 * [bulk rename](cli-rename-files.html)
