@@ -1,6 +1,6 @@
 # Running Home Assistant
 
-Notes on [installation](../proxmox/home-assistant.md).
+Notes on [installation in a VM](../proxmox/home-assistant.md).
 
 Start with https://www.home-assistant.io/docs/configuration/ and VScode add-on.
 

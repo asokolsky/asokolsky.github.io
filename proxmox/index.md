@@ -153,6 +153,7 @@ fstrim
 ## By Guest Type
 
 * [centos7](centos7.html)
+* [Home Assistant](home-assistant)
 * [octoprint](octoprint.html)
 * [pfSense in a VM](pfSense.html)
 * [TrueNAS Core in a VM](truenas.html)
