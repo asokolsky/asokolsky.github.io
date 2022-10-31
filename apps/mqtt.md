@@ -10,7 +10,6 @@ Have MQTT [installed as a Proxmox Guest](../proxmox/mqtt.md).
 
 CLI clients
 
-
 [MQTT Explorer](https://mqtt-explorer.com/)
 
 ## Collecting Data
