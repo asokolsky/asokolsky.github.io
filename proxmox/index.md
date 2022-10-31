@@ -148,6 +148,7 @@ fstrim
 ## Guest Tasks
 
 * [disk resize](guest-disk-resize.html)
+* [mqtt install](mqtt.html)
 * [performance optimization](guest-performance.html)
 
 ## By Guest Type

@@ -2,7 +2,7 @@
 
 [MQTT Protocol Man Page](https://man.archlinux.org/man/mqtt.7.en).
 
-Have MQTT [installed as a Proxmox Guest](../proxmox/mqtt.md).
+Have MQTT [installed as a Proxmox Guest](../proxmox/mqtt.html).
 
 [MQTT Discovery](https://www.home-assistant.io/docs/mqtt/discovery/)
 

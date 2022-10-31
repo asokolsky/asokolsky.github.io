@@ -1,8 +1,6 @@
 
 # MQTT Mosquitto
 
-Note: the following may not be necessary - homeassistant add-on allows
-to run its own mosquitto broker instance.
 
 ## Install Broker in an LXC Container
 
@@ -71,7 +69,7 @@ Reboot container.
 
 ## Configure Broker
 
-HWOTO: http://www.steves-internet-guide.com/install-mosquitto-linux/
+HOWTO: http://www.steves-internet-guide.com/install-mosquitto-linux/
 
 Add to `/etc/mosquitto/mosquitto.conf`:
 
