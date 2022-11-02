@@ -35,3 +35,32 @@ AWS Secret Access Key [None]: accesskey
 Default region name [None]: us-west-1
 Default output format [None]:
 ```
+
+## Key-pair Create/Delete
+
+Before anything:
+
+```sh
+export AWS_PROFILE=default
+```
+
+Create the key-pair:
+```
+aws ec2 create-key-pair --key-name _name_ --key-type ed25519 \
+    --query "KeyMaterial" --output text > _name_.pem
+```
+
+then:
+```
+chmod 400 _name_.pem
+```
+
+To create a `.pub` public key from `.pem`:
+```
+ssh-keygen -y -f _name_.pem > _name_.pub
+```
+
+Delete the key-pair:
+```sh
+aws ec2 delete-key-pair --key-name _name_
+```

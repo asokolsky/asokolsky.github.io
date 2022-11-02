@@ -12,6 +12,7 @@ Commands:
 * [disk](cli-disk.html)
 * [format (flash) disk](cli-disk-format.html)
 * [find](cli-find.html)
+* [fwupd client tool](cli-fwupdmgr.html)
 * [ipcalc](cli-ipcalc.html)
 * [iperf](cli-iperf.html)
 * [ipmi](cli-ipmi.html)
