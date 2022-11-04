@@ -1,7 +1,8 @@
-# Linux Dot Files
+# zsh
 
-[The best way to store your
-dotfiles](https://www.atlassian.com/git/tutorials/dotfiles)
+Must read [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+
+Config
 
 ## zsh startup
 
@@ -36,23 +37,16 @@ start X on boot, so this file is not always very useful.
 ### .zshenv
 
 ```sh
-{% include_relative zshenv %}
+{% include_relative dot-files/zshenv %}
 ```
 ### .zprofile
 
 ```sh
-{% include_relative zprofile %}
+{% include_relative dot-files/zprofile %}
 ```
 
 ### .zshrc
 
 ```sh
-{% include_relative zshrc %}
-```
+{% include_relative dot-files/zshrc %}
 
-## More
-
-* [jaybocc2/dotfiles](https://github.com/jaybocc2/dotfiles)
-* [dwt1/dotfiles](https://gitlab.com/dwt1/dotfiles)
-* [daviwil/dotfiles](https://github.com/daviwil/dotfiles)
-* [notthebee/dotfiles](https://github.com/notthebee/dotfiles)

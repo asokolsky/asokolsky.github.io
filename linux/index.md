@@ -3,7 +3,7 @@
 Administering:
 
 * [CentOS](../centos/)
-* [Proxmox](../proxmox/).
+* [Proxmox](../proxmox/)
 * [SysOps Handbook](https://abarrak.gitbook.io/linux-sysops-handbook/)
 
 Commands:
@@ -12,15 +12,20 @@ Commands:
 * [disk](cli-disk.html)
 * [format (flash) disk](cli-disk-format.html)
 * [find](cli-find.html)
+* [fwupd client tool](cli-fwupdmgr.html)
 * [ipcalc](cli-ipcalc.html)
 * [iperf](cli-iperf.html)
 * [ipmi](cli-ipmi.html)
+* [jq](cli-jq.html)
 * [netstat](cli-netstat.html)
 * [pdsh](cli-pdsh.html)
 * [bulk rename](cli-rename-files.html)
 * [rsync](cli-rsync.html)
 * [systemctl](cli-systemctl.html)
-* [more...](cli.html)
+* show top 10 CPU consuming processes:
+`ps -eo pcpu,pid,user,args|sort -k 1 -nr|head -10`
+* show process command line: `cat /proc/_pid_/cmdline|xargs -0`
+* reload DNS resolver: `sudo killall -USR2 systemd-resolved`
 
 Tasks:
 
@@ -33,7 +38,10 @@ Internals:
 
 * [Process States](https://raw.githubusercontent.com/abarrak/linux-sysops-handbook/main/images/process-states.png)
 
-[Programming](../programming/)
+See also:
+
+* [Programming](../programming/)
+* [CLI](cli.html)
 
 
 Books:
@@ -42,5 +50,5 @@ Books:
 * [Networking2](http://nnc3.com/mags/Networking2/)
 * [Unix](http://nnc3.com/mags/unix3/)
 * [Linux web server](http://nnc3.com/mags/lnXwwwsvr/)
-* [Linux Journal](http://nnc3.com/mags/LM18/LJ/tocindex.html
+* [Linux Journal](http://nnc3.com/mags/LM18/LJ/tocindex.html)
 * [Linux Magazine](http://nnc3.com/mags/LM10/)

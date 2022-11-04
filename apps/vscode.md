@@ -10,10 +10,11 @@ Depending on the platform, the [user
 settings](https://code.visualstudio.com/docs/getstarted/settings)
 are stored in `settings.json` in the following directory:
 
-* Windows:  `%APPDATA%\Code\User\`, where `%APPDATA%` is usually
-`C:\Users\_username_\AppData\Roaming`.
-* macOS: `/Users/{username}/Library/Application Support/Code/User/`
-* Linux: `$HOME/.config/Code/User/`
+OS|Path
+--|---
+Windows | `%APPDATA%\Code\User\`, where `%APPDATA%` is usually `C:\Users\_username_\AppData\Roaming`
+macOS | `/Users/_username_/Library/Application Support/Code/User/`
+Linux | `~/.config/Code/User/`
 
 ### settings.json
 
@@ -50,7 +51,6 @@ On Windows I also have:
             "args": [],
             "icon": "terminal-cmd"
         },
-
         "Ubuntu-22.04 (WSL)": {
             "path": "C:\\WINDOWS\\System32\\wsl.exe",
             "args": [
@@ -67,7 +67,7 @@ On Windows I also have:
 On Windows:
 
 ```json
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
     {
         "key": "ctrl+d",
@@ -110,7 +110,7 @@ Python workspace `.vscode/settings.json`:
 ```json
 {
     "python.linting.enabled": true,
-    "python.linting.flake8Enabled": false,
+    "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "python.linting.mypyArgs": [
         "--ignore-missing-imports",
@@ -121,11 +121,25 @@ Python workspace `.vscode/settings.json`:
     "python.linting.pylintEnabled": false,
     "python.linting.pylintUseMinimalCheckers": false,
     "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
     "python.testing.unittestArgs": [
         "-v", "-s", "./src", "-p", "*_test.py"
     ],
-    "python.testing.unittestEnabled": true
 }
 ```
 
-You can tell I like unittest and mypy, not pylint and pytest.
+You can tell I like unittest and `mypy`, not `pylint` and `pytest`.
+
+Oh and `.flake8` is:
+
+```
+[flake8]
+extend-ignore = E127,E128,E231,E265,E302,E501
+exclude = doc,.git,.mypy_cache,__pycache__,.vscode
+max-complexity = 20
+```
+
+
+## Keyboard Bindings
+
+[vscode-keys](vscode-keys.html)

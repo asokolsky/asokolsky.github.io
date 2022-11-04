@@ -15,15 +15,16 @@ layout: default
 * [API Gateways](apps/api-gateways.html)
 * Conversion of [audio](linux/convert-audio.html),
 [images](linux/convert-image.html)
+* [dot files](apps/dot-files/)
+* [exiftool](apps/cli-exiftool.html)
 * Network [planning with ipcalc](linux/cli-ipcalc.html),
 [performance testing with iperf](linux/cli-iperf.html)
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
-* [Prometheus & Grafana](linux/prometheus-grafana.html)
+* [Prometheus & Grafana](apps/prometheus-grafana.html)
 * Cheat sheets: [tmux](apps/tmux.html), [emacs](apps/emacs.html),
 [vi](apps/vi.html)
-* Convert [audio](linux/convert-audio.html), [images](linux/convert-image.html)
-* [Visual Studio Code](apps/dot-vscode.html)
+* [Visual Studio Code](apps/vscode.html)
 * [ZFS setup and commands](apps/zfs.html)
 * [more...](apps/)
 
@@ -37,7 +38,6 @@ layout: default
 and [more...](linux/cli.html)
 * [IPMI Config and cli](linux/cli-ipmi.html)
 * [Configure SSH for Key Authentication](linux/ssh.html)
-* [dot files](linux/dot-files/)
 * [Kernel Tuning](linux/kernel-tuning.html)
 * Customize [CentOS](centos/), [ProxMox](proxmox/)
 * [more...](linux/)
@@ -45,8 +45,8 @@ and [more...](linux/cli.html)
 ## MacOS
 
 * [Better Keyboard Support](macos/keyboard.html)
-* CLI: [exiftool](macos/cli-exiftool.html), [system_profiler](macos/cli.html)
-* [iTerm2 Terminal Emulator](iTerm2.html)
+* CLI: [system_profiler](macos/cli.html)
+* [iTerm2 Terminal Emulator](macos/iTerm2.html)
 * [Jenkins](macos/jenkins.html)
 * [more...](macos/)
 

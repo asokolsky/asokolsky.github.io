@@ -49,7 +49,7 @@ deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 
 ### Set the CPU governor
 
-```console
+```sh
 cat << 'EOF' > /etc/default/cpufrequtils
 GOVERNOR="powersave"
 EOF
@@ -57,14 +57,14 @@ EOF
 
 ### Configure lm-sensors
 
-```console
-# sensors-detect
+```sh
+sensors-detect
 ```
 
 And finally:
 
-```console
-# watch -n 1 sensors
+```sh
+watch -n 1 sensors
 ```
 or just
 ```console
@@ -90,7 +90,7 @@ temp1:        +44.0°C
 
 ## PCI Pass Through Config
 
-See [pcie-passthrough.md](pcie-passthrough.md).
+See [pcie-passthrough.md](pcie-passthrough.html).
 
 ## Add the server to Datacenter / Cluster
 
@@ -148,12 +148,24 @@ fstrim
 ## Guest Tasks
 
 * [disk resize](guest-disk-resize.html)
+* [mqtt install](mqtt.html)
 * [performance optimization](guest-performance.html)
 
 ## By Guest Type
 
 * [centos7](centos7.html)
+* [Home Assistant](home-assistant)
 * [octoprint](octoprint.html)
 * [pfSense in a VM](pfSense.html)
 * [TrueNAS Core in a VM](truenas.html)
 * [Unifi Controller in a Container](unifi.html)
+
+# More
+
+From [Proxmox scripts](https://github.com/tteck/Proxmox/):
+
+* [Update All LXC's Fast & Easy](https://github.com/tteck/Proxmox/blob/main/misc/update-lxcs.sh)
+* [MQTT lxc](https://github.com/tteck/Proxmox/blob/main/ct/mqtt-v4.sh)
+* [MariaDB lxc](https://github.com/tteck/Proxmox/blob/main/ct/mariadb-v4.sh)
+* [Prometheus lxc](https://github.com/tteck/Proxmox/blob/main/ct/prometheus-v4.sh)
+* [Graphana lxc](https://github.com/tteck/Proxmox/raw/main/ct/grafana-v4.sh)

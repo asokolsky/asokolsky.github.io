@@ -1,4 +1,6 @@
-# Configuring Hosts for SSH Key Authentication
+# Configure SSH for Key-based Authentication
+
+See also [Configure SSHD](sshd.html).
 
 ## Sources
 
@@ -6,8 +8,14 @@
 * [ssh man page](https://man7.org/linux/man-pages/man1/ssh.1.html)
 * [ssh-keygen man page](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html)
 * [ssh-add man page](https://man7.org/linux/man-pages/man1/ssh-add.1.html0)
+* [Configuring Authorized Keys for OpenSSH](https://www.ssh.com/academy/ssh/authorized-keys-openssh)
 
 ## Generate SSH Key Pair
+
+Generate the
+[ED25519](https://linux-audit.com/using-ed25519-openssh-keys-instead-of-dsa-rsa-ecdsa/)
+key using
+[ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html):
 
 ```console
 alex@latitude7490:~$ ssh-keygen -t ed25519
@@ -19,7 +27,7 @@ Your identification has been saved in /home/alex/.ssh/id_ed25519
 Your public key has been saved in /home/alex/.ssh/id_ed25519.pub
 ```
 
-Verify:
+Verify the generated files:
 
 ```console
 $ ls -la ~/.ssh
@@ -32,19 +40,32 @@ drwxr-xr-x 31 alex alex  4096 Mar 31 12:00 ..
 -rw-r--r--  1 alex alex   739 Dec 28  2019 id_rsa.pub
 -rw-------  1 alex alex 11042 Jan 28 12:15 known_hosts
 -rw-------  1 alex alex  9930 Dec 16 14:16 known_hosts.old
-
+```
+List the fingerprints currently used by ssh using
+[ssh-add](https://www.man7.org/linux/man-pages/man1/ssh-add.1.html):
+```
 $ ssh-add -l
 4096 SHA256:4sGkGvw2itx0TNFu8V+Bqk2lSdB8ZEHczXIGfmfWiZc alex@latitude (RSA)
+```
 
+Add the private key identities to the authentication agent,
+[ssh-agent].
+When run without arguments, it adds the files `~/.ssh/id_rsa`, `~/.ssh/id_dsa`,
+`~/.ssh/id_ecdsa`, `~/.ssh/id_ecdsa_sk`, `~/.ssh/id_ed25519`, and
+`~/.ssh/id_ed25519_sk`.
+
+```
 $ ssh-add
 Identity added: /home/alex/.ssh/id_rsa (alex@latitude)
 Identity added: /home/alex/.ssh/id_ed25519 (alex@latitude7490)
+```
 
+Confirm the key addition:
+```
 $ ssh-add -l
 4096 SHA256:4sGkGvw2itx0TNFu8V+Bqk2lSdB8ZEHczXIGfmfWiZc alex@latitude (RSA)
 256 SHA256:pD1ar4RV2Xuqup3/27JnAibnmHeQMJ4O4h05GI/e3R0 alex@latitude7490 (ED25519)
 ```
-
 
 ## Create Account on a Remote Computer
 
