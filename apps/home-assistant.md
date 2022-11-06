@@ -12,11 +12,11 @@ Start with https://www.home-assistant.io/docs/configuration/ and VScode add-on.
 
 ## [Mount NAS Shares](./home-assistant-nas.html)
 
+## [Integrate Proxmox](./home-assistant-pve.md)
+
 ## TODO Integrations
 
 * pfSense - e.g for presence https://github.com/travisghansen/hass-pfsense
 * Unifi - ?
 * TrueNAS - https://community.home-assistant.io/t/truenas-integration/410431
 * IPMI - https://community.home-assistant.io/t/ipmi-sensors/279248
-* linux sensors to MQTT https://community.home-assistant.io/t/pulling-hardware-sensor-data-from-linux-servers-and-posting-them-to-mqtt/54808
-or  https://github.com/Sennevds/system_sensors

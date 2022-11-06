@@ -3,7 +3,7 @@
 ## Sources
 
 * [Setting-up OctoPrint](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian-or-raspberry-pi-os/2337)
-* [Passthrough USB port to LXC Container](https://medium.com/@konpat/usb-passthrough-to-an-lxc-proxmox-15482674f11d)
+* [Passthrough USB port to an LXC Container](https://medium.com/@konpat/usb-passthrough-to-an-lxc-proxmox-15482674f11d)
 
 ## Container
 
