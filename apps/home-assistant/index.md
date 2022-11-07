@@ -1,16 +1,16 @@
 # Home Assistant - Configuration and Use
 
-Notes on [installation in a VM](../proxmox/home-assistant.md).
+Notes on [installation in a VM](/proxmox/home-assistant.md).
 
 ## Configuration Editing
 
 Start with https://www.home-assistant.io/docs/configuration/ and VScode add-on.
 
-## [Enable SSH Access](./home-assistant-ssh.html)
+## [Enable SSH Access](home-assistant-ssh.html)
 
-## [MQTT Integration](./home-assistant-mqtt.html)
+## [MQTT Integration](home-assistant-mqtt.html)
 
-## [Mount NAS Shares](./home-assistant-nas.html)
+## [Mount NAS Shares](home-assistant-nas.html)
 
 ## TODO Integrations
 

@@ -2,7 +2,7 @@
 
 [HOWTO: Access the HA OS host itself over ssh](https://community.home-assistant.io/t/howto-how-to-access-the-home-assistant-os-host-itself-over-ssh/263352):
 
-* Install Terminal & SSH add-on
+* Install Terminal & SSH add-on - use community edition
 * specify port 22
 * edit config YAML and add your public key
 * leave password empty
