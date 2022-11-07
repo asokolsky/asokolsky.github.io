@@ -12,7 +12,7 @@ Start with https://www.home-assistant.io/docs/configuration/ and VScode add-on.
 
 ## [Mount NAS Shares](home-assistant-nas.html)
 
-## [Integrate Proxmox](./home-assistant-pve.md)
+## [Integrate Proxmox](home-assistant-pve.md)
 
 ## TODO Integrations
 
