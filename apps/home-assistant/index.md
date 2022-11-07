@@ -6,13 +6,13 @@
 
 Start with https://www.home-assistant.io/docs/configuration/ and VScode add-on.
 
-## [Enable SSH Access](home-assistant-ssh.html)
+## [Enable SSH Access](ssh.html)
 
-## [Mount NAS Shares](home-assistant-nas.html)
+## [Mount NAS Shares](nas.html)
 
-## [Integrate Proxmox](home-assistant-pve.md)
+## [Integrate Proxmox](pve.md)
 
-## [MQTT Integration](home-assistant-mqtt.html)
+## [MQTT Integration](mqtt.html)
 
 ## TODO Integrations
 
