@@ -5,7 +5,7 @@
 [vi](vi.html)
 * [dot files](dot-files)
 * [fonts](fonts.html)
-* [Home Assistant](home-assistant.html)
+* [Home Assistant](home-assistant/)
 * [Java VM Tuning](java-vm.html)
 * [mqtt](mqtt.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
