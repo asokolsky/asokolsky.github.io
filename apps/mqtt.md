@@ -4,8 +4,6 @@
 
 Have MQTT [installed as a Proxmox Guest](../proxmox/mqtt.html).
 
-[MQTT Discovery](https://www.home-assistant.io/docs/mqtt/discovery/)
-
 ## Clients
 
 CLI clients
@@ -19,4 +17,7 @@ These are some MQTT clients:
 * on linux: [psmqtt](https://github.com/eschava/psmqtt)
 * on rpi: https://github.com/Sennevds/system_sensors
 
-[MQTT Device Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
+MQTT Device Discovery:
+
+* [MQTT Discovery](https://www.home-assistant.io/docs/mqtt/discovery/)
+* [MQTT Device Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)

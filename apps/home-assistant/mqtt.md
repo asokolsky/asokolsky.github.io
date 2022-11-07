@@ -16,5 +16,7 @@ Add [integration](https://www.home-assistant.io/integrations/mqtt/) to it.
 I use [psmqtt](https://github.com/asokolsky/psmqtt) to post metrics from my
 (local) servers to the local MQTT broker.
 
-TODO:
-[MQTT Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
+TODO: MQTT Device Discovery:
+
+* [MQTT Discovery](https://www.home-assistant.io/docs/mqtt/discovery/)
+* [MQTT Device Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
