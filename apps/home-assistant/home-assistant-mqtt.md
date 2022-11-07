@@ -5,13 +5,13 @@ Discussion: https://community.home-assistant.io/t/pulling-hardware-sensor-data-f
 * do NOT use
 [MQTT add-on](https://github.com/home-assistant/addons/blob/master/mosquitto/DOCS.md).
 It will be deprecated.
-* do a [stand-alone MQTT install](../proxmox/mqtt.md).
+* do a [stand-alone MQTT install](/proxmox/mqtt.md).
 
 Add [integration](https://www.home-assistant.io/integrations/mqtt/) to it.
 
-[More about running MQTT](mqtt.html).
+[More about running MQTT](../mqtt.html).
 
-## Adding Device to HA
+## Adding Device to Home Assistant
 
 I use [psmqtt](https://github.com/asokolsky/psmqtt) to post metrics from my
 (local) server (`suprox`) to the local MQTT broker.

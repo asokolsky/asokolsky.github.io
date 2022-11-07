@@ -73,4 +73,4 @@ Restart the VM to take advantage of the newly allocated IP address.
 
 Point your browser to [homeassistant](http://homeassistant:8123).
 
-[Continue with configuration](../apps/home-assistant.html).
+[Continue with configuration](/apps/home-assistant/).
