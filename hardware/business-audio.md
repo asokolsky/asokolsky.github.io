@@ -12,7 +12,7 @@ mic for both computer and regular telephone communication
 
 <img src="audio-zoom-p4.jpg" width="50%" heights="50%">s
 
-Setup details:
+PodTrack P4 setup details:
 
 - input 1: not used, muted
 - input 2: Rode NTG1 via XLR cable, phantom power on, level at 5
@@ -22,8 +22,8 @@ and a
 [TRRS male to male](https://www.amazon.com/dp/B08RB17ZY1) cable
 - input 3: switch to USB, level at 5
 - output 2: wired earphones, can use be plugged into any output really
-- [2xUSB cables](https://www.amazon.com/dp/B089DM4KDW) - one to laptop, another
-to a power supply.
+- [2xUSB cables](https://www.amazon.com/dp/B089DM4KDW) - one to the laptop,
+another to the power supply.
 - laptop sound output and input are set to "Zoom P4 Audio"
 
 Amazingly this is all plug and play!  Minor CONS:
