@@ -2,6 +2,8 @@
 
 Created LXC using Proxmox GUI using the latest debian image.
 
+[Setup Hashicorp Vault Using Ansible](https://medium.com/@mitesh_shamra/setup-hashicorp-vault-using-ansible-fa8073a70a56)
+
 ## Installation
 
 ```sh
@@ -13,7 +15,7 @@ Then followed https://developer.hashicorp.com/vault/tutorials/getting-started/ge
 
 Install pre-requisites (updated!):
 ```sh
-apt install sudo gpg  lsb-release
+apt install sudo gpg lsb-release
 ```
 
 Install Hashi keyring:
