@@ -21,3 +21,7 @@ social_links:
   linkedin: asokolsky
 github_username:  asokolsky
 linkedin_username: asokolsky
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "asokolsky-github-io"
