@@ -13,3 +13,5 @@ secret acess key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 region: us-west-2
 
 userARN: arn:aws:iam::xxxxx:user/asokolsky
+
+http://aws.amazon.com
