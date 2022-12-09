@@ -1,6 +1,7 @@
 ---
 title: Start Here and Now
 tags: linux
+comments: true
 ---
 
 Why not?
