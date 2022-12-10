@@ -1,7 +1,6 @@
 ---
 title: Markdown with Mermaid
 tags: linux
-comments: true
 ---
 
 [Mermaid](https://mermaid-js.github.io) is [now on

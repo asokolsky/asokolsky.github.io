@@ -1,7 +1,6 @@
 ---
 title: You Can't Always Get What You Want
 tags: linux
-comments: true
 ---
 
 According to

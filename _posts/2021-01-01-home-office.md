@@ -1,7 +1,6 @@
 ---
 title: Home Office Setup
 tags: home
-comments: true
 ---
 
 
