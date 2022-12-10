@@ -25,3 +25,17 @@ comments:
   provider: "disqus"
   disqus:
     shortname: "asokolsky-github-io"
+defaults: # set page variable defaults
+  -
+    scope:
+      path: ""      # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      author: "Alex Sokolsky"
+      comments: true
+  -
+    scope:
+      path: ""
+      type: "pages" # previously `page` in Jekyll 2.2.
+    values:
+      layout: "project" # overrides previous default layout

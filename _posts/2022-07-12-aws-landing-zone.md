@@ -1,7 +1,6 @@
 ---
 title: AWS Landing Zone
 tags: aws
-comments: true
 ---
 
 Landing Zones - Creating a Foundation for Your AWS Migrations
