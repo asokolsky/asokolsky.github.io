@@ -17,4 +17,3 @@ or a 10 min version:
 
 [AWS Landing Zone](https://aws.amazon.com/solutions/implementations/aws-landing-zone/)
 seems to be deprecated though.
-

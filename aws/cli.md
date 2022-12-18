@@ -26,7 +26,7 @@ PS C:\Users\asoko> aws --version
 aws-cli/2.5.2 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
 ```
 
-Configure, e.g. for local use:
+[Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html), e.g. for local use:
 
 ```
 PS C:\Users\asoko> aws configure
@@ -35,6 +35,15 @@ AWS Secret Access Key [None]: accesskey
 Default region name [None]: us-west-1
 Default output format [None]:
 ```
+
+## Environment Variables
+
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
+
+## Controlling command output
+
+e.g. [pagination](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html)
+
 
 ## Key-pair Create/Delete
 

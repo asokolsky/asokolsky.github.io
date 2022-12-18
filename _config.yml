@@ -1,7 +1,7 @@
 theme: jekyll-theme-hacker
 title: Notes to Self
 tagline: Alex Sokolsky's Notes on Computers and Programming
-description: Random Notes on Computers and Programming (mostly Python), Linux and Proxmox
+description: Random Notes on Computers, Programming (mostly Python), Linux and Proxmox
 author:
   name: Alex Sokolsky
   url: http://alexsokolsky.com
@@ -21,3 +21,21 @@ social_links:
   linkedin: asokolsky
 github_username:  asokolsky
 linkedin_username: asokolsky
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "asokolsky-github-io"
+defaults: # set page variable defaults
+  -
+    scope:
+      path: ""      # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      author: "Alex Sokolsky"
+      comments: true
+  -
+    scope:
+      path: ""
+      type: "pages" # previously `page` in Jekyll 2.2.
+    values:
+      comments: true
