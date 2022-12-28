@@ -37,7 +37,8 @@ This will print to STDOUT.
 
 `credstash get <secret-name>`
 
-You can also use [encryption contexts](http://docs.aws.amazon.com/kms/latest/developerguide/encrypt-context.html)
+You can also use
+[encryption contexts](http://docs.aws.amazon.com/kms/latest/developerguide/encrypt-context.html)
 to limit/modify access.
 
 ### Giving access
