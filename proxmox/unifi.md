@@ -1,4 +1,4 @@
-# Proxmox Containter with Unifi Controller
+# Unifi Controller in a Proxmox Container
 
 Maybe better yet:
 * install: https://github.com/tteck/Proxmox/raw/main/ct/unifi-v4.sh
