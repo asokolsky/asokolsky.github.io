@@ -51,6 +51,10 @@ pip install pip --upgrade
 pip install octoprint
 ```
 
+For some plugins this is important:
+```sh
+pip install wheel setuptools
+```
 ## Test Start
 
 You should be able to start the OctoPrint server using:
