@@ -1,11 +1,15 @@
 # Windows Stuff
 
-Useful Commands:
+Here:
 
-* [wmic](wmic.html)
-* [the rest](cli.html)
+* [Disable IPv6](#disable-ipv6)
+* [(re)Mount NAS Network Share](#remount-shares)
+* [Swap Caps Ctrl](#swap-caps-ctrl)
+* [wmic](cli-wmic.html)
+* [Merge MP3 files](cli.html)
+* [systeminfo](cli-systeminfo.html)
 
-## Disable IPv6
+## <a name="disable-ipv6"></a>Disable IPv6
 
 Create a reg key from an elevated prompt:
 
@@ -25,13 +29,13 @@ Reboot.
 This doesn't remove the IPv6 loopback - but it does keep from sending out any
 IPv6 on the interfaces.
 
-## (re)Mount NAS Network Share
+## <a name="remount-shares"></a>(re)Mount NAS Network Share
 
 ```cmd
 {% include_relative nas.cmd %}
 ```
 
-## SwapCapsCtrl.reg
+## <a name="swap-caps-ctrl"></a>SwapCapsCtrl.reg
 
 ```cmd
 {% include_relative SwapCapsCtrl.reg %}
