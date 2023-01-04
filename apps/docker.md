@@ -52,7 +52,19 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 
 ```
+## Configuration
 
+The location for client configuration files is determined by `DOCKER_CONFIG`
+environment variable, seems to default to `$HOME/.docker`.
+
+More on docker
+[environment variables](https://docs.docker.com/engine/reference/commandline/cli/#environment-variables).
+
+[Configuration files](https://docs.docker.com/engine/reference/commandline/cli/#configuration-files)
+include:
+
+* config.json
+* daemon.json
 
 ## List images
 
