@@ -16,15 +16,15 @@ comments: false
 * [API Gateways](apps/api-gateways.html)
 * Conversion of [audio](linux/convert-audio.html),
 [images](linux/convert-image.html)
-* [dot files](apps/dot-files/)
+* [dot files](apps/dot-files/) and [fonts](apps/fonts.html)
 * [exiftool](apps/cli-exiftool.html)
 * Network [planning with ipcalc](linux/cli-ipcalc.html),
 [performance testing with iperf](linux/cli-iperf.html)
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
-* Cheat sheets: [tmux](apps/tmux.html), [emacs](apps/emacs.html),
-[vi](apps/vi.html)
+* Cheat sheets: [docker](docker.html), [tmux](apps/tmux.html),
+[emacs](apps/emacs.html), [vi](apps/vi.html)
 * [Visual Studio Code](apps/vscode.html)
 * [ZFS setup and commands](apps/zfs.html)
 * [more...](apps/)
