@@ -1,7 +1,8 @@
 # Note on IPMI Config
 
-This helped to lower the fan rpm threshold - something SuperMicro IPMI web does
-not allowed to do. https://calvin.me/quick-how-to-decrease-ipmi-fan-threshold
+This helped to
+[lower the fan rpm threshold](https://calvin.me/quick-how-to-decrease-ipmi-fan-threshold) -
+something the SuperMicro IPMI web GUI could not do:
 
 ```console
 ipmitool -I lan -U ADMIN -H 10.0.0.4 sensor thresh FAN1 lower 150 225 300
@@ -95,8 +96,8 @@ alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P RSQCQKFTSB -H 192.168.11.22 raw
  10
 ```
 
-Apparently control works only in FULL mode:
-https://forums.servethehome.com/index.php?resources/supermicro-x9-x10-x11-fan-speed-control.20/
+Apparently control
+[works only in FULL mode](https://forums.servethehome.com/index.php?resources/supermicro-x9-x10-x11-fan-speed-control.20/).
 
 ```console
 #set fan mode to "full"

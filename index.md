@@ -23,7 +23,7 @@ comments: false
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
-* Cheat sheets: [docker](docker.html), [tmux](apps/tmux.html),
+* Cheat sheets: [docker](apps/docker.html), [tmux](apps/tmux.html),
 [emacs](apps/emacs.html), [vi](apps/vi.html)
 * [Visual Studio Code](apps/vscode.html)
 * [ZFS setup and commands](apps/zfs.html)
