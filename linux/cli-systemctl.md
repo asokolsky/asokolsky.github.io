@@ -7,7 +7,7 @@ Reasonable [intro](https://skyyy.hashnode.dev/systemctl-linux-command).
 The pager defaults to `less`.  To disable it use `--no-pager` or
 `export SYSTEMD_PAGER=`.
 
-# Types of Daemons
+## Types of Daemons
 
 To list the unit (daemon) types:
 
@@ -49,14 +49,9 @@ Also check out:
 systemctl list-unit-files
 ```
 
-## Start Service
+## Working with Services
 
-Start x11vnc service:
-
-```sh
-sudo systemctl start x11vnc.service
-```
-## Show Services
+### Show Services
 
 Show running services:
 
@@ -64,9 +59,25 @@ Show running services:
 systemctl list-units --type=service | grep running
 ```
 
-## Show Service Status
+### Start Service
+
+Start x11vnc service:
+
+```sh
+sudo systemctl start x11vnc.service
+```
+
+### Show Service Status
 
 
 ```sh
 systemctl status _service-name_
+```
+
+### Show Service Log
+
+Use [journalctl](https://www.man7.org/linux/man-pages/man1/journalctl.1.html):
+
+```sh
+journalctl --no-pager -u _service-name_
 ```

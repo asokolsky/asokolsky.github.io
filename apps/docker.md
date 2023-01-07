@@ -55,9 +55,7 @@ For more examples and ideas, visit:
 ## Configuration
 
 The location for client configuration files is determined by `DOCKER_CONFIG`
-environment variable, seems to default to `$HOME/.docker`.
-
-More on docker
+environment variable, seems to default to `$HOME/.docker`. More on docker
 [environment variables](https://docs.docker.com/engine/reference/commandline/cli/#environment-variables).
 
 [Configuration files](https://docs.docker.com/engine/reference/commandline/cli/#configuration-files)
@@ -66,19 +64,28 @@ include:
 * config.json
 * daemon.json
 
-## List images
+## Example Use
+
+### List images
 
 ```sh
 docker image ls
 ```
 
-## List containers
+More on
+[docker image](https://docs.docker.com/engine/reference/commandline/image/).
 
+### List containers
+
+[docker container](https://docs.docker.com/engine/reference/commandline/container/).
 List running:
 
 ```sh
 docker container ls
 ```
+
+Can also use
+[docker ps](https://docs.docker.com/engine/reference/commandline/ps/).
 
 List all containers, not only running, do not truncate output:
 
@@ -96,7 +103,7 @@ docker container ls -q
 b06cfe3053e5
 4cf774b9e4a4
 ```
-## Kill all containers
+### Kill all containers
 
 Force delete all containers:
 
@@ -104,7 +111,7 @@ Force delete all containers:
 docker container rm -f $(docker container ls -aq)
 ```
 
-## Inspect container
+### Inspect container
 
 Inspecting container produces JSON:
 
