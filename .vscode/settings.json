@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
-        "Mosquitto"
+        "Mosquitto",
+        "setw"
     ],
     "files.associations": {
         "*.yaml": "home-assistant"

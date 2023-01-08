@@ -76,3 +76,7 @@ full_audit:success = connect disconnect opendir mkdir rmdir closedir open close 
 full_audit:facility = LOCAL5
 full_audit:priority = NOTICE
 ```
+
+## Drive Spin Down
+
+https://github.com/ngandrass/truenas-spindown-timer
