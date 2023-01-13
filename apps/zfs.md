@@ -228,6 +228,23 @@ replace the disk
 zpool replace vault 1464662681387557667 /dev/da4
 ```
 
+In case it fails as in:
+
+```
+root@nass:~# zpool replace tank -f /dev/sda
+invalid vdev specification
+the following errors must be manually repaired:
+/dev/sda is part of active pool 'tank'
+```
+
+Use
+[zpool labelclear](https://openzfs.github.io/openzfs-docs/man/8/zpool-labelclear.8.html):
+
+```
+root@nass:~# zpool labelclear -f /dev/sda
+root@nass:~# zpool replace tank -f /dev/sda
+```
+
 ## Replace drives in a 2-way mirror
 
 A mirror:
@@ -293,7 +310,7 @@ Done!
 $ cp -pR /mnt/vault/movies .
 ```
 
-### Use Case
+### XigmaNAS Use Case
 
 * removed 3 old disks
 * inserted 3 disks
