@@ -10,6 +10,14 @@ Differentiate touch pad and mouse scroll direction using
 * [Java](java.html)
 * [Jenkins](jenkins.html)
 
+
+
+For sofware development you will need [Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html):
+
+```
+xcode-select --install
+```
+
 Also relevant:
 
 * [dot-files](../apps/dot-files/)
