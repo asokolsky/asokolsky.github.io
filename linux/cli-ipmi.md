@@ -61,7 +61,22 @@ DIMMA1 Temp      | B0h | ok  | 32.64 | 42 degrees C
 DIMMA2 Temp      | B1h | ns  | 32.65 | No Reading
 DIMMB1 Temp      | B4h | ns  | 32.68 | No Reading
 DIMMB2 Temp      | B5h | ns  | 32.69 | No Reading
+```
 
+With some output grooming:
+
+```console
+alex@latitude7490:~/ > ipmitool -I lan -U ADMIN -P PASSWORD -H nass-ipmi sdr elist full|egrep -E "degrees|RPM"| awk -F '|' '{print $1":"$5}'
+CPU Temp         : 33 degrees C
+System Temp      : 47 degrees C
+Peripheral Temp  : 32 degrees C
+DIMMA1 Temp      : 36 degrees C
+DIMMA2 Temp      : 33 degrees C
+DIMMB1 Temp      : 36 degrees C
+DIMMB2 Temp      : 36 degrees C
+FAN1             : 1800 RPM
+FAN3             : 1100 RPM
+FANA             : 900 RPM
 ```
 
 ## Setting Fan Speed
@@ -92,7 +107,7 @@ alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0
 
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x00 0x00
  10
-alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P RSQCQKFTSB -H 192.168.11.22 raw 0x30 0x70 0x66 0x00 0x01
+alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x00 0x01
  10
 ```
 
