@@ -42,8 +42,31 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
 
 ## Controlling command output
 
-e.g. [pagination](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html)
+Topics:
 
+* [output format](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-output-format.html),
+note `--output table` and `--no-cli-pager `
+* [pagination](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html)
+* For discussion of `--query` vs `--filter` see
+[Filtering AWS CLI output](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-filter.html)
+
+```console
+(awscliv2) $ aws ec2 describe-volumes --profile dev --output table \
+    --no-cli-pager \
+    --query 'sort_by(Volumes, &VolumeId)[].{VolumeId: VolumeId, VolumeType: VolumeType, InstanceId: Attachments[0].InstanceId, State: Attachments[0].State}'
+----------------------------------------------------------------------------
+|                              DescribeVolumes                             |
++----------------------+-----------+-------------------------+-------------+
+|      InstanceId      |   State   |        VolumeId         | VolumeType  |
++----------------------+-----------+-------------------------+-------------+
+|  i-06253db1de27a1472 |  attached |  vol-0034927f6d89a987c  |  gp3        |
+|  i-0c9e0188fe0105ed6 |  attached |  vol-0ad69e58bb689838e  |  gp2        |
+|  i-081d9511ae174ebb2 |  attached |  vol-0cf1ecc29edae56d4  |  gp3        |
+|  i-0c9e1235fe0666ed6 |  attached |  vol-0fbe38a5b1656f575  |  gp3        |
++----------------------+-----------+-------------------------+-------------+
+```
+
+More: https://github.com/KarnGusain/AWS/blob/main/AWS%20CLI.md
 
 ## Key-pair Create/Delete
 

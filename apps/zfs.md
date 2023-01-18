@@ -48,7 +48,7 @@ zfs set compression=lz4 POOLNAME
 
 Check:
 
-```sh
+```console
 $ zpool get ashift tank
 NAME  PROPERTY  VALUE   SOURCE
 tank  ashift    12      local
@@ -56,7 +56,7 @@ tank  ashift    12      local
 
 or
 
-```sh
+```console
 $ zpool get all tank
 NAME  PROPERTY                       VALUE                          SOURCE
 tank  size                           5.45T                          -
@@ -122,7 +122,7 @@ tank  feature@zstd_compress          enabled                        local
 
 Or using zdb:
 
-```sh
+```console
 $ sudo zdb -e -C tank
 MOS Configuration:
         version: 5000
@@ -173,7 +173,7 @@ MOS Configuration:
 
 atime details:
 
-```sh
+```console
 $ mount|grep tank
 tank on /mnt/tank (zfs, local, noatime, nfsv4acls)
 tank/home on /mnt/tank/home (zfs, local, noatime, nfsv4acls)
@@ -186,7 +186,6 @@ tank/iocage/jails on /mnt/tank/iocage/jails (zfs, local, noatime, nfsv4acls)
 tank/iocage/log on /mnt/tank/iocage/log (zfs, local, noatime, nfsv4acls)
 tank/iocage/releases on /mnt/tank/iocage/releases (zfs, local, noatime, nfsv4acls)
 tank/iocage/templates on /mnt/tank/iocage/templates (zfs, local, noatime, nfsv4acls)
-
 ```
 
 
@@ -207,12 +206,11 @@ zpool import -d /dev -f -a
 zpool replace tank 10462354999995531015 ada1
 zpool import -d /dev -f -a
 zpool import -d /dev -f -a
-
 ```
 
 And:
 
-```sh
+```console
 $ zdb -C | grep ashift
             ashift: 12
 ```
@@ -223,14 +221,14 @@ $ zdb -C | grep ashift
 zpool offline vault da3
 shutdown
 ```
-replace the disk
+replace the disk, then:
+
 ```sh
 zpool replace vault 1464662681387557667 /dev/da4
 ```
 
 In case it fails as in:
-
-```
+```console
 root@nass:~# zpool replace tank -f /dev/sda
 invalid vdev specification
 the following errors must be manually repaired:
@@ -249,7 +247,7 @@ root@nass:~# zpool replace tank -f /dev/sda
 
 A mirror:
 
-```sh
+```console
 # zpool status tank
   pool: tank
  state: ONLINE
@@ -267,26 +265,29 @@ errors: No known data errors
 
 Make it a 3-way mirror:
 
-```sh
+```console
 # zpool attach tank da0 da2
 # zpool detach tank da0
 # zpool set autoexpand=on tank
 # zpool online -e tank da0
 ```
 
-Insert disk.  Then in GUI Disgnostics\Information now has:
+Insert disk.  Then in XigmaNAS GUI:
+
+* Diagnostics\Information now has:
 ```
 da5     WDC WD40EFRX-68WT0N0      n/a      3815448MB     WD-WCC4E0018993      5400 rpm      6.0 Gb/s      Available , Enabled      mps0      LSI SAS2008      n/a      ONLINE
 ```
 
-Disks\Management however does not have da5
+* However Disks\Management does not have da5
 
+To remedy:
 
-Disks\Management !!!!!! Import Disks - now da5 is listed
+* In Disks\Management !!!!!! Import Disks - now da5 is listed
 
-Disks\Format format with ZFS
+* In Disks\Format format with ZFS
 
-```
+```console
 kern.geom.debugflags: 0 -> 16
 Deleting MBR and partition table...
 2048+0 records in
@@ -307,38 +308,68 @@ Done!
 * Create a pool VeryTemp from that virtual device
 
 ```sh
-$ cp -pR /mnt/vault/movies .
+cp -pR /mnt/vault/movies .
 ```
 
-### XigmaNAS Use Case
+## zpool status
 
-* removed 3 old disks
-* inserted 3 disks
-* power up
+```console
+root@nass[~]# zpool status tank
+  pool: tank
+ state: ONLINE
+status: One or more devices has experienced an unrecoverable error.  An
+	attempt was made to correct the error.  Applications are unaffected.
+action: Determine if the device needs to be replaced, and clear the errors
+	using 'zpool clear' or replace the device with 'zpool replace'.
+   see: https://openzfs.github.io/openzfs-docs/msg/ZFS-8000-9P
+  scan: scrub repaired 0B in 07:12:57 with 0 errors on Tue Jan 17 18:12:00 2023
+config:
 
-XigmaNAS Diagnostics\Information\Disks - now has new drive
+	NAME        STATE     READ WRITE CKSUM
+	tank        ONLINE       0     0     0
+	  raidz2-0  ONLINE       0     0     0
+	    sde     ONLINE       0     0     0
+	    sdd     ONLINE       0     0     0
+	    sdc     ONLINE       0     0     0
+	    sdb     ONLINE       0     0     0
+	    sda     ONLINE       0     1     0
 
-Disks\Management - Clear Config and Import disks
-Change for every disk:
-Description - Western Digital Red
-Hard disk standby time - 30min
-APM - 127
-Acoustic level - disabled
-SMART - activated
+errors: No known data errors
+```
 
-Disks\Format - new disk unavailable ;-(
-restart
-Disks\Format - new disk unavailable ;-(
+Note write errors is non-zero.  From
+[the doc](https://docs.oracle.com/cd/E19253-01/819-5461/gaynp/index.html):
 
-Disks|ZFS|Pools|Management - remove old pool
-Disks|ZFS|Configuration - Synch
+The `READ` and `WRITE` columns provide a count of I/O errors that occurred on
+the device, while the `CKSUM` column provides a count of uncorrectable checksum
+errors that occurred on the device. Both error counts indicate a potential
+device failure, and some corrective action is needed. If non-zero errors are
+reported for a top-level virtual device, portions of your data might have become
+inaccessible.
 
-Disks|Format - new disk unavailable!
-    File System - ZFS, no option for 4K sectors
+I decided to clear the status, for now, because `smartctl` for `sda` does not
+report any problems. `sda` is the oldest drive in the above pool, so I plan to
+keep an eye on it.
 
-Disks|ZFS|Pools|Tools
-    attach device VeryTemp da2 da3
+```console
+root@nass[~]# zpool clear tank
+root@nass[~]# zpool status tank
+  pool: tank
+ state: ONLINE
+  scan: scrub repaired 0B in 07:12:57 with 0 errors on Tue Jan 17 18:12:00 2023
+config:
 
-Disks|ZFS|Pools|Information - you can see resilvering!
+	NAME        STATE     READ WRITE CKSUM
+	tank        ONLINE       0     0     0
+	  raidz2-0  ONLINE       0     0     0
+	    sde     ONLINE       0     0     0
+	    sdd     ONLINE       0     0     0
+	    sdc     ONLINE       0     0     0
+	    sdb     ONLINE       0     0     0
+	    sda     ONLINE       0     0     0
 
-Rename the pool by export/import
+errors: No known data errors
+```
+
+Good read:
+[Failure Trends in a Large Disk Drive Population](https://static.googleusercontent.com/media/research.google.com/en//archive/disk_failures.pdf)
