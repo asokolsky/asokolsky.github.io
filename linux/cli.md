@@ -17,3 +17,8 @@ cat /proc/_pid_/cmdline|xargs -0
 ```sh
 sudo killall -USR2 systemd-resolved
 ```
+
+## Scripting
+
+* [Bash scripting cheatsheet](https://devhints.io/bash)
+* [Cute cheatsheet](https://pbs.twimg.com/media/FnBbebzaYAIkq1w?format=jpg&name=large)
