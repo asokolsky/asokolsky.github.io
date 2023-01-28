@@ -1,17 +1,21 @@
-# Self-hosted AWS
+# Self-hosted AWS Components
 
 Would it not be nice to host AWS on your (home) LAN?
 
 ## S3
 
-[minio](https://min.io/) is S3-compatible and is
-[available on TrueNAS](https://www.truenas.com/docs/core/services/s3/).
-It works with AWS
+[minio](https://min.io/) is S3-compatible and is available on TrueNAS
+[Core](https://www.truenas.com/docs/core/services/s3/) and
+[Scale](https://www.truenas.com/docs/scale/scaletutorials/apps/minioclustersscale/).
+
+### CLI client
+
+Minio works with AWS
 [cli client](https://docs.min.io/docs/aws-cli-with-minio.html),
 [python client](https://docs.min.io/docs/how-to-use-aws-sdk-for-python-with-minio-server.html).
 
 Configure the client using the `aws_access_key_id` and `aws_secret_access_key`
-from the minio install:
+from the `minio` install:
 
 ```sh
 aws configure
@@ -32,9 +36,13 @@ urllib3/connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request
 
 ## DynamoDB
 
-[AWS DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
+[AWS DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html).
 
-### Installation
+You can run DynamoDB as a
+[docker container](https://hub.docker.com/r/amazon/dynamodb-local).
+Alternatively.....
+
+### Installation in an LXC Container
 
 In LXC container:
 
@@ -44,21 +52,21 @@ apt upgrade
 ```
 
 Install OpenJDK JRE:
-```
+```sh
 apt install default-jre
 ```
 
 Verify:
-```
+```console
 root@dynamo:~# java -version
 openjdk version "11.0.14" 2022-01-18
 OpenJDK Runtime Environment (build 11.0.14+9-Ubuntu-0ubuntu2.20.04)
 OpenJDK 64-Bit Server VM (build 11.0.14+9-Ubuntu-0ubuntu2.20.04, mixed mode, sharing)
 ```
 
-Install [DynamoDB
-Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html):
-```
+Install
+[DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html):
+```sh
 wget https://s3.us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_latest.tar.gz
 mkdir -p /usr/lib/dynamodb
 mv dynamodb_local_latest.tar.gz /usr/lib/dynamodb
@@ -112,7 +120,7 @@ systemctl start dynamodb
 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.UsageNotes.html
 
 
-```
+```cmd
 PS C:\Users\asoko> aws dynamodb list-tables --endpoint-url http://dynamo:8000
 {
     "TableNames": []

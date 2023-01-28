@@ -25,3 +25,7 @@ Show how much space is used by directories in this folder:
 ```console
 du -sh -- *
 ```
+
+## Format disk
+
+See [cli-disk-format.md](cli-disk-format.html).
