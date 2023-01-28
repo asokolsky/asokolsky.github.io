@@ -2,6 +2,8 @@
 
 Would it not be nice to host AWS on your (home) LAN?
 
+* https://docs.localstack.cloud/user-guide/aws/feature-coverage/
+
 ## S3
 
 [minio](https://min.io/) is S3-compatible and is available on TrueNAS
