@@ -1,10 +1,12 @@
-# OctoPrint in a ProxMox Container
+# OctoPrint in a ProxMox
+
+Running OctoPrint in an LXC Container.
 
 ## Sources
 
 * [Setting-up OctoPrint](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian-or-raspberry-pi-os/2337)
 
-## Container
+## Create an LXC Container
 
 * Name: `octo`
 * cores: 2
@@ -89,9 +91,7 @@ In the UI, under Settings > Commands, configure the following commands:
 * Restart system: `sudo shutdown -r now`
 * Shutdown system: `sudo shutdown -h now`
 
-## Passthrough USB port(s) and tty the to the OctoPrint Container
-
-
+## Passthrough USB port(s) and tty to the OctoPrint Container
 
 * [Passthrough USB port to an LXC Container](https://medium.com/@konpat/usb-passthrough-to-an-lxc-proxmox-15482674f11d)
 * https://forum.proxmox.com/threads/usb-passthrough-to-a-container-lxc.101741/
@@ -114,7 +114,6 @@ crw-rw-r-- 1 root root 189, 4 Dec 27 12:34 /dev/bus/usb/001/005
 
 root@suprox:/var/log# ls -la /dev/ttyACM0
 crw-rw---- 1 root dialout 166, 0 Dec 27 12:34 /dev/ttyACM0
-
 ```
 
 Now we know that:
@@ -123,7 +122,7 @@ Now we know that:
 * the vendor is `2c99` and the product is `0002`
 * note cgroup is `166`
 
-My octoprint lxc ID is `103`, so I did:
+My `octoprint` lxc ID is `103`, so I did:
 
 ```sh
 mkdir -p /lxc/103/devices
