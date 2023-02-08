@@ -45,6 +45,21 @@ root@duo:~# systemctl status containerd
      CGroup: /system.slice/containerd.service
              ├─780428 /usr/bin/containerd
              └─784004 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 16d83c1e96548bbb12f1df2a34128a2958b8fbbefefd41efadc16b126beca9ce -address /run/containerd/containerd.sock
+
+root@duo:~# systemctl status docker
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2023-01-28 10:02:33 PST; 46min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 780566 (dockerd)
+      Tasks: 29
+     Memory: 311.4M
+        CPU: 10.142s
+     CGroup: /system.slice/docker.service
+             ├─780566 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─783975 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9443 -container-ip 172.17.0.2 -container-port 9443
+             └─783989 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8000 -container-ip 172.17.0.2 -container-port 8000
 ```
 
 ## Portainer Installation
@@ -68,20 +83,25 @@ CONTAINER ID   IMAGE                           COMMAND        CREATED         ST
 
 Then just point browser to https://duo:9443/
 
-To verify:
+## Portainer Upgrade
+
+Stop and remove the current portainer container:
+```sh
+docker container stop portainer
+docker container rm portainer
 ```
-root@duo:~# systemctl status docker
-● docker.service - Docker Application Container Engine
-     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
-     Active: active (running) since Sat 2023-01-28 10:02:33 PST; 46min ago
-TriggeredBy: ● docker.socket
-       Docs: https://docs.docker.com
-   Main PID: 780566 (dockerd)
-      Tasks: 29
-     Memory: 311.4M
-        CPU: 10.142s
-     CGroup: /system.slice/docker.service
-             ├─780566 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-             ├─783975 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9443 -container-ip 172.17.0.2 -container-port 9443
-             └─783989 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8000 -container-ip 172.17.0.2 -container-port 8000
+
+Run the latest version opf portainer container:
+```sh
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v portainer_data:/data portainer/portainer-ce:latest
+```
+
+Verify that new portainer is running:
+```
+root@duo:~# docker ps
+CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                                                      NAMES
+0eb56b171592   portainer/portainer-ce:latest   "/portainer"             53 seconds ago   Up 52 seconds   0.0.0.0:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, 9000/tcp   portainer
+2904b388690f   badsmoke/mjpg-streamer:latest   "/mjpg-streamer/mjpg…"   2 hours ago      Up 2 hours      0.0.0.0:8080->8080/tcp                                     mjpg-streamer
 ```

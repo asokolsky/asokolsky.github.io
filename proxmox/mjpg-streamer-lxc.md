@@ -1,7 +1,8 @@
-# mjpg-streamer in LXC Container
+# mjpg-streamer in an LXC Container on Proxmox
 
 Streaming video from a USB webcam connected to a Proxmox node via
-[mjpg-streamer](https://github.com/jacksonliam/mjpg-streamer).
+[mjpg-streamer](https://github.com/jacksonliam/mjpg-streamer) deployed in an
+LXC container.
 
 ## Create an LXC
 
@@ -22,9 +23,8 @@ Package `libjpeg8-dev` was not found.  Instead I did:
 will also need:
 
 ```sh
-apt-get install ffmpeg v4l-utils apt-get psmisc
+apt-get install ffmpeg v4l-utils psmisc
 ```
-
 
 Then:
 ```sh

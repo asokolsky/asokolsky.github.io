@@ -123,3 +123,14 @@ Extract container environment and sort it.
 ```
 sudo docker inspect _container_id_ | jq ".[0].Config.Env|sort[]"
 ```
+
+### Get a Shell in a Container
+
+```sh
+docker container exec -it _container_id_or_name_ /bin/bash
+```
+
+Options used:
+
+* `-i` - interactive
+* `-t` - allocate a pseudo TTY device

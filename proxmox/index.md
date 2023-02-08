@@ -13,6 +13,7 @@
 * [Postfix as forwarder](postfix.html)
 * [Power Saving](power.html)
 * [Rapid VM Deployment with Cloud Init and Terraform](cloud-init.html)
+* [Use Portainer to support docker containers](portainer.html)
 
 ## Guest Tasks
 
@@ -24,10 +25,10 @@
 
 * [centos7](centos7.html)
 * [Home Assistant](home-assistant)
-* [octoprint](octoprint.html)
+* [octoprint in an LXC Container](octoprint.html)
 * [pfSense in a VM](pfSense.html)
 * [TrueNAS Core in a VM](truenas.html)
-* [Unifi Controller in a Container](unifi.html)
+* [Unifi Controller in an LXC container](unifi.html)
 
 ## More
 
