@@ -161,8 +161,8 @@ Ctrl+K Ctrl+I|Show hover
 
 Key|Action
 ---|-----
-Ctrl+` | Show integrated terminal
-Ctrl+Shift+` | Create new terminal
+Ctrl+\` | Show integrated terminal
+Ctrl+Shift+\` | Create new terminal
 Ctrl+Shift+C | Copy selection
 Ctrl+Shift+V | Paste into active terminal
 Ctrl+Shift+ ↑/↓ | Scroll up/down
