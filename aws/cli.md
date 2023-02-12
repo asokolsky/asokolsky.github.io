@@ -165,7 +165,17 @@ pdsh -w $(grep _name_ ~/.ec2instances.txt | awk -F\| '{print $8}' | sed 'H;1h;$!
 [terminate-instances](https://docs.aws.amazon.com/cli/latest/reference/ec2/terminate-instances.html)
 
 ```sh
+TBD
+```
 
+### Auto Scaling Group
+
+Special case for instance termination when the instance belongs to an ASG - use
+[terminate-instance-in-auto-scaling-group](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/terminate-instance-in-auto-scaling-group.html) -
+you also need to specify whether desired capacity should be changed.
+
+```sh
+aws autoscaling terminate-instance-in-auto-scaling-group --instance-id  _id_ --should-decrement-desired-capacity
 ```
 
 ### Transit Gateways

@@ -7,7 +7,8 @@ From  https://www.linuxshelltips.com/install-docker-in-linux-mint/
 ```sh
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release -y
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+   sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
 In the following replace `jammy` with parent Ubuntu version name:
@@ -22,8 +23,7 @@ sudo apt update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-Verify the install:
-
+Verify the
 ```console
 > docker --version
 Docker version 20.10.21, build baeda1f
@@ -64,7 +64,101 @@ include:
 * config.json
 * daemon.json
 
-## Example Use
+## Networking
+
+[Reference](https://docs.docker.com/network/).
+
+Show (standard) networks:
+
+```console
+root@suprox:~# docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+6eef1bc6ffc5   bridge    bridge    local
+35dbeb62ddb4   host      host      local
+e023fada21bd   none      null      local
+root@suprox:~# docker network inspect host
+[
+    {
+        "Name": "host",
+        "Id": "35dbeb62ddb42ebca3f5e2eae576921229b1279b496c387b78ef2c4ced5c70d8",
+        "Created": "2023-02-10T18:31:29.131467146-08:00",
+        "Scope": "local",
+        "Driver": "host",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": []
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+```
+
+Inspect the `bridge` network to see which containers are connected to it:
+```
+root@suprox:~# docker network inspect bridge
+[
+    {
+        "Name": "bridge",
+        "Id": "6eef1bc6ffc530537c94652428cc80a295102845a84eb9ab18e40e8b6d666ee2",
+        "Created": "2023-02-10T18:31:29.14533915-08:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "3dca544da1ce64d8c5a970b38a8ab340e958b86ee36bc2ee4aa0b44035ec21d0": {
+                "Name": "mjpg-streamer",
+                "EndpointID": "b1b45b71ba4df575fcbd35650902860691e6f9dbcc82d608e8f4b992322cbe42",
+                "MacAddress": "02:42:ac:11:00:03",
+                "IPv4Address": "172.17.0.3/16",
+                "IPv6Address": ""
+            },
+            "bf42b1b5a4f78204a307323c514e22c402950f695e1d51e8c5df0c407dc66f98": {
+                "Name": "portainer",
+                "EndpointID": "617ed40e256b0a96dfbb5a74853dad400bc048797c11070735d4bb2b76787987",
+                "MacAddress": "02:42:ac:11:00:02",
+                "IPv4Address": "172.17.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+```
 
 ### List images
 
@@ -134,3 +228,13 @@ Options used:
 
 * `-i` - interactive
 * `-t` - allocate a pseudo TTY device
+
+## Observability
+
+```
+root@suprox:~# docker stats mjpg-streamer portainer
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+3dca544da1ce   mjpg-streamer   0.11%     1.75MiB / 31.26GiB    0.01%     7.12MB / 1.48GB   0B / 0B       4
+bf42b1b5a4f7   portainer       0.00%     12.59MiB / 31.26GiB   0.04%     3.29MB / 8.37MB   0B / 25.4MB   7
+^C
+```
