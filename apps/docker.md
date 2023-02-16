@@ -249,3 +249,23 @@ CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O
 bf42b1b5a4f7   portainer       0.00%     12.59MiB / 31.26GiB   0.04%     3.29MB / 8.37MB   0B / 25.4MB   7
 ^C
 ```
+
+## Build it
+
+Create [Dockerfile](https://docs.docker.com/engine/reference/builder/)
+
+Then use [docker build](https://docs.docker.com/engine/reference/commandline/build/)
+to build an image:
+
+```sh
+docker build -t my_stuff .
+```
+
+## Run it
+
+Run an image in a container using [docker run](https://docs.docker.com/engine/reference/commandline/run/):
+
+```sh
+docker run my_stuff
+```
+
