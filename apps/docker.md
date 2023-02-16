@@ -252,10 +252,10 @@ bf42b1b5a4f7   portainer       0.00%     12.59MiB / 31.26GiB   0.04%     3.29MB 
 
 ## Build it
 
-Create [Dockerfile](https://docs.docker.com/engine/reference/builder/)
-
-Then use [docker build](https://docs.docker.com/engine/reference/commandline/build/)
-to build an image:
+Create [Dockerfile](https://docs.docker.com/engine/reference/builder/).
+Then use command
+[docker build](https://docs.docker.com/engine/reference/commandline/build/)
+to build and tag the image:
 
 ```sh
 docker build -t my_stuff .
@@ -263,9 +263,10 @@ docker build -t my_stuff .
 
 ## Run it
 
-Run an image in a container using [docker run](https://docs.docker.com/engine/reference/commandline/run/):
+Run an image in a container using
+[docker run](https://docs.docker.com/engine/reference/commandline/run/).
+If you need to provide input for `stdin`, use `-i` option:
 
 ```sh
-docker run my_stuff
+cat secrets.txt | docker run -i my_stuff
 ```
-
