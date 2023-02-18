@@ -30,7 +30,8 @@ PS C:\Users\asoko> aws --version
 aws-cli/2.5.2 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
 ```
 
-[Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html), e.g. for local use:
+[Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html),
+e.g. for local use:
 
 ```
 PS C:\Users\asoko> aws configure
