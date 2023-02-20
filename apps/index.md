@@ -5,6 +5,7 @@
 [vi](vi.html)
 * [dot files](dot-files) and [fonts](fonts.html)
 * [exiftool](cli-exiftool.html)
+* [gomplate](gomplate.html)
 * [Home Assistant](home-assistant/)
 * [Java VM Tuning](java-vm.html)
 * [mqtt](mqtt.html)
