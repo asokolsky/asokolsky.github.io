@@ -39,5 +39,39 @@ Server: Docker Engine - Community
 alex@latitude7490:~/ > sudo docker compose version
 Docker Compose version v2.16.0
 ```
+Yet:
+```
+> docker-compose
+zsh: command not found: docker-compose
+````
+
+Check the[release page](https://github.com/docker/compose/releases)
+and then:
+
+```sh
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+Then:
+```sh
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Finally:
+```
+> docker-compose --version
+Docker Compose version v2.16.0
+```
+
+## Reference
+
+https://docs.docker.com/compose/reference/
+
+## Compose File Spec
+
+https://docs.docker.com/compose/compose-file/
 
 ## Example Use
+
+```sh
+sudo docker compose up -d
+```
