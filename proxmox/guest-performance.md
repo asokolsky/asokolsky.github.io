@@ -31,9 +31,10 @@ Model: `VirtIO (paravirtualized)`
 
 ### Use ethtool for troubleshooting
 
-[Source](https://x8t4.com/how-to-use-the-ethtool-command-with-examples/).
+[How to Use ethtool Command with Examples](https://linuxopsys.com/topics/ethtool-command).
 
-```sh
+Identify NIC name:
+```console
 alex@kdesktop:~$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -47,7 +48,10 @@ alex@kdesktop:~$ ip a
        valid_lft 4833sec preferred_lft 4833sec
     inet6 fe80::dbfe:6f6d:11d5:1743/64 scope link noprefixroute
        valid_lft forever preferred_lft forever
+```
 
+Now you know that `enp6s18` is the device name.  Display this interface details:
+```
 alex@kdesktop:~$ ethtool enp6s18
 Settings for enp6s18:
 	Supported ports: [  ]
@@ -67,7 +71,10 @@ Settings for enp6s18:
 	Transceiver: internal
 netlink error: Operation not permitted
 	Link detected: yes
+```
 
+Display the interface information, such as driver name:
+```
 alex@kdesktop:~$ ethtool -i enp6s18
 driver: virtio_net
 version: 1.0.0
