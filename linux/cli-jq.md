@@ -10,28 +10,28 @@ https://www.linode.com/docs/guides/using-jq-to-process-json-on-the-command-line/
 
 Just pipe it
 
-```
+```sh
 terraform show -json|jq
 ```
 
 Or to pretty print file:
 
-```
+```sh
 jq '.' menu.json
 ```
 
 ## Filtering
 
-To access a particular property within a JSON record, use the .field operator:
+To access a particular property within a JSON record, use the `.field` operator:
 
-```
+```sh
 terraform show -json|jq '.values.root_module.child_modules'
 ```
 
 To view a specific entry within an array, specify the index of the item within
-the [] operator:
+the `[]` operator:
 
-```
+```sh
 terraform show -json|jq '.values.root_module.child_modules[0]'
 ```
 
@@ -50,17 +50,17 @@ null
 
 To get the last element of the array use index -1:
 
-```
+```sh
 jq '.values.root_module.child_modules[0].resources[-1].values.private_key_pem' tt1.json
 ```
 
 You can also “slice” the array to show only a portion of it:
-[first:last].  The first is inclusive, while the last is exclusive.
-E.g. to display the first two items of an array, use [0:2].
+`[first:last]`.  The first is inclusive, while the last is exclusive.
+E.g. to display the first two items of an array, use `[0:2]`.
 
 ## Sorting
 
 Extract container environment and sort it.
-```
+```sh
 sudo docker inspect cc43cbfa4153|jq ".[0].Config.Env|sort[]"
 ```
