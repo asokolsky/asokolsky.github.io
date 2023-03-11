@@ -1,7 +1,7 @@
 # Hardware Notes
 
-* [Business Audio Setup](business-audio.html)
-* [Business Video Setup](business-video.html)
+* [Business Audio](business-audio.html)
+* [Business Video](business-video.html)
 * Video cameras: [Logitech Brio 4k](brio.html), [Panasonic GH5](gh5.html)
 * [Dell Latitude](latitude.html)
 * [Dell Optiplex 7060 Micro](optiplex7060micro.html)
@@ -13,4 +13,10 @@
 * [Remote Key Mapping](remote.html)
 * [Ubiquity EdgeRouter X](ubiquity.html)
 
-Relevant: [Home Office Setup](../_posts/2021-01-01-home-office.html)
+[Home Office](../_posts/2021-01-01-home-office.html)
+
+Home Lab
+
+* [NAS](nas/)
+* [Virtualization server](fuji/)
+* [Virtualization playground](duo/)

@@ -101,10 +101,12 @@ root@pve:/etc/network# ifup vmbr1
 ## Use ethtool
 
 Here are few examples of [ethtool](https://en.wikipedia.org/wiki/Ethtool) use.
-[More examples](https://www.thegeekstuff.com/2010/10/ethtool-command/).
+[More examples](https://www.thegeekstuff.com/2010/10/ethtool-command/),
+[man page](https://linux.die.net/man/8/ethtool)
 
 
 ### Display NIC settings
+
 ```console
 root@pmox3:~# ethtool enp1s0
 Settings for enp1s0:
@@ -152,6 +154,7 @@ Permanent address: not set
 ```
 
 ### Display the driver used
+
 ```console
 root@pmox2:~# ethtool -i eno1
 driver: e1000e
@@ -177,7 +180,7 @@ supports-register-dump: no
 supports-priv-flags: no
 ```
 
-### Display NIC stats
+### Display NIC statistics
 
 Use `ethtool -S enp1s0` or, better yet,  `watch -d "ethtool -S eno1"`.
 
