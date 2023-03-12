@@ -132,7 +132,8 @@ root@duo:~# echo "blacklist igb" >> /etc/modprobe.d/blacklist.conf
 
 After reboot `igb` is still being used!
 
-Yet I successfully passed the PCI device `enp3s0` and it works as expected.
+Yet I successfully passed the PCI device `enp3s0` (all functions, PCIx -
+not sure this is needed) and it works.
 
 
 ## VMs

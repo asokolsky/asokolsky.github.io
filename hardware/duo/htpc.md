@@ -1,6 +1,6 @@
 # HTPC
 
-This is a VM with GPU and some USB ports are passed through.
+This is a VM with GPU, NIC and some USB ports passed through.
 
 ## PCI
 
@@ -26,13 +26,13 @@ alex@htpc:~$ lspci
 00:1f.3 SMBus: Intel Corporation 82801I (ICH9 Family) SMBus Controller (rev 02)
 01:00.0 VGA compatible controller: NVIDIA Corporation GP108 [GeForce GT 1030] (rev a1)
 01:00.1 Audio device: NVIDIA Corporation GP108 High Definition Audio Controller (rev a1)
+02:00.0 Ethernet controller: Intel Corporation I211 Gigabit Network Connection (rev 03)
 05:01.0 PCI bridge: Red Hat, Inc. QEMU PCI-PCI bridge
 05:02.0 PCI bridge: Red Hat, Inc. QEMU PCI-PCI bridge
 05:03.0 PCI bridge: Red Hat, Inc. QEMU PCI-PCI bridge
 05:04.0 PCI bridge: Red Hat, Inc. QEMU PCI-PCI bridge
 06:03.0 Unclassified device [00ff]: Red Hat, Inc. Virtio memory balloon
 06:08.0 Communication controller: Red Hat, Inc. Virtio console
-06:12.0 Ethernet controller: Red Hat, Inc. Virtio network device
 07:1b.0 USB controller: Red Hat, Inc. QEMU XHCI Host Controller (rev 01)
 09:01.0 SCSI storage controller: Red Hat, Inc. Virtio SCSI
 ```
