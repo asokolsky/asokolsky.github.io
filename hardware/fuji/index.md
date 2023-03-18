@@ -20,11 +20,12 @@ PSU|250W
 UPS|APC RS1000G
 OS|ProxMox VE
 
-
-* [front with cover](front-cover.jpg)
-* [front](front.jpg)
-* [internals](internals.jpg)
-* [overview](overview.jpg)
+<p align="center" width="100%">
+    <img width="45%" src="front-cover.jpg">
+    <img width="45%" src="front.jpg">
+    <img width="100%" src="internals.jpg">
+    <img width="100%" src="overview.jpg">
+</p>
 
 ## PCI
 

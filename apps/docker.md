@@ -240,6 +240,25 @@ Options used:
 * `-i` - interactive
 * `-t` - allocate a pseudo TTY device
 
+### Container logs
+
+Default location: `/var/lib/docker/containers/<container_id>/<container_id>-json.log`.
+[logging drivers](https://docs.docker.com/config/containers/logging/configure/)
+can change that.
+
+CLI:
+
+```sh
+docker logs <container_id>
+```
+
+To tail (or to follow) the log:
+```sh
+docker logs <container_id> -f
+```
+
+[docker logs docs](https://docs.docker.com/engine/reference/commandline/logs/)
+
 ## Observability
 
 ```
