@@ -85,17 +85,20 @@ Then just point browser to https://duo:9443/
 
 ## Portainer Upgrade
 
-Stop and remove the current portainer container:
+Stop and remove the current portainer container and image:
 ```sh
 docker container stop portainer
 docker container rm portainer
+docker image rm portainer/portainer-ce:latest
 ```
 
-Run the latest version opf portainer container:
+Run the latest version of portainer in a container and ensure it is always
+restarted:
 ```sh
-docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v portainer_data:/data portainer/portainer-ce:latest
+  -v portainer_data:/data \
+  portainer/portainer-ce:latest
 ```
 
 Verify that new portainer is running:
