@@ -60,6 +60,12 @@ E.g. to display the first two items of an array, use `[0:2]`.
 
 ## Sorting
 
+Simple sort by key:
+
+```sh
+jq --sort-keys < foo.json
+```
+
 Extract container environment and sort it.
 ```sh
 sudo docker inspect cc43cbfa4153|jq ".[0].Config.Env|sort[]"
