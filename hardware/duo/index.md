@@ -375,3 +375,7 @@ End Of Table
 ## VMs
 
 [htpc](htpc.html)
+
+## ZFS
+
+[Playing with ZFS on SSDs](zfs.html)

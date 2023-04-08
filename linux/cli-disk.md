@@ -22,10 +22,14 @@ tmpfs           781M   52K  781M   1% /run/user/1000
 
 Show how much space is used by directories in this folder:
 
-```console
+```sh
 du -sh -- *
 ```
 
 ## Format disk
 
 See [cli-disk-format.md](cli-disk-format.html).
+
+## ZFS
+
+See [zfs.md](../apps/zfs.html)
