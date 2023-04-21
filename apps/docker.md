@@ -216,7 +216,7 @@ Force delete all containers:
 docker container rm -f $(docker container ls -aq)
 ```
 
-### Inspect container
+### Inspect the container
 
 Inspecting container produces JSON:
 
@@ -227,6 +227,12 @@ sudo docker inspect _container_id_
 Extract container environment and sort it.
 ```
 sudo docker inspect _container_id_ | jq ".[0].Config.Env|sort[]"
+```
+
+Display the account (username/group) used by the container:
+```sh
+sudo docker inspect _container_id_ | jq ".[].Config.User"
+"root:root"
 ```
 
 ### Get a Shell in a Container
