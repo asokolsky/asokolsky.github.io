@@ -49,7 +49,7 @@ start X on boot, so this file is not always very useful.
 
 ```sh
 {% include_relative dot-files/zshrc %}
-
+```
 
 ## bash script header
 
