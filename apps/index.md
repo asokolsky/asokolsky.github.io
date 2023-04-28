@@ -8,6 +8,7 @@
 * [gomplate](gomplate.html)
 * [Home Assistant](home-assistant/)
 * [Java VM Tuning](java-vm.html)
+* [make and Makefile](make/)
 * [mqtt](mqtt.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
 * [LDAP & AD search](cli-ldap.html)

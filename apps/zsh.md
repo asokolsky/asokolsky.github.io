@@ -49,4 +49,22 @@ start X on boot, so this file is not always very useful.
 
 ```sh
 {% include_relative dot-files/zshrc %}
+```
 
+## zsh/bash tips
+
+[here document](https://www.howtogeek.com/719058/how-to-use-here-documents-in-bash-on-linux/)
+
+```sh
+cat << EOF > session.txt
+Your user name is: $(whoami)
+Your current working directory is: $PWD
+Your Bash version is: $ZSH_VERSION
+EOF
+```
+
+## Compare command output with expectations
+
+```sh
+diff -u expected.txt <(some command)
+```
