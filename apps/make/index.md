@@ -24,6 +24,17 @@ Variable|Description
 
 ## Examples
 
-* [c-simple.mak](c-simple.mak)
-* [c.mak](c.mak)
-* [python.mak](python.mak)
+[c-simple.mak](c-simple.mak):
+```
+{% include_relative c-simple.mak %}
+```
+
+[c.mak](c.mak):
+```
+{% include_relative c.mak %}
+```
+
+[python.mak](python.mak)
+```
+{% include_relative python.mak %}
+```
