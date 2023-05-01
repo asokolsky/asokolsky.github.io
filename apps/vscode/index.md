@@ -2,7 +2,7 @@
 
 ## Font
 
-I really like [Source Code Pro](fonts.html) by Adobe.
+I really like [Source Code Pro](../fonts.html) by Adobe.
 
 ## User Settings
 
@@ -12,9 +12,9 @@ are stored in `settings.json` in the following directory:
 
 OS|Path
 --|---
-Windows | `%APPDATA%\Code\User\`, where `%APPDATA%` is usually `C:\Users\_username_\AppData\Roaming`
-macOS | `/Users/_username_/Library/Application Support/Code/User/`
-Linux | `~/.config/Code/User/`
+Windows|`%APPDATA%\Code\User\`, where `%APPDATA%` is usually `C:\Users\_username_\AppData\Roaming`
+MacOS|`/Users/_username_/Library/Application Support/Code/User/`
+Linux|`~/.config/Code/User/`
 
 ### settings.json
 
@@ -102,44 +102,13 @@ On MacOS:
     },
 ]
 ```
-
-## Workspace Settings - Python
-
-Python workspace `.vscode/settings.json`:
-
-```json
-{
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.mypyArgs": [
-        "--ignore-missing-imports",
-        "--follow-imports=silent",
-        "--show-column-numbers",
-        "--strict"
-    ],
-    "python.linting.pylintEnabled": false,
-    "python.linting.pylintUseMinimalCheckers": false,
-    "python.testing.pytestEnabled": false,
-    "python.testing.unittestEnabled": true,
-    "python.testing.unittestArgs": [
-        "-v", "-s", "./src", "-p", "*_test.py"
-    ],
-}
-```
-
-You can tell I like unittest and `mypy`, not `pylint` and `pytest`.
-
-Oh and `.flake8` is:
-
-```
-[flake8]
-extend-ignore = E127,E128,E231,E265,E302,E501
-exclude = doc,.git,.mypy_cache,__pycache__,.vscode
-max-complexity = 20
-```
-
-
 ## Keyboard Bindings
 
-[vscode-keys](vscode-keys.html)
+[vscode-keys](keys.html)
+
+## Using
+
+[VSCode Variables Reference](https://code.visualstudio.com/docs/editor/variables-reference)
+
+* [vscode for python](python.py)
+* [vscode for C/C++](c_c++.md)
