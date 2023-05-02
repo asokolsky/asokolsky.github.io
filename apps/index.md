@@ -15,6 +15,6 @@
 * [OBS](obs.html)
 * [Prometheus & Grafana](prometheus-grafana.html)
 * [ruby](ruby.html)
-* [Visual Studio Code](vscode.html)
+* [Visual Studio Code](vscode/)
 * [ZFS setup and commands](zfs.html)
 * [zsh](zsh.html)
