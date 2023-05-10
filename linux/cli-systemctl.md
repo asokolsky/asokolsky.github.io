@@ -7,11 +7,14 @@ Reasonable [intro](https://skyyy.hashnode.dev/systemctl-linux-command).
 The pager defaults to `less`.  To disable it use `--no-pager` or
 `export SYSTEMD_PAGER=`.
 
-## Types of Daemons
+[How to manage systemd units with systemctl](https://www.2daygeek.com/linux-systemctl-command-manage-systemd-units-service/)
+
+
+## Unit Types
 
 To list the unit (daemon) types:
 
-```sh
+```
 $ systemctl -t help
 Available unit types:
 service
@@ -27,6 +30,19 @@ slice
 scope
 ```
 
+Unit Type|File Extension|Description
+---------|--------------|-----------
+Device|.device|A device file recognized by the kernel.
+Mount|.mount|A file system mount point.
+Service|.service|A service on the system, including instructions for starting, restarting, and stopping the service.
+Socket|.socket|A network socket associated with a service.
+Swap|.swap|A swap device or a swap file.
+Target|.target|It replaces sysV init run levels that control system boot.
+Timer|.timer|A systemd timer.
+
+
+## Types of Daemons
+
 There are 3 types of daemons:
 
 * services
@@ -36,48 +52,30 @@ There are 3 types of daemons:
 To see the system's processes in each:
 
 ```sh
-$ systemctl
-$ systemctl list-units --type=service
-$ systemctl list-units --type=socket --state=LOAD
-$ systemctl list-units --type=path --all
-$ systemctl list-unit-files
+systemctl
+systemctl list-units --type service
+systemctl list-units --type=service
+systemctl list-units --type=socket --state=LOAD
+systemctl list-units --type=path --all
+systemctl list-unit-files
+```
+e.g.
+
+```sh
+systemctl
 ```
 
 Also check out:
-
 ```
 systemctl list-unit-files
 ```
 
-## Working with Services
+[Working with Services](cli-systemctl-services.html)
 
-### Show Services
+[Working with Sockets](cli-systemctl-sockets.html)
 
-Show running services:
+[Working with Mounts](cli-systemctl-mounts.html)
 
-```sh
-systemctl list-units --type=service | grep running
-```
+[Working with Targets](cli-systemctl-targets.html)
 
-### Start Service
-
-Start x11vnc service:
-
-```sh
-sudo systemctl start x11vnc.service
-```
-
-### Show Service Status
-
-
-```sh
-systemctl status _service-name_
-```
-
-### Show Service Log
-
-Use [journalctl](https://www.man7.org/linux/man-pages/man1/journalctl.1.html):
-
-```sh
-journalctl --no-pager -u _service-name_
-```
+[Working with Timers](cli-systemctl-timers.html)
