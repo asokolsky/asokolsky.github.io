@@ -1,9 +1,9 @@
 
 # define the name of the virtual environment directory
-VENV := venv
+VENV:=.venv
 
-PYTHON = $(VENV)/bin/python3
-PIP = $(VENV)/bin/pip
+PYTHON=$(VENV)/bin/python3
+PIP=$(VENV)/bin/pip
 
 # targets which are NOT files
 .PHONY: all venv run clean
@@ -22,7 +22,8 @@ run: venv
 	./$(VENV)/bin/python3 app.py
 
 clean:
-	rm -rf __pycache__ $(VENV)
+	rm -rf $(VENV) .mypy_cache
+	find . -name __pycache__ | xargs rm -rf
 
 #
 # Usage: make VENV=my_venv run

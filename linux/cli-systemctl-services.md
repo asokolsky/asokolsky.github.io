@@ -6,15 +6,20 @@ This is about working with services.
 
 ## Show Services
 
-Show running services:
+Show the running services:
 
 ```sh
 systemctl list-units --type=service | grep running
 ```
 
-To list only the running services:
+or:
 ```sh
 systemctl list-units --type=service --state=running
+```
+
+Show the units which failed to start:
+```sh
+systemctl list-units --state=failed
 ```
 
 To list all the service units installed in the file system, not only the loaded:
