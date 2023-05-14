@@ -10,71 +10,63 @@ image](https://austinsnerdythings.com/2021/08/30/how-to-create-a-proxmox-ubuntu-
 ## Get the OS Image
 
 Use Proxmox GUI to download
-[20.04 image](https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img).
+[20.04 server cloud image](https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img).
 Alternatively use
-[22.04 image](https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img).
+[22.04 server cloud image](https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img)
+or
+[22.04 minimal image](https://cloud-images.ubuntu.com/minimal/releases/jammy/release/ubuntu-22.04-minimal-cloudimg-amd64.img)
 
+## Customize the Image
 
-## Add Packages to the Image
-
-Prepare proxmox and install
-[libguestfs-tools](https://www.libguestfs.org/):
-
+Prerequisite: [libguestfs-tools](https://www.libguestfs.org/).
 ```sh
 apt update -y && apt install libguestfs-tools -y
 ```
 
-Install qemu-guest-agent into the downloaded image:
-
-```console
-root@duo:/# find . -type f -name 'focal-server-*'
-find: ‘./var/lib/lxcfs/cgroup’: Input/output error
-./var/lib/vz/template/iso/focal-server-cloudimg-amd64.img
-root@duo:/# cd var/lib/vz/template/iso/
+Locate the downloaded image in `/var/lib/vz/template/iso`:
+```
 root@duo:/var/lib/vz/template/iso# ls -la
-total 3273424
-drwxr-xr-x 2 root root       4096 Sep 27 10:00 .
-drwxr-xr-x 5 root root       4096 Dec  4  2020 ..
--rw-r--r-- 1 root root  566951936 Sep 23 16:25 focal-server-cloudimg-amd64.img
--rw-r--r-- 1 root root 2785017856 Dec  4  2020 ubuntu-20.04.1-desktop-amd64.iso
-root@duo:/var/lib/vz/template/iso# virt-customize -a focal-server-cloudimg-amd64.img --install qemu-guest-agent
-[   0.0] Examining the guest ...
-[   4.8] Setting a random seed
-virt-customize: warning: random seed could not be set for this type of guest
-[   4.8] Setting the machine ID in /etc/machine-id
-[   4.8] Installing packages: qemu-guest-agent
-[  23.5] Finishing off
+total 7551428
+drwxr-xr-x 2 root root       4096 May  5 09:35 .
+drwxr-xr-x 4 root root       4096 Jan 25  2022 ..
+-rw-r--r-- 1 root root  950337536 May  5 09:43 focal-server-cloudimg-amd64.img
+-rw-r--r-- 1 root root 3674746880 Apr 19  2022 kubuntu-22.04-desktop-amd64.iso
+-rw-r--r-- 1 root root 2312994816 Jun  4  2022 nixos-gnome-x86_64-linux.iso
+```
+
+Customize the downloaded image using
+[virt-customize](https://www.libguestfs.org/virt-customize.1.html):
+
+
+```sh
+virt-customize -a focal-server-cloudimg-amd64.img \
+  --install qemu-guest-agent,jq,htop --root-password password:PASSWORD
 ```
 
 ## Create a Proxmox VM
 
-```console
-root@duo:/var/lib/vz/template/iso# qm create 9000 --name "ubuntu-2004-cloudinit-template" --memory 2048 --cores 2 --net0 virtio,bridge=vmbr0
-root@duo:/var/lib/vz/template/iso# qm importdisk 9000 focal-server-cloudimg-amd64.img local-lvm
-importing disk 'focal-server-cloudimg-amd64.img' to VM 9000 ...
-  Logical volume "vm-9000-disk-0" created.
-transferred 0.0 B of 2.2 GiB (0.00%)
-...
-root@duo:/var/lib/vz/template/iso# qm set 9000 --scsihw virtio-scsi-pci --scsi0 local-lvm:vm-9000-disk-0
-update VM 9000: -scsi0 local-lvm:vm-9000-disk-0 -scsihw virtio-scsi-pci
-root@duo:/var/lib/vz/template/iso# qm set 9000 --boot c --bootdisk scsi0
-update VM 9000: -boot c -bootdisk scsi0
-root@duo:/var/lib/vz/template/iso# qm set 9000 --ide2 local-lvm:cloudinit
-update VM 9000: -ide2 local-lvm:cloudinit
-  Logical volume "vm-9000-cloudinit" created.
-root@duo:/var/lib/vz/template/iso# qm set 9000 --serial0 socket --vga serial0
-update VM 9000: -serial0 socket -vga serial0
-root@duo:/var/lib/vz/template/iso# qm set 9000 --agent 1
-update VM 9000: -agent 1
+```sh
+qm create 9000 --name "ubuntu-2004-cloudinit-template" --memory 1024 --cores 2 --net0 virtio,bridge=vmbr0
+qm importdisk 9000 focal-server-cloudimg-amd64.img local-lvm
+qm set 9000 --scsihw virtio-scsi-pci --scsi0 local-lvm:vm-9000-disk-0
+qm set 9000 --boot c --bootdisk scsi0
+qm disk resize 9000 scsi0 32G
+qm set 9000 --ide2 local-lvm:cloudinit
+qm set 9000 --serial0 socket --vga serial0
+qm set 9000 --agent 1
 ```
+
+Also in GUI change:
+
+* OS type
+* Inform scsi0 as SSD
+* Change NIC to use DHCP
+
 
 ## Convert the VM into a Template
 
-```console
-root@duo:~# qm template 9000
-  Renamed "vm-9000-disk-0" to "base-9000-disk-0" in volume group "pve"
-  Logical volume pve/base-9000-disk-0 changed.
-  WARNING: Combining activation change with other commands is not advised.
+```sh
+qm template 9000
 ```
 
 ## Test VM Creation from Template

@@ -9,3 +9,9 @@ rsync --dry-run --verbose --archive --recursive --human-readable --inplace \
   /mnt/tank/Documents/Books \
   barbara@192.168.11.30:/mnt/tank/documents/
 ```
+
+To copy a folder to a remote LAN computer:
+
+```
+rsync -va rest2gpio/ alex@192.168.10.30:rest2gpio
+```
