@@ -1,6 +1,6 @@
 # make and Makefile
 
-My definition: `make` is a data-drive (data is in `Makefile`) filter for
+My definition: `make` is a data-driven (data is in a `Makefile`) filter for
 building 'targets'.
 
 GNU [man page](https://man7.org/linux/man-pages/man1/make.1.html),
