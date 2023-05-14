@@ -1,6 +1,6 @@
 # `jourtnalctl` cheat sheet
 
-[journalctl man page](https://www.man7.org/linux/man-pages/man1/journalctl.1.html):
+[journalctl man page](https://www.man7.org/linux/man-pages/man1/journalctl.1.html).
 
 ## Configuration
 
