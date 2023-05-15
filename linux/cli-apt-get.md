@@ -28,6 +28,8 @@ function apt_wait () {
       sleep 1
     done
   fi
+  # FIXME: wait for /var/cache/apt/archives/lock
+  # /var/cache/apt/archives/lock
 }
 #
 # to avoid "Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5475 (unattended-upgr)"
