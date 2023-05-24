@@ -35,3 +35,23 @@ Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/asokolsky/psmqtt.git
    a98ddea..52094f3  master -> master
 ```
+
+## Repo-specific Upstream Repo
+
+Set repo-specific (non-global) config settings:
+```sh
+git config user.name "Alex Sokolsky"
+git config user.email "asokolsky@gmail.com"
+git config core.sshCommand "ssh -i ~/.ssh/private_key
+```
+
+Make sure your private identity is available:
+```sh
+ssh-add ~/.ssh/private_key
+```
+
+Then
+```sh
+git remote add origin git@github.com:asokolsky/repo.git
+git push --set-upstream origin master
+```
