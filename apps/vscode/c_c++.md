@@ -1,4 +1,4 @@
-# Visual Studio Code Settings for Python
+# Visual Studio Code Settings for C/C++
 
 ## Information Sources
 
