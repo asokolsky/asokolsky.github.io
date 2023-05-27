@@ -55,3 +55,5 @@ Then
 git remote add origin git@github.com:asokolsky/repo.git
 git push --set-upstream origin master
 ```
+
+Testing a pull request
