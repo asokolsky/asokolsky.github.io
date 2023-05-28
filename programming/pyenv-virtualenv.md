@@ -38,3 +38,17 @@ python version from `.python-version`;
 * `pyenv-virtualenv` [creates and
 uses](https://github.com/pyenv/pyenv-virtualenv#activate-virtualenv)
 python virtual environment named after `.python-version`.
+
+
+## Virtual Environment Maintenance
+
+To see the current dependencies as a table:
+
+```sh
+pip3 list
+```
+
+To freeze:
+```sh
+pip3 freeze > requirements.txt
+```
