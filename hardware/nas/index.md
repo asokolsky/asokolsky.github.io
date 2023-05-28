@@ -1,9 +1,11 @@
 # NAS
 
+## Hardware
+
 Item|Description
 ----|----------
 CPU|Intel Atom C3558, 4C4T, 2.20 GHz, TDP16W, Denverton
-Motherboard|SuperMicro A2SDi-4C-HLN4F miniITX
+Motherboard|SuperMicro [A2SDi-4C-HLN4F](https://www.supermicro.com/en/products/motherboard/a2sdi-4c-hln4f) miniITX
 BMC|ASpeed AST 2400
 BIOS|1.5 5/17/2021
 BMC Firmware|03.88 02/21/2020 Redfish Version: 1.0.1

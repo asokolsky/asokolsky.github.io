@@ -3,9 +3,15 @@
 * [Configuring vscode](/apps/vscode.html)
 * [Color your console output](color-console.html)
 * [ruby](/apps/ruby.html)
-* [Server and Client-side Certificates for Python Programmer](https.html)
+
+Python topics:
+
 * [Better (String) Enum in Python](python-string-enum.html)
+* [Python project Makefile](../apps/make/python.mak)
 * [Virtual Environment](pyenv-virtualenv.html)
+* [Server- and Client-side Certificates for Python Programmer](https.html)
+* [F-Strings Number Formatting Cheat Sheet](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
+* [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
 
 References to more cool stuff:
 
