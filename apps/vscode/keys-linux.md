@@ -1,17 +1,17 @@
-# Visual Studio Code Keyboard Bindings
+# Visual Studio Code Keyboard Bindings in Linux
 
-Linux/Windows only.
+[Reference Card](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
 
 ## General
 
 Key|Action
 ---|-----
-Ctrl+Shift+P, F1|Show Command Palette
-Ctrl+P|Quick Open, Go to File...
-Ctrl+Shift+N|New window/instance
-Ctrl+W|Close window/instance
-Ctrl+,|User Settings
-Ctrl+K Ctrl+S|Keyboard Shortcuts
+Ctrl+Shift+P, F1 | Show Command Palette
+Ctrl+P | Quick Open, Go to File...
+Ctrl+Shift+N | New window/instance
+Ctrl+W | Close window/instance
+Ctrl+, | User Settings
+Ctrl+K Ctrl+S | Keyboard Shortcuts
 
 ## Basic editing
 

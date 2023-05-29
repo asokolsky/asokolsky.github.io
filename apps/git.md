@@ -1,4 +1,6 @@
-# My GIT Config
+# git
+
+## Global Config
 
 Followed [Customizing Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
 
@@ -36,7 +38,7 @@ To https://github.com/asokolsky/psmqtt.git
    a98ddea..52094f3  master -> master
 ```
 
-## Repo-specific Upstream Repo
+## Repo-specific Config
 
 Set repo-specific (non-global) config settings:
 ```sh
@@ -55,5 +57,3 @@ Then
 git remote add origin git@github.com:asokolsky/repo.git
 git push --set-upstream origin master
 ```
-
-Testing a pull request

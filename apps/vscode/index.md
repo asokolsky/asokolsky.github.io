@@ -104,7 +104,9 @@ On MacOS:
 ```
 ## Keyboard Bindings
 
-[vscode-keys](keys.html)
+[Linux](keys-linux.md)
+[Linux](keys-windows.md)
+[MacOS](keys-mac.md)
 
 ## Using
 
