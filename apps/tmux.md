@@ -13,6 +13,19 @@ sysadmin, may have more than one window;
 * Window - for projects within that theme, may have more than one pane;
 * Pane - for view within your current project.
 
+```mermaid
+flowchart TB
+    subgraph Session1
+    subgraph Window1
+    Pane11
+    Pane12
+    end
+    subgraph Window2
+    Pane21
+    end
+    end
+```
+
 ## CLI
 
 You can run `tmux _command_`.  The following are excerpts from the man page.
