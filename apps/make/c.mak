@@ -41,15 +41,15 @@ default: all
 
 # This will link the executable from the object files
 $(EXE): $(OBJECTS)
-	$(LD) $(LDFLAGS) $(OBJECTS) -o $(EXE) $(LIBS)
+	$(LD) $(LDFLAGS) $(OBJECTS) $(LIBS) -o $(EXE)
 
 # Target to clean up after us
 .PHONY: clean
 clean:
-	-rm -f $(EXE)		# Remove the executable file
-	-rm -f $(OBJECTS)	# Remove the object files
-	-rm -Rf $(DEPDIR)	# Remove the dependencies files
-	-rm -Rf $(EXE).dSYM	# Remove the symbols
+	# Remove the executable file
+	rm -f $(EXE) $(OBJECTS)
+	# Remove the dependencies and symbols
+	rm -Rf $(DEPDIR) $(EXE).dSYM
 
 # Advanced auto-dependency, from:
 # http://make.mad-scientist.net/papers/advanced-auto-dependency-generation/
