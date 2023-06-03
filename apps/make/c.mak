@@ -46,10 +46,10 @@ $(EXE): $(OBJECTS)
 # Target to clean up after us
 .PHONY: clean
 clean:
-	-rm -f $(EXE)		# Remove the executable file
-	-rm -f $(OBJECTS)	# Remove the object files
-	-rm -Rf $(DEPDIR)	# Remove the dependencies files
-	-rm -Rf $(EXE).dSYM	# Remove the symbols
+	rm -f $(EXE)		# Remove the executable file
+	rm -f $(OBJECTS)	# Remove the object files
+	rm -Rf $(DEPDIR)	# Remove the dependencies files
+	rm -Rf $(EXE).dSYM	# Remove the symbols
 
 # Advanced auto-dependency, from:
 # http://make.mad-scientist.net/papers/advanced-auto-dependency-generation/
