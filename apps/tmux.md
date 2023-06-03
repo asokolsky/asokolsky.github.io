@@ -14,15 +14,15 @@ sysadmin, may have more than one window;
 * Pane - for view within your current project.
 
 ```mermaid
-flowchart LR
+flowchart TD
     subgraph Session1
-    subgraph Window1
-    Pane11
-    Pane12
-    end
-    subgraph Window2
-    Pane21
-    end
+        subgraph Window1
+            Pane11
+            Pane12
+        end
+        subgraph Window2
+            Pane21
+        end
     end
 ```
 
