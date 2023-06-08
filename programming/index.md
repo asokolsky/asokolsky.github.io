@@ -1,13 +1,14 @@
 # Programming
 
-* [Configuring vscode](/apps/vscode.html)
+* [make and Makefile](/apps/make/)
+* [Visual Studio Code](/apps/vscode/)
 * [Color your console output](color-console.html)
 * [ruby](/apps/ruby.html)
 
 Python topics:
 
 * [Better (String) Enum in Python](python-string-enum.html)
-* [Python project Makefile](../apps/make/python.mak)
+* [Python project Makefile](/apps/make/python.mak)
 * [Virtual Environment](pyenv-virtualenv.html)
 * [Server- and Client-side Certificates for Python Programmer](https.html)
 * [F-Strings Number Formatting Cheat Sheet](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
