@@ -4,7 +4,6 @@
 
 ```console
 asokolsky in ~ > system_profiler -detailLevel full SPEthernetDataType
-system_profiler -detailLevel full SPEthernetDataType
 Ethernet:
 
     Apple T2 Controller:
