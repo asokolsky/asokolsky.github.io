@@ -48,7 +48,7 @@ using `sudo apt install bolt`.  Yet
 I use [Amazon Basics
 hub](https://www.amazon.com/gp/product/B086H3FMPZ/ref=ppx_yo_dt_b_search_asin_title).
 It does the job.  Realtek 8153 USB-to-Ethernet chip stopped working though.
-I wish it were 2.5 Gbps Ethernet but it is not.  I use the hub with Macbook Pro.
+I wish it were 2.5 Gbps Ethernet but it is not.  I use the hub with MacBook Pro.
 
 ## Dell WD19TB Thunderbolt 3 Hub
 
@@ -181,4 +181,4 @@ iperf Done.
 [WD22TB4](https://www.dell.com/support/home/en-us/product-support/product/wd22tb4-dock/overview)
 (service tag FOZCTN3) seems to have the same RTL8153 ethernet.
 
-Works fine with Macbook Pro.
+Works fine with MacBook Pro.
