@@ -178,6 +178,7 @@ iperf Done.
 
 ## Dell WD22TB4 Thunderbolt 4 Hub
 
-https://www.dell.com/support/home/en-us/product-support/product/wd22tb4-dock/overvie
+[WD22TB4](https://www.dell.com/support/home/en-us/product-support/product/wd22tb4-dock/overview)
+(service tag FOZCTN3) seems to have the same RTL8153 ethernet.
 
-Seems to have the same RTL8153 ethernet.  Works fine with Macbook Pro.
+Works fine with Macbook Pro.
