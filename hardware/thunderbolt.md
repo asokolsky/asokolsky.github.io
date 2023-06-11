@@ -48,13 +48,14 @@ using `sudo apt install bolt`.  Yet
 I use [Amazon Basics
 hub](https://www.amazon.com/gp/product/B086H3FMPZ/ref=ppx_yo_dt_b_search_asin_title).
 It does the job.  Realtek 8153 USB-to-Ethernet chip stopped working though.
-I wish it were 2.5 Gbps Ethernet but it is not.  I use the hub with Macbook Pro.
+I wish it were 2.5 Gbps Ethernet but it is not.  I use the hub with MacBook Pro.
 
-## Dell Thunderbolt Hub
+## Dell WD19TB Thunderbolt 3 Hub
 
-I end up using [Dell WD19TB Thunderbolt
-Dock](https://www.dell.com/en-us/work/shop/dell-thunderbolt-dock-wd19tbs/apd/210-azbi/pc-accessories)
-as a USB3 hub.  It does power the laptop though.
+I use [Dell WD19TB Thunderbolt 3
+Dock](https://www.dell.com/support/home/en-us/product-support/product/dell-wd19tb-dock/docs)
+as a USB3 hub because of the lack of thunderbolt support in latitude7490.
+The hub does manage to power the laptop though.
 
 ### USB
 
@@ -174,3 +175,10 @@ Connecting to host 192.168.10.1, port 5201
 
 iperf Done.
 ```
+
+## Dell WD22TB4 Thunderbolt 4 Hub
+
+[WD22TB4](https://www.dell.com/support/home/en-us/product-support/product/wd22tb4-dock/overview)
+(service tag FOZCTN3) seems to have the same RTL8153 ethernet.
+
+Works fine with MacBook Pro.

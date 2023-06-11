@@ -1,8 +1,12 @@
 {
     "cSpell.words": [
+        "iperf",
+        "Mbits",
         "Mosquitto",
         "Outdent",
-        "setw"
+        "Realtek",
+        "setw",
+        "Xeon"
     ],
     "files.associations": {
         "*.yaml": "home-assistant"
