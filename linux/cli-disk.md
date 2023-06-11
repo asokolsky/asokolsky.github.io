@@ -32,4 +32,4 @@ See [cli-disk-format.md](cli-disk-format.html).
 
 ## ZFS
 
-See [zfs.md](../apps/zfs.html)
+See [zfs.md](/apps/zfs.html)

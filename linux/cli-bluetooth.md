@@ -1,6 +1,6 @@
 # Linux BlueTooth CLI
 
-https://wiki.archlinux.org/title/Bluetooth
+[https://wiki.archlinux.org/title/Bluetooth](https://wiki.archlinux.org/title/Bluetooth)
 
 ## Install
 
