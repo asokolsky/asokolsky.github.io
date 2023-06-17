@@ -35,9 +35,6 @@ which includes them without performing any modification."
 sudo wipefs /dev/sda
 ```
 
-
-
-
 Alternatively:
 
 ```sh
