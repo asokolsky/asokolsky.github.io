@@ -169,6 +169,16 @@ pdsh -w $(grep _name_ ~/.ec2instances.txt | awk -F\| '{print $8}' | sed 'H;1h;$!
 TBD
 ```
 
+Find the instance by an IP:
+```sh
+aws ec2 describe-instances --filter Name=private-ip-address,Values=$ip
+```
+
+Find the instance by name:
+```sh
+aws ec2 describe-instances --filter Name=tag:Name,Values=$name
+```
+
 ### Auto Scaling Group
 
 Special case for instance termination when the instance belongs to an ASG - use
