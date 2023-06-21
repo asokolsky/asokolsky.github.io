@@ -12,7 +12,8 @@ Differentiate touch pad and mouse scroll direction using
 
 
 
-For sofware development you will need [Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html):
+For software development you will need
+[Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html):
 
 ```
 xcode-select --install
@@ -24,4 +25,3 @@ Also relevant:
 * [emacs colors](../apps/emacs.html)
 
 [hidden-macos-features-or-tips-and-tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
-
