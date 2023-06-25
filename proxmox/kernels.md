@@ -17,7 +17,7 @@ You only want to remove kernel packages of the form `pve-kernel-x.xx.xx-x-pve`!
 
 Somehow linux-image packages made it into my proxmox install:
 
-```sh
+```
 root@duo:/# dpkg --list|grep pve-kernel.*-pve
 ii  pve-kernel-5.15.30-2-pve             5.15.30-3                              amd64        The Proxmox PVE Kernel Image
 ii  pve-kernel-5.15.35-1-pve             5.15.35-2                              amd64        The Proxmox PVE Kernel Image
