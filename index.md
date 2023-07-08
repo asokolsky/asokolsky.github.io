@@ -40,7 +40,8 @@ and [more...](linux/cli.html)
 * [IPMI Config and cli](linux/cli-ipmi.html)
 * [Configure SSH for Key Authentication](linux/ssh.html)
 * [Kernel Tuning](linux/kernel-tuning.html)
-* Customize [CentOS](centos/), [ProxMox](proxmox/)
+* Customize [CentOS](centos/), [ProxMox](proxmox/),
+[TrueNAS Scale](truenas-scale/),
 * [more...](linux/)
 
 ## MacOS
