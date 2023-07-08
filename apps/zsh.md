@@ -84,3 +84,5 @@ set -o pipefail
 # Turn on traces, useful while debugging but commented out by default
 set -o xtrace
 ```
+
+[my example use](https://gist.github.com/asokolsky4clari/9acbd78dea87f100f04623dbace33c66)

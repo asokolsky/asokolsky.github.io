@@ -23,6 +23,17 @@ nvme0n1     259:0    0 465.8G  0 disk
 
 Flash is identified as `sda`.
 
+## Burn ISO
+
+```
+ > sudo dd bs=4M if=/tmp/ubuntu-22.04.2-live-server-amd64.iso of=/dev/sda conv=fdatasync status=progress
+[sudo] password for alex:
+1866465280 bytes (1.9 GB, 1.7 GiB) copied, 1 s, 1.9 GB/s
+471+1 records in
+471+1 records out
+1975971840 bytes (2.0 GB, 1.8 GiB) copied, 101.568 s, 19.5 MB/s
+```
+
 ## Optional: Wipe it
 
 You may want to use

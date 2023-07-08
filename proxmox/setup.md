@@ -39,8 +39,8 @@ deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 
 ## Install useful tools
 
-```console
-# apt install ifupdown2 ethtool silversearcher-ag emacs-nox htop lm-sensors \
+```sh
+apt install ifupdown2 ethtool silversearcher-ag emacs-nox htop lm-sensors \
   hddtemp nvme-cli linux-cpupower cpufrequtils sysstat
 ```
 
