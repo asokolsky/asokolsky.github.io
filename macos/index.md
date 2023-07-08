@@ -1,5 +1,11 @@
 # MacOS Customization
 
+For software development you will need
+[Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html):
+
+```
+xcode-select --install
+```
 
 Differentiate touch pad and mouse scroll direction using
 [scroll reverser](https://pilotmoon.com/scrollreverser/).
@@ -9,15 +15,6 @@ Differentiate touch pad and mouse scroll direction using
 * [iTerm2](iTerm2.html) Terminal Emulator
 * [Java](java.html)
 * [Jenkins](jenkins.html)
-
-
-
-For software development you will need
-[Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html):
-
-```
-xcode-select --install
-```
 
 Also relevant:
 

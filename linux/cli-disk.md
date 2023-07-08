@@ -32,6 +32,7 @@ See [cli-disk-format.md](cli-disk-format.html).
 
 ## ZFS
 
+<<<<<<< HEAD
 See [zfs.md](../apps/zfs.html)
 
 ## Mounting Flash disk
@@ -75,3 +76,5 @@ drwxr-xr-x 2 root root 32768 Jun 12 18:42 'Wire in the Blood S01'
 ```
 # umount /media/flash
 ```
+
+Also see [zfs.md](/apps/zfs.html)
