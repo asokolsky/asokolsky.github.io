@@ -22,3 +22,18 @@ Also relevant:
 * [emacs colors](../apps/emacs.html)
 
 [hidden-macos-features-or-tips-and-tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
+
+## Finder
+
+### Ensure dot files are displayed
+
+Keyboard shortcut: `Shift` + `Command` + `.`
+
+cli:
+```
+defaults write com.apple.finder AppleShowAllFiles YES
+```
+
+### Show file extensions
+
+Finder/Settings/Advanced - Show all filename extensions - CHECK

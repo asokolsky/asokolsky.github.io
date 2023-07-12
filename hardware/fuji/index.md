@@ -23,6 +23,7 @@ OS|ProxMox VE
 <p align="center" width="100%">
     <img width="45%" src="front-cover.jpg">
     <img width="45%" src="front.jpg">
+    <img width="100%" src="internals-top.png">
     <img width="100%" src="internals.jpg">
     <img width="100%" src="overview.jpg">
 </p>

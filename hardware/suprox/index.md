@@ -780,6 +780,6 @@ and LXC containers:
 
 ## Containers - Portainer
 
-Besides portainer which runs as a cntainer:
+Besides, portainer, which runs as a container:
 
 * mjpg-streamer

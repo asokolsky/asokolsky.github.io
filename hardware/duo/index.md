@@ -91,7 +91,7 @@ From the above you can see that:
 * `eno1`, a.k.a `enp0s31f6`, is an `I219-V` NIC
 * `enp3s0` is an `I211` NIC
 
-Display drivers used:
+Ethernet drivers used:
 
 ```
 root@duo:~# ethtool -i enp0s31f6
