@@ -18,17 +18,27 @@
 ## Guest Tasks
 
 * [disk resize](guest-disk-resize.html)
-* [mqtt install](mqtt.html)
 * [performance optimization](guest-performance.html)
 
-## By Guest Type
+## Guests
 
-* [centos7](centos7.html)
-* [Home Assistant](home-assistant)
-* [octoprint in an LXC Container](octoprint.html)
-* [pfSense in a VM](pfSense.html)
-* [TrueNAS Core in a VM](truenas.html)
-* [Unifi Controller in an LXC container](unifi.html)
+In a VM:
+
+* [centos7](guest-centos7.html)
+* [Home Assistant](guest-home-assistant.html)
+* [kubuntu desktop in a VM](guest-kubuntu.html)
+* [pfSense in a VM](guest-pfSense.html)
+* [TrueNAS Core in a VM](guest-truenas.html)
+
+In an LXC container:
+
+* [mqtt](lxc-mqtt.html)
+* [octoprint](lxc-octoprint.html)
+* [Unifi Controller](lxc-unifi.html)
+* [vault](lxc-vault.html)
+
+mjpg-streamer in a [docker](mjpg-streamer-docker.html) or
+[LXC](mjpg-streamer-lxc.html).
 
 ## More
 
