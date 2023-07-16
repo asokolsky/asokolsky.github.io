@@ -97,94 +97,9 @@ ssh -i ~/.ssh/id_rsa ubuntu@192.168.10.96
 qm stop 999 && qm destroy 999
 ```
 
-## Install Terraform on Proxmox Server
+## Terraform Install
 
-From [tutorial](https://learn.hashicorp.com/tutorials/terraform/install-cli):
-
-
-```sh
-apt -y install lsb-release software-properties-common
-```
-
-Add the HashiCorp GPG key:
-
-```sh
-curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
-```
-
-Add the repository:
-```sh
-apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-```
-
-Install Terraform:
-```sh
-apt update && apt install -y terraform
-```
-
-## Use API-keys for Authentication
-
-I created a datacenter user asokolsky with Linux PAM authentication.
-
-Create a new API token new_token_id for asokolsky@pam, priviledge unchecked.
-Secret: ebf02232-ec86-480c-acdf-4e83fed2c2e6
-
-In the datacenter permission add:
-
-* user permission - add a role to the newly created user asokolsky:
-Path=/, User=asokolsky@pam, Role=PVEVMAdmin, Propagate=true
-
-* user permission - Path=/storage/local-lvm, User=asokolsky@pam, Role=Administrator,
-Propagate=true
-
-## Terraform Basic Info and Provider Installation
-
-```console
-oot@duo:~/terraform# pwd
-/root/terraform
-root@duo:~/terraform# ls -la
-total 12
-drwxr-xr-x 2 root root 4096 Oct 22 15:10 .
-drwx------ 9 root root 4096 Oct 22 14:56 ..
--rw-r--r-- 1 root root  120 Oct 22 14:57 main.tf
--rw-r--r-- 1 root root    0 Oct 22 14:56 vars.tf
-root@duo:~/terraform# cat main.tf
-terraform {
-  required_providers {
-    proxmox = {
-      source = "telmate/proxmox"
-      version = "2.7.4"
-    }
-  }
-}
-root@duo:~/terraform# terraform init
-
-Initializing the backend...
-
-Initializing provider plugins...
-- Finding telmate/proxmox versions matching "2.7.4"...
-- Installing telmate/proxmox v2.7.4...
-- Installed telmate/proxmox v2.7.4 (self-signed, key ID A9EBBE091B35AFCE)
-
-Partner and community providers are signed by their developers.
-If you'd like to know more about provider signing, you can read about it here:
-https://www.terraform.io/docs/cli/plugins/signing.html
-
-Terraform has created a lock file .terraform.lock.hcl to record the provider
-selections it made above. Include this file in your version control repository
-so that Terraform can guarantee to make the same selections by default when
-you run "terraform init" in the future.
-
-Terraform has been successfully initialized!
-
-You may now begin working with Terraform. Try running "terraform plan" to see
-any changes that are required for your infrastructure. All Terraform commands
-should now work.
-
-If you ever set or change modules or backend configuration for Terraform,
-rerun this command to reinitialize your working directory. If you forget, other
-commands will detect it and remind you to do so if necessary.
-```
+[moved here](terraform/install.html)
 
 ## Terraform Plan
 

@@ -1,4 +1,4 @@
-# Createing a Ubuntu 22.04 Template
+# Creating a Ubuntu 22.04 VM Template
 
 Image source:
 https://cloud-images.ubuntu.com/minimal/releases/jammy/release/

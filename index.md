@@ -25,7 +25,7 @@ comments: false
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
 * Cheat sheets: [docker](apps/docker.html), [tmux](apps/tmux.html),
 [emacs](apps/emacs.html), [vi](apps/vi.html)
-* [Visual Studio Code](apps/vscode.html)
+* [Visual Studio Code](apps/vscode/)
 * [ZFS setup and commands](apps/zfs.html)
 * [more...](apps/)
 
