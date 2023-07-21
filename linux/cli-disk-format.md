@@ -2,7 +2,7 @@
 
 ## Source
 
-[https://linuxhint.com/format-usb-drive-linux/](https://linuxhint.com/format-usb-drive-linux/)
+[linuxhint.com/format-usb-drive-linux](https://linuxhint.com/format-usb-drive-linux/)
 
 ## Identify it
 
