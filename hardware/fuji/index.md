@@ -1,6 +1,8 @@
 # fuji
 
-Fujitsu PRIMERGY TX1320 M3 PYT1323T3S
+Fujitsu PRIMERGY TX1320 M3 PYT1323T3S used as a virtualization server.
+
+## Hardware
 
 Item|Description
 ----|----------

@@ -1,6 +1,9 @@
 # duo
 
+Virtualization server with GPU and SATA HDs passed through.
 Runs an HTPC VM with GPU passed through.
+
+## Hardware
 
 Item|Description
 ----|----------

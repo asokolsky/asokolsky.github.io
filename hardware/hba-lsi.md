@@ -14,22 +14,28 @@ https://forums.servethehome.com/index.php?threads/lsi-raid-controller-and-hba-co
 
 [Upgrading LSI HBA 9300-8i via UEFI (Phase 06)](https://www.bussink.ch/?p=1489)
 
-Given that I do not plan to boot from the attached device, my plan is to wipe
-the ROM clean and install the latest firmware.
+## Plan
 
-## Prepare the USB stick
+Given that I will boot from the NVME device (NOT the device attached to the HBA),
+I will:
 
-It must be formatted as FAT16 or FAT32.
+* wipe the ROM/BIOS clean and
+* install the latest firmware.
+
+## Prepare the UEFI USB stick
+
+It must be [formatted](/linux/cli-disk-format.md) as FAT16 or FAT32.
 
 [flashing-firmware-and-bios-on-lsi-sas-hbas](https://www.broadcom.com/support/knowledgebase/1211161501344/flashing-firmware-and-bios-on-lsi-sas-hbas)
 contains the firmware updater `sas3flash.efi`.
-
-The `SAS3_UEFI_BSD_P6` contains the BIOS for the updater `X64SAS3.ROM`.
 
 The `9300_8i_Package_P6_IR_IT_firmware_BIOS_for_MSDOS_Windows` contains the
 `SAS9300_8i_IT.bin` firmware and the `MPTSAS3.ROM` bios.
 
 Firmware version: 16.00.12.00
+
+I also had to search for a `Shell.efi` and copied it on the stick - in the root
+and `/efi/boot`.
 
 ## Boot into UEFI shell
 
@@ -39,17 +45,19 @@ Press F12?
 
 ## Firmware upgrade
 
-`fs1:`
+In the motherboard BIOS I chose to disable the CSM -
+[compatibility support mode](http://www.rodsbooks.com/efi-bootloaders/csm-good-bad-ugly.html)
+- this reduces the number of boot options available to UEFI only.
 
-`dir`
+I had to look for an option to `invoke the UEFI shell` and worked only when I
+plugged USB stick into a front USB socket.
 
-`sas3flash.efi -list`
+Commands I used:
 
-Perform preliminary flash of the firmware:
-`sas3flash.efi -noreset -f SAS9300_8i_IT.bin`
-
-Once you receive a confirmation that the flash was successful, reboot.
-
-Wipe the card: `sas3flash.efi -o -e 6`
-
-Flash the firmware: `sas3flash.efi -f SAS9300_8i_IT.bin`
+```
+map
+fs0:
+sas3flash.efi -list
+sas3flash.efi -o -e 6
+sas3flash.efi -f SAS9300_8i_IT.bin
+```

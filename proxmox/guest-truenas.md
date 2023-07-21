@@ -1,6 +1,6 @@
 # TrueNAS in a VM on ProxMox
 
-# Create a VM
+## Create a VM
 
 ```
 RAM: 8GB
@@ -15,8 +15,7 @@ Network: bridge
 
 Note VM id: 101.
 
-
-# Passthrough
+## Passthrough
 
 1. Ideally you would pass through the entire host bus adapter.
 
@@ -26,7 +25,7 @@ disk](https://pve.proxmox.com/wiki/Passthrough_Physical_Disk_to_Virtual_Machine_
 
 The rest of the doc deals with the second approach.
 
-## Identify Devices
+## Identify Disks
 
 ```
 root@flattop:~# ls -la /dev/disk/by-id
@@ -38,7 +37,7 @@ lrwxrwxrwx 1 root root   9 Oct 14 14:25 ata-MKNSSDSR120GB_MB2002101005FEB0D -> .
 ...
 ```
 
-## Add Devices to VM
+## Add Disks to VM
 
 ```
 # qm set 101 -scsi2 /dev/disk/by-id/ata-KINGSTON_SV300S37A120G_50026B773A0059B3
@@ -61,5 +60,6 @@ As usual.
 ### Install qemu-guest-agent
 
 [This worked](https://www.truenas.com/community/resources/qemu-guest-agent.167/)!
+The latest versions of TrueNAS Scale do have it bundled.
 
 Continue with [TrueNAS Customization](/truenas-scale/).
