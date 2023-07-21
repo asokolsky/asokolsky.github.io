@@ -41,7 +41,7 @@ deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 
 ```sh
 apt install ifupdown2 ethtool silversearcher-ag emacs-nox htop lm-sensors \
-  hddtemp nvme-cli linux-cpupower cpufrequtils sysstat
+  nvme-cli linux-cpupower cpufrequtils sysstat
 ```
 
 ### Set the CPU governor
