@@ -7,13 +7,13 @@ relay](https://www.howtoforge.com/tutorial/configure-postfix-to-use-gmail-as-a-m
 
 ## Extra Step
 
-```console
-% apt install libsasl2-modules
+```sh
+apt install libsasl2-modules
 ```
 
 ## Config
 
-Disable IPv6 in /etc/postfix/main.cf:
+Disable IPv6 in `/etc/postfix/main.cf`:
 
 ```
 # See /usr/share/postfix/main.cf.dist for a commented, more complete version
@@ -57,30 +57,30 @@ Create /etc/postfix/sasl_passwd
 
 Then create /etc/postfix/sasl_passwd.db
 
-```
-% chmod 600 /etc/postfix/sasl_passwd
-% postmap /etc/postfix/sasl_passwd
+```sh
+chmod 600 /etc/postfix/sasl_passwd
+postmap /etc/postfix/sasl_passwd
 ```
 
 Create `/etc/alias.db`
-```console
-$ postalias /etc/aliases
+```sh
+postalias /etc/aliases
 ```
 
 ## Restart Postfix
 
-```console
-% systemctl restart postfix.service
+```sh
+systemctl restart postfix.service
 ```
 
 ## Test
 
-```console
-# ls -la >/tmp/crap
-# mail -s "test" asokolsky@yahoo.com < /tmp/crap
+```sh
+ls -la >/tmp/crap
+mail -s "test" asokolsky@yahoo.com < /tmp/crap
 ```
 
 Then check output of:
-```console
-# journalctl
+```sh
+journalctl --no-pager --since=today
 ```
