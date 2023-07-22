@@ -31,7 +31,8 @@ In GUI: Server-name\Network\vmbr0, check VLAN aware
 
 ## NIC Aggregation
 
-Add in the `/etc/network/interfaces`:
+Add in the `/etc/network/interfaces`
+([man page](https://manpages.ubuntu.com/manpages/jammy/man5/interfaces-bridge.5.html)):
 ```
 iface bond0 inet manual
   bond-slaves eno1 eno1
@@ -54,9 +55,9 @@ Follow up on this with the switch configuration.
 
 ## Making Bridge a DHCP Client
 
-Just edit `/etc/network/interfaces`:
+Edit `/etc/network/interfaces`:
 
-```sh
+```
 auto lo
 iface lo inet loopback
 
@@ -79,8 +80,6 @@ iface vmbr1 inet dhcp
         bridge-ports enp2s0f0
         bridge-stp off
         bridge-fd 0
-        post-up /usr/sbin/dhclient vmbr1
-#WAN
 
 auto vmbr2
 iface vmbr2 inet static
@@ -88,15 +87,14 @@ iface vmbr2 inet static
         bridge-ports enp2s0f1
         bridge-stp off
         bridge-fd 0
-#LAN
 ```
 
-Then
-
-```console
-root@pve:/etc/network# ifdown vmbr1
-root@pve:/etc/network# ifup vmbr1
+Then:
+```sh
+ifreload -a
 ```
+
+and do not forget to update `/etc/hosts`
 
 ## Use ethtool
 

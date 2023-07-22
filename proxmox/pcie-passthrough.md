@@ -16,11 +16,14 @@ More Info:
 
 Edit `/etc/default/grub`:
 
-```console
-GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt"
+```sh
+GRUB_CMDLINE_LINUX_DEFAULT="quiet"
+GRUB_CMDLINE_LINUX="quiet intel_iommu=on iommu=pt"
+
 ```
 
-You may also add `intel_pstate=disable` - see [power management](power.html).
+"PT mode improves the performance of other PCIe devices in the system when
+passthrough is being used."
 
 Then:
 
@@ -69,6 +72,11 @@ irqbypass              16384  2 vfio_pci,kvm
 vfio_iommu_type1       32768  0
 vfio                   32768  2 vfio_iommu_type1,vfio_pci
 ```
+
+```sh
+dmesg | grep -e DMAR -e IOMMU
+```
+
 ## IOMMU Interrupt Remapping
 
 Verify remapping is enabled:

@@ -18,5 +18,6 @@
 Home Lab
 
 * [NAS](nas/)
-* [Virtualization server](fuji/)
-* [Virtualization playground](duo/)
+* [Virtualization server fuji](fuji/)
+* [Virtualization playground duo](duo/)
+* [Virtualization server exi](exi/)

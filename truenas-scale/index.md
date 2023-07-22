@@ -26,6 +26,12 @@ sudo chmod a+x /usr/bin/apt*
 sudo chmod a+x /usr/bin/dpkg
 ```
 
+Before you install new packages, do:
+
+```sh
+sudo apt update
+```
+
 Then install packages as usual:
 ```sh
 sudo apt install emacs-nox
