@@ -1,6 +1,6 @@
 # exi
 
-Virtualization server with GPU and HBA passed through.
+Virtualization server with GPU and [HBA](../hba-lsi.md) passed through.
 
 ## Hardware
 
@@ -59,3 +59,7 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 001 Device 003: ID 26ce:01a2 ASRock LED Controller
 Bus 001 Device 002: ID 174c:2074 ASMedia Technology Inc. ASM1074 High-Speed hub
 ```
+
+## Power Consumption
+
+While serving a single video stream over SMB and with CPU consumption <4%: 88W
