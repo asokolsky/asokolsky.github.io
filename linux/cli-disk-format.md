@@ -2,7 +2,7 @@
 
 ## Source
 
-[https://linuxhint.com/format-usb-drive-linux/](https://linuxhint.com/format-usb-drive-linux/)
+[linuxhint.com/format-usb-drive-linux](https://linuxhint.com/format-usb-drive-linux/)
 
 ## Identify it
 
@@ -22,6 +22,25 @@ nvme0n1     259:0    0 465.8G  0 disk
 ```
 
 Flash is identified as `sda`.
+
+Alternatively:
+
+```
+alex@latitude7490:~/ > df -T
+Filesystem     Type  1K-blocks      Used Available Use% Mounted on
+tmpfs          tmpfs   3271684      2028   3269656   1% /run
+/dev/nvme0n1p2 ext4  479079112 358214352  96455368  79% /
+tmpfs          tmpfs  16358408      6724  16351684   1% /dev/shm
+tmpfs          tmpfs      5120         4      5116   1% /run/lock
+tmpfs          tmpfs  16358408      3136  16355272   1% /tmp
+/dev/nvme0n1p1 vfat     523248     39536    483712   8% /boot/efi
+tmpfs          tmpfs   3271680       120   3271560   1% /run/user/1000
+/dev/sda1      vfat    3985764      3972   3981792   1% /media/alex/LABEL
+```
+
+Observe:
+* device `/dev/nvme0n1p2` has `ext4` file system and has 79% of its space used
+* `/dev/sda1` has `vfat`  file system and has 1% of its space used.
 
 ## Burn ISO
 
@@ -65,8 +84,22 @@ You may need to unmount flash:
 sudo umount /dev/sda1
 ```
 
-Then partition it using
+Then use
 [GNU parted](https://www.gnu.org/software/parted/manual/parted.html):
+
+```
+alex@latitude7490:~/ > sudo parted /dev/sda print
+Model: CBM USB 2.0 (scsi)
+Disk /dev/sda: 4090MB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  4090MB  4089MB  primary  fat32        lba
+
+```
+
 
 ```sh
 sudo parted /dev/sda --script -- mklabel msdos

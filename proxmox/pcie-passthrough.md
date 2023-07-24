@@ -1,10 +1,10 @@
 # Proxmox PCIe Pass Through
 
-Passing through PCIe adapter is beneficial for a VM relying on specific
+Passing through PCIe adapter is beneficial for a VM relying on the specific
 hardware, e.g. NIC, storage controller or GPU.
 
 From [pci_passthrough](https://pve.proxmox.com/wiki/Pci_passthrough):
-"VMs with passthroughed devices cannot be migrated."
+"VMs with passed-through devices cannot be migrated."
 
 More Info:
 
@@ -14,7 +14,7 @@ More Info:
 
 ## Grub Kernel Boot Command Line
 
-Edit /etc/default/grub:
+Edit `/etc/default/grub`:
 
 ```sh
 GRUB_CMDLINE_LINUX_DEFAULT="quiet"
@@ -50,7 +50,7 @@ root@fuji:~# dmesg | grep -e DMAR -e IOMMU
 
 ## VFIO Modules
 
-Edit /etc/modules:
+Edit `/etc/modules`:
 ```sh
 # /etc/modules: kernel modules to load at boot time.
 #
@@ -208,12 +208,13 @@ Edit VM Hardware - set:
 Then add PCIe GPU - no need to add a separate PCIe device for audio, just choose all functions:
 
 * select GT710,
-* check allfunctions (this will also result in the HDMI audio being passed through)
+* check all-functions (this will also result in the HDMI audio being passed
+through)
 * check primary VGA, PCIe;
 
 Once GPU passthrough is configures, proxmox console (novnc) stops functioning.
-You need to passthrough keyboard/mouse to the guest:
-https://pve.proxmox.com/wiki/USB_physical_port_mapping
+You need to
+[pass-through keyboard/mouse to the guest](https://pve.proxmox.com/wiki/USB_physical_port_mapping):
 
 ```console
 root@duo:~# qm show 400 --pretty
