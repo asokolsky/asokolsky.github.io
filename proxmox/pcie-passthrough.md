@@ -10,7 +10,6 @@ More Info:
 
 * [pass-through-pcie-with-proxmox](https://www.servethehome.com/how-to-pass-through-pcie-nics-with-proxmox-ve-on-intel-and-amd/)
 * [guide_to_gpu_passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
-* https://www.youtube.com/watch?reload=9&v=fgx3NMk6F54
 
 ## Grub Kernel Boot Command Line
 
