@@ -2,28 +2,26 @@
 
 ## df
 
-```sh
-> df -h
-df: /run/user/1000/doc: Operation not permitted
-Filesystem      Size  Used Avail Use% Mounted on
-udev            3.8G     0  3.8G   0% /dev
-tmpfs           781M  1.9M  779M   1% /run
-/dev/nvme0n1p2  457G   56G  379G  13% /
-tmpfs           3.9G  123M  3.7G   4% /dev/shm
-tmpfs           5.0M  4.0K  5.0M   1% /run/lock
-tmpfs           3.9G     0  3.9G   0% /sys/fs/cgroup
-/dev/nvme0n1p1  511M   15M  497M   3% /boot/efi
-tmpfs           781M   52K  781M   1% /run/user/1000
+Show free disk space including file system type:
+```
+> df -TH
+Filesystem     Type   Size  Used Avail Use% Mounted on
+tmpfs          tmpfs  3.4G  2.1M  3.4G   1% /run
+/dev/nvme0n1p2 ext4   491G  298G  168G  64% /
+tmpfs          tmpfs   17G   13M   17G   1% /dev/shm
+tmpfs          tmpfs  5.3M  4.1k  5.3M   1% /run/lock
+tmpfs          tmpfs   17G  3.2M   17G   1% /tmp
+/dev/nvme0n1p1 vfat   536M   41M  496M   8% /boot/efi
+tmpfs          tmpfs  3.4G  148k  3.4G   1% /run/user/1000
 ```
 
 ## du
 
 [du](https://www.linux.org/docs/man1/du.html) estimates file space usage.
 
-Show how much space is used by directories in this folder:
-
+Show directory disk usage and use it to sort the files in this dir:
 ```sh
-du -sh -- *
+sudo du -s -- *|sort -s -r -n -k 1,1
 ```
 
 ## Format disk
@@ -32,7 +30,6 @@ See [cli-disk-format.md](cli-disk-format.html).
 
 ## ZFS
 
-<<<<<<< HEAD
 See [zfs.md](../apps/zfs.html)
 
 ## Mounting Flash disk
@@ -55,8 +52,8 @@ root@suprox:/media# mkdir flash
 
 3. Mount it
 
-```
-root@suprox:/media# mount /dev/sdc2 /media/flash/
+```sh
+mount /dev/sdc2 /media/flash/
 ```
 
 4. Use it
@@ -73,8 +70,8 @@ drwxr-xr-x 2 root root 32768 Jun 12 18:42 'Wire in the Blood S01'
 
 5. Unmount it
 
-```
-# umount /media/flash
+```sh
+umount /media/flash
 ```
 
 Also see [zfs.md](/apps/zfs.html)

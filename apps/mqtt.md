@@ -2,7 +2,7 @@
 
 [MQTT Protocol Man Page](https://man.archlinux.org/man/mqtt.7.en).
 
-Have MQTT [installed as a Proxmox Guest](../proxmox/mqtt.html).
+Have MQTT [installed as a Proxmox Guest](/proxmox/lxc-mqtt.html).
 
 ## Clients
 
