@@ -19,7 +19,6 @@ Edit `/etc/default/grub`:
 ```sh
 GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 GRUB_CMDLINE_LINUX="quiet intel_iommu=on iommu=pt"
-
 ```
 
 "PT mode improves the performance of other PCIe devices in the system when
