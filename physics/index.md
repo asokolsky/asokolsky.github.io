@@ -35,3 +35,8 @@
 [Курс теоретической физики Ландау и Лифшица](https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D1%80%D1%81_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D1%84%D0%B8%D0%B7%D0%B8%D0%BA%D0%B8_%D0%9B%D0%B0%D0%BD%D0%B4%D0%B0%D1%83_%D0%B8_%D0%9B%D0%B8%D1%84%D1%88%D0%B8%D1%86%D0%B0)
 
 [read it](http://alexandr4784.narod.ru/lktf.html)
+
+## Misc
+
+[А.Мигдал](https://math.ru/history/people/Migdal).
+[Квантовая физика для больших и маленьких](https://math.ru/lib/book/djvu/bib-kvant-15/Kv75-89_Kvantovaya_Fizika_Dlya_Bolshih_I_Malenkih_A.B.Migdal.djvu?fbclid=IwAR0es1UlCv8NYD0R84ANtUulKKk5BDFHlcFf6o-E9DWYrD4MSIYfyeCUwiI_aem_AZi_mBi9BLqzyK0uevbeIRjyuQyqBerl_MjYV6cVOSiDSexNKsfpdDIYt6z5uznM3p8&mibextid=Zxz2cZ)

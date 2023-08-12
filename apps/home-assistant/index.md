@@ -1,6 +1,6 @@
 # Home Assistant - Configuration and Use
 
-[Install in a VM](/proxmox/home-assistant.md).
+[Install in a VM](/proxmox/guest-home-assistant.md).
 
 ## Configuration Editing
 

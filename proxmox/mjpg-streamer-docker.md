@@ -2,7 +2,7 @@
 
 Streaming video from a USB webcam connected to a Proxmox node via
 [mjpg-streamer](https://github.com/jacksonliam/mjpg-streamer) in a
-[portainer](docker-portainer.html).
+[portainer](portainer.html).
 
 ## Verify Camera Functionality
 

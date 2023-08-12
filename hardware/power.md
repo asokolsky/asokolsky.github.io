@@ -8,7 +8,7 @@ Measurements are done using [Shelly Plugs](shelly-plug.html).
 Item|Power Consumption (W)
 ----|---------------------
 **Laundry Room Rack**|
-UPS + Ubiquity US-8-150W + UAP-AC-Lite|25
+UPS + Ubiquiti US-8-150W + UAP-AC-Lite|25
 NAS|55
 Laser Printer|
 **Living Room Office Workspace**|
@@ -23,5 +23,5 @@ LG 32" Monitor|
 Sound Bar|
 Latitude + tb hub|
 **Living Room Rack**|
-UPS + Ubiquity USW-Lite-16-PoE + U6-Lite + Fuji|
+UPS + Ubiquiti USW-Lite-16-PoE + U6-Lite + Fuji|
 Duo|

@@ -1,4 +1,4 @@
-# Ubiquity Equipment
+# Ubiquiti Equipment
 
 ## EdgeRouter X
 
@@ -21,5 +21,5 @@ In order for DNS to resolve LAN computers registered via DHCP:
 * enable DNS masquerading in DHCP server settings
 * use localdomain for domain in DHCP and in System tab
 
-There is NO integration with Ubiquity UniFi Controller.
-For the latter see [proxmox/unifi](proxmox/unifi.html)
+There is NO integration with Ubiquiti UniFi Controller.
+For the latter see [proxmox/unifi](/proxmox/lxc-unifi.html)

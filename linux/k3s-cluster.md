@@ -39,7 +39,7 @@ I guess this is may be cause by a second NIC which is not connected.
 Edit `/etc/netplan/00-installer-config.yaml`:
 
 ```yaml
-# This is the network config written by 'subiquity'
+# This is the network config written by 'subiquiti'
 network:
   ethernets:
     eno1:

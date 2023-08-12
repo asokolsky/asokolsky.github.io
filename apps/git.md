@@ -2,12 +2,21 @@
 
 ## Global Config
 
-Followed [Customizing Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
+Followed
+[Customizing Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
 
 ```
 git config --global user.name "Alex Sokolsky"
 git config --global user.email "asokolsky@gmail.com"
 git config --global core.pager ''
+git config --global core.excludesfile ~/.gitignore_global
+```
+
+where `~/.gitignore_global`:
+```
+*~
+.*.swp
+.DS_Store
 ```
 
 ## Handling an Upstream Repo
