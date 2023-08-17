@@ -23,6 +23,7 @@ Linux|`~/.config/Code/User/`
     "editor.fontFamily": "'Source Code Pro',Consolas,monospace",
     "editor.fontLigatures": true,
     "editor.rulers": [80],
+    "editor.wordWrap": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,

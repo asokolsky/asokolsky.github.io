@@ -29,6 +29,12 @@ graph LR
     B -- Input Command --> D(Input Mode)
     D --Esc--> B
 ```
+## Open
+
+Key|Action
+---|------
+:e _file_|Open _file_ for editing
+:e! _file_|Discard changes, open _file_ for editing
 
 ## Save, Exit
 
@@ -45,14 +51,6 @@ Key|Action
 :w _file_|Save as _file_
 :wq|Save the file, exit vi
 
-
-## Open
-
-Key|Action
----|------
-:e _file_|Open _file_ for editing
-:e! _file_|Discard changes, open _file_ for editing
-
 ## Navigation
 
 While in Command Mode...
@@ -64,13 +62,16 @@ M|Middle line
 L|Lower left corner
 h|Back a character
 l|Forward a character
-j|Down a line
-k|Up a line
+&nbsp;|Word navigation
+w|One word forward
+b|One word back
+&nbsp;|Line navigation
 ^|Beginning of line
 $|End of line
-w|One word forward
-b|Back one word
+j|Down a line
+k|Up a line
 G|go to the last line
+1 G|go to the first line
  _n_ G|go to line _n_
 : _n_|go to line _n_
 Ctrl+G|display line
@@ -85,6 +86,23 @@ z-|Cursor at bottom
 
 ## Search & Replace
 
+Searches are case sensitive by default.
+
+Search case sensitivity|Command
+-----------------------|--------
+Ignore case|:set ic
+Respect case|:set noic
+
+Special characters in search pattern:
+
+Character|Matching
+---------|--------
+^|Beginning of line
+$|End of line
+\\<|Beginning of word
+\\>|End of word
+.|Wildcard characters
+
 Key|Action
 ---|------
 fc|Find c
@@ -96,10 +114,11 @@ fc|Find c
 n|Next occurrence in the direction of search
 N|Prev occurrence in the direction of search
 :g/_from_/s//_to_/g|Global replace
+:g/_from_/s//_to_/g|Global replace, consult
 
 ## Deletion Commands
 
-While in command mMode...
+While in command mode...
 
 Key|Action
 ---|------

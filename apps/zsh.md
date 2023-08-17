@@ -86,3 +86,29 @@ set -o xtrace
 ```
 
 [my example use](https://gist.github.com/asokolsky4clari/9acbd78dea87f100f04623dbace33c66)
+
+## Shell Variables
+
+From
+[Shell-Variables](https://www.gnu.org/software/bash/manual/bash.html#Bourne-Shell-Variables):
+
+
+Variable|Description
+--------|----------
+PPID|The process ID of the shell’s parent process.
+PWD|The current working directory as set by the cd builtin.
+RANDOM| Each time this parameter is referenced, it expands to a random integer between 0 and 32767.
+
+From [Special-Parameters](https://www.gnu.org/software/bash/manual/bash.html#Special-Parameters):
+
+
+Parameter|Description
+---------|----------
+`$*`|Positional parameters, starting from one.
+`$@`|Positional parameters, starting from one.
+`$#`|Number of positional parameters in decimal.
+`$?`|Exit status of the most recently executed foreground pipeline.
+`$$`|Process ID of the shell. In a subshell, it expands to the process ID of the invoking shell, not the subshell.
+`$!`|Process ID of the job most recently placed into the background.
+`$0`|Name of the shell or shell script.
+`$1`..`$9`|The first 9 additional parameters the script was called with.
