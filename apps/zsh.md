@@ -1,8 +1,15 @@
 # zsh
 
-Must read [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+TLDR:
 
-Config
+* install [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+* in `.zshrc` set `ZSH_THEME="agnoster"` - see
+[agnoster-zsh-theme](https://github.com/agnoster/agnoster-zsh-theme)
+* install [powerline-fonts](https://github.com/powerline/fonts) with
+`sudo apt-get install fonts-powerline`
+* reboot
+
+The rest is history.
 
 ## zsh startup
 

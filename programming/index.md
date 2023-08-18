@@ -4,6 +4,7 @@
 * [Visual Studio Code](/apps/vscode/)
 * [Color your console output](color-console.html)
 * [ruby](/apps/ruby.html)
+* generic [best practices](best-practices.md)
 
 Python topics:
 
