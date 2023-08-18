@@ -1,6 +1,7 @@
 from enum import Enum
 from typing import List
 
+
 #
 # Console output embellished with the following color chars
 #
