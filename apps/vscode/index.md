@@ -109,6 +109,17 @@ On MacOS:
 [Linux](keys-windows.md)
 [MacOS](keys-mac.md)
 
+## Command Palette
+
+Char|Accelerator|Description
+----|-----------|-----------
+&nbsp;|`Ctrl+P`|Navigate to a file or symbol by name
+`>`|`Ctrl+Shift+P`|Show and run commands
+`@`|`Ctrl+Shift+O`|Navigate to a specific symbol in a file
+`:`|`Ctrl+G`|Goto a line in a file
+`?`|n/a|Get help
+
+
 ## Using
 
 [VSCode Variables Reference](https://code.visualstudio.com/docs/editor/variables-reference)
