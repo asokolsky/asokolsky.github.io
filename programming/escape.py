@@ -14,7 +14,7 @@ class Escapes(str, Enum):
     bright = "\x1b[1m"
 
     @classmethod
-    def unescape(cls, inp:str) -> str:
+    def unescape(cls, inp: str) -> str:
         '''
         Remove escape chars from string
         '''

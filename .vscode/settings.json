@@ -6,6 +6,7 @@
         "Outdent",
         "Realtek",
         "setw",
+        "strvalue",
         "Xeon"
     ],
     "files.associations": {

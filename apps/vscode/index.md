@@ -1,4 +1,8 @@
-# Customize Visual Studio Code
+# Setting Up Visual Studio Code
+
+## Quick Tips
+
+[25 VS Code Productivity Tips and Speed Hacks](https://www.youtube.com/watch?v=ifTF3ags0XI)
 
 ## Font
 
@@ -19,48 +23,11 @@ Linux|`~/.config/Code/User/`
 ### settings.json
 
 ```json
-{
-    "editor.fontFamily": "'Source Code Pro',Consolas,monospace",
-    "editor.fontLigatures": true,
-    "editor.rulers": [80],
-    "editor.wordWrap": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "security.workspace.trust.untrustedFiles": "newWindow",
-    "terminal.integrated.scrollback": 10000,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-}
+{% include_relative settings.json %}
 ```
-
 On Windows I also have:
 ```json
-    "terminal.integrated.profiles.windows": {
-        "PowerShell": {
-            "source": "PowerShell",
-            "icon": "terminal-powershell"
-        },
-        "Command Prompt": {
-            "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [],
-            "icon": "terminal-cmd"
-        },
-        "Ubuntu-22.04 (WSL)": {
-            "path": "C:\\WINDOWS\\System32\\wsl.exe",
-            "args": [
-                "-d",
-                "Ubuntu-22.04"
-            ]
-        }
-    },
-    "terminal.integrated.defaultProfile.windows": "Ubuntu-22.04 (WSL)",
+{% include_relative settings-windows.json %}
 ```
 
 ### keybindings.json
@@ -68,42 +35,15 @@ On Windows I also have:
 On Windows:
 
 ```json
-// Place your key bindings in this file to override the defaults
-[
-    {
-        "key": "ctrl+d",
-        "command": "-editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "deleteRight",
-        "when": "editorFocus"
-    }
-]
+{% include_relative keybindings-windows.json %}
 ```
 
 On MacOS:
 
 ```json
-[
-    { "key": "ctrl+z",       "command": "undo" },
-    { "key": "ctrl+a",       "command": "editor.action.selectAll" },
-    { "key": "ctrl+c",       "command": "execCopy" },
-    { "key": "ctrl+x",       "command": "execCut" },
-    { "key": "ctrl+v",       "command": "execPaste" },
-    { "key": "alt+ctrl+s",   "command": "saveAll" },
-    { "key": "ctrl+s",       "command": "workbench.action.files.save" },
-    { "key": "shift+ctrl+s", "command": "workbench.action.files.saveAs" },
-    { "key": "shift+ctrl+s", "command": "workbench.action.files.saveLocalFile",
-      "when": "remoteFileDialogVisible" },
-    { "key": "ctrl+f",
-      "command": "actions.find",
-      "when": "editorFocus || editorIsOpen"
-    },
-]
+{% include_relative keybindings-macos.json %}
 ```
-## Keyboard Bindings
+## Standard Keyboard Bindings
 
 [Linux](keys-linux.md)
 [Linux](keys-windows.md)
