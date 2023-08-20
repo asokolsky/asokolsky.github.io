@@ -20,7 +20,7 @@ certificate](https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/
 * [what happens in a tls
 handshake](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/).
 
-Python code to establish HTTS connection with a server,
+Python code to establish HTTPS connection with a server,
 which relies on a custom CA:
 
 ```python
