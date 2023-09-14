@@ -169,9 +169,7 @@ root@suprox:~# docker network inspect bridge
     }
 ]
 ```
-## Example Use
-
-### List images
+## List images
 
 ```sh
 docker image ls
@@ -180,7 +178,7 @@ docker image ls
 More on
 [docker image](https://docs.docker.com/engine/reference/commandline/image/).
 
-### List containers
+## List containers
 
 [docker container](https://docs.docker.com/engine/reference/commandline/container/).
 List running:
@@ -208,7 +206,7 @@ docker container ls -q
 b06cfe3053e5
 4cf774b9e4a4
 ```
-### Kill all containers
+## Kill all containers
 
 Force delete all containers:
 
@@ -216,7 +214,7 @@ Force delete all containers:
 docker container rm -f $(docker container ls -aq)
 ```
 
-### Inspect the container
+## Inspect the container
 
 Inspecting container produces JSON:
 
@@ -235,7 +233,7 @@ sudo docker inspect _container_id_ | jq ".[].Config.User"
 "root:root"
 ```
 
-### Get a Shell in a Container
+## Get a Shell in a Container
 
 ```sh
 docker container exec -it _container_id_or_name_ /bin/bash
@@ -246,7 +244,7 @@ Options used:
 * `-i` - interactive
 * `-t` - allocate a pseudo TTY device
 
-### Container logs
+## Container logs
 
 Default location: `/var/lib/docker/containers/<container_id>/<container_id>-json.log`.
 [logging drivers](https://docs.docker.com/config/containers/logging/configure/)
@@ -295,3 +293,51 @@ If you need to provide input for `stdin`, use `-i` option:
 ```sh
 cat secrets.txt | docker run -i my_stuff
 ```
+
+Command|Description
+-------|-----------
+`docker run <image>`|Create and run a new container
+`docker run -p 8080:80 <image>`|Publish container port 80 to host port 8080
+`docker run -d <image>`|Run a container in the background
+`docker run -v <host>:<container> <image>`|Mount a host directory to a container
+`docker ps`|List currently running containers
+`docker ps --all`|List all containers (running or stopped)
+`docker logs <container_name>`|Fetch the logs of a container
+`docker logs -f <container_name>`|Fetch and follow the logs of a container
+`docker stop <container_name>`|Stop a running container
+`docker start <container_name>`|Start a stopped container
+`docker rm <container_name>`|Remove a container
+
+
+## Executing commands in a container
+Command|Description
+-------|-----------
+`docker exec <container_name> <command>`|Execute a command in a running container
+`docker exec -it <container_name> bash`|Open a shell in a running container
+
+## Image commands
+Command|Description
+-------|-----------
+`docker build -t <image> .`|Build a new image from the Dockerfile in the current directory and tag it
+`docker images`|List local images
+`docker rmi <image>`|Remove an image
+
+## Container registry commands
+
+Command|Description
+-------|-----------
+`docker login`|Login to Docker Hub
+`docker login <server>`|Login to another container registry
+`docker logout`|Logout of Docker Hub
+`docker logout <server>`|Logout of another container registry
+`docker push <image>`|Upload an image to a registry
+`docker pull <image>`|Download an image from a registry
+`docker search <image>`|Search Docker Hub for images
+
+## System commands
+
+Command|Description
+-------|-----------
+`docker system df`|Show Docker disk usage
+`docker system prune`|Remove unused data
+`docker system prune -a`|Remove all unused dat
