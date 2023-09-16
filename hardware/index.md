@@ -7,10 +7,11 @@
 * [Dell Optiplex 7060 Micro](optiplex7060micro.html)
 * [Lenovo Thinkpad P52](thinkpad.html)
 * [Logitech Presenter R800 Remote Control](remote.html)
-* [rpi4](rpi4.html)
-* [Thunderbolt](thunderbolt.html)
+* [Prusa MK3S with RPi Zero W](prusa-mk3s-rpi0w/)
+* [RPi4](rpi4.html)
 * [Realtek RTL8125 2.5 GB Ethernet](network-r8125.html) - don't use it!
 * [Remote Key Mapping](remote.html)
+* [Thunderbolt](thunderbolt.html)
 * [Ubiquiti EdgeRouter X](ubiquiti.html)
 
 [Home Office](../_posts/2021-01-01-home-office.html)

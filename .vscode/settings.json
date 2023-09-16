@@ -4,10 +4,14 @@
         "Mbits",
         "Mosquitto",
         "Octoprint",
+        "Optiplex",
         "Outdent",
+        "Prusa",
         "Realtek",
         "setw",
         "strvalue",
+        "Thinkpad",
+        "Ubiquiti",
         "Xeon"
     ],
     "files.associations": {
