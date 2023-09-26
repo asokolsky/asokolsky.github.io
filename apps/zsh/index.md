@@ -41,22 +41,9 @@ $LS_COLORS).
 shell is also interactive.  This file is often used to start X. Some systems
 start X on boot, so this file is not always very useful.
 
-### .zshenv
+### .zshenv, .zprofile, .zshrc
 
-```sh
-{% include_relative zshenv %}
-```
-### .zprofile
-
-```sh
-{% include_relative zprofile %}
-```
-
-### .zshrc
-
-```sh
-{% include_relative zshrc %}
-```
+See [dot-files](../dot-files/)
 
 ## zsh/bash tips
 
