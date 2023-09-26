@@ -44,18 +44,18 @@ start X on boot, so this file is not always very useful.
 ### .zshenv
 
 ```sh
-{% include_relative ../dot-files/zshenv %}
+{% include_relative zshenv %}
 ```
 ### .zprofile
 
 ```sh
-{% include_relative ../dot-files/zprofile %}
+{% include_relative zprofile %}
 ```
 
 ### .zshrc
 
 ```sh
-{% include_relative ../dot-files/zshrc %}
+{% include_relative zshrc %}
 ```
 
 ## zsh/bash tips
