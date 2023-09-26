@@ -64,5 +64,5 @@ Char|Accelerator|Description
 
 [VSCode Variables Reference](https://code.visualstudio.com/docs/editor/variables-reference)
 
-* [vscode for python](python.py)
-* [vscode for C/C++](c_c++.md)
+* [vscode for python](python.html)
+* [vscode for C/C++](c_c++.html)
