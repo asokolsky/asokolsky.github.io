@@ -44,18 +44,18 @@ start X on boot, so this file is not always very useful.
 ### .zshenv
 
 ```sh
-{% include_relative dot-files/zshenv %}
+{% include_relative ../dot-files/zshenv %}
 ```
 ### .zprofile
 
 ```sh
-{% include_relative dot-files/zprofile %}
+{% include_relative ../dot-files/zprofile %}
 ```
 
 ### .zshrc
 
 ```sh
-{% include_relative dot-files/zshrc %}
+{% include_relative ../dot-files/zshrc %}
 ```
 
 ## zsh/bash tips
@@ -78,18 +78,8 @@ diff -u expected.txt <(some command)
 
 ## bash script header
 
-```
-#!/usr/bin/env bash
-# Exit on error. Append "|| true" if you expect an error.
-set -o errexit
-# Exit on error inside any functions or subshells.
-set -o errtrace
-# Do not allow use of undefined vars. Use ${VAR:-} to use an undefined VAR
-set -o nounset
-# Catch the error in case mysqldump fails (but gzip succeeds) in `mysqldump |gzip`
-set -o pipefail
-# Turn on traces, useful while debugging but commented out by default
-set -o xtrace
+```sh
+{% include_relative header.sh %}
 ```
 
 [my example use](https://gist.github.com/asokolsky4clari/9acbd78dea87f100f04623dbace33c66)
@@ -119,3 +109,32 @@ Parameter|Description
 `$!`|Process ID of the job most recently placed into the background.
 `$0`|Name of the shell or shell script.
 `$1`..`$9`|The first 9 additional parameters the script was called with.
+
+## Parameter Expansion
+
+```sh
+echo "${var}"
+echo "Substitute the value of var."
+
+echo "${var:-word}"
+echo "If var is null or unset, word is substituted for var. The value of var does not change."
+
+echo "${var:=word}"
+echo "If var is null or unset, var is set to the value of word."
+
+echo "${var:?message}"
+echo "If var is null or unset, message is printed to standard error. This checks that variables are set correctly."
+
+echo "${var:+word}"
+echo "If var is set, word is substituted for var. The value of var does not change."
+```
+
+[More details](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html).
+
+May combine with
+[colon built-in](https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html#index-_003a)
+to assign a default value to a variable, e.g.:
+```sh
+# TMPDIR is defined on MacOS
+: "${TMPDIR:=/tmp}"
+```

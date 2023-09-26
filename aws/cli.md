@@ -8,12 +8,19 @@ Sources:
 
 ## Install
 
-[Instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html):
+Following [instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html):
 
 ```sh
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+```
+
+Enable [auto complete](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html) - I added these to my `.zshrc`:
+```sh
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
 ```
 
 ## Use

@@ -66,3 +66,10 @@ Then
 git remote add origin git@github.com:asokolsky/repo.git
 git push --set-upstream origin master
 ```
+
+## Importing a file from a different repo
+
+Instead of using git submodules, sometimes this may make more sense:
+```sh
+{% include_relative update-from-repo.sh %}
+```

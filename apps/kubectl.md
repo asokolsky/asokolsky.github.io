@@ -2,7 +2,9 @@
 
 From
 
+* https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 * https://cheat-sheets.nicwortel.nl/kubectl-cheat-sheet.pdf
+* https://dockerlabs.collabnix.com/kubernetes/cheatsheets/kubectl.html
 
 ## Installation
 
@@ -12,8 +14,16 @@ interact with the Kubernetes API:
 
 Set up autocompletion in bash:
 ```
-echo "source <(`kubectl completion bash)" >> ~/.bashrc
+echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
+Alternatively in zsh:
+```
+echo "source <(kubectl completion zsh)" >> ~/.zshrc
+```
+
+[Environment variables](https://kubernetes.io/docs/reference/kubectl/kubectl/#environment-variables)
+
+Configuration is in `~/.kube/config`
 
 ## Global flags
 
@@ -35,8 +45,7 @@ Command|Description
 
 Command|Description
 ----|------
-`kubectl get <resource>`|List all resources of this type in the current
-namespace
+`kubectl get <resource>`|List all resources of this type in the current namespace
 `kubectl get <resource> -o wide`|List all resources with more details
 `kubectl get <resource> -A`|List all resources of this type in all namespaces
 `kubectl get <resource> <name>`|List a particular resource
@@ -44,6 +53,12 @@ namespace
 `kubectl get <resource> <name> -l <key1>=<value1>`|List resources where label `<key1>` contains `<value1>`
 `kubectl describe <resource>`|Show detailed information about a resource
 
+E.g. to list all pods:
+```
+kubectl get pod \
+    -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name \
+    --all-namespaces
+```
 ## Apply configuration manifests
 
 Command|Description
@@ -51,6 +66,63 @@ Command|Description
 `kubectl apply -f <file>`|Apply a manifest from a file
 `kubectl apply -f <dir>`|Apply all manifests in a directory
 `kubectl apply -k <dir>`|Apply resources from a kustomize directory
+
+Create multiple YAML objects from stdin:
+```
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-sleep
+spec:
+  containers:
+  - name: busybox
+    image: busybox:1.28
+    env:
+    - name: SLEEP_DURATION
+      value: "1000000"
+    args:
+    - sleep
+    - "${SLEEP_DURATION}"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-sleep-less
+spec:
+  containers:
+  - name: busybox
+    image: busybox:1.28
+    env:
+    - name: SLEEP_DURATION
+      value: "1000"
+    args:
+    - sleep
+    - "${SLEEP_DURATION}"
+EOF
+```
+
+[Create a secret](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
+with several keys:
+```
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Secret
+metadata:
+  name: psql-credentials
+type: Opaque
+data:
+  username: $(echo -n "test" | base64 -w0)
+  password: $(echo -n "test123" | base64 -w0)
+EOF
+```
+
+To list it:
+```
+> kubectl get secret psql-credentials
+NAME               TYPE     DATA   AGE
+psql-credentials   Opaque   2      2m25s
+```
 
 ## Create resources manually
 
@@ -66,6 +138,24 @@ Command|Description
 `kubectl create cronjob <name> --image=<image> --schedule=<schedule>`|Create a cronjob, using a schedule in Cron format
 `kubectl create secret generic <name> --from-literal=<key>=<value>`|Create a secret containing `<key>` and `<value>`
 `kubectl create secret docker-registry <name> --docker-server=<server> --docker-username=<username> --docker-password=<password>`|Create a secret for a Docker registry
+
+E.g. to get an interactive shell within your cluster:
+```sh
+kubectl run my-shell --rm -i --tty --image ubuntu -- bash
+```
+
+where
+
+* `my-shell` - the name of the Deployment that is created. Your pod name will
+be this plus a unique hash or ID at the end.
+* `--rm` - when you exit out of your session, this cleans up the Deployment and
+Pod.
+* `-i/--tty` - the combination of these is what allows us to attach to an
+interactive session.
+* `--` delimits the end of the `kubectl run` options from the positional arg
+`bash`.
+* `bash` - overrides the container's CMD. In this case, we want to launch `bash`
+as our container's command.
 
 ## Generate YAML configuration manifests
 
@@ -93,6 +183,11 @@ Command|Description
 `kubectl delete <resource> <name>`|Delete a particular resource
 `kubectl delete <resource> --all`|Delete all resources of a particular type in the current namespace
 `kubectl delete -f <file>`|Delete a resource from a file
+
+To delete a pod:
+```
+kubectl delete pod busybox-sleep-less
+```
 
 ## Manage deployments
 Command|Description
