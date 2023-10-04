@@ -19,7 +19,10 @@ $(VENV)/bin/activate: requirements.txt
 	$(PIP) install -r requirements.txt
 
 run: venv
-	./$(VENV)/bin/python3 app.py
+	$(PYTHON) app.py
+
+test: venv
+	$(PYTHON) -m unittest -v *_test.py
 
 clean:
 	rm -rf $(VENV) .mypy_cache
