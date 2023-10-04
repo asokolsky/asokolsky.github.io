@@ -90,5 +90,14 @@ Command|Description
 
 Most relevant:
 ```
-export TF_LOG=trace
+export TF_LOG=TRACE
 ```
+Acceptable options:
+
+* TRACE
+* DEBUG
+* INFO
+* WARN
+* ERROR
+* JSON - outputs logs at the TRACE level or higher, and uses a parseable
+JSON encoding as the formatting.

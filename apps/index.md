@@ -6,7 +6,7 @@
 * [dot files](dot-files) and [fonts](fonts.html)
 * [exiftool](cli-exiftool.html)
 * [git](git/)
-* [gomplate](gomplate.html)
+* templating using [gomplate](gomplate.html), [jsonnet](jsonnet/)
 * [Home Assistant](home-assistant/)
 * [Java VM Tuning](java-vm.html)
 * [make and Makefile](make/)
