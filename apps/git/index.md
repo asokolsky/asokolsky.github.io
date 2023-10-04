@@ -53,7 +53,7 @@ Set repo-specific (non-global) config settings:
 ```sh
 git config user.name "Alex Sokolsky"
 git config user.email "asokolsky@gmail.com"
-git config core.sshCommand "ssh -i ~/.ssh/private_key
+git config core.sshCommand "ssh -i ~/.ssh/private_key"
 ```
 
 Make sure your private identity is available:
