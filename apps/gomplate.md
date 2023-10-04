@@ -6,10 +6,11 @@ better for me than reading [documentation](https://docs.gomplate.ca/).
 
 ## Install
 
-https://docs.gomplate.ca/installing/#manual-install
+[manual-install](https://docs.gomplate.ca/installing/#manual-install)
 
 ```sh
-sudo curl -o /usr/local/bin/gomplate -sSL https://github.com/hairyhenderson/gomplate/releases/download/v3.11.3/gomplate_linux-amd64
+sudo curl -o /usr/local/bin/gomplate -sSL \
+  https://github.com/hairyhenderson/gomplate/releases/download/v3.11.3/gomplate_linux-amd64
 sudo chmod 755 /usr/local/bin/gomplate
 ```
 
@@ -17,7 +18,7 @@ sudo chmod 755 /usr/local/bin/gomplate
 
 [using-file-datasources](https://github.com/hairyhenderson/gomplate/blob/main/docs/content/datasources.md#using-file-datasources)
 
-```
+```sh
 > echo 'foo={{ (ds "secrets").foo }}' | \
     gomplate -d secrets=/home/alex/Projects/pass-secret/app/secrets.json
 foo=bar
