@@ -2,6 +2,9 @@
 
 Running OctoPrint in an LXC Container.
 
+Related: mjpg-streamer in a [docker](mjpg-streamer-docker.html) or
+an [LXC](mjpg-streamer-lxc.html) container.
+
 ## Sources
 
 * [Setting-up OctoPrint](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian-or-raspberry-pi-os/2337)
