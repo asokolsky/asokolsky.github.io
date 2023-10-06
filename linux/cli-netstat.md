@@ -3,6 +3,6 @@
 [netstat](https://www.linux.org/docs/man8/netstat.html) prints network
 connections, etc.
 
-```console
+```sh
 sudo netstat -plutn
 ```

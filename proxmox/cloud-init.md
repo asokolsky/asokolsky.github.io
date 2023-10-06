@@ -138,7 +138,7 @@ Connection to 192.168.10.81 closed.
 Edit main.tf ans set count to 0.  Then:
 
 ```console
-oot@duo:~/terraform# terraform apply
+root@duo:~/terraform# terraform apply
 proxmox_vm_qemu.test_server[0]: Refreshing state... [id=duo/qemu/100]
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following
@@ -165,4 +165,3 @@ proxmox_vm_qemu.test_server[0]: Destruction complete after 4s
 
 Apply complete! Resources: 0 added, 0 changed, 1 destroyed.
 ```
-console

@@ -31,7 +31,7 @@ agent](https://forum.netgate.com/topic/162083/pfsense-vm-on-proxmox-qemu-agent-i
 
 * In shell:
 
-```console
+```sh
 pkg install qemu-guest-agent
 ```
 
@@ -44,7 +44,7 @@ pkg install qemu-guest-agent
 value: `YES`
 
 * In shell `edit /etc/rc.conf.local`:
-```console
+```
 qemu_guest_agent_enable="YES"
 qemu_guest_agent_flags="-d -v -l /var/log/qemu-ga.log"
 ```

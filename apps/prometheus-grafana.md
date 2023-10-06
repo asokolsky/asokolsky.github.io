@@ -22,7 +22,7 @@ http://pfsense:9100/metrics
 
 https://www.howtoforge.com/tutorial/how-to-install-prometheus-and-node-exporter-on-centos-7/
 
-```console
+```sh
 wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
 tar -xzvf node_exporter-0.18.1.linux-amd64.tar.gz
 mv node_exporter-0.18.1.linux-amd64 /home/prometheus/node_exporter
@@ -45,7 +45,7 @@ WantedBy=default.target
 ```
 
 Restart:
-```console
+```sh
 sudo systemctl daemon-reload
 sudo systemctl start node_exporter
 sudo systemctl enable node_exporter
@@ -67,7 +67,7 @@ Install Prometheus
 
 Follow https://computingforgeeks.com/how-to-install-prometheus-on-rhel-8/
 
-```console
+```sh
 sudo groupadd --system prometheus
 sudo useradd -s /sbin/nologin --system -g prometheus prometheus
 sudo mkdir /var/lib/prometheus
@@ -147,7 +147,7 @@ sudo chown -R prometheus:prometheus /var/lib/prometheus/
 
 Start Prometheus service:
 
-```console
+```sh
 sudo systemctl daemon-reload
 sudo systemctl start prometheus
 systemctl status prometheus.service
@@ -155,7 +155,7 @@ systemctl status prometheus.service
 
 Configure firewalld:
 
-```console
+```sh
 sudo firewall-cmd --permanent --add-rich-rule \
   'rule family="ipv4" source address="192.168.1.0/24" port protocol="tcp" port="9090" accept'
 sudo firewall-cmd --reload
@@ -198,7 +198,7 @@ Then `yum install grafana-enterprise`.
 
 To start the service and verify that the service has started:
 
-```console
+```sh
 systemctl daemon-reload
 systemctl start grafana-server
 systemctl status grafana-server

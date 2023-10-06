@@ -50,7 +50,7 @@ Propagate=true
 ## Terraform Basic Info and Provider Installation
 
 ```console
-oot@duo:~/terraform# pwd
+root@duo:~/terraform# pwd
 /root/terraform
 root@duo:~/terraform# ls -la
 total 12

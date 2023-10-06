@@ -29,7 +29,7 @@ evdev:input:b0003v046DpC538*
 ```
 
 * update hardware db by running:
-```console
-$ sudo systemd-hwdb update
-$ sudo udevadm trigger --verbose --sysname-match="event*"
+```sh
+sudo systemd-hwdb update
+sudo udevadm trigger --verbose --sysname-match="event*"
 ```

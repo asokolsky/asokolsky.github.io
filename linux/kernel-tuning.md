@@ -6,11 +6,11 @@ Edit `/etc/sysctl.conf` to make changes persistent.
 
 To set it:
 
-```console
+```sh
 sudo sysctl vm.swappiness=10
 ```
 Check it
-```console
+```sh
 cat /proc/sys/vm/swappiness
 ```
 

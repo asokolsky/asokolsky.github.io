@@ -8,14 +8,14 @@ like the Unix ENG LDAP.
 
 AD LDAP should be queried for sAMAccountName instead of uid:
 
-```console
-% ldapsearch -h foo.bar.com -D 'foo\a.sokolsky' -W -b 'DC=foo,DC=bar,DC=com' \
+```sh
+ldapsearch -h foo.bar.com -D 'foo\a.sokolsky' -W -b 'DC=foo,DC=bar,DC=com' \
     '(&(sAMAccountName=a.sokolsky)(objectClass=user))'
 ```
 
 mailNickname is also set:
 
-```console
-% ldapsearch -h foo.bar.com -D 'foo\a.sokolsky' -W -b 'DC=foo,DC=bar,DC=com' \
+```sh
+ldapsearch -h foo.bar.com -D 'foo\a.sokolsky' -W -b 'DC=foo,DC=bar,DC=com' \
     '(&(mailNickname=a.sokolsky)(objectClass=user))'
 ```

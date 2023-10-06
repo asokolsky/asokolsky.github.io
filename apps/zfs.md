@@ -265,11 +265,11 @@ errors: No known data errors
 
 Make it a 3-way mirror:
 
-```console
-# zpool attach tank da0 da2
-# zpool detach tank da0
-# zpool set autoexpand=on tank
-# zpool online -e tank da0
+```sh
+zpool attach tank da0 da2
+zpool detach tank da0
+zpool set autoexpand=on tank
+zpool online -e tank da0
 ```
 
 Insert disk.  Then in XigmaNAS GUI:
