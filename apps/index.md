@@ -1,8 +1,8 @@
 # Apps & Tasks
 
+Application setup and use:
+
 * [API Gateways](api-gateways.html)
-* Cheat sheets: [docker](docker.html), [tmux](tmux.html), [emacs](emacs.html),
-[vi](vi.html)
 * [dot files](dot-files) and [fonts](fonts.html)
 * [exiftool](cli-exiftool.html)
 * [git](git/)
@@ -24,3 +24,11 @@
 * [Visual Studio Code](vscode/)
 * [ZFS setup and commands](zfs.html)
 * [zsh](zsh/)
+
+Cheat sheets:
+
+* [docker](docker.html)
+* [emacs](emacs.html)
+* [kubectl](kubectl.html)
+* [tmux](tmux.html)
+* [vi](vi.html)
