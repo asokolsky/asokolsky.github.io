@@ -23,11 +23,16 @@ comments: false
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
-* Cheat sheets: [docker](apps/docker.html), [tmux](apps/tmux.html),
-[emacs](apps/emacs.html), [vi](apps/vi.html)
+* Cheat sheets:
+[docker](apps/docker.html),
+[emacs](apps/emacs.html),
+[kubectl](apps/kubectl.html),
+[tmux](apps/tmux.html),
+[vi](apps/vi.html)
 * [Visual Studio Code](apps/vscode/)
 * [ZFS setup and commands](apps/zfs.html)
-* [more...](apps/)
+
+[more...](apps/)
 
 ## Linux
 
@@ -42,7 +47,8 @@ and [more...](linux/cli.html)
 * [Kernel Tuning](linux/kernel-tuning.html)
 * Customize [CentOS](centos/), [ProxMox](proxmox/),
 [TrueNAS Scale](truenas-scale/),
-* [more...](linux/)
+
+[more...](linux/)
 
 ## MacOS
 
@@ -50,7 +56,10 @@ and [more...](linux/cli.html)
 * CLI: [system_profiler](macos/cli.html)
 * [iTerm2 Terminal Emulator](macos/iTerm2.html)
 * [Jenkins](macos/jenkins.html)
-* [more...](macos/)
+
+[more...](macos/)
+
+## Misc
 
 [BSD geom, gpart, driveid, system temps](bsd/)
 
