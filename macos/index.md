@@ -3,15 +3,19 @@
 For software development you will need
 [Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html):
 
-```
+```sh
 xcode-select --install
 ```
 
-Differentiate touch pad and mouse scroll direction using
+## Optimizing input
+
+* Differentiate touch pad and mouse scroll direction using
 [scroll reverser](https://pilotmoon.com/scrollreverser/).
+* use of [keyboard](keyboard.html)
+
+## Apps to Use
 
 * cli: [exiftool](../apps/cli-exiftool.html), and [more...](cli.html)
-* use of [keyboard](keyboard.html)
 * [iTerm2](iTerm2.html) Terminal Emulator
 * [Java](java.html)
 * [Jenkins](jenkins.html)
@@ -30,7 +34,7 @@ Also relevant:
 Keyboard shortcut: `Shift` + `Command` + `.`
 
 cli:
-```
+```sh
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
