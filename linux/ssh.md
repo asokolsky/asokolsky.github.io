@@ -82,6 +82,7 @@ usermod -s /bin/bash $uname
 
 ## Copy ID to a Remote Computer
 
+Copy a default ID:
 ```console
 alex@latitude7490:~$ ssh-copy-id alex@fuji
 /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
@@ -93,6 +94,12 @@ Number of key(s) added: 1
 Now try logging into the machine, with:   "ssh 'alex@fuji'"
 and check to make sure that only the key(s) you wanted were added.
 ```
+
+Alternatively, copy the specific ID:
+```sh
+ssh-copy-id -i ~/.ssh/id_rsa.pub alex@192.168.100.177
+```
+
 ## Enjoy it
 
 ```console
