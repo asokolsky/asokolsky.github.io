@@ -3,13 +3,15 @@ import stat
 from configparser import ConfigParser
 from os.path import isfile, abspath, expanduser
 from typing import Any, Dict, Optional, Tuple
+
+
 #
 # Simple API to access secretes stored, e.g. in a ~/.secrets INI file.
 #
 # TODO: generalize it, so that instead a local file system an AWS S3 bucket
 # could be used to store secrets
 #
-def get_secrets(realm:str, file_name: Optional[str]=None) -> Tuple[
+def get_secrets(realm: str, file_name: Optional[str] = None) -> Tuple[
         Optional[Dict[str, Any]], Optional[str], Optional[str]]:
     '''
     Get secrets for the _realm_ from an INI file _file_name_
@@ -37,13 +39,13 @@ def get_secrets(realm:str, file_name: Optional[str]=None) -> Tuple[
         '''
         for p in ('~', '/', '..', './'):
             if file_name.startswith(p):
-                if isfile( file_name ):
-                    return abspath( file_name )
+                if isfile(file_name):
+                    return abspath(file_name)
                 return None
 
         # try to find file_name at the following locations:
         for loc in ('./',  expanduser('~/')):
-            fpath = abspath( loc + file_name )
+            fpath = abspath(loc + file_name)
             if isfile(fpath):
                 return fpath
 
@@ -55,7 +57,7 @@ def get_secrets(realm:str, file_name: Optional[str]=None) -> Tuple[
         Returns errmsg, empty string for success
         '''
         mode = os.stat(fpath).st_mode
-        if stat.S_IMODE(mode) & (stat.S_IRGRP|stat.S_IROTH):
+        if stat.S_IMODE(mode) & (stat.S_IRGRP | stat.S_IROTH):
             return 'Secrets are readable by group or others'
 
         return ''
@@ -67,7 +69,7 @@ def get_secrets(realm:str, file_name: Optional[str]=None) -> Tuple[
 
     if file_name is None:
         file_name = '.secrets'
-    elif not isinstance( file_name, str ):
+    elif not isinstance(file_name, str):
         return None, None, 'file_name should be a string'
     elif not file_name:
         return None, None, 'file_name should be a non-empty string'
@@ -76,20 +78,20 @@ def get_secrets(realm:str, file_name: Optional[str]=None) -> Tuple[
     if fpath is None:
         return None, None, f"Failed to find '{file_name}'"
 
-    errmsg = verify_file( fpath )
+    errmsg = verify_file(fpath)
     if errmsg:
         return None, fpath, errmsg
     #
     cfgp = ConfigParser()
     try:
-        cfgp.read( fpath )
+        cfgp.read(fpath)
     except Exception as ex:
         return None, fpath, f'Bad syntax: {ex}'
 
     if realm not in cfgp.sections():
         return None, fpath, f'Failed to locate {realm} secrets'
 
-    res:Dict[str, Any] = {}
+    res: Dict[str, Any] = {}
     for option in cfgp.options(realm):
         res[option] = cfgp.get(realm, option)
 

@@ -4,7 +4,7 @@ from sys import stdin
 from typing import Tuple
 
 
-def get_username_password(username:str = '') -> Tuple[str, str]:
+def get_username_password(username: str = '') -> Tuple[str, str]:
     '''
     Collects user password from stdin and returns a tuple (username, password).
     Works in emacs inferior shell and other weird places.

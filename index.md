@@ -5,10 +5,14 @@ comments: false
 
 ## Programming
 
+* [make and Makefile](apps/make/),
+[Visual Studio Code](apps/vscode/),
+[ruby](apps/ruby.html)
 * Python: [Better enum](programming/python-string-enum.html),
 [Server and Client-side Certificates](programming/https.html),
 [Virtual Environments](programming/pyenv-virtualenv.html)
-* [more...](programming/)
+
+[more...](programming/)
 
 ## Apps & Tasks
 
@@ -29,7 +33,6 @@ comments: false
 [kubectl](apps/kubectl.html),
 [tmux](apps/tmux.html),
 [vi](apps/vi.html)
-* [Visual Studio Code](apps/vscode/)
 * [ZFS setup and commands](apps/zfs.html)
 
 [more...](apps/)
