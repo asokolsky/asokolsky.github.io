@@ -5,11 +5,14 @@ See also [Configure SSHD](sshd.html).
 ## Sources
 
 * [SSH Key Tutorial](https://austinsnerdythings.com/2021/04/02/ssh-key-tutorial/)
-* [ssh man page](https://man7.org/linux/man-pages/man1/ssh.1.html)
-* [ssh-keygen man page](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html)
-* [ssh-add man page](https://man7.org/linux/man-pages/man1/ssh-add.1.html0)
+* Man pages:
+[ssh](https://man7.org/linux/man-pages/man1/ssh.1.html),
+[ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html),
+[ssh-add](https://man7.org/linux/man-pages/man1/ssh-add.1.html),
+[ssh-agent](https://www.man7.org/linux/man-pages/man1/ssh-agent.1.html)
 * [Configuring Authorized Keys for OpenSSH](https://www.ssh.com/academy/ssh/authorized-keys-openssh)
 * [The Ultimate SSH Guide](https://grimoire.carcano.ch/blog/openssh-tutorial-the-ultimate-ssh-guide-to-understand-it/)
+and [Cryptography Quick Guide](https://grimoire.carcano.ch/blog/cryptography-quick-guide/)
 
 ## Generate SSH Key Pair
 
