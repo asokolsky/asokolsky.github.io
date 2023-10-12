@@ -1,6 +1,7 @@
-# Emacs Customization and Cheat Sheet
+# Emacs Cheat Sheet
 
-[Emacs Configuration](https://github.com/daviwil/dotfiles/blob/master/Emacs.org)
+* [Emacs Configuration](https://github.com/daviwil/dotfiles/blob/master/Emacs.org)
+* [emacs wiki/](https://www.emacswiki.org/)
 
 ## Concepts
 
@@ -21,6 +22,20 @@ Notation|Means
 --------|-----
 C-x | Press and hold the Control key and then press and release the “x” key
 M-x | Press and release the Meta key and then press the “x” key
+
+### Key Bindings
+
+I usually
+[swap](https://www.emacswiki.org/emacs/MovingTheCtrlKey)
+[Caps Lock](https://en.wikipedia.org/wiki/Caps_Lock) and
+[Control](https://en.wikipedia.org/wiki/Control_key) keys:
+
+* [on Linux](https://www.emacswiki.org/emacs/MovingTheCtrlKey#h5o-2)
+using the keyboard settings GUI
+* [on MacOS](https://www.emacswiki.org/emacs/MovingTheCtrlKey#h5o-14)
+using [karabiner](../macos/keyboard.md)
+* [on Windows](https://www.emacswiki.org/emacs/MovingTheCtrlKey#h5o-15)
+using [registry hack](../windows/SwapCapsCtrl.reg)
 
 ## Exits
 
