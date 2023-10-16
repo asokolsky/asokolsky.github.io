@@ -54,7 +54,7 @@ C-x C-s | Save buffer | M-x save-buffer
 C-x C-w | Save file with new name | M-x write-file
 C-x i | Insert another file | M-x insert-file
 
-## Buffer Commands
+## Buffers
 
 Key | Command | Function
 ----|---------|--
@@ -74,7 +74,19 @@ C-x o |Move to another window | M-x other-window
 C-x 0 |Delete the current window | M-x delete-window
 C-x 1 |Delete all windows but the current | M-x delete-other-windows
 
-## Moving Around
+### Managing Window Size
+
+Key | Command | Function
+----|---------|--
+C-x -|shrink the current window to fit its content|shrink-window-if-larger-than-buffer
+C-x ^|increase the current window height by 1 line, or the prefix arg value|enlarge-window
+C-x }|make it wider|enlarge-window-horizontally
+C-x {|makes it narrower|shrink-window-horizontally
+C-x +|make the windows the same heights and widths|balance-windows
+
+[more on this](https://www.emacswiki.org/emacs/WindowResize)
+
+## Moving Caret Around
 
 Move By | Forward | Backward
 ------------|---------|---------
