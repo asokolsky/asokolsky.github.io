@@ -1,7 +1,7 @@
 # Emacs Cheat Sheet
 
 * [Emacs Configuration](https://github.com/daviwil/dotfiles/blob/master/Emacs.org)
-* [emacs wiki/](https://www.emacswiki.org/)
+* [Emacs Wiki](https://www.emacswiki.org/)
 
 ## Concepts
 
@@ -98,21 +98,6 @@ Line | C-n | C-p
 Line End/Start | C-e | C-a
 Buffer End/Start | M-> | M-<
 Scroll | C-v | M-v
-
-Command | Keystroke | Function
---------|-----------|---------
-Move to the beginning of a buffer | M-< | M-x beginning-of-buffer
-Move to the end of a buffer | M-> | M-x end-of-buffer
-Move forward one character | C-f | M-x forward-char
-Move backward one character | C-b | M-x backward-char
-Move down one line | C-n | M-x next-line
-Move up on line | C-p | M-x previous-line
-Move forward one word | M-f | M-x forward-word
-Move backward one word | M-b | M-x backward-word
-Move to the end of a line | C-e | M-x end-of-line
-Move to the beginning of a line | C-a | M-x beginning-of-line
-Move forward one screen | C-v | M-x scroll up
-Move backward one screen | M-v | M-x scroll-down
 
 ## Cut/Delete/Kill Text
 
