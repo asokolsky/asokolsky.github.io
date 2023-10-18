@@ -3,14 +3,14 @@
 [find](https://www.linux.org/docs/man1/find.html) searches for files.
 
 
-## Search Examples
+## Use Examples
 
 Find a file called testfile.txt in current and sub-directories:
 ```sh
 find . -name testfile.txt
 ```
 
-Find all .jpg files in the /home and sub-directories:
+Find all `.jpg` files in the `/home` and sub-directories:
 ```sh
 find /home -name "*.jpg"
 ```
@@ -29,17 +29,41 @@ Find all `.db` files (ignoring text case) modified in the last 7 days by a user
 find /home -user exampleuser -mtime 7 -iname ".db"
 ```
 
-Find all the files that end with conf and have been modified in the last 7 days:
+Find all the files that end with `conf` and have been modified in the last 7
+days:
 ```sh
 find / -name "*conf" -mtime 7
 ```
-Filters exampleuser user’s home directory for files with names that end with the
-characters conf and have been modified in the previous 3 days:
+Filters `exampleuser` home directory for files with names that end with the
+characters `conf` and have been modified in the previous 3 days:
 ```sh
 find ~exampleuser/ -name "*conf" -mtime 3
 ```
 
-## Find and Act
+## Find and Print
+
+Display the files older than 30 days:
+```sh
+find . -mtime +30 -print
+```
+
+## Find and Delete
+
+Delete all .bak files:
+```sh
+find . -name "*.bak" -delete
+```
+Delete empty directories:
+```sh
+find releases/ -type d -empty -delete
+```
+
+Remove all the files from /tmp owned by a.sokolsky:
+```sh
+find /tmp/* -user jdoe -exec rm -fr {} \;
+```
+
+## Find and Execute A Command on It
 
 Searches for python files and then runs grep for "future_state":
 ```sh
@@ -54,21 +78,6 @@ find * -mtime +300 -exec ls -l {} \;
 Looks for rc.conf and runs the chmod o+r command to modify file permissions:
 ```sh
 find . -name "rc.conf" -exec chmod o+r '{}' \;
-```
-
-Delete all .bak files:
-```sh
-find . -name "*.bak" -delete
-```
-
-Display the files older than 30 days:
-```sh
-find . -mtime +30 -print
-```
-
-Remove all the files from /tmp owned by a.sokolsky:
-```sh
-find /tmp/* -user jdoe -exec rm -fr {} \;
 ```
 
 ## Find and Act Using `xargs`

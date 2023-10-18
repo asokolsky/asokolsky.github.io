@@ -4,4 +4,7 @@
 # .zshenv should NOT contain commands that produce output or assume the shell
 # is attached to a tty.
 
+export AWS_DEFAULT_REGION=us-east-1
+export GOROOT=$HOME/go
+#export VAULT_ADDR=https://vault.foo.bar/
 export PDSH_RCMD_TYPE=ssh
