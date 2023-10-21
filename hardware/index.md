@@ -1,11 +1,9 @@
 # Hardware Notes
 
-* [Business Audio](business-audio.html)
-* [Business Video](business-video.html)
+* Business [Audio](business-audio.html) and [Video](business-video.html)
 * Video cameras: [Logitech Brio 4k](brio.html), [Panasonic GH5](gh5.html)
-* [Dell Latitude](latitude.html)
+* Laptops: [Dell Latitude](latitude.html), [Lenovo Thinkpad P52](thinkpad.html)
 * [Dell Optiplex 7060 Micro](optiplex7060micro.html)
-* [Lenovo Thinkpad P52](thinkpad.html)
 * [Logitech Presenter R800 Remote Control](remote.html)
 * [Prusa MK3S with RPi Zero W](prusa-mk3s-rpi0w/)
 * [RPi4](rpi4.html)
@@ -13,6 +11,7 @@
 * [Remote Key Mapping](remote.html)
 * [Thunderbolt](thunderbolt.html)
 * [Ubiquiti EdgeRouter X](ubiquiti.html)
+* [Managing display](display.html)
 
 [Home Office](../_posts/2021-01-01-home-office.html)
 
