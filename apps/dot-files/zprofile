@@ -5,4 +5,4 @@
 
 eval "$(ssh-agent -s)"
 # add more IDs as needed
-ssh-add ~/.ssh/id_rsa ~/.ssh/latitude_id_rsa
+ssh-add -q ~/.ssh/id_rsa ~/.ssh/latitude_id_rsa
