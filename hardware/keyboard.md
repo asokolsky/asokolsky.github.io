@@ -26,7 +26,8 @@ Action|Key Sequence
 ------|------------
 Bluetooth pairing|fn + 1 for 4sec to pair with `Keychron K1`
 Bluetooth switch|Short press fn + 1/2/3
-Change Light effect|fn + right / left arrow to change color
+Change Light effect|Light effect key (top right)
+Change Color|fn + right / left arrow
 Switch between Fx and multimedia keys|fn + X + L
 Disable Auto Sleep Mode|fn + S + O for 4sec to disable the Auto Sleep Mode.<br>To enable - press fn + S + O for 4sec again.
 
