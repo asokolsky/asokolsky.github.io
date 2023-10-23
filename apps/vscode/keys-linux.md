@@ -6,21 +6,21 @@
 
 Key|Action
 ---|-----
-Ctrl+Shift+P, F1\|Show Command Palette
-Ctrl+P\|Quick Open, Go to File...
-Ctrl+Shift+N\|New window/instance
-Ctrl+W\|Close window/instance
-Ctrl+,\|User Settings
-Ctrl+K Ctrl+S\|Keyboard Shortcuts
+Ctrl+Shift+P, F1|Show Command Palette
+Ctrl+P|Quick Open, Go to File...
+Ctrl+Shift+N|New window/instance
+Ctrl+W|Close window/instance
+Ctrl+,|User Settings
+Ctrl+K Ctrl+S|Keyboard Shortcuts
 
 ## Basic editing
 
 Key|Action
 ---|-----
-Ctrl+X\|Cut line (empty selection)
-Ctrl+C\|Copy line (empty selection)
-Alt+ ↓ / ↑\|Move line down/up
-Ctrl+Shift+K\|Delete line
+Ctrl+X|Cut line (empty selection)
+Ctrl+C|Copy line (empty selection)
+Alt+ ↓ / ↑|Move line down/up
+Ctrl+Shift+K|Delete line
 Ctrl+Enter /<br> Ctrl+Shift+Enter|Insert line below / above
 Ctrl+Shift+\ |Jump to matching bracket
 Ctrl+ ] / [|Indent/Outdent line
@@ -58,13 +58,13 @@ Ctrl+K M|Change file language
 
 Key|Action
 ---|-----
-Alt+Click\|Insert cursor
-Shift+Alt+ ↑ / ↓\|Insert cursor above/below
-Ctrl+U\|Undo last cursor operation
-Shift+Alt+I\|Insert cursor at end of each line selected
-Ctrl+L\|Select current line
-Ctrl+Shift+L\|Select all occurrences of current selection
-Ctrl+F2\|Select all occurrences of current word
+Alt+Click|Insert cursor
+Shift+Alt+ ↑ / ↓|Insert cursor above/below
+Ctrl+U|Undo last cursor operation
+Shift+Alt+I|Insert cursor at end of each line selected
+Ctrl+L|Select current line
+Ctrl+Shift+L|Select all occurrences of current selection
+Ctrl+F2|Select all occurrences of current word
 Shift+Alt + → / ←| Expand / Shrink selection
 Shift+Alt + drag mouse|Column (box) selection
 
@@ -124,9 +124,9 @@ Ctrl+W|Close editor
 Ctrl+K F|Close folder
 Ctrl+\\|Split editor
 Ctrl+ 1 / 2 / 3 |Focus on editor group 1 / 2 / 3
-Ctrl+K Ctrl+ → / ←\|Focus into next/prev editor group
-Ctrl+Shift+ PgDn/PgUp\|Move editor right/left
-Ctrl+K → / ←\|Move active editor group right-down/left-up
+Ctrl+K Ctrl+ → / ←|Focus into next/prev editor group
+Ctrl+Shift+ PgDn/PgUp|Move editor right/left
+Ctrl+K → / ←|Move active editor group right-down/left-up
 
 ## File management
 
