@@ -16,7 +16,4 @@
         "Ubiquiti",
         "Xeon"
     ],
-    "files.associations": {
-        "*.yaml": "home-assistant"
-    }
 }

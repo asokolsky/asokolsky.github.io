@@ -2,7 +2,7 @@
 
 Sources:
 
-* [home](https://k9scli.io/)
+* [k9scli.io](https://k9scli.io/)
 
 ## Installation
 
