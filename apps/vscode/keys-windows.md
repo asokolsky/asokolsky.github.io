@@ -164,10 +164,10 @@ Ctrl+K Ctrl+I | Show hover
 
 Key|Action
 ---|-----
-Ctrl+\` | Show integrated terminal
-Ctrl+Shift+\` | Create new terminal
-Ctrl+C | Copy selection
-Ctrl+V | Paste into active terminal
-Ctrl+ ↑/↓ | Scroll up/down
-Shift+ PgUp / PgDn | Scroll page up/down
-Ctrl+ Home / End | Scroll to top/bottom
+``Ctrl+```|Show integrated terminal
+``Ctrl+Shift+```|Create new terminal
+Ctrl+C|Copy selection
+Ctrl+V|Paste into active terminal
+Ctrl+ ↑/↓|Scroll up/down
+Shift+ PgUp / PgDn|Scroll page up/down
+Ctrl+ Home / End|Scroll to top/bottom
