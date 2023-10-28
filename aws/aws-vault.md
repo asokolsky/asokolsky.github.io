@@ -1,6 +1,8 @@
 # aws-vault
 
-[aws-vault](https://github.com/99designs/aws-vault)
+[aws-vault](https://github.com/99designs/aws-vault) creates a sub-shell with
+`AWS_XXX` environment variables being set after validating the user credentials.
+The credentials are set by default in the MacOS key-chain.
 
 ## Installation
 

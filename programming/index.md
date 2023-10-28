@@ -29,3 +29,8 @@
 * [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt)
 governs used of "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL".
+* [Free Certifications](https://github.com/cloudcommunity/Free-Certifications)
+
+## Books
+
+* [Architecture of Open Source Applications](https://aosabook.org/en/index.html)

@@ -175,8 +175,8 @@ F10|Step over
 
 Key|Action
 ---|-----
-⌃\` | Show integrated terminal
-⌃⇧\` | Create new terminal
+``⌃``` | Show integrated terminal
+``⌃⇧``` | Create new terminal
 ⌘C | Copy selection
 ⇧⌘V | FIXME Paste into active terminal
 ⌘ ↑ / ⌘ ↓ | Scroll up/down

@@ -2,6 +2,9 @@
 # .zprofile is meant as an alternative to .zlogin for ksh fans;
 # the two are not intended to be used together,
 # although this could certainly be done.
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
 
 eval "$(ssh-agent -s)"
 # add more IDs as needed
