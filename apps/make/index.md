@@ -38,3 +38,7 @@ Variable|Description
 ```
 {% include_relative python.mak %}
 ```
+
+## Support in VSCode
+
+[Makefile Support in VS Code](https://devblogs.microsoft.com/cppblog/now-announcing-makefile-support-in-visual-studio-code/)
