@@ -120,3 +120,15 @@ alex@fuji:~$ ls -ls ~/.ssh
 total 4
 4 -rw------- 1 alex alex 99 Sep 28 11:17 authorized_keys
 ```
+
+## ~/.ssh/config
+
+[Reference](https://www.ssh.com/academy/ssh/config)
+
+### Custom secret per host
+```
+Host _name_
+  User ubuntu
+  IdentitiesOnly=yes
+  IdentityFile ~/.ssh/_host_secret_.pem
+```
