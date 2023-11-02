@@ -10,6 +10,7 @@ docker run --rm --network ip6net -p 9115:9115/tcp --name blackbox_exporter \
     --config.file=/config/blackbox.yml
 ```
 
+`config/blackbox.yml`:
 ```yaml
-{% include_relative config/blackbox.yaml %}
+{% include_relative blackbox.yaml %}
 ```
