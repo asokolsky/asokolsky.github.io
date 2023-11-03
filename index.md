@@ -30,7 +30,7 @@ comments: false
 * Cheat sheets:
 [docker](apps/docker.html),
 [emacs](apps/emacs.html),
-[kubectl](apps/kubectl.html),
+[kubectl](apps/k8s/kubectl.html),
 [tmux](apps/tmux.html),
 [vi](apps/vi.html)
 * [ZFS setup and commands](apps/zfs.html)

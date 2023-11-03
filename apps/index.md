@@ -9,6 +9,7 @@ Application setup and use:
 * templating using [gomplate](gomplate.html), [jsonnet](jsonnet/)
 * [Home Assistant](home-assistant/)
 * [Java VM Tuning](java-vm.html)
+* [k8s](k8s/)
 * [make and Makefile](make/)
 * [mqtt](mqtt.html)
 * [Lan-to-Lan Wireguard](wireguard.html)
@@ -29,6 +30,6 @@ Cheat sheets:
 
 * [docker](docker.html)
 * [emacs](emacs.html)
-* [kubectl](kubectl.html)
+* [kubectl](k8s/kubectl.html)
 * [tmux](tmux.html)
 * [vi](vi.html)

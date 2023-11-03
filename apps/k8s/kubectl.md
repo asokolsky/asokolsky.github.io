@@ -33,10 +33,15 @@ Alternatively in zsh:
 ```sh
 echo "source <(kubectl completion zsh)" >> ~/.zshrc
 ```
+## Configuration File and Environment Variables
 
+By default configuration is in `~/.kube/config`.
+
+Most important environment variable:
+```
+KUBECONFIG=/Users/asokolsky/.kube/dev-config
+```
 [Environment variables](https://kubernetes.io/docs/reference/kubectl/kubectl/#environment-variables)
-
-Configuration is in `~/.kube/config`
 
 ## Global flags
 
