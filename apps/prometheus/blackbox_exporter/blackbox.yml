@@ -5,6 +5,11 @@ modules:
     http:
       preferred_ip_protocol: "ip4" # defaults to "ip6"
       ip_protocol_fallback: false  # no fallback to "ip6"
+      fail_if_not_ssl: false
+      fail_if_ssl: false
+      follow_redirects: true
+      tls_config:
+        insecure_skip_verify: true
   http_post_2xx:
     prober: http
     timeout: 5s

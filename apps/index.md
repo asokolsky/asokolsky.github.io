@@ -22,7 +22,7 @@ Application setup and use:
 * [terraform](terraform.html)
 * [VLC](vlc.html)
 * [Visual Studio Code](vscode/)
-* [ZFS setup and commands](zfs.html)
+* [ZFS setup and commands](zfs/)
 * [zsh](zsh/)
 
 Cheat sheets:
