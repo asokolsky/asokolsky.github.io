@@ -5,14 +5,12 @@ comments: false
 
 ## Programming
 
-* [make and Makefile](apps/make/),
-[Visual Studio Code](apps/vscode/),
+* [make and Makefile](apps/make/), [Visual Studio Code](apps/vscode/),
 [ruby](apps/ruby.html)
 * Python: [Better enum](programming/python-string-enum.html),
 [Server and Client-side Certificates](programming/https.html),
 [Virtual Environments](programming/pyenv-virtualenv.html)
-
-[more...](programming/)
+* [more...](programming/)
 
 ## Apps & Tasks
 
@@ -27,15 +25,10 @@ comments: false
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
-* Cheat sheets:
-[docker](apps/docker.html),
-[emacs](apps/emacs.html),
-[kubectl](apps/k8s/kubectl.html),
-[tmux](apps/tmux.html),
-[vi](apps/vi.html)
+* Cheat sheets: [docker](apps/docker.html), [emacs](apps/emacs.html),
+[kubectl](apps/k8s/kubectl.html), [tmux](apps/tmux.html), [vi](apps/vi.html)
 * [ZFS setup and commands](apps/zfs.html)
-
-[more...](apps/)
+* [more...](apps/)
 
 ## Linux
 
@@ -50,8 +43,7 @@ and [more...](linux/cli.html)
 * [Kernel Tuning](linux/kernel-tuning.html)
 * Customize [CentOS](centos/), [ProxMox](proxmox/),
 [TrueNAS Scale](truenas-scale/),
-
-[more...](linux/)
+* [more...](linux/)
 
 ## MacOS
 
@@ -59,18 +51,14 @@ and [more...](linux/cli.html)
 * CLI: [system_profiler](macos/cli.html)
 * [iTerm2 Terminal Emulator](macos/iTerm2.html)
 * [Jenkins](macos/jenkins.html)
-
-[more...](macos/)
+* [more...](macos/)
 
 ## Misc
 
-[BSD geom, gpart, driveid, system temps](bsd/)
-
-[Windows](windows/)
-
-[Hardware](hardware/)
-
-[blog posts](posts.html)
+* [BSD](bsd/)
+* [Windows](windows/)
+* [Hardware](hardware/)
+* [blog posts](posts.html)
 
 
 [![LinkedIn

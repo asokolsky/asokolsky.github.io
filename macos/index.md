@@ -1,7 +1,7 @@
 # MacOS Customization
 
 For software development you will need
-[Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html):
+[Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/):
 
 ```sh
 xcode-select --install

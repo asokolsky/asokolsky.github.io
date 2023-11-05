@@ -52,7 +52,7 @@ errors: No known data errors
 ```
 
 Note write errors is non-zero.  From
-[the doc](https://docs.oracle.com/cd/E19253-01/819-5461/gaynp/index.html):
+[the doc](https://docs.oracle.com/cd/E19253-01/819-5461/gaynp/):
 
 The `READ` and `WRITE` columns provide a count of I/O errors that occurred on
 the device, while the `CKSUM` column provides a count of uncorrectable checksum

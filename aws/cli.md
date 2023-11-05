@@ -302,7 +302,7 @@ aws ec2 delete-subnet --subnet-id _id_
 
 ## Resource Access Manager (RAM)
 
-[Commands](https://docs.aws.amazon.com/cli/latest/reference/ram/index.html)
+[Commands](https://docs.aws.amazon.com/cli/latest/reference/ram/)
 
 
 [List resources](https://docs.aws.amazon.com/cli/latest/reference/ram/list-resources.html):
@@ -325,7 +325,7 @@ aws ram delete-resource-share --resource-share-arn _arn_
 ## Route53
 
 
-[Commands](https://docs.aws.amazon.com/cli/latest/reference/route53/index.html)
+[Commands](https://docs.aws.amazon.com/cli/latest/reference/route53/)
 
 
 [list-hosted-zones](https://docs.aws.amazon.com/cli/latest/reference/route53/list-hosted-zones.html)
@@ -342,7 +342,7 @@ aws route53 delete-hosted-zone --id /hostedzone/_id_
 
 ## Secrets Manager
 
-[cli-aws-secretsmanager](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/secretsmanager/index.html#cli-aws-secretsmanager)
+[cli-aws-secretsmanager](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/secretsmanager/#cli-aws-secretsmanager)
 
 
 Start with

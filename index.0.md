@@ -1,7 +1,7 @@
 ## Welcome to GitHub Pages
 
 You can use the [editor on
-GitHub](https://github.com/asokolsky/asokolsky.github.io/edit/main/index.md)
+GitHub](https://github.com/asokolsky/asokolsky.github.io/edit/main/)
 to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run

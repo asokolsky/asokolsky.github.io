@@ -33,4 +33,4 @@ governs used of "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 
 ## Books
 
-* [Architecture of Open Source Applications](https://aosabook.org/en/index.html)
+* [Architecture of Open Source Applications](https://aosabook.org/en/)

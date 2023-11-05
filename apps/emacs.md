@@ -2,7 +2,7 @@
 
 * [Emacs Configuration](https://github.com/daviwil/dotfiles/blob/master/Emacs.org)
 * [Emacs Wiki](https://www.emacswiki.org/)
-* [GNU Emacs Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
+* [GNU Emacs Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/)
 
 ## Concepts
 
