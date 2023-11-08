@@ -98,3 +98,10 @@ Jsonnet commandline interpreter v0.20.0
 ```
 
 [More examples](https://github.com/google/jsonnet/tree/master/examples).
+
+## Debugging Output
+
+This prints value of `clusters`` and returns it:
+```
+std.trace('clusters: %s' % std.manifestJson(clusters),  clusters)
+```
