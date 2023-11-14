@@ -97,13 +97,13 @@ Disk Flags:
 
 Number  Start   End     Size    Type     File system  Flags
  1      1049kB  4090MB  4089MB  primary  fat32        lba
-
 ```
 
 
 ```sh
 sudo parted /dev/sda --script -- mklabel msdos
 ```
+
 Create a primary partition of type fat32 taking all the space:
 ```sh
 sudo parted /dev/sda --script -- mkpart primary fat32 1MiB 100%
@@ -117,7 +117,6 @@ sudo mkfs.exfat -n LABEL /dev/sda1
 ```
 
 As vfat:
-
 ```
 sudo mkfs.vfat -F32 /dev/sda1
 ```
