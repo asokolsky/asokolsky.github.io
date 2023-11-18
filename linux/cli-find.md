@@ -58,14 +58,30 @@ Delete empty directories:
 find releases/ -type d -empty -delete
 ```
 
-Remove all the files from /tmp owned by a.sokolsky:
+Find and delete all the terraform locks:
+```sh
+find . -type f -name .terraform.lock.hcl -delete
+```
+
+Remove all the files from /tmp owned by `jdoe`:
 ```sh
 find /tmp/* -user jdoe -exec rm -fr {} \;
 ```
 
 ## Find and Execute A Command on It
 
-Searches for python files and then runs grep for "future_state":
+Remove all the directories named `.terragrunt-cache`:
+
+```sh
+find . -type d -name .terragrunt-cache -prune -exec rm -fr {} \;
+```
+Note that:
+
+* `-delete` acts only on empty directories, hence the need in
+`-exec rm -fr {} \;`
+* `-prune` eliminates `No such file or directory` output
+
+Search for python files and then run grep for "future_state":
 ```sh
 find . -type f -name '*.py' -exec grep 'future_state' '{}' +
 ```

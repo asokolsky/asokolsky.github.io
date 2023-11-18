@@ -65,7 +65,7 @@ mfa_serial = <MFA_ARN>
 
 Create a sub-shell for use with cli utils, e.g. aws or k9s:
 ```sh
-aws-vault exec dev-from-security
+aws-vault exec --duration=12h dev-from-security
 ```
 
 Open an AWS console in your browser by entering in the sub-shell:

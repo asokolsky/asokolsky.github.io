@@ -6,5 +6,19 @@
 
 export AWS_DEFAULT_REGION=us-east-1
 export GOROOT=$HOME/go
-#export VAULT_ADDR=https://vault.foo.bar/
 export PDSH_RCMD_TYPE=ssh
+export EDITOR=emacs
+if [ "$INSIDE_EMACS" ]; then
+    export PAGER="/usr/bin/more"
+else
+    export PAGER="/usr/bin/less"
+    export LESS="-isR"
+    #alias lv="less"
+fi
+
+case "$AWS_VAULT" in
+    "dev-from-security" )
+        export KUBECONFIG="$HOME/.kube/dev-config" ;;
+    *)
+        export KUBECONFIG="$HOME/.kube/config" ;;
+esac
