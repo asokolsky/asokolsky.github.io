@@ -7,9 +7,9 @@ comments: false
 
 * [make and Makefile](apps/make/), [Visual Studio Code](apps/vscode/),
 [ruby](apps/ruby.html)
-* Python: [Better enum](programming/python-string-enum.html),
-[Server and Client-side Certificates](programming/https.html),
-[Virtual Environments](programming/pyenv-virtualenv.html)
+* Python: [Better enum](programming/python/python-string-enum.html),
+[Server and Client-side Certificates](programming/python/https.html),
+[Virtual Environments](programming/python/pyenv-virtualenv.html)
 * [more...](programming/)
 
 ## Apps & Tasks
