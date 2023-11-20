@@ -14,13 +14,14 @@ aws-vault exec dev-from-security -- aws eks update-kubeconfig --region us-east-1
 
 ## Autopick the right kubeconfig
 
+Add this to your `.zshenv`
 ```bash
-	case "$AWS_VAULT" in
-		"dev-from-security" )
-		    export KUBECONFIG="$HOME/.kube/dev-config" ;;
-		*)
-		    export KUBECONFIG="$HOME/.kube/config" ;;
-	esac
+case "$AWS_VAULT" in
+	"dev-from-security" )
+		export KUBECONFIG="$HOME/.kube/dev-config" ;;
+	*)
+		export KUBECONFIG="$HOME/.kube/config" ;;
+esac
 ```
 
 
