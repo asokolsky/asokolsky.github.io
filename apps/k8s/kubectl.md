@@ -12,11 +12,11 @@ From
 
 By default configuration is in `~/.kube/config`.
 
+[Environment variables](https://kubernetes.io/docs/reference/kubectl/kubectl/#environment-variables).
 Most important environment variable:
 ```
-KUBECONFIG=/Users/asokolsky/.kube/dev-config
+KUBECONFIG=$HOME/.kube/dev-config
 ```
-[Environment variables](https://kubernetes.io/docs/reference/kubectl/kubectl/#environment-variables)
 
 ## Global flags
 
@@ -111,28 +111,6 @@ spec:
     - sleep
     - "${SLEEP_DURATION}"
 EOF
-```
-
-[Create a secret](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
-with several keys:
-```
-kubectl apply -f - <<EOF
-apiVersion: v1
-kind: Secret
-metadata:
-  name: psql-credentials
-type: Opaque
-data:
-  username: $(echo -n "test" | base64 -w0)
-  password: $(echo -n "test123" | base64 -w0)
-EOF
-```
-
-To list it:
-```
-> kubectl get secret psql-credentials
-NAME               TYPE     DATA   AGE
-psql-credentials   Opaque   2      2m25s
 ```
 
 ## Create resources manually
@@ -245,16 +223,3 @@ Command|Description
 `helm list`|List releases
 `helm uninstall <name>`|Uninstall a release
 `helm upgrade <name> <chart>`|Upgrade a release
-
-## Productivity Hints
-
-Thanks to [@shmanubhav](https://github.com/shmanubhav):
-
-1. Save your `~/.kube/config`
-2. Create a new `~/.kube/config`, e.g. with
-`aws eks update-kubeconfig --region us-east-1 --name test`, replace region
-and name as needed.
-3. `mv ~/.kube/config ~/.kube/dev-config`
-4. `export KUBECONFIG=~/.kube/dev-config`
-5. Verify that it worked: `kubectl get nodes`
-6. Use `k9s`

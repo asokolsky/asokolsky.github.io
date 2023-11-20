@@ -1,6 +1,6 @@
 # Handling K8s secrets in `kubectl`
 
-Retrieving secrets:
+Retrieving all secrets:
 ```
 > kubectl get secrets -n foo
 NAME                  TYPE     DATA   AGE
@@ -47,6 +47,22 @@ kubectl create secret generic foo -n foo-namespace \
     --from-literal=api-key="ffffoooo=" \
     --from-literal=app-key="bbbbaaar=="
 ```
+
+[create a secret from YAML](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
+with several keys:
+```
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Secret
+metadata:
+  name: psql-credentials
+type: Opaque
+data:
+  username: $(echo -n "test" | base64 -w0)
+  password: $(echo -n "test123" | base64 -w0)
+EOF
+```
+
 ## Editing secret
 
 ```sh
