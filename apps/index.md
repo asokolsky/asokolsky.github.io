@@ -28,7 +28,7 @@ Application setup and use:
 
 Cheat sheets:
 
-* [docker](docker.html)
+* [docker](docker/docker.html)
 * [emacs](emacs.html)
 * [kubectl](k8s/kubectl.html)
 * [tmux](tmux.html)

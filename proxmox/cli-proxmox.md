@@ -113,38 +113,54 @@ Resize a container mount point|`pct resize <vmid> <disk> <size> [OPTIONS]`
 Rescan to update disk sizes and unused disk images|`pct rescan [OPTIONS]`
 Connect to container|`pct enter <vmid>`
 
-# Launch a console for the specified container.
+## Examples
+
+### Launch a console for the specified container.
+```sh
 pct console <vmid> [OPTIONS]
+```
 
-# Launch a shell for the specified container.
+### Launch a shell for the specified container.
+```sh
 pct enter <vmid>
+```
 
-# Launch a command inside the specified container.
+### Launch a command inside the specified container.
+```sh
 pct exec <vmid> [<extra-args>]
+```
 
-# Copy a file from the container to the local system.
+### Copy a file from the container to the local system.
+```sh
 pct pull <vmid> <path> <destination> [OPTIONS]
+```
 
-# Copy a local file to the container.
+### Copy a local file to the container.
+```sh
 pct push <vmid> <file> <destination> [OPTIONS]
 ```
 
-## Container Snapshot Manipulation
+### Container Snapshot Manipulation
+
+#### Snapshot a container.
 ```sh
-# Snapshot a container.
 pct snapshot <vmid> <snapname> [OPTIONS]
+```
 
-# List all snapshots.
+#### List all snapshots.
+```
 pct listsnapshot <vmid>
-
-# Rollback LXC state to specified snapshot.
+```
+#### Rollback LXC state to specified snapshot.
+```sh
 pct rollback <vmid> <snapname> [OPTIONS]
-
-# Delete a LXC snapshot.
+```
+#### Delete a LXC snapshot.
+```sh
 pct delsnapshot <vmid> <snapname> [OPTIONS]
 ```
 
-## Container Templates
+### Container Templates
 
 ```sh
 pveam update
