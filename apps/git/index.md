@@ -5,11 +5,12 @@
 Followed
 [Customizing Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
 
-```
+```sh
 git config --global user.name "Alex Sokolsky"
 git config --global user.email "asokolsky@gmail.com"
-git config --global core.pager ''
+git config --global core.editor /usr/bin/emacs
 git config --global core.excludesfile ~/.gitignore_global
+git config --global core.pager ''
 ```
 
 where `~/.gitignore_global`:
@@ -27,6 +28,7 @@ origin  https://github.com/asokolsky/psmqtt.git (fetch)
 origin  https://github.com/asokolsky/psmqtt.git (push)
 upstream        https://github.com/eschava/psmqtt.git (fetch)
 upstream        https://github.com/eschava/psmqtt.git (push)
+
 alex@latitude7490:~/Projects/psmqtt/ > git status
 On branch typing
 Your branch is up to date with 'origin/typing'.
