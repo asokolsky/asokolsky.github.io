@@ -6,7 +6,7 @@ PYTHON=$(VENV)/bin/python3
 PIP=$(VENV)/bin/pip
 
 # targets which are NOT files
-.PHONY: all venv run clean
+.PHONY: all venv run test clean
 
 # default target, when make executed without arguments
 all: venv
@@ -15,7 +15,7 @@ all: venv
 venv: $(VENV)/bin/activate
 
 $(VENV)/bin/activate: requirements.txt
-	python3 -m venv $(VENV)
+	$(PYTHON) -m venv $(VENV)
 	$(PIP) install -r requirements.txt
 
 run: venv
