@@ -27,7 +27,7 @@ comments: false
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
 * Cheat sheets: [docker](apps/docker/docker.html), [emacs](apps/emacs.html),
 [kubectl](apps/k8s/kubectl.html), [tmux](apps/tmux.html), [vi](apps/vi.html)
-* [ZFS setup and commands](apps/zfs.html)
+* [ZFS setup and commands](apps/zfs/)
 * [more...](apps/)
 
 ## Linux
