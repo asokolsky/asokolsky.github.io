@@ -6,48 +6,24 @@ From
 * https://cheat-sheets.nicwortel.nl/kubectl-cheat-sheet.pdf
 * https://dockerlabs.collabnix.com/kubernetes/cheatsheets/kubectl.html
 
-## Installation
+[Installation](install.html)
 
-[Install](https://kubernetes.io/docs/tasks/tools/#kubectl) the `kubectl` cli to
-interact with the Kubernetes API:
-
-```sh
-sudo apt-get update
-# apt-transport-https may be a dummy package; if so, you can skip that package
-sudo apt-get install -y apt-transport-https ca-certificates curl
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-# This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-```
-and then:
-```sh
-sudo apt-get update
-sudo apt-get install -y kubectl
-```
-
-Set up autocompletion in bash:
-```sh
-echo "source <(kubectl completion bash)" >> ~/.bashrc
-```
-Alternatively in zsh:
-```sh
-echo "source <(kubectl completion zsh)" >> ~/.zshrc
-```
 ## Configuration File and Environment Variables
 
 By default configuration is in `~/.kube/config`.
 
+[Environment variables](https://kubernetes.io/docs/reference/kubectl/kubectl/#environment-variables).
 Most important environment variable:
 ```
-KUBECONFIG=/Users/asokolsky/.kube/dev-config
+KUBECONFIG=$HOME/.kube/dev-config
 ```
-[Environment variables](https://kubernetes.io/docs/reference/kubectl/kubectl/#environment-variables)
 
 ## Global flags
 
 Flag|Description
 ----|------
-`--namespace <namespace>`|The name of the namespace to use
+`-A,--all-namespaces`|Use all the namespaces
+`-n,--namespace <namespace>`|The name of the namespace to use
 `--help`|Show information about a given command
 
 ## Context and configuration
@@ -77,6 +53,23 @@ kubectl get pod \
     -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name \
     --all-namespaces
 ```
+or just pods in one namespace:
+```sh
+kubectl get pod --namespace <namespace>
+```
+then
+```sh
+kubectl describe pod <podname> --namespace <namespace>
+```
+to get logs:
+```sh
+kubectl logs <pod>
+```
+Relevant events:
+```sh
+kubectl get events --namespace clari-graphql  --sort-by='.metadata.creationTimestamp'
+```
+
 ## Apply configuration manifests
 
 Command|Description
@@ -118,28 +111,6 @@ spec:
     - sleep
     - "${SLEEP_DURATION}"
 EOF
-```
-
-[Create a secret](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
-with several keys:
-```
-kubectl apply -f - <<EOF
-apiVersion: v1
-kind: Secret
-metadata:
-  name: psql-credentials
-type: Opaque
-data:
-  username: $(echo -n "test" | base64 -w0)
-  password: $(echo -n "test123" | base64 -w0)
-EOF
-```
-
-To list it:
-```
-> kubectl get secret psql-credentials
-NAME               TYPE     DATA   AGE
-psql-credentials   Opaque   2      2m25s
 ```
 
 ## Create resources manually
@@ -252,16 +223,3 @@ Command|Description
 `helm list`|List releases
 `helm uninstall <name>`|Uninstall a release
 `helm upgrade <name> <chart>`|Upgrade a release
-
-## Productivity Hints
-
-Thanks to [@shmanubhav](https://github.com/shmanubhav):
-
-1. Save your `~/.kube/config`
-2. Create a new `~/.kube/config`, e.g. with
-`aws eks update-kubeconfig --region us-east-1 --name test`, replace region
-and name as needed.
-3. `mv ~/.kube/config ~/.kube/dev-config`
-4. `export KUBECONFIG=~/.kube/dev-config`
-5. Verify that it worked: `kubectl get nodes`
-6. Use `k9s`

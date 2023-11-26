@@ -7,9 +7,9 @@ comments: false
 
 * [make and Makefile](apps/make/), [Visual Studio Code](apps/vscode/),
 [ruby](apps/ruby.html)
-* Python: [Better enum](programming/python-string-enum.html),
-[Server and Client-side Certificates](programming/https.html),
-[Virtual Environments](programming/pyenv-virtualenv.html)
+* Python: [Better enum](programming/python/python-string-enum.html),
+[Server and Client-side Certificates](programming/python/https.html),
+[Virtual Environments](programming/python/pyenv-virtualenv.html)
 * [more...](programming/)
 
 ## Apps & Tasks
@@ -25,9 +25,9 @@ comments: false
 * [Lan-to-Lan Wireguard](apps/wireguard.html)
 * [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
-* Cheat sheets: [docker](apps/docker.html), [emacs](apps/emacs.html),
+* Cheat sheets: [docker](apps/docker/docker.html), [emacs](apps/emacs.html),
 [kubectl](apps/k8s/kubectl.html), [tmux](apps/tmux.html), [vi](apps/vi.html)
-* [ZFS setup and commands](apps/zfs.html)
+* [ZFS setup and commands](apps/zfs/)
 * [more...](apps/)
 
 ## Linux
