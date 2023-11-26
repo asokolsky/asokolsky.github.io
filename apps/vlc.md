@@ -1,4 +1,4 @@
-# VLC Linux Settings
+# VLC Settings
 
 ## HDR Too Dark
 
@@ -8,3 +8,17 @@ Preferences -> All -> Video -> Output modules -> OpenGL ->
 Tone mapping -> Tone-mapping algorithm = Reinhard (simple non-linear)
 
 Did not really work for me.
+
+## Multi Channel Audio Output
+
+Preferences -> Audio
+
+All effects are off.
+
+#### In Windows
+
+Setting|Value
+-------|-----
+Output module|Windows Multimedia Device output
+HDMI/SPDIF audio passthrough|Enabled
+Device|Receiver
