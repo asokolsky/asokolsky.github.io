@@ -15,10 +15,22 @@ Preferences -> Audio
 
 All effects are off.
 
-#### In Windows
+### In Windows
 
 Setting|Value
 -------|-----
 Output module|Windows Multimedia Device output
 HDMI/SPDIF audio passthrough|Enabled
 Device|Receiver
+
+### In Linux
+
+Setting|Value
+-------|-----
+Output module|Alsa
+Device|Pick the one that works.
+
+
+### In MacOS
+
+Does not seem to be supported?
