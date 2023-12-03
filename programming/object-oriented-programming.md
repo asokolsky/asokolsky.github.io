@@ -24,3 +24,6 @@ Moreover:
 * Abstract class
 * Virtual method
 * pure virtual method
+
+In a nutshell, object-oriented programming is noting but a giant side-effect.
+Albeit, the one which is easy to understand.  Or so you think.

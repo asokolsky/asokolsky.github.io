@@ -26,16 +26,21 @@ If the function does not fit on your screen - it is too big.
 
 ### Mixing Cases
 
-No matter which convention you use
-([snake_case](https://en.wikipedia.org/wiki/Snake_case),
+Conventions:
+[snake_case](https://en.wikipedia.org/wiki/Snake_case),
+[screaming snake case](https://developer.mozilla.org/en-US/docs/Glossary/Snake_case),
 [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Kebab_case),
 [dromedaryCase](https://en.wikipedia.org/wiki/Camel_case) /
-[CamelCase](https://en.wikipedia.org/wiki/Camel_case)) - make sure to stick to
-it.
+[CamelCase](https://en.wikipedia.org/wiki/Camel_case).
+
+Pick the right one (you decide what that means), stick to it.
 
 ### Choosing Case
 
-Have class name capitalized.  Methods start with a lower case letter.
+Most commonly used approach:
+
+* have class name is capitalized, use CamelCase;
+* methods start with a lower case letter, use dromedaryCase.
 
 ### Functional Brackets
 
@@ -167,6 +172,11 @@ JSON is barely suitable - use YAML instead.
 
 ### Secrets - Storage and Passing
 
-Store these in the cloud.  Secrets should not be hitting the disk or passed on
-the command line.  You CAN pass secrets via environment variables.  Better yet
+Secrets should not be hitting the disk or passed on the command line.
+You CAN pass secrets via environment variables.  Better yet
 `stdin` or a cloud provider's API.
+
+Store these in the cloud.  Candidates:
+
+* [vault](https://developer.hashicorp.com/vault/docs/what-is-vault);
+* [github repo secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) can be used in github actions.
