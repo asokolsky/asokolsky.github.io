@@ -3,13 +3,14 @@
 Application setup and use:
 
 * [API Gateways](api-gateways.html)
+* [docker](docker/)
 * [dot files](dot-files) and [fonts](fonts.html)
 * [exiftool](cli-exiftool.html)
 * [git](git/)
 * templating using [gomplate](gomplate.html), [jsonnet](jsonnet/)
 * [Home Assistant](home-assistant/)
 * [Java VM Tuning](java-vm.html)
-* [k8s](k8s/)
+* [k8s and kubectl](k8s/)
 * [make and Makefile](make/)
 * [mqtt](mqtt.html)
 * [Lan-to-Lan Wireguard](wireguard.html)

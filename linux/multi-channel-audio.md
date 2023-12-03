@@ -98,3 +98,8 @@ or just
 ```sh
 pw-cli info all
 ```
+
+## More stuff
+
+* [Carla](https://github.com/falkTX/Carla/) audio plugin host
+* [Claudia](https://kx.studio/Applications:Claudia)

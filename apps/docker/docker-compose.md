@@ -1,4 +1,4 @@
-# Docker compose
+# Docker Compose
 
 Docker compose offers high level of abstraction for service definition.
 
