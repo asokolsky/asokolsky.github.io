@@ -1,3 +1,5 @@
+from typing import Optional
+
 
 class GlobalLogger:
     '''
@@ -5,11 +7,12 @@ class GlobalLogger:
     From https://stackabuse.com/python-specific-design-patterns/
     '''
 
-    _instance = None
+    _instance: Optional["GlobalLogger"] = None
 
     def __new__(cls, *args, **kwargs):
-        if not cls._instance:
-            cls._instance = super(GlobalLogger, cls).__new__(cls, *args, **kwargs)
+        if cls._instance is None:
+            cls._instance = super(GlobalLogger, cls).__new__(
+                cls, *args, **kwargs)
         return cls._instance
 
     def __init__(self):

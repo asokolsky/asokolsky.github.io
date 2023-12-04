@@ -10,6 +10,7 @@ comments: false
 * Python: [Better enum](programming/python/python-string-enum.html),
 [Server and Client-side Certificates](programming/python/https.html),
 [Virtual Environments](programming/python/pyenv-virtualenv.html)
+* [Software Engineering](software-engineering/)
 * [more...](programming/)
 
 ## Apps & Tasks
@@ -33,11 +34,10 @@ comments: false
 ## Linux
 
 * CLI: [bluetooth](linux/cli-bluetooth.html), [disk](linux/cli-disk.html),
-[format (flash) disk](linux/cli-disk-format.html),[find](linux/cli-find.html),
-[netstat](linux/cli-netstat.html),
-[pdsh](linux/cli-pdsh.html), [bulk rename](linux/cli-rename-files.html),
-[rsync](linux/cli-rsync.html), [systemctl](linux/cli-systemctl.html),
-and [more...](linux/cli.html)
+[format (flash) disk](linux/cli-disk-format.html), [find](linux/cli-find.html),
+[netstat](linux/cli-netstat.html), [pdsh](linux/cli-pdsh.html),
+[bulk rename](linux/cli-rename-files.html), [rsync](linux/cli-rsync.html),
+[systemctl](linux/cli-systemctl.html), and [more...](linux/cli.html)
 * [IPMI Config and cli](linux/cli-ipmi.html)
 * [Configure SSH for Key Authentication](linux/ssh.html)
 * [Kernel Tuning](linux/kernel-tuning.html)
@@ -53,12 +53,13 @@ and [more...](linux/cli.html)
 * [Jenkins](macos/jenkins.html)
 * [more...](macos/)
 
-## Misc
+## Misc Notes
 
+* [Blog Posts](posts.html)
 * [BSD](bsd/)
-* [Windows](windows/)
 * [Hardware](hardware/)
-* [blog posts](posts.html)
+* [Physics](physics/)
+* [Windows](windows/)
 
 
 [![LinkedIn

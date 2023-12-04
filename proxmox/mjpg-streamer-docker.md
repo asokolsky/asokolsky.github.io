@@ -80,8 +80,13 @@ In portainer pulled `badsmoke/mjpg-streamer`
 Using info from https://hub.docker.com/r/badsmoke/mjpg-streamer:
 
 ```sh
-docker run --device /dev/video0 -e "ENV_FPS=30" -e "ENV_RESOLUTION=1920x1080" \
-        -e "ENV_LOCATION=./www" -p 8080:8080 badsmoke/mjpg-streamer
+docker run --device /dev/video0 \
+        -e "ENV_CAMERA=/dev/video0" \
+        -e "ENV_FPS=30" \
+        -e "ENV_RESOLUTION=1920x1080" \
+        -e "ENV_LOCATION=./www" \
+        -p 8080:8080 \
+        badsmoke/mjpg-streamer
 ```
 
 ## Using it
