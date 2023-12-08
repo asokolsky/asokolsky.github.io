@@ -10,7 +10,7 @@ mic for both computer and regular telephone communication
 * record calls made on my laptop
 * conference phone calls and laptop calls.
 
-<img src="audio-zoom-p4.jpg" width="50%" heights="50%">s
+<img src="audio-zoom-p4.jpg" width="50%" heights="50%">
 
 PodTrack P4 setup details:
 
