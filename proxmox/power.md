@@ -157,6 +157,12 @@ this means turbo is disabled in BIOS.
 
 ## Addressing `powertop` Recommendations
 
+Create recommendation file:
+
+```sh
+sudo powertop --html
+```
+
 Add to `/etc/sysctl.conf`:
 
 ```

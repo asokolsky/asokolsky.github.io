@@ -28,7 +28,7 @@ If the function does not fit on your screen - it is too big.
 
 Conventions:
 [snake_case](https://en.wikipedia.org/wiki/Snake_case),
-[screaming snake case](https://developer.mozilla.org/en-US/docs/Glossary/Snake_case),
+[SCREAMING_SNAKE_CASE](https://developer.mozilla.org/en-US/docs/Glossary/Snake_case),
 [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Kebab_case),
 [dromedaryCase](https://en.wikipedia.org/wiki/Camel_case) /
 [CamelCase](https://en.wikipedia.org/wiki/Camel_case).
@@ -39,7 +39,7 @@ Pick the right one (you decide what that means), stick to it.
 
 Most commonly used approach:
 
-* have class name is capitalized, use CamelCase;
+* have class name capitalized, use CamelCase;
 * methods start with a lower case letter, use dromedaryCase.
 
 ### Functional Brackets
@@ -96,8 +96,8 @@ When naming variables:
 
 For example:
 
-* BAD: `port`, `socket_port`
-* GOOD: `app_port`, `ssh_port`
+* BAD: `port`, `address`
+* GOOD: `app_port`, `ssh_port`, `destination_address`
 
 ### Watch Your Language: Noun vs Verb, Singular vs Plural
 
