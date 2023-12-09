@@ -99,6 +99,24 @@ Jsonnet commandline interpreter v0.20.0
 
 [More examples](https://github.com/google/jsonnet/tree/master/examples).
 
+## Missing switch
+
+`switch` is missing but can be replaced with a function.
+
+`switch.libsonnet`:
+```
+{% include_relative switch.libsonnet %}
+```
+Then in your `foo.jsonnet`:
+```
+local switch = import 'switch.libsonnet';
+local replicas = switch(cluster.account, {
+   prod: 100,
+   stage: 10,
+   dev: 1,
+}),
+```
+
 ## Debugging Output
 
 This prints value of `clusters`` and returns it:

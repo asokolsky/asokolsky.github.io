@@ -7,7 +7,7 @@ Application setup and use:
 * [dot files](dot-files) and [fonts](fonts.html)
 * [exiftool](cli-exiftool.html)
 * [git](git/)
-* templating using [gomplate](gomplate.html), [jsonnet](jsonnet/)
+* templating using [gomplate](gomplate.html), [jsonnet](/programming/jsonnet/)
 * [Home Assistant](home-assistant/)
 * [Java VM Tuning](java-vm.html)
 * [k8s and kubectl](k8s/)

@@ -39,6 +39,10 @@ Variable|Description
 {% include_relative python.mak %}
 ```
 
+World class:
+
+* [git makefile](https://raw.githubusercontent.com/git/git/master/Makefile)
+
 ## Support in VSCode
 
 [Makefile Support in VS Code](https://devblogs.microsoft.com/cppblog/now-announcing-makefile-support-in-visual-studio-code/)
