@@ -30,6 +30,6 @@ on Mac OS.
 
 ## Option 3: Panasonic Lumix GH5
 
-[GH5](gh5.html) with [14mm F2.5 lens](https://www.amazon.com/dp/B00HV936AY)
-connected via USB3.  This is clearly an overkill.
-Power drain.
+[Panasonic GH5](panasonic-gh5.html) with a
+[14mm F2.5 lens](https://www.amazon.com/dp/B00HV936AY) connected via USB3.
+This is clearly an overkill.  Power drain.
