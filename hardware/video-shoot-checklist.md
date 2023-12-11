@@ -13,7 +13,7 @@ operate it in the dark under the time pressure.
 * check battery level
 * replace batteries
 * wipe (re-format, not delete!) storage clean
-* start recording and positively verify it is happening
+* start the recording and positively verify it is happening
 * check audio levels - adjustment not necessary
 * play back recording
 * mounting the recorder on a rig
@@ -26,7 +26,7 @@ Tasks to accomplish:
 * check battery level
 * replace batteries
 * wipe (re-format, not delete!) the storage clean
-* start recording and positively verify it is happening
+* start the recording and positively verify it is happening
 * play back recording
 * set the recording mode
 * set the overall exposure by changing ISO, exposure time (NOT! for all intents
@@ -34,6 +34,8 @@ and purposes  it is fixed for video) and aperture. Avoid blow outs by using
 [zebra](https://www.sony.com/electronics/support/articles/00077788).
 * Manually set the focus.
 Use [focus peaking](https://www.bhphotovideo.com/explora/photography/tips-and-solutions/what-is-focus-peaking).
+* set [white balance](https://www.exposureguide.com/white-balance/) or just
+stick to tungsten.
 * Mounting camera on and using video tripod.
 
 ## Pre-production
@@ -47,6 +49,7 @@ Days if not weeks in advance:
 
 Audio recorder location should be:
 
+* NOT on the emergency evacuation route;
 * as close to the source as possible yet not intrusive.
 * far enough from the audience to eliminate distracting noises/chatter
 
@@ -64,15 +67,13 @@ Deliverables:
 Video camera location should be:
 
 * NOT on the emergency evacuation route;
-* far enough from the audience to eliminate distracting noises/chatter
 * stable - bleachers, because of their instability may not cut it.
-
 
 What worked for me in the past:
 
 * reserve two seats in the top row, right in front of the stage.
 
-From must-haves to nice-to-have:
+Multiple cameras/locations, from must-haves to nice-to-have:
 
 * general view.  Here the entire stage is captured.  This station may NOT be
 manned. Use a 4K camera with the best dynamic range on manual settings.  Prime
@@ -116,12 +117,13 @@ Before the event: set the tripod and the camera up in the designated location.
 Install the lense if not there yet.  Power the camera up, check the batteries,
 wipe the storage.
 
-Set the overall exposure:
+Set the overall exposure (and white balance):
 
 * ask for the max lights;
 * have talent standing in the front of the stage.  Pick the talent
 dressed in the lightest outfit, e.g. white shirt or dress.
 * adjust the overall level of the exposure to avoid blow outs.
+* you may also adjust white balance if desired.  Sticking to tungsten works.
 
 Ideally the overall exposure will be left intact for the duration of the entire
 event unless you see the blow out zebras.  In that case reduce the aperture
