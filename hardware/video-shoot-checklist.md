@@ -20,6 +20,7 @@ operate it in the dark under the time pressure.
 
 ### Video
 
+[Panasonic GH5](panasonic-gh5.md).
 Tasks to accomplish:
 
 * power on/off
