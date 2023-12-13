@@ -8,4 +8,7 @@
 
 External links:
 
+* [Google Style Guides](https://google.github.io/styleguide/)
+* [Google Engineering Practices](https://google.github.io/eng-practices/)
+* [SWE at Google](https://abseil.io/resources/swe-book/html/toc.html)
 * [Tidyteam code review principles](https://code-review.tidyverse.org/)
