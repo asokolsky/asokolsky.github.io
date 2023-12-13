@@ -1,6 +1,11 @@
-# Panasonic GH5 Settings
+# Panasonic GH5
 
-## Sources
+[Basic manual](https://help.na.panasonic.com/wp-content/uploads/2023/02/DCGH5_DVQX1052ZA_ENG.pdf),
+[Advanced manual](https://help.na.panasonic.com/wp-content/uploads/2023/02/DCGH5_DVQP1117ZA_ENG.pdf)
+
+## Settings for Various Scenarios
+
+### Sources
 
 * [LUMIX Webcam
 Software](https://av.jpn.support.panasonic.com/support/global/cs/soft/download/lumix_webcam.html)
@@ -9,7 +14,7 @@ Software](https://av.jpn.support.panasonic.com/support/global/cs/soft/download/l
 model](https://av.jpn.support.panasonic.com/support/global/cs/soft/download/d_lumixtether2.html)
 * [A Short Guide on Using the LUMIX Teather](https://www.panasonic.com/uk/consumer/cameras-camcorders/lumix-expert-advice-learn/technique-technology/how-to-use-lumix-teather.html)
 
-## Webcam/Streaming
+### Webcam/Streaming
 
 Lumix Tether settings.
 
@@ -29,7 +34,7 @@ Parameter|Value
 ---------|-----
 Live View Quality|Fine
 
-## Event recording
+### Event recording
 
 Set manually.
 
