@@ -78,6 +78,7 @@ Instead of using git submodules, sometimes this may make more sense:
 
 ## More
 
+* [8 Easy Steps to Set Up Multiple GitHub Accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
 * [pre-commit hook](pre-commit-hook.html)
 * [custom git merge driver](custom-merge-driver.html)
 
