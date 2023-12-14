@@ -1,12 +1,6 @@
 # Programming
 
-## Topics in Software Engineering
-
-* [About Engineering in Software Engineering](https://docs.google.com/presentation/d/11PZ2vYSt0FWO--JqKaLNq41EPGts-Fke4JTMk5DfX-w/edit?usp=sharing)
-* [Release Planning](https://docs.google.com/presentation/d/1S5_x14j9xsDXMIUdbFzWreNUB1Zl7zxgm3SU-qgl64w/edit?usp=sharing)
-* [SE Career Map](https://docs.google.com/spreadsheets/d/1CXe5XkeCeE6VI6Q8ZortLTclGbZWGDpVxjosLSOdpcI/edit?usp=sharing)
-* [Infastructure as a code](https://docs.google.com/presentation/d/1mkxq0iV2Gg8YsO1oVeFctvEgzL0ii55BtUSnehjdQIo/edit?usp=sharing)
-
+[Topics in Software Engineering](/software-engineering)
 
 ## Software development apps
 
@@ -25,8 +19,8 @@
 * [Virtual Environment](python/pyenv-virtualenv.html)
 * [Server- and Client-side Certificates for Python Programmer](python/https.html)
 * Design patters examples: [singleton](python/global_logger.py),
-[pre-bound method](python//prebound_method_pattern.py),
-[sentinel](python//sentinel.py)
+[pre-bound method](python/prebound_method_pattern.py),
+[sentinel](python/sentinel.py)
 * Cheat sheet:
 [F-Strings Number Formatting](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
 * [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
