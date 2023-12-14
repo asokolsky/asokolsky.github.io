@@ -53,7 +53,7 @@ Usual apt update/upgrade
 
 ## Download install script
 
-Read [UniFi Installation Scripts](https://community.ui.com/questions/UniFi-Installation-Scripts-or-UniFi-Easy-Update-Script-or-Ubuntu-16-04-18-04-18-10-19-04-and-19-10-/ccbc7530-dd61-40a7-82ec-22b17f027776).
+Read [UniFi Installation Script](https://community.ui.com/questions/UniFi-Installation-Scripts-or-UniFi-Easy-Update-Script-or-Ubuntu-16-04-18-04-18-10-19-04-and-19-10-/ccbc7530-dd61-40a7-82ec-22b17f027776).
 
 Then
 
@@ -131,3 +131,36 @@ Note `stable` here:
 root@unicon:/etc/apt/sources.list.d# cat 100-ubnt-unifi.list
 deb https://www.ui.com/downloads/unifi/debian stable ubiquiti
 ```
+
+## 3 Years later
+
+MongoDB 3.6 got obsolete:
+
+```
+oot@unicon:~# apt update
+Get:1 https://dl.ui.com/unifi/debian stable InRelease [2292 B]
+E: Repository 'https://dl.ui.com/unifi/debian stable InRelease' changed its 'Codename' value from 'unifi-7.5' to 'unifi-8.0'
+N: This must be accepted explicitly before updates for this repository can be applied. See apt-secure(8) manpage for details.
+Do you want to accept these changes and continue updating from this repository? [y/N] Y
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Ign:5 https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 InRelease
+Get:6 https://dl.ui.com/unifi/debian stable/ubiquiti amd64 Packages [714 B]
+Hit:7 https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 Release
+Err:8 https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 Release.gpg
+  The following signatures were invalid: EXPKEYSIG 58712A2291FA4AD5 MongoDB 3.6 Release Signing Key <packaging@mongodb.com>
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1140 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-security/universe amd64 Packages [915 kB]
+Fetched 2286 kB in 13s (178 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+10 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 Release: The following signatures were invalid: EXPKEYSIG 58712A2291FA4AD5 MongoDB 3.6 Release Signing Key <packaging@mongodb.com>
+W: Failed to fetch https://repo.mongodb.org/apt/ubuntu/dists/xenial/mongodb-org/3.6/Release.gpg  The following signatures were invalid: EXPKEYSIG 58712A2291FA4AD5 MongoDB 3.6 Release Signing Key <packaging@mongodb.com>
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+```
+
+Downloaded latest version of the [Installation Script](https://community.ui.com/questions/UniFi-Installation-Scripts-or-UniFi-Easy-Update-Script-or-Ubuntu-16-04-18-04-18-10-19-04-and-19-10-/ccbc7530-dd61-40a7-82ec-22b17f027776)
+and ran it.  It gave me an opportunity to update MondoDB to 4.4.  Outstanding!
