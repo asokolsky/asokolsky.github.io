@@ -1,9 +1,11 @@
-# Setup WireGuard
+# Setup WireGuard in a Cloud
 
 This will setup:
 
 * a server in a cloud;
 * multiple peers.
+
+UPDATE: this information is obsolete.
 
 ## WireGuard Server Setup
 

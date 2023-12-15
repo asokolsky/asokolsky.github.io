@@ -13,7 +13,6 @@ Application setup and use:
 * [k8s and kubectl](k8s/)
 * [make and Makefile](make/)
 * [mqtt](mqtt.html)
-* [Lan-to-Lan Wireguard](wireguard.html)
 * [LDAP & AD search](cli-ldap.html)
 * [OBS](obs.html)
 * [Prometheus & Grafana](prometheus-grafana.html)
@@ -24,6 +23,8 @@ Application setup and use:
 * [terraform](terraform.html)
 * [VLC](vlc.html)
 * [Visual Studio Code](vscode/)
+* Wireguard [in-a-cloud](wireguard-in-a-cloud.md),
+[on-a-router](wireguard-on-a-router.md)
 * [ZFS setup and commands](zfs/)
 * [zsh](zsh/)
 
