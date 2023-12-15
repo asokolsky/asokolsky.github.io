@@ -172,3 +172,25 @@ Cluster Name    vault-cluster-0a79465b
 Cluster ID      25e8101e-8489-de59-047c-d70440b42a0a
 HA Enabled      false
 ```
+
+## Vault as a service
+
+```
+cat <<EOF | sudo tee /etc/systemd/system/vault.service
+{% include_relative vault.service %}
+EOF
+```
+
+```
+systemctl status -l vault
+* vault.service - "HashiCorp Vault - A tool for managing secrets"
+     Loaded: loaded (/lib/systemd/system/vault.service; disabled; vendor preset: enabled)
+     Active: activating (start) since Thu 2023-12-14 03:08:08 UTC; 1min 4s ago
+       Docs: https://developer.hashicorp.com/vault/docs
+   Main PID: 544 (vault)
+      Tasks: 6 (limit: 38261)
+     Memory: 22.4M
+        CPU: 108ms
+     CGroup: /system.slice/vault.service
+             `-544 /usr/bin/vault server -config=/etc/vault.d/vault.hcl
+```
