@@ -1,16 +1,23 @@
-# Setup WireGuard in a Cloud
+# Setup WireGuard on a Router
 
 This will setup:
 
 * a wireguard "server" on a pfSense router;
 * multiple peers, including mobile device and another pfSense router
 
-https://www.youtube.com/watch?v=MZf2rOnQ4jc
+* https://docs.netgate.com/pfsense/en/latest/recipes/wireguard-s2ms.html
+* https://docs.netgate.com/pfsense/en/latest/recipes/wireguard-s2s.html
+* https://www.youtube.com/watch?v=MZf2rOnQ4jc
 
 
 ## Install WireGuard
 
 Install wireguard package.
+
+## Network architecture
+
+* Tunnel subnet: 10.10.0.0/16
+*
 
 ## Create a Wireguard tunnel
 
@@ -22,8 +29,18 @@ VPN/WireGuard/Tunnels - create new:
 
 ## Assign Wireguard to an Interface
 
-Named interface tun_wg0
+* Named interface tun_wg0;
+* assign a static IP on a tunnel subnet /16, save it;
+* do NOT block private networks
+* do NOT block bogon networks
 
 ## Create Peers, one per connection
+
+Use the other side public key and endpoint.
+
+Allowed IPs:
+
+* add the other side subnet
+* add WG subnet
 
 ## Firewall Rules
