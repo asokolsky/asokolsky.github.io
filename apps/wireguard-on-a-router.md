@@ -5,8 +5,11 @@ This will setup:
 * a wireguard "server" on a pfSense router;
 * multiple peers, including mobile device and another pfSense router
 
-* https://docs.netgate.com/pfsense/en/latest/recipes/wireguard-s2ms.html
-* https://docs.netgate.com/pfsense/en/latest/recipes/wireguard-s2s.html
+Sources:
+* Netgate wireguard recipes:
+[remote access](https://docs.netgate.com/pfsense/en/latest/recipes/wireguard-ra.html),
+[site-to-milti-site](https://docs.netgate.com/pfsense/en/latest/recipes/wireguard-s2ms.html),
+[site-to-site](https://docs.netgate.com/pfsense/en/latest/recipes/wireguard-s2s.html).
 * https://www.youtube.com/watch?v=MZf2rOnQ4jc
 
 
