@@ -43,3 +43,9 @@ governs used of "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 
 * [Render](https://dashboard.render.com/env-groups)
 * [The Valley of Code](https://thevalleyofcode.com/)
+
+Identify your external IP Address:
+```
+> curl http://icanhazip.com/
+12.226.155.251
+```

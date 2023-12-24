@@ -152,9 +152,12 @@ foo --calls--> baz
 
 ### Payload Format
 
-On the wire use
-[JSON](https://en.wikipedia.org/wiki/JSON) or
-[Protocol Buffers](https://en.wikipedia.org/wiki/Protocol_Buffers).
+[Comparison of data serialization formats](https://en.wikipedia.org/wiki/Comparison_of_data-serialization_formats).
+
+On the wire use any one of:
+* [JSON](https://en.wikipedia.org/wiki/JSON);
+* [BSON](https://en.wikipedia.org/wiki/BSON);
+* [Protocol Buffers](https://en.wikipedia.org/wiki/Protocol_Buffers).
 
 Do not use [XML](https://en.wikipedia.org/wiki/XML).
 

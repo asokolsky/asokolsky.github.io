@@ -12,3 +12,4 @@ External links:
 * [Google Engineering Practices](https://google.github.io/eng-practices/)
 * [SWE at Google](https://abseil.io/resources/swe-book/html/toc.html)
 * [Tidyteam code review principles](https://code-review.tidyverse.org/)
+* [The Twelve-Factor App](https://12factor.net/)
