@@ -1,0 +1,22 @@
+# Comment the following line if you don't want to reset your VLM configuration
+del all
+
+new ch1 broadcast enabled
+setup ch1 input "rtsp://user:pass@192.168.1.101:554/stream1"
+setup ch1 output #mosaic-bridge{id=ch1,width=1280,height=512}
+
+new ch2 broadcast enabled
+setup ch2 input "rtsp://user:pass@192.168.1.102:554/stream1"
+setup ch2 output #mosaic-bridge{id=ch2,width=1280,height=512}
+
+new bg broadcast enabled
+# The following background file is simply a black picture with specified dimensions, you can create one with any image editor, like mspaint, it is required for proper mosaic size
+setup bg input "bg_1280x1024.jpg"
+setup bg option image-duration=-1
+setup bg output #transcode{vcodec=mp4v,vb=0,fps=0,acodec=none,channels=2,sfilter=mosaic{alpha=255,width=1280,height=1080,cols=1,rows=2,position=1,order="ch1,ch2",keep-aspect-ratio=enabled,mosaic-align=0,keep-picture=1}}:bridge-in{offset=100}:display
+
+control bg play
+control ch1 play
+control ch2 play
+
+# end of mosaic batch
