@@ -148,6 +148,17 @@ It is possible to generate new unseal keys, provided you have a quorum of
 existing unseal keys shares. See "vault operator rekey" for more information.
 ```
 
+For suprox:
+```
+Unseal Key 1: LohsDZtVdTmwvYDyODhyGUgkmrk4OSqG1B2Bpxt3cGbE
+Unseal Key 2: XBFYvEoQYMQzNMOADL+AvANV4vyfi12ycv1fURXklzKX
+Unseal Key 3: cRiQoSJnECsTt6aKBS8hvsm8/kAIcRzUZ3kgDwZOpecn
+Unseal Key 4: 17TEfR5ZS8l/dsjqCIcPW2yEeTI5WaxylWoQWW9PyCke
+Unseal Key 5: 3Nhpx0pwzpiI1OKOqvYM2w9C0327eyJGIu+Egbx2l1hP
+
+Initial Root Token: hvs.iNt86WeAqzqUw6AtGmBnoOdo
+```
+
 Now point your browser to http://vault:8200/ and
 
 * use 3 of the above keys to unseal the vault
