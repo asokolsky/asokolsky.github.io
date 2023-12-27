@@ -7,7 +7,7 @@ operate it in the dark under the time pressure.
 
 ### Audio
 
-[Sony PCM-M10](sony-pcm-m10.md).  Tasks to accomplish:
+[Sony PCM-M10](sony-pcm-m10.html).  Tasks to accomplish:
 
 * power on/off
 * check battery level
@@ -20,7 +20,7 @@ operate it in the dark under the time pressure.
 
 ### Video
 
-[Panasonic GH5](panasonic-gh5.md).
+[Panasonic GH5](panasonic-gh5.html).
 Tasks to accomplish:
 
 * power on/off

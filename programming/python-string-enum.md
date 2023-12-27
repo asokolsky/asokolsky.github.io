@@ -1,2 +1,2 @@
 
-[Moved here](./python/python-string-enum.md)
+[Moved here](./python/python-string-enum.html)

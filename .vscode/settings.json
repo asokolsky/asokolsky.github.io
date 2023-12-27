@@ -3,6 +3,7 @@
         "HTPC",
         "iperf",
         "Mbits",
+        "MJPG",
         "Mosquitto",
         "Octoprint",
         "Optiplex",
@@ -10,6 +11,7 @@
         "powerline",
         "Prusa",
         "Realtek",
+        "RTSP",
         "setw",
         "strvalue",
         "Thinkpad",
@@ -17,4 +19,7 @@
         "Ubiquiti",
         "Xeon"
     ],
+    "files.associations": {
+        "*.yaml": "home-assistant"
+    },
 }

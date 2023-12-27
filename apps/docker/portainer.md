@@ -2,7 +2,7 @@
 
 I use portainer to run docker images.
 
-See also other [portainer on Proxmox notes](/proxmox/portainer.md)
+See also other [portainer on Proxmox notes](/proxmox/portainer.html)
 
 ## Install
 

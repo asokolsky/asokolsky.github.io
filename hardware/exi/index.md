@@ -1,6 +1,6 @@
 # exi
 
-Virtualization server with GPU and [HBA](../hba-lsi.md) passed through.
+Virtualization server with GPU and [HBA](../hba-lsi.html) passed through.
 
 ## Hardware
 

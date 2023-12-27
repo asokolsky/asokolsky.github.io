@@ -23,8 +23,8 @@ Application setup and use:
 * [terraform](terraform.html)
 * [VLC](vlc.html)
 * [Visual Studio Code](vscode/)
-* Wireguard [in-a-cloud](wireguard-in-a-cloud.md),
-[on-a-router](wireguard-on-a-router.md)
+* Wireguard [in-a-cloud](wireguard-in-a-cloud.html),
+[on-a-router](wireguard-on-a-router.html)
 * [ZFS setup and commands](zfs/)
 * [zsh](zsh/)
 

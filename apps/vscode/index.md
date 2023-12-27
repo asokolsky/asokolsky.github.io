@@ -45,9 +45,9 @@ On MacOS:
 ```
 ## Standard Keyboard Bindings
 
-* [Linux](keys-linux.md)
-* [MacOS](keys-mac.md)
-* [Windows](keys-windows.md)
+* [Linux](keys-linux.html)
+* [MacOS](keys-mac.html)
+* [Windows](keys-windows.html)
 
 ## Command Palette
 

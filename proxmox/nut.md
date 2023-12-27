@@ -75,14 +75,7 @@ Set NUT into a stand-alone mode by editing `/etc/nut/nut.conf`
 #  You MUST NOT use spaces around the equal sign!
 MODE=standalone
 ```
-## Configure UPSD
 
-Configure UPSD via `/etc/nut/upsd.conf`:
-
-```
-LISTEN 127.0.0.1 3493
-LISTEN ::1 3493
-```
 ## Configure UPSMon
 
 Configure UPSMon via `/etc/nut/upsmon.conf`:
