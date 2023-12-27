@@ -11,7 +11,7 @@ Long term: add it to [frigate](https://frigate.video/) install.
 
 ## Identify inputs and the formats
 
-See Prerequisites section from [ffmeg](ffmpeg.md).
+See Prerequisites section from [ffmeg](ffmpeg.html).
 
 ## Start the RTSP server
 
@@ -40,7 +40,7 @@ Status: Downloaded newer image for bluenviron/mediamtx:latest-ffmpeg
 
 ## Connect your webcam
 
-Test your [ffmpeg command](ffmpeg.md) by recording audio and video into a file.
+Test your [ffmpeg command](ffmpeg.html) by recording audio and video into a file.
 Then, instead of a file, forward the streams into the RTSP server:
 
 ```
@@ -52,7 +52,7 @@ ffmpeg \
 
 ## Consume the stream
 
-Make sure your vlc [has support for RTSP](vlc.md).  Then:
+Make sure your vlc [has support for RTSP](vlc.html).  Then:
 
 ```sh
 vlc rtsp://192.168.11.178:8554/live

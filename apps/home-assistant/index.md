@@ -1,6 +1,6 @@
 # Home Assistant - Configuration and Use
 
-[Install in a VM](/proxmox/guest-home-assistant.md).
+[Install in a VM](/proxmox/guest-home-assistant.html).
 
 ## Configuration Editing
 
@@ -10,7 +10,7 @@ Start with https://www.home-assistant.io/docs/configuration/ and VScode add-on.
 
 ## [Mount NAS Shares](nas.html)
 
-## [Integrate Proxmox](pve.md)
+## [Integrate Proxmox](pve.html)
 
 ## [MQTT Integration](mqtt.html)
 

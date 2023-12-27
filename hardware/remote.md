@@ -7,7 +7,7 @@ remote.  But the technique should be applicable to any keyboard.
 Information sources:
 
 * [source1](https://derickrethans.nl/logitech-r400-take2.html);
-* [source2](https://github.com/Shuunen/snippets/blob/master/manuals/logitech-r400-remap.md);
+* [source2](https://github.com/Shuunen/snippets/blob/master/manuals/logitech-r400-remap.html);
 * [Finding USB devices with lsusb & idVendor –
 idProduct](https://www.derekdemuro.com/2020/06/06/finding-usb-devices-with-lsusb-idvendor-idproduct/);
 * comments in `/lib/udev/hwdb.d/60-keyboard.hwdb`.

@@ -7,10 +7,10 @@ use [with webcam](https://trac.ffmpeg.org/wiki/Capture/Webcam).
 
 Know thyself:
 
-* [Use](/hardware/usb-audio.md) `pacmd list-sources` to identify the audio
+* [Use](/hardware/usb-audio.html) `pacmd list-sources` to identify the audio
 recording devices available.
 I picked `alsa_input.usb-046d_HD_Pro_Webcam_C920_CDF1191F-02.analog-stereo`.
-* [Use](/hardware/usb-video.md) `v4l2-ctl --list-formats-ext -d /dev/video4` to
+* [Use](/hardware/usb-video.html) `v4l2-ctl --list-formats-ext -d /dev/video4` to
 identify video formats available.  I picked MJPG 192x1080.
 
 ## Recording

@@ -1,6 +1,6 @@
 # cvlc-streamer in a docker container
 
-[mjpg-streamer](mjpg-streamer-docker.md) is great!  Except:
+[mjpg-streamer](mjpg-streamer-docker.html) is great!  Except:
 
 * mjpg is not good enough
 * and mjpg-streamer does not do transcoding to H264/H265
@@ -16,7 +16,7 @@ https://hub.docker.com/r/gersilex/cvlc
 https://en.wikipedia.org/wiki/ONVIF
 
 This proved to be a dead-end, decided to go with
-[ffmpeg+mediamtx](../apps/webcam2rtsp.md) solution.
+[ffmpeg+mediamtx](../apps/webcam2rtsp.html) solution.
 
 ## Identify capture formats supported
 

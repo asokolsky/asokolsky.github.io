@@ -16,7 +16,7 @@ Peripherals:
 Audio / Video:
 
 * Business [Audio](business-audio.html) and [Video](business-video.html)
-* Audio recorders: [Sony PCM-M10](sony-pcm-m10.md)
+* Audio recorders: [Sony PCM-M10](sony-pcm-m10.html)
 * Video cameras: [Logitech Brio 4k](brio.html),
 [Panasonic GH5](panasonic-gh5.html)
 * [Prusa MK3S with RPi Zero W](prusa-mk3s-rpi0w/)
