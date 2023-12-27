@@ -42,16 +42,12 @@ Use:
 
 ## PipeWire Use
 
+Evolving middleware alternative:
+[Pipewire](https://wiki.archlinux.org/title/PipeWire):
+
 * [PipeWire](https://pipewire.org/) with [Jack](https://jackaudio.org/)
 * to get there use
 [Ubuntu Studio 23.10](https://ubuntustudio.org/ubuntu-studio-installer/)
-
-##
-
-
-Evolving middleware alternative:
-[Pipewire](https://wiki.archlinux.org/title/PipeWire).
-
 
 ## Setting Multichannel Audio Output with ALSA
 

@@ -1,4 +1,4 @@
-# VLC Settings
+# Video Lan Client (VLC) Use
 
 [vlc cli](https://wiki.videolan.org/VLC_command-line_help/)
 
@@ -68,24 +68,36 @@ ioctl: VIDIOC_ENUM_FMT
                 Size: Discrete 160x120
                         Interval: Discrete 0.033s (30.000 fps)
 ```
-Based on the above, one arrives at MJPG, 1280x720.
+Based on the above, one arrives at MJPG, 1280x720, as the best format for video
+capture.
 
 To display webcam in the default format:
 ```sh
 vlc v4l2:///dev/video0
 ```
-You can be more specific (see
-[v4l2 module cli](https://wiki.videolan.org/Documentation:Modules/v4l2/))
-:
-```
-vlc 'v4l2:///dev/video4:width=1920:height=1080:fps=30:chroma=MJPG'
-```
-and even specify metadata:
 
+Specify the video capture
+[format](https://wiki.videolan.org/Documentation:Modules/v4l2/)
+and metadata on the command line:
 ```sh
 vlc --meta-title='Live Feed' \
     --meta-description='Straight from my desk' \
     'v4l2:///dev/video4:width=1920:height=1080:fps=15:chroma=H264:stereo=disabled:samplerate:44100'
+```
+
+[v4l2 module cli](https://wiki.videolan.org/Documentation:Modules/v4l2/).
+
+## RTSP Support
+
+vlc in some distros is packed without RTSP support due to a
+[license](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=982299)
+[issue](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=981439).
+
+Use snap instead:
+
+```sh
+sudo apt purge -y vlc
+snap install vlc
 ```
 
 ## Video Streaming
