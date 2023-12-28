@@ -43,4 +43,4 @@ You should be good to go:
 java -version
 ```
 
-[Fine tune](../java-vm.html) your Java VM install.
+[Fine tune](/apps/java-vm.html) your Java VM install.
