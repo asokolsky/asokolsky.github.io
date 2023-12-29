@@ -71,10 +71,6 @@ ioctl: VIDIOC_ENUM_FMT
                         Interval: Discrete 0.200s (5.000 fps)
 ```
 
-## Pull `mjpg-streamer` docker image
-
-In portainer pulled `badsmoke/mjpg-streamer`
-
 ## Running `mjpg-streamer` docker image
 
 Using info from https://hub.docker.com/r/badsmoke/mjpg-streamer:

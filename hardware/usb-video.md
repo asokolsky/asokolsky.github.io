@@ -215,16 +215,20 @@ and the attributes from one single parent device.
     ATTRS{waiting_for_supplier}=="0"
 ```
 
-## Verify v4l devices
+## Verify and list v4l devices
 
+By ID:
 ```
-alex@latitude7490:/etc/udev/rules.d/ > ls -la /dev/v4l/by-id/
+> ls -la /dev/v4l/by-id/
 total 0
 drwxr-xr-x 2 root root 80 Jan 19 10:34 .
 drwxr-xr-x 4 root root 80 Jan 19 10:34 ..
 lrwxrwxrwx 1 root root 12 Jan 19 10:34 usb-CN0K0KM8LOG007BG018TA00_Integrated_Webcam_HD_200901010001-video-index0 -> ../../video2
 lrwxrwxrwx 1 root root 12 Jan 19 10:34 usb-CN0K0KM8LOG007BG018TA00_Integrated_Webcam_HD_200901010001-video-index1 -> ../../video1
-alex@latitude7490:/etc/udev/rules.d/ > ls -la /dev/v4l/by-path
+```
+By path:
+```
+> ls -la /dev/v4l/by-path
 total 0
 drwxr-xr-x 2 root root 120 Jan 19 10:34 .
 drwxr-xr-x 4 root root  80 Jan 19 10:34 ..
@@ -234,8 +238,25 @@ lrwxrwxrwx 1 root root  12 Jan 19 10:34 pci-0000:00:14.0-usb-0:5:1.2-video-index
 lrwxrwxrwx 1 root root  12 Jan 19 10:34 pci-0000:00:14.0-usb-0:5:1.2-video-index1 -> ../../video3
 ```
 
-## List Native Video Formats
+Or:
+```
+> ls  -1 /dev/video*
+/dev/video1
+/dev/video2
+```
 
+Or just:
+```sh
+v4l2-ctl --list-devices
+```
+
+## List Native Video Formats for the Device
+
+Use:
+```sh
+v4l2-ctl --list-formats-ext --device /dev/video1
+```
+e.g., for a default device `/dev/video0`:
 ```
 root@duo:~# v4l2-ctl --list-formats-ext
 ioctl: VIDIOC_ENUM_FMT
@@ -285,7 +306,9 @@ ioctl: VIDIOC_ENUM_FMT
                         Interval: Discrete 0.200s (5.000 fps)
 ```
 
-## List All Camera Capabilities
+## List All the Camera Capabilities
+
+For a default video device `/dev/video0`:
 ```
 root@duo:~# v4l2-ctl --all
 Driver Info:
