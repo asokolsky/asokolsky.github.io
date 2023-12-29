@@ -217,14 +217,18 @@ and the attributes from one single parent device.
 
 ## Verify and list v4l devices
 
+By ID:
 ```
-alex@latitude7490:/etc/udev/rules.d/ > ls -la /dev/v4l/by-id/
+> ls -la /dev/v4l/by-id/
 total 0
 drwxr-xr-x 2 root root 80 Jan 19 10:34 .
 drwxr-xr-x 4 root root 80 Jan 19 10:34 ..
 lrwxrwxrwx 1 root root 12 Jan 19 10:34 usb-CN0K0KM8LOG007BG018TA00_Integrated_Webcam_HD_200901010001-video-index0 -> ../../video2
 lrwxrwxrwx 1 root root 12 Jan 19 10:34 usb-CN0K0KM8LOG007BG018TA00_Integrated_Webcam_HD_200901010001-video-index1 -> ../../video1
-alex@latitude7490:/etc/udev/rules.d/ > ls -la /dev/v4l/by-path
+```
+By path:
+```
+> ls -la /dev/v4l/by-path
 total 0
 drwxr-xr-x 2 root root 120 Jan 19 10:34 .
 drwxr-xr-x 4 root root  80 Jan 19 10:34 ..
@@ -232,6 +236,13 @@ lrwxrwxrwx 1 root root  12 Jan 19 10:34 pci-0000:00:14.0-usb-0:5:1.0-video-index
 lrwxrwxrwx 1 root root  12 Jan 19 10:34 pci-0000:00:14.0-usb-0:5:1.0-video-index1 -> ../../video1
 lrwxrwxrwx 1 root root  12 Jan 19 10:34 pci-0000:00:14.0-usb-0:5:1.2-video-index0 -> ../../video2
 lrwxrwxrwx 1 root root  12 Jan 19 10:34 pci-0000:00:14.0-usb-0:5:1.2-video-index1 -> ../../video3
+```
+
+Or:
+```
+> ls  -1 /dev/video*
+/dev/video1
+/dev/video2
 ```
 
 Or just:

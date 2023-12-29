@@ -5,13 +5,22 @@ use [with webcam](https://trac.ffmpeg.org/wiki/Capture/Webcam).
 
 ## Prerequisites
 
-Know thyself:
+Know thyself.
 
-* [Use](/hardware/usb-audio.html) `pacmd list-sources` to identify the audio
-recording devices available.
+Identify the audio recording devices available
+[with](/hardware/usb-audio.html) `pacmd list-sources`.
 I picked `alsa_input.usb-046d_HD_Pro_Webcam_C920_CDF1191F-02.analog-stereo`.
-* [Use](/hardware/usb-video.html) `v4l2-ctl --list-formats-ext -d /dev/video4` to
-identify video formats available.  I picked MJPG 192x1080.
+
+Identify the video formats available
+[using](/hardware/usb-video.html)
+```sh
+v4l2-ctl --list-formats-ext -d /dev/video4
+```
+or
+```sh
+ffmpeg -f v4l2 -list_formats all -i /dev/video0
+```
+I picked MJPG 1920x1080.
 
 ## Recording
 
@@ -32,7 +41,34 @@ ffmpeg -y \
     -c:v libx264 -preset faster -c:a ac3_fixed \
     -metadata title="From my desk" out.mkv
 ```
+To avoid re-compression:
+```sh
+ffmpeg \
+    -f v4l2 -framerate 30 -video_size 1280x720 -input_format mjpeg -i /dev/video0 \
+    -c copy out.mkv
+```
+
+Then:
+
+## Take a picture
+
+```sh
+ffmpeg -f v4l2 -video_size 1280x720 -i /dev/video0 -frames 1 out.jpg
+```
 
 ## Streaming
 
 https://trac.ffmpeg.org/wiki/StreamingGuide
+
+## More Utilities
+
+Use [ffprobe](https://ffmpeg.org/ffprobe.html) to display stream info:
+
+```sh
+ffprobe out.mkv
+```
+
+Simple player:
+```sh
+ffplay /dev/video0
+```
