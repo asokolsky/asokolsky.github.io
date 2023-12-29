@@ -27,7 +27,7 @@ Networking:
 * [Realtek RTL8125 2.5 GB Ethernet](network-r8125.html) - don't use it!
 * [Ubiquiti EdgeRouter X](ubiquiti.html)
 
-[Home Office](/_posts/2021-01-01-home-office.html)
+[Home Office](/2021-01-01-home-office.html)
 
 Home Lab
 
