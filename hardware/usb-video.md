@@ -215,7 +215,7 @@ and the attributes from one single parent device.
     ATTRS{waiting_for_supplier}=="0"
 ```
 
-## Verify v4l devices
+## Verify and list v4l devices
 
 ```
 alex@latitude7490:/etc/udev/rules.d/ > ls -la /dev/v4l/by-id/
@@ -234,8 +234,18 @@ lrwxrwxrwx 1 root root  12 Jan 19 10:34 pci-0000:00:14.0-usb-0:5:1.2-video-index
 lrwxrwxrwx 1 root root  12 Jan 19 10:34 pci-0000:00:14.0-usb-0:5:1.2-video-index1 -> ../../video3
 ```
 
-## List Native Video Formats
+Or just:
+```sh
+v4l2-ctl --list-devices
+```
 
+## List Native Video Formats for the Device
+
+Use:
+```sh
+v4l2-ctl --list-formats-ext --device /dev/video1
+```
+e.g., for a default device `/dev/video0`:
 ```
 root@duo:~# v4l2-ctl --list-formats-ext
 ioctl: VIDIOC_ENUM_FMT
@@ -285,7 +295,9 @@ ioctl: VIDIOC_ENUM_FMT
                         Interval: Discrete 0.200s (5.000 fps)
 ```
 
-## List All Camera Capabilities
+## List All the Camera Capabilities
+
+For a default video device `/dev/video0`:
 ```
 root@duo:~# v4l2-ctl --all
 Driver Info:
