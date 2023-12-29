@@ -5,7 +5,6 @@ tags: ai
 
 ChatGPT-like chatbot:
 
-* [source](ChatGPT-like chatbot using a single GPU)
 * [tloen/alpaca-lora](https://github.com/tloen/alpaca-lora)
 * Model Card: [tloen/alpaca-lora-7b](https://huggingface.co/tloen/alpaca-lora-7b)
 * Hugging Face Demo: [Alpaca-LoRA-Serve](https://huggingface.co/spaces/chansung/Alpaca-LoRA-Serve)

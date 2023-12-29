@@ -8,7 +8,7 @@ Installed Ubuntu server 22.04 on
 * `minimum` config - even `nano` not available, yet `htop` is there!
 * installed on `sda`, NVME disk left for later use...
 
-[Hosts](../hardware/optiplex7060micro.html):
+[Hosts](/hardware/optiplex7060micro.html):
 
 Host|IP
 ----|-

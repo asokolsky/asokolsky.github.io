@@ -5,7 +5,7 @@
 ## Software development apps
 
 * [git](/apps/git/)
-* [jsonnet](/apps/jsonnet/)
+* [jsonnet](jsonnet/)
 * [make and Makefile](/apps/make/)
 * [Visual Studio Code](/apps/vscode/)
 * [Color your console output](python/color-console.html)
