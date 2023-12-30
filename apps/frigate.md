@@ -1,0 +1,3 @@
+# Frigate NVR
+
+## Install

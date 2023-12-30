@@ -6,6 +6,7 @@ Application setup and use:
 * [docker](docker/)
 * [dot files](dot-files) and [fonts](fonts.html)
 * [exiftool](cli-exiftool.html)
+* [frigate nvr](frigate.html)
 * [git](git/)
 * templating using [gomplate](gomplate.html), [jsonnet](/programming/jsonnet/)
 * [Home Assistant](home-assistant/)
