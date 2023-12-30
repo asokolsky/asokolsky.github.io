@@ -6,6 +6,7 @@ Application setup and use:
 * [docker](docker/)
 * [dot files](dot-files) and [fonts](fonts.html)
 * [exiftool](cli-exiftool.html)
+* [frigate nvr](frigate.html)
 * [git](git/)
 * templating using [gomplate](gomplate.html), [jsonnet](/programming/jsonnet/)
 * [Home Assistant](home-assistant/)
@@ -23,8 +24,8 @@ Application setup and use:
 * [terraform](terraform.html)
 * [VLC](vlc.html)
 * [Visual Studio Code](vscode/)
-* Wireguard [in-a-cloud](wireguard-in-a-cloud.md),
-[on-a-router](wireguard-on-a-router.md)
+* Wireguard [in-a-cloud](wireguard-in-a-cloud.html),
+[on-a-router](wireguard-on-a-router.html)
 * [ZFS setup and commands](zfs/)
 * [zsh](zsh/)
 

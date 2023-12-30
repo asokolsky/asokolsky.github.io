@@ -5,12 +5,12 @@
 ## Software development apps
 
 * [git](/apps/git/)
-* [jsonnet](/apps/jsonnet/)
+* [jsonnet](jsonnet/)
 * [make and Makefile](/apps/make/)
 * [Visual Studio Code](/apps/vscode/)
 * [Color your console output](python/color-console.html)
 * [ruby](/apps/ruby.html)
-* generic [best practices](best-practices.md)
+* generic [best practices](best-practices.html)
 
 ## Python
 

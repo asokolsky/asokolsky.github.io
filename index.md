@@ -23,8 +23,8 @@ comments: false
 * [exiftool](apps/cli-exiftool.html)
 * Network [planning with ipcalc](linux/cli-ipcalc.html),
 [performance testing with iperf](linux/cli-iperf.html)
-* Wireguard [in-a-cloud](apps/wireguard-in-a-cloud.md),
-[on-a-router](apps/wireguard-on-a-router.md)
+* Wireguard [in-a-cloud](apps/wireguard-in-a-cloud.html),
+[on-a-router](apps/wireguard-on-a-router.html)
 * [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
 * Cheat sheets: [docker](apps/docker/docker.html), [emacs](apps/emacs.html),

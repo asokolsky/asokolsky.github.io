@@ -36,7 +36,7 @@ I usually
 * [on Linux](https://www.emacswiki.org/emacs/MovingTheCtrlKey#h5o-2)
 using the keyboard settings GUI
 * [on MacOS](https://www.emacswiki.org/emacs/MovingTheCtrlKey#h5o-14)
-using [karabiner](../macos/keyboard.md)
+using [karabiner](../macos/keyboard.html)
 * [on Windows](https://www.emacswiki.org/emacs/MovingTheCtrlKey#h5o-15)
 using [registry hack](../windows/SwapCapsCtrl.reg)
 
@@ -226,5 +226,5 @@ Cancel current command|C-g|
 
 ## Color Theme
 
-Must have [Color Theme](./color-themes.md), e.g.
+Must have [Color Theme](./color-themes.html), e.g.
 [Dracula](https://draculatheme.com/emacs)!

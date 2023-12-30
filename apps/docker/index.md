@@ -1,7 +1,7 @@
 # Docker Info
 
-* [docker-compose](docker-compose.md)
-* [Install on MacOS](docker-macos.md)
-* [Cheat Sheet](docker.md)
-* [Dockerfile](dockerfile.md)
-* [Portainer](portainer.md)
+* [docker-compose](docker-compose.html)
+* [Install on MacOS](docker-macos.html)
+* [Cheat Sheet](docker.html)
+* [Dockerfile](dockerfile.html)
+* [Portainer](portainer.html)

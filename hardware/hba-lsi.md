@@ -24,7 +24,7 @@ I will:
 
 ## Prepare the UEFI USB stick
 
-It must be [formatted](/linux/cli-disk-format.md) as FAT16 or FAT32.
+It must be [formatted](/linux/cli-disk-format.html) as FAT16 or FAT32.
 
 [flashing-firmware-and-bios-on-lsi-sas-hbas](https://www.broadcom.com/support/knowledgebase/1211161501344/flashing-firmware-and-bios-on-lsi-sas-hbas)
 contains the firmware updater `sas3flash.efi`.

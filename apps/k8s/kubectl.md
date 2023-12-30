@@ -6,7 +6,7 @@ From
 * https://cheat-sheets.nicwortel.nl/kubectl-cheat-sheet.pdf
 * https://dockerlabs.collabnix.com/kubernetes/cheatsheets/kubectl.html
 
-[Installation](install.html)
+[Installation](kubectl-install.html) and [more](index.html).
 
 ## Configuration File and Environment Variables
 

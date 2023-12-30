@@ -5,7 +5,7 @@ The plan is to have Portainer to manage docker containers.  For that to happen:
 * run docker on Proxmox itself, i.e. not inside a VM or LXC container,
 * run Portainer in a docker container
 
-See also other [portainer notes](/apps/docker/portainer.md)
+See also other [portainer notes](/apps/docker/portainer.html)
 
 ## Install Docker
 

@@ -16,7 +16,7 @@ Peripherals:
 Audio / Video:
 
 * Business [Audio](business-audio.html) and [Video](business-video.html)
-* Audio recorders: [Sony PCM-M10](sony-pcm-m10.md)
+* Audio recorders: [Sony PCM-M10](sony-pcm-m10.html)
 * Video cameras: [Logitech Brio 4k](brio.html),
 [Panasonic GH5](panasonic-gh5.html)
 * [Prusa MK3S with RPi Zero W](prusa-mk3s-rpi0w/)
@@ -27,7 +27,7 @@ Networking:
 * [Realtek RTL8125 2.5 GB Ethernet](network-r8125.html) - don't use it!
 * [Ubiquiti EdgeRouter X](ubiquiti.html)
 
-[Home Office](../_posts/2021-01-01-home-office.html)
+[Home Office](/2021/01/01/home-office.html)
 
 Home Lab
 

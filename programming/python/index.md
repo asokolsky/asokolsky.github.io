@@ -14,8 +14,8 @@
 
 ## Frameworks
 
-* [FastAPI](fastapi.md)
-* [Gaming](gaming.md)
+* [FastAPI](fastapi.html)
+* [Gaming](gaming.html)
 
 ## Also
 

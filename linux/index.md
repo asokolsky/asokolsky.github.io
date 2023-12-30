@@ -29,7 +29,7 @@ Commands:
 
 Tasks:
 
-* Benchmark: [speed-test.sh](speed-test.sh)
+* [Benchmarks](benchmarks/)
 * Convert [audio](convert-audio.html), [images](convert-image.html)
 * [dot files](../apps/dot-files)
 * [kernel tuning](kernel-tuning.html)
