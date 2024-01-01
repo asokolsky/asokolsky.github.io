@@ -1,0 +1,36 @@
+[Unit]
+Description=Frigate NVR
+# Don't start until after docker is healthy and the nfs share is mounted
+After=docker.service
+Requires=docker.service
+#Requires=mnt-frigate.mount
+
+[Service]
+User=frigate
+Group=daemon
+
+TimeoutStartSec=infinity
+Restart=always
+
+# We want to start with a fresh container every time
+ExecStartPre=-/usr/bin/docker exec %n stop
+ExecStartPre=-/usr/bin/docker rm %n
+ExecStartPre=/usr/bin/docker pull blakeblackshear/frigate:0.11.1
+
+# Expose the web UI on port 5000
+ExecStart=/usr/bin/docker run --rm --name %n \
+        --env-file /etc/frigate/secrets \
+        --mount type=tmpfs,target=/tmp/cache,tmpfs-size=1000000000 \
+#       --device /dev/dri/renderD128 \
+#       --device /dev/apex_0:/dev/apex_0 \
+#       --device /dev/apex_1:/dev/apex_1 \
+        --shm-size=64m \
+        -v /var/frigate:/media/frigate \
+        -v /etc/frigate:/config:ro \
+        -v /etc/localtime:/etc/localtime:ro \
+        -p 5000:5000 \
+        -p 1935:1935 \
+        blakeblackshear/frigate:stable
+
+[Install]
+WantedBy=default.target
