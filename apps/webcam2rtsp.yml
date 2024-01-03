@@ -560,5 +560,5 @@ paths:
   # do not match another entry.
   #all_others:
   live:
-    runOnInit: ffmpeg -f v4l2 -framerate 15 -video_size 1920x1080 -input_format mjpeg -i /dev/video4 -c:v libx264 -g 30 -preset veryfast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
+    runOnInit: ffmpeg -hide_banner -f v4l2 -framerate 15 -video_size 1920x1080 -input_format mjpeg -i /dev/video4 -c:v libx264 -g 30 -preset veryfast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
     runOnInitRestart: yes
