@@ -161,12 +161,14 @@ Command|Description
 `kubectl set image <resource> <name> <container>=<image>`|Update the image of a container in a pod
 
 ## Set labels and annotations
+
 Command|Description
 ----|------
 `kubectl label <resource> <name> <key>=<value>`|Add a label to a resource
 `kubectl annotate <resource> <name> <key>=<value>`|Add an annotation to a resource
 
 ## Delete resources
+
 Command|Description
 ----|------
 `kubectl delete <resource> <name>`|Delete a particular resource
@@ -179,6 +181,7 @@ kubectl delete pod busybox-sleep-less
 ```
 
 ## Manage deployments
+
 Command|Description
 ----|------
 `kubectl rollout status deployment <name>`|Show the status of a deployment rollout
@@ -189,30 +192,35 @@ Command|Description
 `kubectl autoscale deployment <name> --min=<min> --max=<max>`|Autoscale a deployment between `<min>` and `<max>` replicas
 
 ## Execute commands
+
 Command|Description
 ----|------
 `kubectl exec <pod> -- <command>`|Execute a command in a running pod
 `kubectl exec -it <pod> -- sh`|Open a shell in a running pod
 
 ## View logs
+
 Command|Description
 ----|------
 `kubectl logs <pod>`|Print the logs for a pod
 `kubectl logs -f <pod>`|Print the logs for a pod and keep streaming
 
 ## Resource usage
+
 Command|Description
 ----|------
 `kubectl top node`|Show resource (CPU/memory) usage of nodes
 `kubectl top pod`|Show resource (CPU/memory) usage of pods
 
 ## Other commands
+
 Command|Description
 ----|------
 `kubectl version`|Show the version of the client and server
 `kubectl api-resources`|Print the supported API resources on the server
 
 ## Helm
+
 Helm is the Kubernetes package manager.
 [Installation instructions](https://helm.sh/docs/intro/install/)
 
