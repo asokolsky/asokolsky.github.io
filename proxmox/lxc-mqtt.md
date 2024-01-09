@@ -1,6 +1,7 @@
 
-# MQTT Mosquitto
+# MQTT Mosquitto in an LXC Container
 
+Another option - [install it in a container]().
 
 ## Install Broker in an LXC Container
 
