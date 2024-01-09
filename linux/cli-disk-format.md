@@ -99,14 +99,24 @@ Number  Start   End     Size    Type     File system  Flags
  1      1049kB  4090MB  4089MB  primary  fat32        lba
 ```
 
-
+To create `msdos` partition table:
 ```sh
 sudo parted /dev/sda --script -- mklabel msdos
+```
+
+For a regular HDD/SSD:
+```sh
+sudo parted /dev/sdc --script -- mklabel gpt
 ```
 
 Create a primary partition of type fat32 taking all the space:
 ```sh
 sudo parted /dev/sda --script -- mkpart primary fat32 1MiB 100%
+```
+
+Alternatively for ZFS:
+```sh
+sudo parted /dev/sdc --script -- mkpart primary zfs 1MiB 100%
 ```
 
 ## Format it

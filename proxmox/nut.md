@@ -6,7 +6,8 @@
 proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
 * [network ups tools](https://networkupstools.org/)
 * [archlinux Network UPS Tools](https://wiki.archlinux.org/index.php/Network_UPS_Tools)
-* [installing nut on ubuntu/](https://zackreed.me/installing-nut-on-ubuntu/)
+* [installing nut on ubuntu](https://zackreed.me/installing-nut-on-ubuntu/)
+* [networkupstools/ConfigExamples](https://github.com/networkupstools/ConfigExamples/releases/download/book-3.0-20230319-nut-2.8.0/ConfigExamples.pdf)
 
 ## Install
 
@@ -278,21 +279,20 @@ case $1 in
                   etherwake 01:23:45:AB:CD:EF
                   ;;
 esac
-=======
+```
+
 ## Using it
 
 Issue quick test command:
 
 ```sh
-alex@fuji:~$ sudo upscmd -u upsmonitor -p UpsMonitor theUPS test.battery.start.quick
-OK
+sudo upscmd -u upsmonitor -p UpsMonitor theUPS test.battery.start.quick
 ```
 
-or better yet
+or, better yet, perform deep test:
 
 ```sh
-alex@fuji:~$ sudo upscmd -u upsmonitor -p UpsMonitor theUPS test.battery.start.deep
-OK
+sudo upscmd -u upsmonitor -p UpsMonitor theUPS test.battery.start.deep
 ```
 
 And then monitor
@@ -309,5 +309,60 @@ And then monitor
 * `ups.realpower.nominal` - Nominal value of real power (Watts)
 
 ```sh
-alex@fuji:~$ watch -d sudo upsc theUPS
+watch -d sudo upsc theUPS
+```
+
+## Battery Maintenance
+
+Use [upsrw](https://linux.die.net/man/8/upsrw) to read the configuration
+values:
+
+```
+# upsrw -u upsmonitor -p UpsMonitor theUPS
+[battery.charge.low]
+Remaining battery level when UPS switches to LB (percent)
+Type: STRING
+Maximum length: 10
+Value: 10
+
+[battery.mfr.date]
+Battery manufacturing date
+Type: STRING
+Maximum length: 10
+Value: 2017/05/31
+
+[battery.runtime.low]
+Remaining battery runtime when UPS switches to LB (seconds)
+Type: STRING
+Maximum length: 10
+Value: 120
+
+[input.sensitivity]
+Input power sensitivity
+Type: STRING
+Maximum length: 10
+Value: medium
+
+[input.transfer.high]
+High voltage transfer point (V)
+Type: STRING
+Maximum length: 10
+Value: 147
+
+[input.transfer.low]
+Low voltage transfer point (V)
+Type: STRING
+Maximum length: 10
+Value: 88
+
+[ups.delay.shutdown]
+Interval to wait after shutdown with delay command (seconds)
+Type: STRING
+Maximum length: 10
+Value: 20
+```
+
+After I replaced the battery, I update the `battery.mfr.date` setting:
+```sh
+upsrw -s battery.mfr.date=2024/01/01 -u upsmonitor -p UpsMonitor theUPS
 ```

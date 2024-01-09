@@ -1,5 +1,7 @@
 # Disk Commands
 
+Also relevant: [zfs](/apps/zfs/)
+
 ## df
 
 Show free disk space including file system type:
@@ -27,10 +29,6 @@ sudo du -s -- *|sort -s -r -n -k 1,1
 ## Format disk
 
 See [cli-disk-format.md](cli-disk-format.html).
-
-## ZFS
-
-See [zfs.md](/apps/zfs/)
 
 ## Mounting Flash disk
 
@@ -73,5 +71,3 @@ drwxr-xr-x 2 root root 32768 Jun 12 18:42 'Wire in the Blood S01'
 ```sh
 umount /media/flash
 ```
-
-Also see [zfs](/apps/zfs/)
