@@ -20,6 +20,8 @@
 ## Also
 
 * [Python project Makefile](/apps/make/python.mak)
+* Example of
+[Docker-ising your python app](https://github.com/asokolsky/pycrawl)
 
 ## External resources
 

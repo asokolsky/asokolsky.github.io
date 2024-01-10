@@ -1,6 +1,6 @@
 # exi
 
-Virtualization server with GPU and [HBA](../hba-lsi.html) passed through.
+HTPC with GPU for gaming and playing k8s and, maybe, frigate.
 
 ## Hardware
 
@@ -16,13 +16,13 @@ M.2_1|Key M, supports type 2242/2260/2280 PCIe Gen4x4 (64 Gb/s), 500GB WD Blue S
 M.2_2|Key M, supports type 2280 PCIe Gen4x4 (64 Gb/s)
 M.2_3|Key M, supports type 2280 PCIe Gen4x4 (64 Gb/s)
 SATA|4 x SATA3 6.0 Gb/s Connectors
-PCIe1|PCIe 5.0 x16 Slot, supports x16 mode, ZOTAC GeForce GTX 750 Zone Edition 1 GB GDDR5 55W PCIe 3.0 ZT-70707-20M
-PCIe2|PCIe 3.0 x16 Slot, supports x4 mode, HBA LSI SAS 9300-8i 8-port 12Gb/s SATA+SAS PCIe 3.0, 2x SFF-8643 mini-SAS, 13W
+PCIe1|PCIe 5.0 x16 slot, supports x16 mode, MSI Ventus GeForce RTX 3050 8GB GDDR6 PCIx 4.0 x8, HDMI 2.1, DP v1.4a 115W
+PCIe2|PCIe 3.0 x16 slot, supports x4 mode
 Ethernet|RTL8125BG, onboard
 BIOS|3.04
-Case|Fractal Design Define Mini Black Silent mATX
-PSU|Seasonic FOCUS 450 Gold SSR-450FM 450W 80+ Gold ATX12V & EPS12V 140 mm PS
-OS|Proxmox
+Case|Antec
+PSU|SeaSonic SS-400FL2 Active PFC F3 400W 80 PLUS Platinum Fanless ATX12V / EPS12V
+OS|Ubuntu Studio 23.10
 
 ## PCI
 
