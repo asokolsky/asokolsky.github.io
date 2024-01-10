@@ -10,6 +10,16 @@ zpool create NAME -o ashift=12 raidz2 \
     /dev/disk/by-id/DISK4 /dev/disk/by-id/DISK5
 ```
 
+Create a mirror pool `tank`:
+```sh
+sudo zpool create -m /mnt/tank tank mirror sdc1 sdd1
+```
+
+To change the mount point:
+```sh
+sudo zfs set mountpoint=/mnt/btr btr
+```
+
 ## Status Monitoring / Clear
 
 To look at the pool status:
