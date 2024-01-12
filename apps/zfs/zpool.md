@@ -1,8 +1,13 @@
-# zpool cli
+# zpool
+
+From [zfs-101](https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/):
+"A zpool contains one or more vdevs, each of which in turn contains one or more
+devices."
 
 ## Create
 
-To setup a RAIDz2 pool:
+To setup a RAIDz2 pool use
+[zpool create](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-create.8.html):
 
 ```sh
 zpool create NAME -o ashift=12 raidz2 \
@@ -10,7 +15,7 @@ zpool create NAME -o ashift=12 raidz2 \
     /dev/disk/by-id/DISK4 /dev/disk/by-id/DISK5
 ```
 
-Create a mirror pool `tank`:
+Alternatively, create a mirror pool `tank`:
 ```sh
 sudo zpool create -m /mnt/tank tank mirror sdc1 sdd1
 ```
@@ -22,6 +27,9 @@ sudo zfs set mountpoint=/mnt/btr btr
 
 ## Status Monitoring / Clear
 
+Use
+[zpool status](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-status.8.html):
+
 To look at the pool status:
 ```sh
 zpool status
@@ -31,7 +39,8 @@ To monitor it in real time:
 ```sh
 zpool status -v 5
 ```
-or even:
+or use
+[zpool iostat](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-iostat.8.html):
 ```sh
 zpool iostat -v 5
 ```
@@ -75,6 +84,8 @@ I decided to clear the status, for now, because `smartctl` for `sda` does not
 report any problems. `sda` is the oldest drive in the above pool, so I plan to
 keep an eye on it.
 
+Use
+[zpool clear](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-clear.8.html):
 ```console
 root@nass[~]# zpool clear tank
 root@nass[~]# zpool status tank
@@ -100,6 +111,8 @@ Good read:
 
 ## Upgrade
 
+Use
+[zpool upgrade](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-upgrade.8.html):
 ```
 $ zpool --version
     zfs-0.8.3-1ubuntu12.14
@@ -109,6 +122,8 @@ $ sudo zpool upgrade -a
 
 ## Scrubbing
 
+Use
+[zpool scrub](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-scrub.8.html):
 ```sh
 sudo zpool scrub pool0
 ```
