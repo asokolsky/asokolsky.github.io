@@ -48,15 +48,16 @@ Jan 12 08:38:35 exi systemd[1]: Started smbd.service - Samba SMB Daemon.
 Identify shares to share:
 
 ```
-# ls -la /mnt/btr/
-total 5
-drwxr-xr-x 2 root root    2 Jan  4 17:19 .
-drwxr-xr-x 6 root root 4096 Jan  4 17:21 ..
-# ls -la /mnt/tank/
-total 6
-drwxr-xr-x 2 root root    3 Jan  4 17:48 .
-drwxr-xr-x 6 root root 4096 Jan  4 17:21 ..
--rw-r--r-- 1 root root 1462 Jan  4 17:39 tt.txt
+root@exi:~# ls -la /mnt/btr/foo/
+total 2
+drwxr-xr-x 2 root root   3 Jan 13 09:19 .
+drwxr-xr-x 3 root root   3 Jan 13 09:11 ..
+-rw-r--r-- 1 root root 511 Jan 13 09:19 history
+root@exi:~# ls -la /mnt/tank/bar/
+total 2
+drwxr-xr-x 2 root root   3 Jan 13 09:20 .
+drwxr-xr-x 3 root root   4 Jan 13 09:14 ..
+-rw-r--r-- 1 root root 286 Jan 13 09:20 history
 ```
 
 In `/etc/samba/smb.conf` modify:
@@ -92,8 +93,21 @@ New SMB password:
 Retype new SMB password:
 Added user alex.
 ```
+### Change file owner/permissions
 
 To grant read/write/execute permissions to the sharing directory, run setfacl:
 ```sh
-setfacl -R -m "u:alex:rwx" /mnt/btr
+setfacl -R -m "u:alex:rwx" /mnt/btr/foo
+```
+
+```
+# setfacl -R -m "u:alex:rwx" /mnt/btr/foo
+setfacl: /mnt/btr/foo: Operation not supported
+setfacl: /mnt/btr/foo/history: Operation not supported
+```
+
+Instead:
+```sh
+chown -R alex:users /mnt/btr/foo/
+chown -R alex:users /mnt/tank/bar/
 ```

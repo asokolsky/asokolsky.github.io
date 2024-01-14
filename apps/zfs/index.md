@@ -7,6 +7,7 @@
 
 ## More Sources
 
+* [Sharing ZFS Datasets Via NFS](https://blog.programster.org/sharing-zfs-datasets-via-nfs)
 * [HOWTO install Proxmox and setup a ZFS
 pool](https://blog.quindorian.org/2019/08/how-to-install-proxmox-and-setup-a-zfs-pool.html/#more-2962)
 * [ZFS Cheat Sheet](https://hamwaves.com/zfs/en/)

@@ -28,7 +28,7 @@ In a VM:
 * [Home Assistant](guest-home-assistant.html)
 * [kubuntu desktop in a VM](guest-kubuntu.html)
 * [pfSense in a VM](guest-pfSense.html)
-* [TrueNAS Core in a VM](guest-truenas.html)
+* [TrueNAS in a VM](guest-truenas.html)
 
 In an LXC container:
 
