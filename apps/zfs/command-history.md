@@ -1,6 +1,11 @@
-# ZFS Command History on my (old) nass:
+# ZFS Command History
 
-Create zpool:
+Use
+[zpool history](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-history.8.html).
+
+## My old nass
+
+Create zpool on 2018-06-02:
 ```sh
 zpool create -f tank raidz2 /dev/ada0 /dev/ada1 /dev/ada2 /dev/ada3 /dev/ada4
 ```
@@ -8,7 +13,6 @@ Create datasets:
 ```sh
 zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensitivity=sensitive -o compression=lz4 -o dedup=off -o sync=standard tank/home
 zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensitivity=sensitive -o compression=lz4 -o dedup=off -o sync=standard tank/downloads
-zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensitivity=sensitive -o compression=off -o dedup=off -o sync=standard tank/moviesMore
 zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensitivity=sensitive -o compression=off -o dedup=off -o sync=standard tank/movies
 zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensitivity=sensitive -o compression=lz4 -o dedup=off -o sync=standard tank/music
 ```

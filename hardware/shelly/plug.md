@@ -1,7 +1,8 @@
 # Shelly Plus Plug US
 
-[Shelly Plus Plug US](https://www.shelly.cloud/en-us/products/product-overview/shelly-plus-plug-us),
-[Manual and Spec](https://kb.shelly.cloud/knowledge-base/shelly-plug-us)
+[Shelly Plus Plug US](https://www.shelly.com/en-us/products/shop/shelly-plus-plug-us),
+[Manual and Spec](https://kb.shelly.cloud/knowledge-base/shelly-plug-us),
+[pdf manual](https://kb.shelly.cloud/__attachments/64061537/User%20and%20Safety%20Guide?inst-v=37db5b47-02b4-47d2-9c77-9f9b8a60a4f2).
 
 From the manual:
 
@@ -30,8 +31,8 @@ Red & Blue|quick|FW Update
 hold the Button for 10 seconds. After the LED begins to flash red/
 blue, release it.
 * When the LED is flashing red/blue, Shelly has created a WiFi
-network, with name such as ShellyPlugS-35FA58. Connect to it.
-* Type 192.168.33.1 into the address field of your browser to load
+network, with name such as `ShellyPlugS-35FA58`. Connect to it.
+* Type `192.168.33.1` into the address field of your browser to load
 the web interface of Shelly
 
 ## Allocate a Static DHCP Lease
