@@ -1,6 +1,7 @@
 # rpi4 use for hkcam
 
-My use of rpi4 to run [hkcam](https://github.com/brutella/hkcam)
+My use of rpi4 to run [hkcam](https://github.com/brutella/hkcam).
+This project was retired a while ago.
 
 ## OS
 
