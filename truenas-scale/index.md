@@ -36,3 +36,8 @@ Then install packages as usual:
 ```sh
 sudo apt install emacs-nox
 ```
+
+## Setting up TrueNAS Scale for VMs
+
+[video](https://www.youtube.com/watch?v=R7BXEuKjJ0k),
+[post](https://forum.level1techs.com/t/truenas-scale-ultimate-home-setup-incl-tailscale/186444)
