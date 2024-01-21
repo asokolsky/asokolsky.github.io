@@ -142,7 +142,7 @@ MOS Configuration:
 
 atime details:
 
-```console
+```
 $ mount|grep tank
 tank on /mnt/tank (zfs, local, noatime, nfsv4acls)
 tank/home on /mnt/tank/home (zfs, local, noatime, nfsv4acls)

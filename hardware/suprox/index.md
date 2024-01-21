@@ -1,12 +1,12 @@
 # suprox
 
-A single-home-server solution.  Runs in VMs:
+A single-home-server solution.  Runs these VMs and containers:
 
 * virtualized pfSense - no NIC passthrough;
 * virtualized TrueNas - HDs, not HBA, passed through;
 * virtualized haos (home assistant);
 
-in LXC containers:
+and LXC containers:
 
 * unified controller
 * octoprint
@@ -18,8 +18,6 @@ in docker containers:
 
 * portainer
 * mjpg-streamer for use by octoprint
-
-
 
 ## Hardware
 

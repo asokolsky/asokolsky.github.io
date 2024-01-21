@@ -26,7 +26,7 @@ Notation|Means
 C-x|Press and hold the Control key and then press and release the “x” key
 M-x|Press and release the Meta key and then press the “x” key
 
-### Key Bindings
+## Key Bindings
 
 I usually
 [swap](https://www.emacswiki.org/emacs/MovingTheCtrlKey)
@@ -66,6 +66,8 @@ Manual on:
 
 ## Buffers
 
+[Buffers in manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/Buffers.html).
+
 Key|Command|Function
 ---|-------|--
 C-x b|Switch to another buffer|M-x switch-to-buffer
@@ -74,7 +76,6 @@ C-x k|Kill current buffer|M-x kill-buffer
 C-x C-s|Save buffer|M-x save-buffer
 C-l|Refresh buffer, cycle mid, bottom, top|
 
-[Buffers in manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/Buffers.html).
 
 ## Windows
 
