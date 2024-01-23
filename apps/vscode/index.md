@@ -1,5 +1,17 @@
 # Setting Up Visual Studio Code
 
+- [Setting Up Visual Studio Code](#setting-up-visual-studio-code)
+  - [Quick Tips](#quick-tips)
+  - [Font](#font)
+  - [User Settings](#user-settings)
+    - [settings.json](#settingsjson)
+    - [keybindings.json](#keybindingsjson)
+  - [Standard Keyboard Bindings](#standard-keyboard-bindings)
+  - [Command Palette](#command-palette)
+  - [Extensions](#extensions)
+  - [Using](#using)
+
+
 ## Quick Tips
 
 [25 VS Code Productivity Tips and Speed Hacks](https://www.youtube.com/watch?v=ifTF3ags0XI)
@@ -59,6 +71,10 @@ Char|Accelerator|Description
 `:`|`Ctrl+G`|Goto a line in a file
 `?`|n/a|Get help
 
+## Extensions
+
+* [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one),
+[source](https://github.com/yzhang-gh/vscode-markdown)
 
 ## Using
 

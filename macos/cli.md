@@ -54,10 +54,9 @@ Keep your Mac from falling asleep:
 caffeinate
 ```
 
-## Copy Files & Directories
+## Use ditto to Copy Files & Directories
 
-
-ditto preserves:
+[ditto](https://ss64.com/mac/ditto.html) preserves:
 
 * ownership attributes and permissions
 * file resource forks
