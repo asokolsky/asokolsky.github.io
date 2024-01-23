@@ -31,7 +31,7 @@ Tasks:
 
 * [Benchmarks](benchmarks/)
 * Convert [audio](convert-audio.html), [images](convert-image.html)
-* [dot files](../apps/dot-files)
+* [dot files](/apps/dot-files)
 * [kernel tuning](kernel-tuning.html)
 
 Internals:
@@ -40,7 +40,7 @@ Internals:
 
 See also:
 
-* [Programming](../programming/)
+* [Programming](/programming/)
 * [CLI](cli.html)
 
 

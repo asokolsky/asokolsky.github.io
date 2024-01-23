@@ -1,7 +1,7 @@
 # Power Consumption
 
 Measuring and optimizing power consumption.
-Measurements are done using [Shelly Plugs](shelly-plug.html).
+Measurements are done using [Shelly Plugs](shelly/plug.html).
 
 ## Data
 
