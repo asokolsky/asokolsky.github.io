@@ -189,3 +189,7 @@ LABEL="power_runtime_rules_end"
 
 Switch governor:
 https://github.com/tteck/Proxmox/blob/main/misc/scaling-governor.sh
+
+## Undervolting CPU
+
+https://wiki.archlinux.org/title/Undervolting_CPU

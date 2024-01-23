@@ -22,3 +22,7 @@ Control button:
 mode if it is awake.
 * Press and hold for 5 sec to activate Device AP.
 * Press and hold for 10 sec to factory reset.
+
+## Use in HomeAssistant
+
+https://www.youtube.com/watch?v=ylCt45JUkOg
