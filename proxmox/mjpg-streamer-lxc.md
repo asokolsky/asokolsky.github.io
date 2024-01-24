@@ -231,7 +231,7 @@ root@mjpg-streamer:~# systemctl status mjpg-streamer
 Feb 05 23:17:03 mjpg-streamer startAllCams[1154]: /root/mjpg-streamer-setup/bin/startAllCams: line 8: vcgencmd: command not found
 Feb 05 23:17:04 mjpg-streamer startAllCams[1156]: Webcam does not support MJPG - using slower YUYV instead!
 Feb 05 23:17:04 mjpg-streamer startAllCams[1156]: Best resolution: 0 x 0 at 0
-Feb 05 23:17:04 mjpg-streamer startAllCams[1156]: /usr/local/bin/mjpg_streamer -i "/usr/local/lib/mjpg-streamer/input_uvc.so -d /dev/video0 --fps 0 -q 85 -r 0x0 -y " ->
+Feb 05 23:17:04 mjpg-streamer startAllCams[1156]: /usr/local/bin/mjpg_streamer -i "/usr/local/lib/mjpg-streamer/input_uvc.so -d /dev/video0 --fps 0 -r 0x0 -y " ->
 Feb 05 23:17:04 mjpg-streamer mjpg_streamer[1163]: MJPG-streamer [1163]: starting application
 Feb 05 23:17:04 mjpg-streamer mjpg_streamer[1163]: MJPG-streamer [1163]: enabling daemon mode
 Feb 05 23:17:04 mjpg-streamer startAllCams[1163]: enabling daemon mode
@@ -265,6 +265,6 @@ BEST_FRAMERATE=$WEBCAM_FRAMERATE
 ```
 root@mjpg-streamer:~/mjpg-streamer-setup/bin# ./startAllCams
 Best resolution: 640 x 480 at 30
-/usr/local/bin/mjpg_streamer -i "/usr/local/lib/mjpg-streamer/input_uvc.so -d /dev/video0 --fps 30 -q 85 -r 640x480 " -o "/usr/local/lib/mjpg-streamer/output_http.so -p 5050 -w /usr/local/share/mjpg-streamer/www" -b
+/usr/local/bin/mjpg_streamer -i "/usr/local/lib/mjpg-streamer/input_uvc.so -d /dev/video0 --fps 30 -r 640x480 " -o "/usr/local/lib/mjpg-streamer/output_http.so -p 5050 -w /usr/local/share/mjpg-streamer/www" -b
 enabling daemon modeforked to background (1329)
 ```
