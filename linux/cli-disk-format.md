@@ -67,7 +67,7 @@ sudo wipefs /dev/sda
 
 Alternatively:
 
-```sh
+```
 alex@latitude7490:~/ > sudo dd if=/dev/zero of=/dev/sda bs=4096 status=progress
 [sudo] password for alex:
 1332625408 bytes (1.3 GB, 1.2 GiB) copied, 44 s, 30.2 MB/s^C
@@ -127,7 +127,7 @@ sudo mkfs.exfat -n LABEL /dev/sda1
 ```
 
 As vfat:
-```
+```sh
 sudo mkfs.vfat -F32 /dev/sda1
 ```
 
