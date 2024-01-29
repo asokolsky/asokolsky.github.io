@@ -188,6 +188,16 @@ To restart the service alone:
 sudo systemctl restart _service_
 ```
 
+If you change `/lib/systemd/system/<servicename>.service` and restart the
+service via
+```sh
+systemctl restart <servicename>.service
+```
+it will not load the new settings unless you do:
+```sh
+systemctl daemon-reload
+```
+
 ## Overriding the default unit configuration
 
 If you want to keep the changes after updating the package that provides the

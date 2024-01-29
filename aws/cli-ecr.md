@@ -1,5 +1,40 @@
 # AWS ECR
 
+## ECR Repo
+
+For all the commands below regios should be set via environment or via cli.
+
+To create an ecr repo:
+
+```sh
+aws ecr create-repository --repository-name _name_
+```
+
+Get login and password for using it in docker login:
+
+```sh
+aws ecr get-login-password
+```
+
+Authenticate your Docker client to the Amazon ECR registry
+
+```sh
+aws ecr | docker login -u AWS -p <password_from_above_command> _repo_host_/_repo_name_
+```
+docker tag:
+
+```
+docker tag 7a8ba25b2d86 _repo_host_/_repo_name_:_tag_
+```
+
+docker push:
+```sh
+docker push _repo_host_/_repo_name_:_tag_
+```
+
+From:
+https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html
+
 ## Retag an image
 
 From https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-retag.html

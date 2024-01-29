@@ -122,8 +122,18 @@ aws ec2 delete-key-pair --key-name _name_
 
 ## S3
 
-```
+```sh
 aws s3 ls
+```
+
+upload:
+```sh
+aws s3 mv foo.tgz s3://bucket/foo.tgz
+```
+
+download:
+```sh
+aws s3 cp s3://bucket/foo.tgz /tmp/foo.tgz
 ```
 
 ## EC2

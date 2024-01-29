@@ -174,6 +174,10 @@ root@suprox:~# docker network inspect bridge
 ```sh
 docker image ls
 ```
+better yet:
+```sh
+docker images --digests
+```
 
 More on
 [docker image](https://docs.docker.com/engine/reference/commandline/image/).
@@ -291,7 +295,7 @@ Run an image in a container using
 If you need to provide input for `stdin`, use `-i` option:
 
 ```sh
-cat secrets.txt | docker run -i my_stuff
+cat secrets.txt | docker run --pull=always -i my_stuff
 ```
 
 Command|Description

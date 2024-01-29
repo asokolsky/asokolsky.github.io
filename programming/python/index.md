@@ -16,6 +16,7 @@
 
 * [FastAPI](fastapi.html)
 * [Gaming](gaming.html)
+* [hypothesis: property-based testing](https://hypothesis.works/)
 
 ## Also
 
