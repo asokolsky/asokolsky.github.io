@@ -63,8 +63,3 @@ Bus 001 Device 002: ID 174c:2074 ASMedia Technology Inc. ASM1074 High-Speed hub
 ## Power Consumption
 
 While serving a single video stream over SMB and with CPU consumption <4%: 88W
-
-## Update
-
-Due to high power consumption, the server was immediately retired.  Components
-were used to build a living room HTPC / gaming rig.
