@@ -24,7 +24,7 @@ xcode-select --install
 Also relevant:
 
 * [dot-files](/apps/dot-files/)
-* [emacs colors](/apps/emacs.html)
+* [emacs colors](/apps/emacs/)
 
 [MacOS Features, Tips and Tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
 

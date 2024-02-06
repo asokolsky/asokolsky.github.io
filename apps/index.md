@@ -32,7 +32,7 @@ Application setup and use:
 Cheat sheets:
 
 * [docker](docker/docker.html)
-* [emacs](emacs.html)
+* [emacs](emacs/)
 * [kubectl](k8s/kubectl.html)
 * [tmux](tmux.html)
 * [vi](vi.html)

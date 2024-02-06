@@ -27,7 +27,7 @@ comments: false
 [on-a-router](apps/wireguard-on-a-router.html)
 * [LDAP & AD search](apps/cli-ldap.html)
 * [Prometheus & Grafana](apps/prometheus-grafana.html)
-* Cheat sheets: [docker](apps/docker/docker.html), [emacs](apps/emacs.html),
+* Cheat sheets: [docker](apps/docker/docker.html), [emacs](apps/emacs/),
 [kubectl](apps/k8s/kubectl.html), [tmux](apps/tmux.html), [vi](apps/vi.html)
 * [ZFS setup and commands](apps/zfs/)
 * [more...](apps/)
