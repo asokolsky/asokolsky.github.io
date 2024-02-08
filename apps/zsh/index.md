@@ -1,4 +1,4 @@
-# zsh
+# ZSH
 
 TLDR:
 
@@ -10,6 +10,10 @@ TLDR:
 * reboot
 
 The rest is history.
+
+Good read:
+
+* [Configuring ZSH Without Dependencies](https://thevaluable.dev/zsh-install-configure-mouseless/)
 
 ## zsh startup
 

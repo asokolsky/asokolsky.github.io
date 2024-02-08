@@ -1,5 +1,16 @@
 # git
 
+## More
+
+* [git hooks](https://www.atlassian.com/git/tutorials/git-hooks),
+[pre-commit hook](pre-commit-hook.html)
+* [custom git merge driver](custom-merge-driver.html)
+* [FAQs](faq.html)
+
+And more:
+* [Atlassian advanced tips](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+* [8 Easy Steps to Set Up Multiple GitHub Accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
+
 ## Global Config
 
 Followed
@@ -76,16 +87,16 @@ Instead of using git submodules, sometimes this may make more sense:
 {% include_relative update-from-repo.sh %}
 ```
 
-## More
+## Hosting a Repo in a Cloud
 
-* [8 Easy Steps to Set Up Multiple GitHub Accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
-* [pre-commit hook](pre-commit-hook.html)
-* [custom git merge driver](custom-merge-driver.html)
+[comparison](https://stackshare.io/stackups/bitbucket-vs-github-vs-gitlab)
 
-## FAQs
-
-### Undo the last local commit
-
-```sh
-git reset HEAD~
-```
+Product|github|gitlab|bitbucket
+-------|------|------|-------
+Company|Microsoft|[GitLab](https://en.wikipedia.org/wiki/GitLab)|Atlassian
+**Public**|repo|pricing|
+`<=5` users|$0|$0|$0
+`>5` users|$0|$0|$2/user/month
+**Private**|repo|pricing|
+`<=5` users|$25/month|$0|$0
+`>5` users|$9/user/month|$0|$2/user/month

@@ -1,7 +1,10 @@
 # Linux Dot Files
 
-[The best way to store your
-dotfiles](https://www.atlassian.com/git/tutorials/dotfiles)
+Approaches to managing dot files:
+
+* [Use git for dot files](https://www.atlassian.com/git/tutorials/dotfiles)
+* Use [GNU Stow](https://www.gnu.org/software/stow/)
+[for dot files](https://dev.to/spacerockmedia/how-i-manage-my-dotfiles-using-gnu-stow-4l59)
 
 ## .nanorc
 
