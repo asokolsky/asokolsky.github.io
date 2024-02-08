@@ -15,6 +15,10 @@ On Linux (if you do not mind an old version):
 sudo snap install k9s
 ```
 
+## Important directories
+
+Run `k9s info` for location of important directories, e.g. logs.
+
 ## More
 
 https://www.hackingnote.com/en/cheatsheets/k9s/

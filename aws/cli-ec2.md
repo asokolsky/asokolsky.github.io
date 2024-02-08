@@ -150,3 +150,15 @@ then [delete-subnet](https://docs.aws.amazon.com/cli/latest/reference/ec2/delete
 ```
 aws ec2 delete-subnet --subnet-id _id_
 ```
+
+## Find Load Balancer IP
+
+From
+https://repost.aws/knowledge-center/elb-find-load-balancer-ip
+
+```sh
+aws ec2 describe-network-interfaces \
+  --filters Name=description,Values="ELB elb-name" \
+  --query 'NetworkInterfaces[*].PrivateIpAddresses[*].PrivateIpAddress' \
+  --output text
+```

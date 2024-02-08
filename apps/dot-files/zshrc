@@ -63,3 +63,11 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # install CLI completions
 source <(kubectl completion zsh)
 complete -C '/usr/local/bin/aws_completer' aws
+
+#source $ZSH/oh-my-zsh.sh
+#
+# ensure the history is NOT shared between terminals
+# https://linux.die.net/man/1/zshoptions
+#
+unsetopt inc_append_history
+unsetopt share_history
