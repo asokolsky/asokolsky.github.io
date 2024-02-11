@@ -21,7 +21,11 @@ Commands:
 * [pdsh](cli-pdsh.html)
 * [bulk rename](cli-rename-files.html)
 * [rsync](cli-rsync.html)
+* [socket stats](cli-ss.html)
 * [systemctl](cli-systemctl.html)
+
+Examples:
+
 * show top 10 CPU consuming processes:
 `ps -eo pcpu,pid,user,args|sort -k 1 -nr|head -10`
 * show process command line: `cat /proc/_pid_/cmdline|xargs -0`
