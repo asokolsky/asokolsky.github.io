@@ -123,3 +123,14 @@ This prints value of `clusters`` and returns it:
 ```
 std.trace('clusters: %s' % std.manifestJson(clusters),  clusters)
 ```
+
+## std.manifestJsonMinified
+
+Produce a string of JSON:
+```json
+std.manifestJsonMinified({
+    account: dev_account_id,
+    service: business_service,
+    dir: kms_module_dir,
+  }),
+```
