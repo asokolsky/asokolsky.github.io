@@ -1,5 +1,34 @@
 # AWS Elastic Compute Cloud (EC2) CLI
 
+## Key-pair Create/Delete
+
+Begin with:
+
+```sh
+export AWS_PROFILE=default
+```
+
+Create the key-pair:
+```
+aws ec2 create-key-pair --key-name _name_ --key-type ed25519 \
+    --query "KeyMaterial" --output text > _name_.pem
+```
+
+then:
+```
+chmod 400 _name_.pem
+```
+
+To create a `.pub` public key from `.pem`:
+```
+ssh-keygen -y -f _name_.pem > _name_.pub
+```
+
+Delete the key-pair:
+```sh
+aws ec2 delete-key-pair --key-name _name_
+```
+
 ## Instances
 
 [describe-instances](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html)

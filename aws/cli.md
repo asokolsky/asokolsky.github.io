@@ -91,112 +91,16 @@ $ aws ec2 describe-volumes --profile dev --output table \
 
 [More](https://github.com/KarnGusain/AWS/blob/main/AWS%20CLI.md)
 
-## Key-pair Create/Delete
 
-Begin with:
-
-```sh
-export AWS_PROFILE=default
-```
-
-Create the key-pair:
-```
-aws ec2 create-key-pair --key-name _name_ --key-type ed25519 \
-    --query "KeyMaterial" --output text > _name_.pem
-```
-
-then:
-```
-chmod 400 _name_.pem
-```
-
-To create a `.pub` public key from `.pem`:
-```
-ssh-keygen -y -f _name_.pem > _name_.pub
-```
-
-Delete the key-pair:
-```sh
-aws ec2 delete-key-pair --key-name _name_
-```
-
-## Resource Access Manager (RAM)
-
-[Commands](https://docs.aws.amazon.com/cli/latest/reference/ram/)
-
-
-[List resources](https://docs.aws.amazon.com/cli/latest/reference/ram/list-resources.html):
-
-```sh
-aws ram list-resources --resource-owner SELF
-```
-
-```sh
-aws ram list-resources --resource-owner OTHER-ACCOUNTS
-```
-
-
-[Delete resource share](https://docs.aws.amazon.com/cli/latest/reference/ram/delete-resource-share.html):
-
-```
-aws ram delete-resource-share --resource-share-arn _arn_
-```
-
-## Route53
-
-
-[Commands](https://docs.aws.amazon.com/cli/latest/reference/route53/)
-
-
-[list-hosted-zones](https://docs.aws.amazon.com/cli/latest/reference/route53/list-hosted-zones.html)
-
-```sh
-aws route53 list-hosted-zones
-```
-
-[delete-hosted-zones](https://docs.aws.amazon.com/cli/latest/reference/route53/delete-hosted-zone.html)
-
-```sh
-aws route53 delete-hosted-zone --id /hostedzone/_id_
-```
-
-## Secrets Manager
-
-[cli-aws-secretsmanager](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/secretsmanager/#cli-aws-secretsmanager)
-
-
-Start with
-[create-secret](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/secretsmanager/create-secret.html):
-```sh
-aws secretsmanager create-secret \
-    --name pass-secret \
-    --description "Secrets for pass-secret repo" \
-    --secret-string file:///home/alex/Projects/pass-secret/app/secrets.json
-```
-
-You can then issue
-[describe-secret](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/secretsmanager/describe-secret.html):
-
-```sh
-aws secretsmanager describe-secret --secret-id pass-secret
-```
-
-And then
-[get-secret-value](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/secretsmanager/get-secret-value.html)
-
-```sh
-aws secretsmanager get-secret-value --secret-id pass-secret
-```
-or better yet
-```
-aws secretsmanager get-secret-value --secret-id pass-secret|jq ".SecretString"
-```
 
 ## More
 
-* [EC2](./cli-ec2.md)
-* [ECR](./cli-ecr.md)
+* [Elastic Compute Cloud (EC2)](./cli-ec2.md)
+* [Elastic Container Registry (ECR)](./cli-ecr.md)
 * [Lambda](./cli-lambda.md)
-* [S3](./cli-s3.md)
-* [SQS](./cli-sqs.md)
-* [SSM](./cli-ssm.md)
+* [Resource Access Manager (RAM)](./cli-ram.md)
+* [Route53](./cli-route53.md)
+* [Simple Storage Service (S3)](./cli-s3.md)
+* [Secrets Manager](./cli-secrets.md)
+* [Simple Queue Service (SQS)](./cli-sqs.md)
+* [Systems Manager (SSM)](./cli-ssm.md)
