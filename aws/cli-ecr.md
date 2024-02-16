@@ -1,4 +1,4 @@
-# AWS ECR
+# AWS Elastic Container Registry (ECR) CLI
 
 ## ECR Repo
 

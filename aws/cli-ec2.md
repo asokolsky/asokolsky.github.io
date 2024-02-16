@@ -1,4 +1,4 @@
-# AWS EC2
+# AWS Elastic Compute Cloud (EC2) CLI
 
 ## Instances
 

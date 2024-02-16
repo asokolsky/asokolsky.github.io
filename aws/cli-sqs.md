@@ -1,4 +1,4 @@
-# AWS SQS CLI
+# AWS  Simple Queue Service (SQS) CLI
 
 ```sh
 

@@ -196,5 +196,7 @@ aws secretsmanager get-secret-value --secret-id pass-secret|jq ".SecretString"
 
 * [EC2](./cli-ec2.md)
 * [ECR](./cli-ecr.md)
+* [Lambda](./cli-lambda.md)
 * [S3](./cli-s3.md)
 * [SQS](./cli-sqs.md)
+* [SSM](./cli-ssm.md)

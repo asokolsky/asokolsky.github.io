@@ -1,4 +1,4 @@
-# AWS S3 CLI
+# AWS Simple Storage Service (S3) CLI
 
 ```sh
 aws s3 ls
