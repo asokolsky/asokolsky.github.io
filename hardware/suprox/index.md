@@ -40,6 +40,12 @@ Case fan|Noctua [NF-A12x25 LS-PWM](https://noctua.at/en/nf-a12x25-pwm), Ultra Qu
 /dev/sda|WDC WD60EFZX-68B3FN0
 /dev/sdb|WDC WD60EFRX-68L0BN1
 
+<p align="center" width="100%">
+    <img width="66%" src="suprox-front.png">
+    <img width="66%" src="suprox-back.png">
+</p>
+
+
 ## PCI Devices
 
 ```
