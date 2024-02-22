@@ -87,7 +87,7 @@ temp1:        +44.0°C
 
 ## PCI Pass Through Config
 
-See [pcie-passthrough.md](pcie-passthrough.html).
+See [pcie-passthrough](pcie-passthrough.html).
 
 ## Add the server to Datacenter / Cluster
 

@@ -28,7 +28,7 @@ sudo du -s -- *|sort -s -r -n -k 1,1
 
 ## Format disk
 
-See [cli-disk-format.md](cli-disk-format.html).
+See [cli-disk-format](cli-disk-format.html).
 
 ## Mounting Flash disk
 

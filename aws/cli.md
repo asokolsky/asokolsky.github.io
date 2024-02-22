@@ -95,12 +95,12 @@ $ aws ec2 describe-volumes --profile dev --output table \
 
 ## More
 
-* [Elastic Compute Cloud (EC2)](./cli-ec2.md)
-* [Elastic Container Registry (ECR)](./cli-ecr.md)
-* [Lambda](./cli-lambda.md)
-* [Resource Access Manager (RAM)](./cli-ram.md)
-* [Route53](./cli-route53.md)
-* [Simple Storage Service (S3)](./cli-s3.md)
-* [Secrets Manager](./cli-secrets.md)
-* [Simple Queue Service (SQS)](./cli-sqs.md)
-* [Systems Manager (SSM)](./cli-ssm.md)
+* [Elastic Compute Cloud (EC2)](cli-ec2.html)
+* [Elastic Container Registry (ECR)](cli-ecr.html)
+* [Lambda](cli-lambda.html)
+* [Resource Access Manager (RAM)](cli-ram.html)
+* [Route53](cli-route53.html)
+* [Simple Storage Service (S3)](cli-s3.html)
+* [Secrets Manager](cli-secrets.html)
+* [Simple Queue Service (SQS)](cli-sqs.html)
+* [Systems Manager (SSM)](cli-ssm.html)
