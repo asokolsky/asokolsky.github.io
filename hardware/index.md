@@ -12,6 +12,7 @@ Computing:
 * [Virtualization server fuji](fuji/)
 * [Virtualization playground duo (retired)](duo/)
 * [Virtualization server exi](exi/)
+* [All-in-one suprox](suprox/)
 
 Networking:
 

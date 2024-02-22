@@ -2,6 +2,7 @@
 
 ## Sources
 
+* [Use Proxmox Cloud-Init to Deploy Your VMs! Kubernetes At Home - Part 2](https://www.youtube.com/watch?v=Kv6-_--y5CM)
 * [how to create a proxmox ubuntu cloud init
 image](https://austinsnerdythings.com/2021/08/30/how-to-create-a-proxmox-ubuntu-cloud-init-image/)
 * [how to deploy VMs in proxmox with terraform](https://austinsnerdythings.com/2021/09/01/how-to-deploy-vms-in-proxmox-with-terraform/)
