@@ -111,3 +111,13 @@ Calculate [LOC](https://en.wikipedia.org/wiki/Source_lines_of_code)s:
 ```sh
 find . -name '*.py' | xargs wc -l
 ```
+
+## Example - Move Directories Between File Systems
+
+From https://docs.oracle.com/cd/E36784_01/html/E39021/bkupsavefiles-14144.html#scrolltoc
+
+Copy from `/data1` to `/data1`:
+
+```sh
+find /data1 -print -depth | cpio -pdm /data2
+```
