@@ -12,17 +12,22 @@
 * [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
 * [5 Ways to Measure Execution Time in Python](https://superfastpython.com/benchmark-execution-time/)
 
+## Development
+
+* [Python project Makefile](/apps/make/python.mak)
+* Example of
+[Docker-ising your python app](https://github.com/asokolsky/pycrawl)
+
 ## Frameworks
 
 * [FastAPI](fastapi.html)
 * [Gaming](gaming.html)
 * [hypothesis: property-based testing](https://hypothesis.works/)
 
-## Also
+To look further:
 
-* [Python project Makefile](/apps/make/python.mak)
-* Example of
-[Docker-ising your python app](https://github.com/asokolsky/pycrawl)
+* [Textual](https://www.textualize.io/) and
+[textualize/rich](https://github.com/Textualize/rich)
 
 ## External resources
 
