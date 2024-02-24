@@ -32,7 +32,8 @@ BIOS|1.5 10/5/2020
 BMC f/w|1.23.06
 RAM|Crucial 16GB (2x8GB) 288-Pin DDR4 2666 MT/s PC4-21300 - CT2K8G4DFS8266
 SSD|500GB WD Blue SN550 NVMe SSD, Gen3x4 PCIe 8Gb/s, M.2 2280, 2,400 MB/s, WDS500G2B0C
-NIC|2x Intel I210
+NIC|2x Intel I210 on motherboard
+NIC|Intel i350-T2
 PSU|Mini Box PicoPSU-150-XT 12V DC-DC ATX
 .|Mini Box 10A 120W 110-240V AC to 12V DC PicoPSU Compatible
 Case|Supermicro SuperChassis [721TQ-350B2](https://www.supermicro.com/en/products/chassis/Compact%20Mini-Tower/721/SC721TQ-350B2)
@@ -43,14 +44,15 @@ Case fan|Noctua [NF-A12x25 LS-PWM](https://noctua.at/en/nf-a12x25-pwm), Ultra Qu
 ## PCI Devices
 
 ```
-root@suprox:/# lspci
+root@suprox:~# lspci
 00:00.0 Host bridge: Intel Corporation 8th Gen Core 4-core Desktop Processor Host Bridge/DRAM Registers [Coffee Lake S] (rev 08)
+00:01.0 PCI bridge: Intel Corporation 6th-10th Gen Core Processor PCIe Controller (x16) (rev 08)
 00:08.0 System peripheral: Intel Corporation Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model
 00:12.0 Signal processing controller: Intel Corporation Cannon Lake PCH Thermal Controller (rev 10)
 00:14.0 USB controller: Intel Corporation Cannon Lake PCH USB 3.1 xHCI Host Controller (rev 10)
 00:14.2 RAM memory: Intel Corporation Cannon Lake PCH Shared SRAM (rev 10)
-00:15.0 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH Serial IO I2C Controller #0 (rev 10)
-00:15.1 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH Serial IO I2C Controller #1 (rev 10)
+00:15.0 Serial bus controller: Intel Corporation Cannon Lake PCH Serial IO I2C Controller #0 (rev 10)
+00:15.1 Serial bus controller: Intel Corporation Cannon Lake PCH Serial IO I2C Controller #1 (rev 10)
 00:16.0 Communication controller: Intel Corporation Cannon Lake PCH HECI Controller (rev 10)
 00:16.4 Communication controller: Intel Corporation Cannon Lake PCH HECI Controller #2 (rev 10)
 00:17.0 SATA controller: Intel Corporation Cannon Lake PCH SATA AHCI Controller (rev 10)
@@ -62,12 +64,14 @@ root@suprox:/# lspci
 00:1e.0 Communication controller: Intel Corporation Cannon Lake PCH Serial IO UART Host Controller (rev 10)
 00:1f.0 ISA bridge: Intel Corporation Device a30a (rev 10)
 00:1f.4 SMBus: Intel Corporation Cannon Lake PCH SMBus Controller (rev 10)
-00:1f.5 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH SPI Controller (rev 10)
-01:00.0 Ethernet controller: Intel Corporation I210 Gigabit Network Connection (rev 03)
+00:1f.5 Serial bus controller: Intel Corporation Cannon Lake PCH SPI Controller (rev 10)
+01:00.0 Ethernet controller: Intel Corporation I350 Gigabit Network Connection (rev 01)
+01:00.1 Ethernet controller: Intel Corporation I350 Gigabit Network Connection (rev 01)
 02:00.0 Ethernet controller: Intel Corporation I210 Gigabit Network Connection (rev 03)
-04:00.0 PCI bridge: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 04)
-05:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)
-06:00.0 Non-Volatile memory controller: Sandisk Corp WD Blue SN550 NVMe SSD (rev 01)
+03:00.0 Ethernet controller: Intel Corporation I210 Gigabit Network Connection (rev 03)
+05:00.0 PCI bridge: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 04)
+06:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)
+07:00.0 Non-Volatile memory controller: Sandisk Corp WD Blue SN550 NVMe SSD (rev 01)
 ```
 ## Storage Devices
 
