@@ -12,8 +12,8 @@ Defaults are safe.  Make it better:
 * CPU - enable pdpe1gb, aes
 * Hard Disk\IO Thread enabled
 * CPU - 1 OK, for a 1Gbps need at least 2
-* RAM - 1GB, NO balooning
-* Network - either bridge or PCIe devise passed through.
+* RAM - 1GB, NO ballooning required for PCI-passthrough to work.
+* Network - either bridge or PCIe device passed through.
 
 Either way:
 * Firewall - disabled
@@ -24,7 +24,7 @@ Options: QEMU Guest Agent: Enabled
 
 After VM created - add another NIC.
 
-## Guest agent
+## Guest Agent
 
 [Install guest
 agent](https://forum.netgate.com/topic/162083/pfsense-vm-on-proxmox-qemu-agent-installation).
@@ -54,7 +54,10 @@ qemu_guest_agent_flags="-d -v -l /var/log/qemu-ga.log"
 
 ### System/Advanced/Networking
 
-Disable all the offloading
+Disable all the offloading.
+
+UPDATE: i350-T2 is known to work well with all the functions being offloaded to
+NIC.
 
 ### Services/DHCP Server
 

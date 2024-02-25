@@ -1,15 +1,17 @@
-# Proxmox PCIe Pass Through
+# Proxmox PCIe Pass-Through
 
 Passing through PCIe adapter is beneficial for a VM relying on the specific
 hardware, e.g. NIC, storage controller or GPU.
 
 From [pci_passthrough](https://pve.proxmox.com/wiki/Pci_passthrough):
-"VMs with passed-through devices cannot be migrated."
+"VMs with passed-through devices cannot be migrated".
 
-More Info:
+Dos:
 
+* [Admin Guide](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_host_device_passthrough)
 * [pass-through-pcie-with-proxmox](https://www.servethehome.com/how-to-pass-through-pcie-nics-with-proxmox-ve-on-intel-and-amd/)
 * [guide_to_gpu_passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
+* [ProxMox Setup for PCIe Passthrough](https://drive.google.com/file/d/1rPTKi_b7EFqKTMylH64b3Dg9W0N_XIhO/view)
 
 ## Grub Kernel Boot Command Line
 
