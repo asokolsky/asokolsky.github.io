@@ -139,20 +139,43 @@ root@duo:~# lspci -n -s 01:00
 01:00.0 0300: 10de:1d01 (rev a1)
 01:00.1 0403: 10de:0fb8 (rev a1)
 ```
-
 The latter is important.
 
 
-## Blacklist Drivers
+## (Selective) Driver Blacklisting
 
-Prevent host from using GT710:
+* If the driver is compiled into the kernel - disable it by passing such a
+request on the kernel command line.  Unclear if this is still relevant.
+
+* If the driver is a module, blacklisting the driver will disable all the
+driver devices.  E.g. to prevent host from using GT710:
+
 ```sh
-echo "blacklist radeon" >> /etc/modprobe.d/blacklist.conf
-echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf
-echo "blacklist nvidia" >> /etc/modprobe.d/blacklist.conf
+blacklist radeon
+blacklist nouveau
+blacklist nvidia
+```
+then reboot
+
+* To selectively pass SATA driver to a VM, unbind AHCI driver from the
+device, bind the latter to vfio-pci:
+
+```sh
+#!/bin/sh
+DEVICE="08:00.0"
+echo "$DEVICE" > /sys/bus/pci/drivers/ahci/unbind
+echo "$DEVICE" > /sys/bus/pci/drivers/vfio-pci/bind
 ```
 
-reboot
+Another blacklisting example of `/etc/modprobe.d/pve-blacklist.conf`:
+```
+softdep igb pre: vfio-pci
+softdep atlantic: vfio-pci
+softdep nvme: vfio-pci
+options vfio-pci ids=8086:1521
+options vfio-pci ids=1043:874a
+options vfio-pci ids=c0a9:540a
+```
 
 # Add GPU to VFIO
 

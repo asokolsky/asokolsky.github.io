@@ -17,7 +17,7 @@ else
 fi
 
 case "$AWS_VAULT" in
-    "dev-from-security" )
+    "dev-from-security"|"dev-from-sso" )
         export KUBECONFIG="$HOME/.kube/dev-config" ;;
     *)
         export KUBECONFIG="$HOME/.kube/config" ;;

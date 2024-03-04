@@ -15,21 +15,18 @@ Install the guest agent:
 sudo pkg install qemu-guest-agent
 ```
 
-Add to `/etc/rc.conf`:
-```
-qemu_guest_agent_enable="YES"
-```
+In GUI:
 
-System\Advanced\loader.conf add:
+System/Advanced/loader.conf add:
 
 * `virtio_console_load`, `YES`, `for qemu-ga to work`
 
-System\Advanced\loader.conf add
+System/Advanced/loader.conf add
 
 * `qemu_guest_agent_enable`, `YES`
 * `qemu_guest_agent_flags`, `-d -v -l /var/log/qemu-ga.log`
 
-restart, verify that the agent works:
+Restart xigmanas, verify that the agent works:
 
 ```
 xigmanas: ~# service -v qemu-guest-agent status
