@@ -1,9 +1,9 @@
-# Portfix to Gmail Config
+# Postfix to Gmail Config
 
-The purpose of this is to allow for the e-mail to be delivered from HomeLAN CentOS7 server to my gmail account.
+The purpose of this is to allow for the e-mail to be delivered from HomeLAN
+CentOS7 server to my gmail account.
 
-Instructions: 
-https://devops.ionos.com/tutorials/configure-a-postfix-relay-through-gmail-on-centos-7/
+[Instructions](https://devops.ionos.com/tutorials/configure-a-postfix-relay-through-gmail-on-centos-7/)
 
 ## Installation
 
