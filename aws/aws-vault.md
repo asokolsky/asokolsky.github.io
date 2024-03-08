@@ -72,3 +72,18 @@ Open an AWS console in your browser by entering in the sub-shell:
 ```sh
 aws-vault login
 ```
+
+## Populating profile
+
+```
+asokolsky@laptop > ~ > aws-vault list
+Profile                  Credentials              Sessions
+=======                  ===========              ========
+default                  -                        -
+asokolsky                asokolsky                -
+logs-from-security       -                        -
+shared-from-security     shared-from-security     sts.AssumeRole:11h49m39s
+dev-from-security        dev-from-security        sts.AssumeRole:10h53m32s
+prod-from-security       -                        -
+stage-from-security      stage-from-security      sts.AssumeRole:11h45m28s
+```
