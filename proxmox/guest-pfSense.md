@@ -9,10 +9,10 @@ proxmox](https://pfstore.com.au/blogs/guides/run-pfsense-in-proxmox)
 
 Defaults are safe.  Make it better:
 
-* CPU - enable pdpe1gb, aes
-* Hard Disk\IO Thread enabled
-* CPU - 1 OK, for a 1Gbps need at least 2
+* CPU - enable pdpe1gb, aes, or rather pass the native CPU, cores: 1 OK, for a
+1Gbps need at least 2.
 * RAM - 1GB, NO ballooning required for PCI-passthrough to work.
+* Hard Disk\IO Thread enabled
 * Network - either bridge or PCIe device passed through.
 
 Either way:
@@ -63,12 +63,11 @@ NIC.
 
 Besides obvious...
 
-LAN/Other Options
+LAN/Other Options:
 
-NTP Server 1: _pfSense IP_
-
-Additional BOOTP/DHCP Options: Option 43, String, _value_,
-
+* NTP Server 1: _pfSense IP_
+* Syslog server: _IP_
+* Additional BOOTP/DHCP Options: Option 43, String, _value_,
 where _value_ is
 [calculated](https://tcpip.wtf/en/unifi-l3-adoption-with-dhcp-option-43-on-pfsense-mikrotik-and-others.htm)
 
