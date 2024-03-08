@@ -59,4 +59,17 @@ with
             syslogd_flags="${syslogd_flags} -a 192.168.10.0/24"
 ```
 
+[To specify log location](https://www.xigmanas.com/wiki/doku.php?id=faq:0134):
+in System / Advanced / rc.conf add:
+
+Param|Info
+--------|------------
+Variable|`clog_logdir`
+Value|`/mnt/ssd/logs`
+Description|Log files location.
+
 Then `sudo /etc/rc.d/syslogd restart`.
+
+## More
+
+[FreeBSD Tuning and Optimization](https://calomel.org/freebsd_network_tuning.html)
