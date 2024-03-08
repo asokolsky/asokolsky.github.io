@@ -29,6 +29,7 @@ In a VM:
 * [kubuntu desktop in a VM](guest-kubuntu.html)
 * [pfSense in a VM](guest-pfSense.html)
 * [TrueNAS in a VM](guest-truenas.html)
+* [XigmaNAS in a VM](guest-xigmanas.html)
 
 In an LXC container:
 

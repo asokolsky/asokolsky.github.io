@@ -30,7 +30,7 @@ destination;
 * combine the above using a `log` statement.
 
 File `/etc/syslog-ng/conf.d/remote.conf`:
-```json
+```
 source s_network {
     syslog(transport("udp"));
 };

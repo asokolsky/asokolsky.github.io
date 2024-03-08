@@ -85,7 +85,6 @@ which can be configured in the XigmaNAS GUI to:
 
 * accept messages from the remote servers: check Diagnostics / Log / Settings /
 Accept remote syslog messages.
-
 * [store logs persistently](https://www.xigmanas.com/wiki/doku.php?id=faq:0134):
 in System / Advanced / rc.conf add:
 
@@ -100,7 +99,7 @@ files by source.
 
 ### Use rsyslog for remote logging
 
-* DISABLE remote logging by syslog
+* DISABLE accept messages from the remote servers
 * DO USE persistent location `/mnt/_pool_/logs` for logs
 
 Install rsyslog:
@@ -132,7 +131,7 @@ sudo service rsyslogd start
 
 Check:
 ```sh
-sudo service rsyslog status
+sudo service rsyslogd status
 ```
 
 To display listening sockets:
