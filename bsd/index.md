@@ -1,5 +1,27 @@
 # FreeBSD Stuff
 
+[FreeBSD Tuning and Optimization](https://calomel.org/freebsd_network_tuning.html)
+
+
+## Package Management
+
+[man pkg](https://man.freebsd.org/cgi/man.cgi?pkg)
+
+To list files installed by the package `rsyslog`:
+
+```sh
+pkg info -l rsyslog
+```
+## Checking up on sockets
+
+Use [man netstat](https://man.freebsd.org/cgi/man.cgi?query=netstat), or,
+better yet, [man sockstat](https://man.freebsd.org/cgi/man.cgi?query=sockstat).
+
+To display listening sockets:
+```sh
+sockstat -l
+```
+
 ## Display Partition Table in FreeBSD
 
 ```console

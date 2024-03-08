@@ -36,6 +36,8 @@ Install the editor, htop:
 ```sh
 sudo pkg install emacs-nox
 sudo pkg install htop
+sudo pkg install zsh
+
 ```
 
 ### Install and Configure Guest QEMU Agent
@@ -96,7 +98,7 @@ Then `sudo /etc/rc.d/syslogd restart`.
 Unfortunately syslogd is not flexible enough to store remote logs in separate
 files by source.
 
-### Replace syslog with rsyslog for remote logging
+### Use rsyslog for remote logging
 
 * DISABLE remote logging by syslog
 * DO USE persistent location `/mnt/_pool_/logs` for logs
@@ -111,8 +113,8 @@ Verify the install:
 rsyslogd -v
 ```
 
-* [rsyslog man](https://man.freebsd.org/cgi/man.cgi?query=rsyslogd&apropos=0&sektion=8&manpath=freebsd-ports&format=html)
-* [rsyslog.conf man page](https://man.freebsd.org/cgi/man.cgi?query=rsyslog.conf&apropos=0&sektion=0&manpath=FreeBSD+13.2-RELEASE+and+Ports&arch=default&format=html)
+* [rsyslog man](https://man.freebsd.org/cgi/man.cgi?query=rsyslogd)
+* [rsyslog.conf man page](https://man.freebsd.org/cgi/man.cgi?query=rsyslog.conf)
 
 Update `/usr/local/etc/rsyslog.conf`  file:
 ```
@@ -121,16 +123,21 @@ Update `/usr/local/etc/rsyslog.conf`  file:
 
 Enable rsyslog start at system boot:
 ```sh
-sysrc rsyslog_enable=”YES”
+sysrc rsyslogd_enable=”YES”
 ```
 
 ```sh
-sudo service rsyslog start
+sudo service rsyslogd start
 ```
 
 Check:
 ```sh
 sudo service rsyslog status
+```
+
+To display listening sockets:
+```sh
+sockstat -l
 ```
 
 Relevant:
