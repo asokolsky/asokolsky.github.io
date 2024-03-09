@@ -37,8 +37,11 @@ Install the editor, htop:
 sudo pkg install emacs-nox
 sudo pkg install htop
 sudo pkg install zsh
-
 ```
+
+## Change root shell
+
+Edit `/etc/passwd`.
 
 ### Install and Configure Guest QEMU Agent
 
@@ -179,40 +182,59 @@ to ingest, then forward.
 Logrotate [man page](https://man.freebsd.org/cgi/man.cgi?query=logrotate),
 [guide](https://betterstack.com/community/guides/logging/how-to-manage-log-files-with-logrotate-on-ubuntu-20-04/).
 
-
-In `/etc/logrotate.d/rsyslog`
+Install it with:
+```sh
+pkg install logrotate
 ```
 
-/mnt/_pool_/logs/*.log {
+In `/usr/local/etc/logrotate.d/rsyslog`
+```
+"/mnt/ssd/logs/*.log" {
     daily
     rotate 3
     size 20K
     compress
     delaycompress
     sharedscripts
-    #postrotate kill -HUP $(cat /var/run/rsyslogd.pid) > /dev/null 2>/dev/null || true
     postrotate
-        /usr/lib/rsyslog/rsyslog-rotate
+        /usr/sbin/service syslogd restart  > /dev/null 2>/dev/null || true
+    endscript
+}
+
+"/mnt/ssd/logs/pfsense.lan/*.log"
+"/mnt/ssd/logs/U6-Lite/*.log"
+"/mnt/ssd/logs/duo/*.log"
+{
+    daily
+    rotate 3
+    size 20K
+    compress
+    delaycompress
+    sharedscripts
+    postrotate
+        kill -HUP $(cat /var/run/rsyslogd.pid) > /dev/null 2>/dev/null || true
     endscript
 }
 ```
+
 To test:
 ```sh
-logrotate -v /etc/logrotate.d/rsyslog
+logrotate -v -s /mnt/_pool_/logs/logrotate.status /usr/local/etc/logrotate.d/rsyslog
 ```
 To test and to force rotation:
 ```sh
-logrotate -v -f /etc/logrotate.d/rsyslog
+logrotate -v -f /usr/local/etc/logrotate.d/rsyslog
 ```
 
 Then daily cron job:
 ```sh
 #!/bin/sh
 
-/usr/sbin/logrotate -s /var/lib/logrotate/logrotate.status /etc/logrotate.conf
+/usr/local/sbin/logrotate -s /mnt/_pool_/logs/logrotate.status /usr/local/etc/logrotate.conf
 EXITVALUE=$?
 if [ $EXITVALUE != 0 ]; then
     /usr/bin/logger -t logrotate "ALERT exited abnormally with [$EXITVALUE]"
 fi
 exit 0
 ```
+log
