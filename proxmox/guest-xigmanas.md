@@ -146,9 +146,6 @@ Relevant:
 * [log-aggregation-rsyslog](https://www.redhat.com/sysadmin/log-aggregation-rsyslog)
 * [configure-centralised-rsyslog-server](https://betterstack.com/community/guides/logging/how-to-configure-centralised-rsyslog-server/)
 
-TODO:
-* [journald-logging](https://sematext.com/blog/journald-logging-tutorial/)
-
 To test logging functionality, use
 [logger](https://man7.org/linux/man-pages/man1/logger.1.html):
 
@@ -164,7 +161,8 @@ the IP address of the syslog server that receives the client's log messages.
 
 ### Forward systemd journal to remote syslog server
 
-[centralizing-with-syslog](https://www.loggly.com/ultimate-guide/centralizing-with-syslog/)
+* [journald-logging](https://sematext.com/blog/journald-logging-tutorial/)
+* [centralizing-with-syslog](https://www.loggly.com/ultimate-guide/centralizing-with-syslog/)
 
 Two options:
 

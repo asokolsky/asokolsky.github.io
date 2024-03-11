@@ -85,7 +85,7 @@ server or option 43 can NOT be entered in GUI. Configuration is stored in
 `/usr/local/etc/key/kea-dhcp4.conf`.
 [presentation](https://redmine.pfsense.org/attachments/download/5565/2023kea_custom_options.pdf)
 
-Added to `option-data`:
+Added to `option-data` in `/usr/local/etc/key/kea-dhcp4.conf`:
 
 ```
 {
