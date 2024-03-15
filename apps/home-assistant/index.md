@@ -2,6 +2,8 @@
 
 [Install in a VM](/proxmox/guest-home-assistant.html).
 
+At console prompt type `login` to get a bash shell.
+
 ## Configuration Editing
 
 Start with https://www.home-assistant.io/docs/configuration/ and VScode add-on.

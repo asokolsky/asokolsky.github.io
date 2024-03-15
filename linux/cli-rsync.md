@@ -16,7 +16,7 @@ rsync --dry-run --verbose --archive --recursive --human-readable --inplace \
 
 To copy a folder to a remote LAN computer:
 
-```
+```sh
 rsync -va rest2gpio/ alex@192.168.10.30:rest2gpio
 ```
 ## Local Ops
