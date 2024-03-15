@@ -1,6 +1,10 @@
 # TrueNAS Scale Customization
 
-[truenas-core](truenas-core.html)
+I [run it](/proxmox/guest-truenas.html) in a VM.
+
+* [TrueNAS Core](truenas-core.html)
+* [TrueNAS Scale as a syslog collector](syslog-collector.html)
+* [TrueCharts Catalog](true-charts.html)
 
 ## Enable apt for package management
 

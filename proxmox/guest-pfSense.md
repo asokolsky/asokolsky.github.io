@@ -9,10 +9,10 @@ proxmox](https://pfstore.com.au/blogs/guides/run-pfsense-in-proxmox)
 
 Defaults are safe.  Make it better:
 
-* CPU - enable pdpe1gb, aes
-* Hard Disk\IO Thread enabled
-* CPU - 1 OK, for a 1Gbps need at least 2
+* CPU - enable pdpe1gb, aes, or rather pass the native CPU, cores: 1 OK, for a
+1Gbps need at least 2.
 * RAM - 1GB, NO ballooning required for PCI-passthrough to work.
+* Hard Disk\IO Thread enabled
 * Network - either bridge or PCIe device passed through.
 
 Either way:
@@ -23,6 +23,15 @@ Either way:
 Options: QEMU Guest Agent: Enabled
 
 After VM created - add another NIC.
+
+## Install pfSense
+
+As usual.
+
+pfSense built-in editors:
+
+* vi
+* ee
 
 ## Guest Agent
 
@@ -54,7 +63,7 @@ qemu_guest_agent_flags="-d -v -l /var/log/qemu-ga.log"
 
 ### System/Advanced/Networking
 
-Disable all the offloading.
+Disable all the offloading.  Or NOT!
 
 UPDATE: i350-T2 is known to work well with all the functions being offloaded to
 NIC.
@@ -63,14 +72,27 @@ NIC.
 
 Besides obvious...
 
-LAN/Other Options
+LAN/Other Options:
 
-NTP Server 1: _pfSense IP_
-
-Additional BOOTP/DHCP Options: Option 43, String, _value_,
-
-where _value_ is
+* NTP Server 1: _pfSense IP_
+* Syslog server: _IP_
+* Unifi controller specified via additional BOOTP/DHCP Options: Option 43,
+String, _value_, where _value_ is
 [calculated](https://tcpip.wtf/en/unifi-l3-adoption-with-dhcp-option-43-on-pfsense-mikrotik-and-others.htm)
+
+pfSense migrated to Kea DHCP server and some custom options, e.g. for syslog
+server or option 43 can NOT be entered in GUI. Configuration is stored in
+`/usr/local/etc/key/kea-dhcp4.conf`.
+[presentation](https://redmine.pfsense.org/attachments/download/5565/2023kea_custom_options.pdf)
+
+Added to `option-data` in `/usr/local/etc/key/kea-dhcp4.conf`:
+
+```
+{
+    "name": "log-servers",
+    "data": "192.168.10.21"
+}
+```
 
 ### Services/DNS Resolver/General Settings
 

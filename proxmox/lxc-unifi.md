@@ -164,3 +164,8 @@ W: Some index files failed to download. They have been ignored, or old ones used
 
 Downloaded latest version of the [Installation Script](https://community.ui.com/questions/UniFi-Installation-Scripts-or-UniFi-Easy-Update-Script-or-Ubuntu-16-04-18-04-18-10-19-04-and-19-10-/ccbc7530-dd61-40a7-82ec-22b17f027776)
 and ran it.  It gave me an opportunity to update MondoDB to 4.4.  Outstanding!
+
+## Configure UniFi controller for remote logging to syslog server
+
+In GUI: Setting / System / Advanced / Remote Logging Location pick
+Remote Server, check syslog, enter server IP address.

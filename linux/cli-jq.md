@@ -28,6 +28,12 @@ To access a particular property within a JSON record, use the `.field` operator:
 terraform show -json|jq '.values.root_module.child_modules'
 ```
 
+If the filed has a reserved character, e.g. '.', escape it using double quote:
+
+```sh
+kubectl get secret lacework -n lacework -o jsonpath='{.data}'|jq '."config.json"'
+```
+
 To view a specific entry within an array, specify the index of the item within
 the `[]` operator:
 
