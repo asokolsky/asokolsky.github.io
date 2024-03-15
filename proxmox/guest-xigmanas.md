@@ -225,8 +225,9 @@ To test and to force rotation:
 ```sh
 logrotate -v -f /usr/local/etc/logrotate.d/rsyslog
 ```
+To create a daily cron job, create executable
+`/usr/local/sbin/rsyslogd-rotate.sh`:
 
-Then daily cron job:
 ```sh
 #!/bin/sh
 
@@ -237,4 +238,10 @@ if [ $EXITVALUE != 0 ]; then
 fi
 exit 0
 ```
-log
+
+Then in GUI System / Advanced / Cron add:
+
+Command: /usr/local/sbin/rsyslogd-rotate.sh
+Who: root
+Description: Rotate persistent logs
+Schedule Time: Minutes - 15, Hours - 01
