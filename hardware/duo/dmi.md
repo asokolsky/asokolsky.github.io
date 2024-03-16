@@ -1,5 +1,7 @@
 # duo dmi
 
+[Desktop Management Interface](https://en.wikipedia.org/wiki/Desktop_Management_Interface)
+
 ```
 alex@duo > sudo dmidecode
 # dmidecode 3.4

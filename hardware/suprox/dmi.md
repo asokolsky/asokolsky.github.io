@@ -1,5 +1,7 @@
 ## Suprox DMI Info
 
+[Desktop Management Interface](https://en.wikipedia.org/wiki/Desktop_Management_Interface)
+
 ```
 root@suprox:~# dmidecode
 # dmidecode 3.4
