@@ -10,8 +10,8 @@ BMC|ASpeed AST 2400
 BIOS|1.5 5/17/2021
 BMC Firmware|03.88 02/21/2020 Redfish Version: 1.0.1
 RAM|4x Micron MTA18ASF1G72PDZ-2G6E1 8GB DDR4-2666 ECC RDIMM
-.|18ASF1G72PDZ-2G6E1  2666 MT/s @2133 MT/s - cpu max
-.|1x Crucial 8GB DDR4-2666 RDIMM,  p/n 18ASF1G72PDZ-2G6E1
+&nbsp;|18ASF1G72PDZ-2G6E1  2666 MT/s @2133 MT/s - cpu max
+&nbsp;|1x Crucial 8GB DDR4-2666 RDIMM,  p/n 18ASF1G72PDZ-2G6E1
 Case Fan|Noctua NF-P12 redux-1700 PWM, High Performance Fan, 4-Pin, 1700rpm
 Storage Controller|Intel Denverton AHCI SATA controller
 Ethernet|Intel X553
@@ -20,35 +20,91 @@ Case|SST-DS380B-USA by SilverStone Tech
 UPS|APC Back-UPS ES 550
 OS|TrueNAS-SCALE-22.12.1
 
-## PCI
+## PCIe Devices
 
-Here is the PCI hardware:
 ```
-root@nass[~]# lspci
-00:00.0 Host bridge: Intel Corporation Atom Processor C3000 Series System Agent (rev 11)
-00:04.0 Host bridge: Intel Corporation Atom Processor C3000 Series Error Registers (rev 11)
-00:05.0 Generic system peripheral [0807]: Intel Corporation Atom Processor C3000 Series Root Complex Event Collector (rev 11)
-00:06.0 PCI bridge: Intel Corporation Atom Processor C3000 Series Integrated QAT Root Port (rev 11)
-00:10.0 PCI bridge: Intel Corporation Atom Processor C3000 Series PCI Express Root Port #6 (rev 11)
-00:11.0 PCI bridge: Intel Corporation Atom Processor C3000 Series PCI Express Root Port #7 (rev 11)
-00:12.0 System peripheral: Intel Corporation Atom Processor C3000 Series SMBus Contoller - Host (rev 11)
-00:13.0 SATA controller: Intel Corporation Atom Processor C3000 Series SATA Controller 0 (rev 11)
-00:14.0 SATA controller: Intel Corporation Atom Processor C3000 Series SATA Controller 1 (rev 11)
-00:15.0 USB controller: Intel Corporation Atom Processor C3000 Series USB 3.0 xHCI Controller (rev 11)
-00:16.0 PCI bridge: Intel Corporation Atom Processor C3000 Series Integrated LAN Root Port #0 (rev 11)
-00:17.0 PCI bridge: Intel Corporation Atom Processor C3000 Series Integrated LAN Root Port #1 (rev 11)
-00:18.0 Communication controller: Intel Corporation Atom Processor C3000 Series ME HECI 1 (rev 11)
-00:1f.0 ISA bridge: Intel Corporation Atom Processor C3000 Series LPC or eSPI (rev 11)
-00:1f.2 Memory controller: Intel Corporation Atom Processor C3000 Series Power Management Controller (rev 11)
-00:1f.4 SMBus: Intel Corporation Atom Processor C3000 Series SMBus controller (rev 11)
-00:1f.5 Serial bus controller [0c80]: Intel Corporation Atom Processor C3000 Series SPI Controller (rev 11)
-01:00.0 Co-processor: Intel Corporation Atom Processor C3000 Series QuickAssist Technology (rev 11)
-03:00.0 PCI bridge: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 03)
-04:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 30)
-05:00.0 Ethernet controller: Intel Corporation Ethernet Connection X553 1GbE (rev 11)
-05:00.1 Ethernet controller: Intel Corporation Ethernet Connection X553 1GbE (rev 11)
-06:00.0 Ethernet controller: Intel Corporation Ethernet Connection X553 1GbE (rev 11)
-06:00.1 Ethernet controller: Intel Corporation Ethernet Connection X553 1GbE (rev 11)
+alex@nass:~/ > lspci -nnkq
+00:00.0 Host bridge [0600]: Intel Corporation Atom Processor C3000 Series System Agent [8086:1980] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series System Agent [15d9:0969]
+00:04.0 Host bridge [0600]: Intel Corporation Atom Processor C3000 Series Error Registers [8086:19a1] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series Error Registers [15d9:0969]
+00:05.0 Generic system peripheral [0807]: Intel Corporation Atom Processor C3000 Series Root Complex Event Collector [8086:19a2] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series Root Complex Event Collector [15d9:0969]
+	Kernel driver in use: pcieport
+00:06.0 PCI bridge [0604]: Intel Corporation Atom Processor C3000 Series Integrated QAT Root Port [8086:19a3] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series Integrated QAT Root Port [15d9:0969]
+	Kernel driver in use: pcieport
+00:10.0 PCI bridge [0604]: Intel Corporation Atom Processor C3000 Series PCI Express Root Port #6 [8086:19aa] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series PCI Express Root Port [15d9:0969]
+	Kernel driver in use: pcieport
+00:11.0 PCI bridge [0604]: Intel Corporation Atom Processor C3000 Series PCI Express Root Port #7 [8086:19ab] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series PCI Express Root Port [15d9:0969]
+	Kernel driver in use: pcieport
+00:12.0 System peripheral [0880]: Intel Corporation Atom Processor C3000 Series SMBus Contoller - Host [8086:19ac] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series SMBus Contoller - Host [15d9:0969]
+	Kernel driver in use: ismt_smbus
+	Kernel modules: i2c_ismt
+00:13.0 SATA controller [0106]: Intel Corporation Atom Processor C3000 Series SATA Controller 0 [8086:19b2] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series SATA Controller 0 [15d9:0969]
+	Kernel driver in use: ahci
+	Kernel modules: ahci
+00:14.0 SATA controller [0106]: Intel Corporation Atom Processor C3000 Series SATA Controller 1 [8086:19c2] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series SATA Controller 1 [15d9:0969]
+	Kernel driver in use: ahci
+	Kernel modules: ahci
+00:15.0 USB controller [0c03]: Intel Corporation Atom Processor C3000 Series USB 3.0 xHCI Controller [8086:19d0] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series USB 3.0 xHCI Controller [15d9:0969]
+	Kernel driver in use: xhci_hcd
+	Kernel modules: xhci_pci
+00:16.0 PCI bridge [0604]: Intel Corporation Atom Processor C3000 Series Integrated LAN Root Port #0 [8086:19d1] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series Integrated LAN Root Port [15d9:0969]
+	Kernel driver in use: pcieport
+00:17.0 PCI bridge [0604]: Intel Corporation Atom Processor C3000 Series Integrated LAN Root Port #1 [8086:19d2] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series Integrated LAN Root Port [15d9:0969]
+	Kernel driver in use: pcieport
+00:18.0 Communication controller [0780]: Intel Corporation Atom Processor C3000 Series ME HECI 1 [8086:19d3] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series ME HECI 1 [15d9:0969]
+00:1f.0 ISA bridge [0601]: Intel Corporation Atom Processor C3000 Series LPC or eSPI [8086:19dc] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series LPC or eSPI [15d9:0969]
+00:1f.2 Memory controller [0580]: Intel Corporation Atom Processor C3000 Series Power Management Controller [8086:19de] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series Power Management Controller [15d9:0969]
+00:1f.4 SMBus [0c05]: Intel Corporation Atom Processor C3000 Series SMBus controller [8086:19df] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series SMBus controller [15d9:0969]
+	Kernel driver in use: i801_smbus
+	Kernel modules: i2c_i801
+00:1f.5 Serial bus controller [0c80]: Intel Corporation Atom Processor C3000 Series SPI Controller [8086:19e0] (rev 11)
+	Subsystem: Super Micro Computer Inc Atom Processor C3000 Series SPI Controller [15d9:0969]
+01:00.0 Co-processor [0b40]: Intel Corporation Atom Processor C3000 Series QuickAssist Technology [8086:19e2] (rev 11)
+	Subsystem: Intel Corporation Atom Processor C3000 Series QuickAssist Technology [8086:0000]
+	Kernel driver in use: c3xxx
+	Kernel modules: qat_c3xxx
+03:00.0 PCI bridge [0604]: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge [1a03:1150] (rev 03)
+	Subsystem: Super Micro Computer Inc AST1150 PCI-to-PCI Bridge [15d9:0969]
+04:00.0 VGA compatible controller [0300]: ASPEED Technology, Inc. ASPEED Graphics Family [1a03:2000] (rev 30)
+	DeviceName: ASPEED Video AST2400
+	Subsystem: Super Micro Computer Inc ASPEED Graphics Family [15d9:0969]
+	Kernel driver in use: ast
+	Kernel modules: ast
+05:00.0 Ethernet controller [0200]: Intel Corporation Ethernet Connection X553 1GbE [8086:15e4] (rev 11)
+	DeviceName: Intel Ethernet X553 SGMII #1
+	Subsystem: Intel Corporation Ethernet Connection X553 1GbE [8086:0000]
+	Kernel driver in use: ixgbe
+	Kernel modules: ixgbe
+05:00.1 Ethernet controller [0200]: Intel Corporation Ethernet Connection X553 1GbE [8086:15e4] (rev 11)
+	DeviceName: Intel Ethernet X553 SGMII #2
+	Subsystem: Intel Corporation Ethernet Connection X553 1GbE [8086:0000]
+	Kernel driver in use: ixgbe
+	Kernel modules: ixgbe
+06:00.0 Ethernet controller [0200]: Intel Corporation Ethernet Connection X553 1GbE [8086:15e5] (rev 11)
+	DeviceName: Intel Ethernet X553 SGMII #3
+	Subsystem: Intel Corporation Ethernet Connection X553 1GbE [8086:0000]
+	Kernel driver in use: ixgbe
+	Kernel modules: ixgbe
+06:00.1 Ethernet controller [0200]: Intel Corporation Ethernet Connection X553 1GbE [8086:15e5] (rev 11)
+	DeviceName: Intel Ethernet X553 SGMII #4
+	Subsystem: Intel Corporation Ethernet Connection X553 1GbE [8086:0000]
+	Kernel driver in use: ixgbe
+	Kernel modules: ixgbe
 ```
 
 Note the presence of the QuickAssist co-processor:
@@ -102,6 +158,6 @@ cat: /proc/spl/kstat/zfs/qat: No such file or directory
 ## OS
 
 ```
-> uname -a
-Linux nass 6.1.55-production+truenas #2 SMP PREEMPT_DYNAMIC Tue Oct 31 16:07:08 UTC 2023 x86_64 GNU/Linux
+alex@nass:~/ > uname -a
+Linux nass 6.1.74-production+truenas #2 SMP PREEMPT_DYNAMIC Wed Feb 21 20:30:38 UTC 2024 x86_64 GNU/Linux
 ```

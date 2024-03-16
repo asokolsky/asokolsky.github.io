@@ -1,5 +1,7 @@
 # Playing with ZFS on SSDs
 
+No longer used.  Consider this totally obsolete.
+
 4 SSDs added:
 
 ```

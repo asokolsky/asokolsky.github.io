@@ -21,7 +21,7 @@ sudo apt update
 
 Then install packages as usual:
 ```sh
-sudo apt install emacs-nox
+sudo apt install emacs-nox usbutils
 ```
 
 ## Drive Spin Down
