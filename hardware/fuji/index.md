@@ -1,8 +1,26 @@
 # fuji
 
-Fujitsu PRIMERGY TX1320 M3 PYT1323T3S used as a virtualization server.
+Fujitsu PRIMERGY TX1320 M3 used as a virtualization server.
 
-[Passing SATA controller to VM](https://forum.proxmox.com/threads/prevent-a-sata-controller-to-be-loaded-by-ahci.136983/).
+[Passing SATA controller to VM](/proxmox/pcie-passthrough-sata.html).
+
+Runs VMs:
+
+* [pfSense router](/proxmox/guest-pfSense.html)
+with a i350-T2 NIC passed through;
+* [XigmaNAS](/proxmox/guest-xigmanas.html) with
+[an on-board SATA passed-through](/proxmox/pcie-passthrough-sata.html);
+* [Home Assistant on HAOS](/proxmox/guest-home-assistant.html).
+
+Runs LXCs:
+
+* [vault](/proxmox/lxc-vault.html)
+* [mqtt](/proxmox/lxc-mqtt.html)
+* [Unifi Controller](/proxmox/lxc-unifi.html)
+
+Runs in docker containers:
+
+* [portainer](/apps/docker/portainer.md).
 
 ## Hardware
 
@@ -10,15 +28,14 @@ Item|Description
 ----|----------
 CPU|Xeon E3-1230v6 3.5Ghz 4C/8T 8MB 72W
 Motherboard|D3373-B1x, Intel C236 chipset, 2x PCIx3 8-lane x2, 1x PCIx3 1-lane, 1 PCIx3 4-lane
-RAM|UDIMM PC4-19200 unbuffered ECC DDR4-2400MHz, 4 slots, Max64GB
-.|2x DDR4 ECC UDIMM 16GB 2Rx8 2666 CL19 MTA18ASF2G72AZ-2G6E2
-.|16 GB 18ASF2G72AZ-2G6E2, 2667 MT/s, @2400 MT/s
-.|16 GB 18ASF2G72AZ-2G6E2, 2667 MT/s, @2400 MT/s
+RAM|UDIMM PC4-19200 unbuffered ECC DDR4-2400MHz, 4 slots, Max 64GB
+.|4x DDR4 ECC UDIMM 16GB 2Rx8 2666 CL19 MTA18ASF2G72AZ-2G6E2
 M2 Adapter|PCIE Adapter for SATA or PCIE NVMe SSD
 .|M.2 2280 Nvme PCIe SSD Sabrent 256GB Rocket SB-ROCKET-256
 .|M.2 2280 SATA SSD Samsung 860 EVO 500GB MZ-N6E500BW
 Storage Controller|onboard 4ports SATA 6G
-Ethernet|onboard 2x i210, Dell Intel I350-T2, XP0NY
+NIC|2x Intel I210 on motherboard
+NIC|Dell Intel I350-T2, XP0NY
 PSU|250W
 UPS|APC RS1000G
 OS|ProxMox VE
