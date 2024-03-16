@@ -8,10 +8,10 @@ Computing:
 
 [Home Office](/2021/01/01/home-office.html) and Home Lab
 
-* [NAS](nas/)
-* [Virtualization server fuji](fuji/)
-* [Virtualization playground duo (retired)](duo/)
-* [Virtualization server exi](exi/)
+* [NASS](nas/)
+* [Backup NAS duo](duo/)
+* [Main Virtualization server fuji](fuji/)
+* [HTPC exi](exi/)
 * [All-in-one suprox](suprox/)
 
 Networking:
@@ -21,6 +21,7 @@ Networking:
 * [Shelly devices](shelly/)
 
 Peripherals:
+
 * [Logitech Presenter R800 Remote Control](remote.html)
 * [Keychron K1 Keyboard](keyboard.html)
 * [Remote Key Mapping](remote.html)
