@@ -5,6 +5,8 @@
 # is attached to a tty.
 
 export AWS_DEFAULT_REGION=us-east-1
+export AWS_PAGER=''
+
 export GOROOT=$HOME/go
 export PDSH_RCMD_TYPE=ssh
 export EDITOR=emacs

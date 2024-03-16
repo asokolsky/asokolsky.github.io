@@ -50,6 +50,15 @@ Default output format [None]:
 
 ### Pagination
 
+Note we are talking here about two entities:
+
+* API splitting the results in pages - to limit response to just one page use
+`--no-paginate`
+* CLI pagination of the output:
+setting [cli_pager](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html#cli-usage-pagination-clipager),
+environment variable [AWS_PAGER](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html#cli-usage-pagination-awspager),
+cli option [--no-cli-pager](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html#cli-usage-pagination-noclipager)
+
 It helps me to [disable
 pagination](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html)
 in `~/.aws/credentials`:
@@ -58,6 +67,12 @@ in `~/.aws/credentials`:
 [default]
 cli_pager=
 ```
+
+or just
+```sh
+export AWS_PAGER=''
+```
+
 
 ## Environment Variables
 
