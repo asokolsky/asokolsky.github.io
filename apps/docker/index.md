@@ -5,3 +5,8 @@
 * [Cheat Sheet](docker.html)
 * [Dockerfile](dockerfile.html)
 * [Portainer](portainer.html)
+
+[Docker desktop](docker-desktop.html) and its alternatives:
+
+* [colima](colima.html)
+* [podman desktop](podman-desktop.html)

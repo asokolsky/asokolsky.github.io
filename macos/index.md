@@ -14,12 +14,15 @@ xcode-select --install
 * use of [keyboard](keyboard.html)
 * use of [keyboard in finder](finder.html)
 
-## Apps to Use
+## Running Apps on Mac
 
 * cli: [exiftool](/apps/cli-exiftool.html), and [more...](cli.html)
 * [iTerm2](iTerm2.html) Terminal Emulator
 * [Java](java.html)
 * [Jenkins](jenkins.html)
+* [docker](/apps/docker/docker-macos.html)
+* [colima](/apps/docker/colima.html)
+* [psql client](/apps/psql-client.html)
 
 Also relevant:
 

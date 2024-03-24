@@ -29,3 +29,8 @@ download:
 ```sh
 aws s3 cp s3://bucket/foo.tgz /tmp/foo.tgz
 ```
+
+To dump the object to stdout:
+```sh
+aws s3 cp s3://bucket/foo.json -
+```

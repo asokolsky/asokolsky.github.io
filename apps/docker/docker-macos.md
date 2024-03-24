@@ -1,19 +1,11 @@
 # Using Docker on MacOS
 
-Docker desktop is bad choice.  Use [Colima](https://github.com/abiosoft/colima)
-(containers in [Lima](https://github.com/lima-vm/lima)) instead.
+Docker Desktop is bad choice.  Use [Colima](colima.html) instead.
 
-## Install Colima
+To install docker (not desktop) and docker compose:
 
 ```sh
-brew install colima
+brew install docker docker-compose
 ```
 
-If you observe
-“Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?”
-set `DOCKER_HOST`:
-```sh
-export DOCKER_HOST=unix://$HOME/.colima/docker.sock
-```
-
-## Install Docker and Docker Compose
+Do NOT use the `--cask` switch. That will install Docker Desktop instead of CLI.
