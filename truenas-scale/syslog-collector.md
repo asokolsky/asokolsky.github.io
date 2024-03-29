@@ -52,3 +52,33 @@ log {
 Restart the service with `sudo systemctl restart syslog-ng.service`
 
 Verify the listening socket using `ss -4l`
+
+## Use Logrotate
+
+Logrotate [man page](https://man.freebsd.org/cgi/man.cgi?query=logrotate),
+[guide](https://betterstack.com/community/guides/logging/how-to-manage-log-files-with-logrotate-on-ubuntu-20-04/) is pre-installed in
+`/sbin/logrotate` and log rotation is done weekly.
+
+All you need is to create `/etc/logrotate.d/syslog-ng-remote`:
+```
+"/mnt/bmp/logs/192.168.11.1/*.log"
+"/mnt/bmp/logs/192.168.11.1/usr/sbin/*.log"
+"/mnt/bmp/logs/192.168.11.4/*.log"
+"/mnt/bmp/logs/192.168.11.5/*.log"
+"/mnt/bmp/logs/192.168.11.7/*.log"
+{
+    daily
+    rotate 3
+    size 20K
+    compress
+    delaycompress
+    sharedscripts
+    postrotate
+        invoke-rc.d syslog-ng reload > /dev/null
+    endscript
+}
+```
+To test:
+```sh
+logrotate -v /etc/logrotate.d/syslog-ng-remote
+```

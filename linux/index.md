@@ -10,6 +10,7 @@ Commands:
 
 * [bluetooth](cli-bluetooth.html)
 * [disk](cli-disk.html)
+* [ethtool](cli-ethtool.html)
 * [format (flash) disk](cli-disk-format.html)
 * [find](cli-find.html)
 * [fwupd client tool](cli-fwupdmgr.html)

@@ -22,7 +22,7 @@ Application setup and use:
 * [ruby](ruby.html)
 * [smb-client](smb-client.html)
 * [terraform](terraform.html)
-* [VLC](vlc.html)
+* [VLC](vlc/)
 * [Visual Studio Code](vscode/)
 * Wireguard [in-a-cloud](wireguard-in-a-cloud.html),
 [on-a-router](wireguard-on-a-router.html)
