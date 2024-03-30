@@ -9,9 +9,9 @@ Administering:
 Commands:
 
 * [bluetooth](cli-bluetooth.html)
-* [disk](cli-disk.html)
+* [disk](cli-disk.html), [disk formatting](cli-disk-format.html)
+* [dmidecode](cli-dmidecode.html)
 * [ethtool](cli-ethtool.html)
-* [format (flash) disk](cli-disk-format.html)
 * [find](cli-find.html)
 * [fwupd client tool](cli-fwupdmgr.html)
 * [ipcalc](cli-ipcalc.html)

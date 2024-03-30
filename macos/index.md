@@ -1,11 +1,24 @@
 # MacOS Customization
 
-For software development you will need
-[Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/):
+MacOS:
 
-```sh
-xcode-select --install
-```
+* [Features, Tips and Tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
+* [reset](reset.html)
+
+## Disk
+
+Repair disk using:
+
+* [Disk Utility](https://support.apple.com/en-us/102611),
+[Disk Utility User Guide](https://support.apple.com/guide/disk-utility/welcome/mac)
+* [Stellar Data Recovery](https://www.stellarinfo.com/blog/repair-corrupt-mac-partition/)
+
+Alternatively, using CLI:
+
+* boot into a single-user mode: press and hold the Command+S keys while MacOS
+boots.
+* use
+[diskutil and fsck](https://appleinsider.com/inside/macos/tips/how-to-use-fsck-to-check-and-repair-macos-disks)
 
 ## Optimizing input
 
@@ -16,22 +29,25 @@ xcode-select --install
 
 ## Running Apps on Mac
 
+For any software development install
+[Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/):
+
+```sh
+xcode-select --install
+```
+Then:
 * cli: [exiftool](/apps/cli-exiftool.html), and [more...](cli.html)
 * [iTerm2](iTerm2.html) Terminal Emulator
 * [Java](java.html)
 * [Jenkins](jenkins.html)
-* [docker](/apps/docker/docker-macos.html)
-* [colima](/apps/docker/colima.html)
+* [docker](/apps/docker/docker-macos.html) and
+[colima](/apps/docker/colima.html)
 * [psql client](/apps/psql-client.html)
 
 Also relevant:
 
 * [dot-files](/apps/dot-files/)
 * [emacs colors](/apps/emacs/)
-
-[MacOS Features, Tips and Tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
-
-[MacOS reset](reset.html)
 
 ## Terminal Peculiarities
 
@@ -52,8 +68,8 @@ cchars: discard = ^O; dsusp = ^Y; eof = ^D; eol = <undef>;
 	stop = ^S; susp = ^Z; time = 0; werase = ^W;
 ```
 
-The above [interfering with SSM](https://github.com/aws/session-manager-plugin/issues/29)
-
+The above
+[interferes with AWS SM](https://github.com/aws/session-manager-plugin/issues/29).
 Workaround:
 
 ```sh
