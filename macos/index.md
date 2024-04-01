@@ -4,6 +4,7 @@ MacOS:
 
 * [Features, Tips and Tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
 * [reset](reset.html)
+* [startup key combinations](https://support.apple.com/en-us/102603)
 
 ## Disk
 
