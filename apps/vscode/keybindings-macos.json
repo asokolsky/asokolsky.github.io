@@ -12,5 +12,25 @@
     { "key": "ctrl+f",
       "command": "actions.find",
       "when": "editorFocus || editorIsOpen"
+    },
+    {
+      "key": "ctrl+left",
+      "command": "cursorWordLeft",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+right",
+      "command": "cursorWordRight",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+shift+left",
+      "command": "cursorWordLeftSelect",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+shift+right",
+      "command": "cursorWordRightSelect",
+      "when": "textInputFocus"
     }
 ]

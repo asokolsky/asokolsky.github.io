@@ -104,3 +104,11 @@ Use:
 ## Terminal Emulator
 
 I use [iTerm2](iTerm2.html).
+
+## Repurpose the Existing Keyboard Accelerators
+
+Ctrl+Left/Right are mapped to desktop switching in macOS by default.
+I prefer to make these available to apps, so I need to remove the default
+bindings.
+Goto System Preferences / Keyboard / Shortcuts / Mission control,
+remove Ctrl+Left/Right
