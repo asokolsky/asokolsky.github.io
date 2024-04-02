@@ -36,9 +36,16 @@ sudo dpkg -i gasket-dkms_1.0-18_all.deb
 Reboot, verify success:
 
 ```
-# lspci -nn | grep 089a
-03:00.0 System peripheral [0880]: Global Unichip Corp. Coral Edge TPU [1ac1:089a]
+> lspci -nnkq
+...
+04:00.0 System peripheral [0880]: Global Unichip Corp. Coral Edge TPU [1ac1:089a]
+	Subsystem: Global Unichip Corp. Coral Edge TPU [1ac1:089a]
+	Kernel driver in use: apex
+	Kernel modules: apex
+```
+
+Verify the device presence:
+```
 # ls -al /dev/apex*
 crw-rw---- 1 root root 120, 0 Jan  2 13:52 /dev/apex_0
-root@exi:/home/alex#
 ```

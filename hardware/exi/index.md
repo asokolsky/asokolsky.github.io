@@ -16,12 +16,13 @@ M.2_0|Key E, supports type 2230 WiFi/BT PCIe WiFi module and Intel® CNVio/CNVio
 M.2_1|Key M, supports type 2242/2260/2280 PCIe Gen4x4 (64 Gb/s)
 &nbsp;|500GB WD Blue SN550 NVMe SSD - Gen3x4 PCIe 8Gb/s, M.2 2280, 3D NAND WDS500G2B0C
 M.2_2|Key M, supports type 2280 PCIe Gen4x4 (64 Gb/s)
-&nbsp;|Edge TPU ML compute accelerator, CORAL TPU M.2 B+M
+&nbsp;|[Edge TPU ML compute accelerator, Coral TPU M.2 B+M](../coral.html)
 M.2_3|Key M, supports type 2280 PCIe Gen4x4 (64 Gb/s)
 SATA|4 x SATA3 6.0 Gb/s Connectors
 PCIe1|PCIe 5.0 x16 slot, supports x16 mode
 &nbsp;|MSI Ventus GeForce RTX 3050 8GB GDDR6 PCIx 4.0 x8, HDMI 2.1, DP v1.4a 115W
 PCIe2|PCIe 3.0 x16 slot, supports x4 mode
+&nbsp;|[1xPCIe to 4xSATA M.2 adapter](../1xPCIe-4xSATA-M.2.html)
 Ethernet|onboard RTL8125BG
 BIOS|3.04
 Case|Antec
