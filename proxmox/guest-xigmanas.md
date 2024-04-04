@@ -83,7 +83,7 @@ Relevant:
 
 ### Out-of-the-box Functionality
 
-XigmaNAS comes with [syslogd]((https://man.freebsd.org/cgi/man.cgi?syslogd)),
+XigmaNAS comes with [syslogd](https://man.freebsd.org/cgi/man.cgi?syslogd),
 which can be configured in the XigmaNAS GUI to:
 
 * accept messages from the remote servers: check Diagnostics / Log / Settings /

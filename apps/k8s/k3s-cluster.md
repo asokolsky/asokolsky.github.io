@@ -3,12 +3,12 @@
 ## Hardware & OS
 
 Installed Ubuntu server 22.04 on
-[3x Optiplex7060](/hardware/optiplex7060micro.html):
+[3x Optiplex7060](/hardware/dell/optiplex7060micro.html):
 
 * `minimum` config - even `nano` not available, yet `htop` is there!
 * installed on `sda`, NVME disk left for later use...
 
-[Hosts](/hardware/optiplex7060micro.html):
+[Hosts](/hardware/dell/optiplex7060micro.html):
 
 Host|IP
 ----|-
