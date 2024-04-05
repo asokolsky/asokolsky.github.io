@@ -49,7 +49,8 @@ sudo killall -USR2 systemd-resolved
 
 ## Linux Internals
 
-* [Process States](https://raw.githubusercontent.com/abarrak/linux-sysops-handbook/main/images/process-states.png)
+* [Process States](https://raw.githubusercontent.com/abarrak/linux-sysops-handbook/main/images/process-states.png) from
+[Linux SysOps Handbook](https://github.com/abarrak/linux-sysops-handbook/)
 
 See also:
 
