@@ -18,27 +18,13 @@
 * [iperf](cli-iperf.html)
 * [ipmi](cli-ipmi.html)
 * [jq](cli-jq.html)
-* [netstat](cli-netstat.html)
+* [netstat](cli-netstat.html) and [socket stats](cli-ss.html)
 * [pdsh](cli-pdsh.html)
 * [bulk rename](cli-rename-files.html)
 * [rsync](cli-rsync.html)
-* [socket stats](cli-ss.html)
 * [systemctl](cli-systemctl.html)
+* [more...](cli.html)
 
-## Examples
-
-show top 10 CPU consuming processes:
-```sh
-ps -eo pcpu,pid,user,args|sort -k 1 -nr|head -10
-```
-show process command line:
-```sh
-cat /proc/_pid_/cmdline|xargs -0
-```
-reload DNS resolver:
-```sh
-sudo killall -USR2 systemd-resolved
-```
 
 ## Linux Tasks
 
@@ -55,8 +41,6 @@ sudo killall -USR2 systemd-resolved
 See also:
 
 * [Programming](/programming/)
-* [CLI](cli.html)
-
 
 ## Linux Books
 

@@ -3,7 +3,6 @@
 This is about working with services.
 [Other aspects of systemctl](cli-systemctl.html).
 
-
 ## Show Services
 
 Show the running services:
@@ -33,7 +32,6 @@ systemctl list-unit-files --type=service --state=enabled
 ```
 
 ## Show Service Status
-
 
 ```sh
 systemctl status _service-name_
@@ -162,9 +160,7 @@ WantedBy=multi-user.target
 
 ### Create the unit file
 
-
-https://www.2daygeek.com/linux-create-systemd-service-unit-file/
-
+[Create systemd service unit file](https://www.2daygeek.com/linux-create-systemd-service-unit-file/).
 
 ### Extending the unit file
 
