@@ -1,12 +1,12 @@
 # Linux Notes
 
-Administering:
+## Administering
 
 * [CentOS](../centos/)
 * [Proxmox](../proxmox/)
 * [SysOps Handbook](https://abarrak.gitbook.io/linux-sysops-handbook/)
 
-Commands:
+## CLI
 
 * [bluetooth](cli-bluetooth.html)
 * [disk](cli-disk.html), [disk formatting](cli-disk-format.html)
@@ -25,21 +25,29 @@ Commands:
 * [socket stats](cli-ss.html)
 * [systemctl](cli-systemctl.html)
 
-Examples:
+## Examples
 
-* show top 10 CPU consuming processes:
-`ps -eo pcpu,pid,user,args|sort -k 1 -nr|head -10`
-* show process command line: `cat /proc/_pid_/cmdline|xargs -0`
-* reload DNS resolver: `sudo killall -USR2 systemd-resolved`
+show top 10 CPU consuming processes:
+```sh
+ps -eo pcpu,pid,user,args|sort -k 1 -nr|head -10
+```
+show process command line:
+```sh
+cat /proc/_pid_/cmdline|xargs -0
+```
+reload DNS resolver:
+```sh
+sudo killall -USR2 systemd-resolved
+```
 
-Tasks:
+## Linux Tasks
 
 * [Benchmarks](benchmarks/)
 * Convert [audio](convert-audio.html), [images](convert-image.html)
 * [dot files](/apps/dot-files)
 * [kernel tuning](kernel-tuning.html)
 
-Internals:
+## Linux Internals
 
 * [Process States](https://raw.githubusercontent.com/abarrak/linux-sysops-handbook/main/images/process-states.png)
 
@@ -49,9 +57,9 @@ See also:
 * [CLI](cli.html)
 
 
-Books:
+## Linux Books
 
-* [Networking2](http://nnc3.com/mags/networking/)
+* [Networking](http://nnc3.com/mags/networking/)
 * [Networking2](http://nnc3.com/mags/Networking2/)
 * [Unix](http://nnc3.com/mags/unix3/)
 * [Linux web server](http://nnc3.com/mags/lnXwwwsvr/)

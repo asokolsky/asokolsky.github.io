@@ -1,6 +1,6 @@
 # Apps & Tasks
 
-Application setup and use:
+## Application Setup and Use
 
 * [API Gateways](api-gateways.html)
 * [docker](docker/)
@@ -29,7 +29,7 @@ Application setup and use:
 * [ZFS setup and commands](zfs/)
 * [zsh](zsh/)
 
-Cheat sheets:
+## Cheat Sheets
 
 * [docker](docker/docker.html)
 * [emacs](emacs/)

@@ -1,4 +1,4 @@
-# Customizing CENTOS Install
+# Customizing CentOS Install
 
 ## Hostname
 ```
@@ -25,12 +25,11 @@
        CPE OS Name: cpe:/o:centos:centos:7
             Kernel: Linux 3.10.0-1127.19.1.el7.x86_64
       Architecture: x86-64
-[alex@localhost ~]$
 ```
 
 ## Update the Install
 
-```
+```sh
 sudo yum update
 sudo yum upgrade
 ```
@@ -38,7 +37,7 @@ sudo yum upgrade
 
 Add EPEL repo:
 
-```
+```sh
 sudo yum -y install epel-release
 sudo yum repolist
 ```
@@ -49,19 +48,19 @@ sudo yum repolist
 
 For things like netstat:
 
-```
+```sh
 yum install net-tools
 ```
 
 ### Emacs
 
-```
+```sh
 sudo yum install emacs
 ```
 
 ### HTOP
 
-```
+```sh
 sudo yum search htop
 sudo yum install htop
 ```
@@ -77,14 +76,14 @@ Software \ Search tweaks \ GNOME Tweaks \ Install
 
 In CLI:
 
-```
+```sh
 sudo yum install gnome-tweak-tool
 ```
 More: https://linuxhint.com/tweaking_gnome_desktop_centos8/
 
 ## Services
 
-In general to start/stop :
+In general, to start/stop:
 https://ma.ttias.be/start-or-stop-a-service-on-centos-7/
 
 ### Firewall
@@ -163,7 +162,7 @@ Resolved by VM reboot.
 
 ## Install More Fonts
 
-```
+```sh
 yum install fontconfig
 yum install freetype*
 yum install urw-fonts
@@ -171,10 +170,10 @@ yum install urw-fonts
 
 ## Customize Keyboard: Swap CapsLock & Ctrl
 
-In Tweaks: Keyabord & Mouse\ Ctrl Position \ Swap Ctrl & CapsLock
+In Tweaks: Keyboard & Mouse \ Ctrl Position \ Swap Ctrl & CapsLock
 
 Alternatively:
-```
+```sh
 /usr/bin/setxkbmap -option "ctrl:nocaps"
 ```
-More: http://www.noah.org/wiki/CapsLock_Remap_Howto
+More: [CapsLock_Remap_Howto](http://www.noah.org/wiki/CapsLock_Remap_Howto).
