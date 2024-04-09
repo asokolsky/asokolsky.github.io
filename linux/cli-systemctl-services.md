@@ -59,7 +59,7 @@ systemctl list-dependencies _service-name_
 
 ## Show Service Log
 
-Use [journalctl](https://www.man7.org/linux/man-pages/man1/journalctl.1.html):
+Use [journalctl](cli-journalctl.html):
 
 ```sh
 journalctl --no-pager -u _service-name_
@@ -211,6 +211,7 @@ Any unit file in `/etc/systemd/system` will override the corresponding file in
 
 ## systemd-delta
 
+[man systemd-delta](https://www.man7.org/linux/man-pages/man1/systemd-delta.1.html).
 To show all the overrides:
 
 ```sh

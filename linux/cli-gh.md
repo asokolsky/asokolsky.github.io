@@ -1,8 +1,8 @@
 # gh CLI
 
 I use github cli `gh`, [docs](https://cli.github.com/manual/).
-  Here is how to use different accounts for different
-repos.
+
+Here is how to use different accounts for different repos.
 
 ## Authentication
 

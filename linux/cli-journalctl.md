@@ -2,6 +2,8 @@
 
 [journalctl man page](https://www.man7.org/linux/man-pages/man1/journalctl.1.html).
 
+Related: [systemctl](cli-systemctl.html)
+
 ## Configuration
 
 ```
@@ -9,7 +11,6 @@
 ```
 
 ## Show Service Log
-
 
 ```sh
 journalctl --no-pager -u _service-name_
@@ -32,7 +33,7 @@ journalctl --since=today
 journalctl -f
 ```
 
-## Control log size
+## Log Size Control
 
 Retain only the past two days:
 

@@ -9,6 +9,7 @@ The pager defaults to `less`.  To disable it use `--no-pager` or
 
 [How to manage systemd units with systemctl](https://www.2daygeek.com/linux-systemctl-command-manage-systemd-units-service/)
 
+Related: [journalctl](cli-journalctl.html)
 
 ## Unit Types
 
@@ -66,7 +67,7 @@ systemctl
 ```
 
 Also check out:
-```
+```sh
 systemctl list-unit-files
 ```
 

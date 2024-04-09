@@ -6,7 +6,6 @@ This is about working with mounts.
 
 ## List Mounts
 
-
 ```sh
 systemctl list-units --type=mount
 ```
