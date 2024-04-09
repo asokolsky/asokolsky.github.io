@@ -41,6 +41,8 @@ Remove a LV|`lvremove <vg-name>/<lv-name>`
 
 ## Storage Management
 
+[pvesm man page](https://pve.proxmox.com/pve-docs/pvesm.1.html)
+
 Description|Command
 -----------|-------
 Create a new storage|`pvesm add <type> <storage> [OPTIONS]`
@@ -55,6 +57,9 @@ List local LVM Thin Pools|`pvesm scan lvmthin <vg>`
 Get status for all datastores|`pvesm status [OPTIONS]`
 
 ## VMs
+
+[qm man page](https://pve.proxmox.com/pve-docs/qm.1.html),
+[qmrestore man page](https://pve.proxmox.com/pve-docs/qmrestore.1.html)
 
 ### VM Query
 
@@ -132,6 +137,9 @@ Open a terminal using a serial device. The VM need to have a serial device confi
 Proxy VM VNC traffic to stdin/stdout|`qm vncproxy <vmid>`
 
 ## Containers
+
+[pct man page](https://pve.proxmox.com/pve-docs/pct.1.html),
+[pveam man page](https://pve.proxmox.com/pve-docs/pveam.1.html).
 
 ### Container Templates
 
@@ -239,3 +247,9 @@ Delete a LXC snapshot.
 ```sh
 pct delsnapshot <vmid> <snapname> [OPTIONS]
 ```
+
+## Cluster Management
+
+[Cluster Manager](https://pve.proxmox.com/wiki/Cluster_Manager)
+
+[pvecm man page](https://pve.proxmox.com/pve-docs/pvecm.1.html)
