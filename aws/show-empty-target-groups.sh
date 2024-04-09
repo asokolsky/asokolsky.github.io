@@ -14,7 +14,7 @@ set -o pipefail
 #set -o xtrace
 
 lb_arn=$1
-# e.g. arn:aws:elasticloadbalancing:us-east-1:374926383693:loadbalancer/app/frontend-prb-staging-internal-lb/bdc22951cd7a5c10
+# e.g. arn:aws:elasticloadbalancing:us-east-1:374926383693:loadbalancer/app/app-lb/bdc22951cd7a5c10
 
 #listener_port=443
 listener_arn=$(aws elbv2 describe-listeners --load-balancer-arn "$lb_arn" --query='Listeners[?Port==`443`]' | jq -r ".[0].ListenerArn")
