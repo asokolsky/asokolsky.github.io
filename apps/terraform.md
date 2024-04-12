@@ -47,6 +47,7 @@ Command|Description
 `terraform output <name>`|Show a specific output value
 `terraform output -raw <name>`|Show a specific output value without quotes
 `terraform show`|[Show the current state](https://developer.hashicorp.com/terraform/cli/commands/show) in human-readable form
+`terraform show -no-color >file.txt`|Save into a file
 `terraform show <file>`|Show a human-readable state or plan file
 `terraform show -json <file>`|Show a state or plan file in JSON format
 

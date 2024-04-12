@@ -18,16 +18,17 @@ cat /proc/_pid_/cmdline|xargs -0
 sudo killall -USR2 systemd-resolved
 ```
 
-## List directories only:
+## List directories only
 
+Not elegant but works:
 ```sh
 ls -lad */|awk '{$1=$2=$3=$4=$5=$6=$7=$8=""; print $0}'|sed 's/^ *//'
 ```
-or
+better but results in a leading whitespace:
 ```sh
 ls -lad */|awk '{out = ""; for (i = 9; i <= NF; i++) {out = out " " $i}; print out}'
 ```
-or better yet
+best:
 ```
 ls -ld */|cut -c 53-
 ```
