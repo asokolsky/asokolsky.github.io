@@ -46,3 +46,22 @@ Retain only the past 500 MB:
 ```sh
 journalctl --vacuum-size=500M
 ```
+
+## Explain the messages
+
+Jump to the end, explain the messages:
+
+```sh
+journalctl -xe
+```
+
+Explain the messages from the very beginning:
+
+```sh
+journalctl -x --no-pager
+```
+
+## Environment Vars
+
+`$SYSTEMD_PAGER` overwrites `$PAGER`. Setting this to "" or "cat"
+is equivalent to passing `--no-pager`.

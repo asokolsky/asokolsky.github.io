@@ -253,3 +253,10 @@ pct delsnapshot <vmid> <snapname> [OPTIONS]
 [Cluster Manager](https://pve.proxmox.com/wiki/Cluster_Manager)
 
 [pvecm man page](https://pve.proxmox.com/pve-docs/pvecm.1.html)
+
+## More Useful CLI tools
+
+These were installed on mine:
+
+* nmap
+* iftop
