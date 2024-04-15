@@ -38,7 +38,8 @@ conjunction with this to create any directories specified in the `-o` path.
 `-O, --remote-name` Write output to file named like the remote file
 (only writes to current directory).
 
-`-s, --silent` Silent (quiet) mode. Use with `-S` to force it to show errors.
+`-s, --silent` Silent (quiet) mode, no progress bar displayed. Use with `-S` to
+force it to show errors.
 
 `-T, --upload-file <file>` transfers the specified local file to the remote URL.
 
