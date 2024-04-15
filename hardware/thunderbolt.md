@@ -54,7 +54,7 @@ I wish it were 2.5 Gbps Ethernet but it is not.  I use the hub with MacBook Pro.
 
 I use [Dell WD19TB Thunderbolt 3
 Dock](https://www.dell.com/support/home/en-us/product-support/product/dell-wd19tb-dock/docs)
-as a USB3 hub because of the lack of thunderbolt support in latitude7490.
+as a USB3 hub because of the lack of thunderbolt support in my latitude 7490.
 The hub does manage to power the laptop though.
 
 ### USB
