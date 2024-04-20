@@ -3,7 +3,6 @@ title: Home Office Setup
 tags: home
 ---
 
-
 After few iterations I arrived at a set-up which works well for me.
 
 ## Desk

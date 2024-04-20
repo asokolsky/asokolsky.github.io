@@ -3,17 +3,21 @@ title: Making Some pfSense
 tags: hardware
 ---
 
-# Making Some pfSense
-
 Not that I really need it, but an idea of getting rid the household of ads was
 compelling enough.  So I got myself a little "industrial PC", added a stick of
 RAM and mSATA SSD from an old laptop and installed pfSense in no time!
 
-![inside](img/router0447.jpg)
+<p align="center" width="100%">
+    <img width="100%" src="img/router0447.jpg">
+</p>
+
 
 As you can see, a SATA cable is provided - this is important because the other end uses a proprietary connector.  This cable created a rattling noise which made me worry when I first got my hands on the box.  The cable goes unused.
 
-![inside](img/router0448.jpg)
+<p align="center" width="100%">
+    <img width="100%" src="img/router0448.jpg">
+</p>
+
 
 The enclosure is all metal, and there are no moving parts inside.  The CPU heat-sink is touching external wall of the enclosure - you can see the PCB is flexing noticeably.
 
@@ -27,11 +31,15 @@ Port#|pfSense Default Assignment
 3|Opt1
 4|LAN
 
-![inside](img/router0452.jpg)
+<p align="center" width="100%">
+    <img width="100%" src="img/router0452.jpg">
+</p>
 
 mSATA SSD and RAM installed.  There is a slot for a WiFi card which I left unpopulated.  I rely on Ubiquity Access Point for that.
 
-![power supply](img/router0454.jpg)
+<p align="center" width="100%">
+    <img width="100%" src="img/router0454.jpg">
+</p>
 
 Power supply brick.  Very unimpressive.
 It idles at 7W, spikes to 14W.

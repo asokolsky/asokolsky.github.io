@@ -3,11 +3,11 @@ title: NAS Hardware
 tags: hardware
 ---
 
-# NAS Hardware
-
 Here is an old desktop, once built for my parents to surf internet and look at their grandchildren pictures.
 
-![nas front](img/6873602900_2def9091de_b.jpg)
+<p align="center" width="100%">
+  <img width="100%" src="img/6873602900_2def9091de_b.jpg">
+</p>
 
 Part|Details
 ----|-------
@@ -30,7 +30,9 @@ I hope for the NAS to boot from flash and got a
 Making this work on Solaris 11 (and even booting from it!) seems like a long
 shot though.
 
-![nas inside](img/7019710625_0cd4761c45_b.jpg)
+<p align="center" width="100%">
+    <img width="100%" src="img/7019710625_0cd4761c45_b.jpg">
+</p>
 
 Originally
 [published here](https://nasfuss.blogspot.com/2012/03/hardware.html).

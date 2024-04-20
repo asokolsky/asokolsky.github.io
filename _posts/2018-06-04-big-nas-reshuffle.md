@@ -3,8 +3,6 @@ title: Big NAS Reshuffle
 tags: hardware
 ---
 
-# Big Reshuffle
-
 Those attempts to run VirtualBox on nas4free were a real nice try.  But now I want to have a dedicated VM server.  So I decided... to build a new NAS box.  In its previous life NASA (as it will be called) used to be my HTPC.  In this new incarnation it will get a better Ethernet and SATA adapter.   New NASA box will be:
 
 * smaller on the outside, yet bigger on the inside
@@ -27,7 +25,9 @@ Case|Fractal Design Define Mini Black Silent mATX
 
 The best part of the build is the case.  It is awesome.  The details, such as dampening material on the cover, HD cage, provisions for cable  management are fantastic.
 
-![nas](./img/nas0488.jpg)
+<p align="center" width="100%">
+    <img width="100%" src="img/nas0488.jpg">
+</p>
 
 Intel Ethernet NIC is a top notch and provides two channels!  I may even play
 with LACP.

@@ -3,8 +3,6 @@ title: State of My Home LAN
 tags: hardware
 ---
 
-# State of My Home LAN
-
 Things settled here.  NAS4free proved to be fabulous.  Stable.  With regular
 updates steadily improving on visible cosmetics which gives me confidence in
 behind the scene work. Very convenient for use.  Therefore it is not surprising

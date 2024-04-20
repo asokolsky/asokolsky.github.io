@@ -3,8 +3,6 @@ title: Sanity Checks
 tags: software
 ---
 
-# Sanity Checks
-
 Nas4free seems to be most suited to my requirements, but samba there just
 crashes on me.
 In the meantime I am collecting network and hard drives throughput data on
