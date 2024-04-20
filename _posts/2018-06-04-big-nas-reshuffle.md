@@ -26,7 +26,7 @@ Case|Fractal Design Define Mini Black Silent mATX
 The best part of the build is the case.  It is awesome.  The details, such as dampening material on the cover, HD cage, provisions for cable  management are fantastic.
 
 <p align="center" width="100%">
-    <img width="100%" src="img/nas0488.jpg">
+    <img width="100%" src="/img/nas0488.jpg">
 </p>
 
 Intel Ethernet NIC is a top notch and provides two channels!  I may even play
