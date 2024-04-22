@@ -16,7 +16,7 @@ https://hub.docker.com/r/gersilex/cvlc
 https://en.wikipedia.org/wiki/ONVIF
 
 This proved to be a dead-end, decided to go with
-[ffmpeg+mediamtx](../apps/webcam2rtsp.html) solution.
+[ffmpeg+mediamtx](/apps/webcam2rtsp.html) solution.
 
 ## Identify capture formats supported
 

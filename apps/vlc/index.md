@@ -143,7 +143,7 @@ vlc rtsp://localhost:554/test.sdp
 From
 [here](https://stackoverflow.com/questions/59180160/mosaic-of-rtsp-streams-vlc-3-0-8):
 
-Create [mosaic_vlc3.vlm](./mosaic_vlc3.vlm) and then:
+Create [mosaic_vlc3.vlm](mosaic_vlc3.vlm) and then:
 
 ```
 vlc.exe --vlm-conf mosaic_vlc3.vlm

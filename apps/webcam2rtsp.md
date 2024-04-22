@@ -64,7 +64,7 @@ If all the above works, customize mediamtx config file to start video capture:
 
 * Copy
 [mediamtx.yml](https://github.com/bluenviron/mediamtx/blob/main/mediamtx.yml)
-to `webcam2rtsp.yml` and [customize it](./webcam2rtsp.yml).
+to `webcam2rtsp.yml` and [customize it](webcam2rtsp.yml).
 * Run it as:
 
 ```

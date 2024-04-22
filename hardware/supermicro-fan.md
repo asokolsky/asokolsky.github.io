@@ -23,4 +23,4 @@ When a low rpm fan is used AND low rpm threshold is high you will observe:
 * fan rpm falls for a while
 * repeats
 
-[Fix with ipmitool](../linux/cli-ipmi.html).
+[Fix with ipmitool](/linux/cli-ipmi.html).

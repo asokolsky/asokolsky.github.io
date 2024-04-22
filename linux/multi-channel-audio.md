@@ -2,7 +2,7 @@
 
 Related:
 
-* Notes on my use of [vlc media player](../apps/vlc.html)
+* Notes on my use of [vlc media player](/apps/vlc.html)
 
 ## Architecture
 

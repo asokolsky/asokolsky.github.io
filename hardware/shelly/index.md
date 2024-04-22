@@ -1,6 +1,6 @@
 # Shelly Devices
 
-* [Humidity and Temperature Sensor](./h-and-t.html)
+* [Humidity and Temperature Sensor](h-and-t.html)
 * [Duo bulb](duo.html)
 * [Plug](plug.html)
 

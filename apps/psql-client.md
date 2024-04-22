@@ -33,4 +33,4 @@ docker run -it --rm jbergknoff/postgresql-client \
 
 ## Interactive PQSL Commands
 
-See the [cheat sheet](./psql-commands.md)
+See the [cheat sheet](psql-commands.html)

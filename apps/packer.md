@@ -44,4 +44,4 @@ Environment Var|Defaults|Description
 
 ## See Also
 
-[Packer Makefile](./make/packer.mak)
+[Packer Makefile](make/packer.mak)

@@ -27,4 +27,4 @@ To strip EXIF:
 convert in.jpg -auto-orient -strip out.jpg
 ```
 
-Alternatively on can use [exiftool](../apps/cli-exiftool.html).
+Alternatively on can use [exiftool](/apps/cli-exiftool.html).

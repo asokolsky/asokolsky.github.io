@@ -2,8 +2,8 @@
 
 ## Administering
 
-* [CentOS](../centos/)
-* [Proxmox](../proxmox/)
+* [CentOS](/centos/)
+* [Proxmox](/proxmox/)
 * [SysOps Handbook](https://abarrak.gitbook.io/linux-sysops-handbook/)
 
 ## CLI

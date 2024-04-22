@@ -5,7 +5,7 @@ More info:
 * NIC naming: [**1**](https://en.wikipedia.org/wiki/Consistent_Network_Device_Naming),
 [**2**](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/ch-consistent_network_device_naming#sec-Naming_Schemes_Hierarchy)
 * [PVE Net Config](https://pve.proxmox.com/wiki/Network_Configuration)
-* [Installing RTL8125 driver](../hardware/network-r8125.html) - not worth it.
+* [Installing RTL8125 driver](/hardware/network-r8125.html) - not worth it.
 
 Network config should be completed *before* a server is added into a cluster.
 
