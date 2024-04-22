@@ -67,7 +67,7 @@ kubectl logs <pod>
 ```
 Relevant events:
 ```sh
-kubectl get events --namespace clari-graphql  --sort-by='.metadata.creationTimestamp'
+kubectl get events --namespace app-namespace  --sort-by='.metadata.creationTimestamp'
 ```
 
 ## Apply configuration manifests

@@ -1,0 +1,86 @@
+# k8s Nodes
+
+## Count cluster nodes:
+
+```sh
+kubectl get nodes -o json|jq '.items | length'
+```
+
+## List taints for all the nodes
+
+```sh
+kubectl get nodes -o json|jq '.items[].spec.taints'
+```
+Example output:
+
+```json
+[
+  {
+    "effect": "NoSchedule",
+    "key": "eks.amazonaws.com/compute-type",
+    "value": "fargate"
+  }
+]
+[
+  {
+    "effect": "NoSchedule",
+    "key": "clari.io/nodegroup",
+    "value": "eks-core-services"
+  }
+]
+null
+```
+
+Alternatively:
+```sh
+kubectl get nodes -o="custom-columns=NodeName:.metadata.name,TaintKey:.spec.taints[*].key,TaintValue:.spec.taints[*].value,TaintEffect:.spec.taints[*].effect"
+```
+Output:
+```
+NodeName                               TaintKey                         TaintValue          TaintEffect
+fargate-ip-10-14-81-126.ec2.internal   eks.amazonaws.com/compute-type   fargate             NoSchedule
+ip-10-14-102-143.ec2.internal          clari.io/nodegroup               eks-core-services   NoSchedule
+ip-10-14-103-86.ec2.internal           <none>                           <none>              <none>
+ip-10-14-83-79.ec2.internal            clari.io/nodegroup               eks-core-services   NoSchedule
+ip-10-14-86-20.ec2.internal            clari.io/nodegroup               eks-core-services   NoSchedule
+ip-10-14-86-93.ec2.internal            <none>                           <none>              <none>
+ip-10-14-91-35.ec2.internal            clari.io/nodegroup               eks-core-services   NoSchedule
+ip-10-14-94-20.ec2.internal            clari.io/nodegroup               eks-core-services   NoSchedule
+ip-10-14-94-45.ec2.internal            <none>                           <none>              <none>
+ip-10-14-99-93.ec2.internal            <none>                           <none>              <none>
+```
+
+## List info for all the nodes:
+
+```sh
+kubectl get nodes -o json|jq '.items[].status.nodeInfo'
+```
+
+Example output:
+
+```json
+{
+  "architecture": "amd64",
+  "bootID": "**************",
+  "containerRuntimeVersion": "containerd://1.6.6",
+  "kernelVersion": "5.10.210-201.855.amzn2.x86_64",
+  "kubeProxyVersion": "v1.27.9-eks-680e576",
+  "kubeletVersion": "v1.27.9-eks-680e576",
+  "machineID": "",
+  "operatingSystem": "linux",
+  "osImage": "Amazon Linux 2",
+  "systemUUID": "******************"
+}
+{
+  "architecture": "amd64",
+  "bootID": "****************************",
+  "containerRuntimeVersion": "containerd://1.6.31+bottlerocket",
+  "kernelVersion": "5.15.152",
+  "kubeProxyVersion": "v1.27.11-eks-9572756",
+  "kubeletVersion": "v1.27.11-eks-9572756",
+  "machineID": "*******************",
+  "operatingSystem": "linux",
+  "osImage": "Bottlerocket OS 1.19.4 (aws-k8s-1.27)",
+  "systemUUID": "***********************"
+}
+```

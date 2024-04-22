@@ -14,8 +14,8 @@ To get these run `vault login -method=aws role=admin` and then set VAULT_TOKEN.
 To copy secrets in dev to stage (after you do `vault login` in both) without
 secrets being saved:
 
-vault-export.py --vault-addr=https://vault.dev.clari.io --vault-token=XXXX | \
-  vault-import.py --vault-addr=https://vault.stage.clari.io --vault-token=YYYYY
+vault-export.py --vault-addr=https://vault.dev.company.io --vault-token=XXXX | \
+  vault-import.py --vault-addr=https://vault.stage.company.io --vault-token=YYYYY
 '''
 from argparse import ArgumentParser
 import hvac

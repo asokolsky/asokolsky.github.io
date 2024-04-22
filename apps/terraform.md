@@ -86,7 +86,6 @@ Command|Description
 
 ## Environment Variables
 
-
 [Details](https://developer.hashicorp.com/terraform/cli/config/environment-variables)
 
 Most relevant:
@@ -102,3 +101,7 @@ Acceptable options:
 * ERROR
 * JSON - outputs logs at the TRACE level or higher, and uses a parseable
 JSON encoding as the formatting.
+
+# Makefile
+
+Example [terraform Makefile](make/terraform.mak).
