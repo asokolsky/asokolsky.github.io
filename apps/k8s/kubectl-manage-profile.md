@@ -1,4 +1,4 @@
-# kubectl - managing profiles
+# Managing kubectl profiles
 
 Thanks to [@shmanubhav](https://github.com/shmanubhav):
 
@@ -10,7 +10,6 @@ and name as needed.
 4. `export KUBECONFIG=~/.kube/dev-config`
 5. Verify that it worked: `kubectl get nodes`
 6. Use `k9s`
-
 
 ## Prerequisites
 
@@ -34,7 +33,6 @@ case "$AWS_VAULT" in
 		export KUBECONFIG="$HOME/.kube/config" ;;
 esac
 ```
-
 
 ## Use it
 

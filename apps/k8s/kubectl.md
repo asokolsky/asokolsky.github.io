@@ -5,6 +5,7 @@ From
 * https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 * https://cheat-sheets.nicwortel.nl/kubectl-cheat-sheet.pdf
 * https://dockerlabs.collabnix.com/kubernetes/cheatsheets/kubectl.html
+* https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
 
 [Installation](kubectl-install.html) and [more](index.html).
 
@@ -28,6 +29,8 @@ Flag|Description
 
 ## Context and configuration
 
+[kubectl config](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config)
+
 Command|Description
 ----|------
 `kubectl config get-contexts`|List all contexts
@@ -36,6 +39,11 @@ Command|Description
 `kubectl config delete-context <context>`|Delete the specified context from the kubeconfig
 
 ## Display resources
+
+Use
+[kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get)
+or
+[kubectl describe](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe)
 
 Command|Description
 ----|------
@@ -71,6 +79,8 @@ kubectl get events --namespace app-namespace  --sort-by='.metadata.creationTimes
 ```
 
 ## Apply configuration manifests
+
+[kubectl apply](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply)
 
 Command|Description
 ----|------
@@ -115,6 +125,8 @@ EOF
 
 ## Create resources manually
 
+[kubectl run](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run)
+
 Command|Description
 ----|------
 `kubectl run <name> --image=<image>`|Start a pod
@@ -133,7 +145,7 @@ E.g. to get an interactive shell within your cluster:
 kubectl run my-shell --rm -i --tty --image ubuntu -- bash
 ```
 
-where
+where:
 
 * `my-shell` - the name of the Deployment that is created. Your pod name will
 be this plus a unique hash or ID at the end.
@@ -147,6 +159,11 @@ interactive session.
 as our container's command.
 
 ## Generate YAML configuration manifests
+
+Use
+[kubectl create](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create)
+or
+[kubectl expose](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose).
 
 Command|Description
 ----|------
@@ -169,6 +186,8 @@ Command|Description
 
 ## Delete resources
 
+[kubectl delete](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#delete)
+
 Command|Description
 ----|------
 `kubectl delete <resource> <name>`|Delete a particular resource
@@ -182,6 +201,8 @@ kubectl delete pod busybox-sleep-less
 
 ## Manage deployments
 
+[kubectl rollout](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#rollout)
+
 Command|Description
 ----|------
 `kubectl rollout status deployment <name>`|Show the status of a deployment rollout
@@ -193,12 +214,16 @@ Command|Description
 
 ## Execute commands
 
+[kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec)
+
 Command|Description
 ----|------
 `kubectl exec <pod> -- <command>`|Execute a command in a running pod
 `kubectl exec -it <pod> -- sh`|Open a shell in a running pod
 
 ## View logs
+
+[kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs)
 
 Command|Description
 ----|------
@@ -207,6 +232,7 @@ Command|Description
 
 ## Resource usage
 
+[kubectl top](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#top)
 Command|Description
 ----|------
 `kubectl top node`|Show resource (CPU/memory) usage of nodes
