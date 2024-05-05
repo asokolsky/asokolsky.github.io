@@ -87,11 +87,14 @@ Legend:
 
 ### NLB Settings
 
-NLB *should* be set to do
-[cross-az load balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/target-group-cross-zone.html)
-AND should be configure to have presence in all the AZs.
+NLB *should* be:
 
-### Optimize NLB's Health Check of the ALB as a Target
+* set to do
+[cross-az load balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/target-group-cross-zone.html)
+AND
+* configured to have presence in all the AZs.
+
+### Optimize the ALB's Health Check
 
 Consider the ALB target group first.  Its health checks are terminated on the
 pods:
