@@ -3,7 +3,11 @@
 ## Count cluster nodes:
 
 ```sh
-kubectl get nodes -o json|jq '.items | length'
+kubectl get nodes --no-headers | wc -l
+```
+or
+```sh
+kubectl get nodes -o json | jq '.items | length'
 ```
 
 ## List taints for all the nodes
@@ -85,7 +89,7 @@ Example output:
 }
 ```
 
-## Taint a node
+## Taint/UnTaint a node
 
 To taint the `node1` with `key1=value1`:
 ```sh
@@ -94,10 +98,15 @@ kubectl taint nodes node1 key1=value1:NoSchedule
 No pod will be able to schedule onto `node1` unless it has a matching
 toleration.
 
-## Remove taint
-
 To remove the taint added by the command above, you can run:
 
 ```sh
 kubectl taint nodes node1 key1=value1:NoSchedule-
 ```
+## Label a node
+
+```sh
+kubectl label node node01 color=blue
+```
+
+## Node affinity

@@ -1,18 +1,18 @@
-# vi cheat sheet
+# vi(m) cheat sheet
 
-[vi in wikipedia](https://en.wikipedia.org/wiki/Vi),
-[original article](https://docs.freebsd.org/44doc/usd/12.vi/paper.html).
+[wiki on vi](https://en.wikipedia.org/wiki/Vi),
+the [original article](https://docs.freebsd.org/44doc/usd/12.vi/paper.html).
 
 ## Command Line
 
-|Command|Action
-|-------|------
-|vi _file_|edit _file_
-|view _file_|view _file_
-|vi -r _file_|view _file_
-|vi -R _file_|view _file_
-|vi + _file_|edit _file_, cursor at last line
-|vi +_n_ _file_|edit _file_, cursor at line _n_
+Command|Action
+-------|------
+vi _file_|edit _file_
+view _file_|view _file_
+vi -r _file_|view _file_
+vi -R _file_|view _file_
+vi + _file_|edit _file_, cursor at last line
+vi +_n_ _file_|edit _file_, cursor at line _n_
 
 ## Modes: Command & Input
 
@@ -27,9 +27,15 @@ graph LR
     B -- Navigation --> B
     B -- Deletion --> B
     B -- Input Command --> D(Input Mode)
+    B -- Visual Command --> E(Visual Mode)
     D --Esc--> B
+    E --Esc--> B
 ```
-## Open
+
+see also
+[vim transition diagram](https://gist.githubusercontent.com/darcyparker/1886716/raw/c1ee7657010278a787c6502b796a6766a40d56aa/vimModeStateDiagram.svg).
+
+## File Open
 
 Key|Action
 ---|------
@@ -62,10 +68,10 @@ M|Middle line
 L|Lower left corner
 h|Back a character
 l|Forward a character
-&nbsp;|Word navigation
+&nbsp;|**Word navigation**
 w|One word forward
 b|One word back
-&nbsp;|Line navigation
+&nbsp;|**Line navigation**
 ^|Beginning of line
 $|End of line
 j|Down a line
@@ -75,11 +81,7 @@ G|go to the last line
  _n_ G|go to line _n_
 : _n_|go to line _n_
 Ctrl+G|display line
-
-## Viewport
-
-Key|Action
----|------
+&nbsp;|**Viewport navigation**
 z [Enter]|Cursor at top
 z.|Cursor in the middle
 z-|Cursor at bottom
@@ -151,3 +153,25 @@ o|Open line below
 O|Open line above
 :r _file_|Import a file
 :12r _file_|Import a file at line 12
+
+## Visual Commands
+
+Key|Action
+---|------
+v|begins regular visual mode, and works similar to selecting text with a mouse. Use `h` and `l` to expand the selection left and right to include more words, and use `j` and `k` to expand the selection to the lines below and above.
+V|begins linewise visual mode. This selects entire lines of text at a time. Use `j` and `k` to expand the selection up and down.
+Ctrl+v|enters block visual mode. This selects text in a block format, allowing to select parts of multiple lines without including the entire line. Use `h`, `j`, `k`, `l` as usual.
+
+Once the selection is done, use:
+
+Key|Action
+---|------
+Esc|exit visual mode
+d|delete the text
+y|yank (copy) the text
+p|paste your clipboard onto the text, replacing it
+c|change the text, which deletes it and sets your cursor for typing
+r|replace the text with the next character you type
+`y`, `q`, `/`, `p`|search for the text elsewhere in your document
+`>`|indent the text, removes selection
+`<`|unindent the selection, removes selection
