@@ -34,7 +34,8 @@ ENI specific to the AZ is connected only to the ENI of the ALB in that AZ.
 
 Right after the installation:
 ```
-============+=====+=========+=====+============
+            +-----+         +-----+
+============|     |=========|     |============
             |     |         |     |
 AZ1         |     o---->----o     o-->--[pod1]
             |     |         |     |
@@ -46,7 +47,8 @@ AZ2         | NLB o---->----o ALB o-->--[pod2]
             |     |         |     |
 AZ3         |     |         o     o-->--[pod3]
             |     |         |     |
-============+=====+=========+=====+============
+============|     |=========|     |============
+            +-----+         +-----+
 
 Legend:
   o - elastic network interface
@@ -64,7 +66,8 @@ have targets in the corresponding AZ, specifically in AZ2.
 * From the NLB perspective, the health check for the ALB in AZ2 is now failing.
 
 ```
-============+=====+=========+=====+============
+            +-----+         +-----+
+============|     |=========|     |============
             |     |         |     |
 AZ1         |     o---->----o     o-->--[pod1]
             |     |         |     |
@@ -76,7 +79,8 @@ AZ2         | NLB o---->----o ALB |
             |     |         |     |
 AZ3         |     |         o     o-->--[pod3]
             |     |         |     |
-============+=====+=========+=====+============
+============|     |=========|     |============
+            +-----+         +-----+
 
 Legend:
   o - elastic network interface
