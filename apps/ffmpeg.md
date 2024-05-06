@@ -1,5 +1,6 @@
 # ffmpeg
 
+fast-forward mpeg?  Not really.
 ffmpeg [man page](https://manpages.org/ffmpeg),
 use [with webcam](https://trac.ffmpeg.org/wiki/Capture/Webcam).
 
@@ -43,12 +44,11 @@ ffmpeg -y \
 ```
 To avoid re-compression:
 ```sh
-ffmpeg \
-    -f v4l2 -framerate 30 -video_size 1280x720 -input_format mjpeg -i /dev/video0 \
-    -c copy out.mkv
+ffmpeg -f v4l2 -framerate 30 -video_size 1280x720 -input_format mjpeg \
+    -i /dev/video0 -c copy out.mkv
 ```
 
-Then:
+Then...
 
 ## Take a picture
 
@@ -71,4 +71,20 @@ ffprobe out.mkv
 Simple player:
 ```sh
 ffplay /dev/video0
+```
+
+## Trimming / Extraction
+
+To cut out 20 seconds starting from 1:50 minutes, use:
+
+```sh
+ffmpeg -i input.mkv -ss 00:01:50 -c copy -t 20 output.mkv
+```
+
+The `-ss` option can be placed in front of `-i`, resulting in faster copying
+but less accuracy. If you experience out-of-sync audio or video, you will have
+to have to re-encode:
+
+```sh
+ffmpeg -i input.mkv -ss 00:01:50 -c:v libx264 -c:a libfaac -t 20 output.mkv
 ```
