@@ -11,7 +11,7 @@
 * templating using [gomplate](gomplate.html), [jsonnet](/programming/jsonnet/)
 * [Home Assistant](home-assistant/)
 * [Java VM Tuning](java-vm.html)
-* [k8s and kubectl](k8s/)
+* [k8s and kubectl](/k8s/)
 * [make and Makefile](make/)
 * [mqtt](mqtt.html)
 * [LDAP & AD search](cli-ldap.html)

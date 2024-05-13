@@ -110,3 +110,15 @@ kubectl label node node01 color=blue
 ```
 
 ## Node affinity
+
+## Drain the node
+
+```sh
+kubectl drain --ignore-daemonsets node01
+```
+
+# Bring the node back online
+
+```sh
+kubectl uncordon node01
+```

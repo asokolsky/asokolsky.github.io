@@ -59,16 +59,18 @@ creating a ‘credstash-prod’ KMS key and ‘production-credentials’ table a
 giving rights (through instance roles) to applications on production instances
 that need to get keys, etc.
 
-You can also use [encryption
-contexts](http://docs.aws.amazon.com/kms/latest/developerguide/encrypt-context.html)
+You can also use
+[encryption contexts](http://docs.aws.amazon.com/kms/latest/developerguide/encrypt-context.html)
 to limit/modify access.
 
 ## Basic Architecture
 
-AWS KMS provides the secure encryption key management.
+[AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)
+provides the secure encryption key management.
 
-Encrypted items are stored in the AWS DynamoDB table ‘credential-store’ (we can
-create additional tables for access separation)
+Encrypted items are stored in the
+[AWS DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
+table `credential-store`. We can create additional tables for access separation.
 
 ## Caveats
 

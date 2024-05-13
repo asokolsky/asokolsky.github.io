@@ -227,8 +227,8 @@ Command|Description
 
 Command|Description
 ----|------
-`kubectl logs <pod>`|Print the logs for a pod
-`kubectl logs -f <pod>`|Print the logs for a pod and keep streaming
+`kubectl logs <pod> -n <namespace>`|Print the logs for a pod
+`kubectl logs -f <pod> -n <namespace>`|Print the logs for a pod and keep streaming
 
 ## Resource usage
 

@@ -61,6 +61,9 @@ spec:
     image: nginx:1.14.2
     ports:
     - containerPort: 80
+    envFrom:
+    - secretRef:
+        name: test-secret
 ```
 You can specify command line in-place:
 ```sh
@@ -146,3 +149,8 @@ tolerations:
 kubectl delete pod rabbit
 ```
 The above does not work for static pods
+
+## Static Pods
+
+[Static pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)
+are defined in `/etc/kubernetes/manifests`.
