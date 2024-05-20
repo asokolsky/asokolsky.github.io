@@ -244,3 +244,40 @@ Command|Description
 ----|------
 `kubectl version`|Show the version of the client and server
 `kubectl api-resources`|Print the supported API resources on the server
+
+## Switching context with kubectx
+
+Use [kubectx](https://github.com/ahmetb/kubectx) to switch the cluster you work
+with.
+
+To list all contexts:
+```sh
+kubectx
+```
+
+To see the current context:
+```sh
+kubectx -c
+```
+
+To switch to a new context:
+```sh
+kubectx <context_name>
+```
+
+To switch back to previous context:
+```sh
+kubectx -
+```
+
+## Switching namespace with kubectx kubens
+
+To switch to a new namespace:
+```sh
+kubens <new_namespace>
+```
+
+To switch back to previous namespace:
+```sh
+kubens -
+```

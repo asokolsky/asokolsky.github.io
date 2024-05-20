@@ -1,6 +1,6 @@
-# Some Lightweight K8S Implementations
+# Some Lightweight K8s Implementations
 
-Feature|Minikube|K3S/K3D|MicroK8S|KinD|K0S
+Feature|Minikube|K3S/K3D|MicroK8s|KinD|K0S
 -------|--------|-------|--------|----|---
 Author|Kubernetes|Rancher|Canonical|Kubernetes|Mirantis
 Home|[minikube.sigs.k8s.io](https://minikube.sigs.k8s.io/docs/)|[k3s.io](https://k3s.io/) [k3d.io](https://k3d.io/)|[microk8s.io](https://microk8s.io/)|[kind.sigs.k8s.io](https://kind.sigs.k8s.io/)|[k0sproject.io](https://docs.k0sproject.io/v1.28.2+k0s.0/)
@@ -25,8 +25,8 @@ From
 
 * Minikube is the easiest to use but it is not suitable for production.
 * For performance-constraint environments, K3S is an easy to use the lightweight
-K8S implementation.
-* MicroK8S offers more features in terms of usage but it is more difficult to
+K8s implementation.
+* MicroK8s offers more features in terms of usage but it is more difficult to
 configure and install than others, could be a good duo with the Ubuntu.
 * In resource-constrained environments, it is useful to consider also K0S.
 * K0S and K3S are similar though if a proper toolchain is in place K0S gives

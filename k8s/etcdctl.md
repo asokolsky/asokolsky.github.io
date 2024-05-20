@@ -1,8 +1,36 @@
 # etcdctl
 
+etcd listens on port 2379.
+
+Env var `ETCDCTL_API` determines API version used, defaults to 2.
+
+## etcdctl v2
+
+```sh
+etcdctl set key1 val1
+```
+
+More commands:
+
+* etcdctl backup
+* etcdctl cluster-health
+* etcdctl mk
+* etcdctl mkdir
+* etcdctl set
+
+## etcdctl v3
+
 ```sh
 export ETCDCTL_API=3
+etcdctl put key1 val1
+etcdctl get key1
 ```
+More commands:
+
+* etcdctl snapshot save
+* etcdctl endpoint health
+* etcdctl get
+* etcdctl put
 
 ## Take a snapshot
 

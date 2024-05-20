@@ -148,9 +148,130 @@ tolerations:
 ```sh
 kubectl delete pod rabbit
 ```
-The above does not work for static pods
+Use `--force` if you are impatient.  The above does not work for static pods.
+
 
 ## Static Pods
 
 [Static pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)
 are defined in `/etc/kubernetes/manifests`.
+
+## Security Context for a Pod or Container
+
+https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+
+For a pod:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: security-context-demo
+spec:
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 3000
+    fsGroup: 2000
+  volumes:
+  - name: sec-ctx-vol
+    emptyDir: {}
+  containers:
+  - name: sec-ctx-demo
+    image: busybox:1.28
+    command: [ "sh", "-c", "sleep 1h" ]
+    volumeMounts:
+    - name: sec-ctx-vol
+      mountPath: /data/demo
+    securityContext:
+      allowPrivilegeEscalation: false
+```
+
+For a container:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: security-context-demo-2
+spec:
+  securityContext:
+    runAsUser: 1000
+  containers:
+  - name: sec-ctx-demo-2
+    image: gcr.io/google-samples/node-hello:1.0
+    securityContext:
+      runAsUser: 2000
+      allowPrivilegeEscalation: false
+
+```
+
+Further to add capabilities:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: security-context-demo-4
+spec:
+  containers:
+  - name: sec-ctx-4
+    image: gcr.io/google-samples/node-hello:1.0
+    securityContext:
+      capabilities:
+        add: ["NET_ADMIN", "SYS_TIME"]
+
+```
+
+To add
+[capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+to the container:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: security-context-demo-4
+spec:
+  containers:
+  - name: sec-ctx-4
+    image: gcr.io/google-samples/node-hello:1.0
+    securityContext:
+      capabilities:
+        add: ["NET_ADMIN", "SYS_TIME"]
+
+```
+
+## Use of Labels
+
+Labels are used, e.g. to link replica sets or services to pods:
+
+1. we label the pod
+2. use the same label in the podSelector field in the NetworkPolicy object
+
+## Volume Claim in a Pod
+
+Use [claims as volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#claims-as-volumes):
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: myfrontend
+      image: nginx
+      volumeMounts:
+      - mountPath: "/var/www/html"
+        name: mypd
+  volumes:
+    - name: mypd
+      persistentVolumeClaim:
+        claimName: myclaim
+```
+The same is true for ReplicaSets or Deployments.
+
+## Run a Command in a Container
+
+To run a command in a container use
+[kubectl exec](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_exec/):
+```
+k exec sleeper -- whoami
+```
