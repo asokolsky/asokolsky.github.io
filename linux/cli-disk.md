@@ -62,8 +62,6 @@ root@suprox:/media/flash# ls -la
 total 100
 drwxr-xr-x 4 root root 32768 Dec 31  1969  .
 drwxr-xr-x 3 root root  4096 Jun 13 19:24  ..
-drwxr-xr-x 2 root root 32768 Jun 12 18:47 'Plebs S01'
-drwxr-xr-x 2 root root 32768 Jun 12 18:42 'Wire in the Blood S01'
 ```
 
 5. Unmount it
