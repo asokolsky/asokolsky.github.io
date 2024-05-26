@@ -248,7 +248,9 @@ Labels are used, e.g. to link replica sets or services to pods:
 
 ## Volume Claim in a Pod
 
-Use [claims as volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#claims-as-volumes):
+Create a [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volumes).
+
+Then use [claims as volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#claims-as-volumes):
 ```yaml
 apiVersion: v1
 kind: Pod
