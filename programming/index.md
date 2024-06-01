@@ -29,7 +29,7 @@
 ## More cool stuff
 
 * [Semantic Versioning](https://semver.org/)
-* [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)
+* [Conventional Commits](/apps/git/conventional-commits.html)
 * [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt)
 governs used of "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL".

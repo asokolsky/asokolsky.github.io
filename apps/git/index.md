@@ -100,3 +100,29 @@ Company|Microsoft|[GitLab](https://en.wikipedia.org/wiki/GitLab)|Atlassian
 **Private**|repo|pricing|
 `<=5` users|$25/month|$0|$0
 `>5` users|$9/user/month|$0|$2/user/month
+
+## Merge vs Rebase Workflow
+
+[merging-vs-rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+### Merge
+
+To merge the updated main into a feature branch:
+
+```sh
+git checkout main
+git pull
+git checkout feature
+git merge main
+```
+
+### Rebase
+
+To rebase a feature branch:
+
+```sh
+git checkout main
+git pull
+git checkout feature
+git rebase main
+```

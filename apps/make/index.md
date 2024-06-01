@@ -46,3 +46,27 @@ World class:
 ## Support in VSCode
 
 [Makefile Support in VS Code](https://devblogs.microsoft.com/cppblog/now-announcing-makefile-support-in-visual-studio-code/)
+
+##  Verify the file exists
+
+Add this to your Makefile:
+```
+#
+# check the prerequisites
+#
+EXECUTABLES := exec1 exec2
+K:=$(foreach exec,$(EXECUTABLES),\
+    $(if $(shell which $(exec)),'',$(error "No $(exec) in PATH")))
+```
+
+##  Verify the git hook installed
+
+Add this to your Makefile:
+```
+SHELL:=/bin/bash
+export PROJECT_ROOT=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+PATH_TO_HOOK:=$(PROJECT_ROOT)/.git/hooks/pre-commit
+ifeq ("$(wildcard $(PATH_TO_HOOK))","")
+    $(error git hook not installed)
+endif
+```
