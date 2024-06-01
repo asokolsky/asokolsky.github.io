@@ -30,7 +30,7 @@ sudo du -s -- *|sort -s -r -n -k 1,1
 
 See [cli-disk-format](cli-disk-format.html).
 
-## Mounting Flash disk
+## Using the Flash disk
 
 1. Identify it
 
