@@ -102,6 +102,10 @@ Acceptable options:
 * JSON - outputs logs at the TRACE level or higher, and uses a parseable
 JSON encoding as the formatting.
 
-# Makefile
+## Makefile
 
 Example [terraform Makefile](make/terraform.mak).
+
+## Missing assert
+
+https://github.com/ahl/terrassert/

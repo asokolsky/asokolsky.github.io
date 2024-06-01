@@ -4,6 +4,8 @@
 * [Exam Curriculum](https://github.com/cncf/curriculum)
 * [Candidate Handbook](https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2)
 
+[CKA Exam progress](https://trainingportal.linuxfoundation.org/learn/course/certified-kubernetes-administrator-cka/exam/exam)
+
 
 ## Training
 
