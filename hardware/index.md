@@ -15,6 +15,8 @@
 * [HTPC exi](exi/)
 * [All-in-one suprox](suprox/)
 
+Use of [ecc-ram](ecc-ram.html)
+
 ## Networking
 
 * [Realtek RTL8125 2.5GB Ethernet](network-r8125.html) - don't use it!

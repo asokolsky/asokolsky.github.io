@@ -26,7 +26,7 @@ feat: add hat wobble
 
 [semantic commit messages](https://seesparkbox.com/foundry/semantic_commit_messages)
 
-## Use with Commitizen and Commitlint
+## Use Commitizen
 
 [commitizen](https://commitizen-tools.github.io/commitizen/)
 > is a release management tool designed for teams.
@@ -36,6 +36,8 @@ feat: add hat wobble
 > build your own set of rules, and publish them.
 
 Use commitizen with [pre-commit-hook](pre-commit-hook.html).
+
+## Use Commitlint
 
 [commitlint](https://github.com/conventional-changelog/commitlint)
 > checks if your commit messages meet the

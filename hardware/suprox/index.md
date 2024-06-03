@@ -5,9 +5,10 @@ A single-home-server solution.
 Runs VMs:
 
 * [pfSense router](/proxmox/guest-pfSense.html)
-with a i350-T2 NIC passed through;
+with an i350-T2 NIC passed through;
 * [TrueNAS](/proxmox/guest-truenas.html) with
-[an on-board SATA passed-through](/proxmox/pcie-passthrough-sata.html);
+[an on-board SATA](/proxmox/pcie-passthrough-sata.html)
+and second I210 NIC passed-through.
 * [Home Assistant on HAOS](/proxmox/guest-home-assistant.html).
 
 Runs LXCs:
