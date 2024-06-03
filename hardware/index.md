@@ -48,12 +48,13 @@ and the [Remote Key Mapping](logi/remote.html)
 ## Audio / Video
 
 * [Aftershokz Aeropex](aftershokz-aeropex.html)
-* Audio recorders: [Sony PCM-M10](sony-pcm-m10.html)
+* Audio recorders: [Sony PCM-M10](sony/sony-pcm-m10.html)
 * Business [Audio](business-audio.html) and [Video](business-video.html)
 * [JBL Charge 4 BT Speaker](jbl-charge-4.html)
 * [USB Audio](usb-audio.html)
 * [USB Video](usb-video.html)
 * Video cameras: [Logitech Brio 4k](logi/brio.html),
 [Panasonic GH5](panasonic-gh5.html)
+* [Sony A7IV](sony/a7iv.html)
 
 [Power Consumption](power.html)
