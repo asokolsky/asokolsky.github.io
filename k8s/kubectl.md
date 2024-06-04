@@ -172,6 +172,9 @@ Command|Description
 
 ## Edit resources
 
+[kubectl-edit](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#edit),
+[kubectl-set](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#set).
+
 Command|Description
 ----|------
 `kubectl edit <resource> <name>`|Edit a resource in a text editor
@@ -192,12 +195,23 @@ Command|Description
 ----|------
 `kubectl delete <resource> <name>`|Delete a particular resource
 `kubectl delete <resource> --all`|Delete all resources of a particular type in the current namespace
-`kubectl delete -f <file>`|Delete a resource from a file
 
 To delete a pod:
 ```
 kubectl delete pod busybox-sleep-less
 ```
+
+## Create/Replace/Delete from a file
+
+[kubectl-create](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create),
+[kubectl-delete](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#delete),
+[kubectl-replace](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#replace)
+
+Command|Description
+----|------
+`kubectl create -f <file>`|Create a resource from a file
+`kubectl delete [--force] -f <file>`|Delete a resource from a file
+`kubectl replace [--force] -f <file>`|Delete then create a resource from a file
 
 ## Manage deployments
 
@@ -227,8 +241,8 @@ Command|Description
 
 Command|Description
 ----|------
-`kubectl logs <pod>`|Print the logs for a pod
-`kubectl logs -f <pod>`|Print the logs for a pod and keep streaming
+`kubectl logs <pod> -n <namespace>`|Print the logs for a pod
+`kubectl logs -f <pod> -n <namespace>`|Print the logs for a pod and keep streaming
 
 ## Resource usage
 
@@ -244,3 +258,40 @@ Command|Description
 ----|------
 `kubectl version`|Show the version of the client and server
 `kubectl api-resources`|Print the supported API resources on the server
+
+## Switching context with kubectx
+
+Use [kubectx](https://github.com/ahmetb/kubectx) to switch the cluster you work
+with.
+
+To list all contexts:
+```sh
+kubectx
+```
+
+To see the current context:
+```sh
+kubectx -c
+```
+
+To switch to a new context:
+```sh
+kubectx <context_name>
+```
+
+To switch back to previous context:
+```sh
+kubectx -
+```
+
+## Switching namespace with kubectx kubens
+
+To switch to a new namespace:
+```sh
+kubens <new_namespace>
+```
+
+To switch back to previous namespace:
+```sh
+kubens -
+```

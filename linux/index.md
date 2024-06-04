@@ -9,8 +9,9 @@
 ## CLI
 
 * [apt-get](cli-apt-get.html)
+* [base64](cli-base64.html)
 * [bluetooth](cli-bluetooth.html)
-* [curl](cli-curl.html)
+* [curl](cli-curl.html), use [wget as curl](cli-wget-as-curl.html)
 * [disk](cli-disk.html), [disk formatting](cli-disk-format.html)
 * [dmidecode](cli-dmidecode.html)
 * [ethtool](cli-ethtool.html)
@@ -30,7 +31,7 @@
 * [rsync](cli-rsync.html)
 * [scp](cli-scp.html)
 * [smbclient](cli-smbclient.html)
-* [ss](cli-ss.html)
+* [socket statistics ss](cli-ss.html)
 * [systemctl](cli-systemctl.html)
 * [more...](cli.html)
 

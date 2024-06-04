@@ -1,4 +1,8 @@
-# Handling K8s secrets in `kubectl`
+#  K8s Secrets
+
+[kubectl create secret](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_create/kubectl_create_secret/)
+
+## Retrieve Secret(s)
 
 Retrieving all secrets:
 ```
@@ -8,8 +12,7 @@ bar        Opaque   2      22d
 baz        Opaque   1      10d
 ```
 
-## Describe secret
-
+Retrieving one secret:
 ```
 > kubectl describe secret foo -n foo-namespace
 Name:         foo
@@ -41,7 +44,7 @@ Example:
 
 ## Create secret
 
-Store it:
+Create secret from the command line:
 ```sh
 kubectl create secret generic foo -n foo-namespace \
     --from-literal=api-key="ffffoooo=" \
@@ -67,4 +70,42 @@ EOF
 
 ```sh
 kubectl edit secrets <secret-name>
+```
+
+## docker-registry Secrets
+
+[kubectl create docker-registry](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_create/kubectl_create_secret_docker-registry/)
+
+```sh
+k create secret docker-registry my-secret \
+  --docker-server=DOCKER_REGISTRY_SERVER \
+  --docker-username=DOCKER_USER \
+  --docker-password=DOCKER_PASSWORD \
+  --docker-email=DOCKER_EMAIL
+```
+
+To [use it](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/):
+
+```yaml
+...
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Values.name}}-deployment
+spec:
+  replicas: {{int .Values.replicas}}
+  selector:
+    matchLabels:
+      app: {{.Values.name}}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.name}}
+    spec:
+      imagePullSecrets:
+      - name: {{.Values.name}}-dockercfg
+      containers:
+      - name: {{.Values.name}}
+        image: {{.Values.image}}
+...
 ```

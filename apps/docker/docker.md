@@ -240,19 +240,23 @@ sudo docker inspect _container_id_ | jq ".[].Config.User"
 ## Get a Shell in a Container
 
 ```sh
-docker container exec -it _container_id_or_name_ /bin/bash
+docker container exec -itu root _container_id_or_name_ /bin/bash
 ```
 
-Options used:
+Option|Description
+------|-----------
+`-i`, `--interactive`|interactive, keep STDIN open even if not attached
+`-t`, `--tty`|allocate a pseudo-TTY
+`-u`, `--user` `username`|username or UID, format: <name|uid>[:<group|gid>]
 
-* `-i` - interactive
-* `-t` - allocate a pseudo TTY device
 
 ## Container logs
 
 Default location: `/var/lib/docker/containers/<container_id>/<container_id>-json.log`.
 [logging drivers](https://docs.docker.com/config/containers/logging/configure/)
 can change that.
+
+[docker logs docs](https://docs.docker.com/engine/reference/commandline/logs/)
 
 CLI:
 
@@ -264,8 +268,6 @@ To tail (or to follow) the log:
 ```sh
 docker logs <container_id> -f
 ```
-
-[docker logs docs](https://docs.docker.com/engine/reference/commandline/logs/)
 
 ## Observability
 
