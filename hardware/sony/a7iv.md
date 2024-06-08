@@ -1,4 +1,6 @@
-# Sony Alpha 7 IV
+# Sony α7IV, a.k.a. ILCE-7M4
+
+[Help Guide](https://helpguide.sony.net/ilc/2110/v1/en/contents/TP1000657876.html).
 
 ## Photo Settings
 

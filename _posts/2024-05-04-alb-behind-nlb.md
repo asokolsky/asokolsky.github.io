@@ -116,12 +116,51 @@ To accomplish this, add a special rule to the ALB listener:
 * path: `/alb-health-check`
 * return fixed response: 200
 
+```
+#
+# respond to the health check from NLB
+#
+resource "aws_lb_listener_rule" "alb_health_check" {
+  listener_arn = arn
+  priority     = 555
+
+  action {
+    type = "fixed-response"
+    fixed_response {
+      content_type = "text/plain"
+      message_body = "ok"
+      status_code  = "200"
+    }
+  }
+
+  condition {
+    path_pattern {
+      values = ["/alb-health-check"]
+    }
+  }
+}
+```
+
 For the target group embedding the ALB, add the above path as a health check:
 
 * protocol: HTTP
 * port: 80
 * path: `/alb-health-check`
 
+```
+resource "aws_lb_target_group" "alb_target_group" {
+  name = "alb_target_group"
+  port = 80
+  protocol = "HTTP"
+  target_type = "alb"
+
+  health_check {
+    path = "/alb-health-check"
+    port = 80
+    protocol = "HTTP"
+  }
+}
+```
 
 ## See Also
 

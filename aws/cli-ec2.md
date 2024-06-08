@@ -169,25 +169,36 @@ see [vpc-describe.sh](vpc-describe.sh)
 
 ## Subnets
 
-[describe-subnets](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-subnets.html)
-
+Use
+[describe-subnets](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-subnets.html):
 ```
 aws ec2 describe-subnets
 ```
 
-then [delete-subnet](https://docs.aws.amazon.com/cli/latest/reference/ec2/delete-subnet.html)
+then [delete-subnet](https://docs.aws.amazon.com/cli/latest/reference/ec2/delete-subnet.html):
 ```
 aws ec2 delete-subnet --subnet-id _id_
 ```
 
 ## Find Load Balancer IP
 
-From
-https://repost.aws/knowledge-center/elb-find-load-balancer-ip
+Use
+[elb-find-load-balancer-ip](https://repost.aws/knowledge-center/elb-find-load-balancer-ip):
 
 ```sh
 aws ec2 describe-network-interfaces \
   --filters Name=description,Values="ELB elb-name" \
   --query 'NetworkInterfaces[*].PrivateIpAddresses[*].PrivateIpAddress' \
   --output text
+```
+
+## Describe VPN
+
+Use
+[describe-vpn-connections](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-vpn-connections.html):
+```sh
+aws ec2 describe-vpn-connections \
+    --filter 'Name=vpn-connection-id,Values=vpn-176b7876' \
+    --query 'VpnConnections[0].CustomerGatewayConfiguration'
+    --output text
 ```

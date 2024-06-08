@@ -28,7 +28,17 @@ To look further:
 
 * [Textual](https://www.textualize.io/) and
 [textualize/rich](https://github.com/Textualize/rich)
+* [jmespath.py](https://github.com/jmespath/jmespath.py) to support query just
+like aws cli does.
 
 ## External resources
 
 * [Google style guide](https://google.github.io/styleguide/pyguide.html)
+
+## One-liners
+
+### URL-decode CLI
+
+```
+echo -n "%21%20" | python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()));"
+```

@@ -107,6 +107,20 @@ $ aws ec2 describe-volumes --profile dev --output table \
 [More](https://github.com/KarnGusain/AWS/blob/main/AWS%20CLI.md)
 
 
+## Filtering
+
+From [cli-usage-filter](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-filter.html):
+
+* use `--filter` or `--filters` for server-side filtering
+* use `--query` for the client-side filtering with
+[JMESPath syntax](https://jmespath.org/)
+
+e.g.:
+```sh
+aws ec2 describe-vpn-connections \
+    --filter 'Name=vpn-connection-id,Values=vpn-176b7876' \
+    --query 'VpnConnections[0].CustomerGatewayConfiguration'
+```
 
 ## More
 
