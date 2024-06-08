@@ -8,3 +8,5 @@ across many different Linux distributions."
 "the background service that manages and maintains your snaps."
 
 [snap REST API over unix-domain socket](https://snapcraft.io/docs/using-the-api).
+
+[man snap](https://manpages.ubuntu.com/manpages/bionic/man1/snap.1.html)
