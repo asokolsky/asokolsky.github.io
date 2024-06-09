@@ -1,10 +1,12 @@
 # git
 
-## More
+## Topics
 
 * [git hooks](https://www.atlassian.com/git/tutorials/git-hooks),
 [pre-commit hook](pre-commit-hook.html)
 * [custom git merge driver](custom-merge-driver.html)
+* [Hosting a Repo in a Cloud](hosting.html)
+* [merge vs rebase workflow](workflow.html)
 * [FAQs](faq.html)
 
 And more:
@@ -87,42 +89,3 @@ Instead of using git submodules, sometimes this may make more sense:
 {% include_relative update-from-repo.sh %}
 ```
 
-## Hosting a Repo in a Cloud
-
-[comparison](https://stackshare.io/stackups/bitbucket-vs-github-vs-gitlab)
-
-Product|github|gitlab|bitbucket
--------|------|------|-------
-Company|Microsoft|[GitLab](https://en.wikipedia.org/wiki/GitLab)|Atlassian
-**Public**|repo|pricing|
-`<=5` users|$0|$0|$0
-`>5` users|$0|$0|$2/user/month
-**Private**|repo|pricing|
-`<=5` users|$25/month|$0|$0
-`>5` users|$9/user/month|$0|$2/user/month
-
-## Merge vs Rebase Workflow
-
-[merging-vs-rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
-
-### Merge
-
-To merge the updated main into a feature branch:
-
-```sh
-git checkout main
-git pull
-git checkout feature
-git merge main
-```
-
-### Rebase
-
-To rebase a feature branch:
-
-```sh
-git checkout main
-git pull
-git checkout feature
-git rebase main
-```
