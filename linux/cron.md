@@ -30,3 +30,8 @@ To shutdown at night `/etc/cron.d/good_night`:
 #
 50 0 * * * root /usr/sbin/shutdown +5
 ```
+
+To cancel such shutdown just do:
+```sh
+sudo shutdown -c
+```
