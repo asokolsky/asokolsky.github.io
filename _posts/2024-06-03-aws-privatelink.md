@@ -43,4 +43,4 @@ definitions:
 
 ## See Also
 
-[ALB behind an NLB Gotchas](2024/05/04/alb-behind-nlb.html)
+[ALB behind an NLB Gotchas](/2024/05/04/alb-behind-nlb.html)

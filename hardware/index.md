@@ -3,7 +3,7 @@
 ## Computing
 
 * Laptops: [Dell Latitude 7490](dell/latitude-7490.html),
-[Lenovo Thinkpad P52](thinkpad.html)
+[Lenovo Thinkpad P52](lenovo/thinkpad-p52.html)
 * [Dell Optiplex 7060 Micro](dell/optiplex7060micro.html)
 * [RPi4 with hkcam](rpi4-hkcam.html)
 
@@ -48,7 +48,7 @@ and the [Remote Key Mapping](logi/remote.html)
 ## Audio / Video
 
 * [Aftershokz Aeropex](aftershokz-aeropex.html)
-* Audio recorders: [Sony PCM-M10](sony/sony-pcm-m10.html)
+* Audio recorders: [Sony PCM-M10](sony/pcm-m10.html)
 * Business [Audio](business-audio.html) and [Video](business-video.html)
 * [JBL Charge 4 BT Speaker](jbl-charge-4.html)
 * [USB Audio](usb-audio.html)
