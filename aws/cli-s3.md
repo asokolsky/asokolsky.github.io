@@ -15,12 +15,17 @@ aws s3api get-bucket-cors --bucket $BUCKET
 aws s3api get-bucket-location --bucket $BUCKET
 aws s3api get-bucket-versioning --bucket $BUCKET
 
+Also:
 
+```sh
+aws macie2 describe-buckets --criteria '{"bucketName":{"eq":["$BUCKET"]}}'
+```
+To delete:
 
+```sh
 aws s3api delete-bucket --bucket $BUCKET
 ```
-S
-upload:
+To upload:
 ```sh
 aws s3 mv delete-me.txt s3://$BUCKET/delete-me.txt
 ```

@@ -7,8 +7,8 @@ Runs VMs:
 * [pfSense router](/proxmox/guest-pfSense.html)
 with an i350-T2 NIC passed through;
 * [TrueNAS](/proxmox/guest-truenas.html) with
-[an on-board SATA](/proxmox/pcie-passthrough-sata.html)
-and second I210 NIC passed-through.
+[an on-board SATA](/proxmox/pcie-passthrough-sata.html) passed-through.
+May also have a second I210 NIC passed through.
 * [Home Assistant on HAOS](/proxmox/guest-home-assistant.html).
 
 Runs LXCs:
@@ -26,7 +26,7 @@ in docker containers:
 
 ## Hardware
 
-[dmi info](dmi.html)
+To minimize the noise I use a 150W PicoPSU.
 
 Item|Description
 ----|----------

@@ -76,13 +76,51 @@ ioctl: VIDIOC_ENUM_FMT
 Using info from https://hub.docker.com/r/badsmoke/mjpg-streamer:
 
 ```sh
-docker run --device /dev/video0 \
-        -e "ENV_CAMERA=/dev/video0" \
-        -e "ENV_FPS=30" \
-        -e "ENV_RESOLUTION=1920x1080" \
-        -e "ENV_LOCATION=./www" \
-        -p 8080:8080 \
-        badsmoke/mjpg-streamer
+docker run --device /dev/video0 -e "ENV_CAMERA=/dev/video0" -e "ENV_FPS=30" \
+  -e "ENV_RESOLUTION=1920x1080" -e "ENV_LOCATION=./www" -p 8080:8080 \
+  badsmoke/mjpg-streamer
+```
+
+## Create a mjpg-streamer service
+
+Create `/etc/systemd/system/mjpg-streamer.service`:
+
+```
+[Unit]
+Description=mjpg-streamer service
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker exec %n stop
+ExecStartPre=-/usr/bin/docker rm %n
+ExecStartPre=/usr/bin/docker pull badsmoke/mjpg-streamer
+ExecStart=/usr/bin/docker run --device /dev/video0 -e "ENV_CAMERA=/dev/video0" -e "ENV_FPS=30" -e "ENV_RESOLUTION=1920x1080" -e "ENV_LOCATION=./www" -p 8080:8080 badsmoke/mjpg-streamer
+ExecStop=/usr/bin/docker exec %n stop
+
+[Install]
+WantedBy=default.target
+```
+Then, enable it:
+```sh
+systemctl enable mjpg-streamer.service
+```
+Start it:
+```sh
+systemctl start mjpg-streamer.service
+```
+Verify success:
+```sh
+systemctl status mjpg-streamer.service
+```
+Alternatively:
+```
+# docker ps
+CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                                                      NAMES
+81baf589cbbb   badsmoke/mjpg-streamer          "/mjpg-streamer/mjpg…"   45 seconds ago   Up 45 seconds   0.0.0.0:8080->8080/tcp                                     elated_wescoff
+84a1d6d4ddc2   portainer/portainer-ce:latest   "/portainer"             21 minutes ago   Up 21 minutes   0.0.0.0:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, 9000/tcp   portainer
 ```
 
 ## Using it

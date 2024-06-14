@@ -192,13 +192,32 @@ aws ec2 describe-network-interfaces \
   --output text
 ```
 
-## Describe VPN
+## VPN Connection and Tunnels
 
 Use
-[describe-vpn-connections](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-vpn-connections.html):
+[describe-vpn-connections](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-vpn-connections.html)
+to retrieve gateway configuration:
 ```sh
 aws ec2 describe-vpn-connections \
-    --filter 'Name=vpn-connection-id,Values=vpn-176b7876' \
+    --filter 'Name=vpn-connection-id,Values=vpn-12345678' \
     --query 'VpnConnections[0].CustomerGatewayConfiguration'
     --output text
+```
+
+Retrieve the pre-shared key:
+```sh
+aws ec2 describe-vpn-connections \
+    --filter 'Name=vpn-connection-id,Values=vpn-12345678' \
+    --query 'VpnConnections[0].CustomerGatewayConfiguration' \
+    --output text | grep pre_shared_key
+```
+
+Use
+[modify-vpn-tunnel-options](https://docs.aws.amazon.com/cli/latest/reference/ec2/modify-vpn-tunnel-options.html)
+to replace the pre-shared key:
+```sh
+aws ec2 modify-vpn-tunnel-options \
+    --vpn-connection-id vpn-12345678 \
+    --vpn-tunnel-outside-ip-address 1.1.1.1 \
+    --tunnel-options 'PreSharedKey=secret' --dry-run
 ```
