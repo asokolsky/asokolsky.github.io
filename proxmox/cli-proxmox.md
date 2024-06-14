@@ -45,16 +45,16 @@ Remove a LV|`lvremove <vg-name>/<lv-name>`
 
 Description|Command
 -----------|-------
+Get status for all datastores|`pvesm status [OPTIONS]`
+List storage content|`pvesm list <storage> [OPTIONS]`
 Create a new storage|`pvesm add <type> <storage> [OPTIONS]`
 Allocate disk images|`pvesm alloc <storage> <vmid> <filename> <size> [OPTIONS]`
 Delete volume|`pvesm free <volume> [OPTIONS]`
 Delete storage configuration|`pvesm remove <storage>`
-List storage content|`pvesm list <storage> [OPTIONS]`
 An alias for pvesm scan lvm|`pvesm lvmscan`
 An alias for pvesm scan lvmthin|`pvesm lvmthinscan`
 List local LVM volume groups|`pvesm scan lvm`
 List local LVM Thin Pools|`pvesm scan lvmthin <vg>`
-Get status for all datastores|`pvesm status [OPTIONS]`
 
 ## VMs
 

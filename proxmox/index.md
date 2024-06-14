@@ -3,6 +3,10 @@
 [pve-docs](https://pve.proxmox.com/pve-docs/) and
 [pve-admin-guide](https://pve.proxmox.com/pve-docs/pve-admin-guide.html).
 
+## Storage Management
+
+https://pve.proxmox.com/wiki/Storage
+
 ## Proxmox Tasks
 
 * cli: [vm, container, template manipulation](cli-proxmox.html),
