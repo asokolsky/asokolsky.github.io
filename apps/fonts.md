@@ -25,6 +25,20 @@ More options:
 * [SF Mono](https://developer.apple.com/fonts/)
 * [Comic Mono](https://github.com/dtinth/comic-mono-font)
 
+## Google Fonts Dispenser
+
+Try fonts [here](https://fonts.google.com).  Once the you happy with your collection:
+
+* download the zip
+* unzip it to ~/.fonts:
+```sh
+unzip Source_Code_Pro.zip  -d ~/.fonts/Source_Code_Pro
+```
+* refresh font cache
+```sh
+fc-cache -f
+```
+
 ## More Fonts
 
 https://github.com/perrychan1/fonts
