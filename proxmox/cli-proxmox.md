@@ -258,5 +258,5 @@ pct delsnapshot <vmid> <snapname> [OPTIONS]
 
 These were installed on mine:
 
-* nmap
-* iftop
+* [iftop](/linux/cli-iftop.html)
+* [nmap](/linux/cli-nmap.html)
