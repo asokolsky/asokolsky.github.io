@@ -34,3 +34,9 @@ docker run -it --rm jbergknoff/postgresql-client \
 ## Interactive PQSL Commands
 
 See the [cheat sheet](psql-commands.html)
+
+## Connect to remote DB
+
+```sh
+psql -h host.io -p port -U user db_name
+```

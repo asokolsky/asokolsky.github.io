@@ -119,7 +119,7 @@ local replicas = switch(cluster.account, {
 
 ## Debugging Output
 
-This prints value of `clusters`` and returns it:
+This prints value of `clusters` and returns it:
 ```
 std.trace('clusters: %s' % std.manifestJson(clusters),  clusters)
 ```

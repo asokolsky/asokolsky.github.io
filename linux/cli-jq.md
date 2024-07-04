@@ -76,3 +76,27 @@ Extract container environment and sort it.
 ```sh
 sudo docker inspect cc43cbfa4153|jq ".[0].Config.Env|sort[]"
 ```
+
+## Map
+
+```sh
+kubectl get pod vault-0 -n vault -o=jsonpath="{.spec.containers}"|jq "map(.key = .name | del(.args,.command,.env,.imagePullPolicy,.key,.livenessProbe,.ports,.readinessProbe,.resources,.securityContext,.startupProbe,.terminationMessagePath,.terminationMessagePolicy,.volumeMounts))"
+[
+  {
+    "image": "public.ecr.aws/hashicorp/vault:1.14.1",
+    "name": "vault"
+  },
+  {
+    "image": "ghcr.io/bank-vaults/bank-vaults:1.20.3",
+    "name": "bank-vaults"
+  },
+  {
+    "image": "285088940395.dkr.ecr.us-east-1.amazonaws.com/statsd-explorer:2023.10.02",
+    "name": "prometheus-exporter"
+  },
+  {
+    "image": "ubuntu:bionic",
+    "name": "velero-fsfreeze"
+  }
+]
+```
