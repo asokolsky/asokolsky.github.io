@@ -4,48 +4,33 @@
 
 https://pyperformance.readthedocs.io
 
-### latitude7490
+### Latitude 7490
 
-Python 3.10.12
+[Latitude 7490](../dell/latitude-7490.html) runs Python 3.10.12.
 
-
-#### system configuration
-
+System Configuration:
 ```
-> python3 -m pyperf system
-Show the system configuration
-
-System state
-============
-
-CPU: use 8 logical CPUs: 0-7
-Perf event: Maximum sample rate: 100000 per second
-ASLR: Full randomization
-Linux scheduler: No CPU is isolated
-CPU Frequency: 0-7=min=400 MHz, max=4200 MHz
-CPU scaling governor (intel_pstate): powersave
-Turbo Boost (intel_pstate): Turbo Boost enabled
-IRQ affinity: irqbalance service: active
-IRQ affinity: Default IRQ affinity: CPU 0-7
-IRQ affinity: IRQ affinity: IRQ 0-19,47,51,120-121,127,138,149=CPU 0-7; IRQ 122=CPU 1,5; IRQ 123=CPU 2,6; IRQ 124=CPU 3,7; IRQ 125,136,142=CPU 7; IRQ 126=CPU 0,4; IRQ 128,134,140-141,144-147=CPU 5; IRQ 129=CPU 0; IRQ 130,139=CPU 1; IRQ 131,137=CPU 2; IRQ 132=CPU 3; IRQ 133,143=CPU 4; IRQ 135,148=CPU 6
-Power supply: the power cable is plugged
-
-Advices
-=======
-
-Perf event: Set max sample rate to 1
-Linux scheduler: Use isolcpus=<cpu list> kernel parameter to isolate CPUs
-Linux scheduler: Use rcu_nocbs=<cpu list> kernel parameter (with isolcpus) to not schedule RCU on isolated CPUs
-CPU scaling governor (intel_pstate): Use CPU scaling governor 'performance'
-Turbo Boost (intel_pstate): Disable Turbo Boost to get more reliable CPU frequency
-
-Run "python3 -m pyperf system tune" to tune the system configuration to run benchmarks
+{% include_relative latitude-pyperf-config.txt %}
 ```
 
 Tuning was NOT done to ensure power efficiency of the laptop.
 
-#### running performance test
-
+Running performance test:
 ```
 > ~/Projects/pyperf > pyperformance run -o latitude.json
+```
+
+### Thinkpad P52
+
+[Thinkpad P52](../lenovo/thinkpad-p52.html) runs Python 3.10.12.
+
+System Configuration:
+```
+{% include_relative p52-pyperf-config.txt %}
+```
+
+## Latitude 7490 vs Thinkpad P52
+
+```
+{% include_relative latitude-vs-p52.txt %}
 ```

@@ -3,7 +3,8 @@
 ## Computing
 
 * Laptops: [Dell Latitude 7490](dell/latitude-7490.html),
-[Lenovo Thinkpad P52](lenovo/thinkpad-p52.html)
+Lenovo [Thinkpad P52](lenovo/thinkpad-p52.html),
+[Thinkpad T52g3](lenovo/thinkpad-t14g3.html);
 * [Dell Optiplex 7060 Micro](dell/optiplex7060micro.html)
 * [RPi4 with hkcam](rpi4-hkcam.html)
 
