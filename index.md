@@ -35,16 +35,15 @@ comments: false
 
 ## Linux
 
-* CLI:
-[bluetooth](linux/cli-bluetooth.html), [disk](linux/cli-disk.html),
+* CLI: [bluetooth](linux/cli-bluetooth.html), [disk](linux/cli-disk.html),
 [disk formatting](linux/cli-disk-format.html),
 [dmidecode](linux/cli-dmidecode.html), [ethtool](linux/cli-ethtool.html),
 [find](linux/cli-find.html), [ipcalc](linux/cli-ipcalc.html),
 [iperf](linux/cli-iperf.html), [jq](linux/cli-jq.html),
 [netstat](linux/cli-netstat.html), [pdsh](linux/cli-pdsh.html),
-[bulk rename](linux/cli-rename-files.html),
-[rsync](linux/cli-rsync.html), [socket stats](linux/cli-ss.html)
-[systemctl](linux/cli-systemctl.html), and [more...](linux/cli.html)
+[bulk rename](linux/cli-rename-files.html), [rsync](linux/cli-rsync.html),
+[socket stats](linux/cli-ss.html), [systemctl](linux/cli-systemctl.html),
+and [more...](linux/cli.html)
 * [IPMI Config and cli](linux/cli-ipmi.html)
 * [Configure SSH for Key Authentication](linux/ssh.html)
 * [Kernel Tuning](linux/kernel-tuning.html)
