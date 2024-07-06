@@ -1,8 +1,12 @@
 # AWS Elastic Container Registry (ECR) CLI
 
+For all the commands below the region should be set via environment or via cli.
+
 ## ECR Repo
 
-For all the commands below regios should be set via environment or via cli.
+```sh
+aws ecr describe-repositories
+```
 
 To create an ecr repo:
 

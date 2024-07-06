@@ -1,28 +1,37 @@
 # Credstash
 
-https://github.com/fugue/credstash
-or
-https://github.com/LuminalOSS/credstash
+[GitHub repo](https://github.com/fugue/credstash)
 
-## Installation
+## Installation and Setup
 
-Client installation:
+0. (Linux only) Install dependencies
 
-`pip install credstash`
+1. Install it
 
+```sh
+pip install credstash
+```
 
-## Use
+2. Set up a key called `credstash` in KMS (found in the IAM console)
 
-### Full Example
+3. Make sure you have AWS creds in a place that boto/botocore can read them
 
-Store private file `asokolsky_kp.pem`, retrieve it, delete secret:
+4. Set it up
 
 ```sh
 credstash setup
-credstash put asokolsky_kp @asokolsky_kp.pem
-credstash get asokolsky_kp
-credstash delete asokolsky_kp
 ```
+
+### ~/.credstash
+
+Example:
+```json
+{
+    "kms-region":"us-east-1"
+}
+```
+
+## Use
 
 ### Adding secrets
 
@@ -40,6 +49,17 @@ This will print to STDOUT.
 You can also use
 [encryption contexts](http://docs.aws.amazon.com/kms/latest/developerguide/encrypt-context.html)
 to limit/modify access.
+
+### Full Example
+
+Store private file `asokolsky_kp.pem`, retrieve it, delete secret:
+
+```sh
+credstash setup
+credstash put asokolsky_kp @asokolsky_kp.pem
+credstash get asokolsky_kp
+credstash delete asokolsky_kp
+```
 
 ### Giving access
 
@@ -63,7 +83,7 @@ You can also use
 [encryption contexts](http://docs.aws.amazon.com/kms/latest/developerguide/encrypt-context.html)
 to limit/modify access.
 
-## Basic Architecture
+## Architecture (HOW this works)
 
 [AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)
 provides the secure encryption key management.
