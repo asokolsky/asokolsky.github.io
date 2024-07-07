@@ -5,7 +5,7 @@
 ### via console
 
 1. Open the console with `~` or `F3`
-2. Type in the following: `setres 3440x1440`
+2. Type in the following: `setres 3440x1440` or `setres 3840x1600`
 3. Press Enter.
 
 ### via ini file
