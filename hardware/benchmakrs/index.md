@@ -1,6 +1,6 @@
 # PC Hardware Benchmarking
 
-## pyperformance
+## PyPerformance
 
 https://pyperformance.readthedocs.io
 
@@ -13,11 +13,11 @@ System Configuration:
 {% include_relative latitude-pyperf-config.txt %}
 ```
 
-Tuning was NOT done to ensure power efficiency of the laptop.
+Tuning was NOT done to preserve the power efficiency of the laptop.
 
 Running performance test:
 ```
-> ~/Projects/pyperf > pyperformance run -o latitude.json
+~/Projects/pyperf > pyperformance run -o latitude.json
 ```
 
 ### Thinkpad P52
@@ -28,6 +28,8 @@ System Configuration:
 ```
 {% include_relative p52-pyperf-config.txt %}
 ```
+
+Tuning was NOT done to preserve the power efficiency of the laptop.
 
 ## Latitude 7490 vs Thinkpad P52
 
