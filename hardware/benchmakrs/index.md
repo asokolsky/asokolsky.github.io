@@ -1,6 +1,6 @@
 # PC Hardware Benchmarking
 
-## pyperformance
+## PyPerformance
 
 https://pyperformance.readthedocs.io
 
@@ -51,8 +51,28 @@ System Configuration:
 {% include_relative p52-pyperf-config.txt %}
 ```
 
-## Latitude 7490 vs Thinkpad P52
+### Thinkpad T14 Gen 3 running Windows
+
+[Thinkpad T14 Gen 3](../lenovo/thinkpad-t14g3.md) with Windows and Python 3.12.4 installed
+
+System configuration does not work:
+```
+{% include_relative t14g3win-pyperf-config.txt %}
+```
+
+Run performance test:
+```sh
+pyperformance run -o t14g3win.json
+```
+
+### Latitude 7490 vs Thinkpad P52
 
 ```
 {% include_relative latitude-vs-p52.txt %}
+```
+
+### Thinkpad P52 vs Thinkpad T14 Gen 3
+
+```
+{% include_relative p52-vs-t14g3win.txt %}
 ```

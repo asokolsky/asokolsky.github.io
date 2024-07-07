@@ -1,0 +1,2 @@
+$ python -m pyperf system
+WARNING: no operation available for your platform
