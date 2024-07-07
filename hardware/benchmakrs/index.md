@@ -65,6 +65,41 @@ Run performance test:
 pyperformance run -o t14g3win.json
 ```
 
+### MacBook Pro 16" 2019
+
+```
+asokolsky@USSJC-ASOKOLSKY > ~/Projects/asokolsky.github.io | main ± > pyenv versions
+  system
+  3.10.1
+* 3.12.2 (set by /Users/asokolsky/Projects/asokolsky.github.io/.python-version)
+asokolsky@USSJC-ASOKOLSKY > ~/Projects/asokolsky.github.io | main ± > pyenv exec python --version
+Python 3.12.2
+```
+then
+```
+wget https://bootstrap.pypa.io/get-pip.py
+pyenv exec python get-pip.py
+```
+verify:
+```
+asokolsky@USSJC-ASOKOLSKY > ~/Projects/asokolsky.github.io | main ± > pyenv exec python -m pip --version
+pip 24.1.2 from /Users/asokolsky/.pyenv/versions/3.12.2/lib/python3.12/site-packages/pip (python 3.12)
+```
+Install it:
+```
+pyenv exec python -m pip install pyperformance
+```
+
+System configuration does not work:
+```
+{% include_relative mbp2019-pyperf-config.txt %}
+```
+
+Run performance test:
+```sh
+pyperformance run -o t14g3win.json
+```
+
 ### Latitude 7490 vs Thinkpad P52
 
 ```
