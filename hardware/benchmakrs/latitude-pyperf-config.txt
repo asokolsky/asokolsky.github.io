@@ -1,4 +1,4 @@
-> python3 -m pyperf system
+> python3.12 -m pyperf system
 Show the system configuration
 
 System state
@@ -25,4 +25,4 @@ Linux scheduler: Use rcu_nocbs=<cpu list> kernel parameter (with isolcpus) to no
 CPU scaling governor (intel_pstate): Use CPU scaling governor 'performance'
 Turbo Boost (intel_pstate): Disable Turbo Boost to get more reliable CPU frequency
 
-Run "python3 -m pyperf system tune" to tune the system configuration to run benchmarks
+Run "python3.12 -m pyperf system tune" to tune the system configuration to run benchmarks
