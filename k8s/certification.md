@@ -6,7 +6,6 @@
 
 [CKA Exam progress](https://trainingportal.linuxfoundation.org/learn/course/certified-kubernetes-administrator-cka/exam/exam)
 
-
 ## Training
 
 linuxfoundation.org (linked to LinkedIn):
@@ -17,9 +16,7 @@ linuxfoundation.org (linked to LinkedIn):
 * [certified-kubernetes-administrator](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
 * [linuxfoundation certification](https://trainingportal.linuxfoundation.org/learn/dashboard)
 
-
 Udemy:
-
 * [CKA course with Practice Tests](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
 with
 [repo](https://github.com/kodekloudhub/certified-kubernetes-administrator-course)
