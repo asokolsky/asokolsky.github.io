@@ -145,6 +145,12 @@ pyperformance run -o t14g3win.json
 {% include_relative latitude-vs-t14g3win.txt %}
 ```
 
+### Latitude 7490 vs MacBook Pro 2019
+
+```
+{% include_relative latitude-vs-mbp2019.txt %}
+```
+
 ### Thinkpad P52 vs Thinkpad T14 Gen 3
 
 ```
