@@ -17,13 +17,6 @@ zstyle ':vcs_info:git:*' formats '[%b]'
 
 setopt histignorealldups sharehistory
 
-if [ $INSIDE_EMACS ]; then
-    export PAGER="/usr/bin/more"
-else
-    export PAGER="/usr/bin/less"
-    export LESS="-isR"
-    alias lv="less"
-fi
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 

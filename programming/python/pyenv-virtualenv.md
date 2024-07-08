@@ -28,6 +28,20 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 brew install pyenv-virtualenv
 echo 'eval eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 ```
+## Install pyenv+pyenv-virtualenv on Linux
+
+```sh
+curl https://pyenv.run | bash
+```
+
+added this to .zshenv:
+```
+# support for pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
 
 ### Create a Virtual Environment
 

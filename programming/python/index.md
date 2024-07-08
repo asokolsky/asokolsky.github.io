@@ -3,7 +3,7 @@
 * [Color your console output](color-console.html)
 * [Better (String) Enum in Python](python-string-enum.html),
 [color.py](color.py)
-* [Virtual Environment](pyenv-virtualenv.html)
+* [Virtual Environment using pyenv](pyenv-virtualenv.html)
 * [Server- and Client-side Certificates for Python Programmer](https.html)
 * Design patters examples: [singleton](global_logger.py),
 [pre-bound method](prebound_method_pattern.py), [sentinel](sentinel.py)

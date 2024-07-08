@@ -1,11 +1,11 @@
-> pyperf python3 -m pyperf system
+alex@p52 > ~/Projects/pyperf > python -m pyperf system
 Show the system configuration
 
 System state
 ============
 
 CPU: use 12 logical CPUs: 0-11
-Perf event: Maximum sample rate: 100000 per second
+Perf event: Maximum sample rate: 31250 per second
 ASLR: Full randomization
 Linux scheduler: No CPU is isolated
 CPU Frequency: 0-11=min=800 MHz, max=4100 MHz
@@ -13,7 +13,7 @@ CPU scaling governor (intel_pstate): powersave
 Turbo Boost (intel_pstate): Turbo Boost enabled
 IRQ affinity: irqbalance service: active
 IRQ affinity: Default IRQ affinity: CPU 0-11
-IRQ affinity: IRQ affinity: IRQ 0-17,20,120-121,126,128,144,152=CPU 0-11; IRQ 127,135=CPU 4; IRQ 129=CPU 2,8; IRQ 130,137,149=CPU 6; IRQ 131,145=CPU 0; IRQ 132=CPU 1; IRQ 133=CPU 2; IRQ 134,143=CPU 3; IRQ 136=CPU 5; IRQ 138,150=CPU 7; IRQ 139=CPU 8; IRQ 140,146=CPU 9; IRQ 141,148,151=CPU 10; IRQ 142,147=CPU 11
+IRQ affinity: IRQ affinity: IRQ 0-17,20,120-121,126,128,144-145=CPU 0-11; IRQ 127,135=CPU 4; IRQ 129=CPU 2,8; IRQ 130,141,146,151=CPU 10; IRQ 131=CPU 0; IRQ 132,149=CPU 1; IRQ 133=CPU 2; IRQ 134,150=CPU 3; IRQ 136,143=CPU 5; IRQ 137,148=CPU 6; IRQ 138,147=CPU 7; IRQ 139=CPU 8; IRQ 140,152=CPU 9; IRQ 142=CPU 11
 Power supply: the power cable is plugged
 
 Advices
@@ -25,4 +25,4 @@ Linux scheduler: Use rcu_nocbs=<cpu list> kernel parameter (with isolcpus) to no
 CPU scaling governor (intel_pstate): Use CPU scaling governor 'performance'
 Turbo Boost (intel_pstate): Disable Turbo Boost to get more reliable CPU frequency
 
-Run "python3 -m pyperf system tune" to tune the system configuration to run benchmarks
+Run "python -m pyperf system tune" to tune the system configuration to run benchmarks

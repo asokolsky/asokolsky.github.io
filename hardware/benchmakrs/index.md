@@ -46,9 +46,42 @@ pyperformance run --python=/usr/bin/python3.12 -o latitude.json
 
 [Thinkpad P52](../lenovo/thinkpad-p52.html) runs Python 3.10.12.
 
+Installed Python 3.12.2 using `pyenv`, then:
+```
+alex@p52 > ~/Projects/pyperf > pyenv versions
+  system
+  3.12.2
+* 3.12.4 (set by /home/alex/Projects/pyperf/.python-version)
+```
+and
+```
+alex@p52 > ~/Projects/pyperf > python --version
+Python 3.12.4
+```
+Install pip for python 3.12:
+```sh
+wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+```
+verify:
+```
+alex@p52 > ~/Projects/pyperf > python -m pip --version
+pip 24.1.2 from /home/alex/.pyenv/versions/3.12.4/lib/python3.12/site-packages/pip (python 3.12)
+```
+Install pyperformance:
+```sh
+python -m pip install pyperformance
+```
+
 System Configuration:
 ```
 {% include_relative p52-pyperf-config.txt %}
+```
+Tuning was NOT done to preserve the power efficiency of the laptop.
+
+Run performance test:
+```sh
+pyperformance run --python=~/.pyenv/shims/python -o p52.json
 ```
 
 ### Thinkpad T14 Gen 3 running Windows
@@ -104,6 +137,12 @@ pyperformance run -o t14g3win.json
 
 ```
 {% include_relative latitude-vs-p52.txt %}
+```
+
+### Latitude 7490 vs Thinkpad T14 Gen 3
+
+```
+{% include_relative latitude-vs-t14g3win.txt %}
 ```
 
 ### Thinkpad P52 vs Thinkpad T14 Gen 3
