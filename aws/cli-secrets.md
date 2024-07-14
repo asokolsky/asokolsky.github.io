@@ -2,6 +2,8 @@
 
 [reference](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/secretsmanager/#cli-aws-secretsmanager)
 
+See also [aws-secretsmanager-agent](https://github.com/aws/aws-secretsmanager-agent).
+
 
 ## Create Secret
 
