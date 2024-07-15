@@ -2,20 +2,21 @@
 
 ## Grub Menu
 
-Menu will appear if:
+Menu will appear if, during loading Grub:
 
-* if you boot using BIOS, you press and hold `Shift` during loading Grub;
+* if you boot using BIOS, press and hold `Shift`;
 * if you boot using UEFI, press Esc.
 
 For permanent change you'll need to edit your `/etc/default/grub` file:
 
-Comment out (using # symbol at the start of line)  `GRUB_HIDDEN_TIMEOUT=0`
+Comment out: `# GRUB_HIDDEN_TIMEOUT=0`
 
-If that line doesn't exist, then you can comment out this line instead:
-`# GRUB_TIMEOUT_STYLE=hidden`, and then change `GRUB_TIMEOUT=0` to
-`GRUB_TIMEOUT=5`.
+If that line doesn't exist, then:
 
-Save changes and run sudo update-grub to apply changes.
+* comment out: `# GRUB_TIMEOUT_STYLE=hidden`;
+* set `GRUB_TIMEOUT=2`.
+
+To apply the changes: `sudo update-grub`.
 
 ## Boot into Console
 
@@ -38,5 +39,6 @@ sudo systemctl set-default multi-user.target
 
 ## Switch Consoles
 
-To switch to a console: `Ctrl`+`Alt`+`F1`...`F6`.  To switch back:
-`Ctrl`+`Alt`+`F7`.
+To switch to a console: `Ctrl`+`Alt`+`F1`...`F6`.
+
+To switch back: `Ctrl`+`Alt`+`F7`.
