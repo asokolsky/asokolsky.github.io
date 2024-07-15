@@ -44,6 +44,7 @@
 * Convert [audio](convert-audio.html), [images](convert-image.html)
 * [dot files](/apps/dot-files)
 * [kernel tuning](kernel-tuning.html)
+* [keyboard customization](keyboard.html)
 
 ## Linux Internals
 
