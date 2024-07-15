@@ -233,7 +233,7 @@ Command|Description
 Command|Description
 ----|------
 `kubectl exec <pod> -- <command>`|Execute a command in a running pod
-`kubectl exec -it <pod> -- sh`|Open a shell in a running pod
+`kubectl exec -it <pod> --container main-app -- sh`|Open a shell in a running pod
 
 ## View logs
 

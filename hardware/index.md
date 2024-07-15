@@ -48,13 +48,18 @@ and the [Remote Key Mapping](logi/remote.html)
 * [Managing display](display.html)
 * [Prusa 3D Printers](prusa.html)
 
-## Audio / Video
+## Audio
 
 * [Aftershokz Aeropex](aftershokz-aeropex.html)
 * Audio recorders: [Sony PCM-M10](sony/pcm-m10.html)
-* Business [Audio](business-audio.html) and [Video](business-video.html)
+* [Business Audio Setup](business-audio.html)
+* [Jabra Evolve 65 BT headset](https://m.media-amazon.com/images/I/B1lw5Um6EwS.pdf)
 * [JBL Charge 4 BT Speaker](jbl-charge-4.html)
 * [USB Audio](usb-audio.html)
+
+## Video
+
+* [Business Video Setup](business-video.html)
 * [USB Video](usb-video.html)
 * Video cameras: [Logitech Brio 4k](logi/brio.html),
 [Panasonic GH5](panasonic-gh5.html)
