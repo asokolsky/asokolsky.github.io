@@ -17,7 +17,7 @@ This:
 apps AND
 * can be done in the GUI.
 
-Therefore this is an easiest way to set things up!
+Therefore this is the easiest way to set things up!
 
 Install the tweak-tool:
 
@@ -25,12 +25,8 @@ Install the tweak-tool:
 sudo apt-get install gnome-tweak-tool
 ```
 
-Then:
-
-* `Keyboard & Mouse` /
-* `Additional Layout Options` /
-* `Caps Lock behavior`
-* Select, e.g., `Caps Lock is also a Ctrl`.
+Then: `Keyboard & Mouse` / `Additional Layout Options` / `Caps Lock behavior`,
+select, e.g., `Caps Lock is also a Ctrl`.
 
 This does NOT work in:
 
@@ -77,7 +73,28 @@ affect them at all."  If still interested, to swap CapsLock with Control:
 setkeycodes 3a 29 1d 58
 ```
 
-### Aternative #2, use udev
+### Alternative #2, use udev
+
+This sequence of steps worked for me.  If you are not using `systemd` - you are
+on your own.
+
+#### Step 1. Boot into text console
+
+Get the current [systemctl target](cli-systemctl-targets.html):
+```sh
+systemctl get-default
+```
+
+I've got `graphical.target`.  Remember this.  We will restore it in step 3.
+
+Now set the default target to `multi-user.target`:
+```sh
+sudo systemctl set-default multi-user.target
+```
+
+and reboot, e.g. with `sudo reboot`.
+
+#### Step 2.  Use udev to remap scancode to keycode
 
 Create `/etc/udev/hwdb.d/90-custom-keyboard.hwdb`:
 
@@ -94,7 +111,8 @@ Each line is in the format: `KEYBOARD_KEY_<scancode>=<keycode>`, where
 `/usr/include/linux/input-event-codes.h` - see the `KEY_<KEYCODE>` defines,
 [sorted list](https://hal.freedesktop.org/quirk/quirk-keymap-list.txt).
 
-Manually update the `/etc/udev/hwdb.bin`:
+Manually update the `/etc/udev/hwdb.bin` to include newly created
+`/etc/udev/hwdb.d/90-custom-keyboard.hwdb`:
 
 ```sh
 sudo systemd-hwdb update
@@ -107,5 +125,17 @@ sudo udevadm trigger
 
 To verify:
 ```sh
-sudo udevadm info
+#sudo udevadm info
 ```
+
+By now your CapsLock and Ctrl should be swapped.  This worked on my new laptop
+but not on an old one. Go figure `;-(`.
+
+#### Step 3. Boot back into GUI
+
+```sh
+sudo systemctl set-default graphical.target
+sudo reboot
+```
+
+Verify the GUI retained the remapped keys.
