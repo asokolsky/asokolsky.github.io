@@ -46,6 +46,7 @@ Bluetooth|Pairing - Fast Blinking<br>Paired - Light Off<br>Switching - Slow Blin
 * [User Manual](https://m.media-amazon.com/images/I/C1sFBxYaEmL.pdf)
 * [VIA Key Remapping Software](https://www.caniusevia.com/docs/specification)
 * [Quantum Mechanical Keyboard Firmware](https://github.com/qmk/qmk_firmware)
+* [Layout design](https://usevia.app/) - works in Chrome
 
 Action|Key Sequence
 ------|------------
@@ -55,3 +56,4 @@ Change lighting effect|Fn + Q
 Turn backlight on/off|Fn + Tab
 Increase backlight brightness|Fn + W
 Decrease backlight brightness|Fn + S
+Factory reset|Fn + J + Z (for 4 seconds).

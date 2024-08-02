@@ -43,9 +43,11 @@ governs used of "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 
 * [Render](https://dashboard.render.com/env-groups)
 * [The Valley of Code](https://thevalleyofcode.com/)
-
-Identify your external IP Address:
+* Identify your external IP Address:
 ```
 > curl http://icanhazip.com/
 12.226.155.251
 ```
+* [Random.org](https://www.random.org/strings/?num=10&len=16&digits=on&upperalpha=on&loweralpha=on&unique=on&format=html&rnd=new)
+* [privnote](https://privnote.com/#)
+* [1Password, not free](https://1password.com/business-pricing)
