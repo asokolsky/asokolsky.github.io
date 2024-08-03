@@ -1,7 +1,9 @@
 # Logi Peripherals
 
 * [Brio](brio.html)
-* [MS Mechanical Mini](ms-mechanical-mini.html)
-* [MX Mechanical](mx-mechanical.html)
 * [remore](remote.html)
+
+## Keyboards
+
+* [MS Mechanical Mini](ms-mechanical-mini.html)
 * [Wave Keys](wave-keys.html)
