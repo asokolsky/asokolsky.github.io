@@ -40,3 +40,7 @@ IPv6 on the interfaces.
 ```cmd
 {% include_relative SwapCapsCtrl.reg %}
 ```
+
+## More stuff
+
+* https://github.com/ChrisTitusTech/winutil/
