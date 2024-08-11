@@ -15,7 +15,7 @@
 * [make and Makefile](make/)
 * [mqtt](mqtt.html)
 * [LDAP & AD search](cli-ldap.html)
-* [OBS](obs.html)
+* [OBS](obs/)
 * [Prometheus & Grafana](prometheus-grafana.html)
 * [psql-client](psql-client.html)
 * [pypi](pypi.html)
