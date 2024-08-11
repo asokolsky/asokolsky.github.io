@@ -21,5 +21,12 @@ class Color(str, Enum):
         return st in Color._value2member_map_
 
     def __repr__(s):
-        'To enable Color serialization as a string...'
+        '''
+        To enable Color serialization as a string...
+        '''
+        # default implementation
+        #type_ = type(self)
+        #module = type_.__module__
+        #qualname = type_.__qualname__
+        #return f"<{module}.{qualname} object at {hex(id(self))}>"
         return repr(s.value)
