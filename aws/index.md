@@ -6,6 +6,11 @@ AWS:
 * [Self-hosted AWS components](self-hosted.html)
 * [Sign-up and use](use.html)
 
+Resource tagging:
+
+* [Tagging WS Resources the Right Way](https://medium.com/@seifeddinerajhi/tagging-aws-resources-the-right-way-using-terraform-dd2cce77be7b)
+* [Best Practices](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html)
+
 ## AWS CLI
 
 [CLI Client](cli.html) use for:

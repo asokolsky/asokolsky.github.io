@@ -1,5 +1,7 @@
 # Software Engineering
 
+My writing:
+
 * [About Engineering in Software Engineering](https://docs.google.com/presentation/d/11PZ2vYSt0FWO--JqKaLNq41EPGts-Fke4JTMk5DfX-w/edit?usp=sharing)
 * [Notes on Release Planning](https://docs.google.com/presentation/d/1S5_x14j9xsDXMIUdbFzWreNUB1Zl7zxgm3SU-qgl64w/edit?usp=sharing)
 * [Notes on (Agile?) Software Development Process](https://docs.google.com/document/d/1BlKG01mcl6PTyjU_vXChO-gXufJ7RTiNHahRRn3aX0E/edit?usp=sharing)
@@ -13,3 +15,7 @@ External links:
 * [SWE at Google](https://abseil.io/resources/swe-book/html/toc.html)
 * [Tidyteam code review principles](https://code-review.tidyverse.org/)
 * [The Twelve-Factor App](https://12factor.net/)
+
+DevOps
+
+* [https://www.gruntwork.io/fundamentals-of-devops](https://www.gruntwork.io/fundamentals-of-devops)

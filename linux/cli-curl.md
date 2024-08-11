@@ -28,7 +28,7 @@ redundant.
 
 `-I, --head` Fetch headers only.
 
-`-k, --insecure` Allow insecure connections to succeed.
+`-k, --insecure` Allow insecure connections to succeed, i.e. ignore SSL/TLS errors.
 
 `-L, --location` Follow redirects.
 
