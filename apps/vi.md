@@ -1,18 +1,20 @@
-# vi(m) cheat sheet
+# vi(m) Cheat Sheet
 
 [wiki on vi](https://en.wikipedia.org/wiki/Vi),
 the [original article](https://docs.freebsd.org/44doc/usd/12.vi/paper.html).
+
+[vim cheat sheet](https://vim.rtorr.com/)
 
 ## Command Line
 
 Command|Action
 -------|------
-vi _file_|edit _file_
-view _file_|view _file_
-vi -r _file_|view _file_
-vi -R _file_|view _file_
-vi + _file_|edit _file_, cursor at last line
-vi +_n_ _file_|edit _file_, cursor at line _n_
+`vi` _file_|edit _file_
+`view` _file_|view _file_
+`vi` -r _file_|view _file_
+`vi` -R _file_|view _file_
+`vi` + _file_|edit _file_, cursor at last line
+`vi` +_n_ _file_|edit _file_, cursor at line _n_
 
 ## Modes: Command & Input
 
@@ -61,30 +63,96 @@ Key|Action
 
 While in Command Mode...
 
+### Character/Line Navigation
+
+Key|Action
+---|------
+h|Back a character
+j|Down a line
+k|Up a line
+l|Forward a character
+
+### IntraLine navigation
+
+Key|Action
+---|------
+0|Start of the line
+^|First non-blank character of the line
+$|Last column, End of line
+
+### Word Navigation
+
+Key|Action
+---|------
+w|One word forward
+W|Next word (words can contain punctuation)
+e|End of the word
+E|End of the word (words can contain punctuation)
+b|One word back
+B|Previous word (words can contain punctuation)
+
+### Paragraph Navigation
+
+Key|Action
+---|------
+}|Next paragraph, or function/block
+{|Previous paragraph, or function/block
+
+### Goto
+
+Key|Action
+---|------
+gj|Cursor down (multi-line text)
+gk|Cursor up (multi-line text)
+ge|Backwards to the end of a word
+gE|Backwards to the end of a word (words can contain punctuation)
+g_|the last non-blank character of the line
+gg|go to the first line
+G|go to the last line
+1 G|go to the first line
+_n_ gg|go to line _n_
+_n_ G|go to line _n_
+: _n_|go to line _n_
+Ctrl+G|display line
+gd|move to local declaration
+gD|move to global declaration
+
+### Braces Navigation
+
+Key|Action
+---|------
+`%`|move cursor to the matching character.  Use `:h matchpairs` for more info
+
+### Screen Navigation
+
 Key|Action
 ---|------
 H|Upper left corner (home)
 M|Middle line
 L|Lower left corner
-h|Back a character
-l|Forward a character
-&nbsp;|**Word navigation**
-w|One word forward
-b|One word back
-&nbsp;|**Line navigation**
-^|Beginning of line
-$|End of line
-j|Down a line
-k|Up a line
-G|go to the last line
-1 G|go to the first line
- _n_ G|go to line _n_
-: _n_|go to line _n_
-Ctrl+G|display line
-&nbsp;|**Viewport navigation**
+
+### Viewport Navigation
+
+Key|Action
+---|------
 z [Enter]|Cursor at top
 z.|Cursor in the middle
 z-|Cursor at bottom
+zz|Center cursor on screen
+zt|Position cursor on top of the screen
+zb|Position cursor on bottom of the screen
+
+## Character Search
+
+Key|Action
+---|------
+f _c_|jump to the next occurrence of character _c_
+F _c_|jump to the previous occurrence of character _c_
+t _c_|jump to before the next occurrence of character _c_
+T _c_|jump to after the previous occurrence of character _c_
+;|repeat the previous f, t, F or T movement
+,|repeat the previous f, t, F or T movement, backwards
+
 
 ## Search & Replace
 
@@ -107,8 +175,6 @@ $|End of line
 
 Key|Action
 ---|------
-fc|Find c
-;|Repeat find (find next c)
 / _pattern_ |Forward
 / |Repeat forward
 ? _pattern_|Reverse
@@ -140,19 +206,34 @@ U|Undo all changes on line
 
 ## Input Commands
 
-These force transition to input mode.
-To get back into command mode, press Esc.
+These force transition to input mode. To get back into command mode, press `Esc`.
 
 Key|Action
 ---|------
-i|Insert before
-a|Insert after
+i|Insert before the cursor
+a|Insert after the cursor
 I|Insert at the beginning of line
 A|Insert at the end of line
 o|Open line below
 O|Open line above
 :r _file_|Import a file
 :12r _file_|Import a file at line 12
+
+While in the insert mode:
+
+Key|Action
+---|------
+Ctrl + h|Delete the character before the cursor
+Ctrl + w|Delete word before the cursor
+Ctrl + j|Add a line break at the cursor position
+Ctrl + t|Indent (move right) line one shiftwidth
+Ctrl + d|De-indent (move left) line one shiftwidth
+Ctrl + n|Insert (auto-complete) next match before the cursor
+Ctrl + p|Insert (auto-complete) previous match before the cursor
+Ctrl + rx|Insert the contents of register x
+Ctrl + ox|Temporarily enter normal mode to issue one normal-mode command x.
+Ctrl + c|Exit insert mode
+Esc|Exit insert mode
 
 ## Visual Commands
 
