@@ -1,6 +1,11 @@
 # Visual Studio Code Settings for Python
 
-https://code.visualstudio.com/docs/python/python-tutorial
+See
+[Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
+and then
+[Python environments in VS Code](https://code.visualstudio.com/docs/python/environments).
+Note the
+[use of .env file](https://code.visualstudio.com/docs/python/environments#_environment-variable-definitions-file)
 
 ## Workspace
 
