@@ -37,25 +37,25 @@ Connection options
 
 ### Examples
 
-restore whole server
+Restore the whole server:
 ```sh
 psql --host=localhost --username=someuser -f /path/to/pgdumpall.sql
 ```
-Run an sql batch script against a database
+Run an sql batch script against a database:
 ```sh
 psql -h localhost -U someuser -d somedb -f /path/to/somefile.sql
 ```
 
-Run an sql batch script against a database and send output to file
+Run an sql batch script against a database and send output to file:
 ```sh
 psql -h localhost -U someuser -d somedb -f /path/to/scriptfile.sql  -o /path/to/outputfile.txt
 ```
-Run a single query against a db
+Run a single query against a db:
 ```sh
 psql -U postgres -d pagila -c "CREATE TABLE test(some_id serial PRIMARY KEY, some_text text);"
 ```
 
-Output data in html format
+Output data in html format:
 ```sh
 psql -h someserver -p 5432 -U someuser -d somedb -H -c "SELECT * FROM sometable" -o mydata.html
 ```
