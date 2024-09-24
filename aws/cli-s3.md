@@ -32,10 +32,10 @@ aws s3 mv delete-me.txt s3://$BUCKET/delete-me.txt
 
 download:
 ```sh
-aws s3 cp s3://bucket/foo.tgz /tmp/foo.tgz
+aws s3 cp s3://$BUCKET/foo.tgz /tmp/foo.tgz
 ```
 
 To dump the object to stdout:
 ```sh
-aws s3 cp s3://bucket/foo.json -
+aws s3 cp s3://$BUCKET/foo.json -
 ```
