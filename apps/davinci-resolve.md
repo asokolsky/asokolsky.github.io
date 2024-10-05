@@ -3,11 +3,11 @@
 Sources of information:
 
 * https://github.com/flolu/davinci-resolve-linux
-
+* [DaVinci Resolve on Ubuntu 24.04 - the easy way](https://www.youtube.com/watch?v=FHnNqtAwJ6M&t=0s)
+* [with AMD graphics](https://forums.linuxmint.com/viewtopic.php?t=426123),
+* [generic Mint22](https://www.reddit.com/r/linuxmint/comments/1eljohq/mint_22_and_davinci_resolve/)
 
 Download from https://www.blackmagicdesign.com/products/davinciresolve
-
-
 
 
 ```
@@ -21,7 +21,7 @@ The following NEW packages will be installed:
 Need to get 10.7 kB of archives.
 After this operation, 39.9 kB of additional disk space will be used.
 Get:1 http://mirror.math.ucdavis.edu/ubuntu noble/universe amd64 libxcb-cursor0 amd64 0.1.4-1build1 [10.7 kB]
-Fetched 10.7 kB in 1s (9,770 B/s)                          
+Fetched 10.7 kB in 1s (9,770 B/s)
 Selecting previously unselected package libxcb-cursor0:amd64.
 (Reading database ... 506475 files and directories currently installed.)
 Preparing to unpack .../libxcb-cursor0_0.1.4-1build1_amd64.deb ...
@@ -30,7 +30,7 @@ Setting up libxcb-cursor0:amd64 (0.1.4-1build1) ...
 Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
 
 alex@exi | ~ > sudo apt install libapr1 libaprutil1 libasound2
-[sudo] password for alex:          
+[sudo] password for alex:
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
