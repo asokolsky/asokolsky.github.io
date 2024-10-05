@@ -1,11 +1,12 @@
 # AWS Simple Storage Service (S3) CLI
 
+List all the buckets in the current account:
 ```sh
 aws s3 ls
 ```
 
 ```sh
-export BUCKET=indexer-api-test
+export BUCKET=foo-bar
 aws s3api create-bucket --bucket $BUCKET --region us-east-1 --acl bucket-owner-full-control
 ```
 
