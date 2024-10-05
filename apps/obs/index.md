@@ -12,7 +12,7 @@ order of the filters to use:
 
 * Noise Suppression
 * Noise Gate - I disabled it
-* EQ
+* 3-band Equalizer: high: -3dB, mid: 0dB, low: +3dB
 * Compression. My settings: threshold - 20dB, ratio - 10:1
 
 ## Video Chain
