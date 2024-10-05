@@ -33,3 +33,8 @@ True
 ```
 
 I like it much more than bare enums!
+
+## Better auto yet...
+
+This subject gets traction!  Checkout this
+[FastAPI write-up](https://fastapi-utils.davidmontague.xyz/user-guide/basics/enums/)!

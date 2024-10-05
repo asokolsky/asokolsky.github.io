@@ -15,3 +15,16 @@ Focus > AF/MF > Aperture Drive in AF|Focus Priority||
 Focus > AF/MF > AF Tracking Sensitivity|locked on||
 Focus > AF/MF > AF Illuminator|off||
 Focus > AF/MF > Pre-AF|on||
+
+## Video Streaming Settings
+
+* overheat - HIGH
+* USB power - disable
+
+Use dummy battery.
+
+
+## Software
+
+[Sony Imaging Edge Desktop](https://creatorscloud.sony.net/catalog/en-us/ie-desktop/index.html) -
+desktop apps that enhance the quality and efficiency of production work such as remote shooting and RAW development.

@@ -51,3 +51,4 @@ governs used of "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 * [Random.org](https://www.random.org/strings/?num=10&len=16&digits=on&upperalpha=on&loweralpha=on&unique=on&format=html&rnd=new)
 * [privnote](https://privnote.com/#)
 * [1Password, not free](https://1password.com/business-pricing)
+* [Free REST APIs](https://apipheny.io/free-api/)

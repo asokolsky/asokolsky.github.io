@@ -1,11 +1,12 @@
 # AWS Simple Storage Service (S3) CLI
 
+List all the buckets in the current account:
 ```sh
 aws s3 ls
 ```
 
 ```sh
-export BUCKET=indexer-api-test
+export BUCKET=foo-bar
 aws s3api create-bucket --bucket $BUCKET --region us-east-1 --acl bucket-owner-full-control
 ```
 
@@ -32,10 +33,10 @@ aws s3 mv delete-me.txt s3://$BUCKET/delete-me.txt
 
 download:
 ```sh
-aws s3 cp s3://bucket/foo.tgz /tmp/foo.tgz
+aws s3 cp s3://$BUCKET/foo.tgz /tmp/foo.tgz
 ```
 
 To dump the object to stdout:
 ```sh
-aws s3 cp s3://bucket/foo.json -
+aws s3 cp s3://$BUCKET/foo.json -
 ```

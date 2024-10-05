@@ -15,6 +15,7 @@ External links:
 * [SWE at Google](https://abseil.io/resources/swe-book/html/toc.html)
 * [Tidyteam code review principles](https://code-review.tidyverse.org/)
 * [The Twelve-Factor App](https://12factor.net/)
+* [How to write effective documentation](https://opensource.com/article/20/3/documentation)
 
 DevOps
 

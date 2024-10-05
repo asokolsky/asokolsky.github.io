@@ -22,8 +22,8 @@ I really like [Source Code Pro](../fonts.html) by Adobe.
 
 ## User Settings
 
-Depending on the platform, the [user
-settings](https://code.visualstudio.com/docs/getstarted/settings)
+Depending on the platform, the
+[user settings](https://code.visualstudio.com/docs/getstarted/settings)
 are stored in `settings.json` in the following directory:
 
 OS|Path

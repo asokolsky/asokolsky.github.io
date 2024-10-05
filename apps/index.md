@@ -3,6 +3,7 @@
 ## Application Setup and Use
 
 * [API Gateways](api-gateways.html)
+* [DaVinci Resolve](davinci-resolve/)
 * [docker](docker/)
 * [dot files](dot-files) and [fonts](fonts.html)
 * [exiftool](cli-exiftool.html)

@@ -7,6 +7,10 @@ from typing import Union
 
 
 class Color(str, Enum):
+    '''
+    Possible colors
+    see also https://fastapi-utils.davidmontague.xyz/user-guide/basics/enums/
+    '''
     red = 'Red'
     green = 'Green'
     blue = 'Blue'
@@ -33,7 +37,7 @@ class Color(str, Enum):
         '''
         return st in Color._value2member_map_
 
-    def __repr__(s):
+    def __repr__(self):
         '''
         To enable Color serialization as a string...
         '''
@@ -42,4 +46,4 @@ class Color(str, Enum):
         #module = type_.__module__
         #qualname = type_.__qualname__
         #return f"<{module}.{qualname} object at {hex(id(self))}>"
-        return repr(s.value)
+        return repr(self.value)
