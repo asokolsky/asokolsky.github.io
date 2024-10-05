@@ -15,33 +15,55 @@ And more:
 
 ## Configs
 
-### System level (applied to every user on the system and all their repositories)
+### System level
 
-    to view, git config --list --system (may need sudo)
-    to set, git config --system color.ui true
-    to edit system config file, git config --edit --system
+Aapplied to every user on the system and all their repositories.
 
-### Global level (values specific personally to you, the user. )
+* to view, `git config --list --system` (may need sudo)
+* to set, `git config --system color.ui true`
+* to edit system config file: `git config --edit --system`
 
-    to view, git config --list --global
-    to set, git config --global user.name xyz
-    to edit global config file, git config --edit --global
+### Global User level
 
-### Repository level (specific to that single repository)
+Specific personally to you, the user.
 
-    to view, git config --list --local
-    to set, git config --local core.ignorecase true (--local optional)
-    to edit repository config file, git config --edit --local (--local optional)
+* to view: `git config --list --global`
+* to set: `git config --global user.name xyz`
+* to edit global config file: `git config --edit --global`
 
-### To view all settings:
+### Repository level
 
-    Run git config --list, showing system, global, and (if inside a repository) local configs
-    Run git config --list --show-origin, also shows the origin file of each config item
+Specific to that single repository.
+
+* to view: `git config --list --local`
+* to set: `git config [--local] core.ignorecase true`
+* to edit repository config file: `git config --edit [--local]`
+
+### View All Settings
+
+Show system, global, and (if inside a repository) local configs:
+
+```sh
+git config --list
+```
+
+
+To also show the origin file of each config item:
+```sh
+git config --list --show-origin
+```
+
 
 ### To read one particular config:
 
-    Run git config user.name to get user.name, for example.
-    You may also specify options --system, --global, --local to read that value at a particular level.
+To get e.g. `user.name`:
+
+```sh
+git config user.name
+```
+
+You may also specify options `--system`, `--global`, `--local` to read that
+value at a particular level.
 
 
 ## Global Config
