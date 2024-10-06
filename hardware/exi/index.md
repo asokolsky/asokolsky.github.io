@@ -1,6 +1,7 @@
 # exi
 
-HTPC with GPU for gaming and playing k8s and, maybe, frigate.
+Used to be an HTPC with GPU for gaming and playing with k8s and, maybe, frigate.
+Nowadays - video editing workstation.
 
 ## Hardware
 
@@ -55,4 +56,5 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 ## Power Consumption
 
-While serving a single video stream over SMB and with CPU consumption <4%: 88W
+* when turned off - 2W!
+* qhile serving a single video stream over SMB and with CPU consumption <4%: 88W

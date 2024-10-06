@@ -55,7 +55,8 @@ as described above.
 Scene (NOT source!) filter:
 
 * Image Mask/Blend: Type: `Alpha Mask (Alpha Channel)`,
-Image: [mask-circle](./mask-circle.png)
+
+![mask-circle](./mask-circle.png)
 
 To apply the scene filter: right mouse click on the scene, select Filters
 

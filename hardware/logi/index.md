@@ -1,7 +1,7 @@
 # Logi Peripherals
 
 * [Brio](brio.html)
-* [remore](remote.html)
+* [remote](remote.html)
 
 ## Keyboards
 
