@@ -1,6 +1,6 @@
 # PSQL Commands Cheat Sheet
 
-From http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet
+From [this cheat sheet](http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet).
 
 ## CLI
 ```
@@ -15,8 +15,6 @@ General options:
   -v NAME=VALUE
   --version
   -X
-
-
 
   run only single command (SQL or internal) and exit
   specify database name to connect to (default: "logged in username here")
@@ -39,83 +37,85 @@ Connection options
 
 ### Examples
 
-restore whole server
+Restore the whole server:
 ```sh
 psql --host=localhost --username=someuser -f /path/to/pgdumpall.sql
 ```
-Run an sql batch script against a database
+Run an sql batch script against a database:
 ```sh
 psql -h localhost -U someuser -d somedb -f /path/to/somefile.sql
 ```
 
-Run an sql batch script against a database and send output to file
+Run an sql batch script against a database and send output to file:
 ```sh
 psql -h localhost -U someuser -d somedb -f /path/to/scriptfile.sql  -o /path/to/outputfile.txt
 ```
-Run a single query against a db
+Run a single query against a db:
 ```sh
 psql -U postgres -d pagila -c "CREATE TABLE test(some_id serial PRIMARY KEY, some_text text);"
 ```
 
-Output data in html format
+Output data in html format:
 ```sh
 psql -h someserver -p 5432 -U someuser -d somedb -H -c "SELECT * FROM sometable" -o mydata.html
 ```
 
 ## Interactive Console
 
+
 Command|Description
 -------|-----------
-\copyright|for distribution terms
-\h|for help with SQL commands
-\?|for help with psql commands
-\g|or terminate with semicolon to execute query
-\q|to quit
-GENERAL|
+`\copyright`|for distribution terms
+`\h`|for help with SQL commands
+`\?`|for help with psql commands
+`\g`|or terminate with semicolon to execute query
+`\q`|to quit
+General|&nbsp;
 `\c [DBNAME |- USER|- HOST|- PORT|-]`|connect to new database
-\cd [DIR]|change the current working directory
-\encoding [ENCODING]|show or set client encoding
-\h [NAME]|help on syntax of SQL commands, * for all commands
-\set [NAME [VALUE]]|set internal variable, or list all if no parameters
-\timing|toggle timing of commands (currently off)
-\unset NAME|unset (delete) internal variable
-\prompt [TEXT] NAME|prompt user to set internal variable
-\! [COMMAND]|execute command in shell or start interactive shell
-QUERY BUFFER|
-\e [FILE]|edit the query buffer (or file) with external editor
-\g [FILE]|send query buffer to server (and results to file or |pipe)
-\p|show the contents of the query buffer
-\r|reset (clear) the query buffer
-\w FILE|write query buffer to file
-INPUT/OUTPUT|
-\echo [STRING]|write string to standard output
-\i FILE|execute commands from file
-\o [FILE]|send all query results to file or |pipe
-\qecho [STRING]|write string to query output stream (see \o)
-INFORMATIONAL|
-\d [NAME]
-\d{t|i|s|v|S} [PATTERN] (add "+" for more detail)
-\da [PATTERN]
-\db [PATTERN]
-\dc [PATTERN]
-\dC
-\dd [PATTERN]
-\dD [PATTERN]
-\df [PATTERN]
-\dF [PATTERN]
-\dFd [PATTERN]
-\dFt [PATTERN]
-\dFp [PATTERN]
-\dg [PATTERN]
-\dn [PATTERN]
-\do [NAME]
-\dl
-\dp [PATTERN]
-\dT [PATTERN]
-\du [PATTERN]
-\l
-\z [PATTERN]
+`\cd [DIR]`|change the current working directory
+`\encoding [ENCODING]`|show or set client encoding
+`\h [NAME]`|help on syntax of SQL commands, * for all commands
+`\set [NAME [VALUE]]`|set internal variable, or list all if no parameters
+`\timing`|toggle timing of commands (currently off)
+`\unset NAME`|unset (delete) internal variable
+`\prompt [TEXT] NAME`|prompt user to set internal variable
+`\! [COMMAND]`|execute command in shell or start interactive shell
+Query Buffer|&nbsp;
+`\e [FILE]`|edit the query buffer (or file) with external editor
+`\g [FILE]`|send query buffer to server (and results to file or |pipe)
+`\p`|show the contents of the query buffer
+`\r`|reset (clear) the query buffer
+`\w FILE`|write query buffer to file
+Input/Output|&nbsp;
+`\echo [STRING]`|write string to standard output
+`\i FILE`|execute commands from file
+`\o [FILE]`|send all query results to file or |pipe
+`\qecho [STRING]`|write string to query output stream (see \o)
+INFORMATIONAL|&nbsp;
+`\d [NAME]`|??
+`\d{t|i|s|v|S} [PATTERN]`|(add "+" for more detail)
+`\da [PATTERN]`|??
+`\db [PATTERN]`|??
+`\dc [PATTERN]`|??
+`\dC`|??
+`\dd [PATTERN]`|??
+`\dD [PATTERN]`|??
+`\df [PATTERN]`|??
+`\dF [PATTERN]`|??
+`\dFd [PATTERN]`|??
+`\dFt [PATTERN]`|??
+`\dFp [PATTERN]`|??
+`\dg [PATTERN]`|??
+`\dn [PATTERN]`|??
+`\do [NAME]`|??
+`\dl`|??
+`\dp [PATTERN]`|??
+`\dT [PATTERN]`|??
+`\du [PATTERN]`|??
+`\l`|??
+`\z [PATTERN]`|??
 
+```
 describe table, index, sequence, or view
 list tables/indexes/sequences/views/system tables
 list aggregate functions
@@ -150,7 +150,9 @@ FORMATTING
   \t
   \T [STRING]
   \x
+```
 
+```
 toggle between unaligned and aligned output mode
 set table title, or unset if none
 show or set field separator for unaligned query output
@@ -175,8 +177,9 @@ LOBOID FILE
 FILE [COMMENT]
 
 large object operations
+```
 
-### Examples
+### More Examples
 
 Launch Interactive session:
 ```sh

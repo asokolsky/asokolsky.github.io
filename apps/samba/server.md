@@ -8,9 +8,15 @@ Sources:
 ## Install
 
 ```sh
-apt update
-apt upgrade
-apt install samba -y
+sudo apt update
+sudo apt upgrade
+sudo  apt install samba -y
+```
+
+To make it "discoverable":
+
+```sh
+sudo apt install wsdd, avahi-daemon
 ```
 
 Verify install:

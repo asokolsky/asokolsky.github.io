@@ -1,4 +1,4 @@
-> pyenv exec python -m pyperformance compare ../asokolsky.github.io/hardware/benchmakrs/latitude.json mbp2019.json
+> pyenv exec python -m pyperformance compare ../asokolsky.github.io/hardware/benchmarks/latitude.json mbp2019.json
 latitude.json
 =============
 

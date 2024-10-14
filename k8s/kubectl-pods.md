@@ -87,6 +87,8 @@ interactive session.
 * `bash` - overrides the container's CMD. In this case, we want to launch `bash`
 as our container's command.
 
+### Create an ad-hoc pod with custom limits
+
 To modify limits and/or specify taints use `--overrides` :
 
 ```sh
@@ -120,6 +122,35 @@ Hence:
 
 Setting cpu to 8 cores may force autoscaler (e.g. karpenter) to allocate a new
 cluster node.
+
+### Create an ad-hoc pod in the context of a specific service account
+
+To perform AWS troubleshooting in the context of the service account `foo`
+created in the namespace `foo`:
+```sh
+kubectl run ad-hoc --rm -ti --restart=Never -n foo  \
+  --image=zulhfreelancer/aws-cli-v2-on-ubuntu \
+  --overrides='{"spec":{"serviceAccount":"foo"}}'
+```
+
+### Create an ad-hoc pod on a specific node
+
+To run the pod on the node `node01`:
+```sh
+kubectl run ad-hoc --rm -ti --restart=Never \
+  --image=zulhfreelancer/aws-cli-v2-on-ubuntu \
+  --overrides='{"spec":{"nodeName":"node01"}}'
+```
+
+Alternatively, to run the pod on the node of specific architecture, e.g.
+`amd64`:
+
+```sh
+kubectl run ad-hoc --rm -ti --restart=Never \
+  --image=zulhfreelancer/aws-cli-v2-on-ubuntu \
+  --overrides='{"apiVersion":"v1","spec":{"nodeSelector":{"kubernetes.io/arch":"amd64"}}}'
+```
+
 
 
 ## Tolerations

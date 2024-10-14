@@ -11,6 +11,8 @@ Resource tagging:
 * [Tagging WS Resources the Right Way](https://medium.com/@seifeddinerajhi/tagging-aws-resources-the-right-way-using-terraform-dd2cce77be7b)
 * [Best Practices](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html)
 
+[CloudTrail](cloud-trail.html)
+
 ## AWS CLI
 
 [CLI Client](cli.html) use for:

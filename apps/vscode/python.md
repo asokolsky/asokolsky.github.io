@@ -1,13 +1,17 @@
 # Visual Studio Code Settings for Python
 
-https://code.visualstudio.com/docs/python/python-tutorial
+See
+[Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
+and then
+[Python environments in VS Code](https://code.visualstudio.com/docs/python/environments).
+Note the
+[use of .env file](https://code.visualstudio.com/docs/python/environments#_environment-variable-definitions-file)
 
-## Workspace
+## Workspace Files
 
+### `.vscode/launch.json`:
 
-https://code.visualstudio.com/docs/python/debugging
-
-`.vscode/launch.json`:
+See https://code.visualstudio.com/docs/python/debugging
 
 ```json
 {
@@ -29,23 +33,19 @@ https://code.visualstudio.com/docs/python/debugging
 }
 ```
 
-`.vscode/settings.json`
+### `.vscode/settings.json`
 
-https://code.visualstudio.com/docs/python/settings-reference
+Also see [python-linting](python-linting.html) and
+[settings-reference](https://code.visualstudio.com/docs/python/settings-reference).
 
 ```json
 {
-    "python.linting.enabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.mypyArgs": [
+    "mypy-type-checker.args": [
         "--ignore-missing-imports",
         "--follow-imports=silent",
         "--show-column-numbers",
         "--strict"
     ],
-    "python.linting.pylintEnabled": false,
-    "python.linting.pylintUseMinimalCheckers": false,
-    "python.linting.flake8Enabled": true,
     "python.testing.pytestEnabled": false,
     "python.testing.unittestEnabled": true,
     "python.testing.unittestArgs": [
@@ -61,11 +61,9 @@ https://code.visualstudio.com/docs/python/settings-reference
 }
 ```
 
-You can tell I like unittest and `mypy`, not `pylint` and `pytest`.
+You can tell I like `unittest` and `mypy`, not `pylint` and `pytest`.
 
-## More Repo files
-
-`.flake8`:
+### `.flake8`
 
 ```
 [flake8]
@@ -75,7 +73,7 @@ max-complexity = 20
 ```
 
 
-`.gitignore`
+### `.gitignore`
 
 ```
 __pycache__/
@@ -94,7 +92,7 @@ dmypy.json
 *.log
 ```
 
-`mypy.ini`
+### `mypy.ini`
 
 ```
 [mypy-recurrent.*]
