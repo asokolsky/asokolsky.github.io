@@ -46,7 +46,7 @@ and the [Remote Key Mapping](logi/remote.html)
 * [Keyboards](keyboard.html)
 * [Thunderbolt](thunderbolt.html)
 * [Managing display](display.html)
-* [Prusa 3D Printers](prusa.html)
+* [Prusa 3D Printers](prusa/)
 
 ## Audio
 
