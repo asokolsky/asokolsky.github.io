@@ -10,7 +10,7 @@
 
 ### via ini file
 
-1. Edit
-`Documents\My Games\RedOrchestra2\ROGame\Config\ROEngine.ini`
-2. Change the values for `ResX` and `ResY` to match those of your monitor.
+1. edit
+`Documents\My Games\RedOrchestra2\ROGame\Config\ROEngine.ini`;
+2. change the values for `ResX` and `ResY` to match those of your monitor;
 5. Save the changes made.
