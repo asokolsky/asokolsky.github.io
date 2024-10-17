@@ -5,7 +5,7 @@
 * [API Gateways](api-gateways.html)
 * [DaVinci Resolve](davinci-resolve/)
 * [docker](docker/)
-* [dot files](dot-files) and [fonts](fonts.html)
+* [dot files](dot-files/) and [fonts](fonts.html)
 * [exiftool](cli-exiftool.html)
 * [frigate nvr](frigate/)
 * [git](git/)

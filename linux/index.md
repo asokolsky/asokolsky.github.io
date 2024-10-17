@@ -18,6 +18,7 @@
 * [find](cli-find.html)
 * [fwupd client tool](cli-fwupdmgr.html)
 * [gh](cli-gh.html)
+* [grep](cli-grep.html)
 * [iftop](cli-iftop.html)
 * [ip](cli-ip.html)
 * [ipcalc](cli-ipcalc.html)
@@ -42,7 +43,7 @@
 
 * [Benchmarks](benchmarks/)
 * Convert [audio](convert-audio.html), [images](convert-image.html)
-* [dot files](/apps/dot-files)
+* [dot files](/apps/dot-files/)
 * [kernel tuning](kernel-tuning.html)
 * [keyboard customization](keyboard.html)
 

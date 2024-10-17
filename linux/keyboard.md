@@ -9,6 +9,10 @@ Abstraction layers,
 * [keycode](https://wiki.archlinux.org/title/Map_scancodes_to_keycodes)
 * [keyboard layout](https://en.wikipedia.org/wiki/Keyboard_layout)
 
+Relevant apps:
+
+* [keyd](https://github.com/rvaiya/keyd/) - seems like a MUST-HAVE!
+
 ## Swap Ctrl and CapsLock by manipulating the keyboard layout
 
 This:
