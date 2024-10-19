@@ -7,9 +7,22 @@ person (talking head) with [OBS Studio](/apps/obs/) at its core.
 
 Secondary: video conferencing space.
 
+Tertiary: later, maybe, add a secondary overhead camera.
+
 Constraints: living room with no acoustic treatment.
 
 Non-goals: gaming.
+
+## Solution
+
+Decided on a Linux Mint PC with:
+
+* two small monitors - one to record the desktop, another for setting things up
+and running [OBS](/apps/obs/);
+* a video camera between them;
+* dynamic mic for audio recording
+
+
 
 ## Streaming/Recording Computer
 
@@ -23,9 +36,6 @@ Reused [Dell Optiplex 7060 micro](dell/optiplex7060micro.html):
 An attempt to use [Thinkpad P52](lenovo/thinkpad-p52.html) failed because of
 the lack of connectivity options for USB and monitors - Thunderbolt3 ports
 there do not work.
-
-Decided on two small monitors with a camera between them.  One monitor to record
-the desktop, another for setting things up and running [OBS](/apps/obs/).
 
 ## Desk and Mounts
 
@@ -44,6 +54,8 @@ on [Elgato Wave Mic Arm LP](https://www.amazon.com/gp/product/B097376LKF/) via
 XLR cable to
 * [Zoom PodTrack P4](https://www.amazon.com/dp/B08F8HL7T7) via USB cable to the
 PC
+
+Alternative to consider: Bring audio to the camera to eliminate the delay.
 
 ## Video
 

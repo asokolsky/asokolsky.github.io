@@ -6,7 +6,7 @@ Download from
 [support page](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion).
 
 Apparently
-[Davinci Resolve is broken on anything Ubuntu 24.04 based right now](https://www.reddit.com/r/linuxmint/comments/1eljohq/mint_22_and_davinci_resolve/).
+[DaVinci Resolve is broken on anything Ubuntu 24.04 based right now](https://www.reddit.com/r/linuxmint/comments/1eljohq/mint_22_and_davinci_resolve/).
 
 Sources of information:
 
@@ -17,7 +17,7 @@ Sources of information:
 Resolution involves use of [distrorun](https://github.com/Shachar/distrorun)
 and [drinstaller](https://github.com/Shachar/drinstaller).
 
-1. Install drinstaller DEB file - this results in `shemesh.biz` being added as
+1. Install `drinstaller` DEB file - this results in `shemesh.biz` being added as
 a software source.
 2. Install helper packages:
 ```
@@ -52,8 +52,8 @@ The installer:
 The value for the SHELL variable was not found the /etc/shells file This incident has been reported.
 ```
 
-7. I suspect thie above is due to my use of the zsh. To install the zsh in the
-rocky container:
+7. I suspect the above is due to my use of `zsh` as my shell AND `zah` not
+being available in the container. To install the `zsh` in the rocky container:
 
 ```
 alex@exi > sudo distrorun drrocky /bin/bash
@@ -73,7 +73,7 @@ uid=0(root) gid=0(root) groups=0(root)
 Complete!
 ```
 
-8.  Rerty 6.  This time it succeeds:
+1.  Retry 6.  This time it succeeds:
 
 ```
 Please provide path to DaVinci Resolve installer
@@ -107,3 +107,10 @@ Press ENTER to close terminal
 ## Use
 
 [keyboard shortcuts](./kb-shortcuts.txt)
+
+## Limitations on Linux
+
+Limited (no) support for input file formats:
+
+* mkv
+* aac

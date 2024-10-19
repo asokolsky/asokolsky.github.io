@@ -1,7 +1,7 @@
 # exi
 
 Used to be an HTPC with GPU for gaming and playing with k8s and, maybe, frigate.
-Nowadays - video editing workstation.
+Now it is a video editing workstation.
 
 ## Hardware
 

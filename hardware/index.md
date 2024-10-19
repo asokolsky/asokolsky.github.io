@@ -2,6 +2,8 @@
 
 ## Computing
 
+[Benchmarks](benchmarks/)
+
 * Laptops: [Dell Latitude 7490](dell/latitude-7490.html),
 Lenovo [Thinkpad P52](lenovo/thinkpad-p52.html),
 [Thinkpad T14 gen 3](lenovo/thinkpad-t14g3.html);
@@ -17,8 +19,6 @@ Lenovo [Thinkpad P52](lenovo/thinkpad-p52.html),
 * [All-in-one suprox](suprox/)
 
 Use of [ecc-ram](ecc-ram.html)
-
-[Benchmarks](benchmarks/)
 
 ## Networking
 
@@ -64,5 +64,8 @@ and the [Remote Key Mapping](logi/remote.html)
 * Video cameras: [Logitech Brio 4k](logi/brio.html),
 [Panasonic GH5](panasonic-gh5.html)
 * [Sony A7IV](sony/a7iv.html)
+* [visca](visca.html)
+
+[Samsung TV + Soundbar](samsung/)
 
 [Power Consumption](power.html)
