@@ -1,13 +1,20 @@
-# # elgato stream deck
+# elgato stream deck
 
-I have [Stream Deck Neo](https://www.elgato.com/us/en/p/stream-deck-neo).
+I had [Stream Deck Neo](https://www.elgato.com/us/en/p/stream-deck-neo).
 
-Links:
+Software:
 
-* streamdeck-ui [repo](https://github.com/timothycrosley/streamdeck-ui) and
-[docs](https://timothycrosley.github.io/streamdeck-ui/)
+* StreamController [repo](https://github.com/StreamController/StreamController),
+[installation instructions](https://streamcontroller.github.io/docs/latest/installation/
+)
+
+Obsolete:
+
+* streamdeck-ui [repo](https://github.com/streamdeck-linux-gui/streamdeck-linux-gui)
 * [profile?](https://github.com/dasgeekchannel/StreamDeckMiniUI)
 * Video: [Elgato Stream Deck Mini On Linux - Macro Keyboard w/ LCD keys](https://www.youtube.com/watch?v=6M0hfmbLfmM)
 * [icon pack](https://www.reddit.com/r/ElgatoGaming/comments/9b1x77/icon_pack_for_stream_deck_using_font_awesome_v2/)
 
-To switch top level window focus to OBS: `wmctrl -xa obs`
+To switch top level window focus to OBS: `wmctrl -xa obs`.
+
+In the end I returned the gizmo.

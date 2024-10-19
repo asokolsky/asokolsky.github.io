@@ -1,6 +1,66 @@
 ## Benchmarking Linux Performance
 
-### Disk Performance
+### CPU Performance
+
+To run a single-thread benchmark:
+```sh
+7z b -mmt1
+```
+or
+```sh
+/usr/bin/time -f "Elapsed: %es, CPU: %P" bash -c "cat</dev/urandom|head -c 1G|gzip>/dev/null"
+```
+
+To run a multi-thread benchmark:
+```sh
+7z b
+```
+or
+```sh
+/usr/bin/time -f "Elapsed: %es, CPU: %P" bash -c "cat</dev/urandom|head -c 1G|pigz>/dev/null"
+```
+
+Examples:
+```
+alex@exi > 7z b
+
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+ 64-bit locale=en_US.UTF-8 Threads:12 OPEN_MAX:1024
+
+Compiler: 13.2.0 GCC 13.2.0: SSE2
+Linux : 6.8.0-45-generic : #45-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug 30 12:02:04 UTC 2024 : x86_64
+PageSize:4KB THP:madvise hwcap:2 hwcap2:2
+12th Gen Intel(R) Core(TM) i5-12400F (90672)
+
+1T CPU Freq (MHz):  2733  4345  4370  4382  4384  4374  4313
+6T CPU Freq (MHz): 594% 3950   597% 3957
+
+RAM size:   15702 MB,  # CPU hardware threads:  12
+RAM usage:   2669 MB,  # Benchmark threads:     12
+
+                       Compressing  |                  Decompressing
+Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
+         KiB/s     %   MIPS   MIPS  |      KiB/s     %   MIPS   MIPS
+
+22:      63061  1058   5800  61346  |     457706  1177   3316  39028
+23:      61834  1105   5703  63002  |     453667  1182   3319  39245
+24:      59797  1114   5773  64294  |     447767  1184   3319  39289
+25:      58003  1117   5930  66227  |     438619  1181   3304  39026
+----------------------------------  | ------------------------------
+Avr:     60674  1098   5801  63717  |     449440  1181   3314  39147
+Tot:            1140   4558  51432
+```
+or
+```
+alex@exi > /usr/bin/time -f "Elapsed: %es, CPU: %P" bash -c "cat</dev/urandom|head -c 1G|gzip > /dev/null"
+Elapsed: 22.95s, CPU: 115%
+alex@exi > /usr/bin/time -f "Elapsed: %es, CPU: %P" bash -c "cat</dev/urandom|head -c 1G|pigz > /dev/null"
+Elapsed: 3.16s, CPU: 879%
+alex@exi > /usr/bin/time -f "Elapsed: %es, CPU: %P" bash -c "cat</dev/urandom|head -c 10G|pigz > /dev/null"
+Elapsed: 31.39s, CPU: 880%
+```
+
+## Disk Performance
 
 This [speed-test.sh](speed-test.sh) is based on `dd`:
 

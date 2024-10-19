@@ -2,6 +2,8 @@
 
 * [Open Broadcaster Software](https://obsproject.com/), now in version 30.2.3.
 * [Plugins](plugins.html)
+* [Organizing Scenes](scenes.html)
+
 
 ## Audio Chain
 
@@ -30,7 +32,3 @@ I use no filters with a7iv.
 
 * OBS crashes when I power down my Sony a7iv when the latter is connected to PC
 using USB cable.
-
-## Scenes
-
-[scenes](scenes.html)

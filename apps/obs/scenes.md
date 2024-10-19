@@ -1,4 +1,4 @@
-# OBS Scenes Setup
+# OBS Scenes
 
 We start with low level scenes:
 
