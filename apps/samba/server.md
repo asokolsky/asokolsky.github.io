@@ -16,10 +16,11 @@ sudo  apt install samba -y
 To make it "discoverable":
 
 ```sh
-sudo apt install wsdd, avahi-daemon
+sudo apt install wsdd avahi-daemon
 ```
 
-Verify install:
+## Verify install
+
 ```
 # samba -V
 Version 4.18.6-Ubuntu
@@ -49,7 +50,7 @@ Jan 12 08:38:35 exi update-apparmor-samba-profile[956267]: diff: /etc/apparmor.d
 Jan 12 08:38:35 exi systemd[1]: Started smbd.service - Samba SMB Daemon.
 ```
 
-## Config
+## Configure
 
 Identify shares to share:
 
@@ -117,3 +118,5 @@ Instead:
 chown -R alex:users /mnt/btr/foo/
 chown -R alex:users /mnt/tank/bar/
 ```
+
+## Add Users
