@@ -39,7 +39,7 @@
 * [more...](cli.html)
 
 
-## Linux Tasks
+## Tasks
 
 * [Benchmarks](benchmarks/)
 * Convert [audio](convert-audio.html), [images](convert-image.html)
@@ -47,7 +47,11 @@
 * [kernel tuning](kernel-tuning.html)
 * [keyboard customization](keyboard.html)
 
-## Linux Internals
+## Desktops
+
+* [Mint](mint.html)
+
+## Internals
 
 * [Process States](https://raw.githubusercontent.com/abarrak/linux-sysops-handbook/main/images/process-states.png) from
 [Linux SysOps Handbook](https://github.com/abarrak/linux-sysops-handbook/)
@@ -56,7 +60,7 @@ See also:
 
 * [Programming](/programming/)
 
-## Linux Books
+## Books
 
 * [Networking](http://nnc3.com/mags/networking/)
 * [Networking2](http://nnc3.com/mags/Networking2/)
