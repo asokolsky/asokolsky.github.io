@@ -53,7 +53,6 @@ To also show the origin file of each config item:
 git config --list --show-origin
 ```
 
-
 ### To read one particular config:
 
 To get e.g. `user.name`:
