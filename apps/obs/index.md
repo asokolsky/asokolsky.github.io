@@ -7,6 +7,15 @@
 
 ## Audio Chain
 
+### Recoder Settings
+
+Unfortunately, my only choice is:
+
+* 44 kHz sampling rate
+* 16 bit/sample
+
+## OBS Audio Filters
+
 According to
 [the-best-audio-filters-for-obs](https://streamgeeks.us/the-best-audio-filters-for-obs/),
 order of the filters to use:
@@ -18,11 +27,28 @@ order of the filters to use:
 
 ## Video Chain
 
+### Camera Settings
+
+Sony a7iv....
+
+* in the USB streaming mode does not support Pictire Profiles, so my
+choice of
+[PP11/S-Cinetone](https://helpguide.sony.net/di/pp/v1/en/contents/TP0000909106.html)
+had no effect.
+* [Creative Mode](https://www.sony.com/electronics/support/articles/00273574) - I use Standard.
+
+More: [What is S-Cinetone, and How Do You Use It?](https://alphauniverse.sony-asia.com/learn/tips/what-s-cinetone-and-how-do-you-use-it)
+
+## OBS Video Filters
+
 For [webcam](https://www.youtube.com/watch?v=DZnkyq4kqkE):
 
 * disable low light enhancement - removes ghosting effects
 
-I use no filters with a7iv.
+For Sony a7iv I use:
+
+*  color correction filter - Saturation: -0.20
+
 
 ## Screen Capture
 
