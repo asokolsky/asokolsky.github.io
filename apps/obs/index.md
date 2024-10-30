@@ -14,7 +14,7 @@ Unfortunately, my only choice is:
 * 44 kHz sampling rate
 * 16 bit/sample
 
-## OBS Audio Filters
+### OBS Audio Filters
 
 According to
 [the-best-audio-filters-for-obs](https://streamgeeks.us/the-best-audio-filters-for-obs/),
@@ -24,6 +24,12 @@ order of the filters to use:
 * Noise Gate - disabled it;
 * 3-band Equalizer - High: 0dB, Mid: 0dB, Low: +3dB;
 * Compressor - Ratio: 5:1, Threshold: -12.2dB, Atack: 2ms, Release: 70ms, Output gain: 0dB
+
+### Codec
+
+libfdk-AAC
+[is better](https://superuser.com/questions/1610747/is-fdk-aac-still-better-than-ffmpegs-native-aac-encoder)
+than FFmpeg AAC.
 
 ## Video Chain
 
@@ -39,7 +45,7 @@ had no effect.
 
 More: [What is S-Cinetone, and How Do You Use It?](https://alphauniverse.sony-asia.com/learn/tips/what-s-cinetone-and-how-do-you-use-it)
 
-## OBS Video Filters
+### OBS Video Filters
 
 For [webcam](https://www.youtube.com/watch?v=DZnkyq4kqkE):
 
@@ -48,6 +54,62 @@ For [webcam](https://www.youtube.com/watch?v=DZnkyq4kqkE):
 For Sony a7iv I use:
 
 *  color correction filter - Saturation: -0.20
+
+
+### Codec
+
+Guides:
+
+* [Recording in OBS](https://www.xaymar.com/guides/obs/high-quality-recording/)
+* Streaming in OBS with
+[Intel QSV](https://www.xaymar.com/guides/obs/high-quality-streaming/qsv/)
+[NVENC](https://www.xaymar.com/guides/obs/high-quality-streaming/nvenc/)
+* [NVIDIA NvEnc](https://obsproject.com/forum/resources/nvidia-nvenc-guide.740/)
+
+
+The order of preference is
+[unclear](https://obsproject.com/forum/threads/comparison-of-x264-nvenc-quicksync-vce.57358/)
+and is determined by the PC capabilities:
+
+* NVENC, preset=P6:Slower (Better Quality)
+* QuickSync
+* x264
+* FFmpeg [VAAPI](https://en.wikipedia.org/wiki/Video_Acceleration_API)
+
+#### NVENC
+
+My steamer GPU, GeForce GT 1030, does NOT support NVENC.
+
+#### QuickSync
+
+For my streamer/recorder PC with UHD Graphics 730, QuickSync uses GPU for H.264
+encoding and CPU for HEVC, hence recommended is QuickSync H.264:
+
+GPU|UHD Graphics 730, 750, 770
+---|--------------------------
+Rate Control|CBR
+Target Usage|TU1 or TU2
+Profile|high
+Latency|normal
+B Frames|3
+
+#### x264
+
+Option|Lossless|Near Lossless|Indistinguishable|High Quality|Acceptable Quality
+------|--------|-------------|-----------------|------------|------------------
+Rate Control|CRF
+CRF|0|0...4|5...10|11...16|17...22
+Keyframe Interval|1
+x264 Options|bframes=0 keyint=1 min-keyint=1
+OBS Color Format|4:4:4|4:4:4 or 4:2:2|4:4:4, 4:2:2 or 4:2:0
+
+Common:
+
+Option|Value
+------|-----
+Preset|ultrafast - placebo, a slower preset only affects file size, quality should be unaffected.
+Profile|High, required for 4:4:4 and 4:2:2 encoding
+Tune|None, tuning can slightly improve compression efficiency, but often harms it instead.
 
 
 ## Screen Capture
