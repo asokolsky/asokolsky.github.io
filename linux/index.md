@@ -8,7 +8,7 @@
 
 ## CLI
 
-* [apt-get](cli-apt-get.html)
+* [apt-get/dpkg](cli-apt-get.html)
 * [base64](cli-base64.html)
 * [bluetooth](cli-bluetooth.html)
 * [curl](cli-curl.html), use [wget as curl](cli-wget-as-curl.html)
@@ -48,6 +48,8 @@
 * [kernel tuning](kernel-tuning.html)
 * [keyboard customization](keyboard.html)
 * [power management](power.html)
+* [top consuming processes](cli-top-consumers.html)
+
 
 ## Desktops
 

@@ -13,6 +13,8 @@ And more:
 * [Atlassian advanced tips](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 * [8 Easy Steps to Set Up Multiple GitHub Accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
 
+See also [gh](/linux/cli-gh.html).
+
 ## Configs
 
 ### System level

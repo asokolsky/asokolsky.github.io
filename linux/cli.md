@@ -1,12 +1,8 @@
 # Useful Linux Commands
 
-## Show top 10 CPU consuming processes
+[Top consuming processes](cli-top-consumers.html)
 
-```sh
-ps -eo pcpu,pid,user,args|sort -k 1 -nr|head -10
-```
-
-## Show process command line
+## Show the process' command line
 
 ```sh
 cat /proc/_pid_/cmdline|xargs -0
@@ -35,7 +31,6 @@ ls -ld */|cut -c 53-
 [more options](https://stackoverflow.com/questions/14352290/listing-only-directories-using-ls-in-bash)
 
 ## URL-decode
-
 ```
 echo -n "%21%20" | python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()));"
 ```
