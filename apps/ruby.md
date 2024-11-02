@@ -33,3 +33,26 @@ alex@latitude7490:~/Projects/asokolsky.github.io/linux/ > which ruby
 /home/alex/.rbenv/shims/ruby
 alex@latitude7490:~/Projects/asokolsky.github.io/linux/ > gem install jekyll bundler
 ```
+
+## List Available Versions
+
+To list stable versions:
+```sh
+rbenv install --list
+```
+
+To list all the versions:
+```sh
+rbenv install --list-all
+```
+
+## Install New Version
+
+```sh
+rbenv install 3.1.0
+```
+
+Lock it for your project by defining `.ruby-version`:
+```
+3.0.3
+```

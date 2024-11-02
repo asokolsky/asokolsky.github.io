@@ -22,27 +22,6 @@ Variable|Description
 `$^`|all the prerequisites
 `.PHONY`|Adding `.PHONY` to a target will prevent `make` from confusing the phony target with a file name. [manual](https://www.gnu.org/software/make/manual/make.html#Phony-Targets), one of many [special built-in targets](https://www.gnu.org/software/make/manual/make.html#Special-Targets)
 
-## Examples
-
-[c-simple.mak](c-simple.mak):
-```
-{% include_relative c-simple.mak %}
-```
-
-[c.mak](c.mak):
-```
-{% include_relative c.mak %}
-```
-
-[python.mak](python.mak)
-```
-{% include_relative python.mak %}
-```
-
-World class:
-
-* [git makefile](https://raw.githubusercontent.com/git/git/master/Makefile)
-
 ## Support in VSCode
 
 [Makefile Support in VS Code](https://devblogs.microsoft.com/cppblog/now-announcing-makefile-support-in-visual-studio-code/)
@@ -70,3 +49,43 @@ ifeq ("$(wildcard $(PATH_TO_HOOK))","")
     $(error git hook not installed)
 endif
 ```
+
+## Examples
+
+[c-simple.mak](c-simple.mak):
+```
+{% include_relative c-simple.mak %}
+```
+
+[c.mak](c.mak):
+```
+{% include_relative c.mak %}
+```
+
+[cpp.mak](cpp.mak):
+```
+{% include_relative cpp.mak %}
+```
+
+[jekyll.mak](python.mak)
+```
+{% include_relative jekyll.mak %}
+```
+
+[packer.mak](packer.mak)
+```
+{% include_relative packer.mak %}
+```
+
+[python.mak](python.mak)
+```
+{% include_relative python.mak %}
+```
+[terraform.mak](terraform.mak)
+```
+{% include_relative terraform.mak %}
+```
+
+World class:
+
+* [git makefile](https://raw.githubusercontent.com/git/git/master/Makefile)

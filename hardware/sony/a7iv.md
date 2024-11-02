@@ -2,6 +2,16 @@
 
 [Help Guide](https://helpguide.sony.net/ilc/2110/v1/en/contents/TP1000657876.html).
 
+## Lenses
+
+[sonyalpha.blog summary](https://sonyalpha.blog/2019/11/10/which-lenses-to-maximise-the-potential-of-the-sony-a7riv/)
+
+I use:
+
+* Sony FE 20mm F1.8 G
+* Sigma Art 35mm F1.4 DG DN
+* Sony FE 85mm F1.8
+
 ## Photo Settings
 
 Setting|Value|Pros|Cons

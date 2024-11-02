@@ -20,6 +20,7 @@
 * [gh](cli-gh.html)
 * [grep](cli-grep.html)
 * [iftop](cli-iftop.html)
+* [inxi](cli-inxi.html)
 * [ip](cli-ip.html)
 * [ipcalc](cli-ipcalc.html)
 * [iperf](cli-iperf.html)
@@ -46,6 +47,7 @@
 * [dot files](/apps/dot-files/)
 * [kernel tuning](kernel-tuning.html)
 * [keyboard customization](keyboard.html)
+* [power management](power.html)
 
 ## Desktops
 

@@ -58,7 +58,7 @@ ffmpeg -f v4l2 -video_size 1280x720 -i /dev/video0 -frames 1 out.jpg
 
 ## Streaming
 
-https://trac.ffmpeg.org/wiki/StreamingGuide
+[ffmpeg streaming guide](https://trac.ffmpeg.org/wiki/StreamingGuide)
 
 ## More Utilities
 
@@ -88,3 +88,10 @@ to have to re-encode:
 ```sh
 ffmpeg -i input.mkv -ss 00:01:50 -c:v libx264 -c:a libfaac -t 20 output.mkv
 ```
+
+## Hardware Acceleration
+
+* [ffmpeg HWAccelIntro](https://trac.ffmpeg.org/wiki/HWAccelIntro)
+* [ffmpeg QuickSync](https://trac.ffmpeg.org/wiki/Hardware/QuickSync)
+* [NVidia GPU Support Matrix for NVENC/NVDEC](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new)
+* [Using FFmpeg with NVIDIA GPU Hardware Acceleration](https://docs.nvidia.com/video-technologies/video-codec-sdk/12.2/ffmpeg-with-nvidia-gpu/index.html)

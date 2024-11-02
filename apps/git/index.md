@@ -76,6 +76,7 @@ git config --global user.email "asokolsky@gmail.com"
 git config --global core.editor /usr/bin/emacs
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.pager ''
+git config --global push.default current
 ```
 
 where `~/.gitignore_global`:
