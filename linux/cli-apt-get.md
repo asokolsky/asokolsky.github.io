@@ -1,40 +1,34 @@
 # apt-get
 
-## Waiting on lock function
+* Advanced Package Tool -
+[apt-get man page](https://linux.die.net/man/8/apt-get)
+* Debian Package -
+[dpkg man page](https://man7.org/linux/man-pages/man1/dpkg.1.html)
+* [apt vs dpkg](https://www.geeksforgeeks.org/difference-between-apt-and-dpkg-in-ubuntu/):
+`dpkg` is .. the low-level package manager, it (deals with the) .deb files, BUT
+does not perform dependency resolution.
+On the other hand, `apt` is a high (abstraction level) package manager.
+`apt` deals with dependencies and can retrieve packages from the online
+repositories.
 
-To wait for any and all the locks to be released:
+
+## List Packages Installed
 
 ```sh
-#!/usr/bin/env bash
-#
-# Wait for all known dpkg locks
-#
-function apt_wait () {
-  while sudo fuser /var/lib/dpkg/lock >/dev/null 2>&1 ; do
-    echo "Waiting on /var/lib/dpkg/lock..."
-    sleep 1
-  done
-  while sudo fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1 ; do
-    echo "Waiting on /var/lib/dpkg/lock-frontend..."
-    sleep 1
-  done
-  while sudo fuser /var/lib/apt/lists/lock >/dev/null 2>&1 ; do
-    echo "Waiting on /var/lib/apt/lists/lock..."
-    sleep 1
-  done
-  if [ -f /var/log/unattended-upgrades/unattended-upgrades.log ]; then
-    while sudo fuser /var/log/unattended-upgrades/unattended-upgrades.log >/dev/null 2>&1 ; do
-      echo "Waiting on /var/log/unattended-upgrades/unattended-upgrades.log..."
-      sleep 1
-    done
-  fi
-  # FIXME: wait for /var/cache/apt/archives/lock
-  # /var/cache/apt/archives/lock
-}
-#
-# to avoid "Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5475 (unattended-upgr)"
-#
-apt_wait
+apt list --installed
+```
+
+## Identify the Package That Owns the File
+
+```sh
+dpkg -S /bin/ls
+```
+
+## Waiting on the apt/dpkg locks
+
+[apt-wait.sh](apt-wait.sh):
+```sh
+{% include_relative apt-wait.sh %}
 ```
 
 ## Specify lock timeout on the command line
