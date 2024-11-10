@@ -29,7 +29,7 @@ Use of [ecc-ram](ecc-ram.html)
 ## PCIe Devices
 
 * [Coral Edge TPU](coral.html)
-* [Intel quick assist](intel-quick-assist.html)
+* [Intel quick assist](intel/quick-assist.html)
 
 ## Storage
 

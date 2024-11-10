@@ -32,11 +32,7 @@ At the DELL logo screen, press F12 to access the one-time boot menu.
 Appears to be compatible with this [2.5Gbps M.2 A- & E-key RTL8125B
 NIC](https://www.aliexpress.com/item/3256804057621231.html).
 
-## Fixing Video Tearing
 
-Test [video1](https://www.youtube.com/watch?v=MfL_JkcEFbE),
-[video2](https://www.youtube.com/watch?v=2wVC-ZLhIHI).
+## Video Tearing
 
-[linux-intel-graphics-video-tearing](https://www.dedoimedo.com/computers/linux-intel-graphics-video-tearing.html)
-did not result in any improvements, even worse, resulted in X-session freeze.
-I had to delete `/etc/X11/xorg.conf.d/20-intel.conf`.
+See [i915 Video Tearing](../intel/video-tearing.html)

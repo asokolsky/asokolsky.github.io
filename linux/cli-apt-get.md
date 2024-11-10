@@ -1,4 +1,4 @@
-# apt-get
+# apt-get / dpkg
 
 * Advanced Package Tool -
 [apt-get man page](https://linux.die.net/man/8/apt-get)
