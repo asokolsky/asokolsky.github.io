@@ -3,7 +3,7 @@
 * [Open Broadcaster Software](https://obsproject.com/), now in version 30.2.3.
 * [Plugins](plugins.html)
 * [Organizing Scenes](scenes.html)
-* [obs-cli](obs-cli.html)
+* [obs-cmd](obs-cmd.html)
 
 ## Audio Chain
 
