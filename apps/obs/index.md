@@ -7,7 +7,7 @@
 
 ## Audio Chain
 
-### Recoder Settings
+### Recorder Settings
 
 Unfortunately, my only choice is:
 
@@ -54,7 +54,6 @@ For [webcam](https://www.youtube.com/watch?v=DZnkyq4kqkE):
 For Sony a7iv I use:
 
 *  color correction filter - Saturation: -0.20
-
 
 ### Codec
 
