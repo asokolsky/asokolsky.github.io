@@ -11,6 +11,24 @@ Concepts
 
 Apps
 
-* [powertop](https://linrunner.de/tlp/faq/powertop.html),
-[repo](https://github.com/fenrus75/powertop)
+* powertop [repo](https://github.com/fenrus75/powertop),
+[faq](https://linrunner.de/tlp/faq/powertop.html).
 * [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq)
+
+## powertop
+
+Install:
+```sh
+sudo apt install powertop
+```
+Run:
+```sh
+sudo powertop
+```
+## auto-cpufreq
+
+Install it:
+```sh
+git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+cd auto-cpufreq && sudo ./auto-cpufreq-installer
+```
