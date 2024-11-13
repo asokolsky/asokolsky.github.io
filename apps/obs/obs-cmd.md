@@ -24,7 +24,7 @@ Select Tools / WebSocket Server Settings:
 * Click Show Connect Info and save it:
 
 ```sh
-export OBSWS=obsws://192.168.10.40:4455/secret
+export OBSWS=obsws://127.0.0.1:4455/secret
 ```
 
 ## Using obs-cmd
