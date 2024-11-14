@@ -9,13 +9,17 @@ Concepts
 * [`intel_pstate` CPU Performance Scaling Driver](https://docs.kernel.org/admin-guide/pm/intel_pstate.html)
 * [ASPM](https://en.wikipedia.org/wiki/Active_State_Power_Management)
 
-Apps
+[Tips to Extend Laptop Battery Life](https://www.youtube.com/watch?v=kTFnGwW2e_Y)
+and accompanying
+[laptop-power-management](https://christitus.com/laptop-power-management/)
+
+## Apps
 
 * powertop [repo](https://github.com/fenrus75/powertop),
 [faq](https://linrunner.de/tlp/faq/powertop.html).
 * [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq)
 
-## powertop
+### powertop
 
 Install:
 ```sh
@@ -25,7 +29,7 @@ Run:
 ```sh
 sudo powertop
 ```
-## auto-cpufreq
+### auto-cpufreq
 
 Install it:
 ```sh

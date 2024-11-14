@@ -34,6 +34,9 @@ like aws cli does.
 ## External resources
 
 * [Google style guide](https://google.github.io/styleguide/pyguide.html)
+* [Guide to Python project management and packaging](https://reinforcedknowledge.com/a-comprehensive-guide-to-python-project-management-and-packaging-concepts-illustrated-with-uv-part-i/)
+* [Python Closures](https://realpython.com/python-closure/)
+* [Alternatives to named tuples](https://snarky.ca/dont-use-named-tuples-in-new-apis/)
 
 ## One-liners
 
