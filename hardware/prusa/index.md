@@ -3,13 +3,31 @@
 ## MK3s+
 
 * [octoprint](http://octo:5000/)
-* [firmware](https://help.prusa3d.com/downloads/mk3s-2/firmware)
 * [dead-end-project](mk3s-rpi0w.html)
+
+### Firmware Upgrade
+
+* Download and install the latest PrusaSlicer, now 2.8.1.
+* Download [firmware](https://help.prusa3d.com/downloads/mk3s-2/firmware) now
+in 3.14.0.
+* Launch PrusaSlicer.
+* From the menu select Configuration / Flash Printer Firmware.
+* Connect the printer to your computer using the USB A to USB2 B cable.
+* Choose the printer from the list. Hit Rescan if the printer is not on the
+list.
+* Select the downloaded firmware file on your hard drive (.hex).
+Do not place the firmware on a network share.
+* Hit the Flash button.
+
+To fix the permission error:
+```sh
+sudo adduser alex dialout
+```
 
 ## MK4
 
 * [Prusa Link](http://PrusaMK4)
-* [firmware](https://help.prusa3d.com/downloads/mk4/firmware)
+* [firmware](https://help.prusa3d.com/downloads/mk4/firmware) now in 6.1.3.
 * [Prusa Connect](https://connect.prusa3d.com/)
 * [hardware details](mk4.html)
 
