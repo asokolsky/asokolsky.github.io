@@ -3,11 +3,11 @@
 * [Open Broadcaster Software](https://obsproject.com/), now in version 30.2.3.
 * [Plugins](plugins.html)
 * [Organizing Scenes](scenes.html)
-* [obs-cli](obs-cli.html)
+* [obs-cmd](obs-cmd.html)
 
 ## Audio Chain
 
-### Recoder Settings
+### Recorder Settings
 
 Unfortunately, my only choice is:
 
@@ -54,7 +54,6 @@ For [webcam](https://www.youtube.com/watch?v=DZnkyq4kqkE):
 For Sony a7iv I use:
 
 *  color correction filter - Saturation: -0.20
-
 
 ### Codec
 
