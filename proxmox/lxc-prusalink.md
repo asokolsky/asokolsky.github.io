@@ -56,7 +56,7 @@ adduser pi
 usermod -a -G adm,sudo,tty,dialout,video pi
 ```
 
-The rest of the steps are executed in the cotext of user `pi`.
+The rest of the steps are executed in the context of user `pi`.
 
 ## Install PrusaLink Software
 
@@ -160,7 +160,7 @@ port = /dev/ttyACM0
 
 ## Start PrusaLink
 
-First, let;s start PrusaLink manually.  As user `pi` activate virtual
+First, let's start PrusaLink manually.  As user `pi` activate virtual
 environment:
 ```sh
 source venv-prusalink/bin/activate
@@ -225,7 +225,35 @@ Point your browser to `http://<ip>:8080` to complete configuration.
 
 ## Automatic Start-up
 
-TODO
+Create unit file `/etc/systemd/system/prusalink.service`,
+[reference](https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#Options):
+
+```
+[Unit]
+Description=PrusaLink Service
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi
+Environment="LC_ALL=C.UTF-8"
+Environment="LANG=C.UTF-8"
+Environment="PATH=/home/pi/venv/bin:{{ ansible_env.PATH }}"
+ExecStart=/home/pi/venv-prusalink/bin/python /home/pi/venv-prusalink/bin/prusalink start
+ExecStop=/home/pi/venv-prusalink/bin/prusalink stop
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Enable the prusalink service:
+```sh
+sudo systemctl enable prusalink.service
+```
 
 ## Webcam Config
 

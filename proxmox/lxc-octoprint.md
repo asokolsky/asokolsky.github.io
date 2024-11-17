@@ -82,7 +82,7 @@ wget https://github.com/OctoPrint/OctoPrint/raw/master/scripts/octoprint.service
 ```
 
 Enable it:
-```
+```sh
 sudo systemctl enable octoprint.service
 ```
 
