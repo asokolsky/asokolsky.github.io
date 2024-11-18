@@ -64,7 +64,7 @@ crw-rw-r-- 1 root root 189, 10 Feb  4 16:16 /dev/bus/usb/001/011
 
 Set the owner of `/dev/bus/usb/001/011` on pve node to the unprivileged uid of
 your container (100000 by default):
-```
+```sh
 chown 100000:100000 /dev/bus/usb/001/011
 ```
 
