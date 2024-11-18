@@ -10,7 +10,7 @@ Sources:
 * [prusa-link-docker](https://github.com/donslice/prusa-link-docker)
 * [Prusa-Link repo](https://github.com/prusa3d/Prusa-Link)
 
-This is very similar to the way [I run octoprint](octoprint.html).
+This is similar to the way I used to [run octoprint](lxc-octoprint.html).
 
 ## Create an LXC Container
 
@@ -18,7 +18,7 @@ This is very similar to the way [I run octoprint](octoprint.html).
 * template: Debian 12 standard 12.7-1
 * disk: 8GB
 * CPU cores: 2
-* Memory: 1GB
+* Memory: 512MB
 * Network: DHCP, DHCP configured for static lease
 * Firewall: off
 
@@ -62,7 +62,7 @@ Group `dialout` membership is required in order to talk to the printer via USB
 port. Group `video` membership is required in order to get images from the
 webcam.
 
-The rest of the steps are executed in the context of user `pi`.
+The next steps are executed in the context of user `pi`.
 
 ## Install PrusaLink Software
 
@@ -86,10 +86,10 @@ Use `pip freeze` to list all the venv packages installed and their versions.
 
 ## Create PrusaLink Directories
 
-Prepare the PrusaLink directories (I do not think `/usr/src/app` is required):
+Prepare the PrusaLink directories:
 ```sh
-sudo mkdir /etc/prusalink /usr/src/app
-sudo chown -R pi:pi /etc/prusalink /usr/src/app
+sudo mkdir /etc/prusalink
+sudo chown -R pi:pi /etc/prusalink
 ```
 Create the default PrusaLink configuration file:
 ```sh
@@ -97,9 +97,9 @@ wget https://raw.githubusercontent.com/prusa3d/Prusa-Link/refs/heads/master/prus
 mv prusalink.ini /etc/prusalink/
 ```
 
-## Passthrough USB port(s) and tty to the LXC
+## Pass Through Printer's USB port and tty to the LXC
 
-Identify the USB port and tty to pass through:
+Identify the printer's USB port and tty to pass through:
 ```
 root@suprox:~# lsusb
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
@@ -159,7 +159,7 @@ crw-rw---- 1 root   dialout 166, 0 Nov 17 00:12 /dev/ttyACM0
 
 ## Configure PrusaLink
 
-As user `pi`: `nano /etc/prusalink/prusalink.ini` to update the port configured
+As user `pi`: edit `/etc/prusalink/prusalink.ini` to update the port configured
 in the previous section:
 ```
 [printer]
@@ -172,13 +172,6 @@ First, let's start PrusaLink manually.  As user `pi` activate virtual
 environment:
 ```sh
 source venv-prusalink/bin/activate
-```
-
-Update the `/etc/prusalink/prusalink.ini` with the port configured in the
-previous section:
-```
-[printer]
-port = /dev/ttyACM0
 ```
 
 By now you have everything to start prusalink:
@@ -224,7 +217,7 @@ PrusaLink version: 0.8.1
 PrusaConnect-SDK version: 0.8.1
 ```
 
-Start it in the foreground to do debugging
+Start prusalink in the foreground to do debugging:
 ```sh
 prusalink -f
 ```
@@ -240,7 +233,6 @@ Create
 [unit file](https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html)
 `/etc/systemd/system/prusalink.service`,
 [reference](https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#Options):
-
 ```
 [Unit]
 Description=PrusaLink Service
@@ -287,9 +279,9 @@ journalctl --no-pager --unit=prusalink
 
 ## Passthrough USB Webcam Device(s) to the LXC Container
 
-### Preparing the Proxmox Node Device(s)
+### Prepare the Proxmox Node Device(s)
 
-Identify the USB device associated with the webcam.  On the proxmox host:
+Identify the USB device associated with the webcam on the proxmox host:
 ```
 root@suprox:~# lsusb
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
@@ -313,7 +305,7 @@ your container (100000 by default):
 chown 100000:100000 /dev/bus/usb/001/003
 ```
 
-Check [V4L](https://en.wikipedia.org/wiki/Video4Linux) devices:
+Check the [V4L](https://en.wikipedia.org/wiki/Video4Linux) devices:
 ```
 root@suprox:~#  ls -la /dev/video*
 crw-rw---- 1 root video 81, 0 Nov 16 17:10 /dev/video0
@@ -334,25 +326,25 @@ crw-rw---- 1 100000 100044 81, 1 Nov 16 17:10 /dev/video1
 
 To summarize:
 
-* we need to pass through `Bus 001 Device 003`
-* the vendor is `0c45` and the product is `636b`
-* the cgroup is `189`
-* prusalink container ID is 109
+* we need to pass through `Bus 001 Device 003`;
+* the vendor is `0c45` and the product is `636b`;
+* the cgroup is `189`;
+* prusalink container ID is `109`.
 
 Edit `/etc/pve/lxc/109.conf`, and add the following lines:
-
 ```
 lxc.cgroup2.devices.allow: c 189:* rwm
 lxc.mount.entry: /dev/bus/usb/001/003 dev/bus/usb/001/003 none bind,optional,create=file
 lxc.mount.entry: /dev/video0 dev/video0 none bind,optional,create=file
 lxc.mount.entry: /dev/video1 dev/video1 none bind,optional,create=file
 ```
-### Configuring the prusalink LXC Container
+
+### Check the webcam devices in the PrusaLink LXC Container
 
 Restart yur LXC prusalink container in order for the changes made in the
 previous section to take the effect.
 
-Verify that webcam devices are now exposed in hte container.  In the LXC
+Verify that the webcam devices are now exposed in the container.  In the LXC
 console as a root:
 
 ```
@@ -363,7 +355,7 @@ crw-rw---- 1 root video 81, 0 Nov 17 01:10 /dev/video0
 crw-rw---- 1 root video 81, 1 Nov 17 01:10 /dev/video1
 ```
 
-To identify the V$L device to use I installed into the container
+To identify the V4L device to use I installed into the container
 [ffmpeg](/apps/ffmpeg.html) with
 `apt install ffmpeg` and then identified the formats supported by the webcam:
 
@@ -374,14 +366,14 @@ root@prusalink:~# ffmpeg -f v4l2 -list_formats all -i /dev/video0
 [video4linux2,v4l2 @ 0x63f41de2fe00] Raw       :     yuyv422 :           YUYV 4:2:2 : 640x480 1600x896 1280x720 1024x768 1024x576 960x544 864x480 848x480 800x448 640x360 352x288 320x240 1920x1080
 ```
 
-For /dev/video1 this command fails:
+For `/dev/video1` this command fails:
 ```
 root@prusalink:~# ffmpeg -f v4l2 -list_formats all -i /dev/video1
 ...
 [video4linux2,v4l2 @ 0x5892f8f6ce00] ioctl(VIDIOC_G_INPUT): Inappropriate ioctl for device
 ```
 
-### Configure LXC Container to work with webcam to Post to PrusaConnect
+### Connect LXC Container webcam to PrusaConnect
 
 This broadly follows
 [Use Raspberry Pi and Pi Cam for Prusa Connect](https://gist.github.com/p123ad/5b1482200715d834e9db736fa9e187d0).
@@ -415,7 +407,7 @@ Create `~pi/prusaconnect_upload_cam.sh`
 while true; do
   # Grab a frame from the webcam using FFmpeg, -video_size 1280x720
   ffmpeg -loglevel warning -y -f video4linux2 -input_format mjpeg \
-    -i /dev/video0 -video_size 1280x720 -vframes 1 -f mjpeg /tmp/output.jpg
+    -i "$V4L_DEVICE" -video_size 1280x720 -vframes 1 -f mjpeg /tmp/output.jpg
 
   # If no error, upload it.
   if [ $? -eq 0 ]; then
@@ -477,3 +469,9 @@ By now, every time your LXC starts:
 * prusalink.service is launched and connects your printer to prusaconnect.
 * prusaconnect_upload_cam.service starts uploading webcam images every 10
 seconds
+
+## Known Problems
+
+* Framerate of 0.1 fps is...low.  Seems to be a PrusaConnect limitation.
+* Constant (every 10secs) writing of the video frame to the disk is wearing SSD
+down.  If only I had a writable `tmpfs` file system inside the container...
