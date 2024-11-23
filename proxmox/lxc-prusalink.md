@@ -10,7 +10,7 @@ Sources:
 * [prusa-link-docker](https://github.com/donslice/prusa-link-docker)
 * [Prusa-Link repo](https://github.com/prusa3d/Prusa-Link)
 
-This is very similar to the way [I run octoprint](octoprint.html).
+This is very similar to the way I [used to run octoprint](octoprint.html).
 
 ## Create an LXC Container
 
@@ -477,3 +477,123 @@ By now, every time your LXC starts:
 * prusalink.service is launched and connects your printer to prusaconnect.
 * prusaconnect_upload_cam.service starts uploading webcam images every 10
 seconds
+
+## Adding a Second Webcam
+
+After plugging the webcam into the server, and in the host shell as a root...
+
+### Host USB Devices
+
+Identify the USB device:
+```
+root@suprox:~# lsusb
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 003: ID 0c45:636b Microdia USB  Live camera
+Bus 001 Device 008: ID 2c99:0002 Prusa Original Prusa i3 MK3
+Bus 001 Device 010: ID 1bcf:28c4 Sunplus Innovation Technology Inc. FHD Camera Microphone
+Bus 001 Device 005: ID 0557:2419 ATEN International Co., Ltd Virtual mouse/keyboard device
+Bus 001 Device 004: ID 0557:7000 ATEN International Co., Ltd Hub
+Bus 001 Device 006: ID 0764:0501 Cyber Power System, Inc. CP1500 AVR UPS
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+```
+I see a new FHD Camera Microphone... but not the camera?  Check the USB device:
+
+```
+root@suprox:~# ls -la /dev/bus/usb/001/010
+crw-rw-r-- 1 root root 189, 9 Nov 23 10:37 /dev/bus/usb/001/010
+```
+Change the device ownership:
+```sh
+chown 100000:100000 /dev/bus/usb/001/010
+```
+
+### Host V4L Devices
+
+Check the V4L devices:
+```
+root@suprox:~# ls -la /dev/video*
+crw-rw---- 1 100000 100044 81, 0 Nov 16 17:10 /dev/video0
+crw-rw---- 1 100000 100044 81, 1 Nov 16 17:10 /dev/video1
+crw-rw---- 1 root   video  81, 2 Nov 23 10:37 /dev/video2
+crw-rw---- 1 root   video  81, 3 Nov 23 10:37 /dev/video3
+```
+I see two new devices: video2 and video3, change their ownership and
+permissions:
+```sh
+chown 100000:100044 /dev/video2
+chown 100000:100044 /dev/video3
+```
+
+### Passing the Host Devices through to the LXC Container
+To summarize:
+
+* we need to pass through `Bus 001 Device 010`
+* the vendor is `1bcf` and the product is `28c4`
+* the cgroup is `189`
+* prusalink container ID is 109
+
+Edit `/etc/pve/lxc/109.conf`:
+```
+root@suprox:~# cat /etc/pve/lxc/109.conf
+## PrusaLink LXC
+#
+#http%3A//192.168.11.78%3A8080
+arch: amd64
+cores: 2
+features: nesting=1
+hostname: prusalink
+memory: 512
+net0: name=eth0,bridge=vmbr0,hwaddr=BC:24:11:4E:61:25,ip=dhcp,ip6=auto,type=veth
+onboot: 1
+ostype: debian
+rootfs: local-lvm:vm-109-disk-0,size=16G
+startup: order=200
+swap: 100
+unprivileged: 1
+lxc.cgroup2.devices.allow: c 189:* rwm
+lxc.mount.entry: /dev/bus/usb/001/003 dev/bus/usb/001/003 none bind,optional,create=file
+lxc.mount.entry: /dev/bus/usb/001/008 dev/bus/usb/001/008 none bind,optional,create=file
+lxc.mount.entry: /dev/bus/usb/001/010 dev/bus/usb/001/010 none bind,optional,create=file
+lxc.mount.entry: /lxc/109/devices/ttyACM0 dev/ttyACM0 none bind,optional,create=file
+lxc.mount.entry: /dev/video0 dev/video0 none bind,optional,create=file
+lxc.mount.entry: /dev/video1 dev/video1 none bind,optional,create=file
+lxc.mount.entry: /dev/video2 dev/video2 none bind,optional,create=file
+lxc.mount.entry: /dev/video3 dev/video3 none bind,optional,create=file
+```
+
+### LXC Container - Devices Verification
+
+After the LXC container restart, in the container console:
+```
+pi@prusalink:~$ ls -la /dev/bus/usb/001/003
+crw-rw-r-- 1 root root 189, 2 Nov 17 01:10 /dev/bus/usb/001/003
+
+pi@prusalink:~$ ls -la /dev/bus/usb/001/010
+crw-rw-r-- 1 root root 189, 9 Nov 23 18:37 /dev/bus/usb/001/010
+
+pi@prusalink:~$ ls -la /dev/video*
+crw-rw---- 1 root video 81, 0 Nov 17 01:10 /dev/video0
+crw-rw---- 1 root video 81, 1 Nov 17 01:10 /dev/video1
+crw-rw---- 1 root video 81, 2 Nov 23 18:37 /dev/video2
+crw-rw---- 1 root video 81, 3 Nov 23 18:37 /dev/video3
+```
+Looks like the new USB and V4L devices ARE available to LXC.
+
+Verify the new V4L device capabilities:
+```
+pi@prusalink:~$ ffmpeg -f v4l2 -list_formats all -i /dev/video2
+...
+[video4linux2,v4l2 @ 0x56871cf0fe00] Compressed:       mjpeg :          Motion-JPEG : 640x480 1600x896 1280x720 1024x576 800x600 800x480 640x360 424x240 352x288 1920x1080
+[video4linux2,v4l2 @ 0x56871cf0fe00] Raw       :     yuyv422 :           YUYV 4:2:2 : 640x480 1600x896 1280x720 1024x576 800x600 800x480 640x360 424x240 352x288 1920x1080
+```
+
+### LXC Container - Update the Upload Script to work with the second camera
+
+Create `~pi/prusaconnect_upload_cams.sh`
+
+```
+{% prusaconnect_upload_cams.sh %}
+```
+update the service file and restart it!
+
+It works!
