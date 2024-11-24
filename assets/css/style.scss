@@ -57,7 +57,8 @@ pre.highlight {
         }
     }
     // copy code to clipboard
-    .copy {
+    .copy-button {
+        background: rgba(0, 0, 0, 0.7);
         color:#bada07;
         position: absolute;
         right: 1.2rem;
@@ -70,9 +71,9 @@ pre.highlight {
             opacity: 1;
         }
     }
-    &:active .copy,
-    &:focus .copy,
-    &:hover .copy {
+    &:active .copy-button,
+    &:focus .copy-button,
+    &:hover .copy-button {
         background: rgba(0, 0, 0, 0.7);
         opacity: 1;
     }
