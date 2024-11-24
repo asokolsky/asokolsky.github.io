@@ -21,7 +21,7 @@ ul li::before{
 ul li{
     padding: 5px 0px;
 }
-pre{
+code{
     font-size:75%;
 }
 code.highlighter-rouge{
@@ -42,7 +42,7 @@ code.highlighter-rouge{
     border-bottom-style: none;
     border-left-style: none;
     border-width: 2px;
-    border-color: white;
+    border-color: black;
     border-style: solid;
     color:#bada07;
     position: absolute;
