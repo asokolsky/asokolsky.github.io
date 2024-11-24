@@ -49,12 +49,6 @@ code.highlighter-rouge{
     right: 1rem;
     top: 1rem;
     opacity: 0;
-    &:active,
-    &:focus,
-    &:hover {
-        //background: rgba(0, 0, 0, 0.7);
-        opacity: 1;
-    }
 }
 &:active .copy-button,
 &:focus .copy-button,
