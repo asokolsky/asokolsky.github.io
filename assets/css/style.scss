@@ -21,38 +21,26 @@ ul li::before{
 ul li{
     padding: 5px 0px;
 }
-code{
-    font-size:75%;
-}
-code.highlighter-rouge{
-    border-style: none;
-    background:inherit;
-    color:#bada07;
-}
+
 
 // support for copy button
 
-// copy code to clipboard
-.copy-button {
-    //background: rgba(0, 0, 0, 0.7);
-    background-color: transparent;
-    border: 0;
-    border-top-style: none;
-    border-right-style: none;
-    border-bottom-style: none;
-    border-left-style: none;
-    border-width: 2px;
-    border-color: black;
-    border-style: solid;
-    color:#bada07;
+.code-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+.copy-code-button {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-column-gap: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 4px 8px;
+    font-weight: 900;
+    color: black;
+    top: 20px !important;
     position: relative;
-    right: 1rem;
-    top: 1rem;
-    opacity: 1;
-    &:active,
-    &:focus,
-    &:hover {
-        //background: rgba(0, 0, 0, 0.7);
-        opacity: 1;
-    }
+    border: none;
 }
