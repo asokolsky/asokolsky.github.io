@@ -585,7 +585,7 @@ pi@prusalink:~$ ffmpeg -f v4l2 -list_formats all -i /dev/video2
 Create `~pi/prusaconnect_upload_cams.sh`
 
 ```
-{% prusaconnect_upload_cams.sh %}
+{% include_relative prusaconnect_upload_cams.sh %}
 ```
 update the service file and restart it!
 
