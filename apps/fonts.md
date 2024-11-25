@@ -5,6 +5,12 @@ HOWTO Install/remove fonts on
 [Windows](https://support.microsoft.com/en-us/windows/how-to-install-or-remove-a-font-in-windows-f12d0657-2fc8-7613-c76f-88d043b334b8),
 [Linux](https://community.linuxmint.com/tutorial/view/29).
 
+## Proportional Fonts
+
+[Sego](https://en.wikipedia.org/wiki/Segoe),
+[Sego-UI](https://learn.microsoft.com/en-us/typography/font-list/segoe-ui),
+[segoe-ui-linux](https://github.com/mrbvrz/segoe-ui-linux)
+
 ## Fixed Width
 
 I really like [Source Code Pro](https://en.wikipedia.org/wiki/Source_Code_Pro)
