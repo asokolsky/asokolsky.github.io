@@ -12,11 +12,12 @@ Basics:
 * CPU: 2 cores, type - host
 * 12GB RAM, NO memory ballooning as PCI pass-through is used.
 * Boot drive 16GB
+* Machine: q35
+
 
 Passthrough:
 
-* [SATA controller](pcie-passthrough-sata.html).  I have some SATA SSDs
-attached.
+* [SATA controller](pcie-passthrough-sata.html) with some SATA SSDs attached.
 * NIC
 
 ## Install XigmaNAS
