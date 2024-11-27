@@ -42,6 +42,7 @@ In an LXC container:
 
 * [mqtt](lxc-mqtt.html)
 * [octoprint](lxc-octoprint.html)
+* [prusalink](lxc-prusalink.html)
 * [Unifi Controller](lxc-unifi.html)
 * [vault](lxc-vault.html)
 

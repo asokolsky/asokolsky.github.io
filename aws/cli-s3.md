@@ -1,6 +1,6 @@
 # AWS Simple Storage Service (S3) CLI
 
-## All the Buckets
+## List the Account Buckets
 
 List all the buckets in the current account:
 ```sh

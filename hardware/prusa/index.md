@@ -2,7 +2,10 @@
 
 ## MK3s+
 
-* [octoprint](http://octo:5000/)
+* local [octoprint](http://octo:5000/),
+[how to set it up](/proxmox/lxc-octoprint.html).
+* local [prusalink](http://192.168.11.78:8080/),
+[how to set it up](/proxmox/lxc-prusalink.html).
 * [dead-end-project](mk3s-rpi0w.html)
 
 ### Firmware Upgrade

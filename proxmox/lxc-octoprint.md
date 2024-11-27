@@ -81,9 +81,27 @@ Setup the start-up script:
 wget https://github.com/OctoPrint/OctoPrint/raw/master/scripts/octoprint.service && sudo mv octoprint.service /etc/systemd/system/octoprint.service
 ```
 
-Add the script to autostart:
-```
+Enable it:
+```sh
 sudo systemctl enable octoprint.service
+```
+
+`/etc/systemd/system/octoprint.service`:
+```
+[Unit]
+Description=The snappy web interface for your 3D printer
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Environment="LC_ALL=C.UTF-8"
+Environment="LANG=C.UTF-8"
+Type=exec
+User=pi
+ExecStart=/home/pi/OctoPrint/venv/bin/octoprint
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ## Enable restart/shutdown via OctoPrint's system menu
@@ -142,7 +160,7 @@ lxc.mount.entry: /dev/bus/usb/001/005 dev/bus/usb/001/005 none bind,optional,cre
 lxc.mount.entry: /lxc/<id>/devices/ttyACM0 dev/ttyACM0 none bind,optional,create=file
 ```
 
-Add `/etc/udev/rules.d/50-myusb.rules`:
+Edit `/etc/udev/rules.d/50-usb.rules`:
 ```
 SUBSYSTEM=="tty", ATTRS{idVendor}=="2c99", ATTRS{idProduct}=="0002", MODE="0666", SYMLINK+="prusa"
 ```
@@ -153,7 +171,6 @@ udevadm control --reload-rules && service udev restart && udevadm trigger
 ```
 
 Restart the container.  Then in the container:
-
 ```
 root@octo:~# lsusb
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
@@ -162,6 +179,7 @@ Bus 001 Device 004: ID 0557:2419 ATEN International Co., Ltd ABST600
 Bus 001 Device 003: ID 0557:7000 ATEN International Co., Ltd Hub
 Bus 001 Device 002: ID 0764:0501 Cyber Power System, Inc. CP1500 AVR UPS
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
 root@octo:~# ls -la /dev/tty*
 crw-rw-rw- 1 nobody nogroup   5, 0 Dec 27 22:50 /dev/tty
 crw------- 1 root   tty     136, 1 Dec 27 22:52 /dev/tty1

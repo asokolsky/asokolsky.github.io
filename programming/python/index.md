@@ -16,7 +16,8 @@
 
 * [Python project Makefile](/apps/make/python.mak)
 * Example of
-[Docker-ising your python app](https://github.com/asokolsky/pycrawl)
+[Docker-using your python app](https://github.com/asokolsky/pycrawl)
+* Example of a [systemd service using python venv](/proxmox/lxc-prusalink.html)
 
 ## Frameworks
 
@@ -37,6 +38,30 @@ like aws cli does.
 * [Guide to Python project management and packaging](https://reinforcedknowledge.com/a-comprehensive-guide-to-python-project-management-and-packaging-concepts-illustrated-with-uv-part-i/)
 * [Python Closures](https://realpython.com/python-closure/)
 * [Alternatives to named tuples](https://snarky.ca/dont-use-named-tuples-in-new-apis/)
+
+## Modules of Interest
+
+### site
+
+```
+> python3 -m site
+sys.path = [
+    '/home/alex/Projects/asokolsky.github.io',
+    '/usr/lib/python312.zip',
+    '/usr/lib/python3.12',
+    '/usr/lib/python3.12/lib-dynload',
+    '/usr/local/lib/python3.12/dist-packages',
+    '/usr/lib/python3/dist-packages',
+]
+USER_BASE: '/home/alex/.local' (exists)
+USER_SITE: '/home/alex/.local/lib/python3.12/site-packages' (doesn't exist)
+ENABLE_USER_SITE: True
+```
+[more details](https://pymotw.com/3/site/index.html)
+
+### Python 3 Module of the Week
+
+https://pymotw.com/3/
 
 ## One-liners
 

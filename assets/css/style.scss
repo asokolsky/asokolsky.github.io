@@ -21,11 +21,23 @@ ul li::before{
 ul li{
     padding: 5px 0px;
 }
-pre{
-    font-size:75%;
+
+
+// support for copy-to-clipboard button
+pre.highlight > button {
+    background: #282a36;
+    padding: 0.5em;
+    min-width: 5em;
+    border: 1px solid #f8f8f2;
+    color: #f8f8f2;
+    margin-top: 1em;
 }
-code.highlighter-rouge{
-    border-style: none;
-    background:inherit;
-    color:#bada07;
+
+.copy-to-clipboard {
+    background: #282a36;
+    padding: 0.5em;
+    min-width: 5em;
+    border: 1px solid #f8f8f2;
+    color: #f8f8f2;
+    margin-top: 1em;
 }
