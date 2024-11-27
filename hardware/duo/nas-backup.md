@@ -1,7 +1,6 @@
 # duo
 
-.. is now a core of the streaming setup.  Use d to be a
-[backup nas](nas-backup.html).
+Backup TrueNAS Server.
 
 ## Hardware
 
@@ -15,14 +14,13 @@ RAM|Crucial Pro 2x16GB DDR4 3200MT/s CP2K16G4DFRA32A
 Ethernet|onboard I219-V, I211
 GPU|Intel UHD Graphics 630
 SSD|500GB WD Blue SN550 NVMe M.2 2280, 3D NAND, Up to 2,400 MB/s - WDS500G2B0C
-PSU|300W TFX12V PSU
-Case|IN-WIN CE685.FH300TB3 MicroATX case
-OS|Linux Mint
+PSU|Seasonic FOCUS 450 Gold SSR-450FM 450W 80+ Gold ATX12V & EPS12V 140 mm PS
+Case|[Fractal Design Define Mini Black Silent mATX](https://www.newegg.com/Product/Product.aspx?Item=N82E16811352011)
+OS|TrueNAS
 
 * [PCIe Devices](lspci.html)
 * [DMI Info](dmi.html)
 * [IOMMU](iommu.html)
-* [USB Devices](lsusb.html)
 
 ## USB Devices
 
