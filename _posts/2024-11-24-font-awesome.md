@@ -17,10 +17,15 @@ to add style, include in the head:
 Usage: note it is [version-specific](https://docs.fontawesome.com/web/setup/upgrade/upgrade-from-v4)
 
 
-[Availble versions](https://fontawesome.com/versions)
+[Available versions](https://fontawesome.com/versions)
 
 This is a copy icon <i class="fa fa-copy" aria-hidden="true"></i>.
 
 This is a check icon <i class="fa fa-check" aria-hidden="true"></i>.
 
 More [icons](https://fontawesome.com/v4/icons/).
+
+
+Use in a button:
+
+<button><i class="fa fa-thumbs-o-up"></i> Like</button>
