@@ -5,18 +5,20 @@ codeBlocks.forEach(function(codeBlock) {
   copyButton.type = 'button';
   //copyButton.ariaLabel = 'Copy code to clipboard';
   //copyButton.innerText = 'Copy';
-  copyButton.innerHtml = '&nbsp;<i class="fa fa-copy" aria-hidden="true"></i>&nbsp;';
+  copyHtml = '<i class="fa fa-copy" aria-hidden="true"></i>';
+  checkHtml = '<i class="fa fa-check" aria-hidden="true"></i>';
+  copyButton.innerHtml = copyHtml;
   codeBlock.append(copyButton);
 
   copyButton.addEventListener('click', function () {
     var code = codeBlock.querySelector('code').innerText.trim();
     window.navigator.clipboard.writeText(code);
     //copyButton.innerText = 'Copied';
-    copyButton.innerHtml = '&nbsp;<i class="fa fa-check" aria-hidden="true"></i>&nbsp;';
+    copyButton.innerHtml = checkHtml;
     var fourSeconds = 4000;
     setTimeout(function () {
         //copyButton.innerText = 'Copy';
-        copyButton.innerHtml = '&nbsp;<i class="fa fa-copy" aria-hidden="true"></i>&nbsp;';
+        copyButton.innerHtml = copyHtml;
     }, fourSeconds);
   });
 });

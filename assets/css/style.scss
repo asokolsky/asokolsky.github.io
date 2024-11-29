@@ -36,8 +36,10 @@ pre.highlight > button {
 .copy-to-clipboard {
     border: none;
     //background: #282a36;
+    background-color: #04AA6D;
     //color: #f8f8f2;
     cursor: pointer;
+    display: inline-block;
     padding: 0.5em;
     min-width: 5em;
     margin-top: 1em;
