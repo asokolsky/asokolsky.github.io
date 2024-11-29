@@ -28,4 +28,7 @@ More [icons](https://fontawesome.com/v4/icons/).
 
 Use in a button:
 
-<button><i class="fa fa-thumbs-o-up"></i> Like</button>
+<button class="copy-to-clipboard">Test</button>
+<button class="copy-to-clipboard"><i class="fa fa-thumbs-o-up"></i> Like</button>
+<button class="copy-to-clipboard"><i class="fa fa-copy" aria-hidden="true"></i></button>
+<button class="copy-to-clipboard"><i class="fa fa-check" aria-hidden="true"></i></button>
