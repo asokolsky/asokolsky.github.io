@@ -239,20 +239,20 @@ Esc|Exit insert mode
 
 Key|Action
 ---|------
-`v`|begins regular visual mode, and works similar to selecting text with a mouse. Use `h` and `l` to expand the selection left and right to include more words, and use `j` and `k` to expand the selection to the lines below and above.
-`V`|begins linewise visual mode. This selects entire lines of text at a time. Use `j` and `k` to expand the selection up and down.
-Ctrl+`v`|enters block visual mode. This selects text in a block format, allowing to select parts of multiple lines without including the entire line. Use `h`, `j`, `k`, `l` as usual.
+v|begins regular visual mode, and works similar to selecting text with a mouse. Use `h` and `l` to expand the selection left and right to include more words, and use `j` and `k` to expand the selection to the lines below and above.
+V|begins linewise visual mode. This selects entire lines of text at a time. Use `j` and `k` to expand the selection up and down.
+Ctrl+v|enters block visual mode. This selects text in a block format, allowing to select parts of multiple lines without including the entire line. Use `h`, `j`, `k`, `l` as usual.
 
 Once the selection is done, use:
 
 Key|Action
 ---|------
 Esc|exit visual mode
-`d`|delete the text
-`y`|yank (copy) the text
-`p`|paste your clipboard onto the text, replacing it
-`c`|change the text, which deletes it and sets your cursor for typing
-`r`|replace the text with the next character you type
-`y`, `q`, `/`, `p`|search for the text elsewhere in your document
+d|delete the text
+y|yank (copy) the text
+p|paste your clipboard onto the text, replacing it
+c|change the text, which deletes it and sets your cursor for typing
+r|replace the text with the next character you type
+`y`,`q`, `/`, `p`|search for the text elsewhere in your document
 `>`|indent the text, removes selection
 `<`|unindent the selection, removes selection

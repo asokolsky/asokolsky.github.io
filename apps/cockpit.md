@@ -1,10 +1,8 @@
 # Cockpit
 
-
 a.k.a. “web console”.
 
 ## Install
-
 
 https://cockpit-project.org/running#ubuntu
 
