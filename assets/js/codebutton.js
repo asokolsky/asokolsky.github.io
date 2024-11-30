@@ -6,18 +6,18 @@ codeBlocks.forEach(function(codeBlock) {
   //copyButton.ariaLabel = 'Copy code to clipboard';
   //copyButton.innerText = 'Copy';
   var copyHtml = '<i class="fa fa-copy" aria-hidden="true"></i> Copy';
-  copyButton.innerHtml = copyHtml;
+  copyButton.innerHTML = copyHtml;
   //copyButton.innerText = 'Copy';
   codeBlock.append(copyButton);
 
   copyButton.addEventListener('click', function () {
     var code = codeBlock.querySelector('code').innerText.trim();
     window.navigator.clipboard.writeText(code);
-    copyButton.innerHtml = '<i class="fa fa-check" aria-hidden="true"></i> Copied';
+    copyButton.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i> Copied';
     //copyButton.innerText = 'Copied';
     var fourSeconds = 4000;
     setTimeout(function () {
-        copyButton.innerHtml = copyHtml;
+        copyButton.innerHTML = copyHtml;
         //copyButton.innerText = 'Copy';
       }, fourSeconds);
   });
