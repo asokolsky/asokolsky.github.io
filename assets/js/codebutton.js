@@ -3,22 +3,17 @@ codeBlocks.forEach(function(codeBlock) {
   var copyButton = document.createElement('button');
   copyButton.className = 'copy-to-clipboard';
   copyButton.type = 'button';
-  //copyButton.ariaLabel = 'Copy code to clipboard';
-  //copyButton.innerText = 'Copy';
-  var copyHtml = '<i class="fa fa-copy" aria-hidden="true"></i> Copy';
+  var copyHtml = '<i class="fa fa-copy" aria-hidden="true"></i>';
   copyButton.innerHTML = copyHtml;
-  //copyButton.innerText = 'Copy';
   codeBlock.append(copyButton);
 
   copyButton.addEventListener('click', function () {
     var code = codeBlock.querySelector('code').innerText.trim();
     window.navigator.clipboard.writeText(code);
-    copyButton.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i> Copied';
-    //copyButton.innerText = 'Copied';
+    copyButton.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
     var fourSeconds = 4000;
     setTimeout(function () {
         copyButton.innerHTML = copyHtml;
-        //copyButton.innerText = 'Copy';
       }, fourSeconds);
   });
 });
