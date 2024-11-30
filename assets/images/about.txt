@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Martel Sans
+- Font Author: undefined
+- Font Source: https://fonts.gstatic.com/s/martelsans/v13/h0GsssGi7VdzDgKjM-4d8ijfze-PPlUu.ttf
+- Font License: undefined

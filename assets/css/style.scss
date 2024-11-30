@@ -25,19 +25,22 @@ ul li{
 
 // support for copy-to-clipboard button
 pre.highlight > button {
-    background: #282a36;
-    padding: 0.5em;
-    min-width: 5em;
-    border: 1px solid #f8f8f2;
-    color: #f8f8f2;
+    //background: #282a36;
+    //padding: 0.5em;
+    //min-width: 5em;
+    //border: 1px solid #f8f8f2;
+    //color: #f8f8f2;
     margin-top: 1em;
 }
 
 .copy-to-clipboard {
-    background: #282a36;
-    padding: 0.5em;
-    min-width: 5em;
-    border: 1px solid #f8f8f2;
-    color: #f8f8f2;
+    border: none;
+    background-color: #9b9b9b;
+    //color: #f8f8f2;
+    cursor: pointer;
+    display: inline-block;
     margin-top: 1em;
+    //min-height: 2em;
+    //min-width: 5em;
+    //padding: 0.5em;
 }
