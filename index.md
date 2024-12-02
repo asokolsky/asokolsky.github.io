@@ -15,7 +15,7 @@ comments: false
 
 ## Apps & Tasks
 
-* [AWS](aws/) <i class="fa fa-cloud" aria-hidden="true"></i>
+* [<i class="fa fa-cloud" aria-hidden="true"></i> AWS](aws/)
 * [API Gateways](apps/api-gateways.html)
 * Conversion of [audio](linux/convert-audio.html),
 [images](linux/convert-image.html)
@@ -63,9 +63,9 @@ and [more...](linux/cli.html)
 
 * [Blog Posts](posts.html)
 * [BSD](bsd/)
-* [Hardware](hardware/)
+* [<i class="fa fa-wrench" aria-hidden="true"></i> Hardware](hardware/)
 * [Physics](physics/)
-* [Windows](windows/) <i class="fa fa-windows" aria-hidden="true"></i>
+* [<i class="fa fa-windows" aria-hidden="true"></i> Windows](windows/)
 
 
 [![LinkedIn
