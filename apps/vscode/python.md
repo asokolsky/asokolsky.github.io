@@ -33,6 +33,10 @@ See https://code.visualstudio.com/docs/python/debugging
 }
 ```
 
+Here are
+[the variables](https://code.visualstudio.com/docs/editor/variables-reference)
+to use.
+
 ### `.vscode/settings.json`
 
 Also see [python-linting](python-linting.html) and
@@ -97,5 +101,4 @@ dmypy.json
 ```
 [mypy-recurrent.*]
 ignore_missing_imports = True
-
 ```

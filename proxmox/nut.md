@@ -11,12 +11,10 @@ proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
 
 ## Install
 
-```console
-root@fuji:~# apt install nut
+```sh
+apt install nut
 ```
 ## Identify the UPS
-
-Find the UPS vendorID (051d) and productID (0002):
 
 ```console
 root@fuji:~# lsusb
@@ -24,6 +22,7 @@ Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 002: ID 051d:0002 American Power Conversion Uninterruptible Power Supply
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
+Found out the UPS vendorID:productID - 051d:0002.
 
 ## Configure UPS
 
@@ -41,8 +40,7 @@ vendorid = 051d
 productid = 0002
 ```
 
-Create `/etc/udev/rules.d/90-nut-ups.rules` to set proper device file
-permissions:
+Create `/etc/udev/rules.d/90-nut-ups.rules` to set proper device file permissions:
 ```
 # Rule for the UPS - use lsusb for idVendor and idProduct
 ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="051d", ATTR{idProduct}=="0002", MODE="0660", GROUP="nut"
@@ -93,8 +91,6 @@ RBWARNTIME 43200
 NOCOMMWARNTIME 300
 FINALDELAY 5
 MONITOR theUPS@localhost 1 upsmonitor PASSWORD master
-POWERDOWNFLAG /etc/killpower
-SHUTDOWNCMD "/sbin/shutdown -h now"
 ```
 
 Finally `/etc/nut/upsd.users`:
@@ -108,8 +104,9 @@ upsmon master
 
 ## First Start
 
-Use upsc to display the
-[UPS information](https://networkupstools.org/docs/developer-guide.chunked/apas02.html):
+Reboot.
+
+Use upsc to display the [UPS information](https://networkupstools.org/docs/developer-guide.chunked/apas02.html):
 
 ```console
 root@fuji:/etc/nut# upsc theUPS
@@ -159,8 +156,14 @@ ups.timer.reboot: 0
 ups.timer.shutdown: -1
 ups.vendorid: 051d
 ```
-or just:
+So far I have these UPS's:
 
+ups.mfr|ups.vendorid|ups.productid|device.model
+-------|------------|-------------|---------
+American Power Conversion|051d|0002|Back-UPS RS1000G
+CPS|0764|0501|ABST600
+
+For a quick status check:
 ```console
 root@suprox:/etc/nut# upsc theUPS@localhost ups.status
 Init SSL without certificate database
@@ -311,6 +314,26 @@ And then monitor
 ```sh
 watch -d sudo upsc theUPS
 ```
+
+Possible [values for ups.status](https://networkupstools.org/docs/developer-guide.chunked/new-drivers.html#_status_data):
+
+Value|Description
+-----|-----------
+OL|On line (mains is present)
+OB|On battery (mains is not present)
+LB|Low battery
+HB|High battery
+RB|The battery needs to be replaced
+CHRG|The battery is charging
+DISCHRG|The battery is discharging (inverter is providing load power)
+BYPASS|UPS bypass circuit is active -- no battery protection is available
+CAL|UPS is currently performing runtime calibration (on battery)
+OFF|UPS is offline and is not supplying power to the load
+OVER|UPS is overloaded
+TRIM|UPS is trimming incoming voltage (called "buck" in some hardware)
+BOOST| UPS is boosting incoming voltage
+FSD|Forced Shutdown (restricted use, see the note below)
+
 
 ## Battery Maintenance
 
