@@ -119,3 +119,8 @@ Tune|None, tuning can slightly improve compression efficiency, but often harms i
 
 * OBS crashes when I power down my Sony a7iv when the latter is connected to PC
 using USB cable.
+
+## More
+
+* [Try these FREE OBS Tools before your next stream!](https://www.youtube.com/watch?v=4JkpPd5CO8U)
+* [5 Free OBS tools your stream setup is MISSING](https://www.youtube.com/watch?v=H6N7qqvKoXc)

@@ -12,8 +12,7 @@ Identify the audio recording devices available
 [with](/hardware/usb-audio.html) `pacmd list-sources`.
 I picked `alsa_input.usb-046d_HD_Pro_Webcam_C920_CDF1191F-02.analog-stereo`.
 
-Identify the video formats available
-[using](/hardware/usb-video.html)
+Identify the video formats available [using](/hardware/usb-video.html)...
 ```sh
 v4l2-ctl --list-formats-ext -d /dev/video4
 ```
