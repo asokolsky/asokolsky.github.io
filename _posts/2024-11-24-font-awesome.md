@@ -36,3 +36,32 @@ Use in a copy-to-clipboard button:
 <button class="copy-to-clipboard"><i class="fa fa-thumbs-o-up"></i> Like</button>
 <button class="copy-to-clipboard"><i class="fa fa-copy" aria-hidden="true"></i></button>
 <button class="copy-to-clipboard"><i class="fa fa-check" aria-hidden="true"></i></button>
+
+
+This JavaScript [code](/assets/js/codebutton.js) enumerates all the code
+snippets and adds a copy to clipboard button:
+```js
+var codeBlocks = document.querySelectorAll('pre.highlight');
+codeBlocks.forEach(function(codeBlock) {
+  var copyButton = document.createElement('button');
+  copyButton.className = 'copy-to-clipboard';
+  copyButton.type = 'button';
+  var copyHtml = '<i class="fa fa-copy" aria-hidden="true"></i>';
+  copyButton.innerHTML = copyHtml;
+  codeBlock.append(copyButton);
+
+  copyButton.addEventListener('click', function () {
+    var code = codeBlock.querySelector('code').innerText.trim();
+    window.navigator.clipboard.writeText(code);
+    copyButton.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
+    var fourSeconds = 4000;
+    setTimeout(function () {
+        copyButton.innerHTML = copyHtml;
+      }, fourSeconds);
+  });
+});
+```
+Note:
+* to use font awesome I have to work with `innerHTML` button attribute;
+* click handler, besides copying the code to the clipboard, temporarily changes
+the button text to provide feedback.

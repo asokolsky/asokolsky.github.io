@@ -70,3 +70,9 @@ Merge the directories:
 ```sh
 ditto ~/Pictures/Fall2015/ /Volumes/PhotoBackup/2015/
 ```
+
+## Show system temps using CLI
+
+```sh
+sudo powermetrics --samplers smc
+```
