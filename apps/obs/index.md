@@ -25,6 +25,9 @@ order of the filters to use:
 * 3-band Equalizer - High: 0dB, Mid: 0dB, Low: +3dB;
 * Compressor - Ratio: 5:1, Threshold: -12.2dB, Atack: 2ms, Release: 70ms, Output gain: 0dB
 
+
+Also: [BEST OBS Audio Settings (FAQ Series)](https://www.youtube.com/watch?v=K72UXh2P-wg).
+
 ### Codec
 
 libfdk-AAC
