@@ -143,3 +143,19 @@ Instead of using git submodules, sometimes this may make more sense:
 ```sh
 {% include_relative update-from-repo.sh %}
 ```
+
+## github
+
+To re-authenticate:
+
+```sh
+gh auth login
+```
+
+## gitlab
+
+To re-authenticate:
+
+```sh
+glab auth login
+```
