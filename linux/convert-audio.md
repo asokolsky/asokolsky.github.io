@@ -19,9 +19,7 @@ Install [cuetools](https://github.com/svend/cuetools) and `shntool`:
 $ sudo apt install cuetools shntool
 ```
 
-
-[shntool man
-page](https://manpages.debian.org/testing/shntool/shnsplit.1.en.html)
+[shntool man page](https://manpages.debian.org/testing/shntool/shnsplit.1.en.html)
 
 To split flac:
 

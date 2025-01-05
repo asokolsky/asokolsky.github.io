@@ -3,7 +3,8 @@
 [wiki on vi](https://en.wikipedia.org/wiki/Vi),
 the [original article](https://docs.freebsd.org/44doc/usd/12.vi/paper.html).
 
-[vim cheat sheet](https://vim.rtorr.com/)
+* [vim cheat sheet](https://vim.rtorr.com/)
+* [use vi editor](https://vermaden.wordpress.com/2024/09/23/ghost-in-the-shell-part-8-use-vi-editor/)
 
 ## Command Line
 
