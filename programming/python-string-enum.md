@@ -1,2 +1,4 @@
-
-[Moved here](python/python-string-enum.html)
+---
+redirect: https://asokolsky.github.io/programming/python/python-string-enum.html
+layout:   redirect
+---

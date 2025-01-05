@@ -1,4 +1,4 @@
 ---
-redirect: https://asokolsky.github.io/hardware/benchmarks/
+redirect: https://asokolsky.github.io/hardware/benchmarks/index.html
 layout:   redirect
 ---
