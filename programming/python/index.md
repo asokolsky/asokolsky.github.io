@@ -11,6 +11,7 @@
 [F-Strings Number Formatting](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
 * [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
 * [5 Ways to Measure Execution Time in Python](https://superfastpython.com/benchmark-execution-time/)
+* [python packages: src layout vs flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
 
 ## Development
 
@@ -43,6 +44,8 @@ like aws cli does.
 
 ### site
 
+[site module](https://pymotw.com/2/site/)
+
 ```
 > python3 -m site
 sys.path = [
@@ -59,6 +62,15 @@ ENABLE_USER_SITE: True
 ```
 [more details](https://pymotw.com/3/site/index.html)
 
+### http.server
+
+[Python's http.server module](https://www.pythonmorsels.com/http-server/),
+[http.server module](https://pymotw.com/3/http.server/index.html)
+
+```sh
+python -m http.server
+```
+
 ### Python 3 Module of the Week
 
 https://pymotw.com/3/
@@ -67,6 +79,6 @@ https://pymotw.com/3/
 
 ### URL-decode CLI
 
-```
+```sh
 echo -n "%21%20" | python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()));"
 ```
