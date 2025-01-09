@@ -1,9 +1,5 @@
 # HAM
 
-Taking classes at http://hamradioprep.com.
-
-Next: [www.qrz.com/jumpstart](https://www.qrz.com/jumpstart)
-
 [FCC Part 97 AMATEUR RADIO SERVICE](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-D/part-97)
 
 Emergency service:
@@ -18,6 +14,48 @@ Also:
 * [Ten-code](https://en.wikipedia.org/wiki/Ten-code)
 
 [HAM Bands](bands.html)
+
+## Licensing
+
+FCC:
+
+* [FCC Cores](https://apps.fcc.gov/cores/userLogin.do?btnContinue=true)
+* [FSS License search](https://wireless2.fcc.gov/UlsApp/UlsSearch/searchLicense.jsp)
+* FRN: 0036471944
+
+Classes:
+
+* [ham radio prep](http://hamradioprep.com).
+* Next: [www.qrz.com/jumpstart](https://www.qrz.com/jumpstart)
+
+Exams:
+* [Exam](https://www.arrl.org/find-an-amateur-radio-license-exam-session)
+* [Silicon Valley VE Group](http://www.svve.org/)
+* [Sunnyvale  VEC](https://www.amateur-radio.org/)
+* [Bay Area Educational Amateur Radio Society](https://www.baears.com/)
+* https://www.sbara.org/exams.php
+
+## Clubs
+
+* [Assoc of SV Amateur Radio Orgs - asvaro](https://www.asvaro.org/)
+* [Ames Amateur Radio Club](https://hamradio.arc.nasa.gov)
+* [Santa Clara County Amateur Radio Assoc - sccara](https://sccara.org/)
+* [West Valley Amateur Radio Assoc - wvara](https://wvara.org)
+* [Mount Diablo Amateur Radio Club - MDARC](https://www.mdarc.org/)
+* [South Bay Amateur Radio Assoc - sbara](http://www.sbara.org)
+* [50mhz and up](https://www.50mhzandup.org/)
+* [more](https://www.baears.com/files/handouts/ClubList.pdf)
+
+
+Santa Clara County ARA
+Specialties: Contest, Digital Modes, DX, General Interest, Public
+Service/Emergency, Repeaters, VHF/UHF
+Call Sign: W6UW
+Contact: Clark R. Murphy KE6KXO
+Phone: (day) 408‐262‐9334 ‐ (eve) 408‐262‐9334
+Web: http://www.qsl.net/sccara
+
+
 
 ## Decibels
 
