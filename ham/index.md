@@ -15,9 +15,9 @@ Abbreviations:
 * [Q-codes](q-codes.html)
 
 Also:
+* [HAM Bands](bands.html)
 * [Ten-code](https://en.wikipedia.org/wiki/Ten-code)
-
-[HAM Bands](bands.html)
+* [Equipment reviews](https://www.eham.net/reviews/)
 
 ## Decibels
 
@@ -36,21 +36,22 @@ dB|Multiplier
 
 ## Digital Modes
 
-* Automatic Repeat Request (ARQ) is a data transmission system that uses error detection and retransmission to ensure reliable data delivery.
-* Automatic Packet Reporting System (APRS) is used to share messages, status, position, and queries over short distances.
+* [Automatic Repeat Request](https://en.wikipedia.org/wiki/Automatic_repeat_request) (ARQ) is a data transmission system that uses error detection and retransmission to ensure reliable data delivery.
+* [Automatic Packet Reporting System](https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System) (APRS) is used to share messages, status, position, and queries over short distances.
 * an amateur radio station that connects other amateur stations to the internet is called a gateway.
-* A digipeater is used to connect one station to another via RF.
-* a digital mode hot spot allows hams using digital radios such as DMR or D-STAR to communicate on digital voice or data systems via the internet while at home (or mobile).
+* A [digipeater](https://lmarc.net/club/on-the-air/digipeaters/) is used to connect one station to another via RF.
+* a digital mode hot spot allows hams using digital radios such as [DMR](https://en.wikipedia.org/wiki/Digital_mobile_radio) or [D-STAR](https://en.wikipedia.org/wiki/D-STAR) to communicate on digital voice or data systems via the internet while at home (or mobile).
+* purpose of a color code on a DMR system?
 * a station operating using the [FT8 digital mode](https://en.wikipedia.org/wiki/FT8) should have the transceiver’s audio output and input connected to the audio input and output of a computer running WSJT-X software.
 * a DMR code plug is a software file that contains the settings and parameters needed to program a Digital Mobile Radio (DMR).
-* IRLP (Internet Radio Linking Project) nodes are accessed by using DTMF (dual-tone multi-frequency) tones.
-* Echolink is an option that repeater managers can add to their equipment that allows for a signal to be received from over the internet and transmitted over the air, as well as for that internet station to monitor the rest of the conversation. Echolink requires a smart phone or computer application and a login.
-* a Digital Mobile Radio (DMR) code plug contains all the programming information needed to operate a DMR device, including details like frequencies, talk groups, color codes, system IDs, tones, and other settings required to access specific repeaters and communicate on designated channels within a network; essentially acting as a configuration file for the radio itself.
+* a Digital Mobile Radio (DMR) code plug contains the information needed to operate a DMR device, including details like frequencies, talk groups, color codes, system IDs, tones, and other settings required to access specific repeaters and communicate on designated channels within a network; essentially acting as a configuration file for the radio itself.
+* [Internet Radio Linking Project](https://www.irlp.net/) (IRLP) nodes are accessed by using DTMF (dual-tone multi-frequency) tones.
+* [Echolink](https://en.wikipedia.org/wiki/EchoLink) is an option that repeater managers can add to their equipment that allows for a signal to be received from over the internet and transmitted over the air, as well as for that internet station to monitor the rest of the conversation. Echolink requires a smart phone or computer application and a login.
 * A digital voice transceiver is a device that converts microphone audio into digital bits and sends them out over radio waves. Digital transceivers can send and receive more types of data than analog ones, including encrypted communication and video. Digital transmissions are also often clearer and more detailed than analog transmissions.
 
 ## Antennas
 
-The Yagi antenna is a directional antenna and offers the greatest gain.
+The [Yagi antenna](https://en.wikipedia.org/wiki/Yagi%E2%80%93Uda_antenna) is a directional antenna and offers the greatest gain.
 
 Antenna loading is a technique that electrically lengthens an antenna without physically increasing its size.
 
@@ -68,7 +69,7 @@ Antenna loading is a technique that electrically lengthens an antenna without ph
 
 
 * if the antenna falls, no part of it can come closer than 10 feet to the power wires.
-* the antenna could contact high-voltage power lines.
+* the antenna could NOT contact high-voltage power lines.
 * Local electrical codes establish the proper grounding techniques for amateur radio towers and antennas. A lightning arrester should be installed in a coaxial feed line mounted on a grounded panel near where feed lines enter the building.
 * For all external ground rods or earth connections, you must consider a high current situation from a lightning strike. Therefore, you should bond them together with heavy wire or conductive strap that can handle high current.
 * When installing grounding conductors used for lightning protection, sharp bends must be avoided. Remember that lightning takes a straight path to ground, so you want your ground to be straight and direct.

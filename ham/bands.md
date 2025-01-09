@@ -19,7 +19,7 @@ ITU Region|Band
 2|3.5 – 4.0 MHz
 3|3.5 – 3.9 MHz
 
-Upper part of the 80 meters Band in ITU Region 2 countries, is commonly named as 75 meters band.
+Upper part of the 80m Band in ITU Region 2 countries, is commonly named as 75m band.
 
 The [80-meter band](https://en.wikipedia.org/wiki/80-meter_band) is considered the most reliable all-season long-distance (DX) band. It is popular for DX contacts at night and reliable for medium-distance contacts during the day. In the US and Canada, a portion of this band allows for single-sideband voice and AM voice transmissions.
 
@@ -57,7 +57,7 @@ The [6-meter band](https://en.wikipedia.org/wiki/6-meter_band) is best suited fo
 
 ## 2m VHF band (144-148 MHz)
 
-[![2m band](2-meter-band.png)](https://en.wikipedia.org/wiki/2-meter_band)
+[![2m band](2-meter-band.png)](https://en.wikipedia.org/wiki/2-meter_band) is one of the most popular non-HF ham bands.
 
 ITU Region|Band
 ----------|----
@@ -67,8 +67,30 @@ ITU Region|Band
 
 Common repeater frequency offset: ±600kHz
 
+## 1.25m VHF band (219-220 MHz, 222-225 MHz)
+
+The [1.25m band](https://en.wikipedia.org/wiki/1.25-meter_band) is primarily used for local communications.
+
+ITU Region|Band
+----------|----
+1|NA
+2|222 – 225 MHz
+3|NA
+
 ## 70cm UHF band (430-440 MHz)
 
-[70cm band](https://en.wikipedia.org/wiki/70-centimeter_band)
+The [70cm band](https://en.wikipedia.org/wiki/70-centimeter_band) is a popular ham band due to the ready availability of equipment in both new and used markets. Amateurs usually use the band for FM or digital voice communications through repeaters, as well narrow band modes (analog and digital) for long-distance communications (called "DX", including Moon bounce). The band is also popular for Amateur Satellite Service.
 
 Common repeater frequency offset: ±5MHz
+
+## 33cm UHF band (902-928 MHz)
+
+The [33cm band](https://en.wikipedia.org/wiki/33-centimeter_band) is primarily used for very local communications.
+
+## 23cm UHF band (1240-1300 MHz)
+
+The [23cm band](https://en.wikipedia.org/wiki/23-centimeter_band).
+
+## 13cm UHF band (2.3-2.450 GHz)
+
+The [13cm band](https://en.wikipedia.org/wiki/13-centimeter_band).
