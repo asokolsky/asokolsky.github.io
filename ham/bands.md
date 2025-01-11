@@ -1,4 +1,4 @@
-# HAM Bands
+# HAM (and Others) Bands
 
 * HF is the range from 3 to 30 MHz
 * VHF is between 30 and 300 MHz
@@ -234,27 +234,29 @@ Freq|Use
 
 Notes: The frequency 146.40 MHz is used in some areas as a repeater input. This band plan has been proposed by the ARRL VHF-UHF Advisory Committee.
 
-## MURS Band
+## MURS Band (151 MHz)
 
 151.820	Multi Use Radio Service (MURS)
 151.880	Multi Use Radio Service (MURS)
 
-##
+## 155 MHz
 
 155.160	Land Search and Rescue
 
-## Marine Radio Band
+## Marine Radio Band (156 MHz)
 
 156.800	Marine Distress Safety and Calling (Marine Radio Channel 16)
 157.100	U.S. Coast Guard Liaison (Marine Radio Channel 22)
 156.300	Marine Intership Safety (Marine Radio Channel 6)
 
-##
+## 161 MHz
 
 161.205	Railroad Police Mutual Aid
 
 
-## Weather Radio Band (162 MHz)
+## Weather Band (161-164 MHz)
+
+[Weather Radio](https://en.wikipedia.org/wiki/Weather_radio)
 
 162.400	NOAA / National Weather Service broadcast frequency
 162.425	NOAA / National Weather Service broadcast frequency
@@ -263,6 +265,9 @@ Notes: The frequency 146.40 MHz is used in some areas as a repeater input. This 
 162.500	NOAA / National Weather Service broadcast frequency
 162.525	NOAA / National Weather Service broadcast frequency
 162.550	NOAA / National Weather Service broadcast frequency
+
+
+
 
 ## 1.25m VHF band (219-220 MHz, 222-225 MHz)
 
@@ -299,9 +304,47 @@ Common repeater frequency offset: ±5MHz
 
 446.000	70 cm band National Simplex Channel
 
-## GMRS Band
+## GMRS Band (462-467 MHz)
+
+[GMRS band](https://en.wikipedia.org/wiki/General_Mobile_Radio_Service#Frequency_assignments) is shared with [Family Radio Service](https://en.wikipedia.org/wiki/Family_Radio_Service) (FRS).
+
+Channels:
+
+Ch|MHz Tx/Rx
+--|--
+1|462.5625
+2|462.5875
+3|462.6125
+4|462.6375
+5|462.6625
+6|462.6875
+7|462.7125
+8|467.5625
+9|467.5875
+10|467.6125
+11|467.6375
+12|467.6625
+13|467.6875
+14|467.7125
+15|462.5500
+16|462.5750
+17|462.6000
+18|462.6250
+19|462.6500
+20|462.6750
+21|462.7000
+22|462.7250
+23|467.5500/462.5500
+24|467.5750/462.5750
+25|467.6000/462.6000
+26|467.6250/462.6250
+27|467.6500/462.6500
+28|467.6750/462.6750
+29|467.7000/462.7000
+30|467.7250/462.7250
 
 462.675	GMRS emergency frequency (Channel 20)
+
 
 ## 33cm UHF band (902-928 MHz)
 
