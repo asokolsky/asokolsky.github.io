@@ -7,8 +7,9 @@ Emergency service:
 * [Radio Amateur Civil Emergency Service (RACES)](https://www.usraces.org/)
 
 Abbreviations:
-* [phonetic alphabet](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet)
+* [abbreviations](abbreviations.html)
 * [Q-codes](q-codes.html)
+* [phonetic alphabet](phonetic-alphabet.html)
 
 Also:
 * [HAM Bands](bands.html)

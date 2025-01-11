@@ -12,6 +12,8 @@ AWS Resource tagging:
 
 [CloudTrail](cloud-trail.html)
 
+[s3 best practices](s3-best-practices.html)
+
 ## AWS CLI
 
 [CLI Client](cli.html) use for:

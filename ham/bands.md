@@ -1,4 +1,4 @@
-# HAM Bands
+# HAM (and Others) Bands
 
 * HF is the range from 3 to 30 MHz
 * VHF is between 30 and 300 MHz
@@ -67,6 +67,10 @@ ITU Region|Band
 
 Common repeater frequency offset: ±600kHz
 
+## Weather Band (161-164 MHz)
+
+[Weather Radio](https://en.wikipedia.org/wiki/Weather_radio)
+
 ## 1.25m VHF band (219-220 MHz, 222-225 MHz)
 
 The [1.25m band](https://en.wikipedia.org/wiki/1.25-meter_band) is primarily used for local communications.
@@ -82,6 +86,47 @@ ITU Region|Band
 The [70cm band](https://en.wikipedia.org/wiki/70-centimeter_band) is a popular ham band due to the ready availability of equipment in both new and used markets. Amateurs usually use the band for FM or digital voice communications through repeaters, as well narrow band modes (analog and digital) for long-distance communications (called "DX", including Moon bounce). The band is also popular for Amateur Satellite Service.
 
 Common repeater frequency offset: ±5MHz
+
+## GMRS Band (462-467 MHz)
+
+[GMRS band](https://en.wikipedia.org/wiki/General_Mobile_Radio_Service#Frequency_assignments) is shared with [Family Radio Service](https://en.wikipedia.org/wiki/Family_Radio_Service) (FRS).
+
+Channels:
+
+Ch|MHz Tx/Rx
+--|--
+1|462.5625
+2|462.5875
+3|462.6125
+4|462.6375
+5|462.6625
+6|462.6875
+7|462.7125
+8|467.5625
+9|467.5875
+10|467.6125
+11|467.6375
+12|467.6625
+13|467.6875
+14|467.7125
+15|462.5500
+16|462.5750
+17|462.6000
+18|462.6250
+19|462.6500
+20|462.6750
+21|462.7000
+22|462.7250
+23|467.5500/462.5500
+24|467.5750/462.5750
+25|467.6000/462.6000
+26|467.6250/462.6250
+27|467.6500/462.6500
+28|467.6750/462.6750
+29|467.7000/462.7000
+30|467.7250/462.7250
+
+
 
 ## 33cm UHF band (902-928 MHz)
 

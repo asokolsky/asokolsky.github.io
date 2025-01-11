@@ -1,5 +1,7 @@
 # NATO Phonetic Alphabet
 
+[wiki](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet)
+
 Symbol|Code word
 ------|---------
 A|Alfa
