@@ -4,6 +4,8 @@
 
 The US GMRS license is issued for a period of 10 years. The United States permits use by adult individuals who possess a valid GMRS license, as well as their immediate family members. Immediate relatives of the GMRS system licensee are entitled to communicate among themselves for personal or business purposes.
 
+WSGN834
+
 ## Hardware
 
 [how to use a gmrs radio](https://www.baofengradio.com/blogs/news/how-easy-to-use-a-gmrs-radio)
