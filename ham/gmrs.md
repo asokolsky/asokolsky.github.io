@@ -4,7 +4,7 @@
 
 The US GMRS license is issued for a period of 10 years. The United States permits use by adult individuals who possess a valid GMRS license, as well as their immediate family members. Immediate relatives of the GMRS system licensee are entitled to communicate among themselves for personal or business purposes.
 
-WSGN834
+[WSGN834](https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=5072537)
 
 fr 462.700
 transmit: 263i
