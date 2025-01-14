@@ -28,12 +28,6 @@ WRNM907 South County CERT|Morgan Hill|CA|Permission Required|462.600
 
 ## Hardware
 
-[how to use a gmrs radio](https://www.baofengradio.com/blogs/news/how-easy-to-use-a-gmrs-radio)
-
-## Baofeng UV-5G Plus
-
-[Manual](https://radioddity.s3.amazonaws.com/Baofeng%20UV-5X%20%20User%20Manual_20210220.pdf)
-
 ## Baofeng UV-9G
 
 [![baofeng-uv-9g](baofeng-uv-9g.jpg "baofeng-uv-9g")](https://www.amazon.com/gp/product/B0B6NQYBKT/){:target="_blank"}
@@ -53,7 +47,7 @@ Receive Sensitivity|0.25μV (12dB SINAD)
 Power Output|1W @16 ohms
 Receive current|≤380mA
 Rated Audio Distortion|≤5%
-Connection for accessories|2 pin Kenwood jack
+Accessories Connector|328 Motorola accessory jack
 
 ## GMRS Channels and Frequencies
 
