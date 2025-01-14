@@ -6,10 +6,20 @@
 
 [Ham Radio Frequencies](https://www.dxzone.com/ham-radio-frequencies/)
 
+## Band Plans
+
 [band-plans](https://hamradioprep.com/band-plans/#elementor-toc__heading-anchor-0),
 [band-plan](https://www.arrl.org/band-plan)
 
-![Tech Band Privileges](I-OT-1-Tech-Band-Plan-21-6-2022.jpg)
+### Technician License Privileges
+
+![Tech Band Privileges](tech-band-plan.jpg)
+
+### General License Privileges
+
+![General Band Privileges - LF,MF,HF](general-band-plan-01.jpg)
+
+![General Band Privileges - VHF,UHF,etc](general-band-plan-02.jpg)
 
 
 ## 160m HF band (1.8-2.0 MHz)
