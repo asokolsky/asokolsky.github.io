@@ -4,7 +4,8 @@
 * VHF is between 30 and 300 MHz
 * UHF is between 300 and 3000 MHz.
 
-[Ham Radio Frequencies](https://www.dxzone.com/ham-radio-frequencies/)
+[Ham Radio Frequencies](https://www.dxzone.com/ham-radio-frequencies/),
+[Types of Radio Eemissions](https://en.wikipedia.org/wiki/Types_of_radio_emissions).
 
 ## Band Plans
 
@@ -198,11 +199,15 @@ Freq|Use
 53.5, 53.6, 53.7, 53.8|Radio remote control
 53.52, 53.9|Simplex
 
-## Aviation Band
+## Airband (108-137 MHz)
 
-121.500	Aviation Emergency & Distress
-121.500	Air Search and Rescue
-123.100	Aviation Search and Rescue
+[Airband](https://en.wikipedia.org/wiki/Airband)
+
+Freq|Use
+----|---
+121.500|[Aircraft emergency frequency](https://en.wikipedia.org/wiki/Aircraft_emergency_frequency)
+121.500|Air Search and Rescue
+123.100|Aviation Search and Rescue
 
 ## 2m VHF band (144-148 MHz)
 
@@ -216,14 +221,12 @@ ITU Region|Band
 
 Common repeater frequency offset: ±600kHz
 
-146.520	2-meter band National Simplex Channel
-
 Freq|Use
 ----|---
-144.00-144.05|EME (CW)
+144.00-144.05|EME, weak CW
 144.05-144.10|General CW and weak signals
 144.10-144.20|EME and weak-signal SSB
-144.200|National calling frequency
+**144.200**|**National calling frequency**, SSB
 144.200-144.275|General SSB operation
 144.275-144.300|Propagation beacons
 144.30-144.50|New OSCAR subband
@@ -236,13 +239,17 @@ Freq|Use
 145.80-146.00|OSCAR subband
 146.01-146.37|Repeater inputs
 146.40-146.58|Simplex
-146.52|National Simplex Calling Frequency
+**146.520**|**National Simplex Calling Frequency**
 146.61-146.97|Repeater outputs
 147.00-147.39|Repeater outputs
 147.42-147.57|Simplex
 147.60-147.99|Repeater inputs
 
-Notes: The frequency 146.40 MHz is used in some areas as a repeater input. This band plan has been proposed by the ARRL VHF-UHF Advisory Committee.
+Notes:
+
+* The frequency 146.40 MHz is used in some areas as a repeater input. This band plan has been proposed by the ARRL VHF-UHF Advisory Committee.
+* 146.520 - 2m band National Simplex Channel
+
 
 ## MURS Band (151 MHz)
 
@@ -266,18 +273,26 @@ Notes: The frequency 146.40 MHz is used in some areas as a repeater input. This 
 
 ## Weather Band (161-164 MHz)
 
-[Weather Radio](https://en.wikipedia.org/wiki/Weather_radio)
+[Weather Radio](https://en.wikipedia.org/wiki/Weather_radio),
+[NOAA Weather Radio](https://en.wikipedia.org/wiki/NOAA_Weather_Radio),
+[National Oceanic and Atmospheric Administration](https://en.wikipedia.org/wiki/National_Oceanic_and_Atmospheric_Administration) (NOAA)
 
-162.400	NOAA / National Weather Service broadcast frequency
-162.425	NOAA / National Weather Service broadcast frequency
-162.450	NOAA / National Weather Service broadcast frequency
-162.475	NOAA / National Weather Service broadcast frequency
-162.500	NOAA / National Weather Service broadcast frequency
-162.525	NOAA / National Weather Service broadcast frequency
-162.550	NOAA / National Weather Service broadcast frequency
+MHz|Notes
+---|-----
+162.400|NOAA / National Weather Service broadcast frequency
+162.425|NOAA / National Weather Service broadcast frequency
+162.450|NOAA / National Weather Service broadcast frequency
+162.475|NOAA / National Weather Service broadcast frequency
+162.500|NOAA / National Weather Service broadcast frequency
+162.525|NOAA / National Weather Service broadcast frequency
+162.550|NOAA / National Weather Service broadcast frequency
+161.650|
+161.750|
+161.775|
+162.000|
+163.275|
 
-
-
+All U.S. and Canadian stations transmit [SAME](https://en.wikipedia.org/wiki/Specific_Area_Message_Encoding) codes a few seconds before the 1,050 Hz attention tone that allows more advanced receivers to respond only for certain warnings that carry a specific code for the local area. S
 
 ## 1.25m VHF band (219-220 MHz, 222-225 MHz)
 
@@ -306,6 +321,10 @@ ITU Region|Band
 
 Note: The 222 MHz band plan was adopted by the ARRL Board of Directors in July 1991.
 
+## Military Air Distress 243.0 MHz, 406 MHz
+
+[Aircraft emergency frequency](https://en.wikipedia.org/wiki/Aircraft_emergency_frequency)
+
 ## 70cm UHF band (430-440 MHz)
 
 The [70cm band](https://en.wikipedia.org/wiki/70-centimeter_band) is a popular ham band due to the ready availability of equipment in both new and used markets. Amateurs usually use the band for FM or digital voice communications through repeaters, as well narrow band modes (analog and digital) for long-distance communications (called "DX", including Moon bounce). The band is also popular for Amateur Satellite Service.
@@ -320,38 +339,38 @@ Common repeater frequency offset: ±5MHz
 
 Channels:
 
-Ch|MHz Tx/Rx
---|--
-1|462.5625
-2|462.5875
-3|462.6125
-4|462.6375
-5|462.6625
-6|462.6875
-7|462.7125
-8|467.5625
-9|467.5875
-10|467.6125
-11|467.6375
-12|467.6625
-13|467.6875
-14|467.7125
-15|462.5500
-16|462.5750
-17|462.6000
-18|462.6250
-19|462.6500
-20|462.6750
-21|462.7000
-22|462.7250
-23|467.5500/462.5500
-24|467.5750/462.5750
-25|467.6000/462.6000
-26|467.6250/462.6250
-27|467.6500/462.6500
-28|467.6750/462.6750
-29|467.7000/462.7000
-30|467.7250/462.7250
+Ch|MHz Rx|Notes
+--|------|-------------
+1|462.5625|Shared FRS/GMRS simplex
+2|462.5875|Shared FRS/GMRS simplex
+3|462.6125|Shared FRS/GMRS simplex
+4|462.6375|Shared FRS/GMRS simplex
+5|462.6625|Shared FRS/GMRS simplex
+6|462.6875|Shared FRS/GMRS simplex
+7|462.7125|Shared FRS/GMRS simplex
+8|467.562|Shared FRS/GMRS simplex5
+9|467.5875|Shared FRS /GMRS simplex
+10|467.6125|Shared FRS/GMRS simplex
+11|467.6375|Shared FRS/GMRS simplex
+12|467.6625|Shared FRS/GMRS simplex
+13|467.6875|Shared FRS/GMRS simplex
+14|467.7125|Shared FRS/GMRS simplex
+15|462.5500|Shared FRS/GMRS simplex, repeater output.
+16|462.5750|Shared FRS/GMRS simplex, repeater output.
+17|462.6000|Shared FRS/GMRS simplex, repeater output.
+18|462.6250|Shared FRS/GMRS simplex, repeater output.
+19|462.6500|Shared FRS/GMRS simplex, repeater output.
+**20**|**462.6750**|Shared FRS/GMRS simplex, repeater output, **National GMRS calling channel** (CTCSS tone 141.3 Hz).
+21|462.7000|Shared FRS/GMRS simplex, repeater output.
+22|462.7250|Shared FRS/GMRS simplex, repeater output.
+23|467.5500/462.5500|repeater input. The output frequency of this repeater is the input frequency minus 5 MHz.
+24|467.5750/462.5750|repeater input. The output frequency of this repeater is the input frequency minus 5 MHz.
+25|467.6000/462.6000|repeater input. The output frequency of this repeater is the input frequency minus 5 MHz.
+26|467.6250/462.6250|repeater input. The output frequency of this repeater is the input frequency minus 5 MHz.
+27|467.6500/462.6500|repeater input. The output frequency of this repeater is the input frequency minus 5 MHz.
+28|467.6750/462.6750|repeater input. The output frequency of this repeater is the input frequency minus 5 MHz.
+29|467.7000/462.7000|repeater input. The output frequency of this repeater is the input frequency minus 5 MHz.
+30|467.7250/462.7250|repeater input. The output frequency of this repeater is the input frequency minus 5 MHz.
 
 462.675	GMRS emergency frequency (Channel 20)
 

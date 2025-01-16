@@ -51,43 +51,11 @@ Accessories Connector|328 Motorola accessory jack
 
 ## GMRS Channels and Frequencies
 
-Ch|MHz Tx/Rx
---|--
-1|462.5625
-2|462.5875
-3|462.6125
-4|462.6375
-5|462.6625
-6|462.6875
-7|462.7125
-8|467.5625
-9|467.5875
-10|467.6125
-11|467.6375
-12|467.6625
-13|467.6875
-14|467.7125
-15|462.5500
-16|462.5750
-17|462.6000
-18|462.6250
-19|462.6500
-20|462.6750
-21|462.7000
-22|462.7250
-23|467.5500/462.5500
-24|467.5750/462.5750
-25|467.6000/462.6000
-26|467.6250/462.6250
-27|467.6500/462.6500
-28|467.6750/462.6750
-29|467.7000/462.7000
-30|467.7250/462.7250
+See [GMRS Band (462-467 MHz)](bands.html)
 
 ## National Weather Radio Frequencies for US, Canada, Mexico
 
-[Weather Radio](https://en.wikipedia.org/wiki/Weather_radio),
-[NOAA Weather Radio](https://www.weather.gov/nwr/)
+See [Weather Band (161-164 MHz)](bands.html)
 
 ChNum|MHz|WX Channel
 -----|---|----

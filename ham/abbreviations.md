@@ -5,7 +5,9 @@ ABBR|Details
 CDCSS|[Continuous Digital Controlled Squelch System](https://www.sigidwiki.com/wiki/Digital-Coded_Squelch_(DCS)) aka DCS
 CTCSS|[Continuous Tone-Coded Squelch](https://en.wikipedia.org/wiki/Continuous_Tone-Coded_Squelch_System) [System](https://www.sigidwiki.com/wiki/CTCSS)
 DCS|[Digital-Coded Squelch](https://www.sigidwiki.com/wiki/Digital-Coded_Squelch_(DCS)), aka CDCSS
+EME|[Earth-Moon-Earth communication](https://en.wikipedia.org/wiki/Earth%E2%80%93Moon%E2%80%93Earth_communication)
 NOAA|[National Oceanic and Atmospheric Administration](https://en.wikipedia.org/wiki/National_Oceanic_and_Atmospheric_Administration)
+OSCAR|[Orbiting Satellite Carrying Amateur Radio](https://en.wikipedia.org/wiki/Amateur_radio_satellite)
 POTA|[Parks On The Air](https://en.wikipedia.org/wiki/Parks_On_The_Air)
 QSO|[Q-code](q-codes.html), [contact](https://en.wikipedia.org/wiki/Contact_(amateur_radio))
 QSL|[Q-code](q-codes.html), [QSL card](https://en.wikipedia.org/wiki/QSL_card)
