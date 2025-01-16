@@ -1,4 +1,4 @@
-# HAM
+# HAM - KO6HMV
 
 [FCC Part 97 AMATEUR RADIO SERVICE](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-D/part-97)
 
@@ -16,15 +16,15 @@ Also:
 * [Ten-code](https://en.wikipedia.org/wiki/Ten-code)
 * [Equipment reviews](https://www.eham.net/reviews/)
 
-## Licensing
-
-FCC:
+## FCC Licensing
 
 * [FCC Cores](https://apps.fcc.gov/cores/userLogin.do?btnContinue=true)
 * [FSS License search](https://wireless2.fcc.gov/UlsApp/UlsSearch/searchLicense.jsp)
-* FRN: 0036471944
+* [HAM call-sign](https://www.fcc.gov/wireless/bureau-divisions/mobility-division/amateur-radio-service/amateur-call-sign-systems),
+[general call-sign](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-2/subpart-D)
+* [KO6HMV](https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=5077343), FRN: 0036471944
 
-Classes:
+## Training
 
 * [ham radio prep](http://hamradioprep.com).
 * Next: [www.qrz.com/jumpstart](https://www.qrz.com/jumpstart)
