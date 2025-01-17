@@ -2,7 +2,7 @@
 
 ## chirp
 
-[CHIRP](https://chirpmyradio.com/projects/chirp/wiki/Home) is an open-source tool for programming your radio.
+[CHIRP](https://chirpmyradio.com/projects/chirp/wiki/Home) is an open-source tool for programming your radio, [repo](https://github.com/kk7ds/chirp).
 
 
 ## Fast Light Digital
