@@ -7,11 +7,6 @@
 * [Server- and Client-side Certificates for Python Programmer](https.html)
 * Design patters examples: [singleton](global_logger.py),
 [pre-bound method](prebound_method_pattern.py), [sentinel](sentinel.py)
-* Cheat sheet:
-[F-Strings Number Formatting](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
-* [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
-* [5 Ways to Measure Execution Time in Python](https://superfastpython.com/benchmark-execution-time/)
-* [python packages: src layout vs flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
 
 ## Development
 
@@ -35,6 +30,12 @@ like aws cli does.
 
 ## External resources
 
+* [Tutorial](https://docs.python.org/3/tutorial/index.html)
+* Cheat sheet:
+[F-Strings Number Formatting](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
+* [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
+* [5 Ways to Measure Execution Time in Python](https://superfastpython.com/benchmark-execution-time/)
+* [python packages: src layout vs flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
 * [Google style guide](https://google.github.io/styleguide/pyguide.html)
 * [Guide to Python project management and packaging](https://reinforcedknowledge.com/a-comprehensive-guide-to-python-project-management-and-packaging-concepts-illustrated-with-uv-part-i/)
 * [Python Closures](https://realpython.com/python-closure/)
