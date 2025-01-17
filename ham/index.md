@@ -38,12 +38,18 @@ Exams:
 
 ## Clubs
 
-* [Assoc of SV Amateur Radio Orgs - asvaro](https://www.asvaro.org/)
+* [West Valley Amateur Radio Assoc - WVARA](https://wvara.org),
+[meetings](https://wvara.org/wordpress/meeting-schedule/)
+* [Palo Alto Amateur Radio Association - PAARA](https://paara.org/),
+[meetings](https://paara.org/pages/meetings.html)
+
+More:
+
+* [Assoc of SV Amateur Radio Orgs - ASVARO](https://www.asvaro.org/)
 * [Ames Amateur Radio Club](https://hamradio.arc.nasa.gov)
-* [Santa Clara County Amateur Radio Assoc - sccara](https://sccara.org/)
-* [West Valley Amateur Radio Assoc - wvara](https://wvara.org)
+* [Santa Clara County Amateur Radio Assoc - SCCARA](https://sccara.org/)
 * [Mount Diablo Amateur Radio Club - MDARC](https://www.mdarc.org/)
-* [South Bay Amateur Radio Assoc - sbara](http://www.sbara.org)
+* [South Bay Amateur Radio Assoc - SBARA](http://www.sbara.org)
 * [50mhz and up](https://www.50mhzandup.org/)
 * [more](https://www.baears.com/files/handouts/ClubList.pdf)
 
@@ -56,7 +62,9 @@ Contact: Clark R. Murphy KE6KXO
 Phone: (day) 408‐262‐9334 ‐ (eve) 408‐262‐9334
 Web: http://www.qsl.net/sccara
 
+## Repeaters
 
+* [Salinas Valley Repeater Group](https://w6dxw.com), local repeater: W6STH.
 
 ## Decibels
 
