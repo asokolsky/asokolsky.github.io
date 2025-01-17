@@ -46,6 +46,13 @@ To upload the object into the bucket:
 aws s3 mv delete-me.txt s3://$BUCKET/delete-me.txt
 ```
 
+To upload from console:
+```sh
+aws s3 cp - s3://$BUCKET/foo/bar <<EOF
+   baz
+EOF
+```
+
 To download the bucket object:
 ```sh
 aws s3 cp s3://$BUCKET/foo.tgz /tmp/foo.tgz
@@ -53,5 +60,5 @@ aws s3 cp s3://$BUCKET/foo.tgz /tmp/foo.tgz
 
 To dump the object to stdout:
 ```sh
-aws s3 cp s3://$BUCKET/foo.json -
+aws s3 cp s3://$BUCKET/foo/bar -
 ```
