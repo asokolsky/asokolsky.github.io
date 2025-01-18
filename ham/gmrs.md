@@ -47,7 +47,7 @@ Receive Sensitivity|0.25μV (12dB SINAD)
 Power Output|1W @16 ohms
 Receive current|≤380mA
 Rated Audio Distortion|≤5%
-Accessories Connector|328 Motorola accessory jack
+Accessories Connector|Motorola GP328 accessory jack
 
 ## GMRS Channels and Frequencies
 
