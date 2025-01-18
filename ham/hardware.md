@@ -1,8 +1,14 @@
 # Hardware
 
+## Handhelds
+
+Anytone AT-D878UVII-Plus
+
 ## Transceivers 20W
 
 Xiegu G90 [reviews](https://www.eham.net/reviews/view-product?id=14255)
+
+Anytone AT-D578UV III Plus
 
 AnyTone AT-778UV [reviews](https://www.eham.net/reviews/view-product?id=13441) aka Retevis RT95 ~$120
 

@@ -7,6 +7,7 @@ way](https://bas.codes/posts/python-virtualenv-venv-pip-pyenv-poetry) to
 * [venv](https://docs.python.org/3/library/venv.html),
 [makefile](/apps/make/python.mak)
 * [virtulaenv](https://virtualenv.pypa.io/en/latest/)
+* [pipx](https://pipx.pypa.io/latest/how-pipx-works/)
 * [pyenv](https://github.com/pyenv/pyenv) with
 [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) -
 see [How pyenv decides on a python

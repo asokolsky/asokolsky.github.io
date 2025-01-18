@@ -64,6 +64,9 @@ Freq|Use
 * Only one signal at a time is permitted on any channel
 * Maximum effective radiated output is 100 W PEP
 
+US 60 meter channels [Center](https://github.com/kk7ds/chirp/blob/master/chirp/stock_configs/US%2060%20meter%20channels%20(Center).csv),
+[Dial](https://github.com/kk7ds/chirp/blob/master/chirp/stock_configs/US%2060%20meter%20channels%20(Dial).csv)
+
 Freq|Use
 ----|---
 5330.5|USB phone1 and CW/RTTY/data2
@@ -188,7 +191,7 @@ Freq|Use
 52.02, 52.04|FM simplex
 52.2|TEST PAIR (input)
 52.5-52.98|Repeater output (except as noted; 23 channels)
-52.525|Primary FM simplex
+**52.525**|**Primary FM simplex - US Calling Frequency**
 52.54|Secondary FM simplex
 52.7|TEST PAIR (output)
 53.0-53.48|Repeater inputs (except as noted; 19 channels)
@@ -201,7 +204,8 @@ Freq|Use
 
 ## Airband (108-137 MHz)
 
-[Airband](https://en.wikipedia.org/wiki/Airband)
+[Airband](https://en.wikipedia.org/wiki/Airband),
+[US Aviation Frequencies.csv](https://github.com/kk7ds/chirp/blob/master/chirp/stock_configs/US%20Aviation%20Frequencies.csv)
 
 Freq|Use
 ----|---
@@ -253,6 +257,11 @@ Notes:
 
 ## MURS Band (151 MHz)
 
+[Multi Use Radio Service](https://en.wikipedia.org/wiki/Multi-Use_Radio_Service)
+
+[US MURS Channels.csv](https://github.com/kk7ds/chirp/blob/master/chirp/stock_configs/US%20MURS%20Channels.csv)
+
+
 151.820	Multi Use Radio Service (MURS)
 151.880	Multi Use Radio Service (MURS)
 
@@ -266,7 +275,9 @@ Notes:
 157.100	U.S. Coast Guard Liaison (Marine Radio Channel 22)
 156.300	Marine Intership Safety (Marine Radio Channel 6)
 
-## 161 MHz
+## US CA Railroad Channels (159-161 MHz)
+
+[US CA Railroad Channels.csv](https://github.com/kk7ds/chirp/blob/master/chirp/stock_configs/US%20CA%20Railroad%20Channels.csv)
 
 161.205	Railroad Police Mutual Aid
 
@@ -276,6 +287,8 @@ Notes:
 [Weather Radio](https://en.wikipedia.org/wiki/Weather_radio),
 [NOAA Weather Radio](https://en.wikipedia.org/wiki/NOAA_Weather_Radio),
 [National Oceanic and Atmospheric Administration](https://en.wikipedia.org/wiki/National_Oceanic_and_Atmospheric_Administration) (NOAA)
+
+[US NOAA Weather Alert.csv](https://github.com/kk7ds/chirp/blob/master/chirp/stock_configs/US%20NOAA%20Weather%20Alert.csv)
 
 MHz|Notes
 ---|-----
@@ -336,6 +349,8 @@ Common repeater frequency offset: ±5MHz
 ## GMRS Band (462-467 MHz)
 
 [GMRS band](https://en.wikipedia.org/wiki/General_Mobile_Radio_Service#Frequency_assignments) is shared with [Family Radio Service](https://en.wikipedia.org/wiki/Family_Radio_Service) (FRS).
+
+[US FRS and GMRS Channels.csv](https://github.com/kk7ds/chirp/blob/master/chirp/stock_configs/US%20FRS%20and%20GMRS%20Channels.csv)
 
 Channels:
 
