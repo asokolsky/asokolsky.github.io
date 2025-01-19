@@ -2,7 +2,7 @@
 
 ## Handhelds
 
-Anytone AT-D878UVII-Plus
+Anytone AT-D878UVII-Plus, [manual](https://cqradios.com/documents/AT-D878UVII-PLUS-USER-MANUAL.pdf)
 
 ## Transceivers 20W
 
