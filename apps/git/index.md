@@ -13,7 +13,10 @@ And more:
 * [Atlassian advanced tips](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 * [8 Easy Steps to Set Up Multiple GitHub Accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
 
-See also [gh](/linux/cli-gh.html).
+Proprietary Extensions
+
+* [gh CLI for github](cli-gh.html)
+* [glab CLI for gitlab](cli-glab.html)
 
 ## Configs
 
@@ -142,20 +145,4 @@ git push --set-upstream origin master
 Instead of using git submodules, sometimes this may make more sense:
 ```sh
 {% include_relative update-from-repo.sh %}
-```
-
-## github
-
-To re-authenticate:
-
-```sh
-gh auth login
-```
-
-## gitlab
-
-To re-authenticate:
-
-```sh
-glab auth login
 ```
