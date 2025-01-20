@@ -36,7 +36,7 @@ vncserver -kill :1
 ```
 
 
-## Client - remmina
+## Client - remmina - never worked
 
 
 Use [remmina](https://remmina.org/how-to-install-remmina/).
@@ -44,16 +44,19 @@ Use [remmina](https://remmina.org/how-to-install-remmina/).
 ```sh
 sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
 sudo apt update
-sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
+sudo apt install remmina remmina-plugin-vnc remmina-plugin-secret
 ```
 
-Worked as expected.
+In gui when convifguring the server: <host-or-ip>:1 - remember to enter the display number.
 
-Tips:
+## Client - tigervnc-viewer
 
-* in the client preferences set resolution to dynamic.
+Install:
+```sh
+sudo apt install tigervnc-viewer
+```
 
-Problems:
-
-* PolicyKit1 KDE agent dialog:
-`Authentication is required to create a color managed device`.
+Connect:
+```sh
+xtigervncviewer exi:1
+```
