@@ -1,4 +1,4 @@
-# Antennaes / Connectors
+# Antennae / Connectors
 
 * [Signal Stick](https://signalstuff.com/products/st-bnc/)
 * [CHA LEFS 4010](https://chameleonantenna.com/shop-here/ols/products/cha-lefs-4010)
