@@ -116,7 +116,7 @@ exec cinnamon-session-cinnamon
 ```
 
 
-## Client - remmina
+## Client - remmina - never worked
 
 Use [remmina](https://remmina.org/how-to-install-remmina/).
 
