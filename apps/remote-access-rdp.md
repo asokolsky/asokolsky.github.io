@@ -1,9 +1,9 @@
-# Remote Access to Ubuntu Studio 23.xx using RDP
+# Remote Access to Mint/Ubuntu Studio 23.xx using RDP
 
 This is about an [RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)
 server on linux and client on ...whatever.
 
-## Server using gnome-remote-desktop
+## Server using gnome-remote-desktop (Failed)
 
 [gnome-remote-desktop](https://gitlab.gnome.org/GNOME/gnome-remote-desktop)
 
@@ -65,12 +65,28 @@ RDP:
 	Username: (hidden)
 	Password: (hidden)
 ```
+
+Alternatively:
+```
+gsettings list-recursively org.gnome.desktop.remote-desktop.rdp
+org.gnome.desktop.remote-desktop.rdp enable true
+org.gnome.desktop.remote-desktop.rdp negotiate-port true
+org.gnome.desktop.remote-desktop.rdp port uint16 3389
+org.gnome.desktop.remote-desktop.rdp screen-share-mode 'mirror-primary'
+org.gnome.desktop.remote-desktop.rdp tls-cert '/home/alex/.local/share/gnome-remote-desktop/tls.crt'
+org.gnome.desktop.remote-desktop.rdp tls-key '/home/alex/.local/share/gnome-remote-desktop/tls.key'
+org.gnome.desktop.remote-desktop.rdp view-only true
+
+```
+
 Finally:
 
 ```sh
 systemctl --user enable gnome-remote-desktop.service
 systemctl --user restart gnome-remote-desktop.service
 ```
+
+Config stored in : `/usr/share/gnome-remote-desktop`.
 
 ### gnome-remote-desktop Configuration
 
@@ -82,36 +98,48 @@ XDG_CURRENT_DESKTOP=GNOME gnome-control-center
 
 Does not reflect what `grdctl status`.
 
-## Server using xrdp (obsolete)
+## Server using xrdp
 
-Install [xrdp](https://en.wikipedia.org/wiki/Xrdp) using
-[this script](https://c-nergy.be/blog/?p=19228).
+Install [xrdp](https://en.wikipedia.org/wiki/Xrdp) using [this script](https://c-nergy.be/blog/?p=20178).
 
-In the context of the ssh session.
+Install:
 
 ```sh
-wget https://www.c-nergy.be/downloads/xRDP/xrdp-installer-1.4.8.zip
-unzip xrdp-installer-1.4.8.zip
-chmod +x xrdp-installer-1.4.8.sh
+wget https://www.c-nergy.be/downloads/xRDP/xrdp-installer-1.5.3.zip
+unzip xrdp-installer-1.5.3.zip
+chmod +x xrdp-installer-1.5.3.sh
 ```
 
 Then just launch the script with no options.
 
+To verify:L
+```sh
+systemctl status xrdp.service
+systemctl status xrdp-sesman.service
+```
+To verify the socket:
+```
+ss -lnt|grep 3389
+```
 
-## Client - Linux
+## Client (remmina) on Linux
 
 
 Use [remmina](https://remmina.org/how-to-install-remmina/).
 
 ```sh
-sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+sudo apt-add-repository ppa:C-ppa-team/remmina-next
 sudo apt update
 sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
 ```
-
 Worked as expected.
 
-Tips:
+## Remmina Configuration
+
+Preferences/RDP
+
+* Keyboard Layout: US- English
+* Keyboard [scancode remapping](https://kbdlayout.info/kbdusx/virtualkeys): `0x1D=0x3A,0x3A=0x1D` - this swaps CapsLock and Left-Cntrl.
 
 * in the client preferences set resolution to dynamic.
 

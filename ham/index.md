@@ -2,19 +2,24 @@
 
 [FCC Part 97 AMATEUR RADIO SERVICE](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-D/part-97)
 
+* [Abbreviations](abbreviations.html)
+* [Antennae](antennae.html)
+* [Bands](bands.html)
+* [Broadcast stations](stations.html)
+* [GMRS](gmrs.html)
+* [Phonetic Alphabet](phonetic-alphabet.html)
+* [Q-codes](q-codes.html)
+* [Software](software.html)
+* [Stations](stations.html)
+* [Transceivers](transceivers.html)
+
+More:
+* [Ten-code](https://en.wikipedia.org/wiki/Ten-code)
+* [Equipment reviews](https://www.eham.net/reviews/)
+
 Emergency service:
 * [Amateur Radio Emergency Service (ARES)](http://www.arrl.org/ares)
 * [Radio Amateur Civil Emergency Service (RACES)](https://www.usraces.org/)
-
-Abbreviations:
-* [abbreviations](abbreviations.html)
-* [Q-codes](q-codes.html)
-* [phonetic alphabet](phonetic-alphabet.html)
-
-Also:
-* [HAM Bands](bands.html)
-* [Ten-code](https://en.wikipedia.org/wiki/Ten-code)
-* [Equipment reviews](https://www.eham.net/reviews/)
 
 ## FCC Licensing
 
