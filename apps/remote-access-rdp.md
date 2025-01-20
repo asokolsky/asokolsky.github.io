@@ -1,6 +1,7 @@
 # Remote Access to Ubuntu Studio 23.xx using RDP
 
-[RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol) server on linux and client on ...whatever.
+This is about an [RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol)
+server on linux and client on ...whatever.
 
 ## Server using gnome-remote-desktop
 
@@ -32,7 +33,8 @@ failes with
 Init TPM credentials failed because Failed to initialize transmission interface context: tcti:IO failure, using GKeyFile as fallback.
 ```
 
-Workaround from [here](https://bugs.launchpad.net/ubuntu/+source/gnome-remote-desktop/+bug/2063333):
+Workaround from
+[here](https://bugs.launchpad.net/ubuntu/+source/gnome-remote-desktop/+bug/2063333):
 ```sh
 sudo systemd-sysusers
 sudo systemd-tmpfiles --create /usr/lib/tmpfiles.d/gnome-remote-desktop-tmpfiles.conf
@@ -82,7 +84,8 @@ Does not reflect what `grdctl status`.
 
 ## Server using xrdp (obsolete)
 
-Install [xrdp](https://en.wikipedia.org/wiki/Xrdp) using [this script](https://c-nergy.be/blog/?p=19228).
+Install [xrdp](https://en.wikipedia.org/wiki/Xrdp) using
+[this script](https://c-nergy.be/blog/?p=19228).
 
 In the context of the ssh session.
 
@@ -119,4 +122,36 @@ Problems:
 
 ## Client - MacOS
 
-[FreeRDP](https://github.com/FreeRDP/FreeRDP)
+Install [FreeRDP](https://github.com/FreeRDP/FreeRDP):
+```sh
+brew install freerdp
+```
+
+Then:
+```
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn][0x7fd798017400]: *************************************************
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn][0x7fd798017400]: This build is using [runtime-check] build options:
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn][0x7fd798017400]: * 'WITH_VERBOSE_WINPR_ASSERT=ON'
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn][0x7fd798017400]:
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn][0x7fd798017400]: [runtime-check] build options might slow down the application
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn][0x7fd798017400]: *************************************************
+[12:01:31:521] [65803:4ba014c0] [ERROR][com.winpr.crypto.hash] - [winpr_Digest_Init_Internal]: Failed to initialize digest md4
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn_hash][0x7fd798017400]: *************************************************
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn_hash][0x7fd798017400]: [SSL] {Digest} build or configuration missing:
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn_hash][0x7fd798017400]:  * md4: NTLM support not available
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn_hash][0x7fd798017400]: *************************************************
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn_cipher][0x7fd798017400]: *************************************************
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn_cipher][0x7fd798017400]: [SSL] {Cipher} build or configuration missing:
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn_cipher][0x7fd798017400]: * rc4: assistance files with encrypted passwords, NTLM, RDP licensing and RDP security will not work
+[12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn_cipher][0x7fd798017400]: *************************************************
+This is FreeRDP version 3.10.3 (3.10.3)
+```
+
+[FreeRDP Manual](https://github.com/awakecoding/FreeRDP-Manuals/blob/master/User/FreeRDP-User-Manual.markdown)
+
+To connect:
+
+```sh
+xfreerdp /v:192.168.10.50:3389 /u:alex /p:*** /cert:ignore /auto-reconnect-max-retries:0 /smart-sizing +clipboard /home-drive
+	/sec:tls:on
+```
