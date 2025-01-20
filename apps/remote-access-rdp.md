@@ -95,20 +95,24 @@ chmod +x xrdp-installer-1.4.8.sh
 Then just launch the script with no options.
 
 
-## Client - Linux
+## Client (remmina) on Linux
 
 
 Use [remmina](https://remmina.org/how-to-install-remmina/).
 
 ```sh
-sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+sudo apt-add-repository ppa:C-ppa-team/remmina-next
 sudo apt update
 sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
 ```
-
 Worked as expected.
 
-Tips:
+## Remmina Configuration
+
+Preferences/RDP
+
+* Keyboard Layout: US- English
+* Keyboard [scancode remapping](https://kbdlayout.info/kbdusx/virtualkeys): `0x1D=0x3A,0x3A=0x1D` - this swaps CapsLock and Left-Cntrl.
 
 * in the client preferences set resolution to dynamic.
 
