@@ -2,11 +2,18 @@
 
 ## Handhelds
 
-Anytone AT-D878UVII-Plus, [Quick Start Guide](https://cdn.shopify.com/s/files/1/0833/9095/files/AnyTone_Quick_Start_Guide_PDF_Edit-min.pdf?3425), [manual](https://cqradios.com/documents/AT-D878UVII-PLUS-USER-MANUAL.pdf), [Programming Guide](https://cdn.shopify.com/s/files/1/0833/9095/files/AT-D868UV_D878UV_Programming_Guide_1.33.pdf?40).
+### Anytone AT-D878UVII-Plus
+
+* [Quick Start Guide](https://www.bridgecomsystems.com/pages/AnyTone-handheld-quick-start-guide),
+[pdf](https://cdn.shopify.com/s/files/1/0833/9095/files/AnyTone_Quick_Start_Guide_PDF_Edit-min.pdf?3425),
+* [Manual](https://cqradios.com/documents/AT-D878UVII-PLUS-USER-MANUAL.pdf),
+* [Programming Guide](https://cdn.shopify.com/s/files/1/0833/9095/files/AT-D868UV_D878UV_Programming_Guide_1.33.pdf?40).
 
 * [Quick Start Guide](https://www.youtube.com/watch?v=PzFZ37S7I6c)
 * [Factory Reset](https://www.youtube.com/watch?v=JMRsZn20AoM)
 * [Как программировать](https://www.youtube.com/watch?v=OxyA9U8OaDc)
+
+### Yaesu FT-5DR
 
 Yaesu [FT-5DR](https://www.yaesu.com/indexVS.cfm?cmd=DisplayProducts&encProdID=8FA58F426C671235EA5791EE6814FF48) [$500](https://www.amazon.com/YAESU-FT-5DR-Digital-Transceiver-Display/dp/B09GS924GT)
 
