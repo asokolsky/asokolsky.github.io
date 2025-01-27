@@ -180,6 +180,7 @@ This is FreeRDP version 3.10.3 (3.10.3)
 To connect:
 
 ```sh
-xfreerdp /v:192.168.10.50:3389 /u:alex /p:*** /cert:ignore /auto-reconnect-max-retries:0 /smart-sizing +clipboard /home-drive
+xfreerdp /v:192.168.10.50:3389 /u:alex /p:*** /cert:ignore \
+	/auto-reconnect-max-retries:0 /smart-sizing +clipboard /home-drive \
 	/sec:tls:on
 ```
