@@ -1,6 +1,6 @@
-# gh CLI
+# Github CLI gh
 
-I use github cli `gh`, [docs](https://cli.github.com/manual/).
+[docs](https://cli.github.com/manual/).
 
 Here is how to use different accounts for different repos.
 
@@ -24,6 +24,14 @@ github.com
   ✓ Git operations for github.com configured to use ssh protocol.
   ✓ Token: *******************
 ```
+
+To re-authenticate:
+
+```sh
+gh auth login
+```
+
+
 
 ## Project-specific Credentials
 

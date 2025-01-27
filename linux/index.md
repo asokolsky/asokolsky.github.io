@@ -17,7 +17,7 @@
 * [ethtool](cli-ethtool.html)
 * [find](cli-find.html)
 * [fwupd client tool](cli-fwupdmgr.html)
-* [gh](cli-gh.html)
+* [git](/apps/git/), [gh](/apps/git/cli-gh.html), [glab](/apps/git/cli-glab.html)
 * [grep](cli-grep.html)
 * [iftop](cli-iftop.html)
 * [inxi](cli-inxi.html)
