@@ -24,6 +24,24 @@ Specific to that single repository.
 * to set: `git config [--local] core.ignorecase true`
 * to edit repository config file: `git config --edit [--local]`
 
+Set repo-specific (non-global) config settings:
+```sh
+git config user.name "Alex Sokolsky"
+git config user.email "asokolsky@gmail.com"
+git config core.sshCommand "ssh -i ~/.ssh/private_key"
+```
+
+Make sure your private identity is available:
+```sh
+ssh-add ~/.ssh/private_key
+```
+
+Then
+```sh
+git remote add origin git@github.com:asokolsky/repo.git
+git push --set-upstream origin master
+```
+
 ## View All Settings
 
 Show system, global, and (if inside a repository) local configs:
