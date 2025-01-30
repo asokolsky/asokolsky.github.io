@@ -2,7 +2,10 @@
 
 [glab](https://docs.gitlab.com/ee/editor_extensions/gitlab_cli/)
 
-Config is stored in `~/.config/glab-cli/`.
+Config is stored in `~/.config/glab-cli/`. Change it using:
+```sh
+glab config set
+```
 
 ## Authentication
 
@@ -25,4 +28,10 @@ glab auth login
 
 ## Project-specific Credentials
 
-TBD
+Set [GLAB_CONFIG_DIR](https://gitlab.com/gitlab-org/cli/-/tree/main#environment-variables):
+
+```sh
+cd project_dir/
+mkdir .glconfig
+export GLAB_CONFIG_DIR=`pwd`/.glconfig
+```

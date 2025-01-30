@@ -1,6 +1,6 @@
 # Github CLI gh
 
-[docs](https://cli.github.com/manual/).
+[github manual](https://cli.github.com/manual/).
 
 Here is how to use different accounts for different repos.
 
@@ -12,7 +12,6 @@ On my office laptop `$GH_CONFIG_DIR` is not set:
 
 ```
 > echo $GH_CONFIG_DIR # returns blank
-
 ```
 
 My authentication status:
@@ -31,13 +30,11 @@ To re-authenticate:
 gh auth login
 ```
 
-
-
 ## Project-specific Credentials
 
 To use different credentials while working on a project:
 
-```
+```sh
 cd project_dir/
 mkdir .ghconfig
 export GH_CONFIG_DIR=`pwd`/.ghconfig
@@ -68,4 +65,4 @@ Press Enter to open github.com in your browser...
 asokolsky in ~/Projects/asokolsky.github.io [main]>
 ```
 
-I also added `.config/*` to the repo's `.gitignore`.
+I also added `.ghconfig/*` to the repo's `.gitignore`.
