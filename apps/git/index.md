@@ -8,6 +8,7 @@
 * [custom git merge driver](custom-merge-driver.html)
 * [Hosting a Repo in a Cloud](hosting.html)
 * [merge vs rebase workflow](workflow.html)
+* [git squash](squash-commits.html)
 * [FAQs](faq.html)
 
 And more:
