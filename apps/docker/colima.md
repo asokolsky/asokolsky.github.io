@@ -41,27 +41,32 @@ to resolve:
 export DOCKER_HOST=unix://$HOME/.colima/docker.sock
 ```
 
+To edit default config:
+```sh
+colima template --editor emacs
+```
+
 ## Troubleshooting the Colima VM
+
+To look at the VM state and the resources allocated:
+```sh
+colima ls
+```
 
 Under the hood, Colima runs an Ubuntu VM which may need to be recycled.
 
-### Update and Reboot the Colima VM
-
+To update and reboot the VM:
 ```
 $ colima ssh
 user@colima:~$ sudo apt update -y && sudo apt upgrade -y
 user@colima:~$ reboot
 ```
 
-### Reset the Colima VM
-
 A more brute-force approach is to delete the VM and provision a new one.
 
-First look at the VM state and how many resources are allocated
-```
-$ colima ls
-$ colima delete -f
-$ colima start -v --cpu 4 --memory 8
+```sh
+colima delete -f
+colima start -v --cpu 4 --memory 8
 ```
 
 Note the `-v` switch which will produce additional output that can be helpful.
