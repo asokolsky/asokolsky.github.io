@@ -50,6 +50,7 @@ Exams:
 
 More:
 
+* [World Radio League - WRL](https://app.worldradioleague.com/)
 * [Assoc of SV Amateur Radio Orgs - ASVARO](https://www.asvaro.org/)
 * [Ames Amateur Radio Club](https://hamradio.arc.nasa.gov)
 * [Santa Clara County Amateur Radio Assoc - SCCARA](https://sccara.org/)

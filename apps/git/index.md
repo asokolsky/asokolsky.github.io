@@ -15,9 +15,10 @@ And more:
 * [Atlassian advanced tips](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 * [8 Easy Steps to Set Up Multiple GitHub Accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
 
-See also
+Proprietary Extensions
 
-* [gh](/linux/cli-gh.html).
+* [gh CLI for github](cli-gh.html)
+* [glab CLI for gitlab](cli-glab.html)
 
 ## Handling an Upstream Repo
 
@@ -48,45 +49,9 @@ To https://github.com/asokolsky/psmqtt.git
    a98ddea..52094f3  master -> master
 ```
 
-## Repo-specific Config
-
-Set repo-specific (non-global) config settings:
-```sh
-git config user.name "Alex Sokolsky"
-git config user.email "asokolsky@gmail.com"
-git config core.sshCommand "ssh -i ~/.ssh/private_key"
-```
-
-Make sure your private identity is available:
-```sh
-ssh-add ~/.ssh/private_key
-```
-
-Then
-```sh
-git remote add origin git@github.com:asokolsky/repo.git
-git push --set-upstream origin master
-```
-
 ## Importing a file from a different repo
 
 Instead of using git submodules, sometimes this may make more sense:
 ```sh
 {% include_relative update-from-repo.sh %}
-```
-
-## github
-
-To re-authenticate:
-
-```sh
-gh auth login
-```
-
-## gitlab
-
-To re-authenticate:
-
-```sh
-glab auth login
 ```
