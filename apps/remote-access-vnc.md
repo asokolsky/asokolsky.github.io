@@ -67,7 +67,7 @@ case "${1:-unspecified}" in
         vncserver -list ;;
     *)
         echo "vnc start|stop|list"
-	exit 1
+	    exit 1
 esac
 ```
 
@@ -116,7 +116,7 @@ exec cinnamon-session-cinnamon
 ```
 
 
-## Client - remmina - never worked
+## Client - remmina
 
 Use [remmina](https://remmina.org/how-to-install-remmina/).
 
@@ -129,7 +129,7 @@ sudo apt install remmina remmina-plugin-vnc remmina-plugin-secret
 In GUI when configuring for the server use: `<host-or-ip>:1`.  Remember to
 enter the display number.
 
-## Client - tigervnc-viewer
+## Client - tigervnc-viewer on Linux
 
 Install:
 ```sh
@@ -140,3 +140,28 @@ Connect:
 ```sh
 xtigervncviewer exi:1
 ```
+
+## Client MacOS
+
+In Finder: Go / Connect to Server enter URL: `vnc://192.168.1.50:5901`.
+
+Known Problems caused by [Karabiner](https://github.com/pqrs-org/Karabiner-Elements/issues/425):
+
+* Ctrl+C, Ctrl+A are not passed to server
+
+## Client - tiger-vnc on MacOS
+
+Install:
+```sh
+brew install tiger-vnc
+```
+
+Then use [vncviewer](https://tigervnc.org/doc/vncviewer.html):
+
+```sh
+vncviewer −FullScreen −FullscreenSystemKeys 192.168.10.50:1
+```
+
+Known Problems caused by Karabiner:
+
+* Ctrl+C, Ctrl+A are not passed to server

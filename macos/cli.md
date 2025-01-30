@@ -76,3 +76,15 @@ ditto ~/Pictures/Fall2015/ /Volumes/PhotoBackup/2015/
 ```sh
 sudo powermetrics --samplers smc
 ```
+
+## Networking
+
+Show Interfaces:
+```sh
+ifconfig
+```
+
+Show Routes:
+```sh
+netstat -rn
+```
