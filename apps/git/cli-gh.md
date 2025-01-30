@@ -39,8 +39,8 @@ To use different credentials while working on a project:
 
 ```
 cd project_dir/
-mkdir .config
-export GH_CONFIG_DIR=.config
+mkdir .ghconfig
+export GH_CONFIG_DIR=`pwd`/.ghconfig
 ```
 
 Verify your credentials are null:
