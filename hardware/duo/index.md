@@ -14,23 +14,16 @@ Motherboard|ASRock Z370M-ITX/ac LGA 1151 (300 Series) Intel Z370 HDMI SATA 6Gb/s
 RAM|Crucial Pro 2x16GB DDR4 3200MT/s CP2K16G4DFRA32A
 Ethernet|onboard I219-V, I211
 GPU|Intel UHD Graphics 630
+GPU|NVIDIA GeForce GT 1030
 SSD|500GB WD Blue SN550 NVMe M.2 2280, 3D NAND, Up to 2,400 MB/s - WDS500G2B0C
 PSU|300W TFX12V PSU
-Case|IN-WIN CE685.FH300TB3 MicroATX case
+Case|[IN-WIN CE685.FH300TB3 MicroATX case](https://www.newegg.com/p/N82E16811108109)
 OS|Linux Mint
 
 * [PCIe Devices](lspci.html)
 * [DMI Info](dmi.html)
 * [IOMMU](iommu.html)
 * [USB Devices](lsusb.html)
-
-## USB Devices
-
-```
-alex@duo > lsusb
-Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
-Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-```
 
 ## Networking
 

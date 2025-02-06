@@ -3,3 +3,4 @@ isp.md
 .mypy_cache
 google-cloud-sdk
 *~
+.DS_Store
