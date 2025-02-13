@@ -43,5 +43,6 @@ Video Tools:
 * [docker](docker/docker.html)
 * [emacs](emacs/)
 * [kubectl](/k8s/kubectl.html)
+* [slack](slack/)
 * [tmux](tmux.html)
 * [vi](vi.html)
