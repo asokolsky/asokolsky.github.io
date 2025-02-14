@@ -2,15 +2,13 @@
 
 See:
 
-* [tutorial](https://jsonnet.org/learning/tutorial.html),
+* [jsonnet Command Line](https://www.mankier.com/1/jsonnet)
+* [tutorial](https://jsonnet.org/learning/tutorial.html)
 * [language reference](https://jsonnet.org/ref/language.html)
-* [repo](https://github.com/google/jsonnet),
-* [go implementation](https://github.com/google/go-jsonnet),
-* [python binding](https://pypi.org/project/jsonnet/),
-* [man page](https://www.mankier.com/1/jsonnet),
-* there is also a [bundler](https://github.com/jsonnet-bundler/jsonnet-bundler),
-
-
+* [repo](https://github.com/google/jsonnet)
+* [go implementation](https://github.com/google/go-jsonnet)
+* [python binding](https://pypi.org/project/jsonnet/)
+* there is also a [bundler](https://github.com/jsonnet-bundler/jsonnet-bundler)
 
 ## Install
 
