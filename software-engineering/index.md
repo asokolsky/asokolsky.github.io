@@ -18,6 +18,7 @@ External links:
 * [How to write effective documentation](https://opensource.com/article/20/3/documentation)
 * [Thinking in Systems, A Primer, by Donella H. Meadows](https://research.fit.edu/media/site-specific/researchfitedu/coast-climate-adaptation-library/climate-communications/psychology-amp-behavior/Meadows-2008.-Thinking-in-Systems.pdf)
 * [Opposite of Cloud Native is Stack Native](https://mkennedy.codes/posts/opposite-of-cloud-native-is-stack-native/)
+* [PagerDuty Guide of being On Call](https://response.pagerduty.com/)
 
 
 DevOps

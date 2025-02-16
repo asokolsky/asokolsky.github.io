@@ -1,0 +1,212 @@
+just(1)                    General Commands Manual                       just(1)
+
+NAME
+       just - 🤖 Just a command runner - https://github.com/casey/just
+
+SYNOPSIS
+       just [--alias-style] [--check] [--chooser] [--clear-shell-args] [--color] [--command-color] [--dotenv-filename] [-E|--dotenv-path] [-n|--dry-run] [--dump-format] [--explain] [-g|--global-justfile] [--highlight] [-f|--justfile]
+       [--list-heading] [--list-prefix] [--list-submodules] [--no-aliases] [--no-deps] [--no-dotenv] [--no-highlight] [--one] [-q|--quiet] [--allow-missing] [--set] [--shell] [--shell-arg] [--shell-command] [--timestamp]
+       [--timestamp-format] [-u|--unsorted] [--unstable] [-v|--verbose]... [-d|--working-directory] [--yes] [--changelog] [--choose] [-c|--command] [--completions] [--dump] [-e|--edit] [--evaluate] [--fmt] [--groups] [--init] [-l|--list]
+       [--man] [-s|--show] [--summary] [--variables] [-h|--help] [-V|--version] [ARGUMENTS]
+
+DESCRIPTION
+       🤖 Just a command runner - https://github.com/casey/just
+
+OPTIONS
+       --alias-style [default: right]
+              Set list command alias display style
+
+              [possible values: left, right, separate]
+              May also be specified with the JUST_ALIAS_STYLE environment variable.
+
+       --check
+              Run `--fmt` in 'check' mode. Exits with 0 if justfile is formatted correctly. Exits with 1 and prints a diff if formatting is required.
+
+       --chooser
+              Override binary invoked by `--choose`
+              May also be specified with the JUST_CHOOSER environment variable.
+
+       --clear-shell-args
+              Clear shell arguments
+
+       --color [default: auto]
+              Print colorful output
+
+              [possible values: auto, always, never]
+              May also be specified with the JUST_COLOR environment variable.
+
+       --command-color
+              Echo recipe lines in <COMMAND-COLOR>
+
+              [possible values: black, blue, cyan, green, purple, red, yellow]
+              May also be specified with the JUST_COMMAND_COLOR environment variable.
+
+       --dotenv-filename
+              Search for environment file named <DOTENV-FILENAME> instead of `.env`
+
+       -E, --dotenv-path
+              Load <DOTENV-PATH> as environment file instead of searching for one
+
+       -n, --dry-run
+              Print what just would do without doing it
+              May also be specified with the JUST_DRY_RUN environment variable.
+
+       --dump-format=FORMAT [default: just]
+              Dump justfile as <FORMAT>
+
+              [possible values: json, just]
+              May also be specified with the JUST_DUMP_FORMAT environment variable.
+
+       --explain
+              Print recipe doc comment before running it
+              May also be specified with the JUST_EXPLAIN environment variable.
+
+       -g, --global-justfile
+              Use global justfile
+
+       --highlight
+              Highlight echoed recipe lines in bold
+              May also be specified with the JUST_HIGHLIGHT environment variable.
+
+       -f, --justfile
+              Use <JUSTFILE> as justfile
+              May also be specified with the JUST_JUSTFILE environment variable.
+
+       --list-heading=TEXT [default: Available recipes:
+              ] Print <TEXT> before list
+              May also be specified with the JUST_LIST_HEADING environment variable.
+
+       --list-prefix=TEXT [default:     ]
+              Print <TEXT> before each list item
+              May also be specified with the JUST_LIST_PREFIX environment variable.
+
+       --list-submodules
+              List recipes in submodules
+              May also be specified with the JUST_LIST_SUBMODULES environment variable.
+
+       --no-aliases
+              Don't show aliases in list
+              May also be specified with the JUST_NO_ALIASES environment variable.
+
+       --no-deps
+              Don't run recipe dependencies
+              May also be specified with the JUST_NO_DEPS environment variable.
+
+       --no-dotenv
+              Don't load `.env` file
+              May also be specified with the JUST_NO_DOTENV environment variable.
+
+       --no-highlight
+              Don't highlight echoed recipe lines in bold
+              May also be specified with the JUST_NO_HIGHLIGHT environment variable.
+
+       --one  Forbid multiple recipes from being invoked on the command line
+              May also be specified with the JUST_ONE environment variable.
+
+       -q, --quiet
+              Suppress all output
+              May also be specified with the JUST_QUIET environment variable.
+
+       --allow-missing
+              Ignore missing recipe and module errors
+              May also be specified with the JUST_ALLOW_MISSING environment variable.
+
+       --set=VARIABLE VALUE
+              Override <VARIABLE> with <VALUE>
+
+       --shell
+              Invoke <SHELL> to run recipes
+
+       --shell-arg
+              Invoke shell with <SHELL-ARG> as an argument
+
+       --shell-command
+              Invoke <COMMAND> with the shell used to run recipe lines and backticks
+
+       --timestamp
+              Print recipe command timestamps
+              May also be specified with the JUST_TIMESTAMP environment variable.
+
+       --timestamp-format [default: %H:%M:%S]
+              Timestamp format string
+              May also be specified with the JUST_TIMESTAMP_FORMAT environment variable.
+
+       -u, --unsorted
+              Return list and summary entries in source order
+              May also be specified with the JUST_UNSORTED environment variable.
+
+       --unstable
+              Enable unstable features
+              May also be specified with the JUST_UNSTABLE environment variable.
+
+       -v, --verbose
+              Use verbose output
+              May also be specified with the JUST_VERBOSE environment variable.
+
+       -d, --working-directory
+              Use <WORKING-DIRECTORY> as working directory. --justfile must also be set
+              May also be specified with the JUST_WORKING_DIRECTORY environment variable.
+
+       --yes  Automatically confirm all recipes.
+              May also be specified with the JUST_YES environment variable.
+
+       -h, --help
+              Print help
+
+       -V, --version
+              Print version
+
+       [ARGUMENTS]
+              Overrides and recipe(s) to run, defaulting to the first recipe in the justfile
+
+COMMANDS
+       --changelog
+              Print changelog
+
+       --choose
+              Select one or more recipes to run using a binary chooser. If `--chooser` is not passed the chooser defaults to the value of $JUST_CHOOSER, falling back to `fzf`
+
+       -c, --command
+              Run an arbitrary command with the working directory, `.env`, overrides, and exports set
+
+       --completions=SHELL
+              Print shell completion script for <SHELL>
+
+              [possible values: bash, elvish, fish, nushell, powershell, zsh]
+
+       --dump Print justfile
+
+       -e, --edit
+              Edit justfile with editor given by $VISUAL or $EDITOR, falling back to `vim`
+
+       --evaluate
+              Evaluate and print all variables. If a variable name is given as an argument, only print that variable's value.
+
+       --fmt  Format and overwrite justfile
+
+       --groups
+              List recipe groups
+
+       --init Initialize new justfile in project root
+
+       -l, --list=PATH
+              List available recipes
+
+       --man  Print man page
+
+       -s, --show=PATH
+              Show recipe at <PATH>
+
+       --summary
+              List names of available recipes
+
+       --variables
+              List names of variables
+
+VERSION
+       v1.39.0
+
+AUTHORS
+       Casey Rodarmor <casey@rodarmor.com>
+
+just 1.39.

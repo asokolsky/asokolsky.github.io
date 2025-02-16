@@ -27,7 +27,9 @@ Emergency service:
 * [FSS License search](https://wireless2.fcc.gov/UlsApp/UlsSearch/searchLicense.jsp)
 * [HAM call-sign](https://www.fcc.gov/wireless/bureau-divisions/mobility-division/amateur-radio-service/amateur-call-sign-systems),
 [general call-sign](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-2/subpart-D)
-* [KO6HMV](https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=5077343), FRN: 0036471944
+* [KO6HMV](https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=5077343)
+* FRN: 0036471944
+* DMR Radio ID: 3213546
 
 ## Training
 
