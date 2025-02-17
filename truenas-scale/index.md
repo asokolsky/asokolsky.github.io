@@ -1,6 +1,6 @@
 # TrueNAS Scale Customization
 
-I [run it](/proxmox/guest-truenas.html) in a VM.
+I [run it](/proxmox/guest-truenas.html) in a VM and on a bare hardware.
 
 * [TrueNAS Core](truenas-core.html)
 * [TrueNAS Scale as a syslog collector](syslog-collector.html)
@@ -27,7 +27,7 @@ root@nass[~]# cat /etc/debian_version
 
 ## Enable apt for package management
 
-As of version 24 `/usr` is mounted ro.  To change that - [enable developer mode](https://www.truenas.com/docs/scale/scaletutorials/systemsettings/advanced/developermode/).
+As of version 24 `/usr` is mounted `ro`.  To change that - [enable developer mode](https://www.truenas.com/docs/scale/scaletutorials/systemsettings/advanced/developermode/).
 
 ```sh
 sudo chmod a+x /usr/bin/apt*
