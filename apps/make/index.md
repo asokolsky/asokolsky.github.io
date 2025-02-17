@@ -1,7 +1,7 @@
 # make and Makefile
 
 My definition: `make` is a data-driven (data is in a `Makefile`) filter for
-building 'targets'.
+building 'targets'.  Consider use of [just](../just/) as a replacement.
 
 GNU [man page](https://man7.org/linux/man-pages/man1/make.1.html),
 [manual](https://www.gnu.org/software/make/manual/make.html),
