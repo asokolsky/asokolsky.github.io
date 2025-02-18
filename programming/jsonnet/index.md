@@ -9,6 +9,7 @@ See:
 * [go implementation](https://github.com/google/go-jsonnet)
 * [python binding](https://pypi.org/project/jsonnet/)
 * there is also a [bundler](https://github.com/jsonnet-bundler/jsonnet-bundler)
+* [google group jsonnet](https://groups.google.com/g/jsonnet)
 
 ## Install
 
@@ -30,68 +31,68 @@ Jsonnet commandline interpreter v0.20.0
   --tla-code brunch=true \
   top-level-tla.jsonnet
 {
-   "Happy Hour Bloody Mary": {
-      "garnish": "Celery salt & pepper",
-      "ingredients": [
-         {
-            "kind": "Vodka",
-            "qty": 1.5
-         },
-         {
-            "kind": "Tomato Juice",
-            "qty": 3
-         },
-         {
-            "kind": "Lemon Juice",
-            "qty": 1.5
-         },
-         {
-            "kind": "Worcestershire",
-            "qty": 0.25
-         },
-         {
-            "kind": "Tobasco Sauce",
-            "qty": 0.14999999999999999
-         }
-      ],
-      "served": "Tall"
-   },
-   "Happy Hour Mimosa": {
-      "garnish": "Orange Slice",
-      "ingredients": [
-         {
-            "kind": "Cheap Sparkling Wine",
-            "qty": 3
-         },
-         {
-            "kind": "Orange Juice",
-            "qty": 3
-         }
-      ],
-      "served": "Champagne Flute"
-   },
-   "Happy Hour Pina Colada": {
-      "garnish": "Pineapple slice",
-      "ingredients": [
-         {
-            "kind": "Rum",
-            "qty": 3
-         },
-         {
-            "kind": "Pineapple Juice",
-            "qty": 6
-         },
-         {
-            "kind": "Coconut Cream",
-            "qty": 2
-         },
-         {
-            "kind": "Ice",
-            "qty": 12
-         }
-      ],
-      "served": "Frozen"
-   }
+  "Happy Hour Bloody Mary": {
+    "garnish": "Celery salt & pepper",
+    "ingredients": [
+        {
+          "kind": "Vodka",
+          "qty": 1.5
+        },
+        {
+          "kind": "Tomato Juice",
+          "qty": 3
+        },
+        {
+          "kind": "Lemon Juice",
+          "qty": 1.5
+        },
+        {
+          "kind": "Worcestershire",
+          "qty": 0.25
+        },
+        {
+          "kind": "Tobasco Sauce",
+          "qty": 0.14999999999999999
+        }
+    ],
+    "served": "Tall"
+  },
+  "Happy Hour Mimosa": {
+    "garnish": "Orange Slice",
+    "ingredients": [
+        {
+          "kind": "Cheap Sparkling Wine",
+          "qty": 3
+        },
+        {
+          "kind": "Orange Juice",
+          "qty": 3
+        }
+    ],
+    "served": "Champagne Flute"
+  },
+  "Happy Hour Pina Colada": {
+    "garnish": "Pineapple slice",
+    "ingredients": [
+        {
+          "kind": "Rum",
+          "qty": 3
+        },
+        {
+          "kind": "Pineapple Juice",
+          "qty": 6
+        },
+        {
+          "kind": "Coconut Cream",
+          "qty": 2
+        },
+        {
+          "kind": "Ice",
+          "qty": 12
+        }
+    ],
+    "served": "Frozen"
+  }
 }
 ```
 
@@ -109,12 +110,22 @@ Then in your `foo.jsonnet`:
 ```
 local switch = import 'switch.libsonnet';
 local replicas = switch(cluster.account, {
-   prod: 100,
-   stage: 10,
-   dev: 1,
+  prod: 100,
+  stage: 10,
+  dev: 1,
 }),
 ```
 
+## Missing loop
+```
+  local loop(ax,nx,qx,rx) =
+    if int.lt(rx, b) then
+      [qx,rx]
+    else
+      local qxrx = newQR(newN(ax,nx),qx,rx);
+      loop(qxrx[1],1,qxrx[0],qxrx[1]);
+  loop(a,1,0,a),
+```
 ## Debugging Output
 
 This prints value of `clusters` and returns it:

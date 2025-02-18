@@ -13,7 +13,10 @@ WiFi|Intel Tri-Band 6G/5.8G/2.4Ghz 802.11AX AX210NGW, Blue-Tooth 5.3
 
 ## BIOS
 
-During the boot up press F2 when logo is displayed.
+During the boot, when logo is displayed, press:
+
+* F2 - to setup BIOS
+* F12 - to choose boot device
 
 ## PCIe Devices
 
