@@ -3,9 +3,10 @@
 From
 
 * https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+* https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
 * https://cheat-sheets.nicwortel.nl/kubectl-cheat-sheet.pdf
 * https://dockerlabs.collabnix.com/kubernetes/cheatsheets/kubectl.html
-* https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
+* https://www.hackingnote.com/en/cheatsheets/kubectl/
 
 [Installation](kubectl-install.html) and [more](index.html).
 
