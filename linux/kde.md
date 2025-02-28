@@ -35,6 +35,14 @@ Linux latitude7490 6.11.0-17-generic #17~24.04.2-Ubuntu SMP PREEMPT_DYNAMIC Mon 
 sudo apt install pulseaudio-utils
 ```
 
+## Customize Taskbar
+
+Right mouse button click, select 'Show Alternatives'.
+
+## Customize Konsole
+
+Use [Dracula theme](https://draculatheme.com/konsole).
+
 ## Challenges
 
 ### Swap CapsLock with LeftCtrl
