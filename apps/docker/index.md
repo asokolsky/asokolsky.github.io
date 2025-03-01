@@ -11,3 +11,7 @@
 
 * [colima](colima.html)
 * [podman desktop](podman-desktop.html)
+
+External resources:
+
+[Docker Internals](https://docker-saigon.github.io/post/Docker-Internals/)

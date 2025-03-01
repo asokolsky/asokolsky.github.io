@@ -1,11 +1,14 @@
 # FreeBSD Stuff
 
-[FreeBSD Tuning and Optimization](https://calomel.org/freebsd_network_tuning.html)
-
-
 Manuals:
 
+* [FreeBSD Handbook](https://docs.freebsd.org/en/books/handbook/), [sysctl utility](https://docs.freebsd.org/en/books/handbook/config/#configtuning-sysctl)
+* [FreeBSD Tuning and Optimization](https://calomel.org/freebsd_network_tuning.html)
+* [KDE on FreeBSD](https://community.kde.org/FreeBSD/Setup)
 * [FreeBSD Series](https://vermaden.wordpress.com/)
+* [How to Check Hard Drive Health](https://www.osetc.com/en/how-to-check-hard-drive-health-on-freebsd.html)
+* [Using FreeBSD with Ports](https://eerielinux.wordpress.com/2019/08/18/using-freebsd-with-ports-1-2-classic-way-with-tools/)
+* [How To Install Nginx, MySQL and PHP on FreeBSD 12.0](https://docs.vultr.com/how-to-install-nginx-mysql-and-php-femp-stack-on-freebsd-12-0)
 
 ## Package Management
 
