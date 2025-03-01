@@ -3,6 +3,10 @@
 [FreeBSD Tuning and Optimization](https://calomel.org/freebsd_network_tuning.html)
 
 
+Manuals:
+
+* [FreeBSD Series](https://vermaden.wordpress.com/)
+
 ## Package Management
 
 [man pkg](https://man.freebsd.org/cgi/man.cgi?pkg)
