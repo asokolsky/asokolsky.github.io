@@ -1,10 +1,9 @@
 # jq
 
-[Repo](https://github.com/stedolan/jq)
-
-[Manual](https://stedolan.github.io/jq/manual/)
-
-https://www.linode.com/docs/guides/using-jq-to-process-json-on-the-command-line/
+* [Repo](https://github.com/stedolan/jq)
+* [Manual](https://stedolan.github.io/jq/manual/)
+* [using-jq-to-process-json](https://www.linode.com/docs/guides/using-jq-to-process-json-on-the-command-line/)
+* [cheatsheet](https://www.hackingnote.com/en/cheatsheets/jq/)
 
 ## Pretty print
 
