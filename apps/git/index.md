@@ -21,6 +21,10 @@ Proprietary Extensions
 * [gh CLI for github](cli-gh.html)
 * [glab CLI for gitlab](cli-glab.html)
 
+Manuals:
+
+* [Beej's Guide to Git](https://beej.us/guide/bggit/html/)
+
 ## Handling an Upstream Repo
 
 ```
