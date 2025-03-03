@@ -221,3 +221,22 @@ aws ec2 modify-vpn-tunnel-options \
     --vpn-tunnel-outside-ip-address 1.1.1.1 \
     --tunnel-options 'PreSharedKey=secret' --dry-run
 ```
+
+## Find AMI ID
+
+From [finding-ami-ids](https://www.fundamentals-of-devops.com/resources/2025/02/24/finding-ami-ids/#aws-cli) - to find out ID of the most recent Ubuntu 24.04 AMI in us-east-2:
+
+```sh
+ami_id=$(aws ec2 describe-images \
+    --region us-east-2 \
+    --owners 099720109477 \
+    --filters 'Name=name,Values=ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*' \
+    --query 'reverse(sort_by(Images, &CreationDate))[:1] | [0].ImageId' \
+    --output text)
+```
+
+then run it:
+```sh
+aws ec2 run-instances --region us-east-2 --image-id "$ami_id" \
+    --instance-type "t2.micro"
+```
