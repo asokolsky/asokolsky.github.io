@@ -9,8 +9,6 @@ root@exi > lspci -nnkq
 	Kernel driver in use: pcieport
 00:06.0 PCI bridge [0604]: Intel Corporation 12th Gen Core Processor PCI Express x4 Controller #0 [8086:464d] (rev 02)
 	Kernel driver in use: pcieport
-00:08.0 System peripheral [0880]: Intel Corporation 12th Gen Core Processor Gaussian & Neural Accelerator [8086:464f] (rev 02)
-	Subsystem: ASRock Incorporation 12th Gen Core Processor Gaussian & Neural Accelerator [1849:464f]
 00:0e.0 RAID bus controller [0104]: Intel Corporation Volume Management Device NVMe RAID Controller [8086:467f]
 	Subsystem: Intel Corporation Volume Management Device NVMe RAID Controller [8086:0000]
 	Kernel driver in use: vmd
@@ -36,10 +34,7 @@ root@exi > lspci -nnkq
 	Subsystem: ASRock Incorporation Device [1849:7a62]
 	Kernel driver in use: ahci
 	Kernel modules: ahci
-00:1c.0 PCI bridge [0604]: Intel Corporation Raptor Lake PCI Express Root Port #1 [8086:7a38] (rev 11)
-	Subsystem: ASRock Incorporation Device [1849:7a38]
-	Kernel driver in use: pcieport
-00:1c.4 PCI bridge [0604]: Intel Corporation Device [8086:7a3c] (rev 11)
+00:1c.0 PCI bridge [0604]: Intel Corporation Device [8086:7a3c] (rev 11)
 	Subsystem: ASRock Incorporation Device [1849:7a3c]
 	Kernel driver in use: pcieport
 00:1d.0 PCI bridge [0604]: Intel Corporation Device [8086:7a36] (rev 11)
@@ -67,19 +62,13 @@ root@exi > lspci -nnkq
 	Subsystem: Micro-Star International Co., Ltd. [MSI] GA106 High Definition Audio Controller [1462:c978]
 	Kernel driver in use: snd_hda_intel
 	Kernel modules: snd_hda_intel
-02:00.0 Non-Volatile memory controller [0108]: Sandisk Corp WD Blue SN550 NVMe SSD [15b7:5009] (rev 01)
+02:00.0 Non-Volatile memory controller [0108]: Sandisk Corp SanDisk Ultra 3D / WD Blue SN550 NVMe SSD [15b7:5009] (rev 01)
 	Subsystem: Sandisk Corp WD Blue SN550 NVMe SSD [15b7:5009]
 	Kernel driver in use: nvme
 	Kernel modules: nvme
-03:00.0 SATA controller [0106]: ASMedia Technology Inc. ASM1064 Serial ATA Controller [1b21:1064] (rev 02)
-	Subsystem: ZyDAS Technology Corp. Device [2116:2116]
-	Kernel driver in use: ahci
-	Kernel modules: ahci
-04:00.0 System peripheral [0880]: Global Unichip Corp. Coral Edge TPU [1ac1:089a]
+03:00.0 System peripheral [0880]: Global Unichip Corp. Coral Edge TPU [1ac1:089a]
 	Subsystem: Global Unichip Corp. Coral Edge TPU [1ac1:089a]
-	Kernel driver in use: apex
-	Kernel modules: apex
-05:00.0 Ethernet controller [0200]: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller [10ec:8125] (rev 05)
+04:00.0 Ethernet controller [0200]: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller [10ec:8125] (rev 05)
 	Subsystem: ASRock Incorporation RTL8125 2.5GbE Controller [1849:8125]
 	Kernel driver in use: r8169
 	Kernel modules: r8169
