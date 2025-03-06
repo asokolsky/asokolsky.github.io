@@ -2,7 +2,7 @@
 
 See:
 
-* [jsonnet Command Line](https://www.mankier.com/1/jsonnet)
+* [jsonnet Command Line](https://www.mankier.com/1/jsonnet), note use of `JSONNET_PATH=dir1:dir2 jsonnet -J c -J d`
 * [tutorial](https://jsonnet.org/learning/tutorial.html)
 * [language reference](https://jsonnet.org/ref/language.html)
 * [repo](https://github.com/google/jsonnet)
@@ -10,6 +10,8 @@ See:
 * [python binding](https://pypi.org/project/jsonnet/)
 * there is also a [bundler](https://github.com/jsonnet-bundler/jsonnet-bundler)
 * [google group jsonnet](https://groups.google.com/g/jsonnet)
+
+[Language Summary](https://learnxinyminutes.com/jsonnet/)
 
 ## Install
 
@@ -143,3 +145,25 @@ std.manifestJsonMinified({
     dir: kms_module_dir,
   }),
 ```
+
+## VSCode Extensions
+
+Use `Grafana.vscode-jsonnet`.
+
+To set `JSONNET_PATH` in `.vscode/settings.json`:
+
+```json
+{
+  "jsonnet.languageServer.jpath": [
+    "dir1",
+    "dir2"
+  ],
+}
+```
+
+To evaluate file:
+
+* open palette
+* select 'Jsonnet: Evaluate File'
+
+Traces go to  the `Jsonnet Language Server` output.
