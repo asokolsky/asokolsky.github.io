@@ -30,9 +30,7 @@ Also: [BEST OBS Audio Settings (FAQ Series)](https://www.youtube.com/watch?v=K72
 
 ### Codec
 
-libfdk-AAC
-[is better](https://superuser.com/questions/1610747/is-fdk-aac-still-better-than-ffmpegs-native-aac-encoder)
-than FFmpeg AAC.
+libfdk-AAC [is better](https://superuser.com/questions/1610747/is-fdk-aac-still-better-than-ffmpegs-native-aac-encoder) than FFmpeg AAC.
 
 ## Video Chain
 
@@ -69,9 +67,7 @@ Guides:
 * [NVIDIA NvEnc](https://obsproject.com/forum/resources/nvidia-nvenc-guide.740/)
 
 
-The order of preference is
-[unclear](https://obsproject.com/forum/threads/comparison-of-x264-nvenc-quicksync-vce.57358/)
-and is determined by the PC capabilities:
+The order of preference is [unclear](https://obsproject.com/forum/threads/comparison-of-x264-nvenc-quicksync-vce.57358/) and is determined by the PC capabilities:
 
 * NVENC, preset=P6:Slower (Better Quality)
 * QuickSync

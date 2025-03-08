@@ -10,11 +10,6 @@ alex@duo > lspci -nnkq
 00:01.0 PCI bridge [0604]: Intel Corporation 6th-10th Gen Core Processor PCIe Controller (x16) [8086:1901] (rev 07)
         Subsystem: ASRock Incorporation 6th-10th Gen Core Processor PCIe Controller (x16) [1849:1901]
         Kernel driver in use: pcieport
-00:02.0 VGA compatible controller [0300]: Intel Corporation CoffeeLake-S GT2 [UHD Graphics 630] [8086:3e92]
-        DeviceName: Onboard - Video
-        Subsystem: ASRock Incorporation CoffeeLake-S GT2 [UHD Graphics 630] [1849:3e92]
-        Kernel driver in use: i915
-        Kernel modules: i915
 00:14.0 USB controller [0c03]: Intel Corporation 200 Series/Z370 Chipset Family USB 3.0 xHCI Controller [8086:a2af]
         DeviceName: Onboard - Other
         Subsystem: ASRock Incorporation 200 Series/Z370 Chipset Family USB 3.0 xHCI Controller [1849:a2af]
@@ -66,11 +61,12 @@ alex@duo > lspci -nnkq
         Subsystem: ASRock Incorporation Ethernet Connection (2) I219-V [1849:15b8]
         Kernel driver in use: e1000e
         Kernel modules: e1000e
-01:00.0 VGA compatible controller [0300]: NVIDIA Corporation GP108 [GeForce GT 1030] [10de:1d01] (rev a1)
-        Subsystem: Micro-Star International Co., Ltd. [MSI] GP108 [GeForce GT 1030] [1462:8c98]
+01:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA107 [GeForce RTX 3050 6GB] [10de:2584] (rev a1)
+        Subsystem: Gigabyte Technology Co., Ltd GA107 [GeForce RTX 3050 6GB] [1458:4131]
+        Kernel driver in use: nvidia
         Kernel modules: nvidiafb, nouveau, nvidia_drm, nvidia
-01:00.1 Audio device [0403]: NVIDIA Corporation GP108 High Definition Audio Controller [10de:0fb8] (rev a1)
-        Subsystem: Micro-Star International Co., Ltd. [MSI] GP108 High Definition Audio Controller [1462:8c98]
+01:00.1 Audio device [0403]: NVIDIA Corporation GA107 High Definition Audio Controller [10de:2291] (rev a1)
+        Subsystem: Gigabyte Technology Co., Ltd Device [1458:4131]
         Kernel driver in use: snd_hda_intel
         Kernel modules: snd_hda_intel
 03:00.0 Ethernet controller [0200]: Intel Corporation I211 Gigabit Network Connection [8086:1539] (rev 03)

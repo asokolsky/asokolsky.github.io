@@ -45,3 +45,15 @@ modprobe -r speedstep-lib
 
 Note: Under modprobe, automatic underscore conversion is performed, so there is
 no difference between _ and – while entering module names.
+
+## Blacklisting modules
+
+Locations to check:
+
+* `/etc/modprobe.d/*`
+* `/lib/modprobe.d/*`
+
+e.g.
+```sh
+grep nvidia /etc/modprobe.d/* /lib/modprobe.d/*
+```
