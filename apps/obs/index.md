@@ -16,15 +16,12 @@ Unfortunately, my only choice is:
 
 ### OBS Audio Filters
 
-According to
-[the-best-audio-filters-for-obs](https://streamgeeks.us/the-best-audio-filters-for-obs/),
-order of the filters to use:
+According to [the-best-audio-filters-for-obs](https://streamgeeks.us/the-best-audio-filters-for-obs/), order of the filters to use:
 
 * Noise Suppression - I use `good quality, more CPU usage` option;
 * Noise Gate - disabled it;
 * 3-band Equalizer - High: 0dB, Mid: 0dB, Low: +3dB;
 * Compressor - Ratio: 5:1, Threshold: -12.2dB, Atack: 2ms, Release: 70ms, Output gain: 0dB
-
 
 Also: [BEST OBS Audio Settings (FAQ Series)](https://www.youtube.com/watch?v=K72UXh2P-wg).
 
@@ -38,10 +35,7 @@ libfdk-AAC [is better](https://superuser.com/questions/1610747/is-fdk-aac-still-
 
 Sony a7iv....
 
-* in the USB streaming mode does not support Pictire Profiles, so my
-choice of
-[PP11/S-Cinetone](https://helpguide.sony.net/di/pp/v1/en/contents/TP0000909106.html)
-had no effect.
+* in the USB streaming mode does not support Picture Profiles, so my choice of [PP11/S-Cinetone](https://helpguide.sony.net/di/pp/v1/en/contents/TP0000909106.html) had no effect.
 * [Creative Mode](https://www.sony.com/electronics/support/articles/00273574) - I use Standard.
 
 More: [What is S-Cinetone, and How Do You Use It?](https://alphauniverse.sony-asia.com/learn/tips/what-s-cinetone-and-how-do-you-use-it)
@@ -61,11 +55,8 @@ For Sony a7iv I use:
 Guides:
 
 * [Recording in OBS](https://www.xaymar.com/guides/obs/high-quality-recording/)
-* Streaming in OBS with
-[Intel QSV](https://www.xaymar.com/guides/obs/high-quality-streaming/qsv/)
-[NVENC](https://www.xaymar.com/guides/obs/high-quality-streaming/nvenc/)
+* Streaming in OBS with [Intel QSV](https://www.xaymar.com/guides/obs/high-quality-streaming/qsv/) [NVENC](https://www.xaymar.com/guides/obs/high-quality-streaming/nvenc/)
 * [NVIDIA NvEnc](https://obsproject.com/forum/resources/nvidia-nvenc-guide.740/)
-
 
 The order of preference is [unclear](https://obsproject.com/forum/threads/comparison-of-x264-nvenc-quicksync-vce.57358/) and is determined by the PC capabilities:
 
@@ -76,7 +67,7 @@ The order of preference is [unclear](https://obsproject.com/forum/threads/compar
 
 #### NVENC
 
-My steamer GPU, GeForce GT 1030, does NOT support NVENC.
+My steamer GPU, GeForce RTX 3050, does support NVENC.
 
 #### QuickSync
 
@@ -109,15 +100,13 @@ Preset|ultrafast - placebo, a slower preset only affects file size, quality shou
 Profile|High, required for 4:4:4 and 4:2:2 encoding
 Tune|None, tuning can slightly improve compression efficiency, but often harms it instead.
 
-
 ## Screen Capture
 
 * [Challenges in wayland](https://obsproject.com/forum/threads/no-screen-capture-option-wayland.178447/)
 
 ## Notes:
 
-* OBS crashes when I power down my Sony a7iv when the latter is connected to PC
-using USB cable.
+* OBS crashes when I power down my Sony a7iv when the latter is connected to PC using USB cable.
 
 ## More
 
