@@ -93,6 +93,13 @@ Differentiate Let/Right Ctrl, Swap Ctrl and CapsLock, support for Home/End, etc:
 * [karabiner-elements](https://karabiner-elements.pqrs.org/) with
 * [karabiner-windows-mode](https://github.com/rux616/karabiner-windows-mode)
 
+### Swap CapsLock <-> LeftCtrl
+
+In Karabiner Elements: Settings/Simple Modifications:
+
+* caps_lock -> left_control
+* left_control -> caps_lock
+
 ## Tile Windows using Keyboard only
 
 Use:
