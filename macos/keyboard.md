@@ -102,11 +102,9 @@ In Karabiner Elements: Settings/Simple Modifications:
 
 ## Tile Windows using Keyboard only
 
-Use:
+Use [Rectangle](https://github.com/rxhanson/Rectangle).
 
-* [spectacle](https://www.spectacleapp),
-[sources](https://github.com/eczarny/spectacle)
-* or better yet [Rectangle](https://github.com/rxhanson/Rectangle)
+[spectacle](https://www.spectacleapp), [sources](https://github.com/eczarny/spectacle) is obsolete.
 
 ## Terminal Emulator
 
