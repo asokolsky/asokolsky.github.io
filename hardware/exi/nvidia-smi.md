@@ -1,4 +1,4 @@
-# nvidia-smi
+# EXI nvidia-smi
 
 ```
 alex@exi > nvidia-smi

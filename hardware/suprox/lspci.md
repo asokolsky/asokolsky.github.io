@@ -1,4 +1,4 @@
-## Suprox PCIe Devices
+# Suprox PCIe Devices
 
 ```
 root@suprox:~# lspci -nnk

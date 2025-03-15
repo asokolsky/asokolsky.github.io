@@ -1,4 +1,4 @@
-# USB Devices
+# EXI USB Devices
 
 ```
 alex@exi > lsusb
