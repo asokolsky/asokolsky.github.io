@@ -21,7 +21,7 @@ M.2_2|Key M, supports type 2280 PCIe Gen4x4 (64 Gb/s)
 M.2_3|Key M, supports type 2280 PCIe Gen4x4 (64 Gb/s)
 SATA|4 x SATA3 6.0 Gb/s Connectors
 PCIe1|PCIe 5.0 x16 slot, supports x16 mode
-&nbsp;|MSI Ventus GeForce RTX 3050 8GB GDDR6 PCIx 4.0 x8, HDMI 2.1, DP v1.4a 115W
+&nbsp;|NVIDIA MSI Ventus GeForce RTX 3050 8GB GDDR6 PCIx 4.0 x8, HDMI 2.1, DP v1.4a 115W [more](nvidia-smi.html)
 PCIe2|PCIe 3.0 x16 slot, supports x4 mode
 &nbsp;|[1xPCIe to 4xSATA M.2 adapter](../1xPCIe-4xSATA-M.2.html)
 Ethernet|onboard RTL8125BG
