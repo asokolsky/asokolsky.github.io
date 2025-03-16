@@ -20,6 +20,7 @@ Power Supply|170W AC Adapter (2pin) - USB Type C
 
 * [DMI Info](dmi.html)
 * [Info](info.html)
+* [NVIDIA Info](nvidia-smi.html)
 * [PCIe Devices](lspci.html)
 * [USB Devices](lsusb.html)
 
