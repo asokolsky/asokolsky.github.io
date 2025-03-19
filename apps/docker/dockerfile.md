@@ -27,3 +27,11 @@ Instruction|Description
 * Use the official base images from https://hub.docker.com/
 * Use the COPY instruction instead of ADD unless you need to extract a tar file
 * Use the COPY --chown instruction to set the owner of copied files
+
+## Build
+
+In the directory with Dockerfile:
+
+```sh
+docker build .
+```
