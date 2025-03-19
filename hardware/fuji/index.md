@@ -41,8 +41,10 @@ UPS|APC RS1000G
 OS|ProxMox VE
 
 * [DMI Info](dmi.html)
-* [PCIe Devices](lspci.html)
+* [Info](info.html)
 * [IOMMU](iommu.html)
+* [PCIe Devices](lspci.html)
+* [USB Devices](lsusb.html)
 
 <p align="center" width="100%">
     <img width="45%" src="front-cover.jpg">

@@ -1,4 +1,4 @@
-## Suprox DMI Info
+# Suprox DMI Info
 
 [Desktop Management Interface](https://en.wikipedia.org/wiki/Desktop_Management_Interface)
 
@@ -7,13 +7,13 @@ root@suprox:~# dmidecode
 # dmidecode 3.4
 Getting SMBIOS data from sysfs.
 SMBIOS 3.2.1 present.
-Table at 0x8EBD5000.
+Table at 0x8EC1E000.
 
 Handle 0x0000, DMI type 0, 26 bytes
 BIOS Information
 	Vendor: American Megatrends Inc.
-	Version: 1.5
-	Release Date: 10/05/2020
+	Version: 2.2
+	Release Date: 10/27/2023
 	Address: 0xF0000
 	Runtime Size: 64 kB
 	ROM Size: 32 MB
@@ -164,7 +164,56 @@ Handle 0x000F, DMI type 32, 20 bytes
 System Boot Information
 	Status: No errors detected
 
-Handle 0x0010, DMI type 39, 22 bytes
+Handle 0x0010, DMI type 26, 22 bytes
+Voltage Probe
+	Description: LM78A
+	Location: Power Unit
+	Status: OK
+	Maximum Value: Unknown
+	Minimum Value: Unknown
+	Resolution: Unknown
+	Tolerance: Unknown
+	Accuracy: Unknown
+	OEM-specific Information: 0x00000000
+	Nominal Value: Unknown
+
+Handle 0x0011, DMI type 28, 22 bytes
+Temperature Probe
+	Description: LM78A
+	Location: Power Unit
+	Status: OK
+	Maximum Value: Unknown
+	Minimum Value: Unknown
+	Resolution: Unknown
+	Tolerance: Unknown
+	Accuracy: Unknown
+	OEM-specific Information: 0x00000000
+	Nominal Value: Unknown
+
+Handle 0x0012, DMI type 27, 15 bytes
+Cooling Device
+	Temperature Probe Handle: 0x0011
+	Type: Power Supply Fan
+	Status: OK
+	Cooling Unit Group: 1
+	OEM-specific Information: 0x00000000
+	Nominal Speed: Unknown Or Non-rotating
+	Description: Cooling Dev 1
+
+Handle 0x0013, DMI type 29, 22 bytes
+Electrical Current Probe
+	Description: ABC
+	Location: Power Unit
+	Status: OK
+	Maximum Value: Unknown
+	Minimum Value: Unknown
+	Resolution: Unknown
+	Tolerance: Unknown
+	Accuracy: Unknown
+	OEM-specific Information: 0x00000000
+	Nominal Value: Unknown
+
+Handle 0x0014, DMI type 39, 22 bytes
 System Power Supply
 	Power Unit Group: 1
 	Location: PSU1
@@ -180,8 +229,11 @@ System Power Supply
 	Input Voltage Range Switching: Auto-switch
 	Plugged: Yes
 	Hot Replaceable: No
+	Input Voltage Probe Handle: 0x0010
+	Cooling Device Handle: 0x0012
+	Input Current Probe Handle: 0x0013
 
-Handle 0x0011, DMI type 39, 22 bytes
+Handle 0x0015, DMI type 39, 22 bytes
 System Power Supply
 	Power Unit Group: 2
 	Location: PSU2
@@ -198,7 +250,7 @@ System Power Supply
 	Plugged: Yes
 	Hot Replaceable: No
 
-Handle 0x0012, DMI type 41, 11 bytes
+Handle 0x0016, DMI type 41, 11 bytes
 Onboard Device
 	Reference Designation:  ASPEED Video AST2500
 	Type: Video
@@ -206,7 +258,7 @@ Onboard Device
 	Type Instance: 1
 	Bus Address: 0000:06:00.0
 
-Handle 0x0013, DMI type 41, 11 bytes
+Handle 0x0017, DMI type 41, 11 bytes
 Onboard Device
 	Reference Designation:  Intel Ethernet I210 #1
 	Type: Ethernet
@@ -214,7 +266,7 @@ Onboard Device
 	Type Instance: 1
 	Bus Address: 0000:02:00.0
 
-Handle 0x0014, DMI type 41, 11 bytes
+Handle 0x0018, DMI type 41, 11 bytes
 Onboard Device
 	Reference Designation:  Intel Ethernet I210 #2
 	Type: Ethernet
@@ -222,7 +274,7 @@ Onboard Device
 	Type Instance: 2
 	Bus Address: 0000:03:00.0
 
-Handle 0x0015, DMI type 38, 18 bytes
+Handle 0x0019, DMI type 38, 18 bytes
 IPMI Device Information
 	Interface Type: KCS (Keyboard Control Style)
 	Specification Version: 2.0
@@ -231,10 +283,10 @@ IPMI Device Information
 	Base Address: 0x0000000000000CA2 (I/O)
 	Register Spacing: Successive Byte Boundaries
 
-Handle 0x0016, DMI type 42, 12 bytes
+Handle 0x001A, DMI type 42, 12 bytes
 Management Controller Host Interface
 
-Handle 0x001B, DMI type 16, 23 bytes
+Handle 0x001F, DMI type 16, 23 bytes
 Physical Memory Array
 	Location: System Board Or Motherboard
 	Use: System Memory
@@ -243,15 +295,15 @@ Physical Memory Array
 	Error Information Handle: Not Provided
 	Number Of Devices: 2
 
-Handle 0x0020, DMI type 19, 31 bytes
+Handle 0x0024, DMI type 19, 31 bytes
 Memory Array Mapped Address
 	Starting Address: 0x00000000000
 	Ending Address: 0x007FFFFFFFF
 	Range Size: 32 GB
-	Physical Array Handle: 0x001B
+	Physical Array Handle: 0x001F
 	Partition Width: 2
 
-Handle 0x0021, DMI type 15, 73 bytes
+Handle 0x0025, DMI type 15, 73 bytes
 System Event Log
 	Area Length: 65535 bytes
 	Header Start Offset: 0x0000
@@ -260,7 +312,7 @@ System Event Log
 	Access Method: Memory-mapped physical 32-bit address
 	Access Address: 0xFF670000
 	Status: Valid, Not Full
-	Change Token: 0x00000002
+	Change Token: 0x00000001
 	Header Format: Type 1
 	Supported Log Type Descriptors: 25
 	Descriptor 1: Single-bit ECC memory error
@@ -314,20 +366,20 @@ System Event Log
 	Descriptor 25: OEM-specific
 	Data Format 25: OEM-specific
 
-Handle 0x0022, DMI type 221, 26 bytes
+Handle 0x0026, DMI type 221, 26 bytes
 OEM-specific Type
 	Header and Data:
-		DD 1A 22 00 03 01 00 07 00 58 47 00 02 00 00 00
-		00 DE 00 03 00 FF FF FF FF FF
+		DD 1A 26 00 03 01 00 07 00 58 40 00 02 00 00 00
+		00 F0 00 03 00 FF FF FF FF FF
 	Strings:
 		Reference Code - CPU
 		uCode Version
 		TXT ACM version
 
-Handle 0x0023, DMI type 221, 26 bytes
+Handle 0x0027, DMI type 221, 26 bytes
 OEM-specific Type
 	Header and Data:
-		DD 1A 23 00 03 01 00 07 00 58 47 00 02 00 00 00
+		DD 1A 27 00 03 01 00 07 00 58 40 00 02 00 00 00
 		00 00 00 03 04 FF FF FF FF FF
 	Strings:
 		Reference Code - ME
@@ -335,10 +387,10 @@ OEM-specific Type
 		ME Firmware Version
 		Consumer SKU
 
-Handle 0x0024, DMI type 221, 82 bytes
+Handle 0x0028, DMI type 221, 82 bytes
 OEM-specific Type
 	Header and Data:
-		DD 52 24 00 0B 01 00 07 00 58 47 00 02 03 FF FF
+		DD 52 28 00 0B 01 00 07 00 58 40 00 02 03 FF FF
 		FF FF FF 04 00 FF FF FF 10 00 05 00 FF FF FF 10
 		00 06 00 FF FF FF FF FF 07 00 02 00 00 00 00 08
 		00 09 00 00 00 00 09 00 0D 00 00 00 00 0A 00 07
@@ -358,11 +410,11 @@ OEM-specific Type
 		CNL PCH LP Bx Hsio Version
 		CNL PCH LP Dx Hsio Version
 
-Handle 0x0025, DMI type 221, 54 bytes
+Handle 0x0029, DMI type 221, 54 bytes
 OEM-specific Type
 	Header and Data:
-		DD 36 25 00 07 01 00 07 00 58 47 00 02 00 00 07
-		01 73 00 03 00 07 00 58 47 00 04 05 FF FF FF FF
+		DD 36 29 00 07 01 00 07 00 58 40 00 02 00 00 07
+		01 73 00 03 00 07 00 58 40 00 04 05 FF FF FF FF
 		FF 06 00 00 00 00 08 00 07 00 00 00 00 08 00 08
 		00 FF FF FF FF FF
 	Strings:
@@ -375,7 +427,7 @@ OEM-specific Type
 		SA-CRID New Value
 		OPROM - VBIOS
 
-Handle 0x0026, DMI type 7, 27 bytes
+Handle 0x002A, DMI type 7, 27 bytes
 Cache Information
 	Socket Designation: L1 Cache
 	Configuration: Enabled, Not Socketed, Level 1
@@ -391,7 +443,7 @@ Cache Information
 	System Type: Unified
 	Associativity: 8-way Set-associative
 
-Handle 0x0027, DMI type 7, 27 bytes
+Handle 0x002B, DMI type 7, 27 bytes
 Cache Information
 	Socket Designation: L2 Cache
 	Configuration: Enabled, Not Socketed, Level 2
@@ -407,7 +459,7 @@ Cache Information
 	System Type: Unified
 	Associativity: 4-way Set-associative
 
-Handle 0x0028, DMI type 7, 27 bytes
+Handle 0x002C, DMI type 7, 27 bytes
 Cache Information
 	Socket Designation: L3 Cache
 	Configuration: Enabled, Not Socketed, Level 3
@@ -423,7 +475,7 @@ Cache Information
 	System Type: Unified
 	Associativity: 12-way Set-associative
 
-Handle 0x0029, DMI type 4, 48 bytes
+Handle 0x002D, DMI type 4, 48 bytes
 Processor Information
 	Socket Designation: CPU
 	Type: Central Processor
@@ -467,9 +519,9 @@ Processor Information
 	Current Speed: 3600 MHz
 	Status: Populated, Enabled
 	Upgrade: Socket LGA1151
-	L1 Cache Handle: 0x0026
-	L2 Cache Handle: 0x0027
-	L3 Cache Handle: 0x0028
+	L1 Cache Handle: 0x002A
+	L2 Cache Handle: 0x002B
+	L3 Cache Handle: 0x002C
 	Serial Number: To Be Filled By O.E.M.
 	Asset Tag: To Be Filled By O.E.M.
 	Part Number: To Be Filled By O.E.M.
@@ -483,9 +535,9 @@ Processor Information
 		Enhanced Virtualization
 		Power/Performance Control
 
-Handle 0x002A, DMI type 17, 84 bytes
+Handle 0x002E, DMI type 17, 84 bytes
 Memory Device
-	Array Handle: 0x001B
+	Array Handle: 0x001F
 	Error Information Handle: Not Provided
 	Total Width: 72 bits
 	Data Width: 64 bits
@@ -518,9 +570,9 @@ Memory Device
 	Cache Size: None
 	Logical Size: None
 
-Handle 0x002C, DMI type 17, 84 bytes
+Handle 0x0030, DMI type 17, 84 bytes
 Memory Device
-	Array Handle: 0x001B
+	Array Handle: 0x001F
 	Error Information Handle: Not Provided
 	Total Width: 72 bits
 	Data Width: 64 bits
@@ -553,88 +605,88 @@ Memory Device
 	Cache Size: None
 	Logical Size: None
 
-Handle 0x002E, DMI type 20, 35 bytes
+Handle 0x0032, DMI type 20, 35 bytes
 Memory Device Mapped Address
 	Starting Address: 0x00000000000
 	Ending Address: 0x003FFFFFFFF
 	Range Size: 16 GB
-	Physical Device Handle: 0x002A
-	Memory Array Mapped Address Handle: 0x0020
+	Physical Device Handle: 0x002E
+	Memory Array Mapped Address Handle: 0x0024
 	Partition Row Position: Unknown
 	Interleave Position: 1
 	Interleaved Data Depth: 2
 
-Handle 0x002F, DMI type 20, 35 bytes
+Handle 0x0033, DMI type 20, 35 bytes
 Memory Device Mapped Address
 	Starting Address: 0x00400000000
 	Ending Address: 0x007FFFFFFFF
 	Range Size: 16 GB
-	Physical Device Handle: 0x002C
-	Memory Array Mapped Address Handle: 0x0020
+	Physical Device Handle: 0x0030
+	Memory Array Mapped Address Handle: 0x0024
 	Partition Row Position: Unknown
 	Interleave Position: 2
 	Interleaved Data Depth: 2
 
-Handle 0x0030, DMI type 199, 5 bytes
+Handle 0x0034, DMI type 199, 5 bytes
 OEM-specific Type
 	Header and Data:
-		C7 05 30 00 01
+		C7 05 34 00 01
 	Strings:
 
 
-Handle 0x0031, DMI type 40, 27 bytes
+Handle 0x0035, DMI type 40, 27 bytes
 Additional Information 1
 	Referenced Handle: 0x000a
 	Referenced Offset: 0x00
 	String: Not Specified
 	Value: Unexpected size
 
-Handle 0x0032, DMI type 40, 27 bytes
+Handle 0x0036, DMI type 40, 27 bytes
 Additional Information 1
 	Referenced Handle: 0x000b
 	Referenced Offset: 0x00
 	String: Not Specified
 	Value: Unexpected size
 
-Handle 0x0033, DMI type 40, 27 bytes
+Handle 0x0037, DMI type 40, 27 bytes
 Additional Information 1
 	Referenced Handle: 0x000c
 	Referenced Offset: 0x00
 	String: Not Specified
 	Value: Unexpected size
 
-Handle 0x0034, DMI type 40, 27 bytes
+Handle 0x0038, DMI type 40, 27 bytes
 Additional Information 1
 	Referenced Handle: 0x000d
 	Referenced Offset: 0x00
 	String: Not Specified
 	Value: Unexpected size
 
-Handle 0x0035, DMI type 40, 27 bytes
+Handle 0x0039, DMI type 40, 27 bytes
 Additional Information 1
-	Referenced Handle: 0x0012
+	Referenced Handle: 0x0016
 	Referenced Offset: 0x00
 	String: Not Specified
 	Value: Unexpected size
 
-Handle 0x0036, DMI type 40, 27 bytes
+Handle 0x003A, DMI type 40, 27 bytes
 Additional Information 1
-	Referenced Handle: 0x0013
+	Referenced Handle: 0x0017
 	Referenced Offset: 0x00
 	String: Not Specified
 	Value: Unexpected size
 
-Handle 0x0037, DMI type 40, 27 bytes
+Handle 0x003B, DMI type 40, 27 bytes
 Additional Information 1
-	Referenced Handle: 0x0014
+	Referenced Handle: 0x0018
 	Referenced Offset: 0x00
 	String: Not Specified
 	Value: Unexpected size
 
-Handle 0x0038, DMI type 221, 89 bytes
+Handle 0x003C, DMI type 221, 89 bytes
 OEM-specific Type
 	Header and Data:
-		DD 59 38 00 0C 01 00 FF FF FF FF FF 02 00 FF FF
+		DD 59 3C 00 0C 01 00 FF FF FF FF FF 02 00 FF FF
 		FF FF FF 03 04 FF FF FF FF FF 05 06 FF FF FF FF
 		FF 07 08 FF FF FF FF FF 09 00 00 00 00 00 00 0A
 		00 FF FF FF FF FF 0B 00 FF FF 00 00 00 0C 00 FF
@@ -658,21 +710,21 @@ OEM-specific Type
 		Platform Version
 		Client Silicon Version
 
-Handle 0x0039, DMI type 136, 6 bytes
+Handle 0x003D, DMI type 136, 6 bytes
 OEM-specific Type
 	Header and Data:
-		88 06 39 00 00 00
+		88 06 3D 00 00 00
 
-Handle 0x003A, DMI type 14, 20 bytes
+Handle 0x003E, DMI type 14, 20 bytes
 Group Associations
 	Name: Firmware Version Info
 	Items: 5
-		0x0022 (OEM-specific)
-		0x0023 (OEM-specific)
-		0x0024 (OEM-specific)
-		0x0025 (OEM-specific)
-		0x0038 (OEM-specific)
+		0x0026 (OEM-specific)
+		0x0027 (OEM-specific)
+		0x0028 (OEM-specific)
+		0x0029 (OEM-specific)
+		0x003C (OEM-specific)
 
-Handle 0x003B, DMI type 127, 4 bytes
+Handle 0x003F, DMI type 127, 4 bytes
 End Of Table
 ```

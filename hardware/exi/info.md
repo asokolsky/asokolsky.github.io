@@ -1,3 +1,5 @@
+# exi info
+
 ```
 alex@exi > sudo inxi -FRmxxxrz
 System:
