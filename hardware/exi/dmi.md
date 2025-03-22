@@ -8,13 +8,13 @@ alex@exi > sudo dmidecode
 # dmidecode 3.5
 Getting SMBIOS data from sysfs.
 SMBIOS 3.5.0 present.
-Table at 0x69ADA000.
+Table at 0x69AE5000.
 
 Handle 0x0000, DMI type 0, 26 bytes
 BIOS Information
 	Vendor: American Megatrends International, LLC.
-	Version: 3.04
-	Release Date: 06/12/2023
+	Version: 10.01
+	Release Date: 09/30/2024
 	Address: 0xF0000
 	Runtime Size: 64 kB
 	ROM Size: 16 MB
@@ -118,14 +118,14 @@ Handle 0x0006, DMI type 9, 17 bytes
 System Slot Information
 	Designation: Slot3
 	Type: x1 PCI Express
-	Current Usage: In Use
+	Current Usage: Available
 	Length: Long
 	ID: 19
 	Characteristics:
 		3.3 V is provided
 		Opening is shared
 		PME signal is supported
-	Bus Address: 0000:03:00.0
+	Bus Address: 0000:1c:00.4
 
 Handle 0x0007, DMI type 9, 17 bytes
 System Slot Information
@@ -144,14 +144,14 @@ Handle 0x0008, DMI type 9, 17 bytes
 System Slot Information
 	Designation: M2_1
 	Type: x1 PCI Express
-	Current Usage: In Use
+	Current Usage: Available
 	Length: Short
 	ID: 33
 	Characteristics:
 		3.3 V is provided
 		Opening is shared
 		PME signal is supported
-	Bus Address: 0000:02:00.0
+	Bus Address: 0000:06:00.0
 
 Handle 0x0009, DMI type 9, 17 bytes
 System Slot Information
@@ -164,7 +164,7 @@ System Slot Information
 		3.3 V is provided
 		Opening is shared
 		PME signal is supported
-	Bus Address: 0000:04:00.0
+	Bus Address: 0000:02:00.0
 
 Handle 0x000A, DMI type 9, 17 bytes
 System Slot Information
@@ -205,15 +205,36 @@ Handle 0x000F, DMI type 17, 92 bytes
 Memory Device
 	Array Handle: 0x000E
 	Error Information Handle: Not Provided
-	Total Width: Unknown
-	Data Width: Unknown
-	Size: No Module Installed
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 16 GB
 	Form Factor: DIMM
 	Set: None
 	Locator: Controller0-ChannelA-DIMM0
 	Bank Locator: BANK 0
-	Type: Unknown
-	Type Detail: None
+	Type: DDR5
+	Type Detail: Synchronous
+	Speed: 5600 MT/s
+	Manufacturer: Micron Technology
+	Serial Number: EA1C8BC0
+	Asset Tag: 9876543210
+	Part Number: CP16G60C36U5B.M8D1
+	Rank: 1
+	Configured Memory Speed: 5600 MT/s
+	Minimum Voltage: 1.25 V
+	Maximum Voltage: 1.25 V
+	Configured Voltage: 1.25 V
+	Memory Technology: DRAM
+	Memory Operating Mode Capability: Volatile memory
+	Firmware Version: Not Specified
+	Module Manufacturer ID: Bank 1, Hex 0x2C
+	Module Product ID: Unknown
+	Memory Subsystem Controller Manufacturer ID: Unknown
+	Memory Subsystem Controller Product ID: Unknown
+	Non-Volatile Size: None
+	Volatile Size: 16 GB
+	Cache Size: None
+	Logical Size: None
 
 Handle 0x0010, DMI type 17, 92 bytes
 Memory Device
@@ -221,32 +242,32 @@ Memory Device
 	Error Information Handle: Not Provided
 	Total Width: 64 bits
 	Data Width: 64 bits
-	Size: 8 GB
+	Size: 16 GB
 	Form Factor: DIMM
 	Set: None
 	Locator: Controller0-ChannelA-DIMM1
 	Bank Locator: BANK 0
 	Type: DDR5
 	Type Detail: Synchronous
-	Speed: 5200 MT/s
-	Manufacturer: Team Group Inc
-	Serial Number: 0104FA23
+	Speed: 5600 MT/s
+	Manufacturer: Micron Technology
+	Serial Number: EA1C8BE3
 	Asset Tag: 9876543210
-	Part Number: UD5-5200
+	Part Number: CP16G60C36U5B.M8D1
 	Rank: 1
-	Configured Memory Speed: 5200 MT/s
-	Minimum Voltage: 1.1 V
-	Maximum Voltage: 1.1 V
-	Configured Voltage: 1.1 V
+	Configured Memory Speed: 5600 MT/s
+	Minimum Voltage: 1.25 V
+	Maximum Voltage: 1.25 V
+	Configured Voltage: 1.25 V
 	Memory Technology: DRAM
 	Memory Operating Mode Capability: Volatile memory
 	Firmware Version: Not Specified
-	Module Manufacturer ID: Bank 5, Hex 0xEF
+	Module Manufacturer ID: Bank 1, Hex 0x2C
 	Module Product ID: Unknown
 	Memory Subsystem Controller Manufacturer ID: Unknown
 	Memory Subsystem Controller Product ID: Unknown
 	Non-Volatile Size: None
-	Volatile Size: 8 GB
+	Volatile Size: 16 GB
 	Cache Size: None
 	Logical Size: None
 
@@ -254,15 +275,36 @@ Handle 0x0011, DMI type 17, 92 bytes
 Memory Device
 	Array Handle: 0x000E
 	Error Information Handle: Not Provided
-	Total Width: Unknown
-	Data Width: Unknown
-	Size: No Module Installed
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 16 GB
 	Form Factor: DIMM
 	Set: None
 	Locator: Controller1-ChannelA-DIMM0
 	Bank Locator: BANK 0
-	Type: Unknown
-	Type Detail: None
+	Type: DDR5
+	Type Detail: Synchronous
+	Speed: 5600 MT/s
+	Manufacturer: Micron Technology
+	Serial Number: EA1C8BD4
+	Asset Tag: 9876543210
+	Part Number: CP16G60C36U5B.M8D1
+	Rank: 1
+	Configured Memory Speed: 5600 MT/s
+	Minimum Voltage: 1.25 V
+	Maximum Voltage: 1.25 V
+	Configured Voltage: 1.25 V
+	Memory Technology: DRAM
+	Memory Operating Mode Capability: Volatile memory
+	Firmware Version: Not Specified
+	Module Manufacturer ID: Bank 1, Hex 0x2C
+	Module Product ID: Unknown
+	Memory Subsystem Controller Manufacturer ID: Unknown
+	Memory Subsystem Controller Product ID: Unknown
+	Non-Volatile Size: None
+	Volatile Size: 16 GB
+	Cache Size: None
+	Logical Size: None
 
 Handle 0x0012, DMI type 17, 92 bytes
 Memory Device
@@ -270,42 +312,42 @@ Memory Device
 	Error Information Handle: Not Provided
 	Total Width: 64 bits
 	Data Width: 64 bits
-	Size: 8 GB
+	Size: 16 GB
 	Form Factor: DIMM
 	Set: None
 	Locator: Controller1-ChannelA-DIMM1
 	Bank Locator: BANK 0
 	Type: DDR5
 	Type Detail: Synchronous
-	Speed: 5200 MT/s
-	Manufacturer: Team Group Inc
-	Serial Number: 0104FA2A
+	Speed: 5600 MT/s
+	Manufacturer: Micron Technology
+	Serial Number: EA1C8BD8
 	Asset Tag: 9876543210
-	Part Number: UD5-5200
+	Part Number: CP16G60C36U5B.M8D1
 	Rank: 1
-	Configured Memory Speed: 5200 MT/s
-	Minimum Voltage: 1.1 V
-	Maximum Voltage: 1.1 V
-	Configured Voltage: 1.1 V
+	Configured Memory Speed: 5600 MT/s
+	Minimum Voltage: 1.25 V
+	Maximum Voltage: 1.25 V
+	Configured Voltage: 1.25 V
 	Memory Technology: DRAM
 	Memory Operating Mode Capability: Volatile memory
 	Firmware Version: Not Specified
-	Module Manufacturer ID: Bank 5, Hex 0xEF
+	Module Manufacturer ID: Bank 1, Hex 0x2C
 	Module Product ID: Unknown
 	Memory Subsystem Controller Manufacturer ID: Unknown
 	Memory Subsystem Controller Product ID: Unknown
 	Non-Volatile Size: None
-	Volatile Size: 8 GB
+	Volatile Size: 16 GB
 	Cache Size: None
 	Logical Size: None
 
 Handle 0x0013, DMI type 19, 31 bytes
 Memory Array Mapped Address
 	Starting Address: 0x00000000000
-	Ending Address: 0x003FFFFFFFF
-	Range Size: 16 GB
+	Ending Address: 0x00FFFFFFFFF
+	Range Size: 64 GB
 	Physical Array Handle: 0x000E
-	Partition Width: 2
+	Partition Width: 4
 
 Handle 0x0014, DMI type 43, 31 bytes
 TPM Device
@@ -320,7 +362,7 @@ TPM Device
 Handle 0x0015, DMI type 45, 26 bytes
 Firmware Inventory Information
 	Firmware Component Name: TPM Firmware
-	Firmware Version: 2580012:1B0880..
+	Firmware Version: 2580012:1E08D8..
 	Firmware ID: Not Specified
 	Release Date: 2021-05-15T00:00:00Z
 	Manufacturer: INTEL
@@ -336,9 +378,9 @@ Firmware Inventory Information
 Handle 0x0017, DMI type 20, 35 bytes
 Memory Device Mapped Address
 	Starting Address: 0x00000000000
-	Ending Address: 0x001FFFFFFFF
-	Range Size: 8 GB
-	Physical Device Handle: 0x0010
+	Ending Address: 0x003FFFFFFFF
+	Range Size: 16 GB
+	Physical Device Handle: 0x000F
 	Memory Array Mapped Address Handle: 0x0013
 	Partition Row Position: 1
 	Interleave Position: 1
@@ -346,47 +388,69 @@ Memory Device Mapped Address
 
 Handle 0x0018, DMI type 20, 35 bytes
 Memory Device Mapped Address
-	Starting Address: 0x00200000000
-	Ending Address: 0x003FFFFFFFF
-	Range Size: 8 GB
+	Starting Address: 0x00400000000
+	Ending Address: 0x007FFFFFFFF
+	Range Size: 16 GB
+	Physical Device Handle: 0x0010
+	Memory Array Mapped Address Handle: 0x0013
+	Partition Row Position: 1
+	Interleave Position: 1
+	Interleaved Data Depth: 2
+
+Handle 0x0019, DMI type 20, 35 bytes
+Memory Device Mapped Address
+	Starting Address: 0x00800000000
+	Ending Address: 0x00BFFFFFFFF
+	Range Size: 16 GB
+	Physical Device Handle: 0x0011
+	Memory Array Mapped Address Handle: 0x0013
+	Partition Row Position: 1
+	Interleave Position: 2
+	Interleaved Data Depth: 2
+
+Handle 0x001A, DMI type 20, 35 bytes
+Memory Device Mapped Address
+	Starting Address: 0x00C00000000
+	Ending Address: 0x00FFFFFFFFF
+	Range Size: 16 GB
 	Physical Device Handle: 0x0012
 	Memory Array Mapped Address Handle: 0x0013
 	Partition Row Position: 1
 	Interleave Position: 2
 	Interleaved Data Depth: 2
 
-Handle 0x0019, DMI type 221, 12 bytes
+Handle 0x001B, DMI type 221, 12 bytes
 OEM-specific Type
 	Header and Data:
-		DD 0C 19 00 01 01 00 04 00 00 00 00
+		DD 0C 1B 00 01 01 00 04 00 00 00 00
 	Strings:
 		FSP Binary Version
 
-Handle 0x001A, DMI type 221, 26 bytes
+Handle 0x001C, DMI type 221, 26 bytes
 OEM-specific Type
 	Header and Data:
-		DD 1A 1A 00 03 01 00 0C 00 AD 50 00 02 00 00 00
-		00 2C 00 03 00 FF FF FF FF FF
+		DD 1A 1C 00 03 01 00 0C 00 AD 50 00 02 00 00 00
+		00 36 00 03 00 FF FF FF FF FF
 	Strings:
 		Reference Code - CPU
 		uCode Version
 		TXT ACM version
 
-Handle 0x001B, DMI type 221, 26 bytes
+Handle 0x001D, DMI type 221, 26 bytes
 OEM-specific Type
 	Header and Data:
-		DD 1A 1B 00 03 01 00 0C 00 AD 50 00 02 00 00 00
-		00 00 00 03 04 10 01 1B 80 08
+		DD 1A 1D 00 03 01 00 0C 00 AD 50 00 02 00 00 00
+		00 00 00 03 04 10 01 1E D8 08
 	Strings:
 		Reference Code - ME
 		MEBx version
 		ME Firmware Version
 		Consumer SKU
 
-Handle 0x001C, DMI type 221, 47 bytes
+Handle 0x001E, DMI type 221, 47 bytes
 OEM-specific Type
 	Header and Data:
-		DD 2F 1C 00 06 01 00 0C 00 AD 50 00 02 03 FF FF
+		DD 2F 1E 00 06 01 00 0C 00 AD 50 00 02 03 FF FF
 		FF FF FF 04 00 FF FF FF 11 00 05 00 FF FF FF 11
 		00 06 00 02 46 00 00 00 07 00 04 00 00 00 00
 	Strings:
@@ -398,11 +462,11 @@ OEM-specific Type
 		OPROM - RST - RAID
 		PCH Hsio Version
 
-Handle 0x001D, DMI type 221, 82 bytes
+Handle 0x001F, DMI type 221, 82 bytes
 OEM-specific Type
 	Header and Data:
-		DD 52 1D 00 0B 01 00 0C 00 AD 50 00 02 00 00 00
-		04 24 00 03 00 0C 00 AD 50 00 04 05 FF FF FF FF
+		DD 52 1F 00 0B 01 00 0C 00 AD 50 00 02 00 00 00
+		04 85 00 03 00 0C 00 AD 50 00 04 05 FF FF FF FF
 		FF 06 00 00 00 00 02 00 07 00 00 00 00 02 00 08
 		00 FF FF FF FF FF 09 00 FF FF FF FF FF 0A 00 FF
 		FF FF FF FF 0B 00 FF FF FF FF FF 0C 00 FF FF FF
@@ -421,7 +485,7 @@ OEM-specific Type
 		Thunderbolt(TM) FW Version
 		System Agent Manageability Engine FW Version
 
-Handle 0x001E, DMI type 7, 27 bytes
+Handle 0x0020, DMI type 7, 27 bytes
 Cache Information
 	Socket Designation: L1 Cache
 	Configuration: Enabled, Not Socketed, Level 1
@@ -437,7 +501,7 @@ Cache Information
 	System Type: Data
 	Associativity: 12-way Set-associative
 
-Handle 0x001F, DMI type 7, 27 bytes
+Handle 0x0021, DMI type 7, 27 bytes
 Cache Information
 	Socket Designation: L1 Cache
 	Configuration: Enabled, Not Socketed, Level 1
@@ -453,7 +517,7 @@ Cache Information
 	System Type: Instruction
 	Associativity: 8-way Set-associative
 
-Handle 0x0020, DMI type 7, 27 bytes
+Handle 0x0022, DMI type 7, 27 bytes
 Cache Information
 	Socket Designation: L2 Cache
 	Configuration: Enabled, Not Socketed, Level 2
@@ -469,7 +533,7 @@ Cache Information
 	System Type: Unified
 	Associativity: Other
 
-Handle 0x0021, DMI type 7, 27 bytes
+Handle 0x0023, DMI type 7, 27 bytes
 Cache Information
 	Socket Designation: L3 Cache
 	Configuration: Enabled, Not Socketed, Level 3
@@ -485,7 +549,7 @@ Cache Information
 	System Type: Unified
 	Associativity: Other
 
-Handle 0x0022, DMI type 4, 48 bytes
+Handle 0x0024, DMI type 4, 48 bytes
 Processor Information
 	Socket Designation: CPUSocket
 	Type: Central Processor
@@ -528,10 +592,10 @@ Processor Information
 	Max Speed: 4400 MHz
 	Current Speed: 3960 MHz
 	Status: Populated, Enabled
-	Upgrade: <OUT OF SPEC>
-	L1 Cache Handle: 0x001F
-	L2 Cache Handle: 0x0020
-	L3 Cache Handle: 0x0021
+	Upgrade: Socket LGA1700
+	L1 Cache Handle: 0x0021
+	L2 Cache Handle: 0x0022
+	L3 Cache Handle: 0x0023
 	Serial Number: To Be Filled By O.E.M.
 	Asset Tag: To Be Filled By O.E.M.
 	Part Number: To Be Filled By O.E.M.
@@ -546,24 +610,24 @@ Processor Information
 		Enhanced Virtualization
 		Power/Performance Control
 
-Handle 0x0023, DMI type 130, 24 bytes
+Handle 0x0025, DMI type 130, 24 bytes
 OEM-specific Type
 	Header and Data:
-		82 18 23 00 24 41 4D 54 00 00 00 00 00 A5 EF 02
+		82 18 25 00 24 41 4D 54 00 00 00 00 00 A5 EF 02
 		80 00 00 00 00 00 00 00
 
-Handle 0x0024, DMI type 131, 64 bytes
+Handle 0x0026, DMI type 131, 64 bytes
 OEM-specific Type
 	Header and Data:
-		83 40 24 00 31 00 00 00 00 00 00 00 00 00 00 00
+		83 40 26 00 31 00 00 00 00 00 00 00 00 00 00 00
 		F8 00 06 7A 00 00 00 00 21 20 00 00 01 00 10 00
-		80 08 1B 00 00 00 00 00 FE 00 FF FF 00 00 00 00
+		D8 08 1E 00 00 00 00 00 FE 00 FF FF 00 00 00 00
 		00 00 00 00 22 00 00 00 76 50 72 6F 00 00 00 00
 
-Handle 0x0025, DMI type 221, 103 bytes
+Handle 0x0027, DMI type 221, 103 bytes
 OEM-specific Type
 	Header and Data:
-		DD 67 25 00 0E 01 00 FF FF FF FF FF 02 00 FF FF
+		DD 67 27 00 0E 01 00 FF FF FF FF FF 02 00 FF FF
 		FF FF FF 03 04 FF FF FF FF FF 05 06 FF FF FF FF
 		FF 07 08 FF FF FF FF FF 09 00 FF FF FF FF FF 0A
 		00 FF FF FF FF FF 0B 00 FF FF 00 00 00 0C 00 FF
@@ -589,16 +653,16 @@ OEM-specific Type
 		TCSS PD0 Version
 		TCSS PD1 Version
 
-Handle 0x0026, DMI type 14, 8 bytes
+Handle 0x0028, DMI type 14, 8 bytes
 Group Associations
 	Name: $MEI
 	Items: 1
 		0x0000 (OEM-specific)
 
-Handle 0x0027, DMI type 219, 106 bytes
+Handle 0x0029, DMI type 219, 106 bytes
 OEM-specific Type
 	Header and Data:
-		DB 6A 27 00 01 04 01 55 02 00 90 06 01 85 39 20
+		DB 6A 29 00 01 04 01 55 02 00 90 06 01 85 39 20
 		00 00 00 00 40 00 00 00 00 00 00 00 00 00 00 02
 		FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
 		FF FF FF FF FF FF FF FF 03 00 00 00 80 00 00 00
@@ -611,11 +675,11 @@ OEM-specific Type
 		MEI3
 		MEI4
 
-Handle 0x0028, DMI type 136, 6 bytes
+Handle 0x002A, DMI type 136, 6 bytes
 OEM-specific Type
 	Header and Data:
-		88 06 28 00 00 00
+		88 06 2A 00 00 00
 
-Handle 0x0029, DMI type 127, 4 bytes
+Handle 0x002B, DMI type 127, 4 bytes
 End Of Table
 ```

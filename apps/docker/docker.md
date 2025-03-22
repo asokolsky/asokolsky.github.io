@@ -1,8 +1,10 @@
 # Docker Cheat Sheet
 
+[Another cheat sheet](https://www.hackingnote.com/en/cheatsheets/docker/)
+
 ## Install
 
-From  https://www.linuxshelltips.com/install-docker-in-linux-mint/
+From [install-docker-in-linux-mint](https://www.linuxshelltips.com/install-docker-in-linux-mint/):
 
 ```sh
 sudo apt update
@@ -210,6 +212,12 @@ docker container ls -q
 b06cfe3053e5
 4cf774b9e4a4
 ```
+
+Specify format
+```sh
+docker ps -a --format "{{.ID}},{{.Names}},{{.Status}},{{.Image}},{{.Ports}}"
+```
+
 ## Kill all containers
 
 Force delete all containers:

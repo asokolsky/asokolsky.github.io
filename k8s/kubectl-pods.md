@@ -1,5 +1,15 @@
 # k8s Pods
 
+## Pod Lifecycle
+
+The primary phases/states in the pod lifecycle are:
+
+* Pending: the pod is accepted by the Kubernetes system but is waiting for resources to be allocated.
+* Running: the pod has been scheduled, and all containers are in a running state.
+* Succeeded: all the containers in the pod have exited successfully.
+* Failed: all containers in the pod have terminated, with at least one container failing.
+* CrashLoopBackOff: one or more containers in the pod are repeatedly crashing.
+
 ## Listing pods
 
 Short but [show labels](https://kubebyexample.com/concept/labels):
@@ -303,8 +313,83 @@ The same is true for ReplicaSets or Deployments.
 
 ## Run a Command in a Container
 
-To run a command in a container use
-[kubectl exec](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_exec/):
-```
+To run a command in a container use [kubectl exec](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_exec/):
+
+```sh
 k exec sleeper -- whoami
 ```
+
+## Pod Resource Requests and Limits
+
+* Resource requests: specify the minimum CPU and memory that a pod requires.
+* Resource limits: define the maximum resources a pod can consume.
+
+Example of setting both CPU and memory requests and limits for a pod:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resource-limits-pod
+spec:
+  containers:
+  - name: main-app
+    image: nginx
+    resources:
+      requests:
+        memory: "128Mi"
+        cpu: "250m"
+      limits:
+        memory: "256Mi"
+        cpu: "500m"
+```
+
+## Pod Affinity and Anti-Affinity
+
+Affinity rules attract pods to specific nodes or zones. Anti-affinity rules prevent certain pods from being placed together.
+
+Types of Affinity:
+
+* Node Affinity: controls which nodes a pod can be scheduled on based on node labels.
+* Inter-Pod Affinity: Ensures that certain pods are scheduled near each other.
+* Inter-Pod Anti-Affinity: Prevents certain pods from being scheduled on the same node or zone to improve resilience.
+
+Example of a pod with node affinity for better performance:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: affinity-pod
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: "zone"
+            operator: In
+            values:
+            - "us-west-1a"
+  containers:
+  - name: main-app
+    image: nginx
+```
+
+This pod will only be scheduled on nodes within the specified zone (`us-west-1a`), ensuring optimal location for workload needs.
+
+## Pod Disruption Budget (PDB)
+
+A PDB defines the minimum number of pods that must be available during planned disruptions, such as updates or maintenance, ensuring application uptime.
+
+```yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: my-app-pdb
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: my-app
+```
+This ensures at least one pod labeled `app: my-app` remains available even during disruptions.

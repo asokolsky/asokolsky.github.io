@@ -36,7 +36,9 @@ For any software development install
 ```sh
 xcode-select --install
 ```
+
 Then:
+* [homebrew](https://brew.sh/)
 * cli: [exiftool](/apps/cli-exiftool.html), and [more...](cli.html)
 * [iTerm2](iTerm2.html) Terminal Emulator
 * [Java](java.html)

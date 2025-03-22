@@ -37,3 +37,7 @@ example use: [aws-describe](https://github.com/asokolsky/aws-describe)
 
 * [Cloud Nuke](cloud-nuke.html)
 * [CredStash](credstash.html)
+
+## Good Read
+
+[finding ami ids](https://www.fundamentals-of-devops.com/resources/2025/02/24/finding-ami-ids/)

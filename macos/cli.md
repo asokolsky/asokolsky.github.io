@@ -2,37 +2,7 @@
 
 ## List Hardware
 
-```console
-asokolsky in ~ > system_profiler -detailLevel full SPEthernetDataType
-Ethernet:
-
-    Apple T2 Controller:
-
-      Bus: USB
-      Vendor Name: Apple Inc.
-      Product Name: Apple T2 Controller
-      Vendor ID: 0x05ac
-      Product ID: 0x8233
-      USB Link Speed: Up to 480 Mb/s
-      Driver: com.apple.driver.usb.cdc.ncm
-      BSD Device Name: en5
-      MAC Address: ac:de:48:00:11:22
-      AVB Support: No
-      Maximum Link Speed: 2.5 Gb/s
-
-    USB 10/100/1000 LAN:
-
-      Bus: USB
-      Vendor Name: Realtek
-      Product Name: USB 10/100/1000 LAN
-      Vendor ID: 0x0bda
-      Product ID: 0x8153
-      USB Link Speed: Up to 5 Gb/s
-      Driver: com.apple.DriverKit.AppleUserECM
-      BSD Device Name: en7
-      MAC Address: 00:00:00:00:00:00
-      AVB Support: No
-```
+[system_profiler](./cli-system_profiler.html)
 
 ## Show hidden files and folders
 
@@ -42,7 +12,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 
 ## Enable Check for Updates
 
-```
+```sh
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
@@ -75,6 +45,32 @@ ditto ~/Pictures/Fall2015/ /Volumes/PhotoBackup/2015/
 
 ```sh
 sudo powermetrics --samplers smc
+```
+
+On my Intel MacBook Pro:
+```
+sudo powermetrics --samplers smc
+Password:
+Machine model: MacBookPro16,1
+SMC version: Unknown
+EFI version: 2069.3.0
+OS version: 24D70
+Boot arguments:
+Boot time: Thu Feb 20 08:26:07 2025
+
+*** Sampled system activity (Thu Mar 13 10:16:36 2025 -0700) (5006.14ms elapsed) ***
+
+**** SMC sensors ****
+
+CPU Thermal level: 66
+GPU Thermal level: 16
+IO Thermal level: 16
+Fan: 2942.43 rpm
+CPU die temperature: 76.93 C
+GPU die temperature: 71.00 C
+CPU Plimit: 0.00
+GPU Plimit (Int): 0.00
+Number of prochots: 0
 ```
 
 ## Networking

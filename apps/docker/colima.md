@@ -24,10 +24,23 @@ brew install colima
 ```
 Also:
 ```sh
-brew install docker docker-compose
+brew install docker docker-compose docker-buildx
 ```
 Do NOT install `docker` via `brew` with the `--cask` switch. That will install
 Docker Desktop instead of CLI.
+
+add CLI plugins:
+```sh
+mkdir -p ~/.docker/cli-plugins
+ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+ln -sfn /opt/homebrew/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
+```
+
+To verify:
+```sh
+docker compose version
+docker buildx version
+```
 
 ## Use
 

@@ -8,7 +8,7 @@ alex@duo > sudo dmidecode
 # dmidecode 3.5
 Getting SMBIOS data from sysfs.
 SMBIOS 3.1.1 present.
-Table at 0x3EDC1000.
+Table at 0x8F5C1000.
 
 Handle 0x0000, DMI type 0, 26 bytes
 BIOS Information
@@ -289,7 +289,7 @@ Processor Information
                 TM (Thermal monitor supported)
                 PBE (Pending break enabled)
         Version: Intel(R) Core(TM) i5-9400 CPU @ 2.90GHz
-        Voltage: 1.0 V
+        Voltage: 0.9 V
         External Clock: 100 MHz
         Max Speed: 8300 MHz
         Current Speed: 3200 MHz
@@ -423,21 +423,13 @@ Onboard Device
 
 Handle 0x001C, DMI type 41, 11 bytes
 Onboard Device
-        Reference Designation: Onboard - Video
-        Type: Video
-        Status: Enabled
-        Type Instance: 1
-        Bus Address: 0000:00:02.0
-
-Handle 0x001D, DMI type 41, 11 bytes
-Onboard Device
         Reference Designation: Onboard - Other
         Type: Other
         Status: Enabled
         Type Instance: 2
         Bus Address: 0000:00:14.0
 
-Handle 0x001E, DMI type 41, 11 bytes
+Handle 0x001D, DMI type 41, 11 bytes
 Onboard Device
         Reference Designation: Onboard - Other
         Type: Other
@@ -445,7 +437,7 @@ Onboard Device
         Type Instance: 3
         Bus Address: 0000:00:14.2
 
-Handle 0x001F, DMI type 41, 11 bytes
+Handle 0x001E, DMI type 41, 11 bytes
 Onboard Device
         Reference Designation: Onboard - Other
         Type: Other
@@ -453,7 +445,7 @@ Onboard Device
         Type Instance: 4
         Bus Address: 0000:00:16.0
 
-Handle 0x0020, DMI type 41, 11 bytes
+Handle 0x001F, DMI type 41, 11 bytes
 Onboard Device
         Reference Designation: Onboard - SATA
         Type: SATA Controller
@@ -461,7 +453,7 @@ Onboard Device
         Type Instance: 1
         Bus Address: 0000:00:17.0
 
-Handle 0x0021, DMI type 41, 11 bytes
+Handle 0x0020, DMI type 41, 11 bytes
 Onboard Device
         Reference Designation: Onboard - Other
         Type: Other
@@ -469,7 +461,7 @@ Onboard Device
         Type Instance: 5
         Bus Address: 0000:00:1f.0
 
-Handle 0x0022, DMI type 41, 11 bytes
+Handle 0x0021, DMI type 41, 11 bytes
 Onboard Device
         Reference Designation: Onboard - Other
         Type: Other
@@ -477,7 +469,7 @@ Onboard Device
         Type Instance: 6
         Bus Address: 0000:00:1f.2
 
-Handle 0x0023, DMI type 41, 11 bytes
+Handle 0x0022, DMI type 41, 11 bytes
 Onboard Device
         Reference Designation: Onboard - Sound
         Type: Sound
@@ -485,7 +477,7 @@ Onboard Device
         Type Instance: 1
         Bus Address: 0000:00:1f.3
 
-Handle 0x0024, DMI type 41, 11 bytes
+Handle 0x0023, DMI type 41, 11 bytes
 Onboard Device
         Reference Designation: Onboard - Other
         Type: Other
@@ -493,7 +485,7 @@ Onboard Device
         Type Instance: 7
         Bus Address: 0000:00:1f.4
 
-Handle 0x0025, DMI type 41, 11 bytes
+Handle 0x0024, DMI type 41, 11 bytes
 Onboard Device
         Reference Designation: Onboard - Ethernet
         Type: Ethernet
@@ -501,16 +493,16 @@ Onboard Device
         Type Instance: 1
         Bus Address: 0000:00:1f.6
 
-Handle 0x0026, DMI type 14, 8 bytes
+Handle 0x0025, DMI type 14, 8 bytes
 Group Associations
         Name: $MEI
         Items: 1
                 0x0000 (OEM-specific)
 
-Handle 0x0027, DMI type 219, 81 bytes
+Handle 0x0026, DMI type 219, 81 bytes
 OEM-specific Type
         Header and Data:
-                DB 51 27 00 01 03 01 45 02 00 90 06 01 00 66 20
+                DB 51 26 00 01 03 01 45 02 00 90 06 01 00 66 20
                 00 00 00 04 40 08 00 00 00 00 00 00 00 00 40 02
                 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
                 FF FF FF FF FF FF FF FF 03 00 00 00 80 00 00 00
@@ -521,6 +513,6 @@ OEM-specific Type
                 MEI2
                 MEI3
 
-Handle 0x0028, DMI type 127, 4 bytes
+Handle 0x0027, DMI type 127, 4 bytes
 End Of Table
 ```

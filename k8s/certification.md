@@ -15,12 +15,15 @@ linuxfoundation.org (linked to LinkedIn):
 * [Tips CKA CKAD](http://training.linuxfoundation.org/go/Important-Tips-CKA-CKAD)
 * [certified-kubernetes-administrator](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
 * [linuxfoundation certification](https://trainingportal.linuxfoundation.org/learn/dashboard)
+* [cka-preparation-guide](https://github.com/leandrocostam/cka-preparation-guide)
 
-Udemy:
+### Udemy
+
 * [CKA course with Practice Tests](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
 with
 [repo](https://github.com/kodekloudhub/certified-kubernetes-administrator-course)
 * [corresponding lab on kodekloud](https://uklabs.kodekloud.com/courses/labs-certified-kubernetes-administrator-with-practice-tests/)
+* [learn-kubernetes-with-100-questions](https://www.udemy.com/course/learn-kubernetes-with-100-questions/learn/lecture/40386944#overview)
 
 [kodekloud](https://kodekloud.com/dashboard/)
 
