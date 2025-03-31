@@ -261,9 +261,7 @@ spec:
 
 ```
 
-To add
-[capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
-to the container:
+To add [capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html) to the container:
 
 ```yaml
 apiVersion: v1
