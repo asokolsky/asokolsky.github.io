@@ -3,8 +3,7 @@
 ## Topics
 
 * [Configuration](config.html),
-* [git hooks](https://www.atlassian.com/git/tutorials/git-hooks),
-[pre-commit hook](pre-commit-hook.html)
+* [git hooks](https://www.atlassian.com/git/tutorials/git-hooks), [pre-commit hook](pre-commit-hook.html)
 * [custom git merge driver](custom-merge-driver.html)
 * [Hosting a Repo in a Cloud](hosting.html)
 * [merge vs rebase workflow](workflow.html)
