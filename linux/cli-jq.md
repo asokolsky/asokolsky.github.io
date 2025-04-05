@@ -5,6 +5,8 @@
 * [using-jq-to-process-json](https://www.linode.com/docs/guides/using-jq-to-process-json-on-the-command-line/)
 * [cheatsheet](https://www.hackingnote.com/en/cheatsheets/jq/)
 
+Use along with [gron](cli-gron.html)
+
 ## Pretty print
 
 Just pipe it
@@ -88,10 +90,6 @@ kubectl get pod vault-0 -n vault -o=jsonpath="{.spec.containers}"|jq "map(.key =
   {
     "image": "ghcr.io/bank-vaults/bank-vaults:1.20.3",
     "name": "bank-vaults"
-  },
-  {
-    "image": "285088940395.dkr.ecr.us-east-1.amazonaws.com/statsd-explorer:2023.10.02",
-    "name": "prometheus-exporter"
   },
   {
     "image": "ubuntu:bionic",

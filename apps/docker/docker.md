@@ -4,6 +4,8 @@
 
 ## Install
 
+On MacOS I use [colima](colima.html).
+
 From [install-docker-in-linux-mint](https://www.linuxshelltips.com/install-docker-in-linux-mint/):
 
 ```sh
@@ -70,11 +72,10 @@ The location for client configuration files is determined by `DOCKER_CONFIG`
 environment variable, seems to default to `$HOME/.docker`. More on docker
 [environment variables](https://docs.docker.com/engine/reference/commandline/cli/#environment-variables).
 
-[Configuration files](https://docs.docker.com/engine/reference/commandline/cli/#configuration-files)
-include:
+[Configuration files](https://docs.docker.com/engine/reference/commandline/cli/#configuration-files) include:
 
-* config.json
-* daemon.json
+* `config.json`
+* `daemon.json`
 
 ## Networking
 
@@ -82,7 +83,7 @@ include:
 
 Show (standard) networks:
 
-```console
+```
 root@suprox:~# docker network ls
 NETWORK ID     NAME      DRIVER    SCOPE
 6eef1bc6ffc5   bridge    bridge    local
@@ -181,20 +182,18 @@ better yet:
 docker images --digests
 ```
 
-More on
-[docker image](https://docs.docker.com/engine/reference/commandline/image/).
+More on [docker image](https://docs.docker.com/engine/reference/commandline/image/).
 
 ## List containers
 
 [docker container](https://docs.docker.com/engine/reference/commandline/container/).
-List running:
 
+List running:
 ```sh
 docker container ls
 ```
 
-Can also use
-[docker ps](https://docs.docker.com/engine/reference/commandline/ps/).
+Can also use [docker ps](https://docs.docker.com/engine/reference/commandline/ps/).
 
 List all containers, not only running, do not truncate output:
 
@@ -203,9 +202,8 @@ docker container ls -a --no-trunc
 ```
 
 List IDs only:
-
 ```
-docker container ls -q
+> docker container ls -q
 1addfea727b3
 09c4105cb356
 443fc0c41710
@@ -213,7 +211,7 @@ b06cfe3053e5
 4cf774b9e4a4
 ```
 
-Specify format
+Specify listing format:
 ```sh
 docker ps -a --format "{{.ID}},{{.Names}},{{.Status}},{{.Image}},{{.Ports}}"
 ```
@@ -221,7 +219,6 @@ docker ps -a --format "{{.ID}},{{.Names}},{{.Status}},{{.Image}},{{.Ports}}"
 ## Kill all containers
 
 Force delete all containers:
-
 ```sh
 docker container rm -f $(docker container ls -aq)
 ```
@@ -229,20 +226,20 @@ docker container rm -f $(docker container ls -aq)
 ## Inspect the container
 
 Inspecting container produces JSON:
-
 ```sh
 sudo docker inspect _container_id_
 ```
 
-Extract container environment and sort it.
-```
+Use [jq](/linux/cli-jq.html) to focus on various aspects of the container configuration:
+
+* to view (sorted) container environment:
+```sh
 sudo docker inspect _container_id_ | jq ".[0].Config.Env|sort[]"
 ```
 
-Display the account (username/group) used by the container:
+* to view the container username/group:
 ```sh
 sudo docker inspect _container_id_ | jq ".[].Config.User"
-"root:root"
 ```
 
 ## Get a Shell in a Container
@@ -290,19 +287,17 @@ bf42b1b5a4f7   portainer       0.00%     12.59MiB / 31.26GiB   0.04%     3.29MB 
 ## Build it
 
 Create [Dockerfile](https://docs.docker.com/engine/reference/builder/).
-Then use command
-[docker build](https://docs.docker.com/engine/reference/commandline/build/)
-to build and tag the image:
 
+Then use command [docker build](https://docs.docker.com/engine/reference/commandline/build/) to build and tag the image:
 ```sh
 docker build -t my_stuff .
 ```
 
 ## Run it
 
-Run an image in a container using
-[docker run](https://docs.docker.com/engine/reference/commandline/run/).
-If you need to provide input for `stdin`, use `-i` option:
+Run an image in a container using [docker run](https://docs.docker.com/engine/reference/commandline/run/).
+
+To provide input for `stdin`, use `-i` option:
 
 ```sh
 cat secrets.txt | docker run --pull=always -i my_stuff
