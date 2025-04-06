@@ -40,4 +40,4 @@ Speakers|SAMSUNG HW-Q950T 9.1.4 Soundbar + Sub + Surrounds
 ## Power Consumption
 
 * when turned off - 2W!
-* qhile serving a single video stream over SMB and with CPU consumption <4%: 88W
+* while serving a single video stream over SMB and with CPU consumption <4%: 88W
