@@ -59,6 +59,7 @@ and the [Remote Key Mapping](logi/remote.html)
 
 ## Video
 
+* [Intel i915 Driver Video Tearing](intel/video-tearing.html)
 * [Business Video Setup](business-video.html)
 * [USB Video](usb-video.html)
 * Video cameras: [Logitech Brio 4k](logi/brio.html),

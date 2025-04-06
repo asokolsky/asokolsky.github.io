@@ -12,7 +12,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 
 ## Enable Check for Updates
 
-```
+```sh
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 

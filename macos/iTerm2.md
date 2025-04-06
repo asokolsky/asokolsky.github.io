@@ -3,6 +3,10 @@
 I use [iTerm2](https://iterm2.com/). This cheat sheet is from
 [here](https://github.com/vikashvverma/Goodies/blob/master/Shortcuts/Iterm2.md).
 
+## Customization:
+
+* enable scroll wheel: Settings > Advanced, check `Scroll wheel sends arrow keys`
+
 ## Themes
 
 * [vscode color theme](https://github.com/tallpants/vscode-theme-iterm2)
