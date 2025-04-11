@@ -8,9 +8,7 @@ use [with webcam](https://trac.ffmpeg.org/wiki/Capture/Webcam).
 
 Know thyself.
 
-Identify the audio recording devices available
-[with](/hardware/usb-audio.html) `pacmd list-sources`.
-I picked `alsa_input.usb-046d_HD_Pro_Webcam_C920_CDF1191F-02.analog-stereo`.
+Identify the audio recording devices available [with](/hardware/usb-audio.html) `pacmd list-sources`. I picked `alsa_input.usb-046d_HD_Pro_Webcam_C920_CDF1191F-02.analog-stereo`.
 
 Identify the video formats available [using](/hardware/usb-video.html)...
 ```sh
@@ -94,3 +92,7 @@ ffmpeg -i input.mkv -ss 00:01:50 -c:v libx264 -c:a libfaac -t 20 output.mkv
 * [ffmpeg QuickSync](https://trac.ffmpeg.org/wiki/Hardware/QuickSync)
 * [NVidia GPU Support Matrix for NVENC/NVDEC](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new)
 * [Using FFmpeg with NVIDIA GPU Hardware Acceleration](https://docs.nvidia.com/video-technologies/video-codec-sdk/12.2/ffmpeg-with-nvidia-gpu/index.html)
+
+## More Uses
+
+See [convert-audio](/linux/convert-audio.html).
