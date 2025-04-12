@@ -16,23 +16,18 @@ Repair disk using:
 
 Alternatively, using CLI:
 
-* boot into a single-user mode: press and hold the Command+S keys while MacOS
-boots.
-* use
-[diskutil and fsck](https://appleinsider.com/inside/macos/tips/how-to-use-fsck-to-check-and-repair-macos-disks)
+* boot into a single-user mode: press and hold the Command+S keys while MacOS boots.
+* use [diskutil and fsck](https://appleinsider.com/inside/macos/tips/how-to-use-fsck-to-check-and-repair-macos-disks)
 
 ## Optimizing input
 
-* Differentiate touch pad and mouse scroll direction using
-[scroll reverser](https://pilotmoon.com/scrollreverser/).
+* Differentiate touch pad and mouse scroll direction using [scroll reverser](https://pilotmoon.com/scrollreverser/).
 * use of [keyboard](keyboard.html)
 * use of [keyboard in finder](finder.html)
 
 ## Running Apps on Mac
 
-For any software development install
-[Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/):
-
+For any software development install [Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/):
 ```sh
 xcode-select --install
 ```
@@ -44,8 +39,7 @@ Then:
 * [stats](https://github.com/exelban/stats)
 * [Java](java.html)
 * [Jenkins](jenkins.html)
-* [docker](/apps/docker/docker-macos.html) and
-[colima](/apps/docker/colima.html)
+* [docker](/apps/docker/docker-macos.html) and [colima](/apps/docker/colima.html)
 * [psql client](/apps/psql-client.html)
 
 Also relevant:
@@ -72,11 +66,12 @@ cchars: discard = ^O; dsusp = ^Y; eof = ^D; eol = <undef>;
 	stop = ^S; susp = ^Z; time = 0; werase = ^W;
 ```
 
-The above
-[interferes with AWS SM](https://github.com/aws/session-manager-plugin/issues/29).
-Workaround:
-
+The above [interferes with AWS SM](https://github.com/aws/session-manager-plugin/issues/29). Workaround:
 ```sh
 # Allow for Ctrl+S, Ctrl+Y to be used in SSM
 stty stop undef;stty dsusp undef
 ```
+
+## launchd
+
+[launchd](https://en.wikipedia.org/wiki/Launchd) is a service management daemon.
