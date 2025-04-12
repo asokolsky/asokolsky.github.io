@@ -2,14 +2,12 @@
 
 [find](https://www.linux.org/docs/man1/find.html) searches for files.
 
-
 ## Examples: Find Directory
 
 Find empty directories:
 ```sh
 find . -type d -empty
 ```
-
 
 ## Examples: Find files
 
@@ -23,7 +21,6 @@ Find all `.jpg` files in the `/home` and sub-directories:
 find /home -name "*.jpg"
 ```
 Note the use of quotes to prevent shell handling the wildcards.
-
 
 Find an empty file within the current directory:
 ```sh
@@ -121,7 +118,6 @@ find . -name '*.py' | xargs wc -l
 From https://docs.oracle.com/cd/E36784_01/html/E39021/bkupsavefiles-14144.html#scrolltoc
 
 Copy from `/data1` to `/data1`:
-
 ```sh
 find /data1 -print -depth | cpio -pdm /data2
 ```

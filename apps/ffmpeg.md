@@ -1,6 +1,7 @@
 # ffmpeg
 
 fast-forward mpeg?  Not really.
+
 ffmpeg [man page](https://manpages.org/ffmpeg),
 use [with webcam](https://trac.ffmpeg.org/wiki/Capture/Webcam).
 
