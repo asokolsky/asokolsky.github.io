@@ -1,32 +1,33 @@
 # MacOS CLI Tips
 
-## List Hardware
-
-[system_profiler](./cli-system_profiler.html)
+* [brew](cli-brew.html)
+* [launchctl](cli-launchctl.html)
+* [smbutil](cli-smbutil.html)
+* List hardware using [system_profiler](cli-cli-system_profiler.html)
+* more [macOS (bash) commands](https://ss64.com/mac/index.html)
 
 ## Show hidden files and folders
-
+Use [defaults](https://ss64.com/mac/defaults.html):
 ```sh
 defaults write com.apple.finder AppleShowAllFiles -bool true
 ```
 
 ## Enable Check for Updates
-
+Use [defaults](https://ss64.com/mac/defaults.html):
 ```sh
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
-## Prevent sleep mode
+## Prevent Sleep Mode
 
-Keep your Mac from falling asleep:
-
+Use [caffeinate](https://ss64.com/mac/caffeinate.html) to keep your Mac from falling asleep:
 ```sh
 caffeinate
 ```
 
-## Use ditto to Copy Files & Directories
+## Copy Files & Directories
 
-[ditto](https://ss64.com/mac/ditto.html) preserves:
+Use [ditto](https://ss64.com/mac/ditto.html), it preserves:
 
 * ownership attributes and permissions
 * file resource forks
@@ -43,6 +44,7 @@ ditto ~/Pictures/Fall2015/ /Volumes/PhotoBackup/2015/
 
 ## Show system temps using CLI
 
+Use [powermetrics](https://ss64.com/mac/powermetrics.html):
 ```sh
 sudo powermetrics --samplers smc
 ```
@@ -75,7 +77,7 @@ Number of prochots: 0
 
 ## Networking
 
-Show Interfaces:
+Use [ifconfig](https://ss64.com/mac/ifconfig.html) to show interfaces:
 ```sh
 ifconfig
 ```
