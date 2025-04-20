@@ -94,3 +94,24 @@ ffmpeg -i input.mkv -ss 00:01:50 -c:v libx264 -c:a libfaac -t 20 output.mkv
 * [ffmpeg QuickSync](https://trac.ffmpeg.org/wiki/Hardware/QuickSync)
 * [NVidia GPU Support Matrix for NVENC/NVDEC](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new)
 * [Using FFmpeg with NVIDIA GPU Hardware Acceleration](https://docs.nvidia.com/video-technologies/video-codec-sdk/12.2/ffmpeg-with-nvidia-gpu/index.html)
+
+## Video Cropping
+
+Just save yourself time and recompress using handbrake.
+
+1. Finetune the [crop params](https://ffmpeg.org/ffmpeg-filters.html#crop) using [ffplay](https://linux.die.net/man/1/ffplay), e.g. crop 20 pixels from top and 20from bottom:
+
+```sh
+ffplay -i in.mp4 -vf "crop=in_w:in_h-40"
+```
+
+The same in VLC (for this to work you may need to disable hardware acceleration):
+```sh
+vlc --video-filter=croppadd --croppadd-croptop=20 --croppadd-cropbottom=20 in.mp4
+```
+
+2. Once the crop params established, recompress video with crop filter, e.g:
+
+```sh
+ffmpeg -i in.mp4 -vf "crop=out_w:out_h:x:y" out.mp4
+```

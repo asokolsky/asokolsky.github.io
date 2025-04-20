@@ -34,6 +34,7 @@ Programming:
 Video Tools:
 
 * [DaVinci Resolve](davinci-resolve/)
+* [Handbrake](handbrake.html)
 * [kdenlive](kdenlive/)
 * [OBS](obs/)
 * [VLC](vlc/)
