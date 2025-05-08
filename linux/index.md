@@ -27,6 +27,7 @@
 * [ipmi](cli-ipmi.html)
 * [journalctl](cli-journalctl.html)
 * [jq](cli-jq.html)
+* [lsof](cli-lsof.html)
 * [lspci](cli-lspci.html)
 * [netstat](cli-netstat.html) and [socket stats](cli-ss.html)
 * [nmap](cli-nmap.html)
