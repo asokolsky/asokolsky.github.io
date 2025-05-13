@@ -68,25 +68,36 @@ git add foo.c
 git commit -m 'fix: foo.c to tolerate invalid input'
 ```
 
-3. Publish the branch using [git push](https://git-scm.com/docs/git-push)
+3. Publish the branch to the remote repo using [git push](https://git-scm.com/docs/git-push):
 
 ```sh
-git push origin main
+git push -u origin foobar-123
 ```
 
 ## 4. Create pull request, ask for a review, address the feedback
 
 1. You can use proprietary cli, e.g. [gh](/apps/git/cli-gh.html) or [glab](/apps/git/cli-glab.html), to create a PR. Or you can use the web GUI offered by the repo's host.
-I like for the PR title to start with the issue.  In this cse this would be:
+I like for the PR title to start with the issue.  In this case the PR title would be:
 ```
 foobar-123: fix: foo.c to tolerate invalid input
 ```
-2. Forward the request to review your newly-created PR appropriately.
+2. Forward the request to [review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) your newly-created PR appropriately.
 3. Go through the review cycle and address the feedback.
+
+At this phase you many need to:
+
+* [resolve merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts);
+* [rebase your branch](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase).
 
 ## 5. Merge the pull request
 
-It could be you who is responsible for the PR merge, or it could be someone else, or it can be automated.
+It could be:
+
+* you who is responsible for the PR merge, or
+* it could be someone else, or
+* it can be automated.
+
+In any case, consider [squashing the commits](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges#squash-and-merge-your-commits) in the PR.
 
 ## Improve the process
 
