@@ -4,6 +4,23 @@
 * [Emacs Wiki](https://www.emacswiki.org/)
 * [GNU Emacs Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/)
 
+Also:
+* [doom emacs](doom-emacs.html)
+* [dracula theme for emacs](https://draculatheme.com/emacs)
+
+Modes:
+
+* [dired](https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html)
+* [org mode](https://orgmode.org/)
+* [markdown mode](markdown-mode.html)
+* [YAML mode](https://www.emacswiki.org/emacs/YamlMode)
+
+
+## Packages
+
+Do M-x list-packages and take it from there.
+
+
 ## Concepts
 
 * [buffer](https://www.gnu.org/software/emacs/manual/html_node/emacs/Buffers.html)
