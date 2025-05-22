@@ -1,6 +1,12 @@
-## Benchmarking Linux Performance
+# Benchmarking Linux Performance
 
-### CPU Performance
+## CPU Performance with sysbench
+
+[sysbench](https://github.com/akopytov/sysbench)
+
+## CPU Performance with 7-zip
+
+Use [7-zip](https://www.7-zip.org/), package named `p7zip` in `brew` or `apt`.
 
 To run a single-thread benchmark:
 ```sh
@@ -118,3 +124,21 @@ Run status group 0 (all jobs):
 Disk stats (read/write):
   nvme0n1: ios=183808/61434, merge=31/9, ticks=157613/607, in_queue=158222, util=96.50%
 ```
+
+## Disk Performance using iozone
+
+[iozone](https://www.iozone.org/)
+
+## Network bandwidth test
+
+Use [iperf3](https://iperf.fr/iperf-download.php).
+
+## Internet bandwidth test
+
+You CAN use iperf3 with [public iperf3 servers](https://iperf.fr/iperf-servers.php).
+
+Alternatively use [speedtest-cli](https://github.com/sivel/speedtest-cli)
+
+## stress-ng
+
+While not a benchmark, this is useful: [stress-ng](https://github.com/ColinIanKing/stress-ng).

@@ -17,19 +17,19 @@ I really like [Source Code Pro](https://en.wikipedia.org/wiki/Source_Code_Pro)
 by Adobe:
 
 * [repo](https://github.com/adobe-fonts/source-code-pro)
-* download the [latest
-release](https://github.com/adobe-fonts/source-code-pro/releases/latest)
-* installation [on
-Mac](https://titanwolf.org/Network/Articles/Article?AID=09204517-16d0-48eb-a201-a96d69b5160f).
+* download the [latest release](https://github.com/adobe-fonts/source-code-pro/releases/latest)
+* installation [on Mac](https://titanwolf.org/Network/Articles/Article?AID=09204517-16d0-48eb-a201-a96d69b5160f).
 
 
 More options:
 
-* [Iosevka](https://github.com/be5invis/Iosevka)
+* [SF Mono](https://developer.apple.com/fonts/)
+* [JetBrains Mono](https://www.jetbrains.com/lp/mono/) - taller than Source Code Pro
+* [Iosevka](https://github.com/be5invis/Iosevka) - too cramped
 * [Fira Code](https://github.com/tonsky/FiraCode)
 * [Cascadia Code](https://github.com/microsoft/cascadia-code)
-* [SF Mono](https://developer.apple.com/fonts/)
 * [Comic Mono](https://github.com/dtinth/comic-mono-font)
+* [Ubuntu Mono](https://fonts.google.com/specimen/Ubuntu+Mono)
 
 ## Google Fonts Dispenser
 
