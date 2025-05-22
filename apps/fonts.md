@@ -1,9 +1,10 @@
 # Fonts
 
 HOWTO Install/remove fonts on
-[Mac](https://support.apple.com/en-us/HT201749),
-[Windows](https://support.microsoft.com/en-us/windows/how-to-install-or-remove-a-font-in-windows-f12d0657-2fc8-7613-c76f-88d043b334b8),
-[Linux](https://community.linuxmint.com/tutorial/view/29).
+* [Mac](https://support.apple.com/en-us/HT201749)
+* [Windows](https://support.microsoft.com/en-us/windows/how-to-install-or-remove-a-font-in-windows-f12d0657-2fc8-7613-c76f-88d043b334b8),
+* [Linux](https://community.linuxmint.com/tutorial/view/29): copy fonts to `~/.fonts` and then update font cache with `fc-cache -f -v`
+
 
 ## Proportional Fonts
 
@@ -36,7 +37,7 @@ More options:
 Try fonts [here](https://fonts.google.com).  Once the you happy with your collection:
 
 * download the zip
-* unzip it to ~/.fonts:
+* unzip it to `~/.fonts`:
 ```sh
 unzip Source_Code_Pro.zip  -d ~/.fonts/Source_Code_Pro
 ```
