@@ -38,11 +38,9 @@ interactive shell there with the setopt and unsetopt commands. You can also:
 * change your prompt
 * set up zle and completion, etc.
 
-You also set any variables that are only used in the interactive shell (e.g.
-$LS_COLORS).
+You also set any variables that are only used in the interactive shell (e.g. $LS_COLORS).
 
-`.zlogin` is sourced on the start of a login shell but after `.zshrc` if the
-shell is also interactive.  This file is often used to start X. Some systems
+`.zlogin` is sourced on the start of a login shell but after `.zshrc` if the shell is also interactive.  This file is often used to start X. Some systems
 start X on boot, so this file is not always very useful.
 
 ### .zshenv, .zprofile, .zshrc
