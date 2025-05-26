@@ -3,28 +3,28 @@
 in `configuration.nix`:
 
 ```
-console = {
-  font = "Lat2-Terminus16";  
-  # use X keyboard bindings
-  useXkbConfig = true;  
-};
+  services.xserver = {
+    # https://nixos.org/manual/nixos/stable/options#opt-services.xserver.enable
+    enable = true;
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
+  };
 
-services.xserver = {
-  enable = true;
-  
-  layout = "us";
-  xkbVariant = "altgr-intl";
-  xkbOptions = "ctrl:swapcaps";
-  
-  displayManager.gdm.enable = true;
-  desktopManager.gnome3.enable = true;
-  displayManager.gdm.wayland = true
-  
-  libinput.enable = true;
-};
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+    options = "ctrl:swapcaps";
+  };
+
 ```
 
 Build it normally with `sudo nixos-rebuild switch`.
+
+```
+sudo nixos-rebuild boot
+sudo reboot
+```
 
 Then run these:
 
