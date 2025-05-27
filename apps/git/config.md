@@ -16,6 +16,11 @@ Specific personally to you, the user.
 * to set: `git config --global user.name xyz`
 * to edit global config file: `git config --edit --global`
 
+Stored in any one of:
+
+* `~.config/git/config`
+* `~.gitconfig`
+
 ## Repository level
 
 Specific to that single repository.
@@ -67,20 +72,28 @@ value at a particular level.
 
 ## Best Practices - Global Config
 
-Followed [Customizing Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
+Followed 
+* [Customizing Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
+* [how-git-core-devs-configure-git](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
 
 ```sh
 git config --global user.name "Alex Sokolsky"
 git config --global user.email "asokolsky@gmail.com"
 git config --global core.editor /usr/bin/emacs
-git config --global core.excludesfile ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore
 git config --global core.pager ''
 git config --global push.default current
 ```
 
-where `~/.gitignore_global`:
+where `~/.gitignore`:
 ```
 *~
 .*.swp
 .DS_Store
 ```
+
+Example `~/.gitconfig`:
+```
+{% include_relative dot-gitconfig.txt %}
+```
+
