@@ -19,4 +19,4 @@ See
 
 * [keyboard](keyboard.html)
 * [home manager](home-manager.html).
-* [](nixos.html)
+* [nixos](nixos.html)

@@ -5,6 +5,5 @@
 
 Main command is [nixos-rebuild](https://nixos.wiki/wiki/Nixos-rebuild):
 ```sh
-sudo nixos-rebuild switch   
+sudo nixos-rebuild switch
 ```
-
