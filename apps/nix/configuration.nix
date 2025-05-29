@@ -13,7 +13,7 @@
 
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;
-   
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -22,7 +22,7 @@
     hostName = "latitude"; # Define your hostname.
     networkmanager.enable = true;
   };
- 
+
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
@@ -40,13 +40,13 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
   services.xserver = {
     # https://nixos.org/manual/nixos/stable/options#opt-services.xserver.enable
     enable = true;
     desktopManager.gnome.enable = true;
     displayManager.gdm.enable = true;
-    
+
     # Configure keymap in X11
     xkb = {
       layout = "us";
@@ -87,21 +87,32 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    audacity
     emacs
+    emacsPackages.dracula-theme
     gh
     git
     glab
     htop
     lsb-release
+    mkvtoolnix
+    nvme-cli
+    obs-studio
     pciutils
     pstree
-    python314
+    #python314
     smartmontools
     solaar
+    v4l-utils
     vim
-    vscode 
+    vlc
+    vscode-with-extensions
     wget
+    zoom-us
   ];
+
+  # To use VS Code under Wayland, set the environment variable NIXOS_OZONE_WL=1:
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -174,6 +185,52 @@
       enable = true;
       userEmail = "asokolsky@gmail.com";
       userName = "Alex Sokolsky";
+      aliases = {
+        ci = "commit";
+        co = "checkout";
+        s = "status";
+      };
+      extraConfig = {
+        commit = {
+          verbose = true;
+        };
+        core = {
+          editor = "emacs";
+          excludesfile = "~/.gitignore";
+        };
+        credential = {
+          "https://github.com.helper" = "!/run/current-system/sw/bin/gh auth git-credential";
+          "https://gist.github.com.helper" = "!/run/current-system/sw/bin/gh auth git-credential";
+        };
+        diff = {
+          algorithm = "histogram";
+          colorMoved = true;
+          mnemonicPrefix = true;
+          renames = true;
+        };
+        fetch = {
+          all = true;
+          prune = true;
+          pruneTags = true;
+        };
+        pull = {
+          rebase = true;
+        };
+        push = {
+          autoSetupRemote = true;
+          default = "simple";
+          followTags = true;
+        };
+        rebase = {
+          autoSquash = true;
+          autoStash = true;
+          updateRefs = true;
+        };
+        rerere = {
+          enabled = true;
+          autoupdate = true;
+        };
+      };
     };
 
     programs.zsh = {
@@ -186,6 +243,37 @@
 	      theme = "agnoster";
       };
     };
-  };
 
+    programs.vscode = {
+      enable = true;
+      profiles.default = {
+        extensions = with pkgs.vscode-extensions; [
+          dracula-theme.theme-dracula
+          ms-python.debugpy
+          ms-python.flake8
+          ms-python.mypy-type-checker
+          ms-python.python
+          ms-python.pylint
+          ms-vscode.makefile-tools
+          ms-vscode-remote.remote-ssh
+        ];
+        userSettings = {
+          # This property will be used to generate settings.json:
+          # https://code.visualstudio.com/docs/getstarted/settings#_settingsjson
+          "editor.formatOnSave" = true;
+          "editor.fontFamily" = "'Source Code Pro',Consolas,monospace";
+          "editor.fontLigatures" = true;
+          "editor.rulers" = [80];
+          "editor.wordWrap" = true;
+          "files.trimFinalNewlines" = true;
+          "files.trimTrailingWhitespace" = true;
+          "git.autofetch" = true;
+          "git.confirmSync" = false;
+          "git.enableSmartCommit" = true;
+          "security.workspace.trust.untrustedFiles" = "newWindow";
+          "terminal.integrated.scrollback" = 10000;
+        };
+      };
+    };
+  };
 }

@@ -2,9 +2,12 @@
 
 A [purely functional package manager](https://nixos.org/guides/how-nix-works)!  Also an [OS](nixos.html)!
 
-https://www.youtube.com/watch?v=0ulldVwZiKA
+NixOS [Manual](https://nixos.org/manual/nixos/stable/), [Wiki](https://nixos.wiki/wiki/Main_Page), [my config](nixos.html).
 
-NixOS [Manual](https://nixos.org/manual/nixos/stable/), [Wiki](https://nixos.wiki/wiki/Main_Page)
+Videos:
+
+* https://www.youtube.com/watch?v=0ulldVwZiKA
+
 
 ## Packages
 
@@ -12,4 +15,8 @@ NixOS [Manual](https://nixos.org/manual/nixos/stable/), [Wiki](https://nixos.wik
 
 ## Cutomizations
 
-See [home manager](home-manager.html).
+See
+
+* [keyboard](keyboard.html)
+* [home manager](home-manager.html).
+* [nixos](nixos.html)

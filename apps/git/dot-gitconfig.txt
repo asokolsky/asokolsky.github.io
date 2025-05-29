@@ -1,0 +1,49 @@
+# a matter of taste (uncomment if you dare)
+[branch]
+    sort = -committerdate
+    # sort = committerdate
+[column]
+    ui = auto
+[commit]
+    verbose = true
+[core]
+    # fsmonitor = true
+    # untrackedCache = true
+    editor = emacs
+    excludesfile = ~/.gitignore
+[diff]
+    algorithm = histogram
+    # colorMoved = true
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+[feature]
+    experimental = true
+[fetch]
+    all = true
+    prune = true
+    pruneTags = true
+[grep]    
+    patternType = perl
+[help]
+    autocorrect = prompt
+[init]
+    defaultBranch = main
+[merge]
+    # (just 'diff3' if git version < 2.3)
+    conflictstyle = zdiff3
+[pull]
+    rebase = true
+[push]
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+[rerere]
+    enabled = true
+    autoupdate = true
+[tag]
+    sort = version:refname
