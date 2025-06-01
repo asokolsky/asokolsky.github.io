@@ -2,7 +2,7 @@
 
 ## System level
 
-Aapplied to every user on the system and all their repositories.
+Applied to every user on the system and all their repositories.
 
 * to view, `git config --list --system` (may need sudo)
 * to set, `git config --system color.ui true`
@@ -66,13 +66,12 @@ To get e.g. `user.name`:
 git config user.name
 ```
 
-You may also specify options `--system`, `--global`, `--local` to read that
-value at a particular level.
+You may also specify options `--system`, `--global`, `--local` to read that value at a particular level.
 
 
 ## Best Practices - Global Config
 
-Followed 
+Followed:
 * [Customizing Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
 * [how-git-core-devs-configure-git](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
 
@@ -96,4 +95,3 @@ Example `~/.gitconfig`:
 ```
 {% include_relative dot-gitconfig.txt %}
 ```
-

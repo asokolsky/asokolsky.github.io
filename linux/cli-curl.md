@@ -22,6 +22,8 @@ redundant.
 
 `-F, --form <name=content>` Submit form data.
 
+`-g, --globoff` use it when your URL includes `[]{}`
+
 `-H, --header <header>` Headers to supply with request.
 
 `-i, --include` Include HTTP headers in the output.

@@ -8,6 +8,12 @@
 cat /proc/_pid_/cmdline|xargs -0
 ```
 
+## Show the process' environment
+
+```sh
+cat /proc/_pid_/environ | tr '\0' '\n'
+```
+
 ## Reload DNS resolver
 
 ```sh
