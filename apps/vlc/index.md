@@ -38,8 +38,6 @@ Device|Pick the one that works.
 
 Does not seem to be supported?
 
-
-
 ## RTSP Support
 
 vlc in some distros is packed without RTSP support due to a [license](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=982299) [issue](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=981439).

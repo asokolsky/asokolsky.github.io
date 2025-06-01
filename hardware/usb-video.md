@@ -16,20 +16,6 @@ Prerequisites:
 sudo apt-get install v4l-utils psmisc
 ```
 
-Also relevant applications ([comparison](https://en.wikipedia.org/wiki/Comparison_of_webcam_software)):
-
-* [OBS Studio](/apps/obs/)
-* [guvcview](https://en.wikipedia.org/wiki/Guvcview)
-
-
-Tried and removed:
-* [cheese](https://en.wikipedia.org/wiki/Cheese_(software))
-* [webcamoid](https://github.com/webcamoid/webcamoid)
-* [Kamoso](https://userbase.kde.org/Kamoso)
-
-Never Tried:
-* [qtcam](https://github.com/econsysqtcam/qtcam)
-
 ## Verify USB Connectivity
 
 ```
@@ -432,3 +418,19 @@ v4l2-ctl \
         --set-ctrl=white_balance_temperature_auto=0 \
         --set-ctrl=focus_absolute=300
 ```
+
+## Applications, V4L Clients
+
+Also relevant applications ([comparison](https://en.wikipedia.org/wiki/Comparison_of_webcam_software)):
+
+* [OBS Studio](/apps/obs/) - by far the best, the only one which exposes the device settings
+* [vlc](/apps/vlc/)
+* [guvcview](https://en.wikipedia.org/wiki/Guvcview)
+
+Tried and removed:
+* [cheese](https://en.wikipedia.org/wiki/Cheese_(software))
+* [webcamoid](https://github.com/webcamoid/webcamoid)
+* [Kamoso](https://userbase.kde.org/Kamoso)
+
+Never Tried:
+* [qtcam](https://github.com/econsysqtcam/qtcam)
