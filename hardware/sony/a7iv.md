@@ -36,5 +36,6 @@ Use dummy battery.
 
 ## Software
 
-[Sony Imaging Edge Desktop](https://creatorscloud.sony.net/catalog/en-us/ie-desktop/index.html) -
-desktop apps that enhance the quality and efficiency of production work such as remote shooting and RAW development.
+[Sony Imaging Edge Desktop](https://creatorscloud.sony.net/catalog/en-us/ie-desktop/index.html) - desktop apps that enhance the quality and efficiency of production work such as remote shooting and RAW development.
+
+[use as a webcam](a7iv-as-webcam.html).

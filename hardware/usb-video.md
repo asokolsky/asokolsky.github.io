@@ -13,9 +13,22 @@ Relevant:
 Prerequisites:
 
 ```sh
-apt-get install v4l-utils psmisc
+sudo apt-get install v4l-utils psmisc
 ```
 
+Also relevant applications ([comparison](https://en.wikipedia.org/wiki/Comparison_of_webcam_software)):
+
+* [OBS Studio](/apps/obs/)
+* [guvcview](https://en.wikipedia.org/wiki/Guvcview)
+
+
+Tried and removed:
+* [cheese](https://en.wikipedia.org/wiki/Cheese_(software))
+* [webcamoid](https://github.com/webcamoid/webcamoid)
+* [Kamoso](https://userbase.kde.org/Kamoso)
+
+Never Tried:
+* [qtcam](https://github.com/econsysqtcam/qtcam)
 
 ## Verify USB Connectivity
 

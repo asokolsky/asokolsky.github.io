@@ -1,27 +1,37 @@
 # nut on TrueNas
 
-Config:
+## Configuration
 
+Configured via GUI.  Whish results in....
+
+`/etc/nut/ups.conf`:
 ```
-root@nass[~]# cat /etc/nut/ups.conf
 [ups]
         driver = usbhid-ups
         port = auto
         desc = ""
+```
 
-root@nass[~]# cat /etc/nut/nut.conf
+`/etc/nut/nut.conf`:
+```
 MODE=netserver
+```
 
-root@nass[~]# cat /etc/nut/upsd.conf
+`/etc/nut/upsd.conf`:
+```
 LISTEN 0.0.0.0 3493
 LISTEN ::0 3493
+```
 
-root@nass[~]# cat /etc/nut/upsd.users
+`/etc/nut/upsd.users`:
+```
 [upsmon]
         password = UpsMon
         upsmon master
+```
 
-root@nass[~]# cat /etc/nut/upsmon.conf
+`/etc/nut/upsmon.conf`:
+```
 MONITOR ups@localhost:3493 1 upsmon UpsMon MASTER
 NOTIFYCMD /usr/sbin/upssched
 NOTIFYFLAG ONBATT SYSLOG+EXEC
@@ -37,7 +47,8 @@ SHUTDOWNCMD "/sbin/shutdown -P now"
 HOSTSYNC 15
 ```
 
-Use:
+## Use
+
 ```
 root@nass[~]# upsc ups
 Init SSL without certificate database
