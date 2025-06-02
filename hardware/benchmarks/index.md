@@ -6,7 +6,7 @@ https://pyperformance.readthedocs.io
 
 ### Latitude 7490
 
-[Latitude 7490](../dell/latitude-7490.html) runs Python 3.10.12.
+[Latitude 7490](../dell/latitude-7490/) runs Python 3.10.12.
 
 Installed python 3.12 with headers:
 ```sh

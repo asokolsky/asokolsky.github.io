@@ -4,7 +4,7 @@
 
 [Benchmarks](benchmarks/)
 
-* Laptops: [Dell Latitude 7490](dell/latitude-7490.html),
+* Laptops: [Dell Latitude 7490](dell/latitude-7490/),
 Lenovo [Thinkpad P52](lenovo/thinkpad-p52.html),
 [Thinkpad T14 gen 3](lenovo/thinkpad-t14g3.html);
 * [Dell Optiplex 7060 Micro](dell/optiplex7060micro.html)

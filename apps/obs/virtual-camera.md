@@ -30,7 +30,7 @@ you can start OBS - you should see `Start Virtual Camera` Button on the right.
 
 You can now see a new v4l device `/dev/video6`:
 
-```sh
+```
 alex@duo > v4l2-ctl --list-devices
 Dummy video device (0x0000) (platform:v4l2loopback-000):
 	/dev/video6
@@ -60,7 +60,7 @@ ioctl: VIDIOC_ENUM_FMT
 ```
 
 Test it:
-```
+```sh
 vlc 'v4l2:///dev/video6:width=1920:height=1080:fps=30:chroma=YUYV'
 ```
 
