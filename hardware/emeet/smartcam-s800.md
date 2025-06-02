@@ -252,7 +252,3 @@ vlc --meta-title='Portrait Camera' \
     --meta-description='Portrait Camera Live Feed' \
     'v4l2:///dev/video4:width=1920:height=1080:fps=30:chroma=H264'
 ```
-
-vlc --meta-title='Portrait Camera' \
-    --meta-description='Portrait Camera Live Feed' \
-    'v4l2:///dev/video4:width=3840:height=2160:fps=30:chroma=H264'

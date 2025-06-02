@@ -1,4 +1,4 @@
-# Troubleshoot USB Webcam in Linux
+# Troubleshooting USB Webcam in Linux
 
 Sources:
 
@@ -18,6 +18,7 @@ sudo apt-get install v4l-utils psmisc
 
 ## Verify USB Connectivity
 
+List USB devices:
 ```
 root@duo:~# lsusb
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
@@ -33,7 +34,9 @@ This gives:
 * vendor: 1bcf
 * product: 28c4
 
+```sh
 sudo echo "uvcvideo" | sudo tee /etc/modules-load.d/uvc.conf
+```
 
 ## Verify the device
 

@@ -7,6 +7,10 @@ https://www.tecmint.com/load-and-unload-kernel-modules-in-linux/
 Read the contents of `/proc/modules`:
 
 ```sh
+cat /proc/modules
+```
+better yet:
+```sh
 lsmod
 ```
 
@@ -35,7 +39,6 @@ modules and related files, but excludes alternative configuration files in
 To insert a module:
 ```sh
 modprobe speedstep-lib
-
 ```
 
 To remove the module:
