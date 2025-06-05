@@ -9,7 +9,7 @@ PYTHON=$(VENV)/bin/python3
 PIP=$(VENV)/bin/pip
 
 # targets which are NOT files
-.PHONY: help venv run test clean build
+.PHONY: help venv run test clean build lint
 
 help:										## Shows the help
 	@echo 'Usage: make <TARGETS>'
@@ -27,6 +27,10 @@ venv: $(VENV)/bin/activate                  ## Activate the venv
 $(VENV)/bin/activate: requirements.txt
 	python3 -m venv $(VENV)
 	$(PIP) install -r requirements.txt
+
+lint: venv                                  ## Lint python sources
+	-flake8 *.py
+	-mypy *.py
 
 run: venv									## Execute python program
 	$(PYTHON) main.py $(SITE)
