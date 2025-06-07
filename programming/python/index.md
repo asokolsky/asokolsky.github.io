@@ -11,9 +11,12 @@
 ## Development
 
 * [Python project Makefile](/apps/make/python.mak)
-* Example of
-[Docker-using your python app](https://github.com/asokolsky/pycrawl)
+* Example of [Docker-using your python app](https://github.com/asokolsky/pycrawl)
 * Example of a [systemd service using python venv](/proxmox/lxc-prusalink.html)
+
+## Toolchain
+
+[A Modern Python Toolkit: pydantic, ruff, MyPy, and UV](https://dev.to/devasservice/a-modern-python-toolkit-pydantic-ruff-mypy-and-uv-4b2f)
 
 ## Frameworks
 
@@ -23,8 +26,7 @@
 
 To look further:
 
-* [Textual](https://www.textualize.io/) and
-[textualize/rich](https://github.com/Textualize/rich)
+* [Textual](https://www.textualize.io/) and [textualize/rich](https://github.com/Textualize/rich);
 * [jmespath.py](https://github.com/jmespath/jmespath.py) to support query just
 like aws cli does.
 

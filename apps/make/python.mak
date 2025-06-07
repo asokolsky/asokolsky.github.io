@@ -29,7 +29,8 @@ $(VENV)/bin/activate: requirements.txt
 	$(PIP) install -r requirements.txt
 
 lint: venv                                  ## Lint python sources
-	-flake8 *.py
+#	-flake8 *.py
+	-ruff check *.py
 	-mypy *.py
 
 run: venv									## Execute python program

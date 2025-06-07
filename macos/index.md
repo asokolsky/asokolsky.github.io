@@ -25,6 +25,10 @@ Alternatively, using CLI:
 * use of [keyboard](keyboard.html)
 * use of [keyboard in finder](finder.html)
 
+## Optimizing monitor
+
+[MonitorControl](https://github.com/MonitorControl/MonitorControl)
+
 ## Running Apps on Mac
 
 For any software development install [Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/):
