@@ -8,3 +8,8 @@ List the TCP server sockets in the LISTEN state:
 ```sh
 sudo lsof -iTCP -sTCP:LISTEN -P -n
 ```
+or
+
+```sh
+sudo lsof -i -P -n | grep LISTEN
+```
