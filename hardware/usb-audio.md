@@ -16,3 +16,7 @@ For inputs:
 ```sh
 pacmd list-sources
 ```
+
+## Testing in Browser
+
+Point your browser to https://mictests.com/

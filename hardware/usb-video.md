@@ -437,3 +437,7 @@ Tried and removed:
 
 Never Tried:
 * [qtcam](https://github.com/econsysqtcam/qtcam)
+
+## Testing in Browser
+
+Point your browser to https://webcamtests.com/
