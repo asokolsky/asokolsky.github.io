@@ -6,3 +6,9 @@ connections, etc.
 ```sh
 sudo netstat -plutn
 ```
+
+or
+
+```sh
+sudo netstat -tulpn | grep LISTEN
+```

@@ -26,7 +26,7 @@ I use [git](/apps/git).
 
 Development is done on [a dedicated branch](https://www.atlassian.com/git/tutorials/using-branches). I prefer to name my development branch after the issue to ensure [traceability](https://docs.google.com/presentation/d/11PZ2vYSt0FWO--JqKaLNq41EPGts-Fke4JTMk5DfX-w/edit?usp=sharing).  In this case I would call it `foobar-123`.  Alternative [branch naming conventions](https://graphite.dev/guides/git-branch-naming-conventions) do work.
 
-[Checkout](https://git-scm.com/docs/git-checkout) the repo's trunk
+[Checkout](https://git-scm.com/docs/git-checkout) the repo's trunk - this could be `master` or `main`.
 ```sh
 git checkout main
 ```
@@ -88,6 +88,8 @@ At this phase you many need to:
 
 * [resolve merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts);
 * [rebase your branch](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase).
+
+See [Merge vs Rebase Workflow](/apps/git/workflow.html)
 
 ## 5. Merge the pull request
 
