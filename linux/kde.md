@@ -47,7 +47,7 @@ Use [Dracula theme](https://draculatheme.com/konsole).
 
 ### Swap CapsLock with LeftCtrl
 
-Used https://github.com/rvaiya/keyd
+[keyd](keyd.html)
 
 ### Accessing SMB shares in Dolphin
 
