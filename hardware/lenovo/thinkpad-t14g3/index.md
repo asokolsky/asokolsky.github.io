@@ -17,3 +17,8 @@ Display|14" 2.2K
 Webcam|1080P FHD RGB/IR Hybrid with Privacy Shutter and Dual Microphone
 Battery|52.5Wh
 Power Supply|60W ?
+
+* [DMI Info](dmi.html)
+* [Info](info.html)
+* [PCIe Devices](lspci.html)
+* [USB Devices](lsusb.html)
