@@ -5,7 +5,7 @@
 
 ## Webcam Settings
 
-[Identify the resolution and formats](hardware/usb-video.html) supported by the webcam:
+[Identify the resolution and formats](/hardware/usb-video.html) supported by the webcam:
 ```
 > v4l2-ctl --list-formats-ext
 ioctl: VIDIOC_ENUM_FMT

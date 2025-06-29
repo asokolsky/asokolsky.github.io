@@ -3,7 +3,7 @@
 * [brew](cli-brew.html)
 * [launchctl](cli-launchctl.html)
 * [smbutil](cli-smbutil.html)
-* List hardware using [system_profiler](cli-cli-system_profiler.html)
+* List hardware using [system_profiler](cli-system_profiler.html)
 * more [macOS (bash) commands](https://ss64.com/mac/index.html)
 
 ## Show hidden files and folders

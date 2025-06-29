@@ -44,7 +44,7 @@ pyperformance run --python=/usr/bin/python3.12 -o latitude.json
 
 ### Thinkpad P52
 
-[Thinkpad P52](../lenovo/thinkpad-p52.html) runs Python 3.10.12.
+[Thinkpad P52](../lenovo/thinkpad-p52/) runs Python 3.10.12.
 
 Installed Python 3.12.2 using `pyenv`, then:
 ```
@@ -86,7 +86,7 @@ pyperformance run --python=~/.pyenv/shims/python -o p52.json
 
 ### Thinkpad T14 Gen 3 running Windows
 
-[Thinkpad T14 Gen 3](../lenovo/thinkpad-t14g3.md) with Windows and Python 3.12.4 installed
+[Thinkpad T14 Gen 3](../lenovo/thinkpad-t14g3/) with Windows and Python 3.12.4 installed
 
 System configuration does not work:
 ```
