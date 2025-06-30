@@ -4,8 +4,14 @@ I use
 
 * json-mode
 * yaml-mode
-* markdown-mode
-* [dracula-theme](https://draculatheme.com/emacs)
+* markdown-mode:
+```
+M-x package-install <RET> markdown-mode <RET>
+```
+* [dracula-theme](https://draculatheme.com/emacs):
+```
+M-x package-install <RET> dracula-theme <RET>
+```
 
 Hence my `~/.emacs.d/init.el`:
 ```

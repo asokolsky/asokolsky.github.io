@@ -33,7 +33,7 @@ Reused [Dell Optiplex 7060 micro](dell/optiplex7060micro.html):
 * powerful enough CPU
 * low noise, low power consumption
 
-An attempt to use [Thinkpad P52](lenovo/thinkpad-p52.html) failed because of
+An attempt to use [Thinkpad P52](lenovo/thinkpad-p52/) failed because of
 the lack of connectivity options for USB and monitors - Thunderbolt3 ports
 there do not work.
 

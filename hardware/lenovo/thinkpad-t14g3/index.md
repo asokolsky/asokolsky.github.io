@@ -18,6 +18,11 @@ Webcam|1080P FHD RGB/IR Hybrid with Privacy Shutter and Dual Microphone
 Battery|52.5Wh
 Power Supply|60W ?
 
+* [DMI Info](dmi.html)
+* [Info](info.html)
+* [PCIe Devices](lspci.html)
+* [USB Devices](lsusb.html)
+
 ## BIOS
 
 * Power on the laptop. Make sure the laptop is completely off before starting this process.

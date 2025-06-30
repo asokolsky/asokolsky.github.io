@@ -126,7 +126,7 @@ the cluster.
 
 [crictl](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/) is a
 [container runtime cli](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md).
-See also [contanerd](/apps/docker/contanerd.md).
+See also [containerd](/apps/docker/containerd.html).
 
 ## etcd
 

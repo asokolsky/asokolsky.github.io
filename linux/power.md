@@ -36,3 +36,12 @@ Install it:
 git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq && sudo ./auto-cpufreq-installer
 ```
+
+## ASPM support
+
+Check for the status of the [ASPM](https://en.wikipedia.org/wiki/Active_State_Power_Management) support:
+```sh
+sudo lspci -vv | awk '/ASPM/{print $0}' RS= | grep --color -P '(^[a-z0-9:.]+|ASPM )'
+```
+
+Enable [auto-aspm script](https://github.com/notthebee/autoaspm).
