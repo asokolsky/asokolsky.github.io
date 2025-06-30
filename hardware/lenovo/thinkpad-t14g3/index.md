@@ -17,3 +17,9 @@ Display|14" 2.2K
 Webcam|1080P FHD RGB/IR Hybrid with Privacy Shutter and Dual Microphone
 Battery|52.5Wh
 Power Supply|60W ?
+
+## BIOS
+
+* Power on the laptop. Make sure the laptop is completely off before starting this process.
+* Tap F1 repeatedly. As soon as you see the Lenovo, ThinkPad, ThinkStation, or ThinkCentre logo, begin tapping the F1 key repeatedly.
+* Enter BIOS. If done correctly, the computer should boot into the BIOS setup utility.
