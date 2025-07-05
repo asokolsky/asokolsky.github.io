@@ -1,4 +1,4 @@
-# Terminal Color Schemes
+# Color Themes
 
 * [Dracula](https://draculatheme.com/)
 * [Gruvbox](https://github.com/morhetz/gruvbox)
@@ -6,4 +6,4 @@
 * [Nord](https://www.nordtheme.com/)
 * [Pywal](https://github.com/dylanaraps/pywal)
 
-https://www.youtube.com/watch?v=7R7LOxOoAw0
+Thanks to [this video](https://www.youtube.com/watch?v=7R7LOxOoAw0).

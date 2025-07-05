@@ -5,11 +5,8 @@ export PROJECT_ROOT = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 # define the name of the virtual environment directory
 VENV:=.venv
 
-PYTHON=$(VENV)/bin/python3
-PIP=$(VENV)/bin/pip
-
 # targets which are NOT files
-.PHONY: help venv run test clean build lint
+.PHONY: help venv run test clean build lint format
 
 help:										## Shows the help
 	@echo 'Usage: make <TARGETS>'
@@ -21,22 +18,19 @@ help:										## Shows the help
 		awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-25s\033[0m %s\n", $$1, $$2}'
 	@echo ''
 
-# venv is a shortcut target
-venv: $(VENV)/bin/activate                  ## Activate the venv
+format:	 	                                ## Format python sources
+	uv run isort *.py
+	uv run ruff format *.py
 
-$(VENV)/bin/activate: requirements.txt
-	python3 -m venv $(VENV)
-	$(PIP) install -r requirements.txt
+lint:	 	                                ## Lint python sources
+	uv run isort --check *.py
+	uv run ruff check *.py
 
-lint: venv                                  ## Lint python sources
-	flake8 *.py
-	mypy *.py
+run: 										## Execute python program
+	uv run main.py $(SITE)
 
-run: venv									## Execute python program
-	$(PYTHON) main.py $(SITE)
-
-test: venv									## Execute python tests
-	$(PYTHON) -m unittest -v *_test.py
+test: 										## Execute python tests
+	uv run -m unittest -v *_test.py
 
 clean:										## Cleanup the artifacts
 	rm -rf $(VENV) .mypy_cache
