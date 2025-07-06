@@ -9,6 +9,7 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "security.workspace.trust.untrustedFiles": "newWindow",
+    "terminal.integrated.allowChords": false,
     "terminal.integrated.scrollback": 10000,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
