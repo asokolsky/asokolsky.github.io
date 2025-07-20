@@ -5,21 +5,13 @@ See also [Configure SSHD](sshd.html).
 ## Sources
 
 * [SSH Key Tutorial](https://austinsnerdythings.com/2021/04/02/ssh-key-tutorial/)
-* Man pages:
-[ssh](https://man7.org/linux/man-pages/man1/ssh.1.html),
-[ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html),
-[ssh-add](https://man7.org/linux/man-pages/man1/ssh-add.1.html),
-[ssh-agent](https://www.man7.org/linux/man-pages/man1/ssh-agent.1.html)
+* Man pages: [ssh](https://man7.org/linux/man-pages/man1/ssh.1.html), [ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html), [ssh-add](https://man7.org/linux/man-pages/man1/ssh-add.1.html), [ssh-agent](https://www.man7.org/linux/man-pages/man1/ssh-agent.1.html)
 * [Configuring Authorized Keys for OpenSSH](https://www.ssh.com/academy/ssh/authorized-keys-openssh)
-* [The Ultimate SSH Guide](https://grimoire.carcano.ch/blog/openssh-tutorial-the-ultimate-ssh-guide-to-understand-it/)
-and [Cryptography Quick Guide](https://grimoire.carcano.ch/blog/cryptography-quick-guide/)
+* [The Ultimate SSH Guide](https://grimoire.carcano.ch/blog/openssh-tutorial-the-ultimate-ssh-guide-to-understand-it/) and [Cryptography Quick Guide](https://grimoire.carcano.ch/blog/cryptography-quick-guide/)
 
 ## Generate SSH Key Pair
 
-Generate the
-[ED25519](https://linux-audit.com/using-ed25519-openssh-keys-instead-of-dsa-rsa-ecdsa/)
-key using
-[ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html):
+Generate the [ED25519](https://linux-audit.com/using-ed25519-openssh-keys-instead-of-dsa-rsa-ecdsa/) key using [ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html):
 
 ```console
 alex@latitude7490:~$ ssh-keygen -t ed25519
@@ -32,7 +24,6 @@ Your public key has been saved in /home/alex/.ssh/id_ed25519.pub
 ```
 
 Verify the generated files:
-
 ```console
 $ ls -la ~/.ssh
 total 48
@@ -45,18 +36,25 @@ drwxr-xr-x 31 alex alex  4096 Mar 31 12:00 ..
 -rw-------  1 alex alex 11042 Jan 28 12:15 known_hosts
 -rw-------  1 alex alex  9930 Dec 16 14:16 known_hosts.old
 ```
-List the fingerprints currently used by ssh using
-[ssh-add](https://www.man7.org/linux/man-pages/man1/ssh-add.1.html):
+
+## Using the Keys
+
+By now you should have [ssh-agent](https://www.man7.org/linux/man-pages/man1/ssh-agent.1.html) running in the background.  Start it in your [profile](/apps/dot-files/zprofile).
+
+List the fingerprints currently used by ssh using [ssh-add](https://www.man7.org/linux/man-pages/man1/ssh-add.1.html):
 ```
 $ ssh-add -l
 4096 SHA256:4sGkGvw2itx0TNFu8V+Bqk2lSdB8ZEHczXIGfmfWiZc alex@latitude (RSA)
 ```
 
-Add the private key identities to the authentication agent,
-[ssh-agent].
-When run without arguments, it adds the files `~/.ssh/id_rsa`, `~/.ssh/id_dsa`,
-`~/.ssh/id_ecdsa`, `~/.ssh/id_ecdsa_sk`, `~/.ssh/id_ed25519`, and
-`~/.ssh/id_ed25519_sk`.
+Add the private key identities to the authentication agent with `ssh-add`.
+When run without arguments, it adds the files
+* `~/.ssh/id_rsa`
+* `~/.ssh/id_dsa`
+* `~/.ssh/id_ecdsa`
+* `~/.ssh/id_ecdsa_sk`
+* `~/.ssh/id_ed25519`
+* `~/.ssh/id_ed25519_sk`
 
 ```
 $ ssh-add
@@ -64,7 +62,7 @@ Identity added: /home/alex/.ssh/id_rsa (alex@latitude)
 Identity added: /home/alex/.ssh/id_ed25519 (alex@latitude7490)
 ```
 
-Confirm the key addition:
+Confirm the key addition by listing all the keys:
 ```
 $ ssh-add -l
 4096 SHA256:4sGkGvw2itx0TNFu8V+Bqk2lSdB8ZEHczXIGfmfWiZc alex@latitude (RSA)

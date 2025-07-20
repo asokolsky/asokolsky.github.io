@@ -6,6 +6,10 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-eval "$(ssh-agent -s)"
-# add more IDs as needed
-ssh-add -q ~/.ssh/id_rsa ~/.ssh/latitude_id_rsa
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval "$(ssh-agent -s)"
+    # add more IDs as needed
+    #ssh-add
+    ssh-add -q ~/.ssh/latitude_id_rsa ~/.ssh/t14g3
+    # to check what was loaded use ssd-add -l
+fi
