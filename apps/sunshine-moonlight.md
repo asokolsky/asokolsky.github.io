@@ -63,10 +63,10 @@ MacOS
 
 Shortcut|Description
 --------|-----------
-Command+Option+Shift+Q|quits the streaming session,
-Command+Option+Shift+Z|toggles mouse and keyboard capture,
-Command+Option+Shift+X|toggles full-screen/windowed mode,
-Command+Option+Shift+S|displays performance statistics.
+Command+Option+Shift+Q|Quits the streaming session
+Command+Option+Shift+Z|Toggle mouse and keyboard capture
+Command+Option+Shift+X|Toggle full-screen/windowed mode
+Command+Option+Shift+S|Display performance statistics
 
 Alt key on a Mac is the Option (⌥) key.
 
