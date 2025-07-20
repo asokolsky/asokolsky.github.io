@@ -1,5 +1,7 @@
 # Dell Latitude 7490
 
+Retired.  The rest is of historical interest only.
+
 ## Specifications
 
 Component|Details
@@ -22,4 +24,3 @@ During the boot, when logo is displayed, press:
 
 * F2 - to setup BIOS
 * F12 - to choose boot device
-

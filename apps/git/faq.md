@@ -17,7 +17,12 @@ Revert all the local uncommitted changes.  Execute in the repo root:
 git checkout .
 ```
 
-## Delete the repo's branches
+## Delete the local repo's branches
+
+Delete the local branches which are merged:
+```sh
+git branch --merged | grep -v \* | xargs git branch -D
+```
 
 Get all the repo's branches except for branch `master` and delete these:
 ```sh

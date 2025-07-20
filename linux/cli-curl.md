@@ -7,16 +7,13 @@
 
 ## Common Options
 
-`-#, --progress-bar` Make curl display a simple progress bar instead of the more
-informational standard meter.
+`-#, --progress-bar` Make curl display a simple progress bar instead of the more informational standard meter.
 
-`-b, --cookie <name=data>` Supply cookie with request. If no `=`, then specifies
-the cookie file to use (see `-c`).
+`-b, --cookie <name=data>` Supply cookie with request. If no `=`, then specifies the cookie file to use (see `-c`).
 
 `-c, --cookie-jar <file name>` File to save response cookies to.
 
-`-d, --data <data>` Send specified data in POST request, makes `-X POST`
-redundant.
+`-d, --data <data>` Send specified data in POST request, makes `-X POST` redundant.
 
 `-f, --fail` Fail silently (don't output HTML error form if returned).
 
@@ -34,23 +31,17 @@ redundant.
 
 `-L, --location` Follow redirects.
 
-`-o, --output <file>` Write output to <file>. Can use `--create-dirs` in
-conjunction with this to create any directories specified in the `-o` path.
+`-o, --output <file>` Write output to <file>. Can use `--create-dirs` in conjunction with this to create any directories specified in the `-o` path.
 
-`-O, --remote-name` Write output to file named like the remote file
-(only writes to current directory).
+`-O, --remote-name` Write output to file named like the remote file (only writes to current directory).
 
-`-s, --silent` Silent (quiet) mode, no progress bar displayed. Use with `-S` to
-force it to show errors.
+`-s, --silent` Silent (quiet) mode, no progress bar displayed. Use with `-S` to force it to show errors.
 
 `-T, --upload-file <file>` transfers the specified local file to the remote URL.
 
 `-v, --verbose` Provide more information (useful for debugging).
 
-`-w, --write-out <format>` Make curl display information on stdout after a
-completed transfer. See man page for more details on available variables.
-Convenient way to force curl to append a newline to output: `-w "\n"`
-(can add to `~/.curlrc`).
+`-w, --write-out <format>` Make curl display information on stdout after a completed transfer. See man page for more details on available variables. Convenient way to force curl to append a newline to output: `-w "\n"` (can add to `~/.curlrc`).
 
 `-X, --request` The request method to use.
 
@@ -61,7 +52,7 @@ Specify the request type:
  * `-X POST` - is assumed and can be omitted
  * `-X PUT`
 
-Sspecify the `Content-Type` header as one of:
+Specify the `Content-Type` header as one of:
 
   * `-H "Content-Type: application/x-www-form-urlencoded"`
   * `-H "Content-Type: application/json"`
@@ -88,21 +79,18 @@ File `data.json`:
 
 ### http post application/x-www-form-urlencoded
 
-`application/x-www-form-urlencoded` is the default, `-X POST` implied when `-d`
-is used:
-
+`application/x-www-form-urlencoded` is the default, `-X POST` implied when `-d` is used:
 ```sh
 curl -d "param1=value1&param2=value2" http://localhost:3000/data
 ```
 explicit:
-
 ```sh
 curl -d "param1=value1&param2=value2" \
     -H "Content-Type: application/x-www-form-urlencoded" \
     http://localhost:3000/data
 ```
-with a data file
 
+from a data file:
 ```sh
 curl -d "@data.txt" http://localhost:3000/data
 ```
@@ -115,16 +103,14 @@ curl -d '{"key1":"value1", "key2":"value2"}' \
     http://localhost:3000/data
 ```
 
-with a data file
-
+from a data file:
 ```sh
 curl -d "@data.json" http://localhost:3000/data
 ```
 
 ### smb
 
-Given that curl only supports SMB protocol version 1, the following is pretty
-much useless.
+Given that curl only supports SMB protocol version 1, the following is pretty much useless.
 
 Download a file from the SMB server:
 ```sh
@@ -138,16 +124,12 @@ curl -T file.txt -u "domain\username:passwd" smb://server.example.com/share/
 
 ### ssh
 
-Get a file from an SSH server using SCP using a (not password-protected) private
-key to authenticate:
-
+Get a file from an SSH server using SCP using a (not password-protected) private key to authenticate:
 ```sh
 curl -u username: --key ~/.ssh/id_rsa scp://example.com/~/file.txt
 ```
 
-Get a file from an SSH server using SCP using a (password-protected) private key
-to authenticate:
-
+Get a file from an SSH server using SCP using a (password-protected) private key to authenticate:
 ```sh
 curl -u username: --key ~/.ssh/id_rsa --pass private_key_password \
     scp://example.com/~/file.txt
