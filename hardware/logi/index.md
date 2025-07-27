@@ -8,7 +8,7 @@
 
 I use solaar to pair peripherals with unifying receiver.
 
-* [MS Mechanical Mini](ms-mechanical-mini.html)
+* [MX Mechanical Mini](mx-mechanical-mini.html)
 * [Wave Keys](wave-keys.html)
 * [remote](remote.html) looks like a USB keyboard to the PC
 

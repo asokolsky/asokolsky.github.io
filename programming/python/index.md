@@ -16,7 +16,7 @@
 
 ## Toolchain
 
-[A Modern Python Toolkit: pydantic, ruff, MyPy, and UV](https://dev.to/devasservice/a-modern-python-toolkit-pydantic-ruff-mypy-and-uv-4b2f)
+[A Modern Python Toolkit: pydantic, ruff, MyPy, and uv](https://dev.to/devasservice/a-modern-python-toolkit-pydantic-ruff-mypy-and-uv-4b2f)
 
 ## Frameworks
 
@@ -33,6 +33,7 @@ like aws cli does.
 ## External resources
 
 * [Tutorial](https://docs.python.org/3/tutorial/index.html)
+* [Scope and the LEGB Rule](https://realpython.com/python-scope-legb-rule/)
 * Cheat sheet:
 [F-Strings Number Formatting](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
 * [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
