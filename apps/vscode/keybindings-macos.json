@@ -1,36 +1,40 @@
 [
-    { "key": "ctrl+z",       "command": "undo" },
-    { "key": "ctrl+a",       "command": "editor.action.selectAll" },
-    { "key": "ctrl+c",       "command": "execCopy" },
-    { "key": "ctrl+x",       "command": "execCut" },
-    { "key": "ctrl+v",       "command": "execPaste" },
-    { "key": "alt+ctrl+s",   "command": "saveAll" },
-    { "key": "ctrl+s",       "command": "workbench.action.files.save" },
-    { "key": "shift+ctrl+s", "command": "workbench.action.files.saveAs" },
-    { "key": "shift+ctrl+s", "command": "workbench.action.files.saveLocalFile",
-      "when": "remoteFileDialogVisible" },
-    { "key": "ctrl+f",
-      "command": "actions.find",
-      "when": "editorFocus || editorIsOpen"
-    },
-    {
-      "key": "ctrl+left",
-      "command": "cursorWordLeft",
-      "when": "textInputFocus"
-    },
-    {
-      "key": "ctrl+right",
-      "command": "cursorWordRight",
-      "when": "textInputFocus"
-    },
-    {
-      "key": "ctrl+shift+left",
-      "command": "cursorWordLeftSelect",
-      "when": "textInputFocus"
-    },
-    {
-      "key": "ctrl+shift+right",
-      "command": "cursorWordRightSelect",
-      "when": "textInputFocus"
-    }
+  { "key": "ctrl+z",       "command": "undo" },
+  { "key": "ctrl+a",       "command": "editor.action.selectAll" },
+  { "key": "ctrl+c",       "command": "execCopy" },
+  { "key": "ctrl+x",       "command": "execCut" },
+  { "key": "ctrl+v",       "command": "execPaste" },
+  { "key": "alt+ctrl+s",   "command": "saveAll" },
+  { "key": "ctrl+s",       "command": "workbench.action.files.save" },
+  { "key": "shift+ctrl+s", "command": "workbench.action.files.saveAs" },
+  { "key": "shift+ctrl+s", "command": "workbench.action.files.saveLocalFile",
+    "when": "remoteFileDialogVisible" },
+  { "key": "ctrl+f",
+    "command": "actions.find",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "cursorWordLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "cursorWordRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+left",
+    "command": "cursorWordLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "cursorWordRightSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "f6",
+    "command": "workbench.action.navigateEditorGroups"
+  }
 ]

@@ -1,13 +1,16 @@
-// Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "ctrl+d",
-        "command": "-editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "deleteRight",
-        "when": "editorFocus"
-    }
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "deleteRight",
+    "when": "editorFocus"
+  },
+  {
+    "key": "f6",
+    "command": "workbench.action.navigateEditorGroups"
+  }
 ]

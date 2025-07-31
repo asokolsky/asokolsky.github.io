@@ -5,7 +5,7 @@
 ## Notation
 
 Key|Symbol
--|-
+---|-------
 Cmd/⊞ Win|⌘
 Shift|⇧
 Opt/Alt|⌥
@@ -30,19 +30,19 @@ Key|Action
 ---|-----
 ⌘X | Cut line (empty selection)
 ⌘C | Copy line (empty selection)
-⌥↓ / ⌥↑ | Move line down/up
-⇧⌥↓ / ⇧⌥↑ |Copy line down/up
+⌥ ↓/↑ | Move line down/up
+⇧⌥ ↓/↑ |Copy line down/up
 ⇧⌘K | Delete line
 ⌘ Enter / ⇧⌘ Enter |Insert line below / above
 ⇧⌘ \ |Jump to matching bracket
-⌘ ] /⌘ [|Indent/Outdent line
+⌘ ] / [|Indent/Outdent line
 Home / End|Go to beginning/end of line
-⌘ ↑ /⌘ ↓|Go to beginning/end of file
+⌘ ↑ / ↓|Go to beginning/end of file
 ⌃PgUp /⌃PgDn|Scroll line up/down
-⌘ PgUp / ⌘ PgDn|Scroll page up/down
-⇧⌘ [ /⇧⌘ ]|Fold/unfold region
-⌘K ⌘[ /⌘K ⌘] | Fold/unfold all subregions
-⌘K ⌘0 / ⌘K ⌘J | Fold/Unfold all regions
+⌘ PgUp / PgDn|Scroll page up/down
+⇧⌘ [ / ]|Fold/unfold region
+⌘K ⌘ [ / ] | Fold/unfold all subregions
+⌘K ⌘0 / ⌘J | Fold/Unfold all regions
 ⌘K ⌘C | Add line comment
 ⌘K ⌘U | Remove line comment
 ⌘/ | Toggle line comment
@@ -54,13 +54,13 @@ Home / End|Go to beginning/end of line
 Key|Action
 ---|-----
 ⌥+Click | Insert cursor
-⌥⌘ ↑ /⌥⌘ ↓ | Insert cursor above/below
+⌥⌘ ↑/↓ | Insert cursor above/below
 ⌘U | Undo last cursor operation
 ⇧⌥I | Insert cursor at end of each line selected
 ⌘L | Select current line
 ⇧⌘L | Select all occurrences of current selection
 ⌘F2 | Select all occurrences of current word
-⌃⇧⌘ → /⌃⇧⌘ ← | Expand / Shrink selection
+⌃⇧⌘ →/← | Expand / Shrink selection
 ⇧⌥ + drag mouse| Column (box) selection
 ⇧⌥⌘ ↑ / ↓ | Column (box) selection up/down
 ⇧⌥⌘ ← / → | Column (box) selection left/right
@@ -117,9 +117,9 @@ Key|Action
 ⌘K F|Close folder
 ⌘\ | Split editor
 ⌘1 / ⌘2 / ⌘3 | Focus on editor group 1 / 2 / 3
-⌘K ⌘← / ⌘K ⌘→ | Focus into prev/next editor group
-⌘K ⇧⌘← / ⌘K ⌘→ | Move editor left/right
-⌘K← / ⌘K→ | Move active editor group right-down/left-up
+⌘K ⌘ ←/→ | Focus into prev/next editor group
+⌘K ⇧⌘← / ⌘→ | Move editor left/right
+⌘K ←/→ | Move active editor group right-down/left-up
 
 
 ## File management
@@ -179,6 +179,6 @@ Key|Action
 ``⌃⇧``` | Create new terminal
 ⌘C | Copy selection
 ⇧⌘V | FIXME Paste into active terminal
-⌘ ↑ / ⌘ ↓ | Scroll up/down
+⌘ ↑ / ↓ | Scroll up/down
 PgUp / PgDn | Scroll page up/down
-⌘ Home /⌘ End | Scroll to top/bottom
+⌘ Home/End | Scroll to top/bottom
