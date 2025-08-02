@@ -25,6 +25,7 @@ Use of [ecc-ram](ecc-ram.html)
 * [Realtek RTL8125 2.5GB Ethernet](network-r8125.html) - don't use it!
 * [Ubiquiti EdgeRouter X](ubiquiti.html)
 * [Shelly devices](shelly/)
+* [GL-MT3000 Travel Router](beryl_%20ax_gl-mt3000.html)
 
 ## PCIe Devices
 

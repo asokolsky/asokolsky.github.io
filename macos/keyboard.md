@@ -102,9 +102,7 @@ In Karabiner Elements: Settings/Simple Modifications:
 
 ## Tile Windows using Keyboard only
 
-Use [Rectangle](https://github.com/rxhanson/Rectangle).
-
-[spectacle](https://www.spectacleapp), [sources](https://github.com/eczarny/spectacle) is obsolete.
+Use [Rectangle](https://github.com/rxhanson/Rectangle).  [Spectacle](https://www.spectacleapp) ([sources](https://github.com/eczarny/spectacle)) is obsolete.
 
 ## Terminal Emulator
 
@@ -112,8 +110,4 @@ I use [iTerm2](iTerm2.html).
 
 ## Repurpose the Existing Keyboard Accelerators
 
-Ctrl+Left/Right are mapped to desktop switching in macOS by default.
-I prefer to make these available to apps, so I need to remove the default
-bindings.
-Goto System Preferences / Keyboard / Shortcuts / Mission control,
-remove Ctrl+Left/Right
+Ctrl+Left/Right are mapped to desktop switching in macOS by default. I prefer to make these available to apps, so I need to remove the default bindings. Goto System Preferences / Keyboard / Shortcuts / Mission control, remove Ctrl+Left/Right.
