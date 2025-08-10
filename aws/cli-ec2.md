@@ -164,7 +164,7 @@ then [delete-subnet](https://docs.aws.amazon.com/cli/latest/reference/ec2/delete
 aws ec2 delete-subnet --subnet-id _id_
 ```
 
-## Find Load Balancer IP
+## Find Load Balancer (NLB or ALB) IP addresses
 
 Use [elb-find-load-balancer-ip](https://repost.aws/knowledge-center/elb-find-load-balancer-ip):
 

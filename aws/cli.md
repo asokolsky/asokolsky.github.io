@@ -128,6 +128,7 @@ aws ec2 describe-vpn-connections \
 * [Elastic Compute Cloud (EC2)](cli-ec2.html)
 * [Elastic Container Registry (ECR)](cli-ecr.html)
 * [Elastic Kubernetes Service (EKS)](cli-eksctl.html)
+* [Elastic Load Balancer](cli-elb.md)
 * [Lambda](cli-lambda.html)
 * [Resource Access Manager (RAM)](cli-ram.html)
 * [Route53](cli-route53.html)
