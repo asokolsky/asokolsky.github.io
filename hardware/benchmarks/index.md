@@ -2,7 +2,7 @@
 
 ## PyPerformance
 
-https://pyperformance.readthedocs.io
+[The Python Performance Benchmark Suite](https://pyperformance.readthedocs.io)
 
 ### Latitude 7490
 

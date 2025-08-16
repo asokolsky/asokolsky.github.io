@@ -31,7 +31,7 @@ $(VENV)/bin/activate:
 	$(PIP) install pyperformance
 
 run: venv									## Execute pyperformance
-	$(PYTHON) -m pyperformance run --python=python3.12 -o $(HOSTNAME).json
+	$(PYTHON) -m pyperformance run -o $(HOSTNAME).json
 
 clean:										## Cleanup the artifacts
 	rm -rf $(VENV) .mypy_cache venv
