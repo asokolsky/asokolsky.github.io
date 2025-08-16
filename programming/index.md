@@ -26,9 +26,13 @@
 * [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
 * [5 Ways to Measure Execution Time in Python](https://superfastpython.com/benchmark-execution-time/)
 
+
+## Versioning
+* [Semantic Versioning](https://semver.org/)
+* [Calendar Versioning, a.k.a. CalVer](https://calver.org/)
+
 ## More cool stuff
 
-* [Semantic Versioning](https://semver.org/)
 * [Conventional Commits](/apps/git/conventional-commits.html)
 * [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt)
 governs used of "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",

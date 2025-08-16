@@ -21,11 +21,12 @@ Infrastructure:
 * [Java VM Tuning](java-vm.html)
 * [k8s and kubectl](/k8s/)
 * [Prometheus & Grafana](prometheus-grafana.html)
-* [terraform](terraform.html)
+* [terraform](terraform.html) and [terragrunt](terragrunt.html)
 
 Programming:
 * [git](git/)
 * [make and Makefile](make/)
+* [mise](mise/)
 * [pypi](pypi.html)
 * [ruby](ruby.html)
 * templating using [gomplate](gomplate.html), [jsonnet](/programming/jsonnet/)
