@@ -7,13 +7,13 @@ Parallel ssh.
 
 Add to you `.bashrc` or `.zshrc` (or better yet to `.zshenv`):
 
-```
+```sh
 export PDSH_RCMD_TYPE=ssh
 ```
 
 ## Examples
 
-```sh
+```
 $ pdsh -w fuji,duo uname -a
 duo: Linux duo 5.13.19-3-pve #1 SMP PVE 5.13.19-7 (Thu, 20 Jan 2022 16:37:56 +0100) x86_64 GNU/Linux
 fuji: Linux fuji 5.13.19-4-pve #1 SMP PVE 5.13.19-9 (Mon, 07 Feb 2022 11:01:14 +0100) x86_64 GNU/Linux
@@ -32,5 +32,5 @@ pdsh -w fuji,duo 'ps -eo pcpu,pid,user,args|sort -k 1 -nr|head -3'
 ## Example of passing a sudo password
 
 ```sh
-$ pdsh -w fuji,duo echo 'password'|sudo -S apt-get update
+pdsh -w fuji,duo echo 'password'|sudo -S apt-get update
 ```

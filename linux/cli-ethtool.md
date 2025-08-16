@@ -72,6 +72,7 @@ supports-eeprom-access: yes
 supports-register-dump: yes
 supports-priv-flags: yes
 ```
+
 ```
 root@pmox2:~# ethtool -i vmbr0
 driver: bridge
@@ -84,7 +85,7 @@ supports-test: no
 supports-eeprom-access: no
 supports-register-dump: no
 supports-priv-flags: no
-```
+
 
 ## Display NIC statistics
 
@@ -147,7 +148,7 @@ Loopback test  (offline)         0
 Link test   (on/offline)         0
 ```
 
-```
+
 root@pmox3:~# ethtool -t enp1s0
 Cannot test: Operation not supported
 ```

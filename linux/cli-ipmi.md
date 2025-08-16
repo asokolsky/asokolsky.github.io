@@ -4,7 +4,7 @@ This helped to
 [lower the fan rpm threshold](https://calvin.me/quick-how-to-decrease-ipmi-fan-threshold) -
 something the SuperMicro IPMI web GUI could not do:
 
-```console
+```sh
 ipmitool -I lan -U ADMIN -H 10.0.0.4 sensor thresh FAN1 lower 150 225 300
 ```
 
@@ -16,7 +16,7 @@ More:
 
 Playing with ipmitool:
 
-```console
+```
 [alex@nass ~]$ ipmitool -I lan -U XXX -P XXX -H 192.168.1.35 sdr elist full
 CPU Temp         | 01h | ok  |  3.1 | 54 degrees C
 System Temp      | 0Bh | ok  |  7.11 | 55 degrees C
@@ -65,7 +65,7 @@ DIMMB2 Temp      | B5h | ns  | 32.69 | No Reading
 
 With some output grooming:
 
-```console
+```
 alex@latitude7490:~/ > ipmitool -I lan -U ADMIN -P PASSWORD -H nass-ipmi sdr elist full|egrep -E "degrees|RPM"| awk -F '|' '{print $1":"$5}'
 CPU Temp         : 33 degrees C
 System Temp      : 47 degrees C
@@ -83,7 +83,7 @@ FANA             : 900 RPM
 
 Get the current fan duty value from CPU-zone (0x00), then peripheral-zone (0x01).
 
-```console
+```
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x00 0x00
  14
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x00 0x01

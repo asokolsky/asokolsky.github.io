@@ -6,9 +6,7 @@ Related: [systemctl](cli-systemctl.html)
 
 ## Configuration
 
-```
-/etc/systemd/journald.conf
-```
+Is in `/etc/systemd/journald.conf`.
 
 ## Show Service Log
 

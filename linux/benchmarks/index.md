@@ -70,7 +70,7 @@ Elapsed: 31.39s, CPU: 880%
 
 This [speed-test.sh](speed-test.sh) is based on `dd`:
 
-```sh
+```
 > ./speed-test.sh
 Writing to /tmp...
 1+0 records in
@@ -94,7 +94,7 @@ fio: [man page](https://linux.die.net/man/1/fio),
 [examples from repo](https://github.com/axboe/fio/tree/master/examples),
 [example use](https://docs.oracle.com/en-us/iaas/Content/Block/References/samplefiocommandslinux.htm)
 
-```sh
+```
 > ./fio-test.sh
 Random Read/Write Test
 [sudo] password for alex:
