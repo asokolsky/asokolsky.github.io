@@ -1,0 +1,26 @@
+Show the system configuration
+
+System state
+============
+
+CPU: use 12 logical CPUs: 0-11
+Perf event: Maximum sample rate: 79000 per second
+ASLR: Full randomization
+Linux scheduler: No CPU is isolated
+CPU Frequency: 0-11=min=800 MHz, max=5600 MHz
+IRQ affinity: irqbalance service: active
+IRQ affinity: Default IRQ affinity: CPU 0-11
+IRQ affinity: IRQ affinity: IRQ 0-15,17,120,152-154,167,182=CPU 0-11; IRQ 18=CPU 2-3; IRQ 27=CPU 8-9; IRQ 121=CPU 6-7; IRQ 122=CPU 4-5; IRQ 123=CPU 10-11; IRQ 124=CPU 0-1; IRQ 132,148,161,169=CPU 6; IRQ 133,157,170=CPU 2; IRQ 134,141-142,166,172,176=CPU 11; IRQ 135,144,165,175=CPU 10; IRQ 136,139,146,159,179=CPU 4; IRQ 137,143,145,164,168,174=CPU 9; IRQ 138,140,150,163,177=CPU 8; IRQ 147,160,171,183=CPU 5; IRQ 149,156,173=CPU 1; IRQ 151,162,178=CPU 7; IRQ 155,180=CPU 0; IRQ 158,181=CPU 3
+CPU scaling governor: 0-11=powersave
+Turbo Boost (intel_pstate): Turbo Boost enabled
+
+Advices
+=======
+
+Perf event: Set max sample rate to 1
+Linux scheduler: Use isolcpus=<cpu list> kernel parameter to isolate CPUs
+Linux scheduler: Use rcu_nocbs=<cpu list> kernel parameter (with isolcpus) to not schedule RCU on isolated CPUs
+CPU scaling governor: Use CPU scaling governor 'performance'
+Turbo Boost (intel_pstate): Disable Turbo Boost to get more reliable CPU frequency
+
+Run "python3 -m pyperf system tune" to tune the system configuration to run benchmarks

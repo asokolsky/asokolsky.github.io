@@ -36,3 +36,6 @@ run: venv									## Execute pyperformance
 clean:										## Cleanup the artifacts
 	rm -rf $(VENV) .mypy_cache venv
 	find . -name __pycache__ | xargs rm -rf
+
+system:
+	$(PYTHON) -m pyperf system > $(HOSTNAME)-pyperf-config.txt || true
