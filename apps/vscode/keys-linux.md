@@ -13,6 +13,14 @@ Ctrl + W|Close window/instance
 Ctrl + ,|User Settings
 Ctrl + K Ctrl + S|Keyboard Shortcuts
 
+## Movig the cursor
+
+Key|Action
+---|-----
+Home / End|Go to beginning/end of line
+Ctrl +  Home / End|Go to beginning/end of file
+Ctrl + Shift + \ |Jump to matching bracket
+
 ## Basic Editing
 
 Key|Action
@@ -22,10 +30,7 @@ Ctrl + C|Copy line (empty selection)
 Alt + ↓ / ↑|Move line down/up
 Ctrl + Shift + K|Delete line
 Ctrl + Enter /<br> Ctrl + Shift + Enter|Insert line below / above
-Ctrl + Shift + \ |Jump to matching bracket
 Ctrl +  ] / [|Indent/Outdent line
-Home / End|Go to beginning/end of line
-Ctrl +  Home / End|Go to beginning/end of file
 Ctrl +  ↑ / ↓|Scroll line up/down
 Alt +  PgUp / PgDn|Scroll page up/down
 Ctrl + Shift +  [ / ]|Fold/unfold region
