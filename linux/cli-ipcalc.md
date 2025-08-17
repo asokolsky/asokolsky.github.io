@@ -12,7 +12,7 @@ Display info on
 [cidr](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
 10.8.0.0/20:
 
-```sh
+```
 $ ipcalc 10.8.0.0/20
 Address:   10.8.0.0             00001010.00001000.0000 0000.00000000
 Netmask:   255.255.240.0 = 20   11111111.11111111.1111 0000.00000000
@@ -27,7 +27,7 @@ Hosts/Net: 4094                  Class A, Private Internet
 
 Split the above cidr into three /24 subnets:
 
-```sh
+```
 $ ipcalc 10.8.0.0/20 --s 128 128 128
 Address:   10.8.0.0             00001010.00001000.0000 0000.00000000
 Netmask:   255.255.240.0 = 20   11111111.11111111.1111 0000.00000000

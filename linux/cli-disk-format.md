@@ -8,7 +8,7 @@
 
 After you plug the flash disk into your PC:
 
-```sh
+```
 alex@latitude7490:~/ > lsblk
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda           8:0    1   3.8G  0 disk
