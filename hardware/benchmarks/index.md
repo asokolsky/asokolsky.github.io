@@ -156,3 +156,13 @@ pyperformance run -o t14g3win.json
 ```
 {% include_relative p52-vs-t14g3win.txt %}
 ```
+
+### duo vs p52
+
+```sh
+.venv/bin/python3 -m pyperformance compare duo.json p52.json > duo-vs-p52.txt
+```
+
+```
+{% include_relative duo-vs-p52.txt %}
+```
