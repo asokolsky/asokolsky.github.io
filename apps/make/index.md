@@ -1,13 +1,30 @@
 # make and Makefile
 
 My definition: `make` is a data-driven (data is in a `Makefile`) filter for
-building 'targets'.  Consider use of [just](../just/) as a replacement.
+building 'targets'.
 
 GNU [man page](https://man7.org/linux/man-pages/man1/make.1.html),
 [manual](https://www.gnu.org/software/make/manual/make.html),
 [quick reference](https://www.gnu.org/software/make/manual/make.html#Quick-Reference).
 
 [Tutorial](https://makefiletutorial.com/)
+
+```mermaid
+flowchart TD
+    src1[source1.c] --> CC1{cc} --> src1out[source1.o]
+    src2[source2.c] --> CC2{cc} --> src2out[source2.o]
+    src1out --> ld{ld}
+    src2out --> ld
+    lib[stdlib] --> ld
+    ld --> P[a.out]
+```
+
+[Makefile Support in VS Code](https://devblogs.microsoft.com/cppblog/now-announcing-makefile-support-in-visual-studio-code/)
+
+
+[Lessons Learned](/software-engineering/lessons-learned/make.html).
+Consider use of [just](../just/) as a replacement.
+
 
 ## Summary of automatic variables
 
@@ -22,9 +39,6 @@ Variable|Description
 `$^`|all the prerequisites
 `.PHONY`|Adding `.PHONY` to a target will prevent `make` from confusing the phony target with a file name. [manual](https://www.gnu.org/software/make/manual/make.html#Phony-Targets), one of many [special built-in targets](https://www.gnu.org/software/make/manual/make.html#Special-Targets)
 
-## Support in VSCode
-
-[Makefile Support in VS Code](https://devblogs.microsoft.com/cppblog/now-announcing-makefile-support-in-visual-studio-code/)
 
 ##  Verify the file exists
 
@@ -86,6 +100,6 @@ endif
 {% include_relative terraform.mak %}
 ```
 
-World class:
+## World class
 
 * [git makefile](https://raw.githubusercontent.com/git/git/master/Makefile)
