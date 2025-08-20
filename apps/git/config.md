@@ -18,8 +18,8 @@ Specific personally to you, the user.
 
 Stored in any one of:
 
-* `~.config/git/config`
-* `~.gitconfig`
+* `~/.config/git/config`
+* `~/.gitconfig`
 
 ## Repository level
 

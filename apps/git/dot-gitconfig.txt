@@ -9,8 +9,9 @@
 [core]
     # fsmonitor = true
     # untrackedCache = true
-    editor = emacs
+    editor = /usr/bin/emacs
     excludesfile = ~/.gitignore
+	pager =
 [diff]
     algorithm = histogram
     colorMoved = true

@@ -15,6 +15,8 @@ Good read:
 
 * [Configuring ZSH Without Dependencies](https://thevaluable.dev/zsh-install-configure-mouseless/)
 
+Check out [one-liners](one-liners.html).
+
 ## zsh startup
 
 `.zshenv` → [`.zprofile` if login] → [`.zshrc` if interactive] → [`.zlogin` if login] → [`.zlogout` sometimes]
@@ -57,12 +59,6 @@ Your user name is: $(whoami)
 Your current working directory is: $PWD
 Your Bash version is: $ZSH_VERSION
 EOF
-```
-
-## Compare command output with expectations
-
-```sh
-diff -u expected.txt <(some command)
 ```
 
 ## bash script header
@@ -127,19 +123,3 @@ to assign a default value to a variable, e.g.:
 # TMPDIR is defined on MacOS
 : "${TMPDIR:=/tmp}"
 ```
-
-## One-liners
-
-### URL-decode CLI
-
-```
-echo -n "%21%20" | python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()));"
-```
-
-### Rename the files to lowercase
-
-Try this:
-```sh
-for file in * ; do lower=$(echo $file | tr A-Z a-z) && [[ $lower != $file ]] && echo mv $file $lower ;done
-```
-To do the job remove the `echo`.
