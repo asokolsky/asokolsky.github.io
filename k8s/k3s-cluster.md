@@ -57,7 +57,7 @@ I added `optional: true` to the 2nd NIC.  That did the job.
 Cloned [k3s-ansible](https://github.com/techno-tim/k3s-ansible).
 [Walk-through](https://www.youtube.com/watch?v=S_pp_nc5QuI).
 
-1. Edit `ansigble.cfg`:
+1. Edit `ansible.cfg`:
 ```
 [defaults]
 inventory = inventory/my-cluster/hosts.ini

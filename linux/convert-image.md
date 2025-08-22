@@ -2,7 +2,7 @@
 
 You will need imagemagick:
 
-```
+```sh
 sudo apt install imagemagick
 ```
 
