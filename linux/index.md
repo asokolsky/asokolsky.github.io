@@ -25,7 +25,6 @@
 * [ipcalc](cli-ipcalc.html)
 * [iperf](cli-iperf.html)
 * [ipmi](cli-ipmi.html)
-* [journalctl](cli-journalctl.html)
 * [jq](cli-jq.html)
 * [lsof](cli-lsof.html)
 * [lspci](cli-lspci.html)
@@ -37,7 +36,7 @@
 * [scp](cli-scp.html)
 * [smbclient](cli-smbclient.html)
 * [socket statistics ss](cli-ss.html)
-* [systemctl](cli-systemctl.html)
+* [systemctl](cli-systemctl.html), [journalctl](cli-journalctl.html), [systemd-analyze](cli-systemd-analyze.html)
 * [more...](cli.html)
 
 
