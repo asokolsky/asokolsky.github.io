@@ -37,4 +37,5 @@ phoronix-test-suite upload t14g3-build-linux-kernel
 
 ### build-linux-kernel
 
-* [t14g3](https://openbenchmarking.org/result/2508239-NE-T14G3BUIL19)
+* [exi](https://openbenchmarking.org/result/2508236-NE-EXIBUILDL69) - 148.32
+* [t14g3](https://openbenchmarking.org/result/2508239-NE-T14G3BUIL19) - 276.27
