@@ -16,7 +16,7 @@ releases/manifest.json merge=json-manifest
 
 ## Specify Merge Driver to Use
 
-Change repo config in Makefile:
+Change repo config in the `Makefile`:
 ```
 # This is the base directory for this repo
 BASE_DIR:=$(dir $(realpath $(lastword $(MAKEFILE_LIST))))

@@ -6,6 +6,18 @@
 * List hardware using [system_profiler](cli-system_profiler.html)
 * more [macOS (bash) commands](https://ss64.com/mac/index.html)
 
+## Launch an App
+
+Launch Firefox profile manager:
+```sh
+open -a /Applications/Firefox.app --args -P default -no-remote
+```
+
+Open a file with a specific application, TextEdit:
+```sh
+open ~/Downloads/Instructions.doc -a TextEdit
+```
+
 ## Show hidden files and folders
 Use [defaults](https://ss64.com/mac/defaults.html):
 ```sh
