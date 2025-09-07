@@ -1,6 +1,7 @@
 # uv
 
-[uv sources](https://github.com/astral-sh/uv), [documentation](https://docs.astral.sh/uv).
+[repo](https://github.com/astral-sh/uv), [documentation](https://docs.astral.sh/uv).
+See also [uv-vs-pip](./uv-vs-pip.html).
 
 ## Install uv
 
