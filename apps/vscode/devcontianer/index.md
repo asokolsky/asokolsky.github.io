@@ -25,5 +25,5 @@ See, e.g. [Dockerfile for terraform](./Dockerfile-terraform.txt)
 
 4. Create `.devcontainer/devcontainer.json`:
 ```json
-{% include_relative devcontainer-terraform,json %}
+{% include_relative devcontainer-terraform.json %}
 ```
