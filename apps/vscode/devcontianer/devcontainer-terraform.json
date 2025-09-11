@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json.
+// For config options, see https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "Debian",
+	// Or use a Dockerfile or Docker Compose file.
+	// More info: https://containers.dev/guide/dockerfile
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"USER_NAME": "${env:USER}"
+		}
+	},
+
+	// Features to add to the dev container: https://containers.dev/features
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"hashicorp.hcl"
+			]
+		}
+	},
+
+	// Uncomment to connect as root instead: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+	"mounts": [
+		"source=${localEnv:HOME}/.aws,target=/home/${env:USER}/.aws,type=bind,consistency=cached",
+        "source=awesome-bashhistory,target=/home/${env:USER}/commandhistory,type=volume"
+	],
+
+	"postCreateCommand": "sudo chown -R $(whoami): /home/$(whoami)/commandhistory && sudo bundle install --gemfile=Gemfile"
+}
