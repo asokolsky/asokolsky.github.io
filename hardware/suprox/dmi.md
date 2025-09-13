@@ -290,7 +290,7 @@ Handle 0x001F, DMI type 16, 23 bytes
 Physical Memory Array
 	Location: System Board Or Motherboard
 	Use: System Memory
-	Error Correction Type: Single-bit ECC
+	Error Correction Type: None
 	Maximum Capacity: 64 GB
 	Error Information Handle: Not Provided
 	Number Of Devices: 2
@@ -298,8 +298,8 @@ Physical Memory Array
 Handle 0x0024, DMI type 19, 31 bytes
 Memory Array Mapped Address
 	Starting Address: 0x00000000000
-	Ending Address: 0x007FFFFFFFF
-	Range Size: 32 GB
+	Ending Address: 0x00FFFFFFFFF
+	Range Size: 64 GB
 	Physical Array Handle: 0x001F
 	Partition Width: 2
 
@@ -539,20 +539,20 @@ Handle 0x002E, DMI type 17, 84 bytes
 Memory Device
 	Array Handle: 0x001F
 	Error Information Handle: Not Provided
-	Total Width: 72 bits
+	Total Width: 64 bits
 	Data Width: 64 bits
-	Size: 16 GB
+	Size: 32 GB
 	Form Factor: DIMM
 	Set: None
 	Locator: DIMMA1
 	Bank Locator: P0_Node0_Channel0_Dimm0
 	Type: DDR4
 	Type Detail: Synchronous
-	Speed: 2667 MT/s
-	Manufacturer: Micron
-	Serial Number: E75606A4
+	Speed: 3200 MT/s
+	Manufacturer: Crucial
+	Serial Number: E851531F
 	Asset Tag: 9876543210
-	Part Number: 18ASF2G72AZ-2G6E1
+	Part Number: CP32G4DFRA32A.M16FF
 	Rank: 2
 	Configured Memory Speed: 2400 MT/s
 	Minimum Voltage: 1.2 V
@@ -561,12 +561,12 @@ Memory Device
 	Memory Technology: DRAM
 	Memory Operating Mode Capability: Volatile memory
 	Firmware Version: Not Specified
-	Module Manufacturer ID: Bank 1, Hex 0x2C
+	Module Manufacturer ID: Bank 6, Hex 0x9B
 	Module Product ID: Unknown
 	Memory Subsystem Controller Manufacturer ID: Unknown
 	Memory Subsystem Controller Product ID: Unknown
 	Non-Volatile Size: None
-	Volatile Size: 16 GB
+	Volatile Size: 32767 MB
 	Cache Size: None
 	Logical Size: None
 
@@ -574,20 +574,20 @@ Handle 0x0030, DMI type 17, 84 bytes
 Memory Device
 	Array Handle: 0x001F
 	Error Information Handle: Not Provided
-	Total Width: 72 bits
+	Total Width: 64 bits
 	Data Width: 64 bits
-	Size: 16 GB
+	Size: 32 GB
 	Form Factor: DIMM
 	Set: None
 	Locator: DIMMB1
 	Bank Locator: P0_Node0_Channel1_Dimm0
 	Type: DDR4
 	Type Detail: Synchronous
-	Speed: 2667 MT/s
-	Manufacturer: Micron
-	Serial Number: E75606A4
+	Speed: 3200 MT/s
+	Manufacturer: Crucial
+	Serial Number: E8516B17
 	Asset Tag: 9876543210
-	Part Number: 18ASF2G72AZ-2G6E1
+	Part Number: CP32G4DFRA32A.M16FF
 	Rank: 2
 	Configured Memory Speed: 2400 MT/s
 	Minimum Voltage: 1.2 V
@@ -596,20 +596,20 @@ Memory Device
 	Memory Technology: DRAM
 	Memory Operating Mode Capability: Volatile memory
 	Firmware Version: Not Specified
-	Module Manufacturer ID: Bank 1, Hex 0x2C
+	Module Manufacturer ID: Bank 6, Hex 0x9B
 	Module Product ID: Unknown
 	Memory Subsystem Controller Manufacturer ID: Unknown
 	Memory Subsystem Controller Product ID: Unknown
 	Non-Volatile Size: None
-	Volatile Size: 16 GB
+	Volatile Size: 32767 MB
 	Cache Size: None
 	Logical Size: None
 
 Handle 0x0032, DMI type 20, 35 bytes
 Memory Device Mapped Address
 	Starting Address: 0x00000000000
-	Ending Address: 0x003FFFFFFFF
-	Range Size: 16 GB
+	Ending Address: 0x007FFFFFFFF
+	Range Size: 32 GB
 	Physical Device Handle: 0x002E
 	Memory Array Mapped Address Handle: 0x0024
 	Partition Row Position: Unknown
@@ -618,9 +618,9 @@ Memory Device Mapped Address
 
 Handle 0x0033, DMI type 20, 35 bytes
 Memory Device Mapped Address
-	Starting Address: 0x00400000000
-	Ending Address: 0x007FFFFFFFF
-	Range Size: 16 GB
+	Starting Address: 0x00800000000
+	Ending Address: 0x00FFFFFFFFF
+	Range Size: 32 GB
 	Physical Device Handle: 0x0030
 	Memory Array Mapped Address Handle: 0x0024
 	Partition Row Position: Unknown
