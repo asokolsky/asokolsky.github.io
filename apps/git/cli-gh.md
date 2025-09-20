@@ -1,4 +1,4 @@
-# Github CLI gh
+# gh - Github CLI
 
 [github manual](https://cli.github.com/manual/).
 
@@ -66,3 +66,9 @@ asokolsky in ~/Projects/asokolsky.github.io [main]>
 ```
 
 I also added `.ghconfig/*` to the repo's `.gitignore`.
+
+## gh whomi
+
+```sh
+gh api user | jq -r '"\(.name) \(.login)"'
+```

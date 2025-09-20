@@ -2,18 +2,18 @@
 
 ## Topics
 
-* [Configuration](config.html),
+* [Configuration](config.html)
 * [git hooks](https://www.atlassian.com/git/tutorials/git-hooks), [pre-commit hook](pre-commit-hook.html)
 * [custom git merge driver](custom-merge-driver.html)
 * [Hosting a Repo in a Cloud](hosting.html)
 * [merge vs rebase workflow](workflow.html)
 * [git squash](squash-commits.html)
+* [Using Multiple GitHub Accounts](multiple-gh-accounts.html)
 * [FAQs](faq.html)
 
 And more:
 * [Pro Git Book](https://git-scm.com/book/en/v2)
 * [Atlassian advanced tips](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
-* [8 Easy Steps to Set Up Multiple GitHub Accounts](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
 
 Proprietary Extensions
 

@@ -28,3 +28,10 @@ Get all the repo's branches except for branch `master` and delete these:
 ```sh
 git branch | grep -v master | xargs git branch -D
 ```
+
+## git whoami
+
+with github:
+```sh
+gh api user | jq -r '"\(.name) \(.login)"'
+```
