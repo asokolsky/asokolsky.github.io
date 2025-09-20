@@ -24,10 +24,10 @@ From
 
 
 * Minikube is the easiest to use but it is not suitable for production.
-* For performance-constraint environments, K3S is an easy to use the lightweight
+* For performance-constraint environments, K3S is an easy to use lightweight
 K8s implementation.
 * MicroK8s offers more features in terms of usage but it is more difficult to
 configure and install than others, could be a good duo with the Ubuntu.
 * In resource-constrained environments, it is useful to consider also K0S.
-* K0S and K3S are similar though if a proper toolchain is in place K0S gives
+* K0S and K3S are similar though if a proper toolchain is in place K0S pays
 attention to security by providing 100% FIPS compliance.

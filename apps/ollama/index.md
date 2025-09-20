@@ -7,7 +7,7 @@ Reference: [ubuntu-22-04-from-zero-to-70b-llama](https://forum.level1techs.com/t
 * update OS
 * ensure you can ssh into the machine
 
-```
+```sh
 sudo apt update
 sudo apt install python3-pip
 ```

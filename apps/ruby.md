@@ -6,7 +6,7 @@ sudo apt install rbenv
 ```
 
 Install Ruby:
-```sh
+```
 $ rbenv install 2.4.1
 Downloading ruby-2.4.1.tar.bz2...
 -> https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.bz2
@@ -16,7 +16,7 @@ Installed ruby-2.4.1 to /home/alex/.rbenv/versions/2.4.1
 
 Start using it:
 
-```
+```sh
 rbenv global 2.4.1
 ```
 
@@ -24,7 +24,7 @@ rbenv global 2.4.1
 Therefore had to [install from github](https://github.com/rbenv/ruby-build).
 Then installed latest ruby.
 
-```sh
+```
 alex@latitude7490:~/Projects/asokolsky.github.io/linux/ > rbenv versions
   system
   2.4.1

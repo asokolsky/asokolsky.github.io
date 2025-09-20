@@ -16,7 +16,7 @@ By default configuration is in `~/.kube/config`.
 
 [Environment variables](https://kubernetes.io/docs/reference/kubectl/kubectl/#environment-variables).
 Most important environment variable:
-```
+```sh
 KUBECONFIG=$HOME/.kube/dev-config
 ```
 
@@ -90,7 +90,7 @@ Command|Description
 `kubectl apply -k <dir>`|Apply resources from a kustomize directory
 
 Create multiple YAML objects from stdin:
-```
+```sh
 kubectl apply -f - <<EOF
 apiVersion: v1
 kind: Pod
@@ -198,7 +198,7 @@ Command|Description
 `kubectl delete <resource> --all`|Delete all resources of a particular type in the current namespace
 
 To delete a pod:
-```
+```sh
 kubectl delete pod busybox-sleep-less
 ```
 

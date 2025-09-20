@@ -54,7 +54,7 @@ kubectl run nginx --image=nginx --port=5701
 ```
 
 To generate the POD Manifest YAML file:
-```
+```sh
 kubectl run nginx --image=nginx --dry-run=client -o yaml > pod.yaml
 ```
 

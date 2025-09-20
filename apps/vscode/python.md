@@ -79,22 +79,7 @@ max-complexity = 20
 
 ### `.gitignore`
 
-```
-__pycache__/
-__pypackages__/
-
-venv/
-
-.scrapy
-
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-*.log
-```
+See https://github.com/asokolsky/aws-describe/blob/master/.gitignore
 
 ### `mypy.ini`
 

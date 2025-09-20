@@ -31,7 +31,7 @@ excludesfile = ~/.gitignore      # valid everywhere
 
 [core]
         pager =
-        excludesfile = /Users/asokolsky/.gitignore_global
+        excludesfile = ~/.gitignore_global
         editor = /opt/homebrew/bin/emacs
 
 [alias]
