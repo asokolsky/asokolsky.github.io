@@ -46,3 +46,9 @@ To mute/unmute the microphone:
 ```sh
 wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 ```
+
+## Fingerprint Reader
+
+On my t14g3 `lsusb` gives `06cb:00f9 Synaptics, Inc.`
+
+[Instructions](https://forums.linuxmint.com/viewtopic.php?t=408129) worked.
