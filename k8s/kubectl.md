@@ -70,7 +70,7 @@ then
 ```sh
 kubectl describe pod <podname> --namespace <namespace>
 ```
-to get logs:
+to [get logs](./kubectl-logs.md):
 ```sh
 kubectl logs <pod>
 ```
