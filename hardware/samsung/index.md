@@ -6,7 +6,7 @@
 * [specs](https://www.samsung.com/us/tvs/qled-tv/q80t-75-inch-qled-4k-smart-tv-qn75q80tafxza/#specs)
 * [manual](https://downloadcenter.samsung.com/content/UM/202401/20240111154014045/NIKDVBADT-3.3.0_EM_NIKE_ASIA_ENG_230626.0.pdf)
 
-![ports](./QN85Q80TAF_Jackpack.jpg)
+![ports](./QN85Q80TAF_Jackpack.jpg.webp)
 ## Soundbar
 
 [Samsung 9.1 soundbar HW-Q950T/ZA with 4K/HDR pass-through](https://www.samsung.com/au/audio-devices/soundbar/9-1-4-ch-soundbar-dolby-atmos-black-hw-q950t-xy/)
