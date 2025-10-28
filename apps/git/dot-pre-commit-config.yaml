@@ -1,0 +1,32 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+  - id: check-added-large-files
+  - id: check-json
+  - id: check-merge-conflict
+  - id: check-yaml
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
+    args: [--markdown-linebreak-ext=md]
+- repo: https://github.com/sirwart/ripsecrets
+  rev: v0.1.11
+  hooks:
+  - id: ripsecrets
+- repo: https://github.com/rhysd/actionlint
+  rev: v1.6.25
+  hooks:
+  - id: actionlint-docker
+- repo: https://github.com/commitizen-tools/commitizen
+  rev: v3.12.0
+  hooks:
+  - id: commitizen
+  - id: commitizen-branch
+    stages: [ pre-push ]
+- repo: local
+  hooks:
+  - id: Format sources
+    name: Run make format
+    entry: bash -c "make format && git diff --exit-code"
+    language: system
+    pass_filenames: false

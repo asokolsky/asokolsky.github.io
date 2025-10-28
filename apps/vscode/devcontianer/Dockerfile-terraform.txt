@@ -1,0 +1,81 @@
+# Dockerfile to be use in awesome
+#
+FROM mirror.gcr.io/debian:trixie-slim
+
+# Define build arguments
+ARG USER_NAME
+
+RUN apt-get update && \
+    apt-get install -y locales mandoc git curl unzip sudo vim pre-commit python3-pip rbenv ruby-build ruby-dev
+RUN sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen && \
+    echo 'LANG=en_US.UTF-8' > /etc/default/locale && \
+    locale-gen
+RUN useradd -ms /bin/bash ${USER_NAME} -G sudo
+
+WORKDIR /tmp
+
+# install aws-cli
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    ./aws/install
+
+# install tfenv
+RUN git clone --depth=1 https://github.com/tfutils/tfenv.git /opt/tfenv && \
+    ln -s /opt/tfenv/bin/* /usr/local/bin && \
+    mkdir -p /opt/tfenv/versions && chmod 777 /opt/tfenv/versions && \
+    touch /opt/tfenv/version && chmod 777 /opt/tfenv/version
+
+# install bundler
+RUN gem install bundler
+
+WORKDIR /
+
+# fixup sudoers
+RUN echo '%sudo  ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/nopass
+
+# cleanup installs
+RUN rm -rf /tmp/*
+
+USER ${USER_NAME}
+
+# add local path to env
+RUN echo '# set PATH so it includes private bin if it exists\n\
+if [ -d "$HOME/.local/bin" ] ; then\n\
+    PATH="$HOME/.local/bin:$PATH"\n\
+fi' >> /home/${USER_NAME}/.bashrc
+
+# persist bash history
+ARG USERNAME=${USER_NAME}
+
+RUN SNIPPET="export PROMPT_COMMAND='history -a' \
+    && export HISTFILE=$HOME/commandhistory/.bash_history" \
+    && sudo mkdir "$HOME/commandhistory" \
+    && sudo touch "$HOME/commandhistory/.bash_history" \
+    && sudo chown -R $USERNAME "$HOME/commandhistory" \
+    && echo "$SNIPPET" >> "$HOME/.bashrc"
+
+# disable vim visual mode on mouse click
+RUN echo "set mouse-=v" > "$HOME/.vimrc"
+
+# config git
+COPY .env /tmp/git.env
+RUN set -a && . /tmp/git.env && set +a && \
+    if [ -z "$GIT_USER_NAME" ] || [ -z "$GIT_EMAIL" ]; then \
+        echo "Error: GIT_USER_NAME and GIT_EMAIL must be provided in .env file."; \
+        exit 55; \
+    fi && \
+    git config --global user.name "$GIT_USER_NAME" && \
+    git config --global user.email "$GIT_EMAIL" && \
+    git config --global pull.rebase true && \
+    git config --global push.default current && \
+    git config --global push.autoSetupRemote true && \
+    git config --global --add safe.directory /workspaces/awesome
+
+# install python packages
+RUN pip install --break-system-packages --user -U commitizen
+
+RUN rbenv install 3.1.6 && rbenv global 3.1.6
+
+#RUN bundle install --gemfile=awesome/Gemfile
+
+RUN tfenv install 1.5.7

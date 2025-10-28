@@ -43,7 +43,7 @@ Status: Downloaded newer image for bluenviron/mediamtx:latest-ffmpeg
 Test your [ffmpeg command](ffmpeg.html) by recording audio and video into a file.
 Then, instead of a file, forward the streams into the RTSP server:
 
-```
+```sh
 ffmpeg \
   -f v4l2 -framerate 30 -video_size 1920x1080 -input_format mjpeg -i /dev/video4 \
   -c:v libx264 -pix_fmt yuv420p -preset faster -g 60 \
@@ -67,7 +67,7 @@ If all the above works, customize mediamtx config file to start video capture:
 to `webcam2rtsp.yml` and [customize it](webcam2rtsp.yml).
 * Run it as:
 
-```
+```sh
 docker run --rm -it --network=host --privileged \
   -v /run/udev:/run/udev:ro -v $PWD/webcam2rtsp.yml:/mediamtx.yml \
   bluenviron/mediamtx:latest-ffmpeg

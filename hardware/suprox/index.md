@@ -35,7 +35,7 @@ Motherboard|Supermicro [X11SCL-IF](https://www.supermicro.com/en/products/mother
 BMC|ASpeed AST 2500
 BIOS|1.5 10/5/2020
 BMC f/w|1.23.06
-RAM|32GB (2x16GB) 288-Pin UDIMM ECC DDR4 2666 MT/s PC4-21300 - Micron [18ASF2G72AZ-2G6E1](https://media-www.micron.com/-/media/client/global/documents/products/data-sheet/modules/unbuffered_dimm/ddr4/asf18c2gx72az.pdf?rev=afcfe5974940462e8667ea8eccc014fb)
+RAM|64GB (2x32GB) Crucial Pro  288-Pin PC RAM DDR4 3200 (PC4 25600) [CP2K32G4DFRA32A](https://www.crucial.com/memory/ddr4/CP2K32G4DFRA32A)
 SSD|500GB WD Blue SN550 NVMe SSD, Gen3x4 PCIe 8Gb/s, M.2 2280, 2,400 MB/s, WDS500G2B0C
 NIC|2x Intel I210 on motherboard
 NIC|Intel i350-T2

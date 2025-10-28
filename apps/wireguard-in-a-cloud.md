@@ -49,7 +49,6 @@ PostDown = iptables -t nat -D POSTROUTING -o ens3 -j MASQUERADE
 [Peer]
 PublicKey = [redacted]
 AllowedIPs = 10.8.0.2/32
-
 ```
 
 ### Edit /etc/iptables/rules.v4

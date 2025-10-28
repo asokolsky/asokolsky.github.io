@@ -8,7 +8,7 @@
 
 On Mac:
 
-```
+```sh
 brew install keybase
 ```
 
@@ -18,7 +18,7 @@ Just follow the steps
 
 ### Generate a pgp key
 
-```
+```sh
 keybase pgp gen
 ```
 
@@ -31,7 +31,7 @@ asokolsky in ~/ > keybase pgp list
 Keybase Key ID:  01015b1e9f7ecfb69136aabb60b29528343e4acb84698d7a39d2d587901f6f6238de0a
 PGP Fingerprint: 721edb24fe215bf949e5b960a849309a9f8f285f
 PGP Identities:
-   Alex Sokolsky <asokolsky@clari.com>
+   Alex Sokolsky <asokolsky@company.com>
 ```
 
 Given a password encrypted with your pgp key

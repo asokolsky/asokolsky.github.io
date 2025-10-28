@@ -1,5 +1,5 @@
 ---
-title: HTML Debugging Workflow for GitHub Pages
+title: The Intellectuals and Socialism
 tags: socialism
 ---
 
@@ -8,4 +8,4 @@ The original [The Intellectuals and Socialism](https://cdn.mises.org/Intellectua
 Intellectuals: the professional secondhand dealers in ideas.
 
 
-["The Intellectuals and Socialism" 70 Years Later](https://www.mercatus.org/hayekprogram/research/essays/intellectuals-and-socialism-70-years-later)
+Stefanie Haeffele, Molly Harnish, ["The Intellectuals and Socialism" 70 Years Later](https://web.archive.org/web/20250329181620/https://www.mercatus.org/hayekprogram/research/essays/intellectuals-and-socialism-70-years-later)

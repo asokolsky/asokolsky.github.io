@@ -30,7 +30,6 @@ foo=bar
 ## Use with AWS Secrets Manager
 
 Provided you stored the secret like this:
-```
 ```sh
 aws secretsmanager create-secret \
     --name pass-secret \
@@ -39,7 +38,7 @@ aws secretsmanager create-secret \
 ```
 
 You can retrieve it:
-```
+```sh
 echo 'foo={{ (ds "secrets").foo }}' | \
     gomplate -d 'secrets=aws+sm:pass-secret?type=application/json'
 ```

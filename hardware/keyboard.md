@@ -7,7 +7,7 @@
 
 ## Logi Keyboards
 
-* [MS Mechanical Mini](logi/ms-mechanical-mini.html)
+* [MS Mechanical Mini](logi/mx-mechanical-mini.html)
 * [Wave Keys](logi/wave-keys.html)
 * [Presenter R800](logi/remote.md) Remote
 

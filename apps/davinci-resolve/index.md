@@ -20,7 +20,7 @@ and [drinstaller](https://github.com/Shachar/drinstaller).
 1. Install `drinstaller` DEB file - this results in `shemesh.biz` being added as
 a software source.
 2. Install helper packages:
-```
+```sh
 sudo apt update
 sudo apt upgrade
 sudo apt install drinstaller

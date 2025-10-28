@@ -89,7 +89,7 @@ Command|Description
 [Details](https://developer.hashicorp.com/terraform/cli/config/environment-variables)
 
 Most relevant:
-```
+```sh
 export TF_LOG=TRACE
 ```
 Acceptable options:

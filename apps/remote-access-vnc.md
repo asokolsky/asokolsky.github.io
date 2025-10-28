@@ -26,7 +26,7 @@ vncserver -depth 16 -geometry 1920x1080 -localhost no
 ```
 
 To verify server running:
-```
+```sh
 pgrep Xtigervnc
 ss -tulpn | grep -E -i 'vnc|590'
 ```

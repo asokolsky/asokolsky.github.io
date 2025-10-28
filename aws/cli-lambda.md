@@ -76,3 +76,32 @@ sed -i'' -e 's/"//g' out
 sleep 15
 aws logs get-log-events --log-group-name /aws/lambda/my-function --log-stream-name $(cat out) --limit 5
 ```
+
+## Limitations
+
+https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html
+
+Execution & Performance:
+
+* Maximum Runtime: a hard limit of 15 minutes (900 seconds) for execution.
+* Memory & CPU: RAM from 128 MB to 10 GB, with higher allocations increasing CPU power and network bandwidth.
+* Cold Starts: due to the on-demand nature, new function instances can experience "cold starts," which are initialization times that introduce latency.
+* No Checkpointing: Lambda does not support native checkpointing, making it difficult to save progress and resume long-running processes.
+
+Deployment & Size:
+
+* Deployment Package Size: The compressed (.zip) deployment package size has a limit of 50 MB.
+* Uncompressed Size: Once uncompressed, the deployment package (including code and dependencies) must not exceed 250 MB.
+* Container Image Size: For container images, there is a maximum size of 10 GB.
+
+Concurrency & Scaling Limits
+
+* Account Concurrency: by default, a region has a concurrency limit of 1,000 concurrent executions for your account across all functions.
+* Event Source Concurrency: Specific event source mappings, such as those for Amazon MQ, may have their own lower concurrency limits.
+
+Others:
+
+* No State Management: lambda functions are stateless; they cannot share data between invocations. State should be stored in external services like Amazon DynamoDB or AWS RDS.
+* Observability: logging in to servers is not possible, which can make observability and debugging more challenging.
+* Vendor Lock-in: tight integration with other AWS services can lead to vendor lock-in, requiring a shift in architecture for those accustomed to traditional systems.
+* Long-Running Processes: due to the execution and state limitations, Lambda is generally not suitable for long-running, stateful processes.

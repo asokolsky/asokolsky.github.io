@@ -15,28 +15,8 @@ brew install pre-commit commitizen
 pre-commit install --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
 ```
 
-Create you own version of
-[.pre-commit-config.yaml](https://github.com/pre-commit/pre-commit/blob/main/.pre-commit-config.yaml):
+Create you own version of [.pre-commit-config.yaml](https://github.com/pre-commit/pre-commit/blob/main/.pre-commit-config.yaml):
 
 ```yaml
-repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.4.0
-  hooks:
-    - id: check-added-large-files
-    - id: check-json
-    - id: check-merge-conflict
-    - id: check-yaml
-    - id: end-of-file-fixer
-    - id: trailing-whitespace
-- repo: https://github.com/rhysd/actionlint
-  rev: v1.6.25
-  hooks:
-    - id: actionlint-docker
-- repo: https://github.com/commitizen-tools/commitizen
-  rev: v3.12.0
-  hooks:
-    - id: commitizen
-    - id: commitizen-branch
-      stages: [ pre-push ]
+{% include_relative dot-pre-commit-config.yaml %}
 ```
