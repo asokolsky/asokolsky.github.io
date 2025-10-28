@@ -1,8 +1,11 @@
 # gomplate
 
-Somehow searching the
-[repo](https://github.com/hairyhenderson/gomplate) works
+Somehow searching the [repo](https://github.com/hairyhenderson/gomplate) works
 better for me than reading [documentation](https://docs.gomplate.ca/).
+
+Other (python) template engines:
+
+* [jinja2](https://jinja.palletsprojects.com/en/stable/)
 
 ## Install
 
@@ -10,7 +13,7 @@ better for me than reading [documentation](https://docs.gomplate.ca/).
 
 ```sh
 sudo curl -o /usr/local/bin/gomplate -sSL \
-  https://github.com/hairyhenderson/gomplate/releases/download/v3.11.3/gomplate_linux-amd64
+  https://github.com/hairyhenderson/gomplate/releases/download/v4.3.3/gomplate_linux-amd64
 sudo chmod 755 /usr/local/bin/gomplate
 ```
 
