@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "'Source Code Pro',Consolas,monospace",
+    "editor.fontFamily": "'Cascadia Mono Light','Source Code Pro',Consolas,monospace",
     "editor.fontLigatures": true,
     "editor.rulers": [80],
     "editor.wordWrap": true,
