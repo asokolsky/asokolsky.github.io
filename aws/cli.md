@@ -126,6 +126,7 @@ aws ec2 describe-vpn-connections \
 
 * [DynamoDB](cli-dynamodb.html)
 * [Elastic Compute Cloud (EC2)](cli-ec2.html)
+* [Config](cli-config.html)
 * [Elastic Container Registry (ECR)](cli-ecr.html)
 * [Elastic Kubernetes Service (EKS)](cli-eksctl.html)
 * [Elastic Load Balancer](cli-elb.md)
