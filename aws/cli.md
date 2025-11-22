@@ -116,6 +116,7 @@ From [cli-usage-filter](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-f
 [JMESPath syntax](https://jmespath.org/)
 
 e.g.:
+
 ```sh
 aws ec2 describe-vpn-connections \
     --filter 'Name=vpn-connection-id,Values=vpn-176b7876' \
@@ -133,6 +134,7 @@ aws ec2 describe-vpn-connections \
 * [Lambda](cli-lambda.html)
 * [Resource Access Manager (RAM)](cli-ram.html)
 * [Route53](cli-route53.html)
+* [Simple Notification Service (SNS)](cli-sns.html)
 * [Simple Storage Service (S3)](cli-s3.html)
 * [Secrets Manager](cli-secrets.html)
 * [Simple Queue Service (SQS)](cli-sqs.html)
