@@ -29,3 +29,5 @@ workstation.
 
 Our media consumption patterns do change.  Today I spend more time listening to
 youtube on my iPhone than anything else.
+
+PS: One year later: indeed, VLC's support for SMB and NFS makes AppleTV 4k a killer product for my usage scenarios.
