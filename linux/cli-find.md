@@ -52,21 +52,25 @@ find . -mtime +30 -print
 
 ## Examples: Find and Delete
 
-Delete all .bak files:
+Find and Delete:
+
+* all .bak files:
 ```sh
 find . -name "*.bak" -delete
 ```
-Delete empty directories:
+* all emacs backup files:
+```sh
+find . -type f -name '*~' -exec rm -v {} \;
+```
+* empty directories:
 ```sh
 find releases/ -type d -empty -delete
 ```
-
-Find and delete all the terraform locks:
+* all the terraform locks:
 ```sh
 find . -type f -name .terraform.lock.hcl -delete
 ```
-
-Remove all the files from /tmp owned by `jdoe`:
+* all the files from /tmp owned by `jdoe`:
 ```sh
 find /tmp/* -user jdoe -exec rm -fr {} \;
 ```
