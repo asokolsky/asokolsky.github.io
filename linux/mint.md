@@ -14,6 +14,7 @@ defaults +:
 
 * [CoreCtrl](https://gitlab.com/corectrl/corectrl)
 * [GreenWithEnvy](https://gitlab.com/leinardi/gwe)
+* [Mission Center](https://gitlab.com/mission-center-devs/mission-center)
 
 ## Rotate Login Screen
 
