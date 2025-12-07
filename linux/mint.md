@@ -12,9 +12,9 @@ defaults +:
 
 ## Applications
 
-* [CoreCtrl](https://gitlab.com/corectrl/corectrl)
-* [GreenWithEnvy](https://gitlab.com/leinardi/gwe)
 * [Mission Center](https://gitlab.com/mission-center-devs/mission-center)
+* [CoreCtrl](https://gitlab.com/corectrl/corectrl)
+* [GreenWithEnvy](https://gitlab.com/leinardi/gwe) replaced with [LACT](https://github.com/ilya-zlobintsev/LACT)
 
 ## Rotate Login Screen
 
