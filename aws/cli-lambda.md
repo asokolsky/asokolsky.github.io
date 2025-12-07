@@ -71,11 +71,23 @@ Example `get-logs.sh`:
 
 ```
 #!/bin/bash
-aws lambda invoke --function-name my-function --cli-binary-format raw-in-base64-out --payload '{"key": "value"}' out
+aws lambda invoke --function-name my-function \
+    --cli-binary-format raw-in-base64-out --payload '{"key": "value"}' out
 sed -i'' -e 's/"//g' out
 sleep 15
-aws logs get-log-events --log-group-name /aws/lambda/my-function --log-stream-name $(cat out) --limit 5
+aws logs get-log-events --log-group-name /aws/lambda/my-function \
+    --log-stream-name $(cat out) --limit 5
 ```
+
+## Get Lambda logs
+
+Tail lambda logs:
+```sh
+aws logs filter-log-events --log-group-name /aws/lambda/my-function \
+    --start-time $(($(date +%s) - 600))000 --query 'events[*].message' \
+    --output text | tail -50
+```
+
 
 ## Limitations
 

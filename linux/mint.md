@@ -53,3 +53,7 @@ wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 On my t14g3 `lsusb` gives `06cb:00f9 Synaptics, Inc.`
 
 [Instructions](https://forums.linuxmint.com/viewtopic.php?t=408129) worked.
+
+In the end I was disappointed.  It insisted on using the fingerprint reader even when the lid is closed.
+
+To disable: `sudo pam-auth-update`

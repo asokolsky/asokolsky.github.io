@@ -1,4 +1,4 @@
-# AWS  Simple Queue Service (SQS) CLI
+# AWS Simple Queue Service (SQS) CLI
 
 Save the FIFO URL:
 ```sh

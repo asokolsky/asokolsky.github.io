@@ -59,3 +59,7 @@ Instead of using git submodules, sometimes this may make more sense:
 ```sh
 {% include_relative update-from-repo.sh %}
 ```
+
+## Utility Scripts
+
+* [check-repo.sh](check-repo.sh) - check that all subdirectories are clean repos

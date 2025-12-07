@@ -1,4 +1,9 @@
-## k8s Troubleshooting
+# k8s Troubleshooting
+
+More:
+
+* [kubectl cheat-sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+* [k9s demo](https://www.youtube.com/watch?v=jovHiTobzKQ)
 
 ## Pod Troubleshooting
 
@@ -49,3 +54,29 @@ specify a custom container entry point:
 kubectl debug -it keel-58ffc64f8b-f9gk4 --namespace=keel \
     --image=jbergknoff/postgresql-client -- sh
 ```
+
+Example use of the ephemeral container with a `mongosh` client:
+```sh
+kubectl debug -it foo-769f64b94-7frn4 \
+    --image=alpine/mongosh --namespace=foo -- bash
+```
+
+## Troubleshooting Network Connectivity Between Services
+
+1. Check service discovery: Ensure you're using the correct service name and namespace
+
+```sh
+kubectl get _service_ -n _namespace_
+```
+
+2. Test connectivity: Use an ephemeral debug container with networking tools
+
+```sh
+kubectl debug -it your-pod-name --image=nicolaka/netshoot --namespace=_namespace_
+```
+
+3. Check network policies: Network policies might be restricting traffic
+```sh
+kubectl get networkpolicies -n _namespace_
+```
+4. Inspect ingress/HTTPRoute configurations: for external connectivity issues.

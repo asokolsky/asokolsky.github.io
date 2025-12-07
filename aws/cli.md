@@ -116,6 +116,7 @@ From [cli-usage-filter](https://docs.aws.amazon.com/cli/v1/userguide/cli-usage-f
 [JMESPath syntax](https://jmespath.org/)
 
 e.g.:
+
 ```sh
 aws ec2 describe-vpn-connections \
     --filter 'Name=vpn-connection-id,Values=vpn-176b7876' \
@@ -124,6 +125,9 @@ aws ec2 describe-vpn-connections \
 
 ## More
 
+* [Auto Scaling Groups](cli-asg.html)
+* [CloudTrail](cli-cloudtrail.html)
+* [Config](cli-config.html)
 * [DynamoDB](cli-dynamodb.html)
 * [Elastic Compute Cloud (EC2)](cli-ec2.html)
 * [Elastic Container Registry (ECR)](cli-ecr.html)
@@ -131,9 +135,13 @@ aws ec2 describe-vpn-connections \
 * [Elastic Load Balancer](cli-elb.md)
 * [Lambda](cli-lambda.html)
 * [Resource Access Manager (RAM)](cli-ram.html)
+* [Resource Explorer](cli-resource-explorer.html)
 * [Route53](cli-route53.html)
 * [Simple Storage Service (S3)](cli-s3.html)
 * [Secrets Manager](cli-secrets.html)
+* [Serverless Application Model (SAM)](cli-sam.html)
+* [Simple Notification Service (SNS)](cli-sns.html)
 * [Simple Queue Service (SQS)](cli-sqs.html)
+* [Simple Storage Service (S3)](cli-s3.html)
 * [Systems Manager (SSM)](cli-ssm.html)
 * [Security Token Service (STS)](cli-sts.html)
