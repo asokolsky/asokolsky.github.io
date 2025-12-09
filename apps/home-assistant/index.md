@@ -19,6 +19,6 @@ Start with https://www.home-assistant.io/docs/configuration/ and VScode add-on.
 ## TODO Integrations
 
 * pfSense - e.g for presence https://github.com/travisghansen/hass-pfsense
-* Unifi - ?
+* UniFi - ?
 * TrueNAS - https://community.home-assistant.io/t/truenas-integration/410431
 * IPMI - https://community.home-assistant.io/t/ipmi-sensors/279248

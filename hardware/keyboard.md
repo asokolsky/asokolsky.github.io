@@ -9,7 +9,7 @@
 
 * [MS Mechanical Mini](logi/mx-mechanical-mini.html)
 * [Wave Keys](logi/wave-keys.html)
-* [Presenter R800](logi/remote.md) Remote
+* [Presenter R800](logi/remote.html) Remote
 
 ## Troubleshooting
 

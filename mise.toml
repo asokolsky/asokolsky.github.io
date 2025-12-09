@@ -1,0 +1,20 @@
+[settings]
+
+[tools]
+# python tooling
+uv = 'latest'
+ruff = 'latest'
+
+[tasks.versions]
+description = "Show versions of the toolchain components"
+run = [
+    'mise ls',
+]
+dir = "{{cwd}}"
+
+[tasks.clean]
+description = "Do local clean"
+run = [
+    'find . -type d -name .venv -prune -exec rm -fr {} \;',
+    'find . -type d -name venv -prune -exec rm -fr {} \;',
+]

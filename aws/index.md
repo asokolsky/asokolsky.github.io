@@ -25,7 +25,7 @@ AWS Resource tagging:
 * [Elastic Compute Cloud (EC2)](cli-ec2.html)
 * [Elastic Container Registry (ECR)](cli-ecr.html)
 * [Elastic Kubernetes Service (EKS)](cli-eksctl.html)
-* [Elastic Load Balancer](cli-elb.md)
+* [Elastic Load Balancer](cli-elb.html)
 * [Lambda](cli-lambda.html)
 * [Resource Access Manager (RAM)](cli-ram.html)
 * [Resource Explorer](cli-resource-explorer.html)

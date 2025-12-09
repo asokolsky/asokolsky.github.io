@@ -20,7 +20,7 @@ Incoming traffic:
 UniFi device with settings reset:
 
 * has ssh credentials ubnt/ubnt;
-* expects to find unifi controller at `http://unifi:8080/inform`
+* expects to find UniFi controller at `http://unifi:8080/inform`
 
 Hence there is a benefit of having the controller on host `unifi`
 

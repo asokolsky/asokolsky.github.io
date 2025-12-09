@@ -9,4 +9,4 @@
 Use:
 
 * with [python, python+uv](https://mise.jdx.dev/mise-cookbook/python.html)
-* [in Dockerfile](../docker/mise.md)
+* [in Dockerfile](../docker/mise.html)

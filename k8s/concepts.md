@@ -130,7 +130,7 @@ See also [containerd](/apps/docker/containerd.html).
 
 ## etcd
 
-cli: [etcdctl](./etcdctl.md)
+cli: [etcdctl](etcdctl.html)
 
 ## kube-apiserver
 

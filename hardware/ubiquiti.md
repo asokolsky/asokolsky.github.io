@@ -22,4 +22,19 @@ In order for DNS to resolve LAN computers registered via DHCP:
 * use localdomain for domain in DHCP and in System tab
 
 There is NO integration with Ubiquiti UniFi Controller.
-For the latter see [proxmox/unifi](/proxmox/lxc-unifi.html)
+
+## UniFi
+
+I run UniFi controller in an [LXC container](/proxmox/lxc-unifi.html).
+
+Here are some throughput and latency figures I observed:
+
+AP|Latency (ms)|Throughput
+--|-------|----------
+Wired|0|0
+U7-Pro-US|0|0
+UAP-AC-LITE|0|0
+
+Measurement methodology:
+* latency was measured using `ping`
+* throughput measured using `iperf3`

@@ -13,7 +13,7 @@ May also have a second I210 NIC passed through.
 
 Runs LXCs:
 
-* [Unifi Controller](/proxmox/lxc-unifi.html)
+* [UniFi Controller](/proxmox/lxc-unifi.html)
 * [octoprint](/proxmox/lxc-octoprint.html)
 * dynamo
 * mqtt
@@ -21,7 +21,7 @@ Runs LXCs:
 
 in docker containers:
 
-* [portainer](/apps/docker/portainer.md);
+* [portainer](/apps/docker/portainer.html);
 * [mjpg-streamer](/proxmox/mjpg-streamer-docker.html) for use by octoprint.
 
 ## Hardware

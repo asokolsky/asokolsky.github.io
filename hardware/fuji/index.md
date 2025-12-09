@@ -16,11 +16,11 @@ Runs LXCs:
 
 * [vault](/proxmox/lxc-vault.html)
 * [mqtt](/proxmox/lxc-mqtt.html)
-* [Unifi Controller](/proxmox/lxc-unifi.html)
+* [UniFi Controller](/proxmox/lxc-unifi.html)
 
 Runs in docker containers:
 
-* [portainer](/apps/docker/portainer.md).
+* [portainer](/apps/docker/portainer.html).
 
 ## Hardware
 

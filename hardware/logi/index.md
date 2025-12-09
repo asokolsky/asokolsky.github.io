@@ -14,4 +14,4 @@ I use solaar to pair peripherals with unifying receiver.
 
 ## Mouse
 
-* [MX Master 2S](./mx-master-2s.md)
+* [MX Master 2S](./mx-master-2s.html)

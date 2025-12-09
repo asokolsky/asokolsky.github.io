@@ -76,7 +76,7 @@ LAN/Other Options:
 
 * NTP Server 1: _pfSense IP_
 * Syslog server: _IP_
-* Unifi controller specified via additional BOOTP/DHCP Options: Option 43,
+* UniFi controller specified via additional BOOTP/DHCP Options: Option 43,
 String, _value_, where _value_ is
 [calculated](https://tcpip.wtf/en/unifi-l3-adoption-with-dhcp-option-43-on-pfsense-mikrotik-and-others.htm)
 

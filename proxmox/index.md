@@ -44,7 +44,7 @@ In an LXC container:
 * [octoprint](lxc-octoprint.html)
 * [myspeed](lxc-myspeed.html)
 * [prusalink](lxc-prusalink.html)
-* [Unifi Controller](lxc-unifi.html)
+* [UniFi Controller](lxc-unifi.html)
 * [vault](lxc-vault.html)
 
 mjpg-streamer in a [docker](mjpg-streamer-docker.html) or

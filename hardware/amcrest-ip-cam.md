@@ -4,7 +4,7 @@ Mode: IP5M-T1179EW-28MM
 
 ## First Power Up
 
-Connected to Unifi PoE+ switch.
+Connected to UniFi PoE+ switch.
 
 Came up at 100Mbps
 
