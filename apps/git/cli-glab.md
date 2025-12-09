@@ -9,9 +9,12 @@ glab config set
 
 ## Authentication
 
+Check the status with
+```sh
+glab auth status
 ```
-alex@p52  ~/Projects/asokolsky.gitlab.io   master  glab auth status
-gitlab.com
+Produces:
+```
   ✓ Logged in to gitlab.com as asokolsky (/home/alex/.config/glab-cli/config.yml)
   ✓ Git operations for gitlab.com configured to use https protocol.
   ✓ API calls for gitlab.com are made over https protocol
