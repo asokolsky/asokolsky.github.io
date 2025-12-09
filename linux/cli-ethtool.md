@@ -8,6 +8,12 @@ ethtool is being supplanted by [nmcli](https://linux.die.net/man/1/nmcli), cli
 to [NetworkManager](https://en.wikipedia.org/wiki/NetworkManager).
 
 
+## List interfaces
+
+```sh
+ip link show
+```
+
 ## Display NIC settings
 
 ```
