@@ -1,4 +1,4 @@
-# PrusaLink in an LXC Container on Proxmox
+# PrusaLink in an LXC Container
 
 [Prusalink](https://help.prusa3d.com/article/prusa-connect-and-prusalink-explained_302608#what-is-prusalink)
 "is the client-side running locally on your printer, accessible from local

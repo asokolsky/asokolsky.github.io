@@ -1,4 +1,4 @@
-# FreeRADIUS in an LXC Container on Proxmox
+# FreeRADIUS in an LXC Container
 
 ## Installation
 

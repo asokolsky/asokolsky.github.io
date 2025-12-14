@@ -1,4 +1,4 @@
-# Vault in a Container
+# Vault in an LXC Container
 
 Created LXC using Proxmox GUI using the latest debian image.
 

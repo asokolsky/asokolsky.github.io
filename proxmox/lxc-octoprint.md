@@ -1,4 +1,4 @@
-# OctoPrint in an LXC container on ProxMox
+# OctoPrint in an LXC container
 
 Running OctoPrint in an LXC Container.
 
