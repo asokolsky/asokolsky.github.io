@@ -19,3 +19,11 @@ Try this:
 for file in * ; do lower=$(echo $file | tr A-Z a-z) && [[ $lower != $file ]] && echo mv $file $lower ;done
 ```
 To do the job remove the `echo`.
+
+
+## Restart Service on Some Hosts
+
+Restart service on multiple hosts:
+```sh
+for h in host1 host2 host3 ; do echo "$h"; ssh "$h" sudo systemctl restart my.service; done
+```

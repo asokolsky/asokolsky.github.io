@@ -11,7 +11,7 @@ brew install cloud-nuke
 ## Use
 
 ```sh
-asokolsky in ~/Projects/doc > cloud-nuke -h
+> cloud-nuke -h
 NAME:
    cloud-nuke - A CLI tool to nuke (delete) cloud resources.
 
@@ -65,6 +65,4 @@ transit-gateway
 transit-gateway-attachment
 transit-gateway-route-table
 vpc
-asokolsky in ~/Projects/doc >
 ```
-

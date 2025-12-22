@@ -72,3 +72,28 @@ I also added `.ghconfig/*` to the repo's `.gitignore`.
 ```sh
 gh api user | jq -r '"\(.name) \(.login)"'
 ```
+
+## gh api
+
+Use of GitHub API:
+```sh
+TEAM_NAME="foo-bar" ORG="baz"
+gh api graphql -f query='
+  query($org: String!, $team: String!, $after: String) {
+    organization(login: $org) {
+      team(slug: $team) {
+        members(first: 100, after: $after) {
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+          nodes {
+            login
+            name
+          }
+        }
+      }
+    }
+  }
+' -f org=$ORG -f team=$TEAM_NAME --jq '.data.organization.team.members.nodes[] | [.login, .name]| @csv'
+```

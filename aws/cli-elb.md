@@ -2,9 +2,44 @@
 
 [Commands](https://docs.aws.amazon.com/cli/latest/reference/elbv2/).
 
+Context:
+```sh
+export TGARN=arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/foo-bar-rds-5432/7e35f3624c3b5626
 ```
-> aws elbv2 describe-target-health \
-  --target-group-arn arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/foobar/9084d713e791e1df
+
+## describe-target-groups
+
+```
+> aws elbv2 describe-target-groups --target-group-arns $TGARN
+{
+    "TargetGroups": [
+        {
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/foo-bar-rds-5432/7e35f3624c3b5626",
+            "TargetGroupName": "foo-bar-rds-5432",
+            "Protocol": "TCP",
+            "Port": 5432,
+            "VpcId": "vpc-3cf48c45",
+            "HealthCheckProtocol": "TCP",
+            "HealthCheckPort": "traffic-port",
+            "HealthCheckEnabled": true,
+            "HealthCheckIntervalSeconds": 30,
+            "HealthCheckTimeoutSeconds": 10,
+            "HealthyThresholdCount": 2,
+            "UnhealthyThresholdCount": 2,
+            "LoadBalancerArns": [
+                "arn:aws:elasticloadbalancing:us-east-1:123456789:loadbalancer/net/foo-bar/c052cd3f56543b22"
+            ],
+            "TargetType": "ip",
+            "IpAddressType": "ipv4"
+        }
+    ]
+}
+```
+
+## describe-target-health
+
+```
+> aws elbv2 describe-target-health --target-group-arn $TGARN
 {
     "TargetHealthDescriptions": [
         {
@@ -24,5 +59,40 @@
 }
 ```
 
+## modify-target-group
 
+```
+aws elbv2 modify-target-group --target-group-arn $TGARN \
+    --health-check-protocol HTTPS \
+    --health-check-port 443 \
+    --health-check-path / \
+    --matcher HttpCode='200'
+{
+    "TargetGroups": [
+        {
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:123456789:targetgroup/foo-bar-rds-5432/7e35f3624c3b5626",
+            "TargetGroupName": "foo-bar-rds-5432",
+            "Protocol": "TCP",
+            "Port": 5432,
+            "VpcId": "vpc-3cf48c45",
+            "HealthCheckProtocol": "HTTPS",
+            "HealthCheckPort": "443",
+            "HealthCheckEnabled": true,
+            "HealthCheckIntervalSeconds": 30,
+            "HealthCheckTimeoutSeconds": 10,
+            "HealthyThresholdCount": 2,
+            "UnhealthyThresholdCount": 2,
+            "HealthCheckPath": "/",
+            "Matcher": {
+                "HttpCode": "200"
+            },
+            "LoadBalancerArns": [
+                "arn:aws:elasticloadbalancing:us-east-1:123456789:loadbalancer/net/foo-bar/c052cd3f56543b22"
+            ],
+            "TargetType": "ip",
+            "IpAddressType": "ipv4"
+        }
+    ]
+}
+```
 See also `describe-network-interfaces` in [ec2](./cli-ec2.html).
