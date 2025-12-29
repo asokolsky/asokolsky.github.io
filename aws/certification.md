@@ -1,21 +1,20 @@
 # AWS Certified Solutions Architect Associate Exam
 
-Useful links:
+## Links
 
-* [Official Exam
-Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf)
-* [AWS Certification Exam Cheat
-Sheet](https://jayendrapatil.com/aws-certification-exam-cheat-sheet/)
+* [Official Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf)
+* [AWS Certification Exam Cheat Sheet](https://jayendrapatil.com/aws-certification-exam-cheat-sheet/)
 * [Jayendra's Cloud Certification Blog](https://jayendrapatil.com/)
 
-White Papers
+## White Papers
 
 * [Amazon Well-Architected
 Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/wellarchitected-framework.pdf)
 * [More](https://aws.amazon.com/whitepapers/)
 
 
-Courses:
+## Courses
+
 * CloudGuru [AWS Certified Solutions Architect - Associate
 (SAA-C02)](https://learn.acloud.guru/course/certified-solutions-architect-associate/overview)
 
@@ -43,3 +42,7 @@ More learning:
 * [Multitier architecture with AWS](https://bit.ly/3W7H5DN)
 * [Amazon Web Services (AWS): CloudFormation](https://bit.ly/3VLb0lw)
 * [AWS VPC Transit Gateway - Hands On Learning](https://bit.ly/3W1LM2g)
+
+## Account
+
+Certmetrics [AWS05698840](https://cp.certmetrics.com/amazon/en/profile/information)
