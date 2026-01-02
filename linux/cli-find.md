@@ -54,7 +54,7 @@ find . -mtime +30 -print
 
 Find and Delete:
 
-* all .bak files:
+* all `.bak` files:
 ```sh
 find . -name "*.bak" -delete
 ```
@@ -82,8 +82,7 @@ Remove all the directories named `.terragrunt-cache`:
 ```sh
 find . -type d -name .terragrunt-cache -prune -exec rm -fr {} \;
 ```
-Note that:
-
+Note:
 * `-delete` acts only on empty directories, hence the need in
 `-exec rm -fr {} \;`
 * `-prune` eliminates `No such file or directory` output
