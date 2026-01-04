@@ -1,5 +1,10 @@
 # Managing Displays in Linux
 
+In X11 use `xrandr`.
+
+In Wayland use `wlr-randr` (an `xrandr` clone) or `wdisplays` or (in KDE) `kscreen-doctor`...
+
+
 ## xrandr
 
 From [how-to-configure-your-monitors-with-xrandr-in-linux](https://linuxconfig.org/how-to-configure-your-monitors-with-xrandr-in-linux):

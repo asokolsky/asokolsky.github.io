@@ -21,9 +21,9 @@ tmpfs          tmpfs  3.4G  148k  3.4G   1% /run/user/1000
 
 [du](https://www.linux.org/docs/man1/du.html) estimates file space usage.
 
-Show directory disk usage and use it to sort the files in this dir:
+Show directory disk usage, sort the files by disk use, show top 10:
 ```sh
-sudo du -s -- *|sort -s -r -n -k 1,1
+sudo du -s -- *|sort -s -r -n -k 1,1|head -n 10
 ```
 
 ## Format disk
