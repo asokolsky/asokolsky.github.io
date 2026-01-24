@@ -1,27 +1,26 @@
-# AWS Certified Solutions Architect Associate Exam
+# AWS Certifications
+
+## AWS Certified Solutions Architect - Associate
 
 ## Links
 
-* [Official Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf)
-* [AWS Certification Exam Cheat Sheet](https://jayendrapatil.com/aws-certification-exam-cheat-sheet/)
+* https://aws.amazon.com/certification/certified-solutions-architect-associate/
+* [Official Exam
+Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf)
+* [AWS Certification Exam Cheat
+Sheet](https://jayendrapatil.com/aws-certification-exam-cheat-sheet/)
 * [Jayendra's Cloud Certification Blog](https://jayendrapatil.com/)
 
 ## White Papers
 
 * [Amazon Well-Architected
 Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/wellarchitected-framework.pdf)
-* [More](https://aws.amazon.com/whitepapers/)
+* [More papers](https://aws.amazon.com/whitepapers/)
 
-
-## Courses
-
-* CloudGuru [AWS Certified Solutions Architect - Associate
-(SAA-C02)](https://learn.acloud.guru/course/certified-solutions-architect-associate/overview)
 
 Videos:
 
-* [AWS Certified Solutions
-Architect](https://www.youtube.com/watch?v=Ia-UEYYR44s)
+* [AWS Certified Solutions Architect](https://www.youtube.com/watch?v=Ia-UEYYR44s)
 
 More learning:
 
@@ -46,3 +45,14 @@ More learning:
 ## Account
 
 Certmetrics [AWS05698840](https://cp.certmetrics.com/amazon/en/profile/information)
+
+## AWS Certified Developer - Associate
+
+https://aws.amazon.com/certification/certified-developer-associate/
+
+
+## AWS Certified Cloud Ops Engineer - Associate
+
+Previously AWS Certified SysOps Administrator - Associate.
+
+https://aws.amazon.com/certification/certified-cloudops-engineer-associate/

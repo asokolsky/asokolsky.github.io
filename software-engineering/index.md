@@ -21,10 +21,13 @@
 * [Opposite of Cloud Native is Stack Native](https://mkennedy.codes/posts/opposite-of-cloud-native-is-stack-native/)
 * [PagerDuty Guide of being On Call](https://response.pagerduty.com/)
 
+## Architecture
+
+[System Design Primer](https://github.com/rubyrose-alexis/system-design-primer)
 
 ## DevOps
 
-* [https://www.gruntwork.io/fundamentals-of-devops](https://www.gruntwork.io/fundamentals-of-devops)
+[Gruntwork Fundamentals of Devops](https://www.gruntwork.io/fundamentals-of-devops)
 
 ## Math
 
