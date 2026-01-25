@@ -1,14 +1,15 @@
 # Playing with a K3S Cluster
 
-## Hardware & OS
+## Hardware
 
-Installed Ubuntu server 22.04 on
 [3x Optiplex7060](/hardware/dell/optiplex7060micro.html):
 
-* `minimum` config - even `nano` not available, yet `htop` is there!
-* installed on `sda`, NVME disk left for later use...
+## OS
 
-[Hosts](/hardware/dell/optiplex7060micro.html):
+Ubuntu server 22.04 `minimum` config - even `nano` not available, yet `htop` is there!
+OS goes on `sda`, NVME disk left for later use...
+
+Today a better choice would be [Talos Linux](talos.html)
 
 Host|IP
 ----|-
@@ -16,8 +17,6 @@ LB|192.168.10.16
 g4tzrz2|192.168.10.17
 g50zrz2|192.168.10.18
 j01ydx2|192.168.10.19
-
-where LB IP is
 
 ## OS Customization
 
