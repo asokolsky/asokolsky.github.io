@@ -9,7 +9,7 @@ Also:
 
 Plugins:
 * Obsidian Git Community [Plugin](https://github.com/Vinzent03/obsidian-git)
-* Excalidraw [Plugin](https://github.com/zsviczian/obsidian-excalidraw-plugin)
+* Excalidraw [Plugin](https://github.com/zsviczian/obsidian-excalidraw-plugin), [how to use](https://www.youtube.com/watch?v=P_Q6avJGoWI)
 
 HOWTO use:
 
