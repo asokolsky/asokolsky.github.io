@@ -71,8 +71,9 @@ Char|Accelerator|Description
 
 ## Extensions
 
-* [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one),
-[source](https://github.com/yzhang-gh/vscode-markdown)
+* [Code spell checker](https://github.com/streetsidesoftware/vscode-spell-checker)
+* [Excalidraw](https://github.com/excalidraw/excalidraw-vscode)
+* [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), [source](https://github.com/yzhang-gh/vscode-markdown)
 
 ## Using
 

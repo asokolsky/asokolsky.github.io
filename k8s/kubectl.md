@@ -227,6 +227,19 @@ Command|Description
 `kubectl scale deployment <name> --replicas=<n>`|Scale a deployment to `<n>` replicas
 `kubectl autoscale deployment <name> --min=<min> --max=<max>`|Autoscale a deployment between `<min>` and `<max>` replicas
 
+Use `rollout` to cycle the deployment pods:
+```sh
+kubectl rollout restart deployment/<deployment-name>
+```
+or a DaemonSet pods:
+```sh
+kubectl rollout restart daemonset/<daemonset-name>
+```
+or a StatefulSet pods:
+```sh
+kubectl rollout restart statefulset/<statefulset-name>
+```
+
 ## Execute commands
 
 [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec)

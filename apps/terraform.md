@@ -38,6 +38,11 @@ Command|Description
 `terraform destroy`|[Destroy the infrastructure](https://developer.hashicorp.com/terraform/cli/commands/destroy) managed by Terraform
 `terraform destroy -target <resource>`|Destroy a specific resource
 
+Selective apply to target:
+```sh
+terraform apply -target="aws_autoscaling_group.foo-bar-asg"
+```
+
 ## Inspecting Infrastructure
 
 Command|Description
