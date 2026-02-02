@@ -30,6 +30,8 @@ profiles status -type enrollment
 
 If either the "Enrolled via DEP" or "MDM Enrollment" are "Yes", then don't purchase the MacBook.
 
+Note: the above FAILED to identify the enrolled device for me.  During factory reset the laptop owner was displayed.  Hence, go for factory reset ASAP.
+
 ## Was Screen Replaced?
 
 In Settings look for `True Tone`.  If it is not there - the screen has been replaced.
@@ -47,4 +49,5 @@ Copy the serial number from Settings app -> General -> About,  paste it [here](h
 * Apple menu > System Settings (or System Preferences).
 * General > Transfer or Reset > Erase All Content and Settings
 * Follow Prompts: Enter your administrator password, follow the on-screen instructions to sign out of Apple ID/Find My, and confirm.
+
 * Restart: The Mac will restart, showing a black screen or progress bar.
