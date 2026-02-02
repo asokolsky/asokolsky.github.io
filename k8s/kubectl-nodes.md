@@ -28,7 +28,6 @@ Example output:
 [
   {
     "effect": "NoSchedule",
-    "key": "clari.io/nodegroup",
     "value": "eks-core-services"
   }
 ]
@@ -43,13 +42,8 @@ Output:
 ```
 NodeName                               TaintKey                         TaintValue          TaintEffect
 fargate-ip-10-14-81-126.ec2.internal   eks.amazonaws.com/compute-type   fargate             NoSchedule
-ip-10-14-102-143.ec2.internal          clari.io/nodegroup               eks-core-services   NoSchedule
 ip-10-14-103-86.ec2.internal           <none>                           <none>              <none>
-ip-10-14-83-79.ec2.internal            clari.io/nodegroup               eks-core-services   NoSchedule
-ip-10-14-86-20.ec2.internal            clari.io/nodegroup               eks-core-services   NoSchedule
 ip-10-14-86-93.ec2.internal            <none>                           <none>              <none>
-ip-10-14-91-35.ec2.internal            clari.io/nodegroup               eks-core-services   NoSchedule
-ip-10-14-94-20.ec2.internal            clari.io/nodegroup               eks-core-services   NoSchedule
 ip-10-14-94-45.ec2.internal            <none>                           <none>              <none>
 ip-10-14-99-93.ec2.internal            <none>                           <none>              <none>
 ```

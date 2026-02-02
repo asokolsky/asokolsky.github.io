@@ -38,6 +38,7 @@ xcode-select --install
 
 Then:
 * [homebrew](https://brew.sh/)
+* [btop](https://github.com/aristocratos/btop) or htop
 * cli: [exiftool](/apps/cli-exiftool.html), and [more...](cli.html)
 * [iTerm2](iTerm2.html) Terminal Emulator
 * [stats](https://github.com/exelban/stats)

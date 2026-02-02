@@ -2,7 +2,7 @@
 
 Save the FIFO URL:
 ```sh
-export QUEUE_URL=https://sqs.us-east-1.amazonaws.com/123456/fivetran-clari-labs-nlb-rds-target-update-lambda.fifo
+export QUEUE_URL=https://sqs.us-east-1.amazonaws.com/123456/fubar.fifo
 ```
 
 ```sh
