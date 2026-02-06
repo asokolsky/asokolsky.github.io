@@ -18,3 +18,11 @@ to restart.
 * Hold the left Shift+Control+Option keys down, then press and hold the power
 button down. Keep all four buttons pressed down for ten seconds, then let go.
 * Turn on your Mac.
+
+## Factory Reset
+
+* Apple menu > System Settings (or System Preferences).
+* General > Transfer or Reset > Erase All Content and Settings
+* Follow Prompts: Enter your administrator password, follow the on-screen instructions to sign out of Apple ID/Find My, and confirm.
+
+* Restart: The Mac will restart, showing a black screen or progress bar.

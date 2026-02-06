@@ -51,6 +51,7 @@ Also relevant:
 
 * [dot-files](/apps/dot-files/)
 * [emacs colors](/apps/emacs/)
+* [application cleanup](app-cleanup.html)
 
 ## Terminal Peculiarities
 
