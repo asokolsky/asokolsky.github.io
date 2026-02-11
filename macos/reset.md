@@ -2,6 +2,10 @@
 
 ## NVRAM Reset
 
+A macOS NVRAM (non-volatile random-access memory) reset clears specific system settings—such as volume, screen resolution, and startup disk selection—stored by Intel-based Macs to troubleshoot performance, audio, or booting issues. It is a safe, non-destructive procedure, often referred to as a PRAM reset, that restores default settings without deleting user files.
+
+Note: For Apple Silicon (M1/M2/M3) Macs, a simple restart replaces the need for a manual NVRAM reset.
+
 [Reset NVRAM on your Mac](https://support.apple.com/en-us/HT204063)
 
 * shut down your Mac
@@ -11,6 +15,11 @@ Command, P, and R.
 to restart.
 
 ## SMC Reset
+
+A macOS System Management Controller (SMC) reset restores default settings for power management, fixing hardware issues like loud fans, battery failure to charge, unexpected shutdowns, or unresponsive power buttons on Intel-based Macs. It is a safe, non-destructive troubleshooting step.
+
+Note: Macs with Apple Silicon (M1/M2/M3) do not have a separate SMC and instead reset by restarting.
+
 
 [Reset the SMC of your Mac](https://support.apple.com/en-us/102605)
 

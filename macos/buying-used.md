@@ -2,6 +2,9 @@
 
 Seems like [Factory Reset](reset.md#factory-reset) should be done ASAP.
 
+Before you do anything - save the [serial number](https://support.apple.com/en-us/102767).
+
+
 ## Hardware diagnostics
 
 From [102550](https://support.apple.com/en-us/102550):
