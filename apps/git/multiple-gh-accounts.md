@@ -27,11 +27,8 @@ path = ~/PersonalProjects/.gitconfig
 path = ~/Projects/.gitconfig
 
 [core]
-excludesfile = ~/.gitignore      # valid everywhere
-
-[core]
         pager =
-        excludesfile = ~/.gitignore_global
+        excludesfile = ~/.gitignore
         editor = /opt/homebrew/bin/emacs
 
 [alias]
