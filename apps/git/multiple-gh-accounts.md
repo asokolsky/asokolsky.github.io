@@ -11,7 +11,7 @@ The plan is:
 ```
 * have a common config in `~/.gitconfig` importing, depending on the project, one of:
 * business project config in `~/Projects/.gitconfig`
-* personal project config in  `~/PersonalProjects/`
+* personal project config in  `~/PersonalProjects/.gitconfig`
 
 ## Common Config
 
