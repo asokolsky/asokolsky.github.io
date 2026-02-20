@@ -57,7 +57,7 @@ path = ~/Projects/.gitconfig
 
 ## Business Config
 
-My business projects are in `~/Projects/`, my `~/Projects/.gitconfig`:
+My business projects are in `~/Projects/`, with the configuration in `~/Projects/.gitconfig`:
 ```
 [user]
         email = asokolsky@company.com
@@ -72,7 +72,7 @@ My business projects are in `~/Projects/`, my `~/Projects/.gitconfig`:
 
 ## Personal Config
 
-My personal projects are in `~/PersonalProjects/`, my `~/PersonalProjects/.gitconfig`:
+My personal projects are in `~/PersonalProjects/`, with the configuration in `~/PersonalProjects/.gitconfig`:
 
 ```
 # ~/PersonalProjects/.gitconfig
