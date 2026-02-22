@@ -11,7 +11,7 @@ Chipset|Intel CM246
 RAM|SODIM DDR4-2400<br>2x8GB DDR4-2667 1333MHz<br>2x8GB 8ATF1G64HZ-2G6E1 2666 MT/s
 SSDs|Crucial P3 1TB PCIe Gen3 3D NAND NVMe M.2 SSD CT1000P3SSD8<br>Crucial 1TB SATA SSD
 Ethernet|[I219-LM](https://www.intel.com/content/www/us/en/products/sku/82185/intel-ethernet-connection-i219lm/specifications.html?wapkw=I219-LM)
-WiFi|[Intel® 9560 vPro 802.11AC (2 x 2) & Bluetooth 5.1 CNVio](https://www.intel.com/content/www/us/en/products/sku/99446/intel-wirelessac-9560/specifications.html)
+WiFi|[Intel® Wi-Fi 6E AX210, BT 5.4](https://www.intel.com/content/www/us/en/products/sku/204836/intel-wifi-6e-ax210-gig/specifications.html)
 GPU|NVIDIA Quadro P1000 4GB
 Screen|15.6” FHD (1920 x 1080, 300nits) IPS anti-glare, 72% color gamut
 webcam|720p HD Camera with ThinkShutter and microphone
