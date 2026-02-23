@@ -97,3 +97,55 @@ gh api graphql -f query='
   }
 ' -f org=$ORG -f team=$TEAM_NAME --jq '.data.organization.team.members.nodes[] | [.login, .name]| @csv'
 ```
+
+## Using Multiple Accounts
+
+1. Login into your office github account
+
+2. Login into personal account:
+```
+> gh auth login
+? Where do you use GitHub? GitHub.com
+? What is your preferred protocol for Git operations on this host? SSH
+? Upload your SSH public key to your GitHub account? /Users/asokolsky/.ssh/id_rsa.pub
+? Title for your SSH key: asokolsky
+? How would you like to authenticate GitHub CLI? Paste an authentication token
+Tip: you can generate a Personal Access Token here https://github.com/settings/tokens
+The minimum required scopes are 'repo', 'read:org', 'admin:public_key'.
+? Paste your authentication token: ****************************************
+- gh config set -h github.com git_protocol ssh
+✓ Configured git protocol
+✓ SSH key already existed on your GitHub account: /Users/asokolsky/.ssh/id_rsa.pub
+✓ Logged in as asokolsky
+```
+
+3. Confirm you logged into both, the last one (personal) is active:
+```
+> gh auth status
+github.com
+  ✓ Logged in to github.com account asokolsky (keyring)
+  - Active account: true
+  - Git operations protocol: ssh
+
+  ✓ Logged in to github.com account asokolsky4foobar (keyring)
+  - Active account: false
+  - Git operations protocol: ssh
+```
+
+4. Switch back to office acount:
+```
+> gh auth switch --user asokolsky4foobar
+✓ Switched active account for github.com to asokolsky4foobar
+
+5. Confirm office acount as being active:
+```
+> gh auth status
+github.com
+  ✓ Logged in to github.com account asokolsky4foobar (keyring)
+  - Active account: true
+  - Git operations protocol: ssh
+
+  ✓ Logged in to github.com account asokolsky (keyring)
+  - Active account: false
+  - Git operations protocol: ssh
+```
