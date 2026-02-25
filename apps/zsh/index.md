@@ -3,8 +3,11 @@
 TLDR:
 
 * install [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
-* in `.zshrc` set `ZSH_THEME="agnoster"` - see
-[agnoster-zsh-theme](https://github.com/agnoster/agnoster-zsh-theme)
+* in `.zshrc`:
+
+    * set `ZSH_THEME="agnoster"` - see [agnoster-zsh-theme](https://github.com/agnoster/agnoster-zsh-theme)
+    * set `plugins=(git ssh-agent)` - more [plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), [overview](https://github.com/ohmyzsh/ohmyzsh/wiki/plugins-overview)
+
 * install [powerline-fonts](https://github.com/powerline/fonts) with
 `sudo apt-get install fonts-powerline`
 * reboot

@@ -86,3 +86,13 @@ My personal projects are in `~/PersonalProjects/`, with the configuration in `~/
 [core]
         sshCommand = "ssh -i ~/.ssh/latitude_id_rsa"
 ```
+
+## Testing
+
+If using ssh key to authenticate, to test the authentication status:
+```
+> ssh -T git@gitlab.com
+Welcome to GitLab, @asokolsky!
+> ssh -T git@github.com
+Hi asokolsky! You've successfully authenticated, but GitHub does not provide shell access.
+```

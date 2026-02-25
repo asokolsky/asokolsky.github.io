@@ -132,7 +132,7 @@ github.com
   - Git operations protocol: ssh
 ```
 
-4. Switch back to office acount:
+4. Switch back to office account:
 ```
 > gh auth switch --user asokolsky4foobar
 ✓ Switched active account for github.com to asokolsky4foobar

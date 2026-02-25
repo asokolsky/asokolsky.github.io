@@ -15,7 +15,7 @@ And more:
 * [Pro Git Book](https://git-scm.com/book/en/v2)
 * [Atlassian advanced tips](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
-Proprietary Extensions
+Proprietary CLIs
 
 * [gh CLI for github](cli-gh.html)
 * [glab CLI for gitlab](cli-glab.html)
@@ -53,13 +53,7 @@ To https://github.com/asokolsky/psmqtt.git
    a98ddea..52094f3  master -> master
 ```
 
-## Importing a file from a different repo
-
-Instead of using git submodules, sometimes this may make more sense:
-```sh
-{% include_relative update-from-repo.sh %}
-```
-
 ## Utility Scripts
 
-* [check-repo.sh](check-repo.sh) - check that all subdirectories are clean repos
+* [check-repo.sh](check-repo.sh) - check that all subdirectories are clean repos;
+* [update-from-repo.sh](update-from-repo.sh) - imports a file from a different repo, sometimes this may make more sense than using git submodules.
