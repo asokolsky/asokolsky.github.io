@@ -12,6 +12,11 @@ Windows|`%APPDATA%\Cursor\User\`, where `%APPDATA%` is usually `C:\Users\_userna
 MacOS|`/Users/_username_/Library/Application Support/Cursor/User/`
 Linux|`~/.config/Cursor/User/`
 
+My additions to `settings.json`:
+```
+    "workbench.sideBar.location": "left"
+```
+
 NOTE: the above is different from cursor CLI with settings in `~/.cursor`
 
 ## Extensions
