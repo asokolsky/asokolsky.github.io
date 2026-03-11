@@ -25,6 +25,7 @@ venv: $(VENV)/bin/activate                  ## Activate the venv
 
 $(VENV)/bin/activate: requirements.txt
 	python3 -m venv $(VENV)
+	$(PYTHON) -m pip install --upgrade pip
 	$(PIP) install -r requirements.txt
 
 lint: venv                                  ## Lint python sources
