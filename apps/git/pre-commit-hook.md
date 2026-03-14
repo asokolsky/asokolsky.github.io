@@ -8,8 +8,16 @@ References:
 * [commitizen](https://commitizen-tools.github.io/commitizen/)
 
 ```sh
-brew install pre-commit commitizen
+brew install pre-commit commitizen markdownlint-cli2
 ```
+
+On Linux:
+
+```sh
+sudo apt install pre-commit
+```
+
+Then:
 
 ```sh
 pre-commit install --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
