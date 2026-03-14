@@ -29,8 +29,8 @@ BIOS|3.04
 Case|LIAN LI PC-A05FNB Black Aluminum ATX Mid Tower 8.27" x 15.16" x 19.69"
 PSU|SeaSonic SS-400FL2 Active PFC F3 400W 80 PLUS Platinum Fanless ATX12V / EPS12V
 OS|Ubuntu Studio 23.10
-Monitor|Samsung QN75Q80TAFXZA
-Speakers|SAMSUNG HW-Q950T 9.1.4 Soundbar + Sub + Surrounds
+Monitor|[Samsung](../samsung/) QN75Q80TAFXZA
+Speakers|[Samsung](../samsung/) HW-Q950T 9.1.4 Soundbar + Sub + Surrounds
 
 * [DMI Info](dmi.html)
 * [Info](info.html)
