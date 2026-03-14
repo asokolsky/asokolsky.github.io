@@ -6,6 +6,7 @@ References:
 * [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 * [pre-commit](https://pre-commit.com/#intro)
 * [commitizen](https://commitizen-tools.github.io/commitizen/)
+* [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
 
 ```sh
 brew install pre-commit commitizen markdownlint-cli2

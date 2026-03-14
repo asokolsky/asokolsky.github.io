@@ -4,8 +4,7 @@
 
 `apt install node` installs a version which is obsolete.
 
-Therefore the plan is to install node version manager and then use it to install
-node.
+Therefore the plan is to install node version manager and then use it to install node.
 
 ```sh
 sudo npm install -g n
