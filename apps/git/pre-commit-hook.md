@@ -6,10 +6,13 @@ References:
 * [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 * [pre-commit](https://pre-commit.com/#intro)
 * [commitizen](https://commitizen-tools.github.io/commitizen/)
+* [ripsecrets](https://github.com/sirwart/ripsecrets)
 * [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
 
+Install the toolchain:
+
 ```sh
-brew install pre-commit commitizen markdownlint-cli2
+brew install pre-commit commitizen ripsecrets markdownlint-cli2
 ```
 
 On Linux:
@@ -18,7 +21,7 @@ On Linux:
 sudo apt install pre-commit
 ```
 
-Then:
+In every repository:
 
 ```sh
 pre-commit install --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
