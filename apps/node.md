@@ -1,17 +1,29 @@
 # node
 
-`brew install node` works well enough.
+On MacOS `brew install node` works well enough.
 
-`apt install node` installs a version which is obsolete.
+On Linux `apt install node` installs a version which is hopelessly obsolete.
 
-Therefore the plan is to install node version manager and then use it to install node.
+Therefore the plan is to:
 
+1. install node version manager `n` with
 ```sh
 sudo npm install -g n
+```
+2. use `n` to install `node`. To install `node` into `/usr/local`:
+```sh
 sudo n stable
 ```
+To install node into a user-specific location:
+```sh
+mkdir ~/n
+export N_PREFIX=$HOME/n
+export PATH="$N_PREFIX/bin:$PATH"
+# Make these permanent by adding to your ~/.zshrc
+n stable
+```
 
-Verify it:
+Verify node installation:
 
 ```sh
 node --version
