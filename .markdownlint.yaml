@@ -1,26 +1,35 @@
 # Shared markdownlint config — works with markdownlint-cli, markdownlint-cli2,
 # VS Code markdownlint extension.
 
+# List style — repo uses both dash and asterisk depending on context
+#MD004: false
+
 # Line length
 MD013: false
 
-# Multiple H1s — Hugo derives page title from frontmatter; body H1 is expected
-#MD025: false
+# Blanks around headings — compact command-reference sections omit them intentionally
+MD022: false
 
 # Duplicate headings — structured docs share common section names across files
 #MD024: false
 
-# Fenced code language — informational improvement, not a blocking error
-#MD040: false
+# Multiple H1s — Hugo derives page title from frontmatter; body H1 is expected
+#MD025: false
 
-# Fragment links — Hugo generates anchors differently from markdownlint's expectations
-#MD051: false
+# Blanks around fences — same compact-section rationale
+MD031: false
+
+# Blanks around lists — mixed prose/list flow is common in this repo
+MD032: false
 
 # Inline HTML — intentionally used for Hugo shortcodes and section layouts
 #MD033: false
 
-# Table column style — cosmetic alignment preference
-MD060: false
+# Fenced code language — informational improvement, not a blocking error
+MD040: false
+
+# Fragment links — Hugo generates anchors differently from markdownlint's expectations
+#MD051: false
 
 # Table pipe style — cosmetic
 MD055: false
@@ -28,14 +37,5 @@ MD055: false
 # Table column count — sometimes intentional in structured tables
 MD056: false
 
-# List style — repo uses both dash and asterisk depending on context
-#MD004: false
-
-# Blanks around headings — compact command-reference sections omit them intentionally
-#MD022: false
-
-# Blanks around fences — same compact-section rationale
-#MD031: false
-
-# Blanks around lists — mixed prose/list flow is common in this repo
-#MD032: false
+# Table column style — cosmetic alignment preference
+MD060: false
