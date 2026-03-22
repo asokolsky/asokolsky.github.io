@@ -4,3 +4,4 @@ isp.md
 google-cloud-sdk
 *~
 .DS_Store
+.venv/

@@ -28,30 +28,12 @@ $(VENV)/bin/activate: requirements.txt
 	$(PYTHON) -m pip install --upgrade pip
 	$(PIP) install -r requirements.txt
 
-lint: venv                                  ## Lint python sources
-	flake8 *.py
-	mypy *.py
+pre-commit-install: venv					## Install pre-commit hooks
+	pre-commit install --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
 
-run: venv									## Execute python program
-	$(PYTHON) main.py $(SITE)
-
-test: venv									## Execute python tests
-	$(PYTHON) -m unittest -v *_test.py
+pre-commit-uninstall: venv					## Uninstall pre-commit hooks
+	pre-commit uninstall --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
 
 clean:										## Cleanup the artifacts
 	rm -rf $(VENV) .mypy_cache
 	find . -name __pycache__ | xargs rm -rf
-
-DOCKER_USERNAME ?= john.doe
-APPLICATION_NAME ?= da-app
-GIT_HASH ?= $(shell git log --format="%h" -n 1)
-
-build:								## Build docker image
-	docker build --tag ${DOCKER_USERNAME}/${APPLICATION_NAME}:${GIT_HASH} .
-
-release:							## Release docker image
-	cat ./.docker-password | docker login --username ${DOCKER_USERNAME} --password-stdin
-	docker push ${DOCKER_USERNAME}/${APPLICATION_NAME}:${GIT_HASH}
-	docker pull ${DOCKER_USERNAME}/${APPLICATION_NAME}:${GIT_HASH}
-	docker tag  ${DOCKER_USERNAME}/${APPLICATION_NAME}:${GIT_HASH} ${DOCKER_USERNAME}/${APPLICATION_NAME}:latest
-	docker push ${DOCKER_USERNAME}/${APPLICATION_NAME}:latest

@@ -2,7 +2,9 @@
 
 * [brew](cli-brew.html)
 * [launchctl](cli-launchctl.html)
+* [log](cli-log.html) replaced [syslog](cli-syslog.html)
 * [smbutil](cli-smbutil.html)
+* [networking CLIs](cli-networking.html)
 * List hardware using [system_profiler](cli-system_profiler.html)
 * more [macOS (bash) commands](https://ss64.com/mac/index.html)
 

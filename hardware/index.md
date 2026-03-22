@@ -12,10 +12,10 @@ Lenovo [Thinkpad P52](lenovo/thinkpad-p52/),
 
 [Home Office](/2021/01/01/home-office.html) and Home Lab:
 
+* [duo](duo/)
+* [exi](exi/)
+* [fuji, Main Virtualization server](fuji/)
 * [NAS](nas/)
-* [Backup NAS duo](duo/)
-* [Main Virtualization server fuji](fuji/)
-* [HTPC exi](exi/)
 * [All-in-one suprox](suprox/)
 
 Use of [ecc-ram](ecc-ram.html)

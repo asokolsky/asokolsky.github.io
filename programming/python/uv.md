@@ -120,7 +120,7 @@ What `uv run` does:
 
 * locks the project
 * synchs the project
-* invokes the the command passed
+* invokes the command passed
 
 ## Build the Package
 

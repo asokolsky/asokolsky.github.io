@@ -4,7 +4,11 @@
 
 ## Install
 
+### MacOS
+
 On MacOS I use [colima](colima.html).
+
+### Linux
 
 From [install-docker-in-linux-mint](https://www.linuxshelltips.com/install-docker-in-linux-mint/):
 
@@ -66,6 +70,7 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 
 ```
+
 ## Configuration
 
 The location for client configuration files is determined by `DOCKER_CONFIG`
@@ -254,7 +259,6 @@ Option|Description
 `-t`, `--tty`|allocate a pseudo-TTY
 `-u`, `--user` `username`|username or UID, format: <name|uid>[:<group|gid>]
 
-
 ## Container logs
 
 Default location: `/var/lib/docker/containers/<container_id>/<container_id>-json.log`.
@@ -317,14 +321,15 @@ Command|Description
 `docker start <container_name>`|Start a stopped container
 `docker rm <container_name>`|Remove a container
 
-
 ## Executing commands in a container
+
 Command|Description
 -------|-----------
 `docker exec <container_name> <command>`|Execute a command in a running container
 `docker exec -it <container_name> bash`|Open a shell in a running container
 
 ## Image commands
+
 Command|Description
 -------|-----------
 `docker build -t <image> .`|Build a new image from the Dockerfile in the current directory and tag it

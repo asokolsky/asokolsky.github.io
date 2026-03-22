@@ -210,7 +210,7 @@ To accomplish this workload allocation we use this [CloudZero k8s integration](h
 
 ### flux-system
 
-[FluxCD](https://fluxcd.io/) is the the CD tool we are using to deploy the state from this repo to the actual k8s cluster. This specific application will generate a flux [Kustomization](https://fluxcd.io/flux/components/kustomize/kustomizations/) for each `Environment`.
+[FluxCD](https://fluxcd.io/) is the CD tool we are using to deploy the state from this repo to the actual k8s cluster. This specific application will generate a flux [Kustomization](https://fluxcd.io/flux/components/kustomize/kustomizations/) for each `Environment`.
 
 Some options are exposed as `labels` on the `Environment`, namely:
 

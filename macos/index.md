@@ -1,10 +1,18 @@
-# MacOS Customization
+# All about MacOS
 
 MacOS:
 
 * [Features, Tips and Tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
 * [reset](reset.html)
-* [startup key combinations](https://support.apple.com/en-us/102603)
+
+## Boot Options
+
+Mac with Apple silicon [startup key combinations](https://support.apple.com/en-us/102603):
+
+* Turn on your Mac, hold the power button until `Loading startup options` appears.
+* Release the power button.  The screen shows the startup disks and Options.
+* Select disk and hold shift for an option to boot in Safe Mode.
+* Options allows to use macOS Recovery, and more.
 
 ## Disk
 
