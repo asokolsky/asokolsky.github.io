@@ -43,25 +43,18 @@ set -o pipefail
 #set -o xtrace
 
 #
-# The file to strip audio tracks from other than eng
+# The file to strip non-english audio tracks
 #
-
 #FILE_PATH="/path/to/my_document.pdf"
 FILE_PATH="${1}"
 #echo "Path: $FILE_PATH"
-
-# Get the filename with extension
+DIRNAME=$(dirname "$FILE_PATH")
 FILE_WITH_EXT=$(basename "$FILE_PATH")
-
-# Get the base filename without the extension
 BASE_NAME="${FILE_WITH_EXT%.*}"
-#echo "Base name: $BASE_NAME"
-
-# Get the file extension
+#echo "BASE_NAME: $BASE_NAME"
 EXTENSION="${FILE_WITH_EXT##*.}"
-#echo "Extension: $EXTENSION"
-
-OUT_FILE="${BASE_NAME}.1.${EXTENSION}"
+#echo "EXTENSION: $EXTENSION"
+OUT_FILE="${DIRNAME}/${BASE_NAME}.1.${EXTENSION}"
 #echo "OUT_FILE: $OUT_FILE"
 
 if [[ -e "$OUT_FILE" ]]; then
@@ -70,7 +63,6 @@ if [[ -e "$OUT_FILE" ]]; then
 fi
 
 ENGLISH_AUDIO_TRACKS=`mkvmerge $FILE_PATH -J|jq -r '.tracks|map(select(.type=="audio" and .properties.language=="eng"))|.[].id'|paste -s -d ','`
-#ENGLISH_TRACKS=`mkvmerge $FILE_PATH -J|jq -r '.tracks|map(select(.type=="audio"))|.[].id'|paste -s -d ','`
 echo "ENGLISH_AUDIO_TRACKS: $ENGLISH_AUDIO_TRACKS"
 
 # --subtitle-tracks
