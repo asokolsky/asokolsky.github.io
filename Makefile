@@ -32,7 +32,7 @@ pre-commit-install: venv					## Install pre-commit hooks
 	pre-commit install --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
 
 pre-commit-uninstall: venv					## Uninstall pre-commit hooks
-	pre-commit uninstall
+	pre-commit uninstall --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
 
 clean:										## Cleanup the artifacts
 	rm -rf $(VENV) .mypy_cache
