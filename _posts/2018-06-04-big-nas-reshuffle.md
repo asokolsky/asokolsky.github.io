@@ -33,7 +33,7 @@ Intel Ethernet NIC is a top notch and provides two channels!  I may even play
 with LACP.
 
 Motherboard has 2 SATA3 ports provided by Intel H77 chipset.  2 more SATA3 ports
-are provided by on-board  ASMedia ASM1061 chipset - I decided against usint it.
+are provided by on-board  ASMedia ASM1061 chipset - I decided against using it.
 H77 has 4 more SATA2 ports.  I thought those will not cut it.  I am
 reconsidering.  a $20 HighPoint Rocket 640L uses Marvell 88SE9230 chipset and
 the more I read about it the less confident I feel about running NAS on it.
