@@ -71,3 +71,22 @@ and the [Remote Key Mapping](logi/remote.html)
 [Samsung TV + Soundbar](samsung/)
 
 [Power Consumption](power.html)
+
+## By Brand
+
+* [Apple](apple/)
+* [Dell](dell/)
+* [Elgato](elgato/)
+* [Intel](intel/)
+* [ipevo](ipevo/)
+* [Keychron](keychron/)
+* [Lenovo](lenovo/)
+* [LG](lg/)
+* [logi](logi/)
+* [NVIDIA](nvidia/)
+* [prusa](prusa/)
+* [Samsung](samsung/)
+* [Shelly](shelly/)
+* [Sony](sony/)
+* [TaoTronics](TaoTronics/)
+* [Zoom](zoom/)
