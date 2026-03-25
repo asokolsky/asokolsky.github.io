@@ -38,7 +38,6 @@ sudo apt install mkvtoolnix mkvtoolnix-gui
 
 [man page](https://mkvtoolnix.download/doc/mkvmerge.html).
 
-
 List tracks:
 ```sh
 mkvmerge S01E01.mkv -J|jq .tracks
