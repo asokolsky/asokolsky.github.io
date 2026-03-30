@@ -8,21 +8,21 @@ I [run it](/proxmox/guest-truenas.html) in a VM and on a bare hardware.
 
 Now version ElectricEel-24.10.2:
 ```
-root@nass[~]# uname -a
-Linux nass 6.6.44-production+truenas #1 SMP PREEMPT_DYNAMIC Tue Jan 28 03:14:06 UTC 2025 x86_64 GNU/Linux
+root@nass:~# uname -a
+Linux nass 6.12.33-production+truenas #1 SMP PREEMPT_DYNAMIC Mon Feb 23 17:38:27 UTC 2026 x86_64 GNU/Linux
 
-root@nass[~]#  lsb_release -a
+root@nass:~# lsb_release -a
 No LSB modules are available.
-Distributor ID: Debian
-Description:    Debian GNU/Linux 12 (bookworm)
-Release:        12
-Codename:       bookworm
+Distributor ID:	Debian
+Description:	Debian GNU/Linux 12 (bookworm)
+Release:	12
+Codename:	bookworm
 
-root@nass[~]# cat /etc/version
-24.10.2
+root@nass:~# cat /etc/version
+25.10.2.1
 
-root@nass[~]# cat /etc/debian_version
-12.6
+root@nass:~# cat /etc/debian_version
+12.11
 ```
 
 ## Enable apt for package management

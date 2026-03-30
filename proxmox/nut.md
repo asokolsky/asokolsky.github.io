@@ -334,7 +334,6 @@ TRIM|UPS is trimming incoming voltage (called "buck" in some hardware)
 BOOST| UPS is boosting incoming voltage
 FSD|Forced Shutdown (restricted use, see the note below)
 
-
 ## Battery Maintenance
 
 Use [upsrw](https://linux.die.net/man/8/upsrw) to read the configuration
