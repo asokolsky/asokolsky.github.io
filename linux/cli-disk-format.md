@@ -55,6 +55,8 @@ Observe:
 
 ## Optional: Wipe it
 
+### Use wipefs
+
 You may want to use
 [wipefs](https://linuxconfig.org/wipefs-linux-command-tutorial-with-examples) to
 "not only erase existing signatures on a device, but also to create a report,
@@ -64,6 +66,8 @@ which includes them without performing any modification."
 ```sh
 sudo wipefs /dev/sda
 ```
+
+### Use dd
 
 Alternatively:
 

@@ -1,5 +1,7 @@
 # HD Management in TrueNAS
 
+## Errors Identified
+
 My raidz2 zpool has errors:
 ```
 # zpool status
@@ -81,7 +83,7 @@ According to [Common Hard Drive Error Codes and Diagnostics](https://www.datarec
 * UNC - Uncorrectable Error
 * IDNF - Sector ID Not Found. If the sector that holds this information is corrupt there is no way for the hard drive to locate this sector and it will return the result IDNF.
 
-Conmpare the above to `/dev/sdb`:
+Compare the above to `/dev/sdb`:
 ```
 root@nass:~# smartctl -x /dev/sdb|grep Error
 Error logging capability:        (0x01)	Error logging supported.
@@ -98,4 +100,123 @@ SCT Error Recovery Control:
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
+```
+
+## Replace the HD using GUI
+
+### Take it offline
+
+Do it using GUI.  Shutdown the system, replace the HD
+
+### Replace the HD in GUI
+
+This results in:
+
+```
+alex@nass:~/ > zpool status tank
+  pool: tank
+ state: ONLINE
+  scan: resilvered 3.68T in 08:17:36 with 0 errors on Mon Mar 30 04:16:00 2026
+config:
+
+	NAME                                      STATE     READ WRITE CKSUM
+	tank                                      ONLINE       0     0     0
+	  raidz2-0                                ONLINE       0     0     0
+	    ata-ST6000VN001-2BB186_ZCT2WLTH       ONLINE       0     0     0
+	    ata-WDC_WD60EFZX-68B3FN0_WD-C81G6HGK  ONLINE       0     0     0
+	    ata-WDC_WD60EFZX-68B3FN0_WD-C81EX39K  ONLINE       0     0     0
+	    ata-WDC_WD8003FFBX-68B9AN0_VR368JHK   ONLINE       0     0     0
+	    3176c860-44e4-4b34-9591-674d2dd2203e  ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+Note the last disk is referred to by the GUID(?).  I'd rather for it to be referenced by the serial number!
+
+## Replace the HD using CLI
+
+Before:
+```
+alex@nass:~/ > zpool status tank
+  pool: tank
+ state: ONLINE
+  scan: resilvered 3.68T in 08:17:36 with 0 errors on Mon Mar 30 04:16:00 2026
+config:
+
+	NAME                                      STATE     READ WRITE CKSUM
+	tank                                      ONLINE       0     0     0
+	  raidz2-0                                ONLINE       0     0     0
+	    ata-ST6000VN001-2BB186_ZCT2WLTH       ONLINE       0     0     0
+	    ata-WDC_WD60EFZX-68B3FN0_WD-C81G6HGK  ONLINE       0     0     0
+	    ata-WDC_WD60EFZX-68B3FN0_WD-C81EX39K  ONLINE       0     0     0
+	    ata-WDC_WD8003FFBX-68B9AN0_VR368JHK   ONLINE       0     0     0
+	    3176c860-44e4-4b34-9591-674d2dd2203e  ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+Note the last disk is referred to by the GUID(?).  I'd rather for it to be referenced by the serial number.
+
+### Take the HD offline
+
+```sh
+sudo zpool offline tank 3176c860-44e4-4b34-9591-674d2dd2203e
+```
+
+Verify it:
+```
+alex@nass:~/ > zpool status tank
+  pool: tank
+ state: DEGRADED
+status: One or more devices has been taken offline by the administrator.
+	Sufficient replicas exist for the pool to continue functioning in a
+	degraded state.
+action: Online the device using 'zpool online' or replace the device with
+	'zpool replace'.
+  scan: resilvered 3.68T in 08:17:36 with 0 errors on Mon Mar 30 04:16:00 2026
+config:
+
+	NAME                                      STATE     READ WRITE CKSUM
+	tank                                      DEGRADED     0     0     0
+	  raidz2-0                                DEGRADED     0     0     0
+	    ata-ST6000VN001-2BB186_ZCT2WLTH       ONLINE       0     0     0
+	    ata-WDC_WD60EFZX-68B3FN0_WD-C81G6HGK  ONLINE       0     0     0
+	    ata-WDC_WD60EFZX-68B3FN0_WD-C81EX39K  ONLINE       0     0     0
+	    ata-WDC_WD8003FFBX-68B9AN0_VR368JHK   ONLINE       0     0     0
+	    3176c860-44e4-4b34-9591-674d2dd2203e  OFFLINE      0     0     0
+
+errors: No known data errors
+```
+
+### Replace it
+
+```sh
+sudo zpool replace tank 3176c860-44e4-4b34-9591-674d2dd2203e /dev/disk/by-id/ata-WDC_WD8003FFBX-68B9AN0_VYH9LELM
+```
+
+Verify it:
+```
+alex@nass:~/ > zpool status tank
+  pool: tank
+ state: DEGRADED
+status: One or more devices is currently being resilvered.  The pool will
+	continue to function, possibly in a degraded state.
+action: Wait for the resilver to complete.
+  scan: resilver in progress since Mon Mar 30 17:48:32 2026
+	7.84G / 18.4T scanned at 243M/s, 0B / 18.4T issued
+	0B resilvered, 0.00% done, no estimated completion time
+config:
+
+	NAME                                        STATE     READ WRITE CKSUM
+	tank                                        DEGRADED     0     0     0
+	  raidz2-0                                  DEGRADED     0     0     0
+	    ata-ST6000VN001-2BB186_ZCT2WLTH         ONLINE       0     0     0
+	    ata-WDC_WD60EFZX-68B3FN0_WD-C81G6HGK    ONLINE       0     0     0
+	    ata-WDC_WD60EFZX-68B3FN0_WD-C81EX39K    ONLINE       0     0     0
+	    ata-WDC_WD8003FFBX-68B9AN0_VR368JHK     ONLINE       0     0     0
+	    replacing-4                             DEGRADED     0     0     0
+	      3176c860-44e4-4b34-9591-674d2dd2203e  OFFLINE      0     0     0
+	      ata-WDC_WD8003FFBX-68B9AN0_VYH9LELM   ONLINE       0     0     0
+
+errors: No known data errors
 ```
