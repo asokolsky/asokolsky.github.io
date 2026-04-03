@@ -336,6 +336,12 @@ Command|Description
 `docker images`|List local images
 `docker rmi <image>`|Remove an image
 
+Tag the docker image:
+
+```sh
+docker tag _image_id_ _repo_host_/_repo_name_:_tag_
+```
+
 ## Container registry commands
 
 Command|Description
@@ -347,6 +353,18 @@ Command|Description
 `docker push <image>`|Upload an image to a registry
 `docker pull <image>`|Download an image from a registry
 `docker search <image>`|Search Docker Hub for images
+
+To pull images from a private AWS ECR:
+
+```sh
+ECR_HOST=`aws sts get-caller-identity --query Account --output text`.dkr.ecr.`aws configure get region`.amazonaws.com \
+    aws ecr get-login-password | docker login --username AWS --password-stdin $ECR_HOST
+```
+
+To push the image:
+```sh
+docker push _repo_host_/_repo_name_:_tag_
+```
 
 ## System commands
 
