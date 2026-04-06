@@ -10,6 +10,7 @@ See [help page](https://community-scripts.org/scripts/unifi-os-server?from=scrip
 1. Use GUI to back-up the existing Unifi Controller which I ran in the LXC.
 2. Copy the MAC address to ensure that the new Unifi OS Server comes up with the same IP address.
 3. Shutdown the controller using proxmox GUI, modify its settings to NOT start at boot.
+4. I left all the [DHCP settings](lxc-unifi.html) intact.
 
 ## Installation
 
