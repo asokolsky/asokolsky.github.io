@@ -38,7 +38,7 @@ Steps:
 ```sh
 mise trust
 ```
-* install the toolchain as specified in [mise.toml](./mise.toml):
+* install the toolchain as specified in `mise.toml`:
 ```sh
 mise install
 ```
