@@ -1,37 +1,11 @@
-# tmux Terminal Multiplexer - Cheat Sheet
-
-tmux is [awesome and is highly
-recommended](https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/).
-Here is a [man page](https://www.man7.org/linux/man-pages/man1/tmux.1.html).
-
-## Architecture
-
-Session < Window < Pane:
-
-* Session - for an overall theme, such as work, or experimentation, or
-sysadmin, may have more than one window;
-* Window - for projects within that theme, may have more than one pane;
-* Pane - for view within your current project.
-
-```mermaid
-flowchart TD
-    subgraph Session1
-        subgraph Window1
-            Pane11
-            Pane12
-        end
-        subgraph Window2
-            Pane21
-        end
-    end
-```
+# tmux cheat sheet
 
 ## CLI
 
-You can run `tmux _command_`.  The following are excerpts from the man page.
+Run `tmux _command_`.  The following are excerpts from the man page.
 
-Command|Description
----|--
+Command | Description
+--------|------------
 `attach-session [-t target-session]`|Create a new client in the current terminal and attach it to the target-session.
 `detach-client [-s target-session] [-t target-client]`|Detach the current client if bound to a key, the client specified with `-t`, or all clients currently attached to the session specified by `-s`.
 `info`|Show every session, window, pane, etc...
@@ -51,8 +25,8 @@ Interaction modes:
 * copy
 * command
 
-Task|KB
-----|--
+Task | KB
+-----|---
 Show all shortcuts|ctrl-b ?
 Enter Copy mode|ctrl-b  (
 Enter Copy mode and scroll one page up|ctrl-b  PgUp
@@ -63,8 +37,8 @@ Enter Command Mode|ctrl-b :
 
 Session name is displayed (by default) in the status bar on the left, e.g. `[0]`.
 
-Management Task|KB|CLI
-----|--|---
+Management Task | KB | CLI
+----------------|----|---
 Start a new session| |`tmux new [-s ses]`
 Kill session ses| |`tmux kill-ses -t ses`
 list sessions|ctrl-b s|`tmux ls`
@@ -73,8 +47,8 @@ Attach to a session _ses_| |`tmux at -t ses`
 rename the current session|ctrl-b  $|
 detach from the current session|ctrl-b  d|
 
-Navigation Task|KB
-----|--
+Navigation Task | KB
+----------------|---
 Move to prev|ctrl-b  (
 Move to next session|ctrl-b )
 
@@ -94,8 +68,8 @@ By default, window info is displayed int he status bar on the left, e.g.
 Each time you create a new window in a tmux session, its window number and the
 name of the program running in it are added to the status bar.
 
-Management Task|KB|CLI
--|-|-
+Management Task | KB | CLI
+----------------|----|---
 Create window _win_|ctrl-b c|`tmux new -s ses -n win`
 Close current window|ctrl-b &|
 Rename current window|ctrl-b ,|
@@ -103,8 +77,8 @@ List windows|ctrl-b w|
 Split horizontally|ctrl-b %|
 Split vertically|ctrl-b "|
 
-Navigation Task|KB
--|-
+Navigation Task | KB
+----------------|---
 Move to prev window|ctrl-b p
 Move to next window|ctrl-b n
 Switch/select window by number|ctrl-b 0…9
@@ -119,8 +93,8 @@ and 1(dst)
 ## Panes
 
 
-Management Task|KB
-----|--
+Management Task | KB
+----------------|---
 Split pane vertically|ctrl-b %
 Split pane horizontally|ctrl-b "
 Kill the current pane|ctrl-b x
@@ -128,8 +102,8 @@ Convert pane into a window|ctrl-b !
 show pane numbers|ctrl-b q
 
 
-Navigation Task|KB
-----|--
+Navigation Task | KB
+----------------|---
 swap with next pane|ctrl-b {
 swap with previous pane|ctrl-b }
 Switch to pane in that direction|ctrl-b ↑
@@ -141,8 +115,8 @@ toggle between panes|ctrl-b o
 
 
 
-Presentation Task|KB
-----|--
+Presentation Task | KB
+------------------|---
 Toggle last active pane|ctrl-b ;
 Toggle between pane layouts|ctrl-b Spacebar
 Toggle pane zoom|ctrl-b z
@@ -155,8 +129,8 @@ Resize current pane width, holding second key is optional|ctrl-b ctrl-←, ctrl-
 
 ## Copy Mode
 
-KB|Task
---|----
+KB | Task
+---|-----
 Ctrl + b [|Enter copy mode
 Ctrl + b PgUp|Enter copy mode and scroll one page up
 q|Quit mode

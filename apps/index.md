@@ -46,5 +46,5 @@ Video Tools:
 * [emacs](emacs/)
 * [kubectl](/k8s/kubectl.html)
 * [slack](slack/)
-* [tmux](tmux.html)
+* [tmux](tmux/)
 * [vi](vi.html)
