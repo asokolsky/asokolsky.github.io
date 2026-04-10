@@ -4,14 +4,14 @@ SHELL := /bin/bash
 # Test to run; default one test
 TEST ?= test_me.py::test_me
 LOG_LEVEL ?= DEBUG
-LOG_FORMAT ?= "%(asctime)s.%(msecs)03d - %(name)s - %(levelname)s - %(message)s"
+LOG_FORMAT ?= "%(asctime)s.%(msecs)03d %(levelname)s %(filename)s:%(lineno)d - %(message)s"
 LOG_DATE_FORMAT ?= "%Y-%m-%d %H:%M:%S"
 
 # Virtual environment
 VENV := .venv
 PIP := $(VENV)/bin/pip
 PYTHON := $(VENV)/bin/python3
-PYTEST := $(VENV)/bin/pytest --asyncio-debug --asyncio-mode=auto -v \
+PYTEST := $(VENV)/bin/pytest --asyncio-debug --asyncio-mode=auto -v --tb=long \
 	--log-cli-level=${LOG_LEVEL} --log-level=${LOG_LEVEL} \
 	--log-cli-format=${LOG_FORMAT} --log-format=${LOG_FORMAT} \
 	--log-cli-date-format=${LOG_DATE_FORMAT} --log-date-format=${LOG_DATE_FORMAT}
