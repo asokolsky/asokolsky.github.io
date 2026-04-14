@@ -37,6 +37,8 @@ feat: add hat wobble
 
 Use commitizen with [pre-commit-hook](pre-commit-hook.html).
 
+To bypass pre-commit or commit-msg or push-time hooks use git option `--no-verify`.
+
 ## Use Commitlint
 
 [commitlint](https://github.com/conventional-changelog/commitlint)
