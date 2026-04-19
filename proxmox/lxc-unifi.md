@@ -1,6 +1,8 @@
 # Unifi Controller in an LXC Container
 
-Maybe better yet:
+The rest is obsolete.  See [Unifi OS Server in an LXC](lxc-unifi-os-server.html).
+
+Consider:
 * install: https://github.com/tteck/Proxmox/raw/main/ct/unifi-v4.sh
 * update: https://github.com/tteck/Proxmox/blob/main/misc/unifi-update.sh
 

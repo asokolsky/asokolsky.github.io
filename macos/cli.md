@@ -32,6 +32,11 @@ Use [defaults](https://ss64.com/mac/defaults.html):
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
+## Disable Liquid Glass
+```sh
+defaults write -g com.apple.SwiftUI.DisableSolarium -bool YES
+```
+
 ## Prevent Sleep Mode
 
 Use [caffeinate](https://ss64.com/mac/caffeinate.html) to keep your Mac from falling asleep:

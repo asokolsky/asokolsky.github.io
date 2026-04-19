@@ -1,5 +1,9 @@
 # Git FAQs
 
+Sources:
+
+* [The Git Commands to Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/)
+
 ## Undo the last local commit
 
 ```sh
@@ -34,4 +38,43 @@ git branch | grep -v master | xargs git branch -D
 with github:
 ```sh
 gh api user | jq -r '"\(.name) \(.login)"'
+```
+
+## What Changes the Most?
+
+```sh
+git log --format=format: --name-only --since="1 year ago" | \
+    sort | uniq -c | sort -nr | head -20
+```
+
+## Who Built This?
+
+```sh
+git shortlog -sn --no-merges
+```
+If the top contributor from the overall shortlog doesn’t appear in a 6-month window
+
+```sh
+git shortlog -sn --no-merges --since="6 months ago"
+```
+flag that to the client immediately.
+
+## Where Do Bugs Cluster?
+
+```sh
+git log -i -E --grep="fix|bug|broken" --name-only --format='' | \
+    sort | uniq -c | sort -nr | head -20
+```
+
+## Is This Project Accelerating or Dying?
+
+```sh
+git log --format='%ad' --date=format:'%Y-%m' | sort | uniq -c
+```
+
+## How Often Is the Team Firefighting
+
+```sh
+git log --oneline --since="1 year ago" | \
+    grep -iE 'revert|hotfix|emergency|rollback'
 ```

@@ -2,14 +2,18 @@
 
 ## Replace a disk in a raidz(2)
 
+### 1. Take the disk offline
 ```sh
 zpool offline vault da3
 shutdown
 ```
+
+### 2. Replace the disk
+
 replace the disk, then:
 
 ```sh
-zpool replace vault 1464662681387557667 /dev/da4
+zpool replace vault 1464662681387557667 /dev/disk/by-id/ata-KINGSTON_SV300S37A120G_50026B773A0059B3
 ```
 
 In case it fails as in:

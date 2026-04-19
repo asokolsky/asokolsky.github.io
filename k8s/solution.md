@@ -312,8 +312,7 @@ e.g., CSI secret provider and otel, are already running.
 How this works:
 
 * [karpenter `startupTaints`](https://karpenter.sh/docs/concepts/nodepools/)
-are [used to have the nodes started](../karpenter/main.jsonnet) with the
-taint `nodetaint/notready`.
+are used to have the nodes started with the taint `nodetaint/notready`.
 * infrastructure pods are configured with `nodetaint/notready` tolerations
 which allows them to start on the newly started nodes.  Other pods without such
 tolerations are NOT scheduled on the new nodes.
@@ -383,7 +382,7 @@ We deploy [bank-vaults](https://bank-vaults.dev/)
 [docs](https://bank-vaults.dev/docs/operator/), using a helm chart.
 vault-operator in turn [deploys](https://bank-vaults.dev/docs/operator/) vault.
 
-[vault environment](../vault/) deploys vault-csi-provider using the official HashiCorp Helm chart for vault.
+vault environment main.jsonnet deploys vault-csi-provider using the official HashiCorp Helm chart for vault.
 
 ### velero
 

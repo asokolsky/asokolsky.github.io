@@ -7,7 +7,7 @@ operate it in the dark under the time pressure.
 
 ### Audio
 
-[Sony PCM-M10](sony-pcm-m10.html).  Tasks to accomplish:
+[Sony PCM-M10](./sony/pcm-m10.html).  Tasks to accomplish:
 
 * power on/off
 * check battery level

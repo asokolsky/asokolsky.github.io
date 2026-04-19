@@ -25,7 +25,7 @@ Use of [ecc-ram](ecc-ram.html)
 * [Realtek RTL8125 2.5GB Ethernet](network-r8125.html) - don't use it!
 * [Ubiquiti EdgeRouter X](ubiquiti.html)
 * [Shelly devices](shelly/)
-* [GL-MT3000 Travel Router](beryl_%20ax_gl-mt3000.html)
+* [GL-MT3000 Travel Router](beryl_ax_gl-mt3000.html)
 
 ## PCIe Devices
 
@@ -71,3 +71,22 @@ and the [Remote Key Mapping](logi/remote.html)
 [Samsung TV + Soundbar](samsung/)
 
 [Power Consumption](power.html)
+
+## By Brand
+
+* [Apple](apple/)
+* [Dell](dell/)
+* [Elgato](elgato/)
+* [Intel](intel/)
+* [ipevo](ipevo/)
+* [Keychron](keychron/)
+* [Lenovo](lenovo/)
+* [LG](lg/)
+* [logi](logi/)
+* [NVIDIA](nvidia/)
+* [prusa](prusa/)
+* [Samsung](samsung/)
+* [Shelly](shelly/)
+* [Sony](sony/)
+* [TaoTronics](TaoTronics/)
+* [Zoom](zoom/)
