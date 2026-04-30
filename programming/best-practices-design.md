@@ -8,7 +8,7 @@ Learn these, study these, love these.
 
 ## Mind Your Complexity
 
-Programming complexity can be reduced if you follow these rules of thumbs:
+Programming complexity can be reduced if you follow these rules of thumb:
 
 Complex:
 ```
