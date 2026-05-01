@@ -13,8 +13,8 @@ Fn|
 
 ## Pre-existing Accelerators
 
-[Standard Mac keyboard
-shortcuts](https://support.apple.com/en-us/HT201236), here are few:
+[Standard Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236),
+here are a few:
 
 Shortcut|Document Function
 -------|-------
@@ -88,6 +88,8 @@ multiple places, do it in karabiner only - see below.
 
 ## Proper Keyboard Support
 
+Use [Karabiner](karabiner.html)
+
 Differentiate Let/Right Ctrl, Swap Ctrl and CapsLock, support for Home/End, etc:
 
 * [karabiner-elements](https://karabiner-elements.pqrs.org/) with
@@ -110,6 +112,17 @@ Use [Rectangle](https://github.com/rxhanson/Rectangle).
 
 I use [iTerm2](iTerm2.html).
 
-## Repurpose the Existing Keyboard Accelerators
+## Workspace Switching
 
-Ctrl+Left/Right are mapped to desktop switching in macOS by default. I prefer to make these available to apps, so I need to remove the default bindings. Goto System Preferences / Keyboard / Shortcuts / Mission control, remove Ctrl+Left/Right.
+^ ← / ^ → are mapped to workspace switching by default. I prefer to make these
+available to apps, so I need to remove the default bindings.
+In System Preferences > Keyboard > Shortcuts > Mission control redefine shortcuts:
+
+Action | Keyboard | [Gesture](https://support.apple.com/en-us/102482)
+-------|----------|---------
+Move left a space | ^ ⌥ ← | 3-finger swipe left
+Move right a space |  ^ ⌥ → | 3-finger swipe right
+Switch to Desktop 1 | ^ ⌥ 1 |
+Switch to Desktop 2 | ^ ⌥ 2 |
+
+This leaves ^ ← / ^ → for text browsing by word.
