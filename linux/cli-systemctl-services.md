@@ -211,7 +211,7 @@ Any unit file in `/etc/systemd/system` will override the corresponding file in
 
 ## systemd-delta
 
-[man systemd-delta](https://www.man7.org/linux/man-pages/man1/systemd-delta.1.html).
+[man systemd-delta](https://man7.org/linux/man-pages/man1/systemd-delta.1.html).
 To show all the overrides:
 
 ```sh

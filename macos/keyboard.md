@@ -106,8 +106,6 @@ In Karabiner Elements: Settings/Simple Modifications:
 
 Use [Rectangle](https://github.com/rxhanson/Rectangle).
 
-[Spectacle](https://www.spectacleapp) ([sources](https://github.com/eczarny/spectacle)) is obsolete.
-
 ## Terminal Emulator
 
 I use [iTerm2](iTerm2.html).

@@ -136,7 +136,7 @@ apt install nvme-cli
 
 ## Check for IO bottleneck:
 
-Use [iostat](https://www.man7.org/linux/man-pages/man1/iostat.1.html):
+Use [iostat](https://man7.org/linux/man-pages/man1/iostat.1.html):
 
 ```
 root@fuji:~# iostat -mxy 10

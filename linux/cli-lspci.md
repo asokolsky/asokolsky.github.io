@@ -1,6 +1,6 @@
 # lspci
 
-[man page](https://www.man7.org/linux/man-pages/man8/lspci.8.html)
+[man page](https://man7.org/linux/man-pages/man8/lspci.8.html)
 
 ```
 root@fuji:~# lspci -nnk

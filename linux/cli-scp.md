@@ -1,6 +1,6 @@
 # use scp
 
-[scp man page](https://www.man7.org/linux/man-pages/man1/scp.1.html)
+[scp man page](https://man7.org/linux/man-pages/man1/scp.1.html)
 
 
 ```sh

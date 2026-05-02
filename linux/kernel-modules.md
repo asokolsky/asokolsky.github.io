@@ -30,7 +30,7 @@ rmmod /lib/modules/4.4.0-21-generic/kernel/drivers/cpufreq/speedstep-lib.ko
 
 ## Manage Kernel Modules Using `modprobe`
 
-[modprobe man page](https://www.man7.org/linux/man-pages/man8/modprobe.8.html)
+[modprobe man page](https://man7.org/linux/man-pages/man8/modprobe.8.html)
 
 `modprobe` searches the module directory `/lib/modules/$(uname -r)` for the
 modules and related files, but excludes alternative configuration files in

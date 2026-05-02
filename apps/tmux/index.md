@@ -1,8 +1,8 @@
-# tmux Terminal Multiplexer - Cheat Sheet
+# tmux Terminal Multiplexer
 
 tmux is [awesome and is highly
 recommended](https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/).
-Here is a [man page](https://www.man7.org/linux/man-pages/man1/tmux.1.html).
+Here is a [man page](https://man7.org/linux/man-pages/man1/tmux.1.html).
 
 Why Use Tmux?
 

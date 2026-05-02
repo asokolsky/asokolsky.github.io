@@ -11,8 +11,8 @@ To manipulate the keyboard layout in a
 [virtual console](http://en.wikipedia.org/wiki/Virtual_console) use
 [dumpkeys](https://man7.org/linux/man-pages/man1/dumpkeys.1.html),
 [showkey](https://man7.org/linux/man-pages/man1/showkey.1.html) and
-[loadkeys](https://www.m,an7.org/linux/man-pages/man1/loadkeys.1.html).
-Man for [keymap file](https://www.man7.org/linux/man-pages/man5/keymaps.5.html).
+[loadkeys](https://man7.org/linux/man-pages/man1/loadkeys.1.html).
+Man for [keymap file](https://man7.org/linux/man-pages/man5/keymaps.5.html).
 
 [More info](https://www.mail-archive.com/puredyne@goto10.org/msg01407.html)
 

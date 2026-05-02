@@ -47,7 +47,7 @@ next section.
 ## Swap Ctrl and CapsLock by remapping scancode to keycode
 
 [Map scancodes to keycodes](https://wiki.archlinux.org/title/Map_scancodes_to_keycodes),
-man [udev](https://www.man7.org/linux/man-pages/man7/udev.7.html),
+man [udev](https://man7.org/linux/man-pages/man7/udev.7.html),
 [setkeycodes](https://linux.die.net/man/8/setkeycodes),
 [showkey](https://man7.org/linux/man-pages/man1/showkey.1.html).
 
@@ -122,7 +122,7 @@ Manually update the `/etc/udev/hwdb.bin` to include newly created
 sudo systemd-hwdb update
 ```
 Reload the Hardware Database Index using
-[udevadm](https://www.man7.org/linux/man-pages/man8/udevadm.8.html):
+[udevadm](https://man7.org/linux/man-pages/man8/udevadm.8.html):
 ```sh
 sudo udevadm trigger
 ```

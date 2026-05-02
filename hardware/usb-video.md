@@ -7,7 +7,7 @@ Sources:
 
 Relevant:
 
-* [udevadm man page](https://www.man7.org/linux/man-pages/man8/udevadm.8.html)
+* [udevadm man page](https://man7.org/linux/man-pages/man8/udevadm.8.html)
 * [writing_udev_rules](http://www.reactivated.net/writing_udev_rules.html)
 
 Prerequisites:

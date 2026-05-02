@@ -61,7 +61,7 @@ You may want to use
 [wipefs](https://linuxconfig.org/wipefs-linux-command-tutorial-with-examples) to
 "not only erase existing signatures on a device, but also to create a report,
 which includes them without performing any modification."
-[Man page](https://www.man7.org/linux/man-pages/man8/wipefs.8.html).  E.g.:
+[Man page](https://man7.org/linux/man-pages/man8/wipefs.8.html).  E.g.:
 
 ```sh
 sudo wipefs /dev/sda

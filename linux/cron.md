@@ -1,12 +1,12 @@
 # cron
 
-[man cron](https://www.man7.org/linux/man-pages/man8/cron.8.html),
-[man crontab](https://www.man7.org/linux/man-pages/man5/crontab.5.html),
+[man cron](https://man7.org/linux/man-pages/man8/cron.8.html),
+[man crontab](https://man7.org/linux/man-pages/man5/crontab.5.html),
 [Understanding Crontab in Linux With Examples](https://linuxhandbook.com/crontab/).
 
 Also relevant:
-[man anacron](https://www.man7.org/linux/man-pages/man8/anacron.8.html),
-[man anacrontab](https://www.man7.org/linux/man-pages/man8/anacron.8.html)
+[man anacron](https://man7.org/linux/man-pages/man8/anacron.8.html),
+[man anacrontab](https://man7.org/linux/man-pages/man8/anacron.8.html)
 
 Also relevant [systemd timers](https://wiki.archlinux.org/title/Systemd/Timers)
 
