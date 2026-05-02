@@ -92,7 +92,7 @@ e.g.:
 Predicate is a function returning boolean value with no side-effects.
 
 Recognizers are predicates.  Suppose you have class `Car` defined.  What should
-you call a car recognizer?  Here are few conventions to pick from:
+you call a car recognizer?  Here are a few conventions to pick from:
 
 * `is_car`
 * `isCar`

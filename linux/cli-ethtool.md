@@ -1,6 +1,6 @@
 # ethtool
 
-Here are few examples of [ethtool](https://en.wikipedia.org/wiki/Ethtool) use.
+Here are a few examples of [ethtool](https://en.wikipedia.org/wiki/Ethtool) use.
 [More examples](https://www.thegeekstuff.com/2010/10/ethtool-command/),
 [man page](https://linux.die.net/man/8/ethtool).
 

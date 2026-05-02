@@ -136,8 +136,9 @@ github.com
 ```
 > gh auth switch --user asokolsky4foobar
 ✓ Switched active account for github.com to asokolsky4foobar
+```
 
-5. Confirm office acount as being active:
+5. Confirm office account as being active:
 ```
 > gh auth status
 github.com
