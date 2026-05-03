@@ -89,3 +89,15 @@ stty stop undef;stty dsusp undef
 ## launchd
 
 [launchd](https://en.wikipedia.org/wiki/Launchd) is a service management daemon.
+
+## stats
+
+Use [stats](https://github.com/exelban/stats) to display resource consumption.
+
+Install with:
+
+```sh
+brew install stats
+```
+
+Then in finder apps launch it.
