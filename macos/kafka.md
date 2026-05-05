@@ -9,6 +9,7 @@ brew install confluentinc/tap/cli
 ```
 
 Verify:
+
 ```
 > confluent version
 confluent - Confluent CLI

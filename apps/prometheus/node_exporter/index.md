@@ -22,12 +22,15 @@ Then sudo emacs /etc/systemd/system/node_exporter.service
 ```
 
 Restart:
+
 ```sh
 sudo systemctl daemon-reload
 sudo systemctl start node_exporter
 sudo systemctl enable node_exporter
 ```
+
 Verify its running:
+
 ```sh
 sudo netstat -plntu
 ```

@@ -4,8 +4,8 @@
 
 Of note:
 
-* `-v`, `--invert-match` - Invert the sense of matching, to select
-non-matching lines.
+- `-v`, `--invert-match` - Invert the sense of matching, to select
+  non-matching lines.
 
 ## Examples:
 

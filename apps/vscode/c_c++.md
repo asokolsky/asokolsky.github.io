@@ -2,8 +2,8 @@
 
 ## Information Sources
 
-* https://code.visualstudio.com/docs/cpp/config-linux
-* https://code.visualstudio.com/docs/cpp/config-clang-mac - note that `clang` offers a layer of `gcc` compatibility:
+- https://code.visualstudio.com/docs/cpp/config-linux
+- https://code.visualstudio.com/docs/cpp/config-clang-mac - note that `clang` offers a layer of `gcc` compatibility:
 
 ```
 sokolsky in ~/Projects > clang --version
@@ -22,14 +22,14 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 
 Create a `.vscode` folder in the workspace with:
 
-* `tasks.json`  - compiler build settings
-* `launch.json` - debugger settings
-* `c_cpp_properties.json` - compiler path and IntelliSense settings
-
+- `tasks.json` - compiler build settings
+- `launch.json` - debugger settings
+- `c_cpp_properties.json` - compiler path and IntelliSense settings
 
 ### Compiler build settings in `.vscode/tasks.json`
 
 `tasks.json` for both LLVM and GCC:
+
 ```json
 {
     "version": "2.0.0",

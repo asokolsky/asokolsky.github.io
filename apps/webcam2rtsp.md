@@ -6,7 +6,6 @@ Goal: convert a regular USB webcam into an RTSP security cam using
 Relevant:
 [How to Stream Video From Webcam to Network Using FFmpeg](https://www.baeldung.com/linux/ffmpeg-webcam-stream-video)
 
-
 Long term: add it to [frigate](https://frigate.video/) install.
 
 ## Identify inputs and the formats
@@ -52,7 +51,7 @@ ffmpeg \
 
 ## Consume the stream
 
-Make sure your vlc [has support for RTSP](vlc.html).  Then:
+Make sure your vlc [has support for RTSP](vlc.html). Then:
 
 ```sh
 vlc rtsp://192.168.11.178:8554/live
@@ -62,10 +61,10 @@ vlc rtsp://192.168.11.178:8554/live
 
 If all the above works, customize mediamtx config file to start video capture:
 
-* Copy
-[mediamtx.yml](https://github.com/bluenviron/mediamtx/blob/main/mediamtx.yml)
-to `webcam2rtsp.yml` and [customize it](webcam2rtsp.yml).
-* Run it as:
+- Copy
+  [mediamtx.yml](https://github.com/bluenviron/mediamtx/blob/main/mediamtx.yml)
+  to `webcam2rtsp.yml` and [customize it](webcam2rtsp.yml).
+- Run it as:
 
 ```sh
 docker run --rm -it --network=host --privileged \
@@ -80,6 +79,6 @@ stream.
 
 Would be nice to have multiple video streams from a camera:
 
-* one low res to do analysis
-* another high-res to save when event is triggered based on the analysis of the
-first stream.
+- one low res to do analysis
+- another high-res to save when event is triggered based on the analysis of the
+  first stream.

@@ -29,26 +29,31 @@ hint: See PEP 668 for the detailed specification.
 ## Resolution
 
 Install python support for virtual environment:
+
 ```sh
 sudo apt install python3.11-venv
 ```
 
 Create `.local`:
+
 ```sh
 python3 -m venv ~/.local --system-site-packages
 ```
 
 Install `glances` into `.local` venv:
+
 ```sh
 ~/.local/bin/pip install glances
 ```
 
 After the path is extended in `.zshenv` as:
+
 ```
 export PATH=$HOME/.local/bin:$PATH
 ```
 
 Then:
+
 ```
 alex@exi ~ % which glances
 /home/alex/.local/bin/glances

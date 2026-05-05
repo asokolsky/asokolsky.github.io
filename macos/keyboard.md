@@ -2,72 +2,72 @@
 
 ## Notation
 
-Key|Symbol
----|------
-Cmd/⊞ Win|⌘
-Shift|⇧
-Opt / Alt|⌥
-Ctrl|⌃
-Caps Lock|⇪
-Fn|
+| Key       | Symbol |
+| --------- | ------ |
+| Cmd/⊞ Win | ⌘      |
+| Shift     | ⇧      |
+| Opt / Alt | ⌥      |
+| Ctrl      | ⌃      |
+| Caps Lock | ⇪      |
+| Fn        |        |
 
 ## Pre-existing Accelerators
 
 [Standard Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236),
 here are a few:
 
-Shortcut|Document Function
--------|-------
-⌘ N|New
-⌘ O|Open
-⌘ P|Print
-⌘ S|Save
+| Shortcut | Document Function |
+| -------- | ----------------- |
+| ⌘ N      | New               |
+| ⌘ O      | Open              |
+| ⌘ P      | Print             |
+| ⌘ S      | Save              |
 
-Shortcut|Edit Function
--------|-------
-⌘ Z|Undo
-⌘ Shift-Z|Redo
-⌘ X|Cut
-⌘ C|Copy
-⌘ V|Paste
-⌘ A|Select All
+| Shortcut  | Edit Function |
+| --------- | ------------- |
+| ⌘ Z       | Undo          |
+| ⌘ Shift-Z | Redo          |
+| ⌘ X       | Cut           |
+| ⌘ C       | Copy          |
+| ⌘ V       | Paste         |
+| ⌘ A       | Select All    |
 
-Shortcut|Find Function
--------|-------
-⌘ F|Find items in a document or open a Find window.
-⌘ G|Find next
-⌘ Shift-G|Find the previous
+| Shortcut  | Find Function                                   |
+| --------- | ----------------------------------------------- |
+| ⌘ F       | Find items in a document or open a Find window. |
+| ⌘ G       | Find next                                       |
+| ⌘ Shift-G | Find the previous                               |
 
-Shortcut|Window Function
--------|-------
-⌘ H|Hide the windows of the front app
-⌘ Opt-H|View the front app but hide all other apps
-⌘ M|Minimize the front window to the Dock
-⌘ Opt-M|Minimize all windows of the front app
-⌘ T|Open a new tab
-⌘ W|Close the front window
-⌘ Opt-W|Close all windows of the app
-⌘ ⌃ F|Full screen
+| Shortcut | Window Function                            |
+| -------- | ------------------------------------------ |
+| ⌘ H      | Hide the windows of the front app          |
+| ⌘ Opt-H  | View the front app but hide all other apps |
+| ⌘ M      | Minimize the front window to the Dock      |
+| ⌘ Opt-M  | Minimize all windows of the front app      |
+| ⌘ T      | Open a new tab                             |
+| ⌘ W      | Close the front window                     |
+| ⌘ Opt-W  | Close all windows of the app               |
+| ⌘ ⌃ F    | Full screen                                |
 
-Shortcut|Application Function
-------- | -------
-⌘ Q|Quit an app
-⌘ Opt-Esc|Force quit an app
+| Shortcut  | Application Function |
+| --------- | -------------------- |
+| ⌘ Q       | Quit an app          |
+| ⌘ Opt-Esc | Force quit an app    |
 
-Shortcut|Application/Finder Function
-------- | -------
-⌘ Space|Show or hide the Spotlight search field
-⌘ Opt-Space|Spotlight search from Finder
-⌘ ⌃ Space|Show the Character Viewer, to pick emoji and other symbols
-Space|Use Quick Look to preview the selected item
-⌘ Tab|Switch to the next most recently used app among your open apps
-⌘ Shift-3|Take a screenshot
-⌘ Shift-4|Take a screenshot
-⌘ Shift-5|Take a screenshot or make a screen recording
-⌘ Shift-N|Create a new folder in the Finder
-⌘ ,|Open preferences for the front app
-⌘ Opt-D|Hide and unhide the Dock
-⌃ ↑|Show Mission Control
+| Shortcut    | Application/Finder Function                                    |
+| ----------- | -------------------------------------------------------------- |
+| ⌘ Space     | Show or hide the Spotlight search field                        |
+| ⌘ Opt-Space | Spotlight search from Finder                                   |
+| ⌘ ⌃ Space   | Show the Character Viewer, to pick emoji and other symbols     |
+| Space       | Use Quick Look to preview the selected item                    |
+| ⌘ Tab       | Switch to the next most recently used app among your open apps |
+| ⌘ Shift-3   | Take a screenshot                                              |
+| ⌘ Shift-4   | Take a screenshot                                              |
+| ⌘ Shift-5   | Take a screenshot or make a screen recording                   |
+| ⌘ Shift-N   | Create a new folder in the Finder                              |
+| ⌘ ,         | Open preferences for the front app                             |
+| ⌘ Opt-D     | Hide and unhide the Dock                                       |
+| ⌃ ↑         | Show Mission Control                                           |
 
 To customize: [how to keep track of keyboard
 shortcuts](https://www.macworld.com/article/217325/how-to-keep-track-of-keyboard-shortcuts.html)
@@ -76,14 +76,14 @@ shortcuts](https://www.macworld.com/article/217325/how-to-keep-track-of-keyboard
 
 I experimented with system-wide accelerators for:
 
-Shortcut|Function
-------- | -------
-⌃ Z|Undo
-⌃ X|Cut
-⌃ C|Copy
-⌃ V|Paste
+| Shortcut | Function |
+| -------- | -------- |
+| ⌃ Z      | Undo     |
+| ⌃ X      | Cut      |
+| ⌃ C      | Copy     |
+| ⌃ V      | Paste    |
 
-This proved to be a BAD idea.  Instead of defining accelerators in
+This proved to be a BAD idea. Instead of defining accelerators in
 multiple places, do it in karabiner only - see below.
 
 ## Proper Keyboard Support
@@ -92,15 +92,15 @@ Use [Karabiner](karabiner.html)
 
 Differentiate Let/Right Ctrl, Swap Ctrl and CapsLock, support for Home/End, etc:
 
-* [karabiner-elements](https://karabiner-elements.pqrs.org/) with
-* [karabiner-windows-mode](https://github.com/rux616/karabiner-windows-mode)
+- [karabiner-elements](https://karabiner-elements.pqrs.org/) with
+- [karabiner-windows-mode](https://github.com/rux616/karabiner-windows-mode)
 
-### Swap CapsLock <-> LeftCtrl
+### Swap CapsLock \<-> LeftCtrl
 
 In Karabiner Elements: Settings/Simple Modifications:
 
-* caps_lock -> left_control
-* left_control -> caps_lock
+- caps_lock -> left_control
+- left_control -> caps_lock
 
 ## Tile Windows using Keyboard only
 
@@ -116,11 +116,11 @@ I use [iTerm2](iTerm2.html).
 available to apps, so I need to remove the default bindings.
 In System Preferences > Keyboard > Shortcuts > Mission control redefine shortcuts:
 
-Action | Keyboard | [Gesture](https://support.apple.com/en-us/102482)
--------|----------|---------
-Move left a space | ^ ⌥ ← | 3-finger swipe left
-Move right a space |  ^ ⌥ → | 3-finger swipe right
-Switch to Desktop 1 | ^ ⌥ 1 |
-Switch to Desktop 2 | ^ ⌥ 2 |
+| Action              | Keyboard | [Gesture](https://support.apple.com/en-us/102482) |
+| ------------------- | -------- | ------------------------------------------------- |
+| Move left a space   | ^ ⌥ ←    | 3-finger swipe left                               |
+| Move right a space  | ^ ⌥ →    | 3-finger swipe right                              |
+| Switch to Desktop 1 | ^ ⌥ 1    |                                                   |
+| Switch to Desktop 2 | ^ ⌥ 2    |                                                   |
 
 This leaves ^ ← / ^ → for text browsing by word.

@@ -2,11 +2,12 @@
 
 I [run it](/proxmox/guest-truenas.html) in a VM and on a bare hardware.
 
-* [TrueNAS Core](truenas-core.html)
-* [TrueNAS Scale as a syslog collector](syslog-collector.html)
-* [TrueCharts Catalog](true-charts.html)
+- [TrueNAS Core](truenas-core.html)
+- [TrueNAS Scale as a syslog collector](syslog-collector.html)
+- [TrueCharts Catalog](true-charts.html)
 
 Now version ElectricEel-24.10.2:
+
 ```
 root@nass:~# uname -a
 Linux nass 6.12.33-production+truenas #1 SMP PREEMPT_DYNAMIC Mon Feb 23 17:38:27 UTC 2026 x86_64 GNU/Linux
@@ -27,7 +28,7 @@ root@nass:~# cat /etc/debian_version
 
 ## Enable apt for package management
 
-As of version 24 `/usr` is mounted `ro`.  To change that - [enable developer mode](https://www.truenas.com/docs/scale/scaletutorials/systemsettings/advanced/developermode/).
+As of version 24 `/usr` is mounted `ro`. To change that - [enable developer mode](https://www.truenas.com/docs/scale/scaletutorials/systemsettings/advanced/developermode/).
 
 ```sh
 sudo chmod a+x /usr/bin/apt*
@@ -41,6 +42,7 @@ sudo apt update
 ```
 
 Then install packages as usual:
+
 ```sh
 sudo apt install emacs-nox usbutils
 ```
@@ -49,12 +51,11 @@ sudo apt install emacs-nox usbutils
 
 https://github.com/ngandrass/truenas-spindown-timer
 
-
 ## VM Setup
 
-* [video](https://www.youtube.com/watch?v=R7BXEuKjJ0k)
-* [post](https://forum.level1techs.com/t/truenas-scale-ultimate-home-setup-incl-tailscale/186444)
+- [video](https://www.youtube.com/watch?v=R7BXEuKjJ0k)
+- [post](https://forum.level1techs.com/t/truenas-scale-ultimate-home-setup-incl-tailscale/186444)
 
 ## Running Apps (k3s)
 
-* Set up [TrueCharts app catalog](true-charts.html)
+- Set up [TrueCharts app catalog](true-charts.html)

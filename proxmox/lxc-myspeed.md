@@ -2,9 +2,8 @@
 
 ## Prep
 
-Create an LXC using debian template.  Use DHCP, configure the DHCP server to
+Create an LXC using debian template. Use DHCP, configure the DHCP server to
 have a static IP allocated to the MAC of this LXC.
-
 
 Then:
 

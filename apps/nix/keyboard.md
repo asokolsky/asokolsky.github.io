@@ -32,4 +32,5 @@ Then run these:
 gsettings reset org.gnome.desktop.input-sources xkb-options
 gsettings reset org.gnome.desktop.input-sources sources
 ```
+
 Then reboot.

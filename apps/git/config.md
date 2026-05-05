@@ -4,32 +4,33 @@
 
 Applied to every user on the system and all their repositories.
 
-* to view, `git config --list --system` (may need sudo)
-* to set, `git config --system color.ui true`
-* to edit system config file: `git config --edit --system`
+- to view, `git config --list --system` (may need sudo)
+- to set, `git config --system color.ui true`
+- to edit system config file: `git config --edit --system`
 
 ## Global User level
 
 Specific personally to you, the user.
 
-* to view: `git config --list --global`
-* to set: `git config --global user.name xyz`
-* to edit global config file: `git config --edit --global`
+- to view: `git config --list --global`
+- to set: `git config --global user.name xyz`
+- to edit global config file: `git config --edit --global`
 
 Stored in any one of:
 
-* `~/.config/git/config`
-* `~/.gitconfig`
+- `~/.config/git/config`
+- `~/.gitconfig`
 
 ## Repository level
 
 Specific to that single repository.
 
-* to view: `git config --list --local`
-* to set: `git config [--local] core.ignorecase true`
-* to edit repository config file: `git config --edit [--local]`
+- to view: `git config --list --local`
+- to set: `git config [--local] core.ignorecase true`
+- to edit repository config file: `git config --edit [--local]`
 
 Set repo-specific (non-global) config settings:
+
 ```sh
 git config user.name "Alex Sokolsky"
 git config user.email "asokolsky@gmail.com"
@@ -37,11 +38,13 @@ git config core.sshCommand "ssh -i ~/.ssh/private_key"
 ```
 
 Make sure your private identity is available:
+
 ```sh
 ssh-add ~/.ssh/private_key
 ```
 
 Then
+
 ```sh
 git remote add origin git@github.com:asokolsky/repo.git
 git push --set-upstream origin master
@@ -56,6 +59,7 @@ git config --list
 ```
 
 To also show the origin file of each config item:
+
 ```sh
 git config --list --show-origin
 ```
@@ -68,12 +72,12 @@ git config user.name
 
 You may also specify options `--system`, `--global`, `--local` to read that value at a particular level.
 
-
 ## Best Practices - Global Config
 
 Followed:
-* [Customizing Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
-* [how-git-core-devs-configure-git](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
+
+- [Customizing Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
+- [how-git-core-devs-configure-git](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
 
 ```sh
 git config --global user.name "Alex Sokolsky"
@@ -85,6 +89,7 @@ git config --global push.default current
 ```
 
 where `~/.gitignore`:
+
 ```
 *~
 .*.swp
@@ -92,6 +97,7 @@ where `~/.gitignore`:
 ```
 
 Example `~/.gitconfig`:
+
 ```
 {% include_relative dot-gitconfig.txt %}
 ```

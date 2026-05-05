@@ -4,14 +4,14 @@ There is [more than one
 way](https://bas.codes/posts/python-virtualenv-venv-pip-pyenv-poetry) to
 [skin the cat](https://www.youtube.com/watch?v=o1Vue9CWRxU):
 
-* [venv](https://docs.python.org/3/library/venv.html),
-[makefile](/apps/make/python.mak)
-* [virtulaenv](https://virtualenv.pypa.io/en/latest/)
-* [pipx](https://pipx.pypa.io/latest/how-pipx-works/)
-* [pyenv](https://github.com/pyenv/pyenv) with
-[pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) -
-see [How pyenv decides on a python
-version](https://github.com/pyenv/pyenv#choosing-the-python-version).
+- [venv](https://docs.python.org/3/library/venv.html),
+  [makefile](/apps/make/python.mak)
+- [virtulaenv](https://virtualenv.pypa.io/en/latest/)
+- [pipx](https://pipx.pypa.io/latest/how-pipx-works/)
+- [pyenv](https://github.com/pyenv/pyenv) with
+  [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) -
+  see [How pyenv decides on a python
+  version](https://github.com/pyenv/pyenv#choosing-the-python-version).
 
 Here we cover pyenv+pyenv-virtualenv on Mac and Linux.
 
@@ -32,6 +32,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 brew install pyenv-virtualenv
 echo 'eval eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 ```
+
 ## Install pyenv+pyenv-virtualenv on Linux
 
 ```sh
@@ -39,6 +40,7 @@ curl https://pyenv.run | bash
 ```
 
 added this to .zshenv:
+
 ```
 # support for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -49,14 +51,13 @@ eval "$(pyenv virtualenv-init -)"
 
 ### Create a Virtual Environment
 
-* create `.python-version`;
-* `pyenv`
-[uses](https://github.com/pyenv/pyenv#choosing-the-python-version)
-python version from `.python-version`;
-* `pyenv-virtualenv` [creates and
-uses](https://github.com/pyenv/pyenv-virtualenv#activate-virtualenv)
-python virtual environment named after `.python-version`.
-
+- create `.python-version`;
+- `pyenv`
+  [uses](https://github.com/pyenv/pyenv#choosing-the-python-version)
+  python version from `.python-version`;
+- `pyenv-virtualenv` [creates and
+  uses](https://github.com/pyenv/pyenv-virtualenv#activate-virtualenv)
+  python virtual environment named after `.python-version`.
 
 ## Virtual Environment Maintenance
 
@@ -67,6 +68,7 @@ pip3 list
 ```
 
 To freeze:
+
 ```sh
 pip3 freeze > requirements.txt
 ```

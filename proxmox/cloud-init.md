@@ -2,11 +2,11 @@
 
 ## Sources
 
-* [Use Proxmox Cloud-Init to Deploy Your VMs! Kubernetes At Home - Part 2](https://www.youtube.com/watch?v=Kv6-_--y5CM)
-* [how to create a proxmox ubuntu cloud init
-image](https://austinsnerdythings.com/2021/08/30/how-to-create-a-proxmox-ubuntu-cloud-init-image/)
-* [how to deploy VMs in proxmox with terraform](https://austinsnerdythings.com/2021/09/01/how-to-deploy-vms-in-proxmox-with-terraform/)
-* https://www.learnlinux.tv/proxmox-ve-how-to-build-an-ubuntu-22-04-template-updated-method/
+- [Use Proxmox Cloud-Init to Deploy Your VMs! Kubernetes At Home - Part 2](https://www.youtube.com/watch?v=Kv6-_--y5CM)
+- [how to create a proxmox ubuntu cloud init
+  image](https://austinsnerdythings.com/2021/08/30/how-to-create-a-proxmox-ubuntu-cloud-init-image/)
+- [how to deploy VMs in proxmox with terraform](https://austinsnerdythings.com/2021/09/01/how-to-deploy-vms-in-proxmox-with-terraform/)
+- https://www.learnlinux.tv/proxmox-ve-how-to-build-an-ubuntu-22-04-template-updated-method/
 
 ## Get the OS Image
 
@@ -20,11 +20,13 @@ or
 ## Customize the Image
 
 Prerequisite: [libguestfs-tools](https://www.libguestfs.org/).
+
 ```sh
 apt update -y && apt install libguestfs-tools -y
 ```
 
 Locate the downloaded image in `/var/lib/vz/template/iso`:
+
 ```
 root@duo:/var/lib/vz/template/iso# ls -la
 total 7551428
@@ -37,7 +39,6 @@ drwxr-xr-x 4 root root       4096 Jan 25  2022 ..
 
 Customize the downloaded image using
 [virt-customize](https://www.libguestfs.org/virt-customize.1.html):
-
 
 ```sh
 virt-customize -a focal-server-cloudimg-amd64.img \
@@ -59,10 +60,9 @@ qm set 9000 --agent 1
 
 Also in GUI change:
 
-* OS type
-* Inform scsi0 as SSD
-* Change NIC to use DHCP
-
+- OS type
+- Inform scsi0 as SSD
+- Change NIC to use DHCP
 
 ## Convert the VM into a Template
 
@@ -72,7 +72,6 @@ qm template 9000
 
 ## Test VM Creation from Template
 
-
 ```sh
 qm clone 9000 999 --name test-clone-cloud-init
 qm set 999 --sshkey ~/.ssh/id_rsa.pub
@@ -80,7 +79,7 @@ qm set 999 --ipconfig0 ip=192.168.10.96/24,gw=192.168.10.1
 qm start 999
 ```
 
-Now login into the newly created VM.  First remove known host because SSH key changed:
+Now login into the newly created VM. First remove known host because SSH key changed:
 
 ```sh
 ssh-keygen -f "~/.ssh/known_hosts" -R 192.168.10.96
@@ -134,9 +133,10 @@ ubuntu@test-vm-1:~$ exit
 logout
 Connection to 192.168.10.81 closed.
 ```
+
 # Clean-up
 
-Edit main.tf ans set count to 0.  Then:
+Edit main.tf ans set count to 0. Then:
 
 ```console
 root@duo:~/terraform# terraform apply

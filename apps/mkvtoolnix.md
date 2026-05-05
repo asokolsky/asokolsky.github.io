@@ -1,6 +1,6 @@
 # MKVToolNix on Linux Mint
 
-[mkvtoolnix](https://mkvtoolnix.download/).  See also [mkvtool](mkvtool.html).
+[mkvtoolnix](https://mkvtoolnix.download/). See also [mkvtool](mkvtool.html).
 
 ## Install
 
@@ -17,7 +17,9 @@ The follow the [recommendations for ubuntu](https://mkvtoolnix.download/download
 ```sh
 sudo wget -O /etc/apt/keyrings/gpg-pub-moritzbunkus.gpg https://mkvtoolnix.download/gpg-pub-moritzbunkus.gpg
 ```
+
 Edit the file:
+
 ```
 sudo emacs /etc/apt/sources.list.d/mkvtoolnix.download.list
 ```
@@ -28,6 +30,7 @@ deb-src [arch=amd64 signed-by=/etc/apt/keyrings/gpg-pub-moritzbunkus.gpg] https:
 ```
 
 Finally:
+
 ```sh
 sudo apt install mkvtoolnix mkvtoolnix-gui
 ```
@@ -39,6 +42,7 @@ sudo apt install mkvtoolnix mkvtoolnix-gui
 [man page](https://mkvtoolnix.download/doc/mkvmerge.html).
 
 List tracks:
+
 ```sh
 mkvmerge S01E01.mkv -J|jq .tracks
 ```
@@ -50,6 +54,7 @@ mkvmerge S01E01.mkv -J|jq -r '.tracks|map(select(.type=="audio" and .properties.
 ```
 
 Strip all non-English soundtracks
+
 ```bash
 #!/usr/bin/env bash
 # Exit on error. Append "|| true" if you expect an error.

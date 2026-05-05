@@ -28,15 +28,14 @@ that PCI NICs are the bottleneck!
 
 Todo:
 
-* install syslog on the LAN to collect debugging info, e.g.  syslog-win32
-* Experiment with Wake-on-LAN - here is client which would wake NAS up.
-
+- install syslog on the LAN to collect debugging info, e.g. syslog-win32
+- Experiment with Wake-on-LAN - here is client which would wake NAS up.
 
 While waiting for the production version of firmware to materialize and
 production HBA to show up on my door step I was pondering over the hard drive
-use strategy.  Should I go with RAIDZ?  Given that the NAS cage can hold up to
+use strategy. Should I go with RAIDZ? Given that the NAS cage can hold up to
 4 drivers, and I do not plan to expand, my options are limited to RAIDZ and
-MIRROR.  Here are two good articles on the subject.  Decided!  I will go with a
+MIRROR. Here are two good articles on the subject. Decided! I will go with a
 mirror of two Barracuda Green 2TB drives.
 
 [Original post](https://nasfuss.blogspot.com/2012/04/sanity-check.html)

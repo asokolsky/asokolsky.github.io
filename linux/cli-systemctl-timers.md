@@ -10,7 +10,9 @@ See also [other aspects of systemctl](cli-systemctl.html).
 ```sh
 systemctl list-timers
 ```
+
 produces:
+
 ```
 alex@exi:~> systemctl list-timers
 NEXT                             LEFT LAST                              PASSED UNIT                           ACTIVATES

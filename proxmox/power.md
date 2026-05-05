@@ -2,35 +2,38 @@
 
 Concepts
 
-* [Processor P-states and C-states](https://www.thomas-krenn.com/en/wiki/Processor_P-states_and_C-states)
-* [Generic Scaling Governors](https://www.kernel.org/doc/html/latest/admin-guide/pm/cpufreq.html?#generic-scaling-governors)
-* [`intel_pstate` CPU Performance Scaling Driver](https://docs.kernel.org/admin-guide/pm/intel_pstate.html)
-* [ASPM](https://en.wikipedia.org/wiki/Active_State_Power_Management)
+- [Processor P-states and C-states](https://www.thomas-krenn.com/en/wiki/Processor_P-states_and_C-states)
+- [Generic Scaling Governors](https://www.kernel.org/doc/html/latest/admin-guide/pm/cpufreq.html?#generic-scaling-governors)
+- [`intel_pstate` CPU Performance Scaling Driver](https://docs.kernel.org/admin-guide/pm/intel_pstate.html)
+- [ASPM](https://en.wikipedia.org/wiki/Active_State_Power_Management)
 
 Apps
 
-* [powertop](https://linrunner.de/tlp/faq/powertop.html),
-[repo](https://github.com/fenrus75/powertop)
-* [cpupower](https://hreniuc.dev/how-to-use-cpupower-cpu-governors)
+- [powertop](https://linrunner.de/tlp/faq/powertop.html),
+  [repo](https://github.com/fenrus75/powertop)
+- [cpupower](https://hreniuc.dev/how-to-use-cpupower-cpu-governors)
 
 Install on ubuntu:
+
 ```
 sudo apt install powertop linux-tools-`uname -r`
 ```
+
 Install on debian:
+
 ```
 sudo apt install powertop linux-cpupower
 ```
 
 Info:
 
-* [CPU frequency
-scaling](https://wiki.archlinux.org/title/CPU_frequency_scaling)
-* [thread1](https://forum.proxmox.com/threads/fix-always-high-cpu-frequency-in-proxmox-host.84270/)
-* [thread2](https://forum.proxmox.com/threads/cpu-power-throttle-back-to-save-energy.27510/)
-* [switch to acpi-cpufreq
-governor](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/)
-* [Building a Power Efficient Home Server](https://www.youtube.com/watch?v=MucGkPUMjNo)
+- [CPU frequency
+  scaling](https://wiki.archlinux.org/title/CPU_frequency_scaling)
+- [thread1](https://forum.proxmox.com/threads/fix-always-high-cpu-frequency-in-proxmox-host.84270/)
+- [thread2](https://forum.proxmox.com/threads/cpu-power-throttle-back-to-save-energy.27510/)
+- [switch to acpi-cpufreq
+  governor](https://silvae86.github.io/2020/06/13/switching-to-acpi-power/)
+- [Building a Power Efficient Home Server](https://www.youtube.com/watch?v=MucGkPUMjNo)
 
 Just in case you have AMD CPUs:
 [thread3](https://forum.level1techs.com/t/gigabyte-server-activity-corner-proxmox-docker-and-config-notes/167614).
@@ -44,6 +47,7 @@ cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
 ```
 
 better yet:
+
 ```sh
 watch grep \"cpu MHz\" /proc/cpuinfo
 ```
@@ -74,17 +78,17 @@ analyzing CPU 0:
 [About
 governors](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/power_management_guide/cpufreq_governors):
 
-* cpufreq_performance - offers no power saving benefit;
-* cpufreq_powersave - forces the CPU to use the lowest possible clock frequency,
-this frequency will be statically set, and will not change. This is more of a
-speed limiter than a power saver.
-* cpufreq_ondemand - a dynamic governor that allows the CPU to achieve maximum
-clock frequency when system load is high, and also minimum clock frequency when
-the system is idle.
-* cpufreq_conservative - like the ondemand governor, adjusts the frequency,
-however more gradually.
-* cpufreq_userspace - allows userspace programs to set the frequency, used
-with the cpuspeed daemon.
+- cpufreq_performance - offers no power saving benefit;
+- cpufreq_powersave - forces the CPU to use the lowest possible clock frequency,
+  this frequency will be statically set, and will not change. This is more of a
+  speed limiter than a power saver.
+- cpufreq_ondemand - a dynamic governor that allows the CPU to achieve maximum
+  clock frequency when system load is high, and also minimum clock frequency when
+  the system is idle.
+- cpufreq_conservative - like the ondemand governor, adjusts the frequency,
+  however more gradually.
+- cpufreq_userspace - allows userspace programs to set the frequency, used
+  with the cpuspeed daemon.
 
 ### Show Scaling Driver
 
@@ -130,7 +134,7 @@ echo "powersave" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ## Switch back to intel_pstate Governor
 
 Ensure `intel_pstate=enable` is there for `GRUB_CMDLINE_LINUX_DEFAULT`
-in `/etc/default/grub`.  Then `sudo update-grub` and reboot.
+in `/etc/default/grub`. Then `sudo update-grub` and reboot.
 
 To check:
 
@@ -146,7 +150,9 @@ Just make sure that:
 root@duo:~# cat /sys/devices/system/cpu/intel_pstate/no_turbo
 0
 ```
+
 To change it:
+
 ```sh
 echo 0 | tee /sys/devices/system/cpu/intel_pstate/no_turbo
 ```

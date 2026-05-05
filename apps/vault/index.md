@@ -9,6 +9,7 @@
 ## Client Install and Config
 
 In MacOS:
+
 ```
 brew tap hashicorp/tap
 brew install hashicorp/tap/vault
@@ -16,6 +17,7 @@ brew install hudochenkov/sshpass/sshpass
 ```
 
 Verify success by logging into vault using CLI:
+
 ```
 export VAULT_ADDR=https://vault.foo.io
 vault login -method okta username=asokolsky@foo.com

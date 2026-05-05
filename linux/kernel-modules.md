@@ -9,7 +9,9 @@ Read the contents of `/proc/modules`:
 ```sh
 cat /proc/modules
 ```
+
 better yet:
+
 ```sh
 lsmod
 ```
@@ -37,11 +39,13 @@ modules and related files, but excludes alternative configuration files in
 `/etc/modprobe.d` directory.
 
 To insert a module:
+
 ```sh
 modprobe speedstep-lib
 ```
 
 To remove the module:
+
 ```sh
 modprobe -r speedstep-lib
 ```
@@ -53,10 +57,11 @@ no difference between _ and – while entering module names.
 
 Locations to check:
 
-* `/etc/modprobe.d/*`
-* `/lib/modprobe.d/*`
+- `/etc/modprobe.d/*`
+- `/lib/modprobe.d/*`
 
 e.g.
+
 ```sh
 grep nvidia /etc/modprobe.d/* /lib/modprobe.d/*
 ```

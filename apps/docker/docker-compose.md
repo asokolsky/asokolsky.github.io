@@ -39,11 +39,13 @@ Server: Docker Engine - Community
 alex@latitude7490:~/ > sudo docker compose version
 Docker Compose version v2.16.0
 ```
+
 Yet:
+
 ```
 > docker-compose
 zsh: command not found: docker-compose
-````
+```
 
 Check the[release page](https://github.com/docker/compose/releases)
 and then:
@@ -51,12 +53,15 @@ and then:
 ```sh
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
+
 Then:
+
 ```sh
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 Finally:
+
 ```
 > docker-compose --version
 Docker Compose version v2.16.0
@@ -78,16 +83,16 @@ sudo docker compose up -d
 
 ## Summary
 
-Command|Description
--------|-----------
-`docker compose up`|Create and start containers
-`docker compose up -d`|Create and start containers in background
-`docker compose up --build`|Rebuild images before starting containers
-`docker compose stop`|Stop services
-`docker compose down`|Stop and remove containers and networks
-`docker compose ps`|List running containers
-`docker compose logs`|View the logs of all containers
-`docker compose logs <service>`|View the logs of a specific service
-`docker compose logs -f`|View and follow the logs
-`docker compose pull`|Pull the latest images
-`docker compose build`|Build or rebuild services
+| Command                         | Description                               |
+| ------------------------------- | ----------------------------------------- |
+| `docker compose up`             | Create and start containers               |
+| `docker compose up -d`          | Create and start containers in background |
+| `docker compose up --build`     | Rebuild images before starting containers |
+| `docker compose stop`           | Stop services                             |
+| `docker compose down`           | Stop and remove containers and networks   |
+| `docker compose ps`             | List running containers                   |
+| `docker compose logs`           | View the logs of all containers           |
+| `docker compose logs <service>` | View the logs of a specific service       |
+| `docker compose logs -f`        | View and follow the logs                  |
+| `docker compose pull`           | Pull the latest images                    |
+| `docker compose build`          | Build or rebuild services                 |

@@ -5,6 +5,7 @@ repos:
   - id: check-added-large-files
   - id: check-yaml
   - id: check-json
+    exclude: ^(\.vscode/settings\.json|apps/vscode/settings-windows\.json|apps/vscode/devcontianer/devcontainer-terraform\.json)$
   - id: check-merge-conflict
   - id: end-of-file-fixer
   - id: trailing-whitespace

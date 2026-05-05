@@ -2,18 +2,19 @@
 
 ## Sources
 
-* [howto configure ups on
-proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
-* [network ups tools](https://networkupstools.org/)
-* [archlinux Network UPS Tools](https://wiki.archlinux.org/index.php/Network_UPS_Tools)
-* [installing nut on ubuntu](https://zackreed.me/installing-nut-on-ubuntu/)
-* [networkupstools/ConfigExamples](https://github.com/networkupstools/ConfigExamples/releases/download/book-3.0-20230319-nut-2.8.0/ConfigExamples.pdf)
+- [howto configure ups on
+  proxmox](https://diyblindguy.com/howto-configure-ups-on-proxmox/)
+- [network ups tools](https://networkupstools.org/)
+- [archlinux Network UPS Tools](https://wiki.archlinux.org/index.php/Network_UPS_Tools)
+- [installing nut on ubuntu](https://zackreed.me/installing-nut-on-ubuntu/)
+- [networkupstools/ConfigExamples](https://github.com/networkupstools/ConfigExamples/releases/download/book-3.0-20230319-nut-2.8.0/ConfigExamples.pdf)
 
 ## Install
 
 ```sh
 apt install nut
 ```
+
 ## Identify the UPS
 
 ```console
@@ -22,11 +23,13 @@ Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 002: ID 051d:0002 American Power Conversion Uninterruptible Power Supply
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
+
 Found out the UPS vendorID:productID - 051d:0002.
 
 ## Configure UPS
 
 Configure the UPS via `/etc/nut/ups.conf`
+
 ```
 maxretry = 3
 pollinterval = 1
@@ -41,11 +44,14 @@ productid = 0002
 ```
 
 Create `/etc/udev/rules.d/90-nut-ups.rules` to set proper device file permissions:
+
 ```
 # Rule for the UPS - use lsusb for idVendor and idProduct
 ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="051d", ATTR{idProduct}=="0002", MODE="0660", GROUP="nut"
 ```
+
 or even more elaborate to fight periodic disconnect:
+
 ```
 SUBSYSTEM!="usb", GOTO="nut-usbups_rules_end"
 
@@ -54,11 +60,13 @@ ACTION=="add|change", SUBSYSTEM=="usb|usb_device", SUBSYSTEMS=="usb|usb_device",
 
 LABEL="nut-usbups_rules_end"
 ```
+
 Restart the udev service with `service udev restart`.
 
 ## Configure UPSD
 
 Edit `/etc/nut/upsd.conf`
+
 ```
 LISTEN 127.0.0.1 3493
 LISTEN 192.168.10.20 3493
@@ -68,6 +76,7 @@ LISTEN 192.168.10.20 3493
 ## Configure NUT
 
 Set NUT into a stand-alone mode by editing `/etc/nut/nut.conf`
+
 ```
 # IMPORTANT NOTE:
 #  This file is intended to be sourced by shell scripts.
@@ -94,6 +103,7 @@ MONITOR theUPS@localhost 1 upsmonitor PASSWORD master
 ```
 
 Finally `/etc/nut/upsd.users`:
+
 ```
 [upsmonitor]
 password = PASSWORD
@@ -156,19 +166,22 @@ ups.timer.reboot: 0
 ups.timer.shutdown: -1
 ups.vendorid: 051d
 ```
+
 So far I have these UPS's:
 
-ups.mfr|ups.vendorid|ups.productid|device.model
--------|------------|-------------|---------
-American Power Conversion|051d|0002|Back-UPS RS1000G
-CPS|0764|0501|ABST600
+| ups.mfr                   | ups.vendorid | ups.productid | device.model     |
+| ------------------------- | ------------ | ------------- | ---------------- |
+| American Power Conversion | 051d         | 0002          | Back-UPS RS1000G |
+| CPS                       | 0764         | 0501          | ABST600          |
 
 For a quick status check:
+
 ```console
 root@suprox:/etc/nut# upsc theUPS@localhost ups.status
 Init SSL without certificate database
 OL
 ```
+
 `OL` here indicates that the system is running 'on line' power.
 
 Use upscmd to issue commands to UPS:
@@ -217,7 +230,7 @@ Apr 03 12:37:37 fuji ups-monitor[7225]: Starting NUT - power device monitor and 
 Apr 03 12:37:37 fuji systemd[1]: Started LSB: Network UPS Tools monitor initscript.
 ```
 
- Nut processes log into `/var/log/daemon.log`.
+Nut processes log into `/var/log/daemon.log`.
 
 ```sh
 root@fuji:/etc/nut# service --status-all
@@ -264,6 +277,7 @@ AT ONBATT * START-TIMER upsonbatt 300
 AT ONLINE * EXECUTE emailonline
 AT ONLINE * CANCEL-TIMER upsonbatt upsonline
 ```
+
 The script could be something like:
 
 ```
@@ -301,15 +315,15 @@ sudo upscmd -u upsmonitor -p UpsMonitor theUPS test.battery.start.deep
 And then monitor
 [changes to](https://networkupstools.org/docs/developer-guide.chunked/apas02.html):
 
-* `battery.charge` - Battery charge (percent);
-* `battery.runtime` - Battery runtime (seconds);
-* `battery.runtime.low` - Remaining battery runtime when UPS switches to LB (seconds);
-* `battery.voltage` - Battery voltage (V)
-* `ups.load` - Load on UPS (percent)
-* `ups.power` - Current value of apparent power (Volt-Amps)
-* `ups.power.nominal` - Nominal value of apparent power (Volt-Amps)
-* `ups.realpower` - Current value of real power (Watts)
-* `ups.realpower.nominal` - Nominal value of real power (Watts)
+- `battery.charge` - Battery charge (percent);
+- `battery.runtime` - Battery runtime (seconds);
+- `battery.runtime.low` - Remaining battery runtime when UPS switches to LB (seconds);
+- `battery.voltage` - Battery voltage (V)
+- `ups.load` - Load on UPS (percent)
+- `ups.power` - Current value of apparent power (Volt-Amps)
+- `ups.power.nominal` - Nominal value of apparent power (Volt-Amps)
+- `ups.realpower` - Current value of real power (Watts)
+- `ups.realpower.nominal` - Nominal value of real power (Watts)
 
 ```sh
 watch -d sudo upsc theUPS
@@ -317,22 +331,22 @@ watch -d sudo upsc theUPS
 
 Possible [values for ups.status](https://networkupstools.org/docs/developer-guide.chunked/new-drivers.html#_status_data):
 
-Value|Description
------|-----------
-OL|On line (mains is present)
-OB|On battery (mains is not present)
-LB|Low battery
-HB|High battery
-RB|The battery needs to be replaced
-CHRG|The battery is charging
-DISCHRG|The battery is discharging (inverter is providing load power)
-BYPASS|UPS bypass circuit is active -- no battery protection is available
-CAL|UPS is currently performing runtime calibration (on battery)
-OFF|UPS is offline and is not supplying power to the load
-OVER|UPS is overloaded
-TRIM|UPS is trimming incoming voltage (called "buck" in some hardware)
-BOOST| UPS is boosting incoming voltage
-FSD|Forced Shutdown (restricted use, see the note below)
+| Value   | Description                                                        |
+| ------- | ------------------------------------------------------------------ |
+| OL      | On line (mains is present)                                         |
+| OB      | On battery (mains is not present)                                  |
+| LB      | Low battery                                                        |
+| HB      | High battery                                                       |
+| RB      | The battery needs to be replaced                                   |
+| CHRG    | The battery is charging                                            |
+| DISCHRG | The battery is discharging (inverter is providing load power)      |
+| BYPASS  | UPS bypass circuit is active -- no battery protection is available |
+| CAL     | UPS is currently performing runtime calibration (on battery)       |
+| OFF     | UPS is offline and is not supplying power to the load              |
+| OVER    | UPS is overloaded                                                  |
+| TRIM    | UPS is trimming incoming voltage (called "buck" in some hardware)  |
+| BOOST   | UPS is boosting incoming voltage                                   |
+| FSD     | Forced Shutdown (restricted use, see the note below)               |
 
 ## Battery Maintenance
 
@@ -385,6 +399,7 @@ Value: 20
 ```
 
 After I replaced the battery, I update the `battery.mfr.date` setting:
+
 ```sh
 upsrw -s battery.mfr.date=2024/01/01 -u upsmonitor -p UpsMonitor theUPS
 ```

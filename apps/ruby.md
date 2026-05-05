@@ -1,11 +1,13 @@
 # Ruby
 
 Install [rbenv](https://github.com/rbenv/rbenv):
+
 ```sh
 sudo apt install rbenv
 ```
 
 Install Ruby:
+
 ```
 $ rbenv install 2.4.1
 Downloading ruby-2.4.1.tar.bz2...
@@ -37,11 +39,13 @@ alex@latitude7490:~/Projects/asokolsky.github.io/linux/ > gem install jekyll bun
 ## List Available Versions
 
 To list stable versions:
+
 ```sh
 rbenv install --list
 ```
 
 To list all the versions:
+
 ```sh
 rbenv install --list-all
 ```
@@ -53,6 +57,7 @@ rbenv install 3.1.0
 ```
 
 Lock it for your project by defining `.ruby-version`:
+
 ```
 3.0.3
 ```

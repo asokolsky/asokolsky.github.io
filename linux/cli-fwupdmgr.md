@@ -78,6 +78,7 @@ Application Options:
 
 This tool allows an administrator to query and control the fwupd daemon, allowing them to perform actions such as installing or downgrading firmware.
 ```
+
 ## Listing the devices
 
 Get the list of hardware that supports firmware updates:

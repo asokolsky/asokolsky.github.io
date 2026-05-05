@@ -56,9 +56,11 @@ docker push _repo_host_/_repo_name_:_tag_
 See [Retagging an image in Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-retag.html).
 
 Get the image manifest:
+
 ```sh
 MANIFEST=$(aws ecr batch-get-image --repository-name amazonlinux --image-ids imageTag=latest --output text --query 'images[].imageManifest')
 ```
+
 Use [put-image](https://docs.aws.amazon.com/cli/latest/reference/ecr/put-image.html)
 `--image-tag` option to put the image manifest to Amazon ECR with a new tag:
 

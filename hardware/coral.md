@@ -4,11 +4,13 @@
 [datasheet](https://www.mouser.com/datasheet/2/963/Coral_M2_datasheet-3237151.pdf).
 
 After installing, presents itself as a PCI device
+
 ```
 03:00.0 System peripheral: Global Unichip Corp. Coral Edge TPU
 ```
 
 Checkl secure boot status:
+
 ```
 > mokutil --sb-state
 SecureBoot disabled
@@ -45,6 +47,7 @@ Reboot, verify success:
 ```
 
 Verify the device presence:
+
 ```
 # ls -al /dev/apex*
 crw-rw---- 1 root root 120, 0 Jan  2 13:52 /dev/apex_0

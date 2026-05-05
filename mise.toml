@@ -18,3 +18,27 @@ run = [
     'find . -type d -name .venv -prune -exec rm -fr {} \;',
     'find . -type d -name venv -prune -exec rm -fr {} \;',
 ]
+
+[tasks.format]
+description = "Format Markdown files in-place"
+run = """
+  uvx --with mdformat-gfm==1.0.0 --with mdformat-frontmatter mdformat@1.0.0 .
+"""
+
+[tasks.pre-commit-install]
+description = "Install pre-commit hooks"
+run = """
+  uvx --with nodeenv pre-commit install --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
+"""
+
+[tasks.pre-commit-uninstall]
+description = "Uninstall pre-commit hooks"
+run = """
+  uvx --with nodeenv pre-commit uninstall --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
+"""
+
+[tasks.pre-commit-run]
+description = "Run pre-commit hooks against all files"
+run = """
+  uvx --with nodeenv pre-commit run --all-files
+"""

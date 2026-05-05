@@ -2,8 +2,8 @@
 
 Sources:
 
-* https://ubuntu.com/tutorials/install-and-configure-samba
-* https://phoenixnap.com/kb/ubuntu-samba
+- https://ubuntu.com/tutorials/install-and-configure-samba
+- https://phoenixnap.com/kb/ubuntu-samba
 
 ## Install
 
@@ -100,9 +100,11 @@ New SMB password:
 Retype new SMB password:
 Added user alex.
 ```
+
 ### Change file owner/permissions
 
 To grant read/write/execute permissions to the sharing directory, run setfacl:
+
 ```sh
 setfacl -R -m "u:alex:rwx" /mnt/btr/foo
 ```
@@ -114,6 +116,7 @@ setfacl: /mnt/btr/foo/history: Operation not supported
 ```
 
 Instead:
+
 ```sh
 chown -R alex:users /mnt/btr/foo/
 chown -R alex:users /mnt/tank/bar/

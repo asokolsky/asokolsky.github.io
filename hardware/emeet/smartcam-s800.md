@@ -2,11 +2,11 @@
 
 I was seduced by the promise of "1/2" Large Sony Sensor".
 
-* [specs](https://emeet.com/products/webcam-s800)
-* [faq](https://emeet.com/pages/s800-faq)
-
+- [specs](https://emeet.com/products/webcam-s800)
+- [faq](https://emeet.com/pages/s800-faq)
 
 Identify the device:
+
 ```
 alex@duo > v4l2-ctl --list-devices
 IPEVO Ziggi-HD Plus (usb-0000:00:14.0-10):
@@ -26,6 +26,7 @@ EMEET SmartCam S800: EMEET Smar (usb-0000:00:14.0-5):
 ```
 
 v4l device capabilities:
+
 ```
 alex@duo > v4l2-ctl --all --device /dev/video4
 Driver Info:
@@ -147,6 +148,7 @@ Format Metadata Capture:
 ```
 
 Supported video formats:
+
 ```
 alex@duo > v4l2-ctl --list-formats-ext --device /dev/video4
 ioctl: VIDIOC_ENUM_FMT
@@ -244,9 +246,11 @@ alex@duo > v4l2-ctl --list-formats-ext --device /dev/video5
 ioctl: VIDIOC_ENUM_FMT
 	Type: Video Capture
 ```
+
 ## Live View
 
 Using H264 codec:
+
 ```sh
 vlc --meta-title='Portrait Camera' \
     --meta-description='Portrait Camera Live Feed' \

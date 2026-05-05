@@ -10,18 +10,17 @@ Atlantis GUI: https://atlantis-ui.shared.company.io
 
 The [blackbox-exporter](https://github.com/prometheus/blackbox_exporter/) is used to:
 
-* verify [network connectivity between VPCs](https://docs.google.com/document/d/11uf-HDWwaAlTrUOt4iS2gohezFpREQHH_zR7QQS36Zg/edit#heading=h.oxi7zydw2ax),
-both legacy and new world;
-* verify presence of atlantis in the shared cluster;
-* verify presence of vault in all the new world clusters.
-
+- verify [network connectivity between VPCs](https://docs.google.com/document/d/11uf-HDWwaAlTrUOt4iS2gohezFpREQHH_zR7QQS36Zg/edit#heading=h.oxi7zydw2ax),
+  both legacy and new world;
+- verify presence of atlantis in the shared cluster;
+- verify presence of vault in all the new world clusters.
 
 Deploy the blackbox exporter using [helm chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-blackbox-exporter).
 
-* repo name: `prometheus-community`, but, given that `-` is not acceptable, make it `prometheus_community`.
-* repo URL: https://prometheus-community.github.io/helm-charts
-* chart name: `prometheus-blackbox-exporter`
-* version: 8.4.0
+- repo name: `prometheus-community`, but, given that `-` is not acceptable, make it `prometheus_community`.
+- repo URL: https://prometheus-community.github.io/helm-charts
+- chart name: `prometheus-blackbox-exporter`
+- version: 8.4.0
 
 The latter two derived from the contents of https://prometheus-community.github.io/helm-charts/index.yaml
 
@@ -32,20 +31,25 @@ Error: 1 Repo(s) were skipped. Please check above logs for details
 > tk tool charts add-repo prometheus_community https://prometheus-community.github.io/helm-charts
 {"level":"info","time":"2023-10-31T12:06:11-07:00","message":"OK: prometheus_community"}
 ```
+
 Then:
+
 ```sh
 tk tool charts add prometheus_community/prometheus-blackbox-exporter@8.4.0
 ```
 
-TODO: blackbox-exporter endpoints are no longer scraped by the datadog.  Start scraping these using splunk, e.g. using [smart agent](https://www.splunk.com/en_us/blog/devops/metrics-from-prometheus-exporters-are-now-available-with-the-sfx-smart-agent.html)
+TODO: blackbox-exporter endpoints are no longer scraped by the datadog. Start scraping these using splunk, e.g. using [smart agent](https://www.splunk.com/en_us/blog/devops/metrics-from-prometheus-exporters-are-now-available-with-the-sfx-smart-agent.html)
 
 #### Troubleshooting k8s Endpoints
 
 Get a shell in the pod and then:
+
 ```sh
 wget -qO - http://localhost:9115/metrics|grep prom
 ```
+
 Check connectivity to shared, example of failure to connect:
+
 ```
 ~ $ wget -qO - http://localhost:9115/probe?target=https://95CD862D2577203EE8607925A3FF3411.gr7.us-east-1.eks.amazonaws.com/livez?verbose
 # HELP probe_dns_lookup_time_seconds Returns the time taken for probe dns lookup in seconds
@@ -92,7 +96,9 @@ probe_ip_protocol 4
 # TYPE probe_success gauge
 probe_success 0
 ```
+
 Check connectivity to dev, example of success:
+
 ```
 ~ $ wget -qO - http://localhost:9115/probe?target=https://E7281548B3E48DB5B68C580B64F46EC1.sk1.us-east-1.eks.amazonaws.com/livez?verbose
 # HELP probe_dns_lookup_time_seconds Returns the time taken for probe dns lookup in seconds
@@ -155,7 +161,7 @@ probe_tls_version_info{version="TLS 1.3"} 1
 #### Vault Endpoints
 
 [Vault health endpoint](https://developer.hashicorp.com/vault/api-docs/system/health)
-uses HTTP status code to represent vault state.  To ensure that
+uses HTTP status code to represent vault state. To ensure that
 `unsealed and standby` is represented by HTTPS status code 200 required by the
 blackbox exporter, we use the following customization:
 
@@ -167,11 +173,13 @@ As you can see, for the standby being false AND true, result in HTTP status 200.
 
 Having established the vault endpoint URL, let's verify that the vault is
 healthy in the dev cluster using the blackbox exporter:
+
 ```sh
 wget -qO - http://localhost:9115/probe?target=https://vault.dev.company.io/v1/sys/health?standbycode=200
 ```
 
 Produces:
+
 ```
 # HELP probe_dns_lookup_time_seconds Returns the time taken for probe dns lookup in seconds
 # TYPE probe_dns_lookup_time_seconds gauge
@@ -203,7 +211,6 @@ To accomplish this workload allocation we use this [CloudZero k8s integration](h
 
 ### depesz
 
-
 ### external-dns
 
 ### flagger-system
@@ -215,7 +222,7 @@ To accomplish this workload allocation we use this [CloudZero k8s integration](h
 Some options are exposed as `labels` on the `Environment`, namely:
 
 | Label Key          | Flux Option                                                                      | Default |
-|--------------------|----------------------------------------------------------------------------------|---------|
+| ------------------ | -------------------------------------------------------------------------------- | ------- |
 | fluxcd.io/interval | [interval](https://fluxcd.io/flux/components/kustomize/kustomizations/#interval) | 15m     |
 | fluxcd.io/prune    | [prune](https://fluxcd.io/flux/components/kustomize/kustomizations/#prune)       | true    |
 
@@ -230,7 +237,6 @@ but also edit the kustomization, which mostly just means an ability to **Suspend
 
 See https://github.com/FairwindsOps/goldilocks/tree/master/hack/manifests
 
-
 ### istio-gateway istio-system istio-waypoint
 
 [istio](https://istio.io/) "extends Kubernetes to establish a programmable, application-aware network."
@@ -238,7 +244,6 @@ See https://github.com/FairwindsOps/goldilocks/tree/master/hack/manifests
 Install istio [using helm charts](https://istio.io/latest/docs/setup/install/helm/):
 
 Waypoint: [Istio Ambient Waypoint Proxy Made Simple](https://istio.io/latest/blog/2023/waypoint-proxy-made-simple/)
-
 
 ### karpenter
 
@@ -252,16 +257,15 @@ After upgrade switch to [NodePool](https://karpenter.sh/docs/concepts/nodepools/
 
 Provisioner support for `startupTaints` [was introduced here](https://github.com/aws/karpenter-provider-aws/pull/1727/files#diff-2c69c72fde894934cc12653ad83dd785de50f123b5e5c8e4ff8d33b1c01af87a).
 
-
 ### keda
 
 [KEDA](https://keda.sh/docs/2.16/scalers/aws-sqs/) is a Kubernetes-based Event Driven Autoscaler. With KEDA, you can drive the scaling of any container in Kubernetes based on the number of events needing to be processed.
 
 Autoscaling by:
 
-* CPU
-* SQS: https://keda.sh/docs/2.16/scalers/aws-sqs
-* Kafka: https://keda.sh/docs/2.16/scalers/apache-kafka
+- CPU
+- SQS: https://keda.sh/docs/2.16/scalers/aws-sqs
+- Kafka: https://keda.sh/docs/2.16/scalers/apache-kafka
 
 ### langsmith
 
@@ -269,8 +273,8 @@ Followed https://docs.smith.langchain.com/self_hosting
 
 Installed via helm with a chart from:
 
-* https://github.com/langchain-ai/helm/blob/main/README.md
-* https://langchain-ai.github.io/helm/charts/langsmith/
+- https://github.com/langchain-ai/helm/blob/main/README.md
+- https://langchain-ai.github.io/helm/charts/langsmith/
 
 ### llm-proxy
 
@@ -284,6 +288,7 @@ Endpoints:
 - Web UI: open-webui.[account]
 
 Available Models: Azure
+
 - gpt-o3-mini
 - gpt-o1
 - gpt-o1-mini
@@ -299,7 +304,6 @@ Installed using [helm chart](https://artifacthub.io/packages/helm/metrics-server
 
 ### milvus
 
-
 ### n8n
 
 https://github.com/8gears/n8n-helm-chart
@@ -311,28 +315,26 @@ e.g., CSI secret provider and otel, are already running.
 
 How this works:
 
-* [karpenter `startupTaints`](https://karpenter.sh/docs/concepts/nodepools/)
-are used to have the nodes started with the taint `nodetaint/notready`.
-* infrastructure pods are configured with `nodetaint/notready` tolerations
-which allows them to start on the newly started nodes.  Other pods without such
-tolerations are NOT scheduled on the new nodes.
-* this [nodetaint](https://github.com/wish/nodetaint/) controller removes a
-pre-configured taint `nodetaint/notready` from a node after the daemonsets
-annotated with `nodetaint/system-critical` are running on the node.  This
-ensures that the system critical daemonsets are running on a node before it can
-run any other pods.
-
+- [karpenter `startupTaints`](https://karpenter.sh/docs/concepts/nodepools/)
+  are used to have the nodes started with the taint `nodetaint/notready`.
+- infrastructure pods are configured with `nodetaint/notready` tolerations
+  which allows them to start on the newly started nodes. Other pods without such
+  tolerations are NOT scheduled on the new nodes.
+- this [nodetaint](https://github.com/wish/nodetaint/) controller removes a
+  pre-configured taint `nodetaint/notready` from a node after the daemonsets
+  annotated with `nodetaint/system-critical` are running on the node. This
+  ensures that the system critical daemonsets are running on a node before it can
+  run any other pods.
 
 We mark the following daemonsets as system critical:
 
-* `vault-csi-provider`
-* `istio-cni-node`
-* `istio-ztunnel`
+- `vault-csi-provider`
+- `istio-cni-node`
+- `istio-ztunnel`
 
 TODO:
 
-* also mark as system critical `opentelemetry-operator-collector-daemonset`
-
+- also mark as system critical `opentelemetry-operator-collector-daemonset`
 
 ### platform-insights
 
@@ -340,7 +342,7 @@ TODO:
 
 ### secrets-store-csi
 
-This namespace is defined elsewhere.  We only add DatadogMonitor's.
+This namespace is defined elsewhere. We only add DatadogMonitor's.
 
 ### slack-group-updater
 
@@ -393,7 +395,6 @@ Velero is scheduled to perform backup daily, namespaces (specifically `vault`) a
 the namespace to backup.
 
 Backup Destination is an s3 bucket `velero-<cluster-name>-<cluster-region>-<cluster-accountId>`
-
 
 ### vertical-pod-autoscaler
 

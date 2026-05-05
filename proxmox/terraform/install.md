@@ -5,7 +5,6 @@
 From
 [tutorial](https://learn.hashicorp.com/tutorials/terraform/install-cli):
 
-
 ```sh
 apt -y install lsb-release software-properties-common
 ```
@@ -17,11 +16,13 @@ curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
 ```
 
 Add the repo:
+
 ```sh
 apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 ```
 
 Install Terraform:
+
 ```sh
 apt update && apt install -y terraform
 ```
@@ -29,23 +30,23 @@ apt update && apt install -y terraform
 ## Use API-keys for Authentication
 
 1. Create a datacenter user. In the Datacenter/Permissions/User add,
-e.g. `alex`, realm: Linux PAM.
+   e.g. `alex`, realm: Linux PAM.
 
-2. Verify in Proxmox console using `pveum user list`
+1. Verify in Proxmox console using `pveum user list`
 
-3. Create a new API token. In the Datacenter/Permissions/API Tokens, add:
+1. Create a new API token. In the Datacenter/Permissions/API Tokens, add:
 
-* user: `alex@pam`
-* token id: `new_token_id`
-* privilege separation:  unchecked
-* Secret fuji: `ebf02232-ec86-480c-acdf-4e83fed2c2e6`
-* Secret suprox: `edf8b941-c633-48f2-bc70-9bf5dea85668`
+- user: `alex@pam`
+- token id: `new_token_id`
+- privilege separation: unchecked
+- Secret fuji: `ebf02232-ec86-480c-acdf-4e83fed2c2e6`
+- Secret suprox: `edf8b941-c633-48f2-bc70-9bf5dea85668`
 
 4. add a role `PVEAdmin` to the newly created user `alex`:
-`pveum acl modify  / --roles PVEAdmin --users alex@pam`
+   `pveum acl modify  / --roles PVEAdmin --users alex@pam`
 
-* user permission - Path=/storage/local-lvm, User=asokolsky@pam, Role=Administrator,
-Propagate=true
+- user permission - Path=/storage/local-lvm, User=asokolsky@pam, Role=Administrator,
+  Propagate=true
 
 ## Terraform Basic Info and Provider Installation
 

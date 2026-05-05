@@ -9,24 +9,31 @@
 Use [7-zip](https://www.7-zip.org/), package named `p7zip` in `brew` or `apt`.
 
 To run a single-thread benchmark:
+
 ```sh
 7z b -mmt1
 ```
+
 or
+
 ```sh
 /usr/bin/time -f "Elapsed: %es, CPU: %P" bash -c "cat</dev/urandom|head -c 1G|gzip>/dev/null"
 ```
 
 To run a multi-thread benchmark:
+
 ```sh
 7z b
 ```
+
 or
+
 ```sh
 /usr/bin/time -f "Elapsed: %es, CPU: %P" bash -c "cat</dev/urandom|head -c 1G|pigz>/dev/null"
 ```
 
 Examples:
+
 ```
 alex@exi > 7z b
 
@@ -56,7 +63,9 @@ Dict     Speed Usage    R/U Rating  |      Speed Usage    R/U Rating
 Avr:     60674  1098   5801  63717  |     449440  1181   3314  39147
 Tot:            1140   4558  51432
 ```
+
 or
+
 ```
 alex@exi > /usr/bin/time -f "Elapsed: %es, CPU: %P" bash -c "cat</dev/urandom|head -c 1G|gzip > /dev/null"
 Elapsed: 22.95s, CPU: 115%
@@ -86,6 +95,7 @@ Benchmarking CPU...
 1073741824 bytes (1.1 GB, 1.0 GiB) copied, 1.90138 s, 565 MB/s
 cd573cfaace07e7949bc0c46028904ff  -
 ```
+
 Apparently using `dd` is a [bad
 idea](https://www.unixmen.com/how-to-measure-disk-performance-with-fio-and-ioping/).
 

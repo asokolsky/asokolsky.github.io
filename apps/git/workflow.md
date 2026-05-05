@@ -6,12 +6,15 @@ This is part of the [development cycle](/software-engineering/development-cycle.
 
 Presumably, you did:
 
-* start with the latest version of the trunk:
+- start with the latest version of the trunk:
+
 ```sh
 git checkout main
 git pull
 ```
-* proceed with creating a feature branch:
+
+- proceed with creating a feature branch:
+
 ```sh
 git checkout -b feature
 ```
@@ -28,6 +31,7 @@ git pull
 git checkout feature
 git merge main
 ```
+
 If conflicts arise, resolve them and continue the merge.
 
 ## Rebase
@@ -40,6 +44,7 @@ git pull
 git checkout feature
 git rebase main
 ```
+
 If conflicts arise, resolve them and continue the rebase.
 
 ## Publish it

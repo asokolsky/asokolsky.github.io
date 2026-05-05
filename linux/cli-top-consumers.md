@@ -4,9 +4,8 @@ See [performance-monitoring.sh](https://github.com/100daysofdevops/100daysofdevo
 
 Note the differences in the way CPU consumption is measured:
 
-* `ps`: [CPU usage is .. expressed as the percentage of time spent running during the entire lifetime of a process](https://man7.org/linux/man-pages/man1/ps.1.html#NOTES).
-* `top`: [The task's share of the elapsed CPU time since the last screen update, expressed as a percentage of total CPU time](https://man7.org/linux/man-pages/man1/top.1.html#3._FIELDS_/_Columns).
-
+- `ps`: [CPU usage is .. expressed as the percentage of time spent running during the entire lifetime of a process](https://man7.org/linux/man-pages/man1/ps.1.html#NOTES).
+- `top`: [The task's share of the elapsed CPU time since the last screen update, expressed as a percentage of total CPU time](https://man7.org/linux/man-pages/man1/top.1.html#3._FIELDS_/_Columns).
 
 Hence, `ps` gives you historical value, in contrast to the instanteneous value
 given by `top`.
@@ -17,20 +16,24 @@ given by `top`.
 
 Note:
 
-* the need for `-n 2`.
-* the delay time (here 0.2 seconds) heavily impacts the measurement.
-Increase to 0.4 gives the result closer to what `top` displays interactively.
+- the need for `-n 2`.
+- the delay time (here 0.2 seconds) heavily impacts the measurement.
+  Increase to 0.4 gives the result closer to what `top` displays interactively.
 
 By pid:
+
 ```sh
 top -b -n 2 -d 0.2 -p _pid_ | tail -1 | awk '{print $9}'
 ```
+
 By name:
+
 ```sh
 top -b -n 2 -d 0.2 -p `pidof -s _pname_` | tail -1 | awk '{print $9}'
 ```
 
 If the process has multiple instances:
+
 ```sh
 #!/usr/bin/env bash
 #
@@ -59,6 +62,7 @@ ps -eo pcpu,pid,user,args | sort -k 1 -r | head -n 5
 ```
 
 ## Top 5 Processes by Memory
+
 ```sh
 ps -eo pmem,pid,user,args | sort -k 1 -r | head -n 5
 ```
@@ -66,6 +70,7 @@ ps -eo pmem,pid,user,args | sort -k 1 -r | head -n 5
 ## Top 5 Processes by I/O
 
 Assumes `iotop`.
+
 ```sh
 sudo iotop -o -b -n 5
 ```
@@ -73,6 +78,7 @@ sudo iotop -o -b -n 5
 ## Top 5 Processes by Network I/O
 
 Assumes `iftop`.
+
 ```sh
 sudo iftop -P -n -t -s 5
 ```

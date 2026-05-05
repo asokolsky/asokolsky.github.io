@@ -13,6 +13,7 @@ Install [OpenShell](https://github.com/NVIDIA/OpenShell):
 ```sh
 curl -LsSf https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh | sh
 ```
+
 which gives:
 
 ```
@@ -38,6 +39,7 @@ curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
 which gives:
+
 ```
 alex@exi > curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 [INFO]  === NemoClaw Installer ===

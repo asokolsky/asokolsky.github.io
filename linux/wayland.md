@@ -14,7 +14,7 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"
 
 Alternatively install `dconf-editor` and make this change interactively.
 
-Tried.  Did not work.
+Tried. Did not work.
 
 ### Use keyd
 

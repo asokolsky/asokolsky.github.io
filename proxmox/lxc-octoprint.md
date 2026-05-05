@@ -7,16 +7,16 @@ an [LXC](mjpg-streamer-lxc.html) container.
 
 ## Sources
 
-* [Setting-up OctoPrint](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian-or-raspberry-pi-os/2337)
+- [Setting-up OctoPrint](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian-or-raspberry-pi-os/2337)
 
 ## Create an LXC Container
 
-* Name: `octo`
-* cores: 2
-* RAM: 1GB
-* HDD: 32GB
-* Network: accept defaults, pick a fixed IP address
-* Template: ubuntu 20.04
+- Name: `octo`
+- cores: 2
+- RAM: 1GB
+- HDD: 32GB
+- Network: accept defaults, pick a fixed IP address
+- Template: ubuntu 20.04
 
 Pass through the USB ports for controller and webcam connection.
 
@@ -25,6 +25,7 @@ Pass through the USB ports for controller and webcam connection.
 Create user to run octoprint, say pi:
 
 Add user/group pi
+
 ```sh
 adduser pi
 usermod -a -G adm,sudo,tty,dialout pi
@@ -33,12 +34,14 @@ usermod -a -G adm,sudo,tty,dialout pi
 ## Install Dependencies
 
 Update OS, install dependencies:
+
 ```sh
 apt update
 apt upgrade
 apt install python3-pip python3-dev python3-setuptools python3-venv \
     git libyaml-dev build-essential
 ```
+
 ## Install OctoPrint
 
 As user `pi`, create python venv:
@@ -57,9 +60,11 @@ pip install octoprint
 ```
 
 For some plugins this is important:
+
 ```sh
 pip install wheel setuptools
 ```
+
 ## Test Start
 
 You should be able to start the OctoPrint server using:
@@ -77,16 +82,19 @@ Should be available on `http://octo:5000`.
 ## Automatic Start-up
 
 Setup the start-up script:
+
 ```sh
 wget https://github.com/OctoPrint/OctoPrint/raw/master/scripts/octoprint.service && sudo mv octoprint.service /etc/systemd/system/octoprint.service
 ```
 
 Enable it:
+
 ```sh
 sudo systemctl enable octoprint.service
 ```
 
 `/etc/systemd/system/octoprint.service`:
+
 ```
 [Unit]
 Description=The snappy web interface for your 3D printer
@@ -108,16 +116,15 @@ WantedBy=multi-user.target
 
 In the UI, under Settings > Commands, configure the following commands:
 
-* Restart OctoPrint: `sudo service octoprint restart`
-* Restart system: `sudo shutdown -r now`
-* Shutdown system: `sudo shutdown -h now`
+- Restart OctoPrint: `sudo service octoprint restart`
+- Restart system: `sudo shutdown -r now`
+- Shutdown system: `sudo shutdown -h now`
 
 ## Passthrough USB port(s) and tty to the OctoPrint Container
 
-* [Passthrough USB port to an LXC Container](https://medium.com/@konpat/usb-passthrough-to-an-lxc-proxmox-15482674f11d)
-* https://forum.proxmox.com/threads/usb-passthrough-to-a-container-lxc.101741/
-* https://gist.github.com/crundberg/a77b22de856e92a7e14c81f40e7a74bd
-
+- [Passthrough USB port to an LXC Container](https://medium.com/@konpat/usb-passthrough-to-an-lxc-proxmox-15482674f11d)
+- https://forum.proxmox.com/threads/usb-passthrough-to-a-container-lxc.101741/
+- https://gist.github.com/crundberg/a77b22de856e92a7e14c81f40e7a74bd
 
 Identify the USB port and tty to pass through:
 
@@ -139,9 +146,9 @@ crw-rw---- 1 root dialout 166, 0 Dec 27 12:34 /dev/ttyACM0
 
 Now we know that:
 
-* we need to pass through `Bus 001 Device 005`
-* the vendor is `2c99` and the product is `0002`
-* note cgroup is `166`
+- we need to pass through `Bus 001 Device 005`
+- the vendor is `2c99` and the product is `0002`
+- note cgroup is `166`
 
 My `octoprint` lxc ID is `103`, so I did:
 
@@ -161,16 +168,19 @@ lxc.mount.entry: /lxc/<id>/devices/ttyACM0 dev/ttyACM0 none bind,optional,create
 ```
 
 Edit `/etc/udev/rules.d/50-usb.rules`:
+
 ```
 SUBSYSTEM=="tty", ATTRS{idVendor}=="2c99", ATTRS{idProduct}=="0002", MODE="0666", SYMLINK+="prusa"
 ```
 
 And then:
+
 ```
 udevadm control --reload-rules && service udev restart && udevadm trigger
 ```
 
-Restart the container.  Then in the container:
+Restart the container. Then in the container:
+
 ```
 root@octo:~# lsusb
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub

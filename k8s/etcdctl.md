@@ -12,11 +12,11 @@ etcdctl set key1 val1
 
 More commands:
 
-* etcdctl backup
-* etcdctl cluster-health
-* etcdctl mk
-* etcdctl mkdir
-* etcdctl set
+- etcdctl backup
+- etcdctl cluster-health
+- etcdctl mk
+- etcdctl mkdir
+- etcdctl set
 
 ## etcdctl v3
 
@@ -25,12 +25,13 @@ export ETCDCTL_API=3
 etcdctl put key1 val1
 etcdctl get key1
 ```
+
 More commands:
 
-* etcdctl snapshot save
-* etcdctl endpoint health
-* etcdctl get
-* etcdctl put
+- etcdctl snapshot save
+- etcdctl endpoint health
+- etcdctl get
+- etcdctl put
 
 ## Take a snapshot
 
@@ -39,15 +40,16 @@ More commands:
 ```sh
 etcdctl snapshot save -h
 ```
+
 and keep a note of the mandatory global options.
 
 Since our ETCD database is TLS-Enabled, the following options are mandatory:
 
-* --cacert - verify certificates of TLS-enabled secure servers using this CA bundle
-* --cert - identify secure client using this TLS certificate file
-* --endpoints=[127.0.0.1:2379] - the default, as ETCD is running on master node
-and exposed on localhost 2379.
-* --key - identify secure client using this TLS key file
+- --cacert - verify certificates of TLS-enabled secure servers using this CA bundle
+- --cert - identify secure client using this TLS certificate file
+- --endpoints=[127.0.0.1:2379] - the default, as ETCD is running on master node
+  and exposed on localhost 2379.
+- --key - identify secure client using this TLS key file
 
 ## Restore from a snapshot
 

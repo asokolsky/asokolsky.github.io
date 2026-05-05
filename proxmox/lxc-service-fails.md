@@ -1,6 +1,7 @@
 # Service Fails in an LXC
 
 Observed:
+
 ```
 root@unicon:~# systemctl list-units --state=failed
   UNIT                    LOAD   ACTIVE SUB    DESCRIPTION
@@ -33,7 +34,9 @@ Notice: journal has been rotated since unit was started, output may be incomplet
 Resolution from: https://www.enricobassetti.it/2023/05/proxmox-lxc-systemd-and-linux-capabilities/
 
 Edit `/etc/pve/lxc/1003.conf` and add:
+
 ```
 lxc.cap.drop: "sys_rawio"
 ```
+
 Restart the LXC.

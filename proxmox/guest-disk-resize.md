@@ -14,7 +14,7 @@ sudo cfdisk
 
 Verify with `lsblk`.
 
-Then resize the file system.  For ext4:
+Then resize the file system. For ext4:
 
 ```sh
 sudo resize2fs /dev/sda3

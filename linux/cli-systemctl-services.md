@@ -12,21 +12,25 @@ systemctl list-units --type=service | grep running
 ```
 
 or:
+
 ```sh
 systemctl list-units --type=service --state=running
 ```
 
 Show the units which failed to start:
+
 ```sh
 systemctl list-units --state=failed
 ```
 
 To list all the service units installed in the file system, not only the loaded:
+
 ```sh
 sudo systemctl list-unit-files --type=service
 ```
 
 To list only enabled service units:
+
 ```sh
 systemctl list-unit-files --type=service --state=enabled
 ```
@@ -51,7 +55,7 @@ systemctl show sshd.service -p ControlGroup
 ControlGroup=/system.slice/sshd.service
 ```
 
-##  View Service Dependencies
+## View Service Dependencies
 
 ```sh
 systemctl list-dependencies _service-name_
@@ -69,9 +73,9 @@ journalctl --no-pager -u _service-name_
 
 Service actions:
 
-* Boot-time: `enable` and `disable`, used to control the service at boot time.
-* Run-time: `start`, `stop`, `restart`, and `reload`, used to control the
-service on-demand.
+- Boot-time: `enable` and `disable`, used to control the service at boot time.
+- Run-time: `start`, `stop`, `restart`, and `reload`, used to control the
+  service on-demand.
 
 ### Start Service
 
@@ -122,21 +126,21 @@ systemctl is-enabled UNIT_NAME.service
 ### Disable the Service
 
 To disable the service at boot, run:
+
 ```sh
 sudo systemctl disable UNIT_NAME.service
 ```
-This will remove the symlink that has created earlier for the service unit.
 
+This will remove the symlink that has created earlier for the service unit.
 
 ## systemd unit file
 
 There are three main directories where unit files are stored:
 
-* `/usr/lib/systemd/system/` - for files dropped when the package is installed;
-* `/run/systemd/system/` - for files created at run time;
-* `/etc/systemd/system/` - for files created by `systemctl enable` command
-as well as unit files added for extending a service.
-
+- `/usr/lib/systemd/system/` - for files dropped when the package is installed;
+- `/run/systemd/system/` - for files created at run time;
+- `/etc/systemd/system/` - for files created by `systemctl enable` command
+  as well as unit files added for extending a service.
 
 ### Show the unit file
 
@@ -175,21 +179,27 @@ opens it in your text editor. Add new parameters to the unit file and the new
 parameters will be added to the existing service file when the file saved.
 
 To apply changes made to the unit:
+
 ```sh
 sudo systemctl daemon-reload
 ```
+
 This reloads all unit files and recreates the entire dependency tree.
 To restart the service alone:
+
 ```sh
 sudo systemctl restart _service_
 ```
 
 If you change `/lib/systemd/system/<servicename>.service` and restart the
 service via
+
 ```sh
 systemctl restart <servicename>.service
 ```
+
 it will not load the new settings unless you do:
+
 ```sh
 systemctl daemon-reload
 ```

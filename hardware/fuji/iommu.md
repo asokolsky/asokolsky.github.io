@@ -1,12 +1,14 @@
 # Fuji IOMMU
 
 Use
+
 ```sh
 cat /proc/cmdline; for d in /sys/kernel/iommu_groups/*/devices/*; do \
     n=${d#*/iommu_groups/*}; n=${n%%/*}; printf 'IOMMU group %s ' "$n"; lspci -nns "${d##*/}"; done
 ```
 
 Output:
+
 ```
 BOOT_IMAGE=/boot/vmlinuz-6.5.11-8-pve root=/dev/mapper/pve-root ro quiet intel_iommu=on
 IOMMU group 0 00:00.0 Host bridge [0600]: Intel Corporation Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers [8086:5918] (rev 05)

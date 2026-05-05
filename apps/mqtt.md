@@ -14,10 +14,10 @@ CLI clients
 
 These are some MQTT clients:
 
-* on linux: [psmqtt](https://github.com/eschava/psmqtt)
-* on rpi: https://github.com/Sennevds/system_sensors
+- on linux: [psmqtt](https://github.com/eschava/psmqtt)
+- on rpi: https://github.com/Sennevds/system_sensors
 
 MQTT Device Discovery:
 
-* [MQTT Discovery](https://www.home-assistant.io/docs/mqtt/discovery/)
-* [MQTT Device Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
+- [MQTT Discovery](https://www.home-assistant.io/docs/mqtt/discovery/)
+- [MQTT Device Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)

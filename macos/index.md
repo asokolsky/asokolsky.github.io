@@ -2,36 +2,36 @@
 
 MacOS:
 
-* [Features, Tips and Tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
-* [reset](reset.html)
+- [Features, Tips and Tricks](https://apple.stackexchange.com/questions/400/please-share-your-hidden-macos-features-or-tips-and-tricks)
+- [reset](reset.html)
 
 ## Boot Options
 
 Mac with Apple silicon [startup key combinations](https://support.apple.com/en-us/102603):
 
-* Turn on your Mac, hold the power button until `Loading startup options` appears.
-* Release the power button.  The screen shows the startup disks and Options.
-* Select disk and hold shift for an option to boot in Safe Mode.
-* Options allows to use macOS Recovery, and more.
+- Turn on your Mac, hold the power button until `Loading startup options` appears.
+- Release the power button. The screen shows the startup disks and Options.
+- Select disk and hold shift for an option to boot in Safe Mode.
+- Options allows to use macOS Recovery, and more.
 
 ## Disk
 
 Repair disk using:
 
-* [Disk Utility](https://support.apple.com/en-us/102611),
-[Disk Utility User Guide](https://support.apple.com/guide/disk-utility/welcome/mac)
-* [Stellar Data Recovery](https://www.stellarinfo.com/blog/repair-corrupt-mac-partition/)
+- [Disk Utility](https://support.apple.com/en-us/102611),
+  [Disk Utility User Guide](https://support.apple.com/guide/disk-utility/welcome/mac)
+- [Stellar Data Recovery](https://www.stellarinfo.com/blog/repair-corrupt-mac-partition/)
 
 Alternatively, using CLI:
 
-* boot into a single-user mode: press and hold the Command+S keys while MacOS boots.
-* use [diskutil and fsck](https://appleinsider.com/inside/macos/tips/how-to-use-fsck-to-check-and-repair-macos-disks)
+- boot into a single-user mode: press and hold the Command+S keys while MacOS boots.
+- use [diskutil and fsck](https://appleinsider.com/inside/macos/tips/how-to-use-fsck-to-check-and-repair-macos-disks)
 
 ## Optimizing input
 
-* Differentiate touch pad and mouse scroll direction using [scroll reverser](https://pilotmoon.com/scrollreverser/).
-* use of [keyboard](keyboard.html)
-* use of [keyboard in finder](finder.html)
+- Differentiate touch pad and mouse scroll direction using [scroll reverser](https://pilotmoon.com/scrollreverser/).
+- use of [keyboard](keyboard.html)
+- use of [keyboard in finder](finder.html)
 
 ## Optimizing monitor
 
@@ -40,26 +40,28 @@ Alternatively, using CLI:
 ## Running Apps on Mac
 
 For any software development install [Command Line Tools](https://developer.apple.com/library/archive/technotes/tn2339/):
+
 ```sh
 xcode-select --install
 ```
 
 Then:
-* [homebrew](https://brew.sh/)
-* [btop](https://github.com/aristocratos/btop) or htop
-* cli: [exiftool](/apps/cli-exiftool.html), and [more...](cli.html)
-* [iTerm2](iTerm2.html) Terminal Emulator
-* [stats](https://github.com/exelban/stats)
-* [Java](java.html)
-* [Jenkins](jenkins.html)
-* [docker](/apps/docker/docker-macos.html) and [colima](/apps/docker/colima.html)
-* [psql client](/apps/psql-client.html)
+
+- [homebrew](https://brew.sh/)
+- [btop](https://github.com/aristocratos/btop) or htop
+- cli: [exiftool](/apps/cli-exiftool.html), and [more...](cli.html)
+- [iTerm2](iTerm2.html) Terminal Emulator
+- [stats](https://github.com/exelban/stats)
+- [Java](java.html)
+- [Jenkins](jenkins.html)
+- [docker](/apps/docker/docker-macos.html) and [colima](/apps/docker/colima.html)
+- [psql client](/apps/psql-client.html)
 
 Also relevant:
 
-* [dot-files](/apps/dot-files/)
-* [emacs colors](/apps/emacs/)
-* [application cleanup](app-cleanup.html)
+- [dot-files](/apps/dot-files/)
+- [emacs colors](/apps/emacs/)
+- [application cleanup](app-cleanup.html)
 
 ## Terminal Peculiarities
 
@@ -81,6 +83,7 @@ cchars: discard = ^O; dsusp = ^Y; eof = ^D; eol = <undef>;
 ```
 
 The above [interferes with AWS SM](https://github.com/aws/session-manager-plugin/issues/29). Workaround:
+
 ```sh
 # Allow for Ctrl+S, Ctrl+Y to be used in SSM
 stty stop undef;stty dsusp undef

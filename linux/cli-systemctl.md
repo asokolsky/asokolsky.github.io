@@ -4,7 +4,7 @@
 [systemd](https://www.linux.org/docs/man1/systemd.html).
 Reasonable [intro](https://skyyy.hashnode.dev/systemctl-linux-command).
 
-The pager defaults to `less`.  To disable it use `--no-pager` or
+The pager defaults to `less`. To disable it use `--no-pager` or
 `export SYSTEMD_PAGER=`.
 
 [How to manage systemd units with systemctl](https://www.2daygeek.com/linux-systemctl-command-manage-systemd-units-service/)
@@ -31,24 +31,23 @@ slice
 scope
 ```
 
-Unit Type|File Extension|Description
----------|--------------|-----------
-Device|.device|A device file recognized by the kernel.
-Mount|.mount|A file system mount point.
-Service|.service|A service on the system, including instructions for starting, restarting, and stopping the service.
-Socket|.socket|A network socket associated with a service.
-Swap|.swap|A swap device or a swap file.
-Target|.target|It replaces sysV init run levels that control system boot.
-Timer|.timer|A systemd timer.
-
+| Unit Type | File Extension | Description                                                                                         |
+| --------- | -------------- | --------------------------------------------------------------------------------------------------- |
+| Device    | .device        | A device file recognized by the kernel.                                                             |
+| Mount     | .mount         | A file system mount point.                                                                          |
+| Service   | .service       | A service on the system, including instructions for starting, restarting, and stopping the service. |
+| Socket    | .socket        | A network socket associated with a service.                                                         |
+| Swap      | .swap          | A swap device or a swap file.                                                                       |
+| Target    | .target        | It replaces sysV init run levels that control system boot.                                          |
+| Timer     | .timer         | A systemd timer.                                                                                    |
 
 ## Types of Daemons
 
 There are 3 types of daemons:
 
-* services
-* sockets
-* paths
+- services
+- sockets
+- paths
 
 To see the system's processes in each:
 
@@ -60,6 +59,7 @@ systemctl list-units --type=socket --state=LOAD
 systemctl list-units --type=path --all
 systemctl list-unit-files
 ```
+
 e.g.
 
 ```sh
@@ -67,6 +67,7 @@ systemctl
 ```
 
 Also check out:
+
 ```sh
 systemctl list-unit-files
 ```

@@ -12,7 +12,7 @@ brew install aws-vault
 
 ## Configuration
 
-Login into your IAM AWS account using MFA.  If you just set it up, log out and
+Login into your IAM AWS account using MFA. If you just set it up, log out and
 then login back.
 
 ### Generate Access Keys
@@ -20,24 +20,27 @@ then login back.
 [Generate the keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)
 for your IAM user:
 
-* in AWS console click `Create Access Key` button, select CLI option, confirm
-your choice, enter descriptive tag.
-* Click `Create Access Key`
-* Save values for `Access key` and `Secret access key` for use with `aws-vault`.
-* Save your MFA arn - it looks like `arn:aws:iam::981970545799:mfa/_username_`.
+- in AWS console click `Create Access Key` button, select CLI option, confirm
+  your choice, enter descriptive tag.
+- Click `Create Access Key`
+- Save values for `Access key` and `Secret access key` for use with `aws-vault`.
+- Save your MFA arn - it looks like `arn:aws:iam::981970545799:mfa/_username_`.
 
 ### Update `~/.aws/config`
 
 Create a new profile by running
+
 ```sh
 aws-vault add <PROFILE_NAME>
 ```
+
 where `PROFILE_NAME` is chosen by you and can be anything.
 
-Paste in your access key and secret key when prompted.  These will be stored
+Paste in your access key and secret key when prompted. These will be stored
 in your macos keychain.
 
 Update the `~/.aws/config`, replace the vars in `<>` with the appropriate values:
+
 ```ini
 [default]
 region=us-east-1
@@ -64,11 +67,13 @@ mfa_serial = <MFA_ARN>
 ## Usage
 
 Create a sub-shell for use with cli utils, e.g. aws or k9s:
+
 ```sh
 aws-vault exec --duration=12h dev-from-security
 ```
 
 Open an AWS console in your browser by entering in the sub-shell:
+
 ```sh
 aws-vault login
 ```

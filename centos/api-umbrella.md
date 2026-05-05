@@ -3,7 +3,6 @@
 Big picture:
 https://github.com/NREL/api-umbrella/wiki/Deployment
 
-
 ## Install
 
 Follow instructions from https://apiumbrella.io/install/

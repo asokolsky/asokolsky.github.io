@@ -6,7 +6,7 @@ LXC container.
 
 ## Create an LXC
 
-I created a debian-based LSC.  Because there is a need to compile sources,
+I created a debian-based LSC. Because there is a need to compile sources,
 I allocated 2 cores and 2GB of RAM.
 
 ## Build mjpg-streamer
@@ -16,7 +16,7 @@ apt-get update
 apt-get install git cmake gcc g++
 ```
 
-Package `libjpeg8-dev` was not found.  Instead I did:
+Package `libjpeg8-dev` was not found. Instead I did:
 
 `apt-get install libjpeg-dev`
 
@@ -27,6 +27,7 @@ apt-get install ffmpeg v4l-utils psmisc
 ```
 
 Then:
+
 ```sh
 git clone https://github.com/jacksonliam/mjpg-streamer.git
 ```
@@ -64,6 +65,7 @@ crw-rw-r-- 1 root root 189, 10 Feb  4 16:16 /dev/bus/usb/001/011
 
 Set the owner of `/dev/bus/usb/001/011` on pve node to the unprivileged uid of
 your container (100000 by default):
+
 ```sh
 chown 100000:100000 /dev/bus/usb/001/011
 ```
@@ -81,9 +83,9 @@ root@suprox:~# chown 100000:100044 /dev/video0
 
 Now we know that:
 
-* we need to pass through `Bus 001 Device 011`
-* the vendor is `0c45` and the product is `636b`
-* note cgroup is `189`
+- we need to pass through `Bus 001 Device 011`
+- the vendor is `0c45` and the product is `636b`
+- note cgroup is `189`
 
 My `mjpg-streamer` lxc ID is `108`.
 Edit `/etc/pve/lxc/108.conf`, and add the following lines:
@@ -123,7 +125,9 @@ ioctl: VIDIOC_ENUM_FMT
         [0]: 'MJPG' (Motion-JPEG, compressed)
         [1]: 'YUYV' (YUYV 4:2:2)
 ```
+
 or even
+
 ```
 # v4l2-ctl --list-formats-ext
 ioctl: VIDIOC_ENUM_FMT
@@ -184,7 +188,6 @@ ioctl: VIDIOC_ENUM_FMT
                 Size: Discrete 1920x1080
                         Interval: Discrete 0.200s (5.000 fps)
 ```
-
 
 ## Service Configuration
 
@@ -249,11 +252,13 @@ Remove reference to `vcgencmd`
 ### Fix `mjpgStart`
 
 Test for MJPG support is broken:
+
 ```
 MJPG_TEST=$(echo "$VIDEO_TEST" | /bin/grep "'MJPG'")
 ```
 
 Calculation for best resolution and framerate is broken:
+
 ```
 BEST_WIDTH=$WEBCAM_WIDTH
 BEST_HEIGHT=$WEBCAM_HEIGHT

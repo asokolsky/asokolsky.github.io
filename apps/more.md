@@ -7,6 +7,7 @@ https://upscayl.org/
 ```sh
 sudo snap install upscayl
 ```
+
 ```sh
 flatpak install flathub org.upscayl.Upscayl
 ```

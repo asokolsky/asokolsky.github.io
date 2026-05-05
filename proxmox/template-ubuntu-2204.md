@@ -18,6 +18,7 @@ virt-customize -a /var/lib/vz/template/iso/ubuntu-22.04-minimal-cloudimg-amd64.i
 ## Crete a VM
 
 Use [qm](https://pve.proxmox.com/pve-docs/qm.1.html) to create the VM:
+
 ```
 qm create 9001 --name ubuntu-2204-cloudinit-template --memory 1024  --cpu cputype=host --cores 2 --sockets 1 --net0 virtio,bridge=vmbr0 --ostype l26
 qm importdisk 9001 ubuntu-22.04-minimal-cloudimg-amd64.img local-lvm

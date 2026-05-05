@@ -14,16 +14,13 @@ it looks like VIRTIO SCSI, NOT single, `iotread=1` is the best.
 
 ### Hard Disk
 
-
 Cache: `Write back` for best performance. `No cache` default is safer, but slower.
 
 Discard: Check, to optimally use disk space (TRIM).
 
 IO Thread: Check
 
-
 ## Network Performance
-
 
 ### Network Device
 
@@ -34,6 +31,7 @@ Model: `VirtIO (paravirtualized)`
 [How to Use ethtool Command with Examples](https://linuxopsys.com/topics/ethtool-command).
 
 Identify NIC name:
+
 ```console
 alex@kdesktop:~$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -50,7 +48,8 @@ alex@kdesktop:~$ ip a
        valid_lft forever preferred_lft forever
 ```
 
-Now you know that `enp6s18` is the device name.  Display this interface details:
+Now you know that `enp6s18` is the device name. Display this interface details:
+
 ```
 alex@kdesktop:~$ ethtool enp6s18
 Settings for enp6s18:
@@ -74,6 +73,7 @@ netlink error: Operation not permitted
 ```
 
 Display the interface information, such as driver name:
+
 ```
 alex@kdesktop:~$ ethtool -i enp6s18
 driver: virtio_net
@@ -90,13 +90,12 @@ supports-priv-flags: no
 
 ## Benchmarks
 
-
 ### Browser
 
 http://speed-battle.com/speedtest_e.php
 
-Platform|Calculate|Store|Render|OVERALL SCORE
---------|---------|-----|------|--
-Bare Latitude + FireFox mint-001 - 1.0|186.18|132.13|143.72|462.03
-VM i440fx + FireFox canonical-002 - 1.0|134.3|256|182.04|572.34
-VM q35 + FireFox canonical-002 - 1.0|212.78|252.06|180.04|644.88
+| Platform                                | Calculate | Store  | Render | OVERALL SCORE |
+| --------------------------------------- | --------- | ------ | ------ | ------------- |
+| Bare Latitude + FireFox mint-001 - 1.0  | 186.18    | 132.13 | 143.72 | 462.03        |
+| VM i440fx + FireFox canonical-002 - 1.0 | 134.3     | 256    | 182.04 | 572.34        |
+| VM q35 + FireFox canonical-002 - 1.0    | 212.78    | 252.06 | 180.04 | 644.88        |

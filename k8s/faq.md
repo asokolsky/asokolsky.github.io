@@ -2,7 +2,6 @@
 
 From [kubernetes-10-questions-to-test-your-understanding](https://medium.com/@rifewang/kubernetes-10-questions-to-test-your-understanding-of-k8s-c2860c9f3cbf).
 
-
 ## 1. In a cluster with two nodes, one with pods and the other without, which node will a new pod be scheduled to?
 
 The scheduling process involves several stages:

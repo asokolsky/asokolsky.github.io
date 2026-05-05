@@ -13,7 +13,7 @@ In AWS Console select: Route 53 / Hosted zones / (private) prestaging.company.io
 
 Domain verification name
 
-_lvkl5bv0sifyinyqqfm0
+\_lvkl5bv0sifyinyqqfm0
 Domain verification value
 
 vpce:3ABP7H3z1B1sxpY0Bwel

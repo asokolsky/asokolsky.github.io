@@ -103,6 +103,7 @@ To add targets: sudo emacs /etc/prometheus/prometheus.yml
 ```
   targets: ['localhost:9090', '192.168.1.1:9100']
 ```
+
 Then restart prometheus:
 
 ```

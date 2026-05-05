@@ -1,6 +1,7 @@
 # TrueNAS Scale and Quick Assist
 
 Note the presence of the QuickAssist co-processor:
+
 ```
 > lspci -v
 ...

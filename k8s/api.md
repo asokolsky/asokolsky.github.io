@@ -7,6 +7,7 @@ https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/
 ## Examples
 
 get api groups:
+
 ```
 > curl https://kube-master:6443/
 {
@@ -20,7 +21,9 @@ get api groups:
     ]
 }
 ```
+
 And then within a group show resource groups:
+
 ```
 > curl https://kube-master:6443/apis -k | grep name
   "name": "extensions",
@@ -29,6 +32,7 @@ And then within a group show resource groups:
 ```
 
 get version
+
 ```
 > curl https://kube-master:6443/version
 {
@@ -42,6 +46,7 @@ get version
 ## Core Functionality
 
 get pods:
+
 ```
 curl https://kube-master:6443/api/v1/pods
 {
@@ -51,15 +56,16 @@ curl https://kube-master:6443/api/v1/pods
 }
 ```
 
-## Use kubectl API proxy to provide authentication
+## Use kubectl API proxy for authentication
 
 To use credentials from `~/.kube/config`:
+
 ```
 > kubectl proxy
 Starting to server on 127.0.0.1:8001
 ```
 
-##
+## API Resources
 
 ```sh
 kubectl api-resources --namespaced=false

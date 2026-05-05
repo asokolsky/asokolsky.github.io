@@ -23,7 +23,7 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
     - targets: ['localhost:9090']
-    
+
   - job_name: 'grafana'
     static_configs:
     - targets: ['localhost:3000']
@@ -31,11 +31,11 @@ scrape_configs:
   - job_name: 'node_exporter'
     static_configs:
     - targets: ['localhost:9100']
-    
+
   - job_name: 'wmi_exporter'
     static_configs:
     - targets: ['exi:9182']
-    
+
   - job_name: 'victoria-metrics'
     static_configs:
     - targets: ['localhost:8428']

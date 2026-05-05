@@ -3,6 +3,7 @@
 ## WavPack -> flac
 
 Use [ffmpeg](/apps/ffmpeg.html) to convert [WavPack](https://wiki.multimedia.cx/index.php/WavPack) to [flac](https://en.wikipedia.org/wiki/FLAC):
+
 ```sh
 ffmpeg -i audiofile.wv audiofile.flac
 ```
@@ -12,11 +13,13 @@ ffmpeg -i audiofile.wv audiofile.flac
 From [CUE_Splitting](https://wiki.archlinux.org/title/CUE_Splitting).
 
 1. Install [cuetools](https://github.com/svend/cuetools) and `shntool`, [man shntool](https://manpages.debian.org/testing/shntool/shnsplit.1.en.html):
+
 ```sh
 sudo apt install cuetools shntool
 ```
 
 2. To split flac:
+
 ```sh
 shnsplit -f file.cue -t %n-%t -o flac file.flac
 ```
@@ -34,11 +37,13 @@ for fn in *.flac; \
 ## Merge MP3 Files
 
 0. Install `mp3wrap`:
+
 ```sh
 sudo apt install mp3wrap
 ```
 
 1. Verify the wildcard:
+
 ```
 > ls -la 0000[2-7].mp3
 -rw-rw-r-- 1 alex alex 6010297 Mar 31 10:39 00002.mp3
@@ -50,6 +55,7 @@ sudo apt install mp3wrap
 ```
 
 2. Use the wildcard from the first step to pass the files to `mp3wrap`:
+
 ```
 > mp3wrap chapter01.mp3 0000[2-7].mp3
 Mp3Wrap Version 0.5 (2003/Jan/16). See README and COPYING for more!
@@ -74,18 +80,22 @@ Use mp3splt to dewrap file; download at http://mp3splt.sourceforge.net!
 Use [ffmpeg concat demuxer](https://trac.ffmpeg.org/wiki/Concatenate#demuxer).
 
 Create `files.txt` using e.g.:
+
 ```sh
 for f in *.mp3; do echo "file '$f'" >> files.txt; done
 ```
 
 `files.txt`:
+
 ```
 # this is a comment
 file 'path/to/chapter1.mp3'
 file 'path/to/chapter2.mp3'
 file 'path/to/chapter3.mp3'
 ```
+
 Concatenate the files:
+
 ```sh
 ffmpeg -f concat -safe 0 -i files.txt -c copy -vn output.mp3
 ```
@@ -93,6 +103,7 @@ ffmpeg -f concat -safe 0 -i files.txt -c copy -vn output.mp3
 ## mp3 -> m4b
 
 1. Prepare `metadata.txt`:
+
 ```
 ;METADATA1
 title=Book Name
@@ -110,6 +121,7 @@ title=Intro
 Repeat the `[CHAPTER]` block for each chapter, specifying the START and END times in milliseconds.
 
 2. Convert MP3 into M4B:
+
 ```sh
 ffmpeg -i "some.mp3" -i metadata.txt -map_metadata 1 -codec copy -f mp4 some.m4b
 ```
@@ -117,4 +129,4 @@ ffmpeg -i "some.mp3" -i metadata.txt -map_metadata 1 -codec copy -f mp4 some.m4b
 ### Add Cover Art to m4b
 
 1. Create a cover image (optional): If you want to include cover art, save it as `cover.jpg` in the same directory as your MP3s.
-2. Add cover art using a tool like Kid3 or other tag editors.
+1. Add cover art using a tool like Kid3 or other tag editors.

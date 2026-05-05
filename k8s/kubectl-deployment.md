@@ -10,6 +10,7 @@ kubectl create deployment --image=nginx nginx
 ```
 
 To generate a deployment YAML file:
+
 ```sh
 kubectl create deployment nginx --image=nginx nginx --replicas=4 \
     --dry-run=client -o yaml > nginx-deployment.yaml

@@ -15,7 +15,6 @@ provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: WaitForFirstConsumer
 ```
 
-
 ## AWS EBS
 
 https://kubernetes.io/docs/concepts/storage/storage-classes/#aws-ebs

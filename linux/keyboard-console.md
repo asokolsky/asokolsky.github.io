@@ -2,7 +2,7 @@
 
 [Overall context](keyboard.html).
 
-To switch to a console: `Ctrl`+`Alt`+`F1`...`F6`.  To switch back:
+To switch to a console: `Ctrl`+`Alt`+`F1`...`F6`. To switch back:
 `Ctrl`+`Alt`+`F7`.
 
 The rest is about manipulating keymap, e.g. to swap `CapsLock` with `Ctrl`.
@@ -26,13 +26,13 @@ sudo dumpkeys > backup.kmap
 
 Use `sudo showkey` to learn the keycodes:
 
-
-* Left Ctrl - 29, denoted `Control`
-* CapsLock - 58, denoted `CtrlL_Lock`
+- Left Ctrl - 29, denoted `Control`
+- CapsLock - 58, denoted `CtrlL_Lock`
 
 ## Create a new keymap
 
 Create file `swap-capslock-ctrl.kmap`:
+
 ```
 keymaps 0-127
 keycode  29 = CtrlL_Lock

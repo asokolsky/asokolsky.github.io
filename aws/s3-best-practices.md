@@ -20,5 +20,4 @@ resource "aws_s3_bucket_ownership_controls" "test" {
 }
 ```
 
-
 Also: [Disable bucket ACL(s) in a given AWS account](https://repost.aws/questions/QUGvjWqwpuQ-S8bs6pDTecJA/disable-bucket-acl-s-in-a-given-aws-account).

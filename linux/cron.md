@@ -13,6 +13,7 @@ Also relevant [systemd timers](https://wiki.archlinux.org/title/Systemd/Timers)
 ## Logs
 
 Because cron runs as a service:
+
 ```sh
 journalctl -u cron
 ```
@@ -24,6 +25,7 @@ cat /var/log/syslog|grep cron
 ## Example
 
 To shutdown at night `/etc/cron.d/good_night`:
+
 ```
 #
 # shutdown this machine at 0:55
@@ -32,6 +34,7 @@ To shutdown at night `/etc/cron.d/good_night`:
 ```
 
 To cancel such shutdown just do:
+
 ```sh
 sudo shutdown -c
 ```

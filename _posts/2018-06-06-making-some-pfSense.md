@@ -4,44 +4,42 @@ tags: hardware
 ---
 
 Not that I really need it, but an idea of getting rid the household of ads was
-compelling enough.  So I got myself a little "industrial PC", added a stick of
+compelling enough. So I got myself a little "industrial PC", added a stick of
 RAM and mSATA SSD from an old laptop and installed pfSense in no time!
 
 <p align="center" width="100%">
     <img width="100%" src="/img/router0447.jpg">
 </p>
 
-
-As you can see, a SATA cable is provided - this is important because the other end uses a proprietary connector.  This cable created a rattling noise which made me worry when I first got my hands on the box.  The cable goes unused.
+As you can see, a SATA cable is provided - this is important because the other end uses a proprietary connector. This cable created a rattling noise which made me worry when I first got my hands on the box. The cable goes unused.
 
 <p align="center" width="100%">
     <img width="100%" src="/img/router0448.jpg">
 </p>
 
-
-The enclosure is all metal, and there are no moving parts inside.  The CPU heat-sink is touching external wall of the enclosure - you can see the PCB is flexing noticeably.
+The enclosure is all metal, and there are no moving parts inside. The CPU heat-sink is touching external wall of the enclosure - you can see the PCB is flexing noticeably.
 
 There are 4 Intel NICs onboard!
 pfSense assigns names in a somewhat unexpected manner:
 
-Port#|pfSense Default Assignment
------|------
-1|Internet
-2|Opt2
-3|Opt1
-4|LAN
+| Port# | pfSense Default Assignment |
+| ----- | -------------------------- |
+| 1     | Internet                   |
+| 2     | Opt2                       |
+| 3     | Opt1                       |
+| 4     | LAN                        |
 
 <p align="center" width="100%">
     <img width="100%" src="/img/router0452.jpg">
 </p>
 
-mSATA SSD and RAM installed.  There is a slot for a WiFi card which I left unpopulated.  I rely on Ubiquity Access Point for that.
+mSATA SSD and RAM installed. There is a slot for a WiFi card which I left unpopulated. I rely on Ubiquity Access Point for that.
 
 <p align="center" width="100%">
     <img width="100%" src="/img/router0454.jpg">
 </p>
 
-Power supply brick.  Very unimpressive.
+Power supply brick. Very unimpressive.
 It idles at 7W, spikes to 14W.
 
 pfSense installation went smoothly, all components were recognized during the

@@ -8,20 +8,22 @@ Benefits: allows for the specific patterns that improve the efficiency, modulari
 
 ## Common Multi-Container Pod Patterns
 
-* Sidecar Pattern: used for tasks such as logging, monitoring, or proxying, the sidecar pattern involves an auxiliary container that supports the primary container.
-* Adapter Pattern: helps to adapt and transform data between the main container and external systems or storage.
-* Ambassador Pattern: used to handle network traffic and act as a proxy for external communications.
+- Sidecar Pattern: used for tasks such as logging, monitoring, or proxying, the sidecar pattern involves an auxiliary container that supports the primary container.
+- Adapter Pattern: helps to adapt and transform data between the main container and external systems or storage.
+- Ambassador Pattern: used to handle network traffic and act as a proxy for external communications.
 
 ## Init Containers
 
 Init Containers are special containers that run before the main application containers in a pod. They help set up required conditions, such as downloading files, initializing databases, or ensuring the environment is ready before the main application starts.
 
 Use Cases of Init Containers:
-* Dependency Setup: Pull required images or libraries.
-* Configuration Validation: Validate that all configurations are in place.
-* Database Initialization: Set up databases or perform migrations before the app starts.
+
+- Dependency Setup: Pull required images or libraries.
+- Configuration Validation: Validate that all configurations are in place.
+- Database Initialization: Set up databases or perform migrations before the app starts.
 
 Example configuration with an Init Container that runs a command to ensure that a specific database is ready:
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -36,4 +38,5 @@ spec:
   - name: main-app
     image: nginx
 ```
+
 The Init Container (init-db) checks if a service named database is accessible. Only once this check is complete does the main application container (nginx) start.

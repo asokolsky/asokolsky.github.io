@@ -2,49 +2,51 @@
 
 ## Application Setup and Use
 
-* [dot files](dot-files/) and [fonts](fonts.html)
-* [exiftool](cli-exiftool.html)
-* [frigate nvr](frigate/)
-* [Home Assistant](home-assistant/)
-* [mqtt](mqtt.html)
-* [LDAP & AD search](cli-ldap.html)
-* [psql-client](psql-client.html)
-* [smb-client](smb-client.html)
-* Wireguard [in-a-cloud](wireguard-in-a-cloud.html),
-[on-a-router](wireguard-on-a-router.html)
-* [ZFS setup and commands](zfs/)
-* [zsh](zsh/)
+- [dot files](dot-files/) and [fonts](fonts.html)
+- [exiftool](cli-exiftool.html)
+- [frigate nvr](frigate/)
+- [Home Assistant](home-assistant/)
+- [mqtt](mqtt.html)
+- [LDAP & AD search](cli-ldap.html)
+- [psql-client](psql-client.html)
+- [smb-client](smb-client.html)
+- Wireguard [in-a-cloud](wireguard-in-a-cloud.html),
+  [on-a-router](wireguard-on-a-router.html)
+- [ZFS setup and commands](zfs/)
+- [zsh](zsh/)
 
 Infrastructure:
-* [API Gateways](api-gateways.html)
-* [docker](docker/)
-* [Java VM Tuning](java-vm.html)
-* [k8s and kubectl](/k8s/)
-* [Prometheus & Grafana](prometheus-grafana.html)
-* [terraform](terraform.html) and [terragrunt](terragrunt.html)
+
+- [API Gateways](api-gateways.html)
+- [docker](docker/)
+- [Java VM Tuning](java-vm.html)
+- [k8s and kubectl](/k8s/)
+- [Prometheus & Grafana](prometheus-grafana.html)
+- [terraform](terraform.html) and [terragrunt](terragrunt.html)
 
 Programming:
-* [git](git/)
-* [make and Makefile](make/)
-* [mise](mise/)
-* [pypi](pypi.html)
-* [ruby](ruby.html)
-* templating using [gomplate](gomplate.html), [jsonnet](/programming/jsonnet/)
-* [Visual Studio Code](vscode/)
+
+- [git](git/)
+- [make and Makefile](make/)
+- [mise](mise/)
+- [pypi](pypi.html)
+- [ruby](ruby.html)
+- templating using [gomplate](gomplate.html), [jsonnet](/programming/jsonnet/)
+- [Visual Studio Code](vscode/)
 
 Video Tools:
 
-* [DaVinci Resolve](davinci-resolve/)
-* [Handbrake](handbrake.html)
-* [kdenlive](kdenlive/)
-* [OBS](obs/)
-* [VLC](vlc/)
+- [DaVinci Resolve](davinci-resolve/)
+- [Handbrake](handbrake.html)
+- [kdenlive](kdenlive/)
+- [OBS](obs/)
+- [VLC](vlc/)
 
 ## Cheat Sheets
 
-* [docker](docker/docker.html)
-* [emacs](emacs/)
-* [kubectl](/k8s/kubectl.html)
-* [slack](slack/)
-* [tmux](tmux/)
-* [vi](vi.html)
+- [docker](docker/docker.html)
+- [emacs](emacs/)
+- [kubectl](/k8s/kubectl.html)
+- [slack](slack/)
+- [tmux](tmux/)
+- [vi](vi.html)

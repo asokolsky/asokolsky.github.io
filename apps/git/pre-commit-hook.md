@@ -2,12 +2,12 @@
 
 References:
 
-* [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-* [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
-* [pre-commit](https://pre-commit.com/#intro), [repo](https://github.com/pre-commit/pre-commit)
-* [commitizen](https://commitizen-tools.github.io/commitizen/)
-* [ripsecrets](https://github.com/sirwart/ripsecrets)
-* [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
+- [pre-commit](https://pre-commit.com/#intro), [repo](https://github.com/pre-commit/pre-commit)
+- [commitizen](https://commitizen-tools.github.io/commitizen/)
+- [ripsecrets](https://github.com/sirwart/ripsecrets)
+- [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
 
 You can install pre-commit globally or into venv.
 

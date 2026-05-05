@@ -1,7 +1,6 @@
-
 # MQTT Mosquitto in an LXC Container
 
-Another option - [install it in a container]().
+Another option - [install it in a container](<>).
 
 ## Install Broker in an LXC Container
 
@@ -83,6 +82,7 @@ socket_domain ipv4
 Restart is with `systemctl restart mosquitto`.
 
 Verify:
+
 ```
 root@mqtt:/etc/mosquitto# lsof|grep mos
 
@@ -90,11 +90,9 @@ mosquitto 460                     mosquitto    5u     IPv4           16233252   
 
 ```
 
-
 ## Client
 
 Following http://www.steves-internet-guide.com/mosquitto_pub-sub-clients/
-
 
 Install with `sudo apt-get install mosquitto-clients`.
 

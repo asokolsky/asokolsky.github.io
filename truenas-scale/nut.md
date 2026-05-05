@@ -47,9 +47,10 @@ Mar 26 17:51:50 nass upsd[748828]: User upsmon@::ffff:127.0.0.1 logged into UPS 
 
 ## Configuration
 
-Configured via GUI.  Which results in....
+Configured via GUI. Which results in....
 
 `/etc/nut/ups.conf`:
+
 ```
 [ups]
         driver = usbhid-ups
@@ -58,17 +59,20 @@ Configured via GUI.  Which results in....
 ```
 
 `/etc/nut/nut.conf`:
+
 ```
 MODE=netserver
 ```
 
 `/etc/nut/upsd.conf`:
+
 ```
 LISTEN 0.0.0.0 3493
 LISTEN ::0 3493
 ```
 
 `/etc/nut/upsd.users`:
+
 ```
 [upsmon]
         password = UpsMon
@@ -76,6 +80,7 @@ LISTEN ::0 3493
 ```
 
 `/etc/nut/upsmon.conf`:
+
 ```
 MONITOR ups@localhost:3493 1 upsmon UpsMon MASTER
 NOTIFYCMD /usr/sbin/upssched
@@ -142,6 +147,7 @@ ups.vendorid: 051d
 ```
 
 List supported commands:
+
 ```
 > upscmd -l ups
 Instant commands supported on UPS [ups]:
@@ -169,6 +175,7 @@ Unexpected response from upsd: ERR ACCESS-DENIED
 ## Battery Maintenance
 
 Read values:
+
 ```
 # upsrw -u upsmon -p UpsMon ups
 [battery.charge.low]
@@ -215,11 +222,13 @@ Value: 20
 ```
 
 After the battery is updated, update the `battery.mfr.date` setting:
+
 ```sh
 upsrw -s battery.mfr.date=2026/03/01 -u upsmon -p UpsMon ups
 ```
 
 got:
+
 ```
 Unexpected response from upsd: ERR ACCESS-DENIED
 ```

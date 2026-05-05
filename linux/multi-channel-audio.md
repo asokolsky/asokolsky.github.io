@@ -2,7 +2,7 @@
 
 Related:
 
-* Notes on my use of [vlc media player](/apps/vlc.html)
+- Notes on my use of [vlc media player](/apps/vlc.html)
 
 ## Architecture
 
@@ -20,44 +20,44 @@ Middle level, winner: [PipeWire](https://pipewire.org/)
 
 Use:
 
-* cli: [alsactl](https://linux.die.net/man/1/alsactl),
-[aplay](https://linux.die.net/man/1/aplay)
-* config: `/etc/asound.conf`
+- cli: [alsactl](https://linux.die.net/man/1/alsactl),
+  [aplay](https://linux.die.net/man/1/aplay)
+- config: `/etc/asound.conf`
 
 Alsa multi-channel sound output via HDMI:
 
-* [How to use HDMI sound w/ alsa and alsamixer?](https://forums.gentoo.org/viewtopic-t-1094774-start-0.html)
-* [Output 5.1 AC-3 through Alsa, enabling Pulseaudio to use it](https://help.ubuntu.com/community/DigitalAC-3Pulseaudio)
-* [DTS via HDMI using pulseaudio](https://blogs.gentoo.org/mgorny/2021/07/25/getting-dts-5-1-sound-via-s-pdif-or-hdmi-using-pulseaudio/)
-
+- [How to use HDMI sound w/ alsa and alsamixer?](https://forums.gentoo.org/viewtopic-t-1094774-start-0.html)
+- [Output 5.1 AC-3 through Alsa, enabling Pulseaudio to use it](https://help.ubuntu.com/community/DigitalAC-3Pulseaudio)
+- [DTS via HDMI using pulseaudio](https://blogs.gentoo.org/mgorny/2021/07/25/getting-dts-5-1-sound-via-s-pdif-or-hdmi-using-pulseaudio/)
 
 ## Pulse Audio Use
 
 Use:
-* [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/),
-[pavucontrol](http://0pointer.de/lennart/projects/pavucontrol/)
-* [pactl](https://linux.die.net/man/1/pactl)
-* [multi-channel-playback-on-linux](https://immersiveaudioalbum.com/multi-channel-playback-on-linux/)
 
+- [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/),
+  [pavucontrol](http://0pointer.de/lennart/projects/pavucontrol/)
+- [pactl](https://linux.die.net/man/1/pactl)
+- [multi-channel-playback-on-linux](https://immersiveaudioalbum.com/multi-channel-playback-on-linux/)
 
 ## PipeWire Use
 
 Evolving middleware alternative:
 [Pipewire](https://wiki.archlinux.org/title/PipeWire):
 
-* [PipeWire](https://pipewire.org/) with [Jack](https://jackaudio.org/)
-* to get there use
-[Ubuntu Studio 23.10](https://ubuntustudio.org/ubuntu-studio-installer/)
+- [PipeWire](https://pipewire.org/) with [Jack](https://jackaudio.org/)
+- to get there use
+  [Ubuntu Studio 23.10](https://ubuntustudio.org/ubuntu-studio-installer/)
 
 ## Setting Multichannel Audio Output with ALSA
 
 Test clips
 
-* https://www.demolandia.net/cinema.html
-* https://www2.iis.fraunhofer.de/AAC/multichannel.html
-* https://drive.google.com/drive/folders/1JxmeedtAtgmoafXv9rroiDOS2vEX7N4b
+- https://www.demolandia.net/cinema.html
+- https://www2.iis.fraunhofer.de/AAC/multichannel.html
+- https://drive.google.com/drive/folders/1JxmeedtAtgmoafXv9rroiDOS2vEX7N4b
 
-Identify audio devices.  Using Alsa:
+Identify audio devices. Using Alsa:
+
 ```
 alex@exi:~$ aplay -l
 **** List of PLAYBACK Hardware Devices ****
@@ -83,6 +83,7 @@ Subdevice #0.
 
 Identify devices using pipewire
 [pw-cli](https://man.archlinux.org/man/pw-cli.1.en):
+
 ```
 alex@exi:~$ pw-cli list-objects | grep node.name
  		node.name = "Dummy-Driver"
@@ -90,12 +91,14 @@ alex@exi:~$ pw-cli list-objects | grep node.name
  		node.name = "Midi-Bridge"
  		node.name = "alsa_output.pci-0000_01_00.1.hdmi-surround"
 ```
+
 or just
+
 ```sh
 pw-cli info all
 ```
 
 ## More stuff
 
-* [Carla](https://github.com/falkTX/Carla/) audio plugin host
-* [Claudia](https://kx.studio/Applications:Claudia)
+- [Carla](https://github.com/falkTX/Carla/) audio plugin host
+- [Claudia](https://kx.studio/Applications:Claudia)

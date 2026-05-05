@@ -4,14 +4,16 @@ Based on [8 Easy Steps to Set Up Multiple GitHub Accounts](https://blog.gitguard
 
 The plan is:
 
-* use ssh authentication with repo URL being `ssh`, not `https`, e.g.:
+- use ssh authentication with repo URL being `ssh`, not `https`, e.g.:
+
 ```
 [remote "origin"]
         url = git@github.com:asokolsky/digital-scout.git
 ```
-* have a common config in `~/.gitconfig` importing, depending on the project, one of:
-* business project config in `~/Projects/.gitconfig`
-* personal project config in  `~/PersonalProjects/.gitconfig`
+
+- have a common config in `~/.gitconfig` importing, depending on the project, one of:
+- business project config in `~/Projects/.gitconfig`
+- personal project config in `~/PersonalProjects/.gitconfig`
 
 ## Common Config
 
@@ -58,6 +60,7 @@ path = ~/Projects/.gitconfig
 ## Business Config
 
 My business projects are in `~/Projects/`, with the configuration in `~/Projects/.gitconfig`:
+
 ```
 [user]
         email = asokolsky@company.com
@@ -90,6 +93,7 @@ My personal projects are in `~/PersonalProjects/`, with the configuration in `~/
 ## Testing
 
 If using ssh key to authenticate, to test the authentication status:
+
 ```
 > ssh -T git@gitlab.com
 Welcome to GitLab, @asokolsky!

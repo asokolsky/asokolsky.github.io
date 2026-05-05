@@ -49,13 +49,13 @@ Using the Proxmox GUI downloaded
 
 Choose:
 
-* host name, password,
-* pick the template,
-* disk - accept default, 8GB, this one is for OS alone,
-* Cores: 2,
-* Memory: accept the default 512M,
-* IP address: DHCP,
-* mount turnkey-linux-fileserver.
+- host name, password,
+- pick the template,
+- disk - accept default, 8GB, this one is for OS alone,
+- Cores: 2,
+- Memory: accept the default 512M,
+- IP address: DHCP,
+- mount turnkey-linux-fileserver.
 
 Do not start it yet.
 
@@ -63,7 +63,7 @@ Do not start it yet.
 
 Start at boot: Yes.
 
-Resources\Mount point (mp0): /tank, mp=/mnt/media,mountoptions=noatime
+Resources\\Mount point (mp0): /tank, mp=/mnt/media,mountoptions=noatime
 
 or edit /etc/pve/lxc/<containerID>.conf
 
@@ -71,16 +71,15 @@ or edit /etc/pve/lxc/<containerID>.conf
 mp0:/tank,mp=/mnt/media,mountoptions=noatime
 ```
 
-
 ## Configure Container in GUI
 
 Start the container. I ssh'ed as root.
 
-WebDAV (CGI):    https://192.168.10.143
-Web shell:       https://192.168.10.143:12320
-Webmin:          https://192.168.10.143:12321
-SMB/CIFS:        \\192.168.10.143 (ports 139/445)
-SSH/SFTP:        root@192.168.10.143 (port 22)
+WebDAV (CGI): https://192.168.10.143
+Web shell: https://192.168.10.143:12320
+Webmin: https://192.168.10.143:12321
+SMB/CIFS: \\192.168.10.143 (ports 139/445)
+SSH/SFTP: root@192.168.10.143 (port 22)
 
 ## LXC User/Group ID -> Hypervisor User/Group ID
 
@@ -95,7 +94,7 @@ Large file transfer in Mint Nemo from laptop to the smb share - 65MB/sec.
 smbd is observed in htop to consume 24-30% of CPU.
 Pretty disappointing.
 
-Need to review smbd network settings.  The following had little to no effect.
+Need to review smbd network settings. The following had little to no effect.
 
 ### global section
 
@@ -103,6 +102,7 @@ As [recommended](https://wiki.samba.org/index.php/Performance_Tuning) removed
 `socket options`.
 
 Added:
+
 ```
 use sendfile = yes
 aio read size = 16384
@@ -114,6 +114,7 @@ aio write size = 16384
 I decided to NOT follow
 [recommendations](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/assembly_tuning-the-performance-of-a-samba-server_monitoring-and-managing-system-status-and-performance#proc_tuning-shares-with-directories-that-contain-a-large-number-of-files_assembly_tuning-the-performance-of-a-samba-server)
 and to have the case preserved.
+
 ```
 case sensitive = true
 default case = lower

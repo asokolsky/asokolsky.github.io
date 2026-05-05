@@ -5,6 +5,7 @@
 ## Install
 
 Build and install:
+
 ```sh
 git clone https://github.com/rvaiya/keyd
 cd keyd
@@ -20,6 +21,7 @@ sudo emacs /etc/keyd/default.conf
 ```
 
 `/etc/keyd/default.conf`:
+
 ```
 [ids]
 *
@@ -33,6 +35,7 @@ capslock = layer(control)
 ## Use
 
 Run it:
+
 ```sh
 sudo make install
 sudo systemctl enable keyd --now

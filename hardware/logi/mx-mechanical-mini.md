@@ -16,17 +16,16 @@ NOTE: By default, the keyboard has direct access to Media Keys.
 
 ## LED
 
-Charge Level|Color
-------------|-----
-100%..11%   | Green
-<=10%       | Red
+| Charge Level | Color |
+| ------------ | ----- |
+| 100%..11%    | Green |
+| \<=10%       | Red   |
 
 You can continue typing for more than 500 hours without backlighting in a low battery.
 
 ## USB-C port
 
 USB-C port is for charging only. You can continue typing while the keyboard is being charged.
-
 
 ## Change backlighting effect
 

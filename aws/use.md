@@ -3,8 +3,8 @@
 Followed
 https://www.middlewareinventory.com/blog/terraform-aws-example-ec2/
 
-* add user `asokolsky`
-* attach existing policy Administrator Access
+- add user `asokolsky`
+- attach existing policy Administrator Access
 
 Got:
 

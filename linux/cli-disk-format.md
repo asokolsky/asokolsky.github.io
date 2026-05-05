@@ -39,8 +39,9 @@ tmpfs          tmpfs   3271680       120   3271560   1% /run/user/1000
 ```
 
 Observe:
-* device `/dev/nvme0n1p2` has `ext4` file system and has 79% of its space used
-* `/dev/sda1` has `vfat`  file system and has 1% of its space used.
+
+- device `/dev/nvme0n1p2` has `ext4` file system and has 79% of its space used
+- `/dev/sda1` has `vfat` file system and has 1% of its space used.
 
 ## Burn ISO
 
@@ -61,7 +62,7 @@ You may want to use
 [wipefs](https://linuxconfig.org/wipefs-linux-command-tutorial-with-examples) to
 "not only erase existing signatures on a device, but also to create a report,
 which includes them without performing any modification."
-[Man page](https://man7.org/linux/man-pages/man8/wipefs.8.html).  E.g.:
+[Man page](https://man7.org/linux/man-pages/man8/wipefs.8.html). E.g.:
 
 ```sh
 sudo wipefs /dev/sda
@@ -104,21 +105,25 @@ Number  Start   End     Size    Type     File system  Flags
 ```
 
 To create `msdos` partition table:
+
 ```sh
 sudo parted /dev/sda --script -- mklabel msdos
 ```
 
 For a regular HDD/SSD:
+
 ```sh
 sudo parted /dev/sdc --script -- mklabel gpt
 ```
 
 Create a primary partition of type fat32 taking all the space:
+
 ```sh
 sudo parted /dev/sda --script -- mkpart primary fat32 1MiB 100%
 ```
 
 Alternatively for ZFS:
+
 ```sh
 sudo parted /dev/sdc --script -- mkpart primary zfs 1MiB 100%
 ```
@@ -126,11 +131,13 @@ sudo parted /dev/sdc --script -- mkpart primary zfs 1MiB 100%
 ## Format it
 
 Format disk as exfat:
+
 ```sh
 sudo mkfs.exfat -n LABEL /dev/sda1
 ```
 
 As vfat:
+
 ```sh
 sudo mkfs.vfat -F32 /dev/sda1
 ```
@@ -138,6 +145,7 @@ sudo mkfs.vfat -F32 /dev/sda1
 ## fsck
 
 Depends on the file system used in the previous step, e.g.:
+
 ```sh
 sudo fsck.exfat /dev/sda1
 ```

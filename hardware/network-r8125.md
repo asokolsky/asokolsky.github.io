@@ -31,6 +31,7 @@ root@pmox3:~# dmesg | grep r8169
 ```
 
 Yet:
+
 ```
 root@pmox3:~# ethtool enp1s0
 netlink error: failed to retrieve link settings
@@ -46,6 +47,7 @@ Settings for enp1s0:
 ## Attempt to blacklist r8169
 
 Let's try to replace the driver:
+
 ```
 root@pmox3:~# cat /etc/modprobe.d/pve-blacklist.conf
 # This file contains a list of modules which are not supported by Proxmox VE

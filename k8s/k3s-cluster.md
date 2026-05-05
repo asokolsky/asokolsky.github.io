@@ -11,18 +11,19 @@ OS goes on `sda`, NVME disk left for later use...
 
 Today a better choice would be [Talos Linux](talos.html)
 
-Host|IP
-----|-
-LB|192.168.10.16
-g4tzrz2|192.168.10.17
-g50zrz2|192.168.10.18
-j01ydx2|192.168.10.19
+| Host    | IP            |
+| ------- | ------------- |
+| LB      | 192.168.10.16 |
+| g4tzrz2 | 192.168.10.17 |
+| g50zrz2 | 192.168.10.18 |
+| j01ydx2 | 192.168.10.19 |
 
 ## OS Customization
 
-Should have done this later in ansible.  But still:
+Should have done this later in ansible. But still:
 
 Install packages:
+
 ```sh
 sudo apt install ethtool emacs-nox htop lm-sensors nvme-cli cpufrequtils sysstat
 ```
@@ -30,7 +31,7 @@ sudo apt install ethtool emacs-nox htop lm-sensors nvme-cli cpufrequtils sysstat
 ### Delay at Grub Splash
 
 I see a 10s delay on grub splash, yet `/etc/default/grub` has `GRUB_TIMEOUT=0`.
-I set it to 1, then `sudo update-grub2`.  That did the job.
+I set it to 1, then `sudo update-grub2`. That did the job.
 
 ### 10s+ Boot Delay at "Wait for Network to be Configured"
 
@@ -48,8 +49,8 @@ network:
       optional: true
   version: 2
 ```
-I added `optional: true` to the 2nd NIC.  That did the job.
 
+I added `optional: true` to the 2nd NIC. That did the job.
 
 ## Install K3S on to the cluster
 
@@ -57,6 +58,7 @@ Cloned [k3s-ansible](https://github.com/techno-tim/k3s-ansible).
 [Walk-through](https://www.youtube.com/watch?v=S_pp_nc5QuI).
 
 1. Edit `ansible.cfg`:
+
 ```
 [defaults]
 inventory = inventory/my-cluster/hosts.ini
@@ -66,6 +68,7 @@ become = True
 ```
 
 2. Edit `hosts.ini`:
+
 ```
 [master]
 192.168.10.17
@@ -77,13 +80,14 @@ become = True
 
 3. Edit `inventory/my-cluster/group_vars/all.yaml`
 
-
 Then
+
 ```sh
 ansible-playbook site.yml --ask-become-pass
 ```
 
 After the install a LB is available - `192.168.10.16` is bound by `g4tzrz2`:
+
 ```
 alex@latitude7490:~/Projects/lan960/ > ansible cluster -m command -a "ip address show eno1"
 g4tzrz2 | CHANGED | rc=0 >>
@@ -116,13 +120,14 @@ j01ydx2 | CHANGED | rc=0 >>
 
 ## Install kubectl & helm on laptop
 
-* Followed
-[instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
-to install `kubectl` on a laptop;
-* created `~/.kube/config` by copying `/root/.kube/config` from the cluster
-node.
+- Followed
+  [instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+  to install `kubectl` on a laptop;
+- created `~/.kube/config` by copying `/root/.kube/config` from the cluster
+  node.
 
 Then:
+
 ```
 alex@latitude7490:~/ > kubectl get nodes -o wide
 NAME      STATUS   ROLES                       AGE   VERSION        INTERNAL-IP     EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
@@ -138,6 +143,7 @@ and installed `helm`.
 ## Test nginx Deploy
 
 Deploy the sample:
+
 ```
 alex@latitude7490:~/Projects/k3s-ansible/example/ > kubectl apply -f deployment.yml
 deployment.apps/nginx created
@@ -146,6 +152,7 @@ service/nginx created
 ```
 
 Query cluster:
+
 ```
 alex@latitude7490:~/ > kubectl get deploy -o wide
 NAME    READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES         SELECTOR
@@ -171,7 +178,9 @@ Followed [instructions](https://technotim.live/posts/rancher-ha-install/):
 ```sh
 kubectl create namespace cattle-system
 ```
+
 To verify:
+
 ```
 alex@latitude7490:~/ > kubectl get namespace
 NAME              STATUS   AGE
@@ -182,6 +191,5 @@ kube-public       Active   17h
 kube-system       Active   17h
 metallb-system    Active   17h
 ```
-
 
 ## Install Longhorn for HA Persistent Volumes

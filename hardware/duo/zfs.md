@@ -1,6 +1,6 @@
 # Playing with ZFS on SSDs
 
-No longer used.  Consider this totally obsolete.
+No longer used. Consider this totally obsolete.
 
 4 SSDs added:
 
@@ -27,6 +27,7 @@ zpool create btr -o ashift=12 mirror \
 ```
 
 List pools:
+
 ```
 root@duo:~# zpool list
 NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
@@ -34,6 +35,7 @@ btr    111G   108K   111G        -         -     0%     0%  1.00x    ONLINE  -
 ```
 
 Pool status:
+
 ```
 root@duo:~# zpool status btr
   pool: btr
@@ -120,17 +122,19 @@ btr   feature@draid                  enabled                        local
 
 Note:
 
-* btr   feature@lz4_compress           active                         local
+- btr feature@lz4_compress active local
 
 ### Dataset
 
 Create a dataset with the
 [best attribute values](https://jrs-s.net/2018/08/17/zfs-tuning-cheat-sheet/):
+
 ```sh
 zfs create -o atime=off -o xattr=sa -o recordsize=64K btr/dset
 ```
 
 Note the effect of `atime=off` present in dataset and not in the pool:
+
 ```
 root@duo:~# mount |grep btr
 btr on /btr type zfs (rw,xattr,noacl)
@@ -216,23 +220,26 @@ btr/dset  pbkdf2iters           0                      default
 btr/dset  special_small_blocks  0                      default
 ```
 
-
 ### Benchmarking
 
 Test writing:
+
 ```
 root@duo:~# dd if=/dev/zero of=/btr/dset/file.out bs=4096 count=1000000 oflag=direct
 1000000+0 records in
 1000000+0 records out
 4096000000 bytes (4.1 GB, 3.8 GiB) copied, 10.8795 s, 376 MB/s
 ```
+
 File created:
+
 ```
 root@duo:~# ls -la /btr/dset/file.out
 -rw-r--r-- 1 root root 4096000000 Apr  6 13:40 /btr/dset/file.out
 ```
 
 Test reading:
+
 ```
 root@duo:~# dd if=/btr/dset/file.out of=/dev/null bs=4096
 1000000+0 records in

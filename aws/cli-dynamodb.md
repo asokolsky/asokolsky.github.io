@@ -17,6 +17,7 @@ aws dynamodb describe-table --table-name table-name
 ## get-item
 
 [reference](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/get-item.html)
+
 ```
 > aws dynamodb get-item --table-name image-versions \
     --key '{"image":{"S":"docker.io/alex/test/dev"}}'
@@ -35,7 +36,6 @@ aws dynamodb describe-table --table-name table-name
 ## query
 
 [reference](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/query.html)
-
 
 ## scan
 

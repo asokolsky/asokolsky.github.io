@@ -3,14 +3,14 @@
 This is about working with targets.
 [Other aspects of systemctl](cli-systemctl.html).
 
-
 ## List Targets
-
 
 ```sh
 systemctl list-units --type=target
 ```
+
 or
+
 ```sh
 systemctl list-unit-files --type=target
 ```
@@ -52,14 +52,13 @@ In rescue mode the system tries to mount all the local file systems and start
 only few important system services, but it does not activate network interfaces
 or allow more users to log into the system at the same time.
 
-
 ## Boot the system in Emergency mode
 
 If the Rescue/Single User mode does not boot, try Emergency mode.
 
 In emergency mode, the system mounts the root file system for read-only purposes
 and does not attempt to load any other local file systems. Network interfaces
-are not activated.  Only essential services are started.
+are not activated. Only essential services are started.
 
 ```sh
 sudo systemctl emergency
@@ -72,9 +71,11 @@ systemctl also allows users to `halt`, `shutdown` and `reboot` a system.
 ```sh
 sudo systemctl halt
 ```
+
 ```sh
 sudo systemctl poweroff
 ```
+
 ```sh
 $ sudo systemctl reboot
 ```

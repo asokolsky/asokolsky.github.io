@@ -7,7 +7,6 @@ Here are a few examples of [ethtool](https://en.wikipedia.org/wiki/Ethtool) use.
 ethtool is being supplanted by [nmcli](https://linux.die.net/man/1/nmcli), cli
 to [NetworkManager](https://en.wikipedia.org/wiki/NetworkManager).
 
-
 ## List interfaces
 
 ```sh
@@ -98,60 +97,64 @@ supports-priv-flags: no
 Use `ethtool -S enp1s0` or, better yet,  `watch -d "ethtool -S eno1"`.
 
 ```
+
 root@pmox3:~# ethtool -S enp1s0
 NIC statistics:
-     tx_packets: 12
-     rx_packets: 5625
-     tx_errors: 0
-     rx_errors: 0
-     rx_missed: 0
-     align_errors: 0
-     tx_single_collisions: 0
-     tx_multi_collisions: 0
-     unicast: 0
-     broadcast: 2206
-     multicast: 3419
-     tx_aborted: 0
-     tx_underrun: 0
-     tx_octets: 1694
-     rx_octets: 1310239
-     rx_multicast64: 0
-     tx_unicast64: 1
-     tx_broadcast64: 0
-     tx_multicast64: 11
-     tx_pause_on: 0
-     tx_pause_off: 0
-     tx_pause_all: 0
-     tx_deferred: 0
-     tx_late_collision: 0
-     tx_all_collision: 0
-     tx_aborted32: 0
-     align_errors32: 0
-     rx_frame_too_long: 0
-     rx_runt: 0
-     rx_pause_on: 0
-     rx_pause_off: 0
-     rx_pause_all: 0
-     rx_unknown_opcode: 0
-     rx_mac_error: 0
-     tx_underrun32: 0
-     rx_mac_missed: 0
-     rx_tcam_dropped: 0
-     tdu: 0
-     rdu: 0
+tx_packets: 12
+rx_packets: 5625
+tx_errors: 0
+rx_errors: 0
+rx_missed: 0
+align_errors: 0
+tx_single_collisions: 0
+tx_multi_collisions: 0
+unicast: 0
+broadcast: 2206
+multicast: 3419
+tx_aborted: 0
+tx_underrun: 0
+tx_octets: 1694
+rx_octets: 1310239
+rx_multicast64: 0
+tx_unicast64: 1
+tx_broadcast64: 0
+tx_multicast64: 11
+tx_pause_on: 0
+tx_pause_off: 0
+tx_pause_all: 0
+tx_deferred: 0
+tx_late_collision: 0
+tx_all_collision: 0
+tx_aborted32: 0
+align_errors32: 0
+rx_frame_too_long: 0
+rx_runt: 0
+rx_pause_on: 0
+rx_pause_off: 0
+rx_pause_all: 0
+rx_unknown_opcode: 0
+rx_mac_error: 0
+tx_underrun32: 0
+rx_mac_missed: 0
+rx_tcam_dropped: 0
+tdu: 0
+rdu: 0
+
 ```
 
 ## NIC test
 
 ```
+
 root@pmox3:~# ethtool -t eno1
 The test result is PASS
 The test extra info:
-Register test  (offline)         0
-Eeprom test    (offline)         0
-Interrupt test (offline)         0
-Loopback test  (offline)         0
-Link test   (on/offline)         0
+Register test (offline) 0
+Eeprom test (offline) 0
+Interrupt test (offline) 0
+Loopback test (offline) 0
+Link test (on/offline) 0
+
 ```
 
 

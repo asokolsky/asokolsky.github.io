@@ -4,6 +4,6 @@
 
 To find the changes done to an AWS object:
 
-* Event history
-* Select Resource Name
-* Paste object ID
+- Event history
+- Select Resource Name
+- Paste object ID

@@ -1,4 +1,3 @@
-
 ```
 alex@p52 > lspci -nnkq
 00:00.0 Host bridge [0600]: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers [8086:3ec4] (rev 07)

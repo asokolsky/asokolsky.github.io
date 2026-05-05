@@ -1,9 +1,9 @@
 # jq
 
-* [Repo](https://github.com/stedolan/jq)
-* [Manual](https://stedolan.github.io/jq/manual/)
-* [using-jq-to-process-json](https://www.linode.com/docs/guides/using-jq-to-process-json-on-the-command-line/)
-* [cheatsheet](https://www.hackingnote.com/en/cheatsheets/jq/)
+- [Repo](https://github.com/stedolan/jq)
+- [Manual](https://stedolan.github.io/jq/manual/)
+- [using-jq-to-process-json](https://www.linode.com/docs/guides/using-jq-to-process-json-on-the-command-line/)
+- [cheatsheet](https://www.hackingnote.com/en/cheatsheets/jq/)
 
 Use along with [gron](cli-gron.html)
 
@@ -62,7 +62,7 @@ jq '.values.root_module.child_modules[0].resources[-1].values.private_key_pem' t
 ```
 
 You can also “slice” the array to show only a portion of it:
-`[first:last]`.  The first is inclusive, while the last is exclusive.
+`[first:last]`. The first is inclusive, while the last is exclusive.
 E.g. to display the first two items of an array, use `[0:2]`.
 
 ## Sorting
@@ -74,6 +74,7 @@ jq --sort-keys < foo.json
 ```
 
 Extract container environment and sort it.
+
 ```sh
 sudo docker inspect cc43cbfa4153|jq ".[0].Config.Env|sort[]"
 ```

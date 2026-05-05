@@ -6,13 +6,14 @@ Being a fork of vscode, it is easy to [migrate](https://cursor.com/docs/configur
 
 Depending on the platform, the user settings are stored in `settings.json` in the following directory:
 
-OS|Path
---|---
-Windows|`%APPDATA%\Cursor\User\`, where `%APPDATA%` is usually `C:\Users\_username_\AppData\Roaming`
-MacOS|`/Users/_username_/Library/Application Support/Cursor/User/`
-Linux|`~/.config/Cursor/User/`
+| OS      | Path                                                                                         |
+| ------- | -------------------------------------------------------------------------------------------- |
+| Windows | `%APPDATA%\Cursor\User\`, where `%APPDATA%` is usually `C:\Users\_username_\AppData\Roaming` |
+| MacOS   | `/Users/_username_/Library/Application Support/Cursor/User/`                                 |
+| Linux   | `~/.config/Cursor/User/`                                                                     |
 
 My additions to `settings.json`:
+
 ```
     "workbench.sideBar.location": "left"
 ```

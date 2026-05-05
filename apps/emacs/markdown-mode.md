@@ -2,8 +2,8 @@
 
 ## Sources:
 
-* https://jblevins.org/projects/markdown-mode/
-* https://leanpub.com/markdown-mode/read
+- https://jblevins.org/projects/markdown-mode/
+- https://leanpub.com/markdown-mode/read
 
 To install:
 

@@ -3,6 +3,7 @@
 ## Errors Identified
 
 My raidz2 zpool has errors:
+
 ```
 # zpool status
   pool: boot-pool
@@ -80,10 +81,11 @@ SCT Error Recovery Control:
 
 According to [Common Hard Drive Error Codes and Diagnostics](https://www.datarecovery.net/articles/hard-drive-sector-damage.aspx):
 
-* UNC - Uncorrectable Error
-* IDNF - Sector ID Not Found. If the sector that holds this information is corrupt there is no way for the hard drive to locate this sector and it will return the result IDNF.
+- UNC - Uncorrectable Error
+- IDNF - Sector ID Not Found. If the sector that holds this information is corrupt there is no way for the hard drive to locate this sector and it will return the result IDNF.
 
 Compare the above to `/dev/sdb`:
+
 ```
 root@nass:~# smartctl -x /dev/sdb|grep Error
 Error logging capability:        (0x01)	Error logging supported.
@@ -106,7 +108,7 @@ SCT Error Recovery Control:
 
 ### Take it offline
 
-Do it using GUI.  Shutdown the system, replace the HD
+Do it using GUI. Shutdown the system, replace the HD
 
 ### Replace the HD in GUI
 
@@ -131,11 +133,12 @@ config:
 errors: No known data errors
 ```
 
-Note the last disk is referred to by the GUID(?).  I'd rather for it to be referenced by the serial number!
+Note the last disk is referred to by the GUID(?). I'd rather for it to be referenced by the serial number!
 
 ## Replace the HD using CLI
 
 Before:
+
 ```
 alex@nass:~/ > zpool status tank
   pool: tank
@@ -155,7 +158,7 @@ config:
 errors: No known data errors
 ```
 
-Note the last disk is referred to by the GUID(?).  I'd rather for it to be referenced by the serial number.
+Note the last disk is referred to by the GUID(?). I'd rather for it to be referenced by the serial number.
 
 ### Take the HD offline
 
@@ -164,6 +167,7 @@ sudo zpool offline tank 3176c860-44e4-4b34-9591-674d2dd2203e
 ```
 
 Verify it:
+
 ```
 alex@nass:~/ > zpool status tank
   pool: tank
@@ -195,6 +199,7 @@ sudo zpool replace tank 3176c860-44e4-4b34-9591-674d2dd2203e /dev/disk/by-id/ata
 ```
 
 Verify it:
+
 ```
 alex@nass:~/ > zpool status tank
   pool: tank

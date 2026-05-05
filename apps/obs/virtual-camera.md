@@ -11,6 +11,7 @@ sudo apt install v4l2loopback-dkms
 OBS Studio will normally load the module while starting the virtual camera if the module was not already loaded. This requires a working `polkit` setup.
 
 Alternatively, you can also load the module manually:
+
 ```sh
 sudo modprobe v4l2loopback exclusive_caps=1 card_label='OBS Virtual Camera'
 ```
@@ -18,6 +19,7 @@ sudo modprobe v4l2loopback exclusive_caps=1 card_label='OBS Virtual Camera'
 You can also use `modprobe.d` conf files to automate this.
 
 Once you see `v4l2loopback` in this output:
+
 ```
 alex@duo > lsmod|grep v4
 v4l2loopback           49152  0
@@ -26,6 +28,7 @@ videodev              352256  3 videobuf2_v4l2,v4l2loopback,uvcvideo
 videobuf2_common       81920  4 videobuf2_vmalloc,videobuf2_v4l2,uvcvideo,videobuf2_memops
 mc                     81920  5 videodev,snd_usb_audio,videobuf2_v4l2,uvcvideo,videobuf2_common
 ```
+
 you can start OBS - you should see `Start Virtual Camera` Button on the right.
 
 You can now see a new v4l device `/dev/video6`:
@@ -60,6 +63,7 @@ ioctl: VIDIOC_ENUM_FMT
 ```
 
 Test it:
+
 ```sh
 vlc 'v4l2:///dev/video6:width=1920:height=1080:fps=30:chroma=YUYV'
 ```

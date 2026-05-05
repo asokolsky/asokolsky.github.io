@@ -1,6 +1,7 @@
 # AWS Simple Queue Service (SQS) CLI
 
 Save the FIFO URL:
+
 ```sh
 export QUEUE_URL=https://sqs.us-east-1.amazonaws.com/123456/fubar.fifo
 ```
@@ -16,6 +17,7 @@ aws sqs receive-message --queue-url $QUEUE_URL --attribute-names All --message-a
 ```
 
 Create a JSON message in `message.json`:
+
 ```json
 {
     "version": "0",
@@ -44,6 +46,7 @@ Create a JSON message in `message.json`:
 ```
 
 Post the JSON message to the SQS FIFO:
+
 ```
 > aws sqs send-message --queue-url $QUEUE_URL \
   --message-group-id ID --message-deduplication-id DEDUP_ID \

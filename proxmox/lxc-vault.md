@@ -14,26 +14,31 @@ apt upgrade
 Then followed https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install
 
 Install pre-requisites (updated!):
+
 ```sh
 apt install sudo gpg lsb-release
 ```
 
 Install Hashi keyring:
+
 ```sh
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | tee /usr/share/keyrings/hashicorp-archive-keyring.gpg >/dev/null
 ```
 
 Verify the fingerprint:
+
 ```sh
 gpg --no-default-keyring --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg --fingerprint
 ```
 
 Add the official HashiCorp Linux repo:
+
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 ```
 
 Finally:
+
 ```sh
 apt update
 apt install vault
@@ -103,6 +108,7 @@ listener "tcp" {
 ```
 
 Start the server:
+
 ```
 root@vault:/etc/vault.d# vault server -config=/etc/vault.d/vault.hcl
 ==> Vault server configuration:
@@ -125,6 +131,7 @@ root@vault:/etc/vault.d# vault server -config=/etc/vault.d/vault.hcl
 ```
 
 In another shell:
+
 ```
 root@vault:~# export VAULT_ADDR='http://127.0.0.1:8200'
 root@vault:~# vault operator init
@@ -149,6 +156,7 @@ existing unseal keys shares. See "vault operator rekey" for more information.
 ```
 
 For suprox:
+
 ```
 Unseal Key 1: LohsDZtVdTmwvYDyODhyGUgkmrk4OSqG1B2Bpxt3cGbE
 Unseal Key 2: XBFYvEoQYMQzNMOADL+AvANV4vyfi12ycv1fURXklzKX
@@ -161,9 +169,8 @@ Initial Root Token: hvs.iNt86WeAqzqUw6AtGmBnoOdo
 
 Now point your browser to http://vault:8200/ and
 
-* use 3 of the above keys to unseal the vault
-* sign in to Vault
-
+- use 3 of the above keys to unseal the vault
+- sign in to Vault
 
 And
 

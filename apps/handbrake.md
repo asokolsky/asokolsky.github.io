@@ -4,29 +4,28 @@
 
 Summary
 
-* Format: Matroska
-* Passthrough comon metadata: check
+- Format: Matroska
+- Passthrough comon metadata: check
 
 Dimensions
 
-* Cropping: Automatic
-
+- Cropping: Automatic
 
 Filters
 
-* *all off
+- \*all off
 
 Video
 
-* Encoder: H.265 (NVEnc)
-* Framerate: Same as source
-* Constant, not Variable
-* Quality Constant: 18
+- Encoder: H.265 (NVEnc)
+- Framerate: Same as source
+- Constant, not Variable
+- Quality Constant: 18
 
 Audio
 
-* Passthrough
+- Passthrough
 
 Subtitles
 
-* Passthrough
+- Passthrough

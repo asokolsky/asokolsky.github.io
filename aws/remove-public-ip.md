@@ -2,9 +2,9 @@
 
 Before you proceed:
 
-* If the public IP is an elastic IP - easy: do Networking/Disassociate Elastic IP Address.  Done.
-* If the EC2 instance belongs to an auto scaling group - just terminating it
-will result in a new instance being created.  The latter will NOT have public IP if configured properly.
+- If the public IP is an elastic IP - easy: do Networking/Disassociate Elastic IP Address. Done.
+- If the EC2 instance belongs to an auto scaling group - just terminating it
+  will result in a new instance being created. The latter will NOT have public IP if configured properly.
 
 The rest assumes the public IP is NOT elastic and that even short instance downtime is not acceptable.
 
@@ -14,12 +14,12 @@ Reference: [Amazon EC2 instance IP addressing](https://docs.aws.amazon.com/AWSEC
 
 The described below method involves:
 
-* Creating a new network interface 
-* Attaching the newly created interface to the ec2 instance
-* Creating a new elastic public IP
-* Associating the newly created public IP with the ec2 instance.  This will remove an old public IP from the instance.
-* Disassociating the elastic IP from the ec2 instance.  This will leave the ec2 instance with no public IP.
-* Deleting the elastic IP created before.
+- Creating a new network interface
+- Attaching the newly created interface to the ec2 instance
+- Creating a new elastic public IP
+- Associating the newly created public IP with the ec2 instance. This will remove an old public IP from the instance.
+- Disassociating the elastic IP from the ec2 instance. This will leave the ec2 instance with no public IP.
+- Deleting the elastic IP created before.
 
 By the end, the instance is left with two network interfaces and no public IP.
 If the second network interface is removed, the public IP will come back the next time the instance is restarted.
@@ -28,14 +28,14 @@ If the second network interface is removed, the public IP will come back the nex
 
 Assumptions:
 
-* aws cli is installed and you are logged in
-* the instance subnet is configured to NOT provide public IP by default.
+- aws cli is installed and you are logged in
+- the instance subnet is configured to NOT provide public IP by default.
 
 [describe-instances](https://awscli.amazonaws.com/v2/documentation/api/2.0.34/reference/ec2/describe-instances.html)
 
 Inputs:
 
-* EC2 instance id: i-aaaaaa
+- EC2 instance id: i-aaaaaa
 
 ```sh
 aws ec2 describe-instances --instance-ids i-aaaaaaa
@@ -43,10 +43,10 @@ aws ec2 describe-instances --instance-ids i-aaaaaaa
 
 outputs:
 
-* network-interface-id: eni-oldold
-* attachment-id: eni-attach-oldold
-* subnetID: subnet-xxx
-* security groups: sg-aaaaa, sg-bbbbb
+- network-interface-id: eni-oldold
+- attachment-id: eni-attach-oldold
+- subnetID: subnet-xxx
+- security groups: sg-aaaaa, sg-bbbbb
 
 ## 1. Create a new network interface
 
@@ -54,8 +54,8 @@ outputs:
 
 inputs:
 
-* subnetID: subnet-xxx
-* security groups: sg-aaaaa, sg-bbbbb
+- subnetID: subnet-xxx
+- security groups: sg-aaaaa, sg-bbbbb
 
 ```sh
 aws ec2 create-network-interface --subnet-id subnet-xxx --groups sg-aaaaa sg-bbbbb
@@ -63,7 +63,7 @@ aws ec2 create-network-interface --subnet-id subnet-xxx --groups sg-aaaaa sg-bbb
 
 outputs:
 
-* NetworkInterfaceId: eni-newnew
+- NetworkInterfaceId: eni-newnew
 
 verify no public IP is associated
 
@@ -73,8 +73,8 @@ verify no public IP is associated
 
 inputs:
 
-* network-interface-id: eni-newnew
-* EC2 instance id: i-aaaaaa
+- network-interface-id: eni-newnew
+- EC2 instance id: i-aaaaaa
 
 ```sh
 aws ec2 attach-network-interface --network-interface-id eni-aaaaa --instance-id i-aaaa --device-index 1
@@ -82,16 +82,15 @@ aws ec2 attach-network-interface --network-interface-id eni-aaaaa --instance-id 
 
 outputs:
 
-* AttachmentId: eni-attach-xxx
+- AttachmentId: eni-attach-xxx
 
 ## 3. Create a new (public) Elastic IP
 
 [allocate-address](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/allocate-address.html)
 
-
 Inputs:
 
-* network-border-group
+- network-border-group
 
 ```sh
 aws ec2 allocate-address --domain vpc --network-border-group us-west-2
@@ -99,17 +98,16 @@ aws ec2 allocate-address --domain vpc --network-border-group us-west-2
 
 outputs:
 
-* allocation-id: eipalloc-aaaa
+- allocation-id: eipalloc-aaaa
 
 ## 4. Associate the new elastic IP with the old network interface
 
 [associate-address](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/associate-address.html)
 
-
 Inputs:
 
-* allocation-id: eipalloc-newnew
-* network-interface-id: eni-oldold
+- allocation-id: eipalloc-newnew
+- network-interface-id: eni-oldold
 
 ```sh
 aws ec2 associate-address --allocation-id eipalloc-newnew --network-interface-id eni-oldold
@@ -117,7 +115,7 @@ aws ec2 associate-address --allocation-id eipalloc-newnew --network-interface-id
 
 outputs:
 
-* AssociationId: eipassoc-aaaaa
+- AssociationId: eipassoc-aaaaa
 
 The original public IP will be replaced by the new one.
 
@@ -127,7 +125,7 @@ The original public IP will be replaced by the new one.
 
 Inputs:
 
-* association-id eipassoc-aaaaa
+- association-id eipassoc-aaaaa
 
 ```sh
 aws ec2 disassociate-address --association-id eipassoc-aaaaa
@@ -139,7 +137,7 @@ aws ec2 disassociate-address --association-id eipassoc-aaaaa
 
 Inputs:
 
-* allocation-id: eipalloc-aaaaaa
+- allocation-id: eipalloc-aaaaaa
 
 ```sh
 aws ec2 release-address --allocation-id eipalloc-aaaaa

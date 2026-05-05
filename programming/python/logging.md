@@ -6,6 +6,7 @@ https://realpython.com/python-logging/
 ## Logging to a File
 
 save your logs in an `app.log` file
+
 ```
 import logging
 logging.basicConfig(
@@ -22,12 +23,14 @@ logging.warning("Save me!")
 ## Displaying Variable Data
 
 use [self-documenting expressions](https://realpython.com/python-f-strings/#self-documenting-expressions-for-debugging):
+
 ```
 name = "Samara"
 logging.debug(f"{name=}")
 ```
 
 To avoid extra evaluation, use the modulo operator (%) for interpolation instead of f-strings"
+
 ```
 name = "Samara"
 logging.debug("name=%s", name)
@@ -43,7 +46,9 @@ try:
 except ZeroDivisionError:
     logging.error("DonutCalculationError", exc_info=True)
 ```
+
 better yet:
+
 ```
 try:
     donuts_per_guest = donuts / guests
@@ -56,12 +61,14 @@ except ZeroDivisionError:
 Recommended.
 
 Instantiate:
+
 ```
 import logging
 logger = logging.getLogger(__name__)
 ```
 
 Use multiple handlers (with custom levels) to send log to console AND file:
+
 ```
 import logging
 logger = logging.getLogger(__name__)

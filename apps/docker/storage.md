@@ -18,11 +18,14 @@ docker run -v data_volume:/var/lib/mysql mysql
 ```
 
 Bind mount:
+
 ```sh
 # this binds the existing directory
 docker run -v /data/mysql:/var/lib/mysql mysql
 ```
+
 better yet:
+
 ```sh
 docker run --mount type=bind,source=/data/mysql,target=/var/lib/mysql mysql
 ```
@@ -31,12 +34,12 @@ docker run --mount type=bind,source=/data/mysql,target=/var/lib/mysql mysql
 
 Manage storage on images and containers.
 
-* aufs
-* zfs
-* btrfs
-* Device Mapper
-* Overlay
-* Overlay2
+- aufs
+- zfs
+- btrfs
+- Device Mapper
+- Overlay
+- Overlay2
 
 These do NOT manage volumes
 

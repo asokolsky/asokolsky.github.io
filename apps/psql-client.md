@@ -9,6 +9,7 @@ brew install libpq
 ```
 
 Then:
+
 ```sh
 brew link --force libpq
 ```
@@ -16,6 +17,7 @@ brew link --force libpq
 ## In a container
 
 Set the context:
+
 ```sh
 PSQL_USER=user \
 PSQL_PASSWORD=password \
@@ -25,6 +27,7 @@ PSQL_DB=db_default
 ```
 
 Then:
+
 ```sh
 docker run -it --rm jbergknoff/postgresql-client \
   "postgresql://${PSQL_USER}:${PSQL_PASSWORD}@${PSQL_HOST}:${PSQL_PORT}/${PSQL_DB}" \

@@ -6,20 +6,20 @@
 
 From the manual:
 
-* Install the Shelly to the light socket. Press the switch/button
-to which Shelly is connected. The Shelly should turn on.
-* Press the switch/button again and Shelly will turn off.
-* The bulb should create its own Wi-Fi network with SSID like
-ShellyBulbDuo-35FA58 for the white model or shellycolorbulb-35FA58 for the
-colored version.
-* In case the bulb creates no WiFi AP, reset the Device.
-* To reset the device: If the Device
-has been powered on, you have to power it off and on again 5
-consecutive times. Upon each OFF state, please wait 2-3 seconds
-8 When the light starts to flash Shelly should return to AP Mode.
-* For Shelly duo RGBW – light will start to flash in red, next time you
-switched of and on it will light in blue - this mean that the bulb is in AP
-more.
+- Install the Shelly to the light socket. Press the switch/button
+  to which Shelly is connected. The Shelly should turn on.
+- Press the switch/button again and Shelly will turn off.
+- The bulb should create its own Wi-Fi network with SSID like
+  ShellyBulbDuo-35FA58 for the white model or shellycolorbulb-35FA58 for the
+  colored version.
+- In case the bulb creates no WiFi AP, reset the Device.
+- To reset the device: If the Device
+  has been powered on, you have to power it off and on again 5
+  consecutive times. Upon each OFF state, please wait 2-3 seconds
+  8 When the light starts to flash Shelly should return to AP Mode.
+- For Shelly duo RGBW – light will start to flash in red, next time you
+  switched of and on it will light in blue - this mean that the bulb is in AP
+  more.
 
 ## Allocate a Static DHCP Lease
 

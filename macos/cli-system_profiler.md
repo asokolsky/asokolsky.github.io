@@ -99,6 +99,7 @@ Ethernet:
 ## List USB Hardware
 
 Use `SPUSBDataType`:
+
 ```
 > system_profiler SPUSBDataType
 2025-03-13 10:19:45.178 system_profiler[88215:94762258] SPUSBDevice: IOCreatePlugInInterfaceForService failed 0xe00002be

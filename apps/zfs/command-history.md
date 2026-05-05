@@ -6,10 +6,13 @@ Use
 ## My old nass
 
 Create zpool on 2018-06-02:
+
 ```sh
 zpool create -f tank raidz2 /dev/ada0 /dev/ada1 /dev/ada2 /dev/ada3 /dev/ada4
 ```
+
 Create datasets:
+
 ```sh
 zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensitivity=sensitive -o compression=lz4 -o dedup=off -o sync=standard tank/home
 zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensitivity=sensitive -o compression=lz4 -o dedup=off -o sync=standard tank/downloads
@@ -18,6 +21,7 @@ zfs create -o aclinherit=restricted -o aclmode=discard -o atime=off -o casesensi
 ```
 
 Replace damaged HD:
+
 ```sh
 zpool offline tank 10462354999995531015
 zpool import -d /dev -f -a

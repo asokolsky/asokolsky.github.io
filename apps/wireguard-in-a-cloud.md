@@ -2,8 +2,8 @@
 
 This will setup:
 
-* a server in a cloud;
-* multiple peers.
+- a server in a cloud;
+- multiple peers.
 
 UPDATE: this information is obsolete.
 
@@ -19,15 +19,15 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubun
 
 These will be used with WireGuard server and peers:
 
-* Range: 172.16.0.0 to 172.16.255.255 - 172.16/16 prefix.
-* IPv4 address for the server: 172.16.0.1/16
+- Range: 172.16.0.0 to 172.16.255.255 - 172.16/16 prefix.
+- IPv4 address for the server: 172.16.0.1/16
 
 ### Create a WireGuard Server Configuration
 
 By now you should have:
 
-* /etc/wireguard/private.key
-* /etc/wireguard/public.key
+- /etc/wireguard/private.key
+- /etc/wireguard/public.key
 
 Edit /etc/wireguard/wg0.conf
 
@@ -109,6 +109,5 @@ Oct 01 02:00:08 instance-20210930-1149 wg-quick[1525]: [#] iptables -A FORWARD -
 Oct 01 02:00:08 instance-20210930-1149 wg-quick[1525]: [#] iptables -t nat -A POSTROUTING -o ens3 -j MASQUERADE
 Oct 01 02:00:08 instance-20210930-1149 systemd[1]: Finished WireGuard via wg-quick(8) for wg0.
 ```
-
 
 ## WireGuard Peer Setup

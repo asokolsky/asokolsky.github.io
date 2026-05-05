@@ -1,6 +1,6 @@
 # ffmpeg
 
-fast-forward mpeg?  Not really.
+fast-forward mpeg? Not really.
 
 ffmpeg [man page](https://manpages.org/ffmpeg),
 use [with webcam](https://trac.ffmpeg.org/wiki/Capture/Webcam).
@@ -12,26 +12,30 @@ Know thyself.
 Identify the audio recording devices available [with](/hardware/usb-audio.html) `pacmd list-sources`. I picked `alsa_input.usb-046d_HD_Pro_Webcam_C920_CDF1191F-02.analog-stereo`.
 
 Identify the video formats available [using](/hardware/usb-video.html)...
+
 ```sh
 v4l2-ctl --list-formats-ext -d /dev/video4
 ```
+
 or
+
 ```sh
 ffmpeg -f v4l2 -list_formats all -i /dev/video0
 ```
+
 I picked MJPG 1920x1080.
 
 ## Recording
 
 This will:
 
-* capture 10 seconds of video and audio
-* video from `/dev/video4`, at 30 fps, in MJPG format, at resolution 1920x1080
-* audio from `alsa_card.usb-046d_HD_Pro_Webcam_C920_CDF1191F-02`
-* then compress video using `libx264` with `faster`
-[preset](http://www.chaneru.com/Roku/HLS/X264_Settings.htm)
-* compress audio using codec `ac3_fixed`
-* and, finally, save it as `out.mkv`, overwriting it if the one exists:
+- capture 10 seconds of video and audio
+- video from `/dev/video4`, at 30 fps, in MJPG format, at resolution 1920x1080
+- audio from `alsa_card.usb-046d_HD_Pro_Webcam_C920_CDF1191F-02`
+- then compress video using `libx264` with `faster`
+  [preset](http://www.chaneru.com/Roku/HLS/X264_Settings.htm)
+- compress audio using codec `ac3_fixed`
+- and, finally, save it as `out.mkv`, overwriting it if the one exists:
 
 ```sh
 ffmpeg -y \
@@ -40,7 +44,9 @@ ffmpeg -y \
     -c:v libx264 -preset faster -c:a ac3_fixed \
     -metadata title="From my desk" out.mkv
 ```
+
 To avoid re-compression:
+
 ```sh
 ffmpeg -f v4l2 -framerate 30 -video_size 1280x720 -input_format mjpeg \
     -i /dev/video0 -c copy out.mkv
@@ -67,6 +73,7 @@ ffprobe out.mkv
 ```
 
 Simple player:
+
 ```sh
 ffplay /dev/video0
 ```
@@ -89,10 +96,10 @@ ffmpeg -i input.mkv -ss 00:01:50 -c:v libx264 -c:a libfaac -t 20 output.mkv
 
 ## Hardware Acceleration
 
-* [ffmpeg HWAccelIntro](https://trac.ffmpeg.org/wiki/HWAccelIntro)
-* [ffmpeg QuickSync](https://trac.ffmpeg.org/wiki/Hardware/QuickSync)
-* [NVidia GPU Support Matrix for NVENC/NVDEC](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new)
-* [Using FFmpeg with NVIDIA GPU Hardware Acceleration](https://docs.nvidia.com/video-technologies/video-codec-sdk/12.2/ffmpeg-with-nvidia-gpu/index.html)
+- [ffmpeg HWAccelIntro](https://trac.ffmpeg.org/wiki/HWAccelIntro)
+- [ffmpeg QuickSync](https://trac.ffmpeg.org/wiki/Hardware/QuickSync)
+- [NVidia GPU Support Matrix for NVENC/NVDEC](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new)
+- [Using FFmpeg with NVIDIA GPU Hardware Acceleration](https://docs.nvidia.com/video-technologies/video-codec-sdk/12.2/ffmpeg-with-nvidia-gpu/index.html)
 
 ## Video Cropping
 
@@ -105,6 +112,7 @@ ffplay -i in.mp4 -vf "crop=in_w:in_h-40"
 ```
 
 The same in VLC (for this to work you may need to disable hardware acceleration):
+
 ```sh
 vlc --video-filter=croppadd --croppadd-croptop=20 --croppadd-cropbottom=20 in.mp4
 ```

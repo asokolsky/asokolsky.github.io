@@ -5,6 +5,7 @@
 ## Show TCP IPv4 sockets with Processes
 
 Use numbers instead of symbols:
+
 ```sh
 ss -4tnp
 ```
@@ -20,7 +21,9 @@ ss -4tpl
 ```sh
 ss --unix -l
 ```
+
 As above, but also show process and thread:
+
 ```sh
 ss -xlT
 ```

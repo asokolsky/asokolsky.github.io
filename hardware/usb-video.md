@@ -2,13 +2,13 @@
 
 Sources:
 
-* https://wiki.archlinux.org/title/Webcam_setup
-* [assign-webcam-to-a-specific-dev-video](https://askubuntu.com/questions/715333/assign-webcam-to-a-specific-dev-video)
+- https://wiki.archlinux.org/title/Webcam_setup
+- [assign-webcam-to-a-specific-dev-video](https://askubuntu.com/questions/715333/assign-webcam-to-a-specific-dev-video)
 
 Relevant:
 
-* [udevadm man page](https://man7.org/linux/man-pages/man8/udevadm.8.html)
-* [writing_udev_rules](http://www.reactivated.net/writing_udev_rules.html)
+- [udevadm man page](https://man7.org/linux/man-pages/man8/udevadm.8.html)
+- [writing_udev_rules](http://www.reactivated.net/writing_udev_rules.html)
 
 Prerequisites:
 
@@ -19,6 +19,7 @@ sudo apt-get install v4l-utils psmisc
 ## Verify USB Connectivity
 
 List USB devices:
+
 ```
 root@duo:~# lsusb
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
@@ -29,10 +30,10 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 This gives:
 
-* bus: 001
-* device: 009
-* vendor: 1bcf
-* product: 28c4
+- bus: 001
+- device: 009
+- vendor: 1bcf
+- product: 28c4
 
 ```sh
 sudo echo "uvcvideo" | sudo tee /etc/modules-load.d/uvc.conf
@@ -220,6 +221,7 @@ and the attributes from one single parent device.
 ## Verify and list v4l devices
 
 By ID:
+
 ```
 > ls -la /dev/v4l/by-id/
 total 0
@@ -228,7 +230,9 @@ drwxr-xr-x 4 root root 80 Jan 19 10:34 ..
 lrwxrwxrwx 1 root root 12 Jan 19 10:34 usb-CN0K0KM8LOG007BG018TA00_Integrated_Webcam_HD_200901010001-video-index0 -> ../../video2
 lrwxrwxrwx 1 root root 12 Jan 19 10:34 usb-CN0K0KM8LOG007BG018TA00_Integrated_Webcam_HD_200901010001-video-index1 -> ../../video1
 ```
+
 By path:
+
 ```
 > ls -la /dev/v4l/by-path
 total 0
@@ -241,6 +245,7 @@ lrwxrwxrwx 1 root root  12 Jan 19 10:34 pci-0000:00:14.0-usb-0:5:1.2-video-index
 ```
 
 Or:
+
 ```
 > ls  -1 /dev/video*
 /dev/video1
@@ -248,6 +253,7 @@ Or:
 ```
 
 Or just:
+
 ```sh
 v4l2-ctl --list-devices
 ```
@@ -255,10 +261,13 @@ v4l2-ctl --list-devices
 ## List Native Video Formats for the Device
 
 Use:
+
 ```sh
 v4l2-ctl --list-formats-ext --device /dev/video1
 ```
+
 e.g., for a default device `/dev/video0`:
+
 ```
 root@duo:~# v4l2-ctl --list-formats-ext
 ioctl: VIDIOC_ENUM_FMT
@@ -311,6 +320,7 @@ ioctl: VIDIOC_ENUM_FMT
 ## List All the Camera Capabilities
 
 For a default video device `/dev/video0`:
+
 ```
 root@duo:~# v4l2-ctl --all
 Driver Info:
@@ -409,6 +419,7 @@ root@duo:~# v4l2-ctl -d /dev/video0 --list-ctrls
                  focus_absolute 0x009a090a (int)    : min=0 max=1023 step=1 default=0 value=300 flags=inactive
                      focus_auto 0x009a090c (bool)   : default=0 value=1
 ```
+
 ## Adjust the Camera Controls
 
 ```
@@ -426,17 +437,19 @@ v4l2-ctl \
 
 Also relevant applications ([comparison](https://en.wikipedia.org/wiki/Comparison_of_webcam_software)):
 
-* [OBS Studio](/apps/obs/) - by far the best, the only one which exposes the device settings
-* [vlc](/apps/vlc/)
-* [guvcview](https://en.wikipedia.org/wiki/Guvcview)
+- [OBS Studio](/apps/obs/) - by far the best, the only one which exposes the device settings
+- [vlc](/apps/vlc/)
+- [guvcview](https://en.wikipedia.org/wiki/Guvcview)
 
 Tried and removed:
-* [cheese](https://en.wikipedia.org/wiki/Cheese_(software))
-* [webcamoid](https://github.com/webcamoid/webcamoid)
-* [Kamoso](https://userbase.kde.org/Kamoso)
+
+- [cheese](<https://en.wikipedia.org/wiki/Cheese_(software)>)
+- [webcamoid](https://github.com/webcamoid/webcamoid)
+- [Kamoso](https://userbase.kde.org/Kamoso)
 
 Never Tried:
-* [qtcam](https://github.com/econsysqtcam/qtcam)
+
+- [qtcam](https://github.com/econsysqtcam/qtcam)
 
 ## Testing in Browser
 

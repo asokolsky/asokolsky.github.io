@@ -16,6 +16,7 @@ root@suprox:~# lspci -nnk
 ```
 
 lsblk does NOT list sdX:
+
 ```
 # lsblk
 NAME                         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
@@ -23,6 +24,7 @@ nvme0n1                      259:0    0 465.8G  0 disk
 ```
 
 Listing IOMMU groups:
+
 ```
 root@suprox:~# for d in /sys/kernel/iommu_groups/*/devices/*; do n=${d#*/iommu_groups/*}; n=${n%%/*}; printf 'IOMMU group %s ' "$n"; lspci -nns "${d##*/}"; done
 IOMMU group 0 00:00.0 Host bridge [0600]: Intel Corporation 8th Gen Core 4-core Desktop Processor Host Bridge/DRAM Registers [Coffee Lake S] [8086:3e1f] (rev 08)
@@ -73,5 +75,5 @@ Feb 27 11:28:46 suprox pvedaemon[1599]: <root@pam> end task UPID:suprox:000080BD
 
 ## Resolution
 
-Ensured that RAM is NOT ballooning, reduced it to 12GB.  This solved
+Ensured that RAM is NOT ballooning, reduced it to 12GB. This solved
 the problem.

@@ -35,10 +35,13 @@ PGP Identities:
 ```
 
 Given a password encrypted with your pgp key
+
 ```sh
 password="wcFMAy9....tCtzshbbYDmKVMHmNl"
 ```
+
 decrypt it using keybase:
+
 ```sh
 echo $password | base64 --decode | keybase pgp decrypt
 ```

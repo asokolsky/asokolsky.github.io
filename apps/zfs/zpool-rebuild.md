@@ -41,6 +41,7 @@ Plan:
 Export pool tank via TrueNAS GUI.
 
 Then:
+
 ```
 zpool import \
   -d /dev/disk/by-id/ata-WDC_WD60EFRX-68MYMN1_WD-WX31DB48X2ZY \
@@ -53,6 +54,6 @@ zpool import \
 
 Success!
 
-Except TrueNAS GUI does not recognize the pool.  When imported via GUI the pool
+Except TrueNAS GUI does not recognize the pool. When imported via GUI the pool
 is restored to using `sdX`.
 [Bummer](https://www.truenas.com/community/threads/pool-import-cli-vs-gui.107131/).

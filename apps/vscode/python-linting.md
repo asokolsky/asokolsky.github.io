@@ -1,6 +1,6 @@
 # Change in VS Code Python Linting
 
-I use flake and mypy to lint my python projects in vscode.  Today when I opened
+I use flake and mypy to lint my python projects in vscode. Today when I opened
 my python project I noticed:
 
 ```
@@ -14,13 +14,13 @@ my python project I noticed:
 Well, the good news is.. the error message is actionable:
 
 1. Install `mypy-type-checker` extension, NOT `mypy` extension. You need the one
-from Microsoft, not from Matan Gover.
-2. Install `flake8` extension.
-3. Modify your project `.vscode/settings.json`:
+   from Microsoft, not from Matan Gover.
+1. Install `flake8` extension.
+1. Modify your project `.vscode/settings.json`:
 
-* remove `python.linting.*` settings.
-* add
-[mypy extension settings](https://github.com/microsoft/vscode-mypy?tab=readme-ov-file#settings)
-and [flake extension settings](https://github.com/microsoft/vscode-flake8?tab=readme-ov-file#settings).
-All I needed was to move value of `python.linting.mypyArgs` to
-`mypy-type-checker.args`.
+- remove `python.linting.*` settings.
+- add
+  [mypy extension settings](https://github.com/microsoft/vscode-mypy?tab=readme-ov-file#settings)
+  and [flake extension settings](https://github.com/microsoft/vscode-flake8?tab=readme-ov-file#settings).
+  All I needed was to move value of `python.linting.mypyArgs` to
+  `mypy-type-checker.args`.

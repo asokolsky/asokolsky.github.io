@@ -5,6 +5,7 @@ kubectl logs <pod>
 ```
 
 To access all the `karpenter` pod logs:
+
 ```sh
 for pod_name in $(kubectl get pods -n karpenter -o jsonpath='{.items[*].metadata.name}'); do
     echo "--- Logs for pod: $pod_name ---"
@@ -13,7 +14,8 @@ for pod_name in $(kubectl get pods -n karpenter -o jsonpath='{.items[*].metadata
 done
 ```
 
-But the above sucks.  Better use [stern](https://github.com/stern/stern):
+But the above sucks. Better use [stern](https://github.com/stern/stern):
+
 ```sh
 stern -n karpenter -i InsufficientInstanceCapacity karpenter
 ```

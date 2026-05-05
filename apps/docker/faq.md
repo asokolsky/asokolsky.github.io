@@ -2,7 +2,6 @@
 
 From https://blog.techwithpatil.com/blogs/medium-articles/devops-sre-interview-questions-and-answers/top-10-common-devops-sre-interview-questions-and-answers-on-dockerfiles
 
-
 ## What is the Difference Between RUN and CMD?
 
 RUN: Executes commands during the image build process, creating a new layer. Typically used for installing software packages.

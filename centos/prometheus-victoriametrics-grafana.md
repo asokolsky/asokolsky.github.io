@@ -17,7 +17,6 @@ prometheus metrics are at: http://graf:9090/metrics
 Inpect your prometheus targets by pointing web browser to:
 http://graf:9090/targets
 
-
 ## Install VictoriaMetrics
 
 Follow steps here

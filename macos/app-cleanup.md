@@ -2,10 +2,13 @@
 
 To fully uninstall an app from macOS:
 
-* quit the application;
-* drag `_application_.app` from your Applications folder to the Trash;
-* remove these:
-	* `~/Library/Application Support/_application_` and
-	* `~/Library/Caches/_application_`
+- quit the application;
 
-* Empty the Trash
+- drag `_application_.app` from your Applications folder to the Trash;
+
+- remove these:
+
+  - `~/Library/Application Support/_application_` and
+  - `~/Library/Caches/_application_`
+
+- Empty the Trash

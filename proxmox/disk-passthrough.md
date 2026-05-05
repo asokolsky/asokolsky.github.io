@@ -1,8 +1,7 @@
 # Disk Passthrough to TrueNAS Scale
 
 Follows
-[disk passthrough](https://pve.proxmox.com/wiki/Passthrough_Physical_Disk_to_Virtual_Machine_(VM)).
-
+[disk passthrough](<https://pve.proxmox.com/wiki/Passthrough_Physical_Disk_to_Virtual_Machine_(VM)>).
 
 ## Identify Disks
 

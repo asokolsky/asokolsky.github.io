@@ -3,10 +3,10 @@
 Here is a big picture: multiple LAN nodes will have node_exporter installed.
 These are running:
 
-* pfSense (FreeBSD)
-* Linux - RHEL/CENTOS 7
-* Linux - Ubuntu
-* Windows 10
+- pfSense (FreeBSD)
+- Linux - RHEL/CENTOS 7
+- Linux - Ubuntu
+- Windows 10
 
 A server (CENTOS) will run Prometheus scraping the nodes and exposing the data
 to Grafana. The same server (CENTOS) will run Grafana dashboard with cute GUI.
@@ -46,6 +46,7 @@ systemctl status grafana-server
 ```
 
 Configure the Grafana server to start at boot:
+
 ```sh
 systemctl enable grafana-server
 ```

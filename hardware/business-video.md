@@ -13,8 +13,8 @@ with a simple 60W CFL bulb inside.
 [MOKOSE 4K USB Webcam with Manual Focus Lens](https://www.amazon.com/dp/B08FHBRKSK)
 has
 
-* good quality video - pretty sharp!
-* manual focus is perfectly acceptable
+- good quality video - pretty sharp!
+- manual focus is perfectly acceptable
 
 Wide angle - hence distortions, no camera settings ap to customize settings.
 
@@ -22,8 +22,8 @@ Wide angle - hence distortions, no camera settings ap to customize settings.
 
 [Logitech Brio 4K Webcam](https://www.amazon.com/gp/product/B01N5UOYC4) has:
 
-* nice image quality
-* selectable hardware zoom
+- nice image quality
+- selectable hardware zoom
 
 Unfortunately G Hub software you need to control the camera settings is broken
 on Mac OS.
@@ -32,4 +32,4 @@ on Mac OS.
 
 [Panasonic GH5](panasonic-gh5.html) with a
 [14mm F2.5 lens](https://www.amazon.com/dp/B00HV936AY) connected via USB3.
-This is clearly an overkill.  Power drain.
+This is clearly an overkill. Power drain.

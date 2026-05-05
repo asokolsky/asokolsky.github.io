@@ -1,9 +1,9 @@
 # Running Docker with Portainer on Proxmox
 
-The plan is to have Portainer to manage docker containers.  For that to happen:
+The plan is to have Portainer to manage docker containers. For that to happen:
 
-* run docker on Proxmox itself, i.e. not inside a VM or LXC container,
-* run Portainer in a docker container
+- run docker on Proxmox itself, i.e. not inside a VM or LXC container,
+- run Portainer in a docker container
 
 See also other [portainer notes](/apps/docker/portainer.html)
 
@@ -29,9 +29,11 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 To verify the install:
+
 ```
 docker run hello-world
 ```
+
 and
 
 ```
@@ -78,6 +80,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \
 ```
 
 Verify:
+
 ```
 root@duo:~# docker ps
 CONTAINER ID   IMAGE                           COMMAND        CREATED         STATUS         PORTS                                                      NAMES
@@ -89,6 +92,7 @@ Then just point browser to https://duo:9443/
 ## Portainer Upgrade
 
 Stop and remove the current portainer container and image:
+
 ```sh
 docker container stop portainer
 docker container rm portainer
@@ -97,6 +101,7 @@ docker image rm portainer/portainer-ce:latest
 
 Run the latest version of portainer in a container and ensure it is always
 restarted:
+
 ```sh
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always \
   -v /var/run/docker.sock:/var/run/docker.sock \
@@ -105,6 +110,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always \
 ```
 
 Verify that new portainer is running:
+
 ```
 root@duo:~# docker ps
 CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                                                      NAMES

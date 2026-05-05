@@ -2,9 +2,9 @@
 
 Followed:
 
-* [linux-mount-smb-share](https://www.linode.com/docs/guides/linux-mount-smb-share/);
-* [mount-owner](https://www.baeldung.com/linux/mount-owner);
-* [mount.cifs man page](https://linux.die.net/man/8/mount.cifs).
+- [linux-mount-smb-share](https://www.linode.com/docs/guides/linux-mount-smb-share/);
+- [mount-owner](https://www.baeldung.com/linux/mount-owner);
+- [mount.cifs man page](https://linux.die.net/man/8/mount.cifs).
 
 ## Prerequisites
 
@@ -18,6 +18,7 @@ fuser
 ## Prepare mount points
 
 Create mount points:
+
 ```sh
 mkdir ~/Movies
 mkdir ~/Music

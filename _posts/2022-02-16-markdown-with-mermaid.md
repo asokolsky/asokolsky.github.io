@@ -27,5 +27,6 @@ D-->E[finish!];
 ```
 
 Links:
-* [Repository](https://github.com/mermaid-js/mermaid)
-* [Editor](https://mermaid-js.github.io/mermaid-live-editor/)
+
+- [Repository](https://github.com/mermaid-js/mermaid)
+- [Editor](https://mermaid-js.github.io/mermaid-live-editor/)

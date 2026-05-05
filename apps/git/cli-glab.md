@@ -3,6 +3,7 @@
 [glab](https://docs.gitlab.com/ee/editor_extensions/gitlab_cli/)
 
 Config is stored in `~/.config/glab-cli/`. Change it using:
+
 ```sh
 glab config set
 ```
@@ -10,10 +11,13 @@ glab config set
 ## Authentication
 
 Check the status with
+
 ```sh
 glab auth status
 ```
+
 Produces:
+
 ```
   ✓ Logged in to gitlab.com as asokolsky (/home/alex/.config/glab-cli/config.yml)
   ✓ Git operations for gitlab.com configured to use https protocol.

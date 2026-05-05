@@ -13,6 +13,7 @@ apt-get install v4l-utils psmisc
 ```
 
 Connect the USB webcam, verify it is detected:
+
 ```
 root@duo:~# lsusb
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
@@ -103,19 +104,27 @@ ExecStop=/usr/bin/docker exec %n stop
 [Install]
 WantedBy=default.target
 ```
+
 Then, enable it:
+
 ```sh
 systemctl enable mjpg-streamer.service
 ```
+
 Start it:
+
 ```sh
 systemctl start mjpg-streamer.service
 ```
+
 Verify success:
+
 ```sh
 systemctl status mjpg-streamer.service
 ```
+
 Alternatively:
+
 ```
 # docker ps
 CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                                                      NAMES

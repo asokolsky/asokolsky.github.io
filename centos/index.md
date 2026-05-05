@@ -1,6 +1,7 @@
 # Customizing CentOS Install
 
 ## Hostname
+
 ```
 [alex@localhost ~]$ sudo hostnamectl
    Static hostname: localhost.localdomain
@@ -33,6 +34,7 @@
 sudo yum update
 sudo yum upgrade
 ```
+
 ## Add EPEL repo
 
 Add EPEL repo:
@@ -72,13 +74,14 @@ https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/
 ### Gnome Tweaks
 
 In GUI:
-Software \ Search tweaks \ GNOME Tweaks \ Install
+Software \\ Search tweaks \\ GNOME Tweaks \\ Install
 
 In CLI:
 
 ```sh
 sudo yum install gnome-tweak-tool
 ```
+
 More: https://linuxhint.com/tweaking_gnome_desktop_centos8/
 
 ## Services
@@ -95,7 +98,9 @@ running
 [alex@centos7 ~]$
 [alex@centos7 ~]$ sudo systemctl stop firewalld
 ```
+
 If you are really sure:
+
 ```
 [alex@centos7 ~]$ sudo systemctl disable firewalld
 Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service.
@@ -170,10 +175,12 @@ yum install urw-fonts
 
 ## Customize Keyboard: Swap CapsLock & Ctrl
 
-In Tweaks: Keyboard & Mouse \ Ctrl Position \ Swap Ctrl & CapsLock
+In Tweaks: Keyboard & Mouse \\ Ctrl Position \\ Swap Ctrl & CapsLock
 
 Alternatively:
+
 ```sh
 /usr/bin/setxkbmap -option "ctrl:nocaps"
 ```
+
 More: [CapsLock_Remap_Howto](http://www.noah.org/wiki/CapsLock_Remap_Howto).

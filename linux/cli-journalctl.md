@@ -13,6 +13,7 @@ Is in `/etc/systemd/journald.conf`.
 ```sh
 journalctl --no-pager -u _service-name_
 ```
+
 ## Show events since the last boot
 
 ```sh

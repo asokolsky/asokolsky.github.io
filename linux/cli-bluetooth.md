@@ -23,28 +23,28 @@ hci0:   Type: Primary  Bus: USB
         LMP Version:  (0xb)  Subversion: 0x35af
         Manufacturer: Intel Corp. (2)
 ```
+
 Bluetooth version can be deduced from HCI version:
 
-HCI version | Bluetooth version |
-------------|-------------------|
-0 (0x0)  |1.0b
-1 (0x1)  |1.1
-2 (0x2)  |1.2
-3 (0x3)  |2.0
-4 (0x4)  |2.1
-5 (0x5)  |3.0
-6 (0x6)  |4.0
-7 (0x7)  |4.1
-8 (0x8)  |4.2
-9 (0x9)  |5.0
-10 (0xa) |5.1
-11 (0xb) |5.2
-12 (0xc) |5.3
-13 (0xd) |5.4
+| HCI version | Bluetooth version |
+| ----------- | ----------------- |
+| 0 (0x0)     | 1.0b              |
+| 1 (0x1)     | 1.1               |
+| 2 (0x2)     | 1.2               |
+| 3 (0x3)     | 2.0               |
+| 4 (0x4)     | 2.1               |
+| 5 (0x5)     | 3.0               |
+| 6 (0x6)     | 4.0               |
+| 7 (0x7)     | 4.1               |
+| 8 (0x8)     | 4.2               |
+| 9 (0x9)     | 5.0               |
+| 10 (0xa)    | 5.1               |
+| 11 (0xb)    | 5.2               |
+| 12 (0xc)    | 5.3               |
+| 13 (0xd)    | 5.4               |
 
 The above table is taken from Section 2.1 of
 [BT Assigned Numbers Doc](https://btprodspecificationrefs.blob.core.windows.net/assigned-numbers/Assigned%20Number%20Types/Assigned_Numbers.pdf).
-
 
 `hciconfig` has been [deprecated](https://github.com/chrippa/ds4drv/issues/123).
 Use [btmgmt](https://manpages.debian.org/testing/bluez/btmgmt.1.en.html) and
@@ -57,13 +57,13 @@ instead, which are part of [bluez](http://www.bluez.org/) stack.
 
 Useful commands:
 
-* show
-* devices
-* scan on/off/bredr/le
-* connect
-
+- show
+- devices
+- scan on/off/bredr/le
+- connect
 
 Example:
+
 ```
 > bluetoothctl
 Agent registered to bluetoothd...[bluetooth]#         MX Master 2S

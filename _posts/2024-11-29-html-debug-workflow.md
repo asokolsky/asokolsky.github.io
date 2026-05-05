@@ -6,6 +6,7 @@ tags: HTML,github
 1. Point your browser to the (github pages) page to debug.
 1. In firefox select File Save As..., pick the name, press Save. This will save the HTML and its dependencies into the local directory.
 1. Start serving the pages saved using the python web server:
+
 ```
 alex@exi | ~/tt > python3 -m http.server -h
 usage: server.py [-h] [--cgi] [-b ADDRESS] [-d DIRECTORY] [-p VERSION] [port]

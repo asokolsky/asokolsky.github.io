@@ -11,7 +11,6 @@ Raspberry Pi OS (64-bit)
 
 Change locale to `en_US.UTF-8`
 
-
 ## Packages
 
 ```
@@ -33,6 +32,7 @@ pi@hkcam:~ $ sudo vcgencmd get_camera
 supported=0 detected=0, libcamera interfaces=0
 pi@hkcam:~ $
 ```
+
 ## v4l2loopback
 
 Install [v4l2loopback](https://github.com/umlaeute/v4l2loopback):
@@ -43,6 +43,7 @@ sudo apt install v4l2loopback-dkms
 
 Enable v4l2loopback module at boot by creating
 `/etc/modules-load.d/v4l2loopback.conf` with the content:
+
 ```
 v4l2loopback
 ```
@@ -50,11 +51,13 @@ v4l2loopback
 Specify which loopback file should be created by the module
 (in our case /dev/video99) by creating `/etc/modprobe.d/v4l2loopback.conf`
 with the content:
+
 ```
 options v4l2loopback video_nr=99
 ```
 
 Finally:
+
 ```
 sudo update-initramfs -u
 sudo reboot

@@ -18,6 +18,7 @@ Bus 002 Device 002: ID 174c:3074 ASMedia Technology Inc. ASM1074 SuperSpeed hub
 ```
 
 USB device tree:
+
 ```
 alex@exi > lsusb -t
 /:  Bus 001.Port 001: Dev 001, Class=root_hub, Driver=xhci_hcd/16p, 480M

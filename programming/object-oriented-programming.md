@@ -6,24 +6,24 @@
 
 Historically:
 
-* [imperative](https://en.wikipedia.org/wiki/Imperative_programming) ->
-[object oriented](https://en.wikipedia.org/wiki/Object-oriented_programming)
-* declarative ->
-[functional](https://en.wikipedia.org/wiki/Functional_programming)
+- [imperative](https://en.wikipedia.org/wiki/Imperative_programming) ->
+  [object oriented](https://en.wikipedia.org/wiki/Object-oriented_programming)
+- declarative ->
+  [functional](https://en.wikipedia.org/wiki/Functional_programming)
 
 ## Notions
 
-* [Class](https://en.wikipedia.org/wiki/Class_(computer_programming))
-* Instance
-* Instance and class variables - state
-* Methods - behavior
-* Inheritance
+- [Class](<https://en.wikipedia.org/wiki/Class_(computer_programming)>)
+- Instance
+- Instance and class variables - state
+- Methods - behavior
+- Inheritance
 
 Moreover:
 
-* Abstract class
-* Virtual method
-* pure virtual method
+- Abstract class
+- Virtual method
+- pure virtual method
 
 In a nutshell, object-oriented programming is noting but a giant side-effect.
-Albeit, the one which is easy to understand.  Or so you think.
+Albeit, the one which is easy to understand. Or so you think.

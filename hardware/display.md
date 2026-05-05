@@ -4,12 +4,12 @@ In X11 use `xrandr`.
 
 In Wayland use `wlr-randr` (an `xrandr` clone) or `wdisplays` or (in KDE) `kscreen-doctor`...
 
-
 ## xrandr
 
 From [how-to-configure-your-monitors-with-xrandr-in-linux](https://linuxconfig.org/how-to-configure-your-monitors-with-xrandr-in-linux):
 
 Query the attached monitors:
+
 ```
 > xrandr -q
 Screen 0: minimum 320 x 200, current 3440 x 1440, maximum 16384 x 16384

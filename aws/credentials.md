@@ -3,6 +3,7 @@
 https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html
 
 CLI:
+
 ```
 sudoer@ds-worker-steelix-15:~$ aws sts get-caller-identity
 {
@@ -23,6 +24,7 @@ print(response)
 ```
 
 Using it:
+
 ```
 ubuntu@ds-worker-steelix-15:~/pytest$ python3 -m venv .venv
 ubuntu@ds-worker-steelix-15:~/pytest$ cat requirements.txt

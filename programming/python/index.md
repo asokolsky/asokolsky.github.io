@@ -1,18 +1,18 @@
 # Python Programming
 
-* [Color your console output](color-console.html)
-* [Better (String) Enum in Python](python-string-enum.html),
-[color.py](color.py)
-* [Virtual Environment using pyenv](pyenv-virtualenv.html)
-* [Server- and Client-side Certificates for Python Programmer](https.html)
-* Design patters examples: [singleton](global_logger.py),
-[pre-bound method](prebound_method_pattern.py), [sentinel](sentinel.py)
+- [Color your console output](color-console.html)
+- [Better (String) Enum in Python](python-string-enum.html),
+  [color.py](color.py)
+- [Virtual Environment using pyenv](pyenv-virtualenv.html)
+- [Server- and Client-side Certificates for Python Programmer](https.html)
+- Design patters examples: [singleton](global_logger.py),
+  [pre-bound method](prebound_method_pattern.py), [sentinel](sentinel.py)
 
 ## Development
 
-* [Python project Makefile](/apps/make/python.mak)
-* Example of [Docker-using your python app](https://github.com/asokolsky/pycrawl)
-* Example of a [systemd service using python venv](/proxmox/lxc-prusalink.html)
+- [Python project Makefile](/apps/make/python.mak)
+- Example of [Docker-using your python app](https://github.com/asokolsky/pycrawl)
+- Example of a [systemd service using python venv](/proxmox/lxc-prusalink.html)
 
 ## Toolchain
 
@@ -20,29 +20,29 @@
 
 ## Frameworks
 
-* [FastAPI](fastapi.html)
-* [Gaming](gaming.html)
-* [hypothesis: property-based testing](https://hypothesis.works/)
+- [FastAPI](fastapi.html)
+- [Gaming](gaming.html)
+- [hypothesis: property-based testing](https://hypothesis.works/)
 
 To look further:
 
-* [Textual](https://www.textualize.io/) and [textualize/rich](https://github.com/Textualize/rich);
-* [jmespath.py](https://github.com/jmespath/jmespath.py) to support query just
-like aws cli does.
+- [Textual](https://www.textualize.io/) and [textualize/rich](https://github.com/Textualize/rich);
+- [jmespath.py](https://github.com/jmespath/jmespath.py) to support query just
+  like aws cli does.
 
 ## External resources
 
-* [Tutorial](https://docs.python.org/3/tutorial/index.html)
-* [Scope and the LEGB Rule](https://realpython.com/python-scope-legb-rule/)
-* Cheat sheet:
-[F-Strings Number Formatting](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
-* [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
-* [5 Ways to Measure Execution Time in Python](https://superfastpython.com/benchmark-execution-time/)
-* [python packages: src layout vs flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
-* [Google style guide](https://google.github.io/styleguide/pyguide.html)
-* [Guide to Python project management and packaging](https://reinforcedknowledge.com/a-comprehensive-guide-to-python-project-management-and-packaging-concepts-illustrated-with-uv-part-i/)
-* [Python Closures](https://realpython.com/python-closure/)
-* [Alternatives to named tuples](https://snarky.ca/dont-use-named-tuples-in-new-apis/)
+- [Tutorial](https://docs.python.org/3/tutorial/index.html)
+- [Scope and the LEGB Rule](https://realpython.com/python-scope-legb-rule/)
+- Cheat sheet:
+  [F-Strings Number Formatting](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
+- [Handling relative imports](https://iq-inc.com/importerror-attempted-relative-import/)
+- [5 Ways to Measure Execution Time in Python](https://superfastpython.com/benchmark-execution-time/)
+- [python packages: src layout vs flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
+- [Google style guide](https://google.github.io/styleguide/pyguide.html)
+- [Guide to Python project management and packaging](https://reinforcedknowledge.com/a-comprehensive-guide-to-python-project-management-and-packaging-concepts-illustrated-with-uv-part-i/)
+- [Python Closures](https://realpython.com/python-closure/)
+- [Alternatives to named tuples](https://snarky.ca/dont-use-named-tuples-in-new-apis/)
 
 ## Modules of Interest
 
@@ -64,6 +64,7 @@ USER_BASE: '/home/alex/.local' (exists)
 USER_SITE: '/home/alex/.local/lib/python3.12/site-packages' (doesn't exist)
 ENABLE_USER_SITE: True
 ```
+
 [more details](https://pymotw.com/3/site/index.html)
 
 ### http.server

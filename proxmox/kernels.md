@@ -1,6 +1,6 @@
 # Old Kernels Cleanup
 
-This doc is obsolete.  Nowadays the following does the job:
+This doc is obsolete. Nowadays the following does the job:
 
 ```sh
 apt autoremove
@@ -14,15 +14,18 @@ More:
 From the
 [forum post](https://forum.proxmox.com/threads/clean-old-kernels.42040/#post-204417):
 
-* Start with upgrading to the latest kernel `apt update && apt dist-upgrade` and
-then rebooting.
-* Learn the kernel version you are using `uname -a`.
-* Show the kernels installed:  `dpkg --list|grep proxmox-kernel.*-pve`.
-You only want to remove kernel packages of the form
-`proxmox-kernel-x.xx.xx-x-pve`!
+- Start with upgrading to the latest kernel `apt update && apt dist-upgrade` and
+  then rebooting.
 
-* Do it with `apt purge proxmox-kernel-6.2.16-8-pve`.
-* Observe the results with `ls -l /boot`
+- Learn the kernel version you are using `uname -a`.
+
+- Show the kernels installed: `dpkg --list|grep proxmox-kernel.*-pve`.
+  You only want to remove kernel packages of the form
+  `proxmox-kernel-x.xx.xx-x-pve`!
+
+- Do it with `apt purge proxmox-kernel-6.2.16-8-pve`.
+
+- Observe the results with `ls -l /boot`
 
 ## linux-image
 

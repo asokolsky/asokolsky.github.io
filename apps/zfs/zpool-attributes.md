@@ -1,22 +1,24 @@
 # Must-have ZPool Attributes
 
-* create zfs pool with `ashift=12` for setting the block size on your disks
-* `atime=off` - disables the Accessed attribute, can double IOPS;
-* `compression=lz4` - the best compression algorithm;
-* `recordsize=(value)`.  Recommended:
-    * 16K for VM images and databases;
-    * 1M for collections 5-9MB JPG files and GB+ movies;
-    * the default 128K is good enough.
-* `sync=disabled` - for a huge performance gain;
-* `xattr=sa` - set the Linux extended attributes, this will stop the file system
-from writing tiny files and write directly to the inodes;
+- create zfs pool with `ashift=12` for setting the block size on your disks
+- `atime=off` - disables the Accessed attribute, can double IOPS;
+- `compression=lz4` - the best compression algorithm;
+- `recordsize=(value)`. Recommended:
+  - 16K for VM images and databases;
+  - 1M for collections 5-9MB JPG files and GB+ movies;
+  - the default 128K is good enough.
+- `sync=disabled` - for a huge performance gain;
+- `xattr=sa` - set the Linux extended attributes, this will stop the file system
+  from writing tiny files and write directly to the inodes;
 
 To turn compression on for the pool:
+
 ```sh
 zfs set compression=lz4 POOLNAME
 ```
 
 Check:
+
 ```console
 $ zpool get ashift tank
 NAME  PROPERTY  VALUE   SOURCE
@@ -138,7 +140,6 @@ MOS Configuration:
             com.delphix:hole_birth
             com.delphix:embedded_data
 ```
-
 
 atime details:
 

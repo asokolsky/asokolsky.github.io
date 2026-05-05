@@ -2,7 +2,6 @@
 
 [reference](https://docs.aws.amazon.com/cli/latest/reference/ram/)
 
-
 ## List Resources
 
 [List resources](https://docs.aws.amazon.com/cli/latest/reference/ram/list-resources.html):

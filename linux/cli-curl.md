@@ -1,9 +1,9 @@
 # curl
 
-* [man page](https://man7.org/linux/man-pages/man1/curl.1.html)
-* [repo](https://github.com/curl/curl/)
-* [smb section in the manual](https://github.com/curl/curl/blob/master/docs/MANUAL.md#smb--smbs)
-* [tutorial](https://curl.se/docs/tutorial.html)
+- [man page](https://man7.org/linux/man-pages/man1/curl.1.html)
+- [repo](https://github.com/curl/curl/)
+- [smb section in the manual](https://github.com/curl/curl/blob/master/docs/MANUAL.md#smb--smbs)
+- [tutorial](https://curl.se/docs/tutorial.html)
 
 ## Common Options
 
@@ -49,25 +49,27 @@
 
 Specify the request type:
 
- * `-X POST` - is assumed and can be omitted
- * `-X PUT`
+- `-X POST` - is assumed and can be omitted
+- `-X PUT`
 
 Specify the `Content-Type` header as one of:
 
-  * `-H "Content-Type: application/x-www-form-urlencoded"`
-  * `-H "Content-Type: application/json"`
+- `-H "Content-Type: application/x-www-form-urlencoded"`
+- `-H "Content-Type: application/json"`
 
 Add the corresponding payload:
 
-  * `-d "param1=value1&param2=value2"` or `-d @data.txt`
-  * `-d '{"key1":"value1", "key2":"value2"}'` or `-d @data.json`
+- `-d "param1=value1&param2=value2"` or `-d @data.txt`
+- `-d '{"key1":"value1", "key2":"value2"}'` or `-d @data.json`
 
 File `data.txt`:
+
 ```
 param1=value1&param2=value2
 ```
 
 File `data.json`:
+
 ```json
 {
   "key1":"value1",
@@ -80,10 +82,13 @@ File `data.json`:
 ### http post application/x-www-form-urlencoded
 
 `application/x-www-form-urlencoded` is the default, `-X POST` implied when `-d` is used:
+
 ```sh
 curl -d "param1=value1&param2=value2" http://localhost:3000/data
 ```
+
 explicit:
+
 ```sh
 curl -d "param1=value1&param2=value2" \
     -H "Content-Type: application/x-www-form-urlencoded" \
@@ -91,6 +96,7 @@ curl -d "param1=value1&param2=value2" \
 ```
 
 from a data file:
+
 ```sh
 curl -d "@data.txt" http://localhost:3000/data
 ```
@@ -104,6 +110,7 @@ curl -d '{"key1":"value1", "key2":"value2"}' \
 ```
 
 from a data file:
+
 ```sh
 curl -d "@data.json" http://localhost:3000/data
 ```
@@ -113,11 +120,13 @@ curl -d "@data.json" http://localhost:3000/data
 Given that curl only supports SMB protocol version 1, the following is pretty much useless.
 
 Download a file from the SMB server:
+
 ```sh
 curl -u "domain\username:passwd" smb://server.example.com/share/file.txt
 ```
 
 Upload a file to the SMB server:
+
 ```sh
 curl -T file.txt -u "domain\username:passwd" smb://server.example.com/share/
 ```
@@ -125,11 +134,13 @@ curl -T file.txt -u "domain\username:passwd" smb://server.example.com/share/
 ### ssh
 
 Get a file from an SSH server using SCP using a (not password-protected) private key to authenticate:
+
 ```sh
 curl -u username: --key ~/.ssh/id_rsa scp://example.com/~/file.txt
 ```
 
 Get a file from an SSH server using SCP using a (password-protected) private key to authenticate:
+
 ```sh
 curl -u username: --key ~/.ssh/id_rsa --pass private_key_password \
     scp://example.com/~/file.txt

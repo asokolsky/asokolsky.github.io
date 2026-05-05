@@ -3,6 +3,7 @@
 ## Squash Commits Locally
 
 Check the git log to identify the commit you want to go back to:
+
 ```
 > git log --oneline  -n 10
 72be799 (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of github.com:asokolsky/asokolsky.github.io
@@ -16,17 +17,20 @@ Check the git log to identify the commit you want to go back to:
 214ae0f git updates
 ```
 
-I want to squash commits before 5888ab0.  Reset head to 5888ab0:
+I want to squash commits before 5888ab0. Reset head to 5888ab0:
+
 ```sh
 git reset --soft 5888ab0
 ```
 
 alternatively:
+
 ```
 git reset --soft HEAD~6
 ```
 
 This results in the files modified in the last commits being staged:
+
 ```
 > git status
 On branch main
@@ -49,6 +53,7 @@ Untracked files:
 ```
 
 Squash the changes into a single commit:
+
 ```
 > git commit -m "testing squash"
 [main 9a33bf1] testing squash
@@ -59,6 +64,7 @@ Squash the changes into a single commit:
 ## Push the Squashed Commit
 
 Naive attempt fails:
+
 ```
 > git push
 To github.com:asokolsky/asokolsky.github.io.git
@@ -71,6 +77,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
 Force the push
+
 ```sh
 git push --force-with-lease origin main
 ```

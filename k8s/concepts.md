@@ -14,19 +14,19 @@ There are master and worker nodes
 
 [Node components](https://kubernetes.io/docs/concepts/overview/components/#node-components):
 
-* the kubelet - an agent that runs on each node in the cluster, makes sure that
-containers are running in a Pod.
-* a container runtime, responsible for managing the execution and lifecycle of
-containers
-* the kube-proxy, a network proxy that runs on each node in your cluster,
-implementing part of the Kubernetes Service concept.
+- the kubelet - an agent that runs on each node in the cluster, makes sure that
+  containers are running in a Pod.
+- a container runtime, responsible for managing the execution and lifecycle of
+  containers
+- the kube-proxy, a network proxy that runs on each node in your cluster,
+  implementing part of the Kubernetes Service concept.
 
 Master node has:
 
-* etcd
-* kube controller manager
-* kube-scheduler
-* kube-apiserver
+- etcd
+- kube controller manager
+- kube-scheduler
+- kube-apiserver
 
 About [node ops](kubectl-nodes.html).
 
@@ -38,6 +38,7 @@ to a pod.
 ### List node taints
 
 To list node taints:
+
 ```sh
 kubectl get nodes -o json|jq '.items[].spec.taints'
 ```
@@ -45,9 +46,11 @@ kubectl get nodes -o json|jq '.items[].spec.taints'
 ### Taint a node
 
 To taint the `node1` with `key1=value1`:
+
 ```sh
 kubectl taint nodes node1 key1=value1:NoSchedule
 ```
+
 No pod will be able to schedule onto `node1` unless it has a matching
 toleration.
 
@@ -90,11 +93,11 @@ resources (DaemonSet, Deployment, etc) to implement cluster features.
 Namespaced resources for addons belong within the `kube-system` namespace.
 Include:
 
-* [cluster DNS](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
-* [dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
-* [container resource monitoring](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-usage-monitoring/)
-* [cluster level logging](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
-* [network plugins](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/)
+- [cluster DNS](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
+- [dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
+- [container resource monitoring](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-usage-monitoring/)
+- [cluster level logging](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
+- [network plugins](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/)
 
 ## Deployment
 
@@ -136,12 +139,12 @@ cli: [etcdctl](etcdctl.html)
 
 does:
 
-* user authentication
-* request validation
-* data retrieval (from etcd)
-* etcd update
-* talking to scheduler
-* talking to kubelet
+- user authentication
+- request validation
+- data retrieval (from etcd)
+- etcd update
+- talking to scheduler
+- talking to kubelet
 
 kube-apiserver is the only entity talking to `etcd`
 
@@ -151,31 +154,30 @@ Controller monitors state of some object(s)
 
 kube controller manager uses kube-apiserver to monitor node status:
 
-* node monitor period - 5sec
-* node monitor grace period - 40sec
-* pod eviction timeout - 5min
-
+- node monitor period - 5sec
+- node monitor grace period - 40sec
+- pod eviction timeout - 5min
 
 ## kube-scheduler
 
-Decides which pod goes to which node.  Actual deployment is done by a kubelet.
+Decides which pod goes to which node. Actual deployment is done by a kubelet.
 
 Decision making process:
 
-* filter nodes that do not need requested resorues
-* rank nodes
+- filter nodes that do not need requested resorues
+- rank nodes
 
 Relevant attributes:
 
-* resource requirements and limits
-* taints and tolerations
-* node selector/affinity
+- resource requirements and limits
+- taints and tolerations
+- node selector/affinity
 
 ## kubelet
 
-* registers the node with the cluster
-* creates pods
-* monitors pod state
+- registers the node with the cluster
+- creates pods
+- monitors pod state
 
 Note: kubeadm does NOT deploy kubelets.
 
@@ -183,14 +185,14 @@ Note: kubeadm does NOT deploy kubelets.
 
 kube-proxy:
 
-* runs on each node,
-* allows for the pods across the nodes to talk to each other
+- runs on each node,
+- allows for the pods across the nodes to talk to each other
 
 ## YAML manifests
 
 Always have:
 
-* apiVersion
-* kind
-* metadata
-* spec
+- apiVersion
+- kind
+- metadata
+- spec

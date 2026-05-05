@@ -8,6 +8,7 @@ server on linux and client on ...whatever.
 [gnome-remote-desktop](https://gitlab.gnome.org/GNOME/gnome-remote-desktop)
 
 Install it:
+
 ```sh
 sudo apt install gnome-remote-desktop
 ```
@@ -25,23 +26,28 @@ openssl req -new -newkey rsa:4096 -days 720 -nodes -x509 \
 Steps for [Headless (single user) RDP](https://gitlab.gnome.org/GNOME/gnome-remote-desktop#headless-single-user) config of gnome remote desktop:
 
 This:
+
 ```sh
 grdctl --headless rdp set-tls-key ~/.local/share/gnome-remote-desktop/tls.key
 ```
+
 failes with
+
 ```
 Init TPM credentials failed because Failed to initialize transmission interface context: tcti:IO failure, using GKeyFile as fallback.
 ```
 
 Workaround from
 [here](https://bugs.launchpad.net/ubuntu/+source/gnome-remote-desktop/+bug/2063333):
+
 ```sh
 sudo systemd-sysusers
 sudo systemd-tmpfiles --create /usr/lib/tmpfiles.d/gnome-remote-desktop-tmpfiles.conf
 sudo systemd-sysusers /usr/lib/sysusers.d/gnome-remote-desktop-sysusers.conf
 sudo systemd-tmpfiles --create /usr/lib/tmpfiles.d/gnome-remote-desktop-tmpfiles.conf
 ```
-did NOT work.  Ignore it for now.
+
+did NOT work. Ignore it for now.
 
 ```sh
 grdctl --headless rdp set-tls-cert ~/.local/share/gnome-remote-desktop/tls.crt
@@ -67,6 +73,7 @@ RDP:
 ```
 
 Alternatively:
+
 ```
 gsettings list-recursively org.gnome.desktop.remote-desktop.rdp
 org.gnome.desktop.remote-desktop.rdp enable true
@@ -113,17 +120,19 @@ chmod +x xrdp-installer-1.5.3.sh
 Then just launch the script with no options.
 
 To verify:L
+
 ```sh
 systemctl status xrdp.service
 systemctl status xrdp-sesman.service
 ```
+
 To verify the socket:
+
 ```
 ss -lnt|grep 3389
 ```
 
 ## Client (remmina) on Linux
-
 
 Use [remmina](https://remmina.org/how-to-install-remmina/).
 
@@ -132,30 +141,34 @@ sudo apt-add-repository ppa:C-ppa-team/remmina-next
 sudo apt update
 sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
 ```
+
 Worked as expected.
 
 ## Remmina Configuration
 
 Preferences/RDP
 
-* Keyboard Layout: US- English
-* Keyboard [scancode remapping](https://kbdlayout.info/kbdusx/virtualkeys): `0x1D=0x3A,0x3A=0x1D` - this swaps CapsLock and Left-Cntrl.
+- Keyboard Layout: US- English
 
-* in the client preferences set resolution to dynamic.
+- Keyboard [scancode remapping](https://kbdlayout.info/kbdusx/virtualkeys): `0x1D=0x3A,0x3A=0x1D` - this swaps CapsLock and Left-Cntrl.
+
+- in the client preferences set resolution to dynamic.
 
 Problems:
 
-* PolicyKit1 KDE agent dialog:
-`Authentication is required to create a color managed device`.
+- PolicyKit1 KDE agent dialog:
+  `Authentication is required to create a color managed device`.
 
 ## Client - MacOS
 
 Install [FreeRDP](https://github.com/FreeRDP/FreeRDP):
+
 ```sh
 brew install freerdp
 ```
 
 Then:
+
 ```
 [12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn][0x7fd798017400]: *************************************************
 [12:01:31:521] [65803:4ba014c0] [WARN][com.freerdp.core.rdp] - [log_build_warn][0x7fd798017400]: This build is using [runtime-check] build options:

@@ -4,7 +4,7 @@
 
 ```
 alex@latitude7490:~$ sudo dmidecode
-[sudo] password for alex: 
+[sudo] password for alex:
 # dmidecode 3.5
 Getting SMBIOS data from sysfs.
 SMBIOS 3.1.0 present.
@@ -57,8 +57,8 @@ System Information
 Handle 0x0002, DMI type 2, 15 bytes
 Base Board Information
         Manufacturer: Dell Inc.
-        Product Name:       
-        Version:    
+        Product Name:
+        Version:
         Serial Number: /80TM4M2/              /
         Asset Tag: Not Specified
         Features:
@@ -580,7 +580,7 @@ Memory Device
         Manufacturer: 859B0000802C
         Serial Number: E6610B32
         Asset Tag: 00221300
-        Part Number: CT16G4SFRA32A.C16FR 
+        Part Number: CT16G4SFRA32A.C16FR
         Rank: 2
         Configured Memory Speed: 2400 MT/s
         Minimum Voltage: 1.2 V
@@ -604,7 +604,7 @@ Memory Device
         Manufacturer: 859B0000802C
         Serial Number: E661112A
         Asset Tag: 00221300
-        Part Number: CT16G4SFRA32A.C16FR 
+        Part Number: CT16G4SFRA32A.C16FR
         Rank: 2
         Configured Memory Speed: 2400 MT/s
         Minimum Voltage: 1.2 V
@@ -769,7 +769,7 @@ Portable Battery
 
 Handle 0x1602, DMI type 43, 31 bytes
 TPM Device
-        Vendor ID: 
+        Vendor ID:
         Specification Version: 2.0
         Firmware Revision: 7.2
         Description: NUVOTON
@@ -853,7 +853,7 @@ OEM-specific Type
                 1F 00 FF 00 20 00 FF 00 21 00 FF 00 22 00 FF 00
                 50 01 26 00 44 00 16 00
         Strings:
-                                                    
+
 
 Handle 0xD000, DMI type 208, 16 bytes
 OEM-specific Type

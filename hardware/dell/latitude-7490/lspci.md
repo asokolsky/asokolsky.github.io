@@ -27,6 +27,7 @@ alex@latitude7490:~$ lspci
 ```
 
 Device tree
+
 ```
 alex@latitude7490:~$ lspci -tv
 -[0000:00]-+-00.0  Intel Corporation Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers
@@ -51,6 +52,7 @@ alex@latitude7490:~$ lspci -tv
 ```
 
 Device Details
+
 ```
 alex@latitude7490:~$ sudo lspci -v
 00:00.0 Host bridge: Intel Corporation Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers (rev 08)

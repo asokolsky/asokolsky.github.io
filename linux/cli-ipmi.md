@@ -10,9 +10,9 @@ ipmitool -I lan -U ADMIN -H 10.0.0.4 sensor thresh FAN1 lower 150 225 300
 
 More:
 
-  * https://quickpacket.com/billing/knowledgebase/20/Supermicro-Server-Remote-Access-via-IPMItool.html
-  * https://docs.oracle.com/cd/E19464-01/820-6850-11/IPMItool.html
-  * https://www.thomas-krenn.com/de/wiki/Ipmitool_zur_Sensorabfrage_von_Servern_nutzen
+- https://quickpacket.com/billing/knowledgebase/20/Supermicro-Server-Remote-Access-via-IPMItool.html
+- https://docs.oracle.com/cd/E19464-01/820-6850-11/IPMItool.html
+- https://www.thomas-krenn.com/de/wiki/Ipmitool_zur_Sensorabfrage_von_Servern_nutzen
 
 Playing with ipmitool:
 
@@ -102,6 +102,7 @@ alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0
 ```
 
 And then:
+
 ```console
 alex@latitude7490:~$ ipmitool -I lan -U ADMIN -P PASSWORD -H 192.168.11.22 raw 0x30 0x70 0x66 0x01 0x01 0x10
 

@@ -2,9 +2,8 @@
 
 Sources:
 
-* https://www.rapidseedbox.com/kb/ultimate-deluge-guide
-* [User Guide](https://dev.deluge-torrent.org/wiki/UserGuide)
-
+- https://www.rapidseedbox.com/kb/ultimate-deluge-guide
+- [User Guide](https://dev.deluge-torrent.org/wiki/UserGuide)
 
 ## Create user account
 
@@ -20,6 +19,7 @@ sudo apt install deluged deluge-console deluge-web
 ```
 
 Verify:
+
 ```
 > deluged --version
 deluged 2.1.2.dev0

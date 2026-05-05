@@ -14,6 +14,7 @@ https://www.home-assistant.io/installation/linux.
 Used laptop to un-compress it into `haos_ova-9.2.qcow2`.
 
 Create directory on proxmox to store qcow images:
+
 ```
 root@fuji:~# ls -la /var/lib/vz/template/
 total 16
@@ -32,7 +33,7 @@ alex@latitude7490:~/Downloads/ > scp haos_ova-9.2.qcow2 root@fuji:/var/lib/vz/te
 
 ## Create VM
 
-Create a VM.  Replace 104 with your desired VM ID.
+Create a VM. Replace 104 with your desired VM ID.
 
 ```sh
 qm create 104 \
@@ -49,15 +50,17 @@ qm create 104 \
 ```
 
 Create an EFI disk:
+
 ```sh
 qm set 104 --efidisk0 local-lvm:1,format=raw
 ```
 
-
 Import disk:
+
 ```sh
 qm importdisk 104 /var/lib/vz/template/qcow/haos_ova-9.2.qcow2 local-lvm
 ```
+
 and then attach it to VM:
 
 ```sh
@@ -67,6 +70,7 @@ qm set 104 --virtio0 local-lvm:vm-104-disk-1
 Manually changed it to `cache=writeback`.
 
 You no longer need the qcow2 image:
+
 ```sh
 rm /var/lib/vz/template/qcow/haos_ova-9.2.qcow2
 ```

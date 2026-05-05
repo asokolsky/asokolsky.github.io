@@ -1,15 +1,16 @@
 # Proxmox Set-up
 
-
 ## Update repositories
 
 You will get an error during the update:
+
 ```
 Err:4 https://enterprise.proxmox.com/debian/pve buster InRelease
   401  Unauthorized [IP: 144.217.225.162 443]
 ```
 
 It comes from /etc/apt/sources.list.d/pve-enterprise.list:
+
 ```
 root@pve02:/etc/apt/sources.list.d# cat pve-enterprise.list
 deb https://enterprise.proxmox.com/debian/pve buster pve-enterprise
@@ -22,7 +23,9 @@ Alternatively, change it to (mind version specific buser below):
 root@pve02:/etc/apt/sources.list.d# cat pve-enterprise.list
 # deb https://enterprise.proxmox.com/debian/pve buster pve-enterprise
 ```
+
 And then:
+
 ```
 root@pve02:/etc/apt# cat sources.list
 deb http://ftp.us.debian.org/debian buster main contrib
@@ -63,7 +66,9 @@ And finally:
 ```sh
 watch -n 1 sensors
 ```
+
 or just
+
 ```console
 root@pve02:/etc/apt/sources.list.d# sensors
 coretemp-isa-0000
@@ -93,17 +98,17 @@ See [pcie-passthrough](pcie-passthrough.html).
 
 Make sure the host has:
 
-* unique host name
-* networking is defined - can't change after
-* no VMs
+- unique host name
+- networking is defined - can't change after
+- no VMs
 
 ## Data Center Storage
 
-Add connection to the NFS server:  Datacenter\Storage Add NFS
+Add connection to the NFS server: Datacenter\\Storage Add NFS
 
 ## Schedule Backups
 
-Datacenter\Backup, Add
+Datacenter\\Backup, Add
 
 ## Cron
 
@@ -126,6 +131,7 @@ fstrim
 ## systemps script
 
 Requires:
+
 ```
 apt install nvme-cli
 ```

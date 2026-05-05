@@ -26,6 +26,7 @@ class User:
 ```
 
 Use `jsonpickle` to serialize/deserialize instance of class `User`:
+
 ```
 >>> import jsonpickle
 >>> from models import User

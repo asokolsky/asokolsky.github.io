@@ -86,6 +86,7 @@ alex@nass:~/ > lspci -nnkq
 ```
 
 Note the presence of the QuickAssist co-processor:
+
 ```
 > lspci -v
 ...

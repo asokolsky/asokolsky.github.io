@@ -5,7 +5,9 @@
 ```sh
 kubectl get nodes --no-headers | wc -l
 ```
+
 or
+
 ```sh
 kubectl get nodes -o json | jq '.items | length'
 ```
@@ -15,6 +17,7 @@ kubectl get nodes -o json | jq '.items | length'
 ```sh
 kubectl get nodes -o json|jq '.items[].spec.taints'
 ```
+
 Example output:
 
 ```json
@@ -35,10 +38,13 @@ null
 ```
 
 Alternatively:
+
 ```sh
 kubectl get nodes -o="custom-columns=NodeName:.metadata.name,TaintKey:.spec.taints[*].key,TaintValue:.spec.taints[*].value,TaintEffect:.spec.taints[*].effect"
 ```
+
 Output:
+
 ```
 NodeName                               TaintKey                         TaintValue          TaintEffect
 fargate-ip-10-14-81-126.ec2.internal   eks.amazonaws.com/compute-type   fargate             NoSchedule
@@ -86,9 +92,11 @@ Example output:
 ## Taint/UnTaint a node
 
 To taint the `node1` with `key1=value1`:
+
 ```sh
 kubectl taint nodes node1 key1=value1:NoSchedule
 ```
+
 No pod will be able to schedule onto `node1` unless it has a matching
 toleration.
 
@@ -97,6 +105,7 @@ To remove the taint added by the command above, you can run:
 ```sh
 kubectl taint nodes node1 key1=value1:NoSchedule-
 ```
+
 ## Label a node
 
 ```sh

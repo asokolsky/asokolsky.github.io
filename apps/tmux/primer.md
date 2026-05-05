@@ -2,10 +2,10 @@
 
 Why Use Tmux?
 
-* Persistence: If your SSH connection drops, your programs keep running.
-* Workflow Efficiency: Split screens for viewing logs, editing code, and running tests simultaneously.
-* Customization: Use a .tmux.conf file to change keybindings, add plugins (like tpm), and customize the status bar.
-* Copy/Paste: Use Prefix + [ to enter copy mode, allowing you to scroll and copy text with vi-like motions.
+- Persistence: If your SSH connection drops, your programs keep running.
+- Workflow Efficiency: Split screens for viewing logs, editing code, and running tests simultaneously.
+- Customization: Use a .tmux.conf file to change keybindings, add plugins (like tpm), and customize the status bar.
+- Copy/Paste: Use Prefix + \[ to enter copy mode, allowing you to scroll and copy text with vi-like motions.
 
 Here is a quick way to get you started.
 

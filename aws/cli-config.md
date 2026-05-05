@@ -2,8 +2,8 @@
 
 [AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html)
 
-
 Query by resource type and id:
+
 ```sh
 aws configservice get-resource-config-history --limit 3 --output json \
     --resource-type AWS::EC2::SecurityGroup --resource-id sg-123456789012 \

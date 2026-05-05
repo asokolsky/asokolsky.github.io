@@ -4,14 +4,14 @@
 
 Network policy should be supported by implementation. It is supported in:
 
-* kube-router
-* calico
-* romana
-* weave-net
+- kube-router
+- calico
+- romana
+- weave-net
 
 Not supported (not enforced, will not error) in:
 
-* flannel
+- flannel
 
 ## Listing
 

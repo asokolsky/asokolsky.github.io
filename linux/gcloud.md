@@ -70,6 +70,7 @@ Some things to try next:
 ```
 
 Installed `alpha` components:
+
 ```
 alex@latitude7490:~/Projects/asokolsky.github.io/ > gcloud components install alpha
 
@@ -177,14 +178,13 @@ fails:
 https://cdn4.userzoom.com/addon/ff/userzoom_surveys-6.0.0-fx.xpi
 results in 404
 
-
 When Chrome Version 104.0.5112.101 (Official Build) (64-bit) is used:
 
-* extension installed;
-* microphone is verified to work ok;
-* my laptop is connected to a single monitor, lid is closed, hence I have a
-single screen which I agree to share;
-* a full screen window is opened with:
+- extension installed;
+- microphone is verified to work ok;
+- my laptop is connected to a single monitor, lid is closed, hence I have a
+  single screen which I agree to share;
+- a full screen window is opened with:
 
 ```
 This survey cannot be displayed in a frame. To open in a new window click here
@@ -210,10 +210,10 @@ When you're ready click on Continue, we'll take you through a quick system check
 
 ## Troubleshooting:
 
-* disabled pfBlockerNG `pfb_dnsbl` service and `pfb_filter` firewall filter
-service
-* restarted the laptop
-* disabled firewall:
+- disabled pfBlockerNG `pfb_dnsbl` service and `pfb_filter` firewall filter
+  service
+- restarted the laptop
+- disabled firewall:
 
 ```
 alex@latitude7490:~/Projects/asokolsky.github.io/ > sudo ufw status
@@ -225,12 +225,13 @@ alex@latitude7490:~/Projects/asokolsky.github.io/ > sudo ufw status
 Status: inactive
 ```
 
-All to no avail.  Looks like attempt to communicate to the survey server fails.
+All to no avail. Looks like attempt to communicate to the survey server fails.
 
-Looked into chrole log - sdk.split.io was inacessible.  Looks like my privacy
+Looked into chrole log - sdk.split.io was inacessible. Looks like my privacy
 filters were prohibiting access to it.
 
 Finally:
+
 ```
 alex@latitude7490:~/ > ping sdk.split.io
 PING e3.shared.global.fastly.net (151.101.43.9) 56(84) bytes of data.

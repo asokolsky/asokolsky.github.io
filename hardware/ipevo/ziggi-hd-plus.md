@@ -4,22 +4,20 @@ This is just a USB webcam with a stand to point at the document on your table.
 
 ## Hardware
 
-Letter|Item|Description
-------|----|-----------
-D|Camera lens|8.0 Megapixel lens. Resolution up to 3264 x 2448 with. Automatic Macro mode for maintaining a sharp focus on objects as close as 3.94 inches (10 cm) away.
-E|Swivel head|You can swivel the camera. 270° of swivel is possible – 180° clockwise and 90° counterclockwise.
-F|EXP +/-|Exposure Value. Increase or decrease artificial exposure of the image, making it brighter (+) or darker (-).
-G|Autofocus (AF) switch|Continuous (C) causes Ziggi-HD Plus to constantly determine the best focus for your image. Single (S) causes Ziggi-HD Plus to stay at a single focus.
-H|Focus button|In Single focus mode, press this button for sharp focus of your subject. It only takes a few seconds for Ziggi-HD Plus to determine and set proper focus.
-I|Camera indicator|Indicates whether camera is operating: white for operating, off for not. When you start the Presenter software, the Camera indicator will light up.
-J|Microphone|A built-in microphone which can be used to capture your voice for video conferencing sessions and other applications.
-K|Anti-Glare Shield|If you are experiencing glare in your video capture, consider mounting the Anti-Glare Shield onto the camera.
+| Letter | Item                  | Description                                                                                                                                                |
+| ------ | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| D      | Camera lens           | 8.0 Megapixel lens. Resolution up to 3264 x 2448 with. Automatic Macro mode for maintaining a sharp focus on objects as close as 3.94 inches (10 cm) away. |
+| E      | Swivel head           | You can swivel the camera. 270° of swivel is possible – 180° clockwise and 90° counterclockwise.                                                           |
+| F      | EXP +/-               | Exposure Value. Increase or decrease artificial exposure of the image, making it brighter (+) or darker (-).                                               |
+| G      | Autofocus (AF) switch | Continuous (C) causes Ziggi-HD Plus to constantly determine the best focus for your image. Single (S) causes Ziggi-HD Plus to stay at a single focus.      |
+| H      | Focus button          | In Single focus mode, press this button for sharp focus of your subject. It only takes a few seconds for Ziggi-HD Plus to determine and set proper focus.  |
+| I      | Camera indicator      | Indicates whether camera is operating: white for operating, off for not. When you start the Presenter software, the Camera indicator will light up.        |
+| J      | Microphone            | A built-in microphone which can be used to capture your voice for video conferencing sessions and other applications.                                      |
+| K      | Anti-Glare Shield     | If you are experiencing glare in your video capture, consider mounting the Anti-Glare Shield onto the camera.                                              |
 
 <p align="center" width="100%">
     <img width="100%" src="ziggi-hd-plus.png">
 </p>
-
-
 
 ## Identify the device
 
@@ -44,6 +42,7 @@ EMEET SmartCam S800: EMEET Smar (usb-0000:00:14.0-5):
 ```
 
 ## Camera Capabilities
+
 ```
 alex@duo > v4l2-ctl --all --device /dev/video0
 Driver Info:
@@ -170,6 +169,7 @@ ioctl: VIDIOC_ENUM_FMT
 ## Live View
 
 For the best uncompressed quality in 16:9:
+
 ```sh
 vlc --meta-title='Live Document Feed' \
     --meta-description='Straight from my desk' \
@@ -177,6 +177,7 @@ vlc --meta-title='Live Document Feed' \
 ```
 
 For the best uncompressed quality in 4:3:
+
 ```sh
 vlc --meta-title='Live Document Feed' \
     --meta-description='Straight from my desk' \
@@ -184,6 +185,7 @@ vlc --meta-title='Live Document Feed' \
 ```
 
 For best quality with compression in 4:3:
+
 ```sh
 vlc --meta-title='Live Document Feed' \
     --meta-description='Straight from my desk' \
@@ -191,6 +193,7 @@ vlc --meta-title='Live Document Feed' \
 ```
 
 For best quality with compression in 16:9:
+
 ```sh
 vlc --meta-title='Live Document Feed' \
     --meta-description='Straight from my desk' \

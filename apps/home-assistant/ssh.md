@@ -2,11 +2,11 @@
 
 [HOWTO: Access the HA OS host itself over ssh](https://community.home-assistant.io/t/howto-how-to-access-the-home-assistant-os-host-itself-over-ssh/263352):
 
-* Install Terminal & SSH add-on - use community edition
-* specify port 22
-* edit config YAML and add your public key
-* leave password empty
-* restart add-on
+- Install Terminal & SSH add-on - use community edition
+- specify port 22
+- edit config YAML and add your public key
+- leave password empty
+- restart add-on
 
 After that:
 
@@ -27,19 +27,19 @@ PID   USER     TIME  COMMAND
   194 root      0:00 ps ax
 ```
 
-* in Proxmox web GUI drop into VM shell using `login` and then:
+- in Proxmox web GUI drop into VM shell using `login` and then:
 
 ```sh
 docker cp addon_core_ssh:/root/.ssh/authorized_keys .
 ```
 
-* then
+- then
 
 ```sh
 systemctl start dropbear
 ```
 
-* finally:
+- finally:
 
 ```console
 alex@latitude7490:~/ > ssh ssh://root@homeassistant:22222 'ps'

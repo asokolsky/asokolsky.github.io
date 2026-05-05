@@ -2,14 +2,14 @@
 
 ## Keychron Keyboards
 
-* [K1 Low Profile Bluetooth Mechanical](keychron/k1.html)
-* [C3 Pro QMK/VIA Programmable 87 Keys](./keychron/c3pro.html)
+- [K1 Low Profile Bluetooth Mechanical](keychron/k1.html)
+- [C3 Pro QMK/VIA Programmable 87 Keys](./keychron/c3pro.html)
 
 ## Logi Keyboards
 
-* [MS Mechanical Mini](logi/mx-mechanical-mini.html)
-* [Wave Keys](logi/wave-keys.html)
-* [Presenter R800](logi/remote.html) Remote
+- [MS Mechanical Mini](logi/mx-mechanical-mini.html)
+- [Wave Keys](logi/wave-keys.html)
+- [Presenter R800](logi/remote.html) Remote
 
 ## Troubleshooting
 

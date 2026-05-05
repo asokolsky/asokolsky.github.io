@@ -4,9 +4,9 @@ See also [Configure SSH for Key-based Authentication](ssh.html).
 
 ## Sources
 
-* [How to Configure the OpenSSH Server](https://www.ssh.com/academy/ssh/sshd_config)
-* [Configuring Authorized Keys for OpenSSH](https://www.ssh.com/academy/ssh/authorized-keys-openssh)
-* [ssh-copy-id](https://linux.die.net/man/1/ssh-copy-id)
+- [How to Configure the OpenSSH Server](https://www.ssh.com/academy/ssh/sshd_config)
+- [Configuring Authorized Keys for OpenSSH](https://www.ssh.com/academy/ssh/authorized-keys-openssh)
+- [ssh-copy-id](https://linux.die.net/man/1/ssh-copy-id)
 
 ## Installation
 
@@ -34,6 +34,7 @@ LogLevel VERBOSE
 ## Add Authorized User
 
 Enable password authentication in `/etc/ssh/sshd_config`:
+
 ```
 PasswordAuthentication yes
 ```
@@ -48,10 +49,11 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub alex@192.168.100.177
 
 This should result in:
 
-* a file being created `~alex/.ssh/authorized_keys`
-* relevant messages in `/var/log/auth.log`.
+- a file being created `~alex/.ssh/authorized_keys`
+- relevant messages in `/var/log/auth.log`.
 
 Disable password authentication in `/etc/ssh/sshd_config`:
+
 ```
 PasswordAuthentication no
 ```

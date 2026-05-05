@@ -2,14 +2,14 @@
 
 See:
 
-* [jsonnet Command Line](https://www.mankier.com/1/jsonnet), note use of `JSONNET_PATH=dir1:dir2 jsonnet -J c -J d`
-* [tutorial](https://jsonnet.org/learning/tutorial.html)
-* [language reference](https://jsonnet.org/ref/language.html)
-* [repo](https://github.com/google/jsonnet)
-* [go implementation](https://github.com/google/go-jsonnet)
-* [python binding](https://pypi.org/project/jsonnet/)
-* there is also a [bundler](https://github.com/jsonnet-bundler/jsonnet-bundler)
-* [google group jsonnet](https://groups.google.com/g/jsonnet)
+- [jsonnet Command Line](https://www.mankier.com/1/jsonnet), note use of `JSONNET_PATH=dir1:dir2 jsonnet -J c -J d`
+- [tutorial](https://jsonnet.org/learning/tutorial.html)
+- [language reference](https://jsonnet.org/ref/language.html)
+- [repo](https://github.com/google/jsonnet)
+- [go implementation](https://github.com/google/go-jsonnet)
+- [python binding](https://pypi.org/project/jsonnet/)
+- there is also a [bundler](https://github.com/jsonnet-bundler/jsonnet-bundler)
+- [google group jsonnet](https://groups.google.com/g/jsonnet)
 
 [Language Summary](https://learnxinyminutes.com/jsonnet/)
 
@@ -105,10 +105,13 @@ Jsonnet commandline interpreter v0.20.0
 `switch` is missing but can be replaced with a function.
 
 `switch.libsonnet`:
+
 ```
 {% include_relative switch.libsonnet %}
 ```
+
 Then in your `foo.jsonnet`:
+
 ```
 local switch = import 'switch.libsonnet';
 local replicas = switch(cluster.account, {
@@ -119,6 +122,7 @@ local replicas = switch(cluster.account, {
 ```
 
 ## Missing loop
+
 ```
   local loop(ax,nx,qx,rx) =
     if int.lt(rx, b) then
@@ -128,9 +132,11 @@ local replicas = switch(cluster.account, {
       loop(qxrx[1],1,qxrx[0],qxrx[1]);
   loop(a,1,0,a),
 ```
+
 ## Debugging Output
 
 This prints value of `clusters` and returns it:
+
 ```
 std.trace('clusters: %s' % std.manifestJson(clusters),  clusters)
 ```
@@ -138,6 +144,7 @@ std.trace('clusters: %s' % std.manifestJson(clusters),  clusters)
 ## std.manifestJsonMinified
 
 Produce a string of JSON:
+
 ```json
 std.manifestJsonMinified({
     account: dev_account_id,
@@ -163,7 +170,7 @@ To set `JSONNET_PATH` in `.vscode/settings.json`:
 
 To evaluate file:
 
-* open palette
-* select 'Jsonnet: Evaluate File'
+- open palette
+- select 'Jsonnet: Evaluate File'
 
-Traces go to  the `Jsonnet Language Server` output.
+Traces go to the `Jsonnet Language Server` output.

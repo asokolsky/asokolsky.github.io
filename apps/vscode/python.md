@@ -76,7 +76,6 @@ exclude = doc,.git,.mypy_cache,__pycache__,.vscode
 max-complexity = 20
 ```
 
-
 ### `.gitignore`
 
 See https://github.com/asokolsky/aws-describe/blob/master/.gitignore

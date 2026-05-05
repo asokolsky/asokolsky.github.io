@@ -1,17 +1,17 @@
 # API Gateways
 
 After creating more than one REST service, I start to wonder whether it is
-worth having something other than bare NGINX in front.  Possible goals:
+worth having something other than bare NGINX in front. Possible goals:
 
-* throttling;
-* authentication & authorization.
+- throttling;
+- authentication & authorization.
 
 Let's see what's there available...
 
 ## APIGee
 
 [APIGee](https://cloud.google.com/apigee/) was founded in 2004 and acquired by
-Google in 2016.  NOT open source.
+Google in 2016. NOT open source.
 
 ## APISIX
 
@@ -41,7 +41,7 @@ https://azure.microsoft.com/mediahandler/files/resourcefiles/api-design/Azure_AP
 ## Clyde IO
 
 [ClydeIO](https://github.com/clydeio/clydeio) is built with Node.js and uses
-Connect middleware for filters.  Not in active development.
+Connect middleware for filters. Not in active development.
 
 ## Express Gateway
 
@@ -61,13 +61,13 @@ Data stores required: Cassandra or Postgres
 Kong CE only offers admin REST APIs, but open-source
 dashboards are available:
 
-* [Konga](https://github.com/pantsel/konga)
-* [Kong Dashboard](https://github.com/PGBI/kong-dashboard)
+- [Konga](https://github.com/pantsel/konga)
+- [Kong Dashboard](https://github.com/PGBI/kong-dashboard)
 
 Plugins:
 
-* [LDAP Authentication](https://docs.konghq.com/hub/kong-inc/ldap-auth/)
-* [CORS](https://docs.konghq.com/hub/kong-inc/cors/)
+- [LDAP Authentication](https://docs.konghq.com/hub/kong-inc/ldap-auth/)
+- [CORS](https://docs.konghq.com/hub/kong-inc/cors/)
 
 ## KrakenD
 
@@ -94,7 +94,6 @@ Gateway](https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Ri
 data presented heavily disputed.
 
 [Which API Gateway](https://www.popularowl.com/reviews/which-api-gateway/)
-
 
 [API Management
 Platforms](https://www.predictiveanalyticstoday.com/top-api-management-platforms/)

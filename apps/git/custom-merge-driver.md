@@ -9,6 +9,7 @@ Problem statement: how to merge generated files, e.g., JSON?
 In `.gitattributes` assign an attribute
 [linguist-generated](https://docs.github.com/en/repositories/working-with-files/managing-files/customizing-how-changed-files-appear-on-github)
 to keep certain files from displaying in diffs by default.
+
 ```
 releases/** linguist-generated
 releases/manifest.json merge=json-manifest
@@ -17,6 +18,7 @@ releases/manifest.json merge=json-manifest
 ## Specify Merge Driver to Use
 
 Change repo config in the `Makefile`:
+
 ```
 # This is the base directory for this repo
 BASE_DIR:=$(dir $(realpath $(lastword $(MAKEFILE_LIST))))
@@ -34,6 +36,7 @@ setup:
 ## Merge Driver Implementation
 
 Finally, `merge-json.py`
+
 ```python
 {% include_relative merge-json.py %}
 ```

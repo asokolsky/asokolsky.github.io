@@ -10,25 +10,27 @@ Apparently
 
 Sources of information:
 
-* https://github.com/flolu/davinci-resolve-linux
-* [DaVinci Resolve on Ubuntu 24.04 - the easy way](https://www.youtube.com/watch?v=FHnNqtAwJ6M)
-* [with AMD graphics](https://forums.linuxmint.com/viewtopic.php?t=426123),
+- https://github.com/flolu/davinci-resolve-linux
+- [DaVinci Resolve on Ubuntu 24.04 - the easy way](https://www.youtube.com/watch?v=FHnNqtAwJ6M)
+- [with AMD graphics](https://forums.linuxmint.com/viewtopic.php?t=426123),
 
 Resolution involves use of [distrorun](https://github.com/Shachar/distrorun)
 and [drinstaller](https://github.com/Shachar/drinstaller).
 
 1. Install `drinstaller` DEB file - this results in `shemesh.biz` being added as
-a software source.
-2. Install helper packages:
+   a software source.
+1. Install helper packages:
+
 ```sh
 sudo apt update
 sudo apt upgrade
 sudo apt install drinstaller
 ```
+
 3. Observe DaVinci Resolve menu appearing.
-4. Install Rocky Linux by picking the item from the menu.
-5. Install NVidia driver inside the container by picking an item from the menu.
-6. Install DaVinci Resolve by picking an item from the menu.
+1. Install Rocky Linux by picking the item from the menu.
+1. Install NVidia driver inside the container by picking an item from the menu.
+1. Install DaVinci Resolve by picking an item from the menu.
 
 ```
 Please provide path to DaVinci Resolve installer
@@ -48,12 +50,13 @@ QWizard::field: No such field 'options.uninstall'
 ```
 
 The installer:
+
 ```
 The value for the SHELL variable was not found the /etc/shells file This incident has been reported.
 ```
 
 7. I suspect the above is due to my use of `zsh` as my shell AND `zah` not
-being available in the container. To install the `zsh` in the rocky container:
+   being available in the container. To install the `zsh` in the rocky container:
 
 ```
 alex@exi > sudo distrorun drrocky /bin/bash
@@ -73,7 +76,7 @@ uid=0(root) gid=0(root) groups=0(root)
 Complete!
 ```
 
-1.  Retry 6.  This time it succeeds:
+1. Retry 6. This time it succeeds:
 
 ```
 Please provide path to DaVinci Resolve installer
@@ -112,5 +115,5 @@ Press ENTER to close terminal
 
 Limited (no) support for input file formats:
 
-* mkv
-* aac
+- mkv
+- aac

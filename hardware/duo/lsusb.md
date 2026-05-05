@@ -39,4 +39,4 @@ alex@duo > lsusb -t
     |__ Port 006: Dev 003, If 4, Class=Human Interface Device, Driver=usbhid, 5000M
     |__ Port 006: Dev 003, If 5, Class=Communications, Driver=cdc_acm, 5000M
     |__ Port 006: Dev 003, If 6, Class=CDC Data, Driver=cdc_acm, 5000M
- ```
+```

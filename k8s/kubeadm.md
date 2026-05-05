@@ -53,6 +53,7 @@ _____________________________________________________________________
 ```
 
 Drain the `controlplane` node:
+
 ```sh
 k drain controlplane  --ignore-daemonsets
 ```
@@ -61,11 +62,12 @@ k drain controlplane  --ignore-daemonsets
 
 [Upgrade the control plane node](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/#upgrading-control-plane-nodes):
 
-* the kubeadm tool (if not already), then
-* the controlplane components, and finally
-* the kubelet.
+- the kubeadm tool (if not already), then
+- the controlplane components, and finally
+- the kubelet.
 
 Upgrade kubeadm:
+
 ```sh
 sudo apt-mark unhold kubeadm && \
 sudo apt-get update && sudo apt-get install -y kubeadm='1.29.0-*' && \
@@ -76,7 +78,8 @@ sudo apt-mark hold kubeadm
 kubeadm upgrade apply v1.29.0
 ```
 
-Upgrade kubelet and kubectl, replace x in 1.30.x-* with the latest patch:
+Upgrade kubelet and kubectl, replace x in 1.30.x-\* with the latest patch:
+
 ```sh
 sudo apt-mark unhold kubelet kubectl && \
 sudo apt-get update && sudo apt-get install -y kubelet='1.29.0-*' kubectl='1.29.0-*' && \
@@ -84,6 +87,7 @@ sudo apt-mark hold kubelet kubectl
 ```
 
 Restart the kubelet:
+
 ```sh
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
@@ -93,7 +97,7 @@ sudo systemctl restart kubelet
 
 https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/upgrading-linux-nodes/#upgrading-worker-nodes
 
-Upgrade kubeadm, replace x in 1.30.x-* with the latest patch version:
+Upgrade kubeadm, replace x in 1.30.x-\* with the latest patch version:
 
 ```sh
 sudo apt-mark unhold kubeadm && \
@@ -102,6 +106,7 @@ sudo apt-mark hold kubeadm
 ```
 
 For worker nodes this upgrades the local kubelet configuration:
+
 ```sh
 sudo kubeadm upgrade node
 ```
@@ -112,14 +117,16 @@ Drain the node from a control plane node:
 kubectl drain node01 --ignore-daemonsets
 ```
 
-Upgrade kubelet and kubectl, replace x in 1.30.x-* with the latest patch version:
+Upgrade kubelet and kubectl, replace x in 1.30.x-\* with the latest patch version:
 
 ```sh
 sudo apt-mark unhold kubelet kubectl && \
 sudo apt-get update && sudo apt-get install -y kubelet='1.28.9-*' kubectl='1.28.9-*' && \
 sudo apt-mark hold kubelet kubectl
 ```
+
 Restart the kubelet:
+
 ```sh
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet

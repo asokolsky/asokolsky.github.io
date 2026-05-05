@@ -1,6 +1,5 @@
 # AWS Route53 CLI
 
-
 [reference](https://docs.aws.amazon.com/cli/latest/reference/route53/)
 
 ## List Hosted Zones

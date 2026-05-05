@@ -4,10 +4,10 @@
 
 What worked for me:
 
-* install mmv using `sudo apt install mmv`;
-* [mmv man page](https://www.systutorials.com/docs/linux/man/1-mmv/) has good
-examples;
-* use it
+- install mmv using `sudo apt install mmv`;
+- [mmv man page](https://www.systutorials.com/docs/linux/man/1-mmv/) has good
+  examples;
+- use it
 
 Problematic: `mmv -h` does not work
 

@@ -1,6 +1,5 @@
 # terragrunt
 
-
 To check if your code is compatible with 1.0, enable [strict mode](https://terragrunt.gruntwork.io/docs/reference/strict-mode/):
 
 ```sh

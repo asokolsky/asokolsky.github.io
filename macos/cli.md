@@ -1,38 +1,45 @@
 # MacOS CLI Tips
 
-* [brew](cli-brew.html)
-* [launchctl](cli-launchctl.html)
-* [log](cli-log.html) replaced [syslog](cli-syslog.html)
-* [smbutil](cli-smbutil.html)
-* [networking CLIs](cli-networking.html)
-* List hardware using [system_profiler](cli-system_profiler.html)
-* more [macOS (bash) commands](https://ss64.com/mac/index.html)
+- [brew](cli-brew.html)
+- [launchctl](cli-launchctl.html)
+- [log](cli-log.html) replaced [syslog](cli-syslog.html)
+- [smbutil](cli-smbutil.html)
+- [networking CLIs](cli-networking.html)
+- List hardware using [system_profiler](cli-system_profiler.html)
+- more [macOS (bash) commands](https://ss64.com/mac/index.html)
 
 ## Launch an App
 
 Launch Firefox profile manager:
+
 ```sh
 open -a /Applications/Firefox.app --args -P default -no-remote
 ```
 
 Open a file with a specific application, TextEdit:
+
 ```sh
 open ~/Downloads/Instructions.doc -a TextEdit
 ```
 
 ## Show hidden files and folders
+
 Use [defaults](https://ss64.com/mac/defaults.html):
+
 ```sh
 defaults write com.apple.finder AppleShowAllFiles -bool true
 ```
 
 ## Enable Check for Updates
+
 Use [defaults](https://ss64.com/mac/defaults.html):
+
 ```sh
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
 ## Disable Liquid Glass
+
 ```sh
 defaults write -g com.apple.SwiftUI.DisableSolarium -bool YES
 ```
@@ -40,6 +47,7 @@ defaults write -g com.apple.SwiftUI.DisableSolarium -bool YES
 ## Prevent Sleep Mode
 
 Use [caffeinate](https://ss64.com/mac/caffeinate.html) to keep your Mac from falling asleep:
+
 ```sh
 caffeinate
 ```
@@ -48,15 +56,16 @@ caffeinate
 
 Use [ditto](https://ss64.com/mac/ditto.html), it preserves:
 
-* ownership attributes and permissions
-* file resource forks
-* file and folder metadata
+- ownership attributes and permissions
+- file resource forks
+- file and folder metadata
 
 ```sh
 ditto ~/Desktop/FluffyBackups /Volumes/FluffyBackups/
 ```
 
 Merge the directories:
+
 ```sh
 ditto ~/Pictures/Fall2015/ /Volumes/PhotoBackup/2015/
 ```
@@ -64,11 +73,13 @@ ditto ~/Pictures/Fall2015/ /Volumes/PhotoBackup/2015/
 ## Show system temps using CLI
 
 Use [powermetrics](https://ss64.com/mac/powermetrics.html):
+
 ```sh
 sudo powermetrics --samplers smc
 ```
 
 On my Intel MacBook Pro:
+
 ```
 sudo powermetrics --samplers smc
 Password:
@@ -97,11 +108,13 @@ Number of prochots: 0
 ## Networking
 
 Use [ifconfig](https://ss64.com/mac/ifconfig.html) to show interfaces:
+
 ```sh
 ifconfig
 ```
 
 Show Routes:
+
 ```sh
 netstat -rn
 ```

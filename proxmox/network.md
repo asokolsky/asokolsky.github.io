@@ -2,10 +2,10 @@
 
 More info:
 
-* NIC naming: [**1**](https://en.wikipedia.org/wiki/Consistent_Network_Device_Naming),
-[**2**](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/ch-consistent_network_device_naming#sec-Naming_Schemes_Hierarchy)
-* [PVE Net Config](https://pve.proxmox.com/wiki/Network_Configuration)
-* [Installing RTL8125 driver](/hardware/network-r8125.html) - not worth it.
+- NIC naming: [**1**](https://en.wikipedia.org/wiki/Consistent_Network_Device_Naming),
+  [**2**](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/ch-consistent_network_device_naming#sec-Naming_Schemes_Hierarchy)
+- [PVE Net Config](https://pve.proxmox.com/wiki/Network_Configuration)
+- [Installing RTL8125 driver](/hardware/network-r8125.html) - not worth it.
 
 Network config should be completed *before* a server is added into a cluster.
 
@@ -27,12 +27,13 @@ net.ipv6.conf.enp0s3.disable_ipv6 = 1
 
 ## Make NIC VLAN-aware
 
-In GUI: Server-name\Network\vmbr0, check VLAN aware
+In GUI: Server-name\\Network\\vmbr0, check VLAN aware
 
 ## NIC Aggregation
 
 Add in the `/etc/network/interfaces`
 ([man page](https://manpages.ubuntu.com/manpages/jammy/man5/interfaces-bridge.5.html)):
+
 ```
 iface bond0 inet manual
   bond-slaves eno1 eno1
@@ -90,6 +91,7 @@ iface vmbr2 inet static
 ```
 
 Then:
+
 ```sh
 ifreload -a
 ```

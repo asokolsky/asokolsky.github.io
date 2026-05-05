@@ -9,11 +9,12 @@ e.g. to have ACLs.
 
 References:
 
-* [zfs get](https://openzfs.github.io/openzfs-docs/man/master/8/zfs-get.8.html)
-* [zfsprops](https://openzfs.github.io/openzfs-docs/man/master/7/zfsprops.7.html),
-[Properties](https://docs.oracle.com/cd/E19253-01/819-5461/gazss/)
+- [zfs get](https://openzfs.github.io/openzfs-docs/man/master/8/zfs-get.8.html)
+- [zfsprops](https://openzfs.github.io/openzfs-docs/man/master/7/zfsprops.7.html),
+  [Properties](https://docs.oracle.com/cd/E19253-01/819-5461/gazss/)
 
 Use:
+
 ```
 # zfs get all tank/downloads
 NAME            PROPERTY                VALUE                   SOURCE
@@ -96,7 +97,7 @@ tank/downloads  org.freebsd.ioc:active  yes                     inherited from t
 # Manipulate Flags
 
 Use
-[zfs set](https://openzfs.github.io/openzfs-docs/man/master/8/zfs-set.8.html    ),
+[zfs set](https://openzfs.github.io/openzfs-docs/man/master/8/zfs-set.8.html),
 e.g., to turn compression on for the pool:
 
 ```sh
@@ -107,11 +108,13 @@ zfs set compression=lz4 POOLNAME
 
 Use
 [zfs create](https://openzfs.github.io/openzfs-docs/man/master/8/zfs-create.8.html):
+
 ```sh
 zfs create -o aclinherit=passthrough -o aclmode=passthrough -o acltype=nfsv4 -o atime=off -o casesensitivity=sensitive -o xattr=sa btr/foo
 ```
 
 For example:
+
 ```
 > zpool status
   pool: btr
@@ -219,11 +222,11 @@ btr/foo  pbkdf2iters           0                      default
 btr/foo  special_small_blocks  0                      default
 ```
 
-
 ## Destroy ZFS Dataset
 
 Use
 [zfs destroy](https://openzfs.github.io/openzfs-docs/man/master/8/zfs-destroy.8.html):
+
 ```sh
 zfs destroy tank/foo
 ```

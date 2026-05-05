@@ -9,6 +9,7 @@ See also other [portainer on Proxmox notes](/proxmox/portainer.html)
 To install portainer on ubuntu I followed
 [instructions](https://docs.portainer.io/start/install-ce/server/docker/linux),
 as root:
+
 ```sh
 docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \

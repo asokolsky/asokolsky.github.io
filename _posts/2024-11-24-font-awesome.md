@@ -16,7 +16,6 @@ to add style, include in the head:
 
 Usage: note it is [version-specific](https://docs.fontawesome.com/web/setup/upgrade/upgrade-from-v4)
 
-
 [Available versions](https://fontawesome.com/versions)
 
 This is a copy icon <i class="fa fa-copy" aria-hidden="true"></i>.
@@ -24,7 +23,6 @@ This is a copy icon <i class="fa fa-copy" aria-hidden="true"></i>.
 This is a check icon <i class="fa fa-check" aria-hidden="true"></i>.
 
 More [icons](https://fontawesome.com/v4/icons/).
-
 
 Use in a regular button:
 
@@ -37,9 +35,9 @@ Use in a copy-to-clipboard button:
 <button class="copy-to-clipboard"><i class="fa fa-copy" aria-hidden="true"></i></button>
 <button class="copy-to-clipboard"><i class="fa fa-check" aria-hidden="true"></i></button>
 
-
 This JavaScript [code](/assets/js/codebutton.js) enumerates all the code
 snippets and adds a copy to clipboard button:
+
 ```js
 var codeBlocks = document.querySelectorAll('pre.highlight');
 codeBlocks.forEach(function(codeBlock) {
@@ -61,7 +59,9 @@ codeBlocks.forEach(function(codeBlock) {
   });
 });
 ```
+
 Note:
-* to use font awesome I have to work with `innerHTML` button attribute;
-* click handler, besides copying the code to the clipboard, temporarily changes
-the button text to provide feedback.
+
+- to use font awesome I have to work with `innerHTML` button attribute;
+- click handler, besides copying the code to the clipboard, temporarily changes
+  the button text to provide feedback.

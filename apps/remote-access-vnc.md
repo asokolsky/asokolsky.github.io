@@ -13,25 +13,30 @@ Setup a password for vnc login:
 ```sh
 vncpasswd
 ```
+
 This creates `~/.vnc/passwd`.
 
 To start TigerVNC server:
+
 ```sh
 vncserver -depth {8|16|24|32} -geometry {width}x{height} -localhost no
 ```
 
 e.g.
+
 ```sh
 vncserver -depth 16 -geometry 1920x1080 -localhost no
 ```
 
 To verify server running:
+
 ```sh
 pgrep Xtigervnc
 ss -tulpn | grep -E -i 'vnc|590'
 ```
 
 To list VNC server sessions:
+
 ```sh
 vncserver -list
 ```
@@ -105,7 +110,8 @@ Icon=
 Type=Application
 ```
 
-Based on the above created  `~/.vnc/xstartup`:
+Based on the above created `~/.vnc/xstartup`:
+
 ```sh
 #!/bin/bash
 
@@ -114,7 +120,6 @@ unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
 exec cinnamon-session-cinnamon
 ```
-
 
 ## Client - remmina
 
@@ -126,17 +131,19 @@ sudo apt update
 sudo apt install remmina remmina-plugin-vnc remmina-plugin-secret
 ```
 
-In GUI when configuring for the server use: `<host-or-ip>:1`.  Remember to
+In GUI when configuring for the server use: `<host-or-ip>:1`. Remember to
 enter the display number.
 
 ## Client - tigervnc-viewer on Linux
 
 Install:
+
 ```sh
 sudo apt install tigervnc-viewer
 ```
 
 Connect:
+
 ```sh
 xtigervncviewer exi:1
 ```
@@ -147,11 +154,12 @@ In Finder: Go / Connect to Server enter URL: `vnc://192.168.1.50:5901`.
 
 Known Problems caused by [Karabiner](https://github.com/pqrs-org/Karabiner-Elements/issues/425):
 
-* Ctrl+C, Ctrl+A are not passed to server
+- Ctrl+C, Ctrl+A are not passed to server
 
 ## Client - tiger-vnc on MacOS
 
 Install:
+
 ```sh
 brew install tiger-vnc
 ```
@@ -164,4 +172,4 @@ vncviewer −FullScreen −FullscreenSystemKeys 192.168.10.50:1
 
 Known Problems caused by Karabiner:
 
-* Ctrl+C, Ctrl+A are not passed to server
+- Ctrl+C, Ctrl+A are not passed to server

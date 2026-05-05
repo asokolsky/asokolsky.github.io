@@ -36,7 +36,7 @@ Memory Device
         Manufacturer: Samsung
         Serial Number: 00000000
         Asset Tag: None
-        Part Number: M471A1G44BB0-CWE    
+        Part Number: M471A1G44BB0-CWE
         Rank: 1
         Configured Memory Speed: 3200 MT/s
         Minimum Voltage: Unknown
@@ -113,7 +113,7 @@ Memory Device
         Manufacturer: Samsung
         Serial Number: 363FD379
         Asset Tag: 9876543210
-        Part Number: M471A1G44BB0-CWE    
+        Part Number: M471A1G44BB0-CWE
         Rank: 1
         Configured Memory Speed: 3200 MT/s
         Minimum Voltage: Unknown
@@ -255,7 +255,7 @@ OEM-specific Type
                 Reference Code - MRC
                 SA - PCIe Version
                 SA-CRID Status
-                Enabled 
+                Enabled
                 SA-CRID Original Value
                 SA-CRID New Value
                 OPROM - VBIOS
@@ -685,8 +685,8 @@ OEM-specific Type
         Header and Data:
                 8C 0F 39 00 4C 45 4E 4F 56 4F 0B 09 01 01 02
         Strings:
-                1.22 
-                1.21 
+                1.22
+                1.21
 
 Handle 0x003A, DMI type 14, 8 bytes
 Group Associations

@@ -2,27 +2,28 @@
 
 ## Topics
 
-* [Configuration](config.html)
-* [git hooks](https://www.atlassian.com/git/tutorials/git-hooks), [pre-commit hook](pre-commit-hook.html)
-* [custom git merge driver](custom-merge-driver.html)
-* [Hosting a Repo in a Cloud](hosting.html)
-* [merge vs rebase workflow](workflow.html)
-* [git squash](squash-commits.html)
-* [Using Multiple GitHub Accounts](multiple-gh-accounts.html)
-* [FAQs](faq.html)
+- [Configuration](config.html)
+- [git hooks](https://www.atlassian.com/git/tutorials/git-hooks), [pre-commit hook](pre-commit-hook.html)
+- [custom git merge driver](custom-merge-driver.html)
+- [Hosting a Repo in a Cloud](hosting.html)
+- [merge vs rebase workflow](workflow.html)
+- [git squash](squash-commits.html)
+- [Using Multiple GitHub Accounts](multiple-gh-accounts.html)
+- [FAQs](faq.html)
 
 And more:
-* [Pro Git Book](https://git-scm.com/book/en/v2)
-* [Atlassian advanced tips](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+- [Pro Git Book](https://git-scm.com/book/en/v2)
+- [Atlassian advanced tips](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
 Proprietary CLIs
 
-* [gh CLI for github](cli-gh.html)
-* [glab CLI for gitlab](cli-glab.html)
+- [gh CLI for github](cli-gh.html)
+- [glab CLI for gitlab](cli-glab.html)
 
 Manuals:
 
-* [Beej's Guide to Git](https://beej.us/guide/bggit/html/)
+- [Beej's Guide to Git](https://beej.us/guide/bggit/html/)
 
 ## Handling an Upstream Repo
 
@@ -45,7 +46,9 @@ Just pull from upstream:
 ```
 alex@latitude7490:~/Projects/psmqtt/ > git pull upstream master
 ```
+
 And then push
+
 ```
 alex@latitude7490:~/Projects/psmqtt/ > git push
 Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
@@ -55,5 +58,5 @@ To https://github.com/asokolsky/psmqtt.git
 
 ## Utility Scripts
 
-* [check-repo.sh](check-repo.sh) - check that all subdirectories are clean repos;
-* [update-from-repo.sh](update-from-repo.sh) - imports a file from a different repo, sometimes this may make more sense than using git submodules.
+- [check-repo.sh](check-repo.sh) - check that all subdirectories are clean repos;
+- [update-from-repo.sh](update-from-repo.sh) - imports a file from a different repo, sometimes this may make more sense than using git submodules.

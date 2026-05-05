@@ -10,18 +10,19 @@ Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 ```
 
 Device tree:
+
 ```
 alex@latitude7490:~$ lsusb -tv
 /:  Bus 001.Port 001: Dev 001, Class=root_hub, Driver=xhci_hcd/12p, 480M
     ID 1d6b:0002 Linux Foundation 2.0 root hub
     |__ Port 005: Dev 002, If 0, Class=Video, Driver=uvcvideo, 480M
-        ID 0bda:58ca Realtek Semiconductor Corp. 
+        ID 0bda:58ca Realtek Semiconductor Corp.
     |__ Port 005: Dev 002, If 1, Class=Video, Driver=uvcvideo, 480M
-        ID 0bda:58ca Realtek Semiconductor Corp. 
+        ID 0bda:58ca Realtek Semiconductor Corp.
     |__ Port 005: Dev 002, If 2, Class=Video, Driver=uvcvideo, 480M
-        ID 0bda:58ca Realtek Semiconductor Corp. 
+        ID 0bda:58ca Realtek Semiconductor Corp.
     |__ Port 005: Dev 002, If 3, Class=Video, Driver=uvcvideo, 480M
-        ID 0bda:58ca Realtek Semiconductor Corp. 
+        ID 0bda:58ca Realtek Semiconductor Corp.
     |__ Port 007: Dev 003, If 0, Class=Wireless, Driver=btusb, 12M
         ID 8087:0032 Intel Corp. AX210 Bluetooth
     |__ Port 007: Dev 003, If 1, Class=Wireless, Driver=btusb, 12M

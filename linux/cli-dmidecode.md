@@ -4,27 +4,26 @@
 
 ## Install
 
-It is already installed.  Otherwise:
+It is already installed. Otherwise:
 
 ```sh
 sudo apt install dmidecode
 ```
-
 
 ## Use
 
 `sudo dmidecode` will produce lots of output.
 Consider instead using any of these:
 
-* `sudo dmidecode -t processor` for CPU info
-* `sudo dmidecode -t memory` for RAM info
-* `sudo dmidecode -t bios` for BIOS info
-* `sudo dmidecode -t system` for system info, e.g. manufacturer, model,
-serial number, SKU, uuid
-* `sudo dmidecode -t baseboard` displays info on components built into the
-motherboard.  Apparently my laptop has an 1394 controller!
-* `sudo dmidecode -t chassis` displays type, e.g. `Notebook`, serial number,
-asset tag, etc.
+- `sudo dmidecode -t processor` for CPU info
+- `sudo dmidecode -t memory` for RAM info
+- `sudo dmidecode -t bios` for BIOS info
+- `sudo dmidecode -t system` for system info, e.g. manufacturer, model,
+  serial number, SKU, uuid
+- `sudo dmidecode -t baseboard` displays info on components built into the
+  motherboard. Apparently my laptop has an 1394 controller!
+- `sudo dmidecode -t chassis` displays type, e.g. `Notebook`, serial number,
+  asset tag, etc.
 
 E.g.
 

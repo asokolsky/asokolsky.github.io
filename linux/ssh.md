@@ -4,10 +4,10 @@ See also [Configure SSHD](sshd.html).
 
 ## Sources
 
-* [SSH Key Tutorial](https://austinsnerdythings.com/2021/04/02/ssh-key-tutorial/)
-* Man pages: [ssh](https://man7.org/linux/man-pages/man1/ssh.1.html), [ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html), [ssh-add](https://man7.org/linux/man-pages/man1/ssh-add.1.html), [ssh-agent](https://man7.org/linux/man-pages/man1/ssh-agent.1.html)
-* [Configuring Authorized Keys for OpenSSH](https://www.ssh.com/academy/ssh/authorized-keys-openssh)
-* [The Ultimate SSH Guide](https://grimoire.carcano.ch/blog/openssh-tutorial-the-ultimate-ssh-guide-to-understand-it/) and [Cryptography Quick Guide](https://grimoire.carcano.ch/blog/cryptography-quick-guide/)
+- [SSH Key Tutorial](https://austinsnerdythings.com/2021/04/02/ssh-key-tutorial/)
+- Man pages: [ssh](https://man7.org/linux/man-pages/man1/ssh.1.html), [ssh-keygen](https://man7.org/linux/man-pages/man1/ssh-keygen.1.html), [ssh-add](https://man7.org/linux/man-pages/man1/ssh-add.1.html), [ssh-agent](https://man7.org/linux/man-pages/man1/ssh-agent.1.html)
+- [Configuring Authorized Keys for OpenSSH](https://www.ssh.com/academy/ssh/authorized-keys-openssh)
+- [The Ultimate SSH Guide](https://grimoire.carcano.ch/blog/openssh-tutorial-the-ultimate-ssh-guide-to-understand-it/) and [Cryptography Quick Guide](https://grimoire.carcano.ch/blog/cryptography-quick-guide/)
 
 ## Generate SSH Key Pair
 
@@ -24,6 +24,7 @@ Your public key has been saved in /home/alex/.ssh/id_ed25519.pub
 ```
 
 Verify the generated files:
+
 ```console
 $ ls -la ~/.ssh
 total 48
@@ -39,9 +40,10 @@ drwxr-xr-x 31 alex alex  4096 Mar 31 12:00 ..
 
 ## Using the Keys
 
-By now you should have [ssh-agent](https://man7.org/linux/man-pages/man1/ssh-agent.1.html) running in the background.  Start it in your [profile](/apps/dot-files/zprofile).
+By now you should have [ssh-agent](https://man7.org/linux/man-pages/man1/ssh-agent.1.html) running in the background. Start it in your [profile](/apps/dot-files/zprofile).
 
 List the fingerprints currently used by ssh using [ssh-add](https://man7.org/linux/man-pages/man1/ssh-add.1.html):
+
 ```
 $ ssh-add -l
 4096 SHA256:4sGkGvw2itx0TNFu8V+Bqk2lSdB8ZEHczXIGfmfWiZc alex@latitude (RSA)
@@ -49,12 +51,13 @@ $ ssh-add -l
 
 Add the private key identities to the authentication agent with `ssh-add`.
 When run without arguments, it adds the files
-* `~/.ssh/id_rsa`
-* `~/.ssh/id_dsa`
-* `~/.ssh/id_ecdsa`
-* `~/.ssh/id_ecdsa_sk`
-* `~/.ssh/id_ed25519`
-* `~/.ssh/id_ed25519_sk`
+
+- `~/.ssh/id_rsa`
+- `~/.ssh/id_dsa`
+- `~/.ssh/id_ecdsa`
+- `~/.ssh/id_ecdsa_sk`
+- `~/.ssh/id_ed25519`
+- `~/.ssh/id_ed25519_sk`
 
 ```
 $ ssh-add
@@ -63,6 +66,7 @@ Identity added: /home/alex/.ssh/id_ed25519 (alex@latitude7490)
 ```
 
 Confirm the key addition by listing all the keys:
+
 ```
 $ ssh-add -l
 4096 SHA256:4sGkGvw2itx0TNFu8V+Bqk2lSdB8ZEHczXIGfmfWiZc alex@latitude (RSA)
@@ -84,6 +88,7 @@ usermod -s /bin/bash $uname
 ## Copy ID to a Remote Computer
 
 Copy a default ID:
+
 ```console
 alex@latitude7490:~$ ssh-copy-id alex@fuji
 /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
@@ -97,6 +102,7 @@ and check to make sure that only the key(s) you wanted were added.
 ```
 
 Alternatively, copy the specific ID:
+
 ```sh
 ssh-copy-id -i ~/.ssh/id_rsa.pub alex@192.168.100.177
 ```
@@ -124,6 +130,7 @@ total 4
 [Reference](https://www.ssh.com/academy/ssh/config)
 
 ### Custom secret per host
+
 ```
 Host _name_
   User ubuntu

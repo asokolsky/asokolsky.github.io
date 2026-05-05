@@ -6,8 +6,8 @@ Node.js stack involves multiple participants...
 
 [npm](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) is:
 
-* online repo for Node.js projects
-* dependency manager
+- online repo for Node.js projects
+- dependency manager
 
 E.g. to get documentation for module `n`:
 
@@ -15,7 +15,7 @@ E.g. to get documentation for module `n`:
 npm docs n
 ```
 
-Use `n` - see below - for version management.  Yet to upgrade to the latest:
+Use `n` - see below - for version management. Yet to upgrade to the latest:
 
 ```sh
 sudo npm install -g npm@latest
@@ -54,8 +54,8 @@ sudo n install 16.15.1
 manager for Node.js developed by Facebook.
 [yarn-vs-npm](https://www.knowledgehut.com/blog/web-development/yarn-vs-npm)
 
-
 Install it:
+
 ```sh
 npm install -g yarn
 ```

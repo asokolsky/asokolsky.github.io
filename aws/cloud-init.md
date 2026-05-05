@@ -5,17 +5,16 @@
 
 Docs:
 
-* [All](https://cloudinit.readthedocs.io/en/latest/)
-* [CLI](https://cloudinit.readthedocs.io/en/latest/topics/cli.html)
-* [AWS data source](https://cloudinit.readthedocs.io/en/latest/topics/datasources/ec2.html)
-* [FAQ](https://cloudinit.readthedocs.io/en/latest/topics/faq.htmlS)
-* [Cloud-Init Configuration Merging](https://jen20.dev/post/cloudinit-configuration-merging/)
+- [All](https://cloudinit.readthedocs.io/en/latest/)
+- [CLI](https://cloudinit.readthedocs.io/en/latest/topics/cli.html)
+- [AWS data source](https://cloudinit.readthedocs.io/en/latest/topics/datasources/ec2.html)
+- [FAQ](https://cloudinit.readthedocs.io/en/latest/topics/faq.htmlS)
+- [Cloud-Init Configuration Merging](https://jen20.dev/post/cloudinit-configuration-merging/)
 
 Also:
 
-* https://medium.com/awesome-cloud/aws-difference-between-secrets-manager-and-parameter-store-systems-manager-f02686604eae
-* https://docs.gomplate.ca/datasources/#using-aws-smp-datasources
-
+- https://medium.com/awesome-cloud/aws-difference-between-secrets-manager-and-parameter-store-systems-manager-f02686604eae
+- https://docs.gomplate.ca/datasources/#using-aws-smp-datasources
 
 ## bash tips
 
@@ -33,9 +32,9 @@ Use [shellcheck](https://www.shellcheck.net/wiki/Home).
 
 ## Cloud Init Run Phases:
 
-* Init
-* Config
-* Final
+- Init
+- Config
+- Final
 
 ## Files
 

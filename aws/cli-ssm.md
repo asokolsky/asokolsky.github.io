@@ -2,7 +2,6 @@
 
 [reference](https://awscli.amazonaws.com/v2/documentation/api/2.0.34/reference/ssm/index.html)
 
-
 ## Remote access
 
 [start-session](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ssm/start-session.html)

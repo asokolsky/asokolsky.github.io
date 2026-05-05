@@ -1,10 +1,11 @@
-#  K8s Secrets
+# K8s Secrets
 
 [kubectl create secret](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_create/kubectl_create_secret/)
 
 ## Retrieve Secret(s)
 
 Retrieving all secrets:
+
 ```
 > kubectl get secrets -n foo
 NAME                  TYPE     DATA   AGE
@@ -13,6 +14,7 @@ baz        Opaque   1      10d
 ```
 
 Retrieving one secret:
+
 ```
 > kubectl describe secret foo -n foo-namespace
 Name:         foo
@@ -31,12 +33,14 @@ app-key:  40 bytes
 ## Retrieve secret values
 
 Retrieve and decode the binary secret:
+
 ```sh
 kubectl get secret <secret-name> -n <namespace> -o jsonpath='{.data.<key>}' |\
     base64 --decode
 ```
 
 Example:
+
 ```
 > kubectl get secret foo -n foo-namespace -o jsonpath='{.data}'
 {"api-key":"fffooooo=","app-key":"bbbaaar=="}
@@ -45,6 +49,7 @@ Example:
 ## Create secret
 
 Create secret from the command line:
+
 ```sh
 kubectl create secret generic foo -n foo-namespace \
     --from-literal=api-key="ffffoooo=" \
@@ -53,6 +58,7 @@ kubectl create secret generic foo -n foo-namespace \
 
 [create a secret from YAML](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
 with several keys:
+
 ```
 kubectl apply -f - <<EOF
 apiVersion: v1

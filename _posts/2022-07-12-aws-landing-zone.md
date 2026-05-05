@@ -8,7 +8,6 @@ by John Hyland
 
 [![ALT TEXT](http://img.youtube.com/vi/-u9LK8Dueyc/0.jpg)](http://www.youtube.com/watch?v=-u9LK8Dueyc)
 
-
 or a 10 min version:
 
 [![ALT TEXT](http://img.youtube.com/vi/bRncvJHMDJ0/0.jpg)](http://www.youtube.com/watch?v=bRncvJHMDJ0)

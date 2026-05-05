@@ -13,6 +13,7 @@ sudo apt install ./phoronix-test-suite_10.8.4_all.deb
 ```
 
 Install pre-requisites for the specific benchmark:
+
 ```sh
 phoronix-test-suite install build-linux-kernel
 sudo apt install libelf-dev
@@ -24,8 +25,8 @@ sudo apt install libelf-dev
 phoronix-test-suite benchmark build-linux-kernel
 ```
 
-* result file: `duo-build-linux-kernel`
-* unique ID: 20250823
+- result file: `duo-build-linux-kernel`
+- unique ID: 20250823
 
 ## View Results
 
@@ -43,7 +44,7 @@ phoronix-test-suite upload t14g3-build-linux-kernel
 
 ### build-linux-kernel
 
-* [exi](https://openbenchmarking.org/result/2508236-NE-EXIBUILDL69) - 148.32 sec
-* [t14g3](https://openbenchmarking.org/result/2508239-NE-T14G3BUIL19) - 276.27 sec
-* [duo](https://openbenchmarking.org/result/2508230-NE-DUOBUILDL90) - 286.281 sec
-* [p52](https://openbenchmarking.org/result/2508230-NE-P52BUILDL93) - 309.96 sec
+- [exi](https://openbenchmarking.org/result/2508236-NE-EXIBUILDL69) - 148.32 sec
+- [t14g3](https://openbenchmarking.org/result/2508239-NE-T14G3BUIL19) - 276.27 sec
+- [duo](https://openbenchmarking.org/result/2508230-NE-DUOBUILDL90) - 286.281 sec
+- [p52](https://openbenchmarking.org/result/2508230-NE-P52BUILDL93) - 309.96 sec

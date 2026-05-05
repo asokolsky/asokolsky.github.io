@@ -140,4 +140,4 @@ Info:
     target: graphical (5) default: graphical
   Compilers: gcc: 13.3.0 Shell: Sudo (sudo) v: 1.9.15p5 default: Bash
     v: 5.2.21 running-in: code inxi: 3.3.34
- ```
+```

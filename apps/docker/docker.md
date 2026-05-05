@@ -20,6 +20,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
 ```
 
 Identify the Ubuntu codename on which my Mint is based:
+
 ```
 root@latitude7490:/tmp# cat /etc/os-release |grep -i ubuntu
 ID_LIKE="ubuntu debian"
@@ -27,12 +28,14 @@ UBUNTU_CODENAME=jammy
 ```
 
 In the following replace `jammy` with the relevant Ubuntu codename:
+
 ```sh
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu jammy stable" \
   | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
 Finally:
+
 ```sh
 sudo apt update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
@@ -42,6 +45,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 Verify the install with
 [docker run](https://docs.docker.com/engine/reference/commandline/run/):
+
 ```console
 > docker --version
 Docker version 20.10.21, build baeda1f
@@ -79,8 +83,8 @@ environment variable, seems to default to `$HOME/.docker`. More on docker
 
 [Configuration files](https://docs.docker.com/engine/reference/commandline/cli/#configuration-files) include:
 
-* `config.json`
-* `daemon.json`
+- `config.json`
+- `daemon.json`
 
 ## Networking
 
@@ -123,6 +127,7 @@ root@suprox:~# docker network inspect host
 ```
 
 Inspect the `bridge` network to see which containers are connected to it:
+
 ```
 root@suprox:~# docker network inspect bridge
 [
@@ -177,12 +182,15 @@ root@suprox:~# docker network inspect bridge
     }
 ]
 ```
+
 ## List images
 
 ```sh
 docker image ls
 ```
+
 better yet:
+
 ```sh
 docker images --digests
 ```
@@ -194,6 +202,7 @@ More on [docker image](https://docs.docker.com/engine/reference/commandline/imag
 [docker container](https://docs.docker.com/engine/reference/commandline/container/).
 
 List running:
+
 ```sh
 docker container ls
 ```
@@ -207,6 +216,7 @@ docker container ls -a --no-trunc
 ```
 
 List IDs only:
+
 ```
 > docker container ls -q
 1addfea727b3
@@ -217,6 +227,7 @@ b06cfe3053e5
 ```
 
 Specify listing format:
+
 ```sh
 docker ps -a --format "{{.ID}},{{.Names}},{{.Status}},{{.Image}},{{.Ports}}"
 ```
@@ -224,6 +235,7 @@ docker ps -a --format "{{.ID}},{{.Names}},{{.Status}},{{.Image}},{{.Ports}}"
 ## Kill all containers
 
 Force delete all containers:
+
 ```sh
 docker container rm -f $(docker container ls -aq)
 ```
@@ -231,18 +243,21 @@ docker container rm -f $(docker container ls -aq)
 ## Inspect the container
 
 Inspecting container produces JSON:
+
 ```sh
 sudo docker inspect _container_id_
 ```
 
 Use [jq](/linux/cli-jq.html) to focus on various aspects of the container configuration:
 
-* to view (sorted) container environment:
+- to view (sorted) container environment:
+
 ```sh
 sudo docker inspect _container_id_ | jq ".[0].Config.Env|sort[]"
 ```
 
-* to view the container username/group:
+- to view the container username/group:
+
 ```sh
 sudo docker inspect _container_id_ | jq ".[].Config.User"
 ```
@@ -253,11 +268,11 @@ sudo docker inspect _container_id_ | jq ".[].Config.User"
 docker container exec -itu root _container_id_or_name_ /bin/bash
 ```
 
-Option|Description
-------|-----------
-`-i`, `--interactive`|interactive, keep STDIN open even if not attached
-`-t`, `--tty`|allocate a pseudo-TTY
-`-u`, `--user` `username`|username or UID, format: <name|uid>[:<group|gid>]
+| Option                    | Description                                       |
+| ------------------------- | ------------------------------------------------- |
+| `-i`, `--interactive`     | interactive, keep STDIN open even if not attached |
+| `-t`, `--tty`             | allocate a pseudo-TTY                             |
+| `-u`, `--user` `username` | username or UID, format: \<name                   |
 
 ## Container logs
 
@@ -274,6 +289,7 @@ docker logs <container_id>
 ```
 
 To tail (or to follow) the log:
+
 ```sh
 docker logs <container_id> -f
 ```
@@ -293,6 +309,7 @@ bf42b1b5a4f7   portainer       0.00%     12.59MiB / 31.26GiB   0.04%     3.29MB 
 Create [Dockerfile](https://docs.docker.com/engine/reference/builder/).
 
 Then use command [docker build](https://docs.docker.com/engine/reference/commandline/build/) to build and tag the image:
+
 ```sh
 docker build -t my_stuff .
 ```
@@ -307,34 +324,34 @@ To provide input for `stdin`, use `-i` option:
 cat secrets.txt | docker run --pull=always -i my_stuff
 ```
 
-Command|Description
--------|-----------
-`docker run <image>`|Create and run a new container
-`docker run -p 8080:80 <image>`|Publish container port 80 to host port 8080
-`docker run -d <image>`|Run a container in the background
-`docker run -v <host>:<container> <image>`|Mount a host directory to a container
-`docker ps`|List currently running containers
-`docker ps --all`|List all containers (running or stopped)
-`docker logs <container_name>`|Fetch the logs of a container
-`docker logs -f <container_name>`|Fetch and follow the logs of a container
-`docker stop <container_name>`|Stop a running container
-`docker start <container_name>`|Start a stopped container
-`docker rm <container_name>`|Remove a container
+| Command                                    | Description                                 |
+| ------------------------------------------ | ------------------------------------------- |
+| `docker run <image>`                       | Create and run a new container              |
+| `docker run -p 8080:80 <image>`            | Publish container port 80 to host port 8080 |
+| `docker run -d <image>`                    | Run a container in the background           |
+| `docker run -v <host>:<container> <image>` | Mount a host directory to a container       |
+| `docker ps`                                | List currently running containers           |
+| `docker ps --all`                          | List all containers (running or stopped)    |
+| `docker logs <container_name>`             | Fetch the logs of a container               |
+| `docker logs -f <container_name>`          | Fetch and follow the logs of a container    |
+| `docker stop <container_name>`             | Stop a running container                    |
+| `docker start <container_name>`            | Start a stopped container                   |
+| `docker rm <container_name>`               | Remove a container                          |
 
 ## Executing commands in a container
 
-Command|Description
--------|-----------
-`docker exec <container_name> <command>`|Execute a command in a running container
-`docker exec -it <container_name> bash`|Open a shell in a running container
+| Command                                  | Description                              |
+| ---------------------------------------- | ---------------------------------------- |
+| `docker exec <container_name> <command>` | Execute a command in a running container |
+| `docker exec -it <container_name> bash`  | Open a shell in a running container      |
 
 ## Image commands
 
-Command|Description
--------|-----------
-`docker build -t <image> .`|Build a new image from the Dockerfile in the current directory and tag it
-`docker images`|List local images
-`docker rmi <image>`|Remove an image
+| Command                     | Description                                                               |
+| --------------------------- | ------------------------------------------------------------------------- |
+| `docker build -t <image> .` | Build a new image from the Dockerfile in the current directory and tag it |
+| `docker images`             | List local images                                                         |
+| `docker rmi <image>`        | Remove an image                                                           |
 
 Tag the docker image:
 
@@ -344,15 +361,15 @@ docker tag _image_id_ _repo_host_/_repo_name_:_tag_
 
 ## Container registry commands
 
-Command|Description
--------|-----------
-`docker login`|Login to Docker Hub
-`docker login <server>`|Login to another container registry
-`docker logout`|Logout of Docker Hub
-`docker logout <server>`|Logout of another container registry
-`docker push <image>`|Upload an image to a registry
-`docker pull <image>`|Download an image from a registry
-`docker search <image>`|Search Docker Hub for images
+| Command                  | Description                          |
+| ------------------------ | ------------------------------------ |
+| `docker login`           | Login to Docker Hub                  |
+| `docker login <server>`  | Login to another container registry  |
+| `docker logout`          | Logout of Docker Hub                 |
+| `docker logout <server>` | Logout of another container registry |
+| `docker push <image>`    | Upload an image to a registry        |
+| `docker pull <image>`    | Download an image from a registry    |
+| `docker search <image>`  | Search Docker Hub for images         |
 
 To pull images from a private AWS ECR:
 
@@ -362,14 +379,15 @@ ECR_HOST=`aws sts get-caller-identity --query Account --output text`.dkr.ecr.`aw
 ```
 
 To push the image:
+
 ```sh
 docker push _repo_host_/_repo_name_:_tag_
 ```
 
 ## System commands
 
-Command|Description
--------|-----------
-`docker system df`|Show Docker disk usage
-`docker system prune`|Remove unused data
-`docker system prune -a`|Remove all unused dat
+| Command                  | Description            |
+| ------------------------ | ---------------------- |
+| `docker system df`       | Show Docker disk usage |
+| `docker system prune`    | Remove unused data     |
+| `docker system prune -a` | Remove all unused dat  |

@@ -16,11 +16,13 @@ zpool create NAME -o ashift=12 raidz2 \
 ```
 
 Alternatively, create a mirror pool `tank`:
+
 ```sh
 sudo zpool create -m /mnt/tank tank mirror sdc1 sdd1
 ```
 
 To change the mount point:
+
 ```sh
 sudo zfs set mountpoint=/mnt/btr btr
 ```
@@ -31,21 +33,26 @@ Use
 [zpool status](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-status.8.html):
 
 To look at the pool status:
+
 ```sh
 zpool status
 ```
 
 To monitor it in real time:
+
 ```sh
 zpool status -v 5
 ```
+
 or use
 [zpool iostat](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-iostat.8.html):
+
 ```sh
 zpool iostat -v 5
 ```
 
 For example:
+
 ```console
 root@nass[~]# zpool status tank
   pool: tank
@@ -70,7 +77,7 @@ config:
 errors: No known data errors
 ```
 
-Note write errors is non-zero.  From
+Note write errors is non-zero. From
 [the doc](https://docs.oracle.com/cd/E19253-01/819-5461/gaynp/):
 
 The `READ` and `WRITE` columns provide a count of I/O errors that occurred on
@@ -86,6 +93,7 @@ keep an eye on it.
 
 Use
 [zpool clear](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-clear.8.html):
+
 ```console
 root@nass[~]# zpool clear tank
 root@nass[~]# zpool status tank
@@ -113,6 +121,7 @@ Good read:
 
 Use
 [zpool upgrade](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-upgrade.8.html):
+
 ```
 $ zpool --version
     zfs-0.8.3-1ubuntu12.14
@@ -124,6 +133,7 @@ $ sudo zpool upgrade -a
 
 Use
 [zpool scrub](https://openzfs.github.io/openzfs-docs/man/master/8/zpool-scrub.8.html):
+
 ```sh
 sudo zpool scrub pool0
 ```

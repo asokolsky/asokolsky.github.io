@@ -4,10 +4,10 @@
 
 See also [aws-secretsmanager-agent](https://github.com/aws/aws-secretsmanager-agent).
 
-
 ## Create Secret
 
 [reference](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/secretsmanager/create-secret.html):
+
 ```sh
 aws secretsmanager create-secret \
     --name pass-secret \
@@ -30,7 +30,9 @@ aws secretsmanager describe-secret --secret-id pass-secret
 ```sh
 aws secretsmanager get-secret-value --secret-id pass-secret
 ```
+
 or better yet
+
 ```sh
 aws secretsmanager get-secret-value --secret-id pass-secret|jq ".SecretString"
 ```
@@ -41,12 +43,14 @@ Delete a secret. You can recover the secret with `restore-secret` until the
 date and time in the `DeletionDate` response field. To delete a secret that is
 replicated to other regions, first remove its replicas with
 `remove-regions-from-replication`, and then call `delete-secret`:
+
 ```sh
 aws secretsmanager delete-secret --secret-id pass-secret \
     --recovery-window-in-days 7
 ```
 
 Force immediate secret removal:
+
 ```sh
 aws secretsmanager delete-secret --secret-id pass-secret \
     --force-delete-without-recovery
@@ -55,6 +59,7 @@ aws secretsmanager delete-secret --secret-id pass-secret \
 The following deletes a replica secret in `eu-west-3`. To delete a primary
 secret replicated to other regions, first delete the replicas and then call
 delete-secret.
+
 ```sh
 aws secretsmanager remove-regions-from-replication --secret-id pass-secret \
     --remove-replica-regions eu-west-3

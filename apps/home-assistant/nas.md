@@ -13,13 +13,13 @@ shell_command:
 
 Note:
 
-* use IPv4 address, not DNS name for NAS
-* special chars in password are OK
+- use IPv4 address, not DNS name for NAS
+- special chars in password are OK
 
 Restart HA
 
 Create Automation:
 
-* Triggers: When Home Assistant is started
-* Actions: Service: Shell command: mount_nas_music
-* Actions: Service: Shell command: mount_nas_movies
+- Triggers: When Home Assistant is started
+- Actions: Service: Shell command: mount_nas_music
+- Actions: Service: Shell command: mount_nas_movies

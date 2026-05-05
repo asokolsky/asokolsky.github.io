@@ -1,11 +1,11 @@
 # Video Capture in VLC
 
-
 [v4l2 module cli](https://wiki.videolan.org/Documentation:Modules/v4l2/).
 
 ## Webcam Settings
 
 [Identify the resolution and formats](/hardware/usb-video.html) supported by the webcam:
+
 ```
 > v4l2-ctl --list-formats-ext
 ioctl: VIDIOC_ENUM_FMT
@@ -34,17 +34,19 @@ ioctl: VIDIOC_ENUM_FMT
                 Size: Discrete 160x120
                         Interval: Discrete 0.033s (30.000 fps)
 ```
-Based on the above, one arrives at MJPG, 1280x720, as the best format for video capture.
 
+Based on the above, one arrives at MJPG, 1280x720, as the best format for video capture.
 
 ## Display Webcam
 
 To display webcam in the default format:
+
 ```sh
 vlc v4l2:///dev/video0
 ```
 
 To specify the video capture [format](https://wiki.videolan.org/Documentation:Modules/v4l2/) and metadata on the command line:
+
 ```sh
 vlc --meta-title='Live Feed' \
     --meta-description='Straight from my desk' \

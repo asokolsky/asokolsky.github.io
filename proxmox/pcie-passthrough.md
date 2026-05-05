@@ -8,10 +8,10 @@ From [pci_passthrough](https://pve.proxmox.com/wiki/Pci_passthrough):
 
 Dos:
 
-* [Admin Guide](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_host_device_passthrough)
-* [pass-through-pcie-with-proxmox](https://www.servethehome.com/how-to-pass-through-pcie-nics-with-proxmox-ve-on-intel-and-amd/)
-* [guide_to_gpu_passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
-* [ProxMox Setup for PCIe Passthrough](https://drive.google.com/file/d/1rPTKi_b7EFqKTMylH64b3Dg9W0N_XIhO/view)
+- [Admin Guide](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_host_device_passthrough)
+- [pass-through-pcie-with-proxmox](https://www.servethehome.com/how-to-pass-through-pcie-nics-with-proxmox-ve-on-intel-and-amd/)
+- [guide_to_gpu_passthrough](https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/)
+- [ProxMox Setup for PCIe Passthrough](https://drive.google.com/file/d/1rPTKi_b7EFqKTMylH64b3Dg9W0N_XIhO/view)
 
 ## Grub Kernel Boot Command Line
 
@@ -27,9 +27,9 @@ passthrough is being used."
 
 Then:
 
-* `update-grub`
-* reboot
-* verify that IOMMU enabled:
+- `update-grub`
+- reboot
+- verify that IOMMU enabled:
 
 ```console
 root@fuji:~# dmesg | grep -e DMAR -e IOMMU
@@ -51,6 +51,7 @@ root@fuji:~# dmesg | grep -e DMAR -e IOMMU
 ## VFIO Modules
 
 Edit `/etc/modules`:
+
 ```sh
 # /etc/modules: kernel modules to load at boot time.
 #
@@ -62,7 +63,7 @@ vfio_pci
 vfio_virqfd
 ```
 
-Reboot.  Then:
+Reboot. Then:
 
 ```console
 root@fuji:~# lsmod|grep vfio
@@ -88,6 +89,7 @@ root@fuji:~# dmesg | grep 'remapping'
 ```
 
 List PCI devices:
+
 ```console
 root@fuji:~# lspci
 00:00.0 Host bridge: Intel Corporation Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers (rev 05)
@@ -114,6 +116,7 @@ root@fuji:~# lspci
 ```
 
 After VGA install and on another PC:
+
 ```console
 root@duo:~# lspci
 00:00.0 Host bridge: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers (rev 07)
@@ -139,26 +142,27 @@ root@duo:~# lspci -n -s 01:00
 01:00.0 0300: 10de:1d01 (rev a1)
 01:00.1 0403: 10de:0fb8 (rev a1)
 ```
-The latter is important.
 
+The latter is important.
 
 ## (Selective) Driver Blacklisting
 
-* If the driver is compiled into the kernel - disable it by passing such a
-request on the kernel command line.  Unclear if this is still relevant.
+- If the driver is compiled into the kernel - disable it by passing such a
+  request on the kernel command line. Unclear if this is still relevant.
 
-* If the driver is a module, blacklisting the driver will disable all the
-driver devices.  E.g. to prevent host from using GT710:
+- If the driver is a module, blacklisting the driver will disable all the
+  driver devices. E.g. to prevent host from using GT710:
 
 ```sh
 blacklist radeon
 blacklist nouveau
 blacklist nvidia
 ```
+
 then reboot
 
-* To selectively pass SATA driver to a VM, unbind AHCI driver from the
-device, bind the latter to vfio-pci:
+- To selectively pass SATA driver to a VM, unbind AHCI driver from the
+  device, bind the latter to vfio-pci:
 
 ```sh
 #!/bin/sh
@@ -168,6 +172,7 @@ echo "$DEVICE" > /sys/bus/pci/drivers/vfio-pci/bind
 ```
 
 Another blacklisting example of `/etc/modprobe.d/pve-blacklist.conf`:
+
 ```
 softdep igb pre: vfio-pci
 softdep atlantic: vfio-pci
@@ -223,17 +228,17 @@ options vfio-pci ids=10de:1d01,10de:0fb8
 
 Edit VM Hardware - set:
 
-* BIOS: OVMF;
-* Display: default
-* Machine: q35;
-* Add EFI disk;
+- BIOS: OVMF;
+- Display: default
+- Machine: q35;
+- Add EFI disk;
 
 Then add PCIe GPU - no need to add a separate PCIe device for audio, just choose all functions:
 
-* select GT710,
-* check all-functions (this will also result in the HDMI audio being passed
-through)
-* check primary VGA, PCIe;
+- select GT710,
+- check all-functions (this will also result in the HDMI audio being passed
+  through)
+- check primary VGA, PCIe;
 
 Once GPU passthrough is configures, proxmox console (novnc) stops functioning.
 You need to

@@ -4,8 +4,8 @@ Reference: [ubuntu-22-04-from-zero-to-70b-llama](https://forum.level1techs.com/t
 
 ## Prerequsites
 
-* update OS
-* ensure you can ssh into the machine
+- update OS
+- ensure you can ssh into the machine
 
 ```sh
 sudo apt update
@@ -75,6 +75,7 @@ Created symlink /etc/systemd/system/default.target.wants/ollama.service → /etc
 ```
 
 Then:
+
 ```sh
 ollama run codellama:70b
 ```

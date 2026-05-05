@@ -2,7 +2,6 @@
 
 https://forums.developer.nvidia.com/t/rtx-3050-idle-power-too-high/310255
 
-
 ## Driver
 
 To check the driver used:

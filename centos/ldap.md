@@ -1,21 +1,24 @@
 # LDAP Setup
 
-Before you begin make sure sure the server where LDAP will be installed has a DNS domain name assigned, 
-usually localdomain on home LAN.  I used domain local.
-Verify by pinging a host by a FQDN, e.g. 
+Before you begin make sure sure the server where LDAP will be installed has a DNS domain name assigned,
+usually localdomain on home LAN. I used domain local.
+Verify by pinging a host by a FQDN, e.g.
+
 ```
 ping fuji.local
 ```
+
 ## 389 Server Installation
 
-I used 
+I used
 [Fedora 389 server](https://en.wikipedia.org/wiki/389_Directory_Server)
-and followed 
+and followed
 [these instructions](https://webhostinggeeks.com/howto/setup-389-directory-server-on-centos-7/).
 Once the server is running, you should be able to access
 389® Administration Express at http://host:9830/dist/download
 
 By the end you should have these services running:
+
 ```
 [alex@centos7 ~]$ systemctl status dirsrv-admin
 ● dirsrv-admin.service - 389 Administration Server.
@@ -55,6 +58,7 @@ Sep 30 21:25:11 centos7.local systemd[1]: Started 389 Directory Server centos7..
 ```
 
 Check that ports 389 and 9830 are bound by the processes:
+
 ```
 [root@centos7 api-umbrella]# netstat -lpn|grep 9830
 tcp        0      0 0.0.0.0:9830            0.0.0.0:*               LISTEN      1650/httpd
@@ -66,7 +70,7 @@ tcp6       0      0 :::389                  :::*                    LISTEN      
 
 ## Certificates for CA and the server
 
-By now we have LDAP but not LDAPS running.  
+By now we have LDAP but not LDAPS running.\
 [Enable TLS now](https://directory.fedoraproject.org/docs/389ds/howto/howto-ssl.html).
 [The archived version](https://directory.fedoraproject.org/docs/389ds/howto/howto-ssl-archive.html)
 of the above doc is better suited for the test environment.
@@ -91,6 +95,7 @@ Verifying - Enter pass phrase for sokolskyCA.key:
 ```
 
 Generate a CA root certificate:
+
 ```
 alex@L07A97UF:~$ openssl req -x509 -new -nodes -key sokolskyCA.key -sha256 -days 1825 -out sokolskyCA.pem
 Enter pass phrase for sokolskyCA.key:
@@ -113,6 +118,7 @@ Email Address []:asokolsky@gmail.com
 Install this CA using 389 console.
 
 Install this CA into the Linux (centos7) server:
+
 ```
   /etc/pki/ca-trust/source/anchors:
   total used in directory 4 available 26388536
@@ -120,7 +126,9 @@ Install this CA into the Linux (centos7) server:
   drwxr-xr-x. 4 root root   80 Sep 29 17:18 ..
   -rw-r--r--  1 root root 1415 Oct  1 19:53 asokolskyCA.pem
 ```
+
 then
+
 ```
 [root@centos7 anchors]# update-ca-trust
 ```
@@ -131,8 +139,8 @@ Verify that /etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt has it.
 
 Create a CSR file centos7.local.csr using the 389 Console.
 
-
 Create a config file ldaps.ext defining the Subject Alternative Name (SAN) extension:
+
 ```
 authorityKeyIdentifier=keyid,issuer
 basicConstraints=CA:FALSE
@@ -145,10 +153,10 @@ DNS.1 = dev.deliciousbrains.com
 
 Next we create a certificate using:
 
-* the certificate request centos7.local.csr
-* CA private key sokolskyCA.key
-* CA certificate sokolskyCA.pem
-* config file ldaps.ext
+- the certificate request centos7.local.csr
+- CA private key sokolskyCA.key
+- CA certificate sokolskyCA.pem
+- config file ldaps.ext
 
 ```
 alex@L07A97UF:~$ openssl x509 -req -in ldaps.csr -CA sokolskyCA.pem -CAkey sokolskyCA.key -CAcreateserial -out centos7.local.crt -days 825 -sha256 -extfile ldaps.ext
@@ -163,6 +171,7 @@ Install the certificate centos7.local.crt usine the console app.
 Use console app to configure directory server to use encryption using the installed certificate.
 
 Then restart the directory server:
+
 ```
 [alex@centos7 ~]$ sudo systemctl restart dirsrv@centos7
 [alex@centos7 ~]$ sudo systemctl status dirsrv@centos7
@@ -188,12 +197,12 @@ Oct 01 19:25:08 centos7.local systemd[1]: Started 389 Directory Server centos7..
 ```
 
 Check that LDAPS port is indeed bound:
+
 ```
 [alex@centos7 ~]$ sudo netstat -lp|grep slap
 tcp6       0      0 [::]:ldaps              [::]:*                  LISTEN      22377/ns-slapd
 tcp6       0      0 [::]:ldap               [::]:*                  LISTEN      22377/ns-slapd
 ```
-
 
 ## 389 Server Management
 
@@ -202,7 +211,7 @@ tcp6       0      0 [::]:ldap               [::]:*                  LISTEN      
 On my Windows laptop I installed Java and then
 [389 Management Console](https://directory.fedoraproject.org/docs/389ds/releases/release-windows-console-1-1-15.html).
 
-Possible alternative would be 
+Possible alternative would be
 [ldp](https://www.active-directory-security.com/2016/06/ldp-for-active-directory-download-usage-tutorial-and-examples.html)
 
 ## Verification
@@ -214,6 +223,7 @@ $ ldapsearch -x -b "dc=local"
 ```
 
 To search for just users:
+
 ```
 [root@centos7 api-umbrella]# ldapsearch -x -b "dc=local" "objectClass=person"
 # extended LDIF

@@ -11,14 +11,13 @@ OEM codepage, some use the ANSI codepage, some use the current console input or
 output codepage, and some can do UTF-16, but usually only to a disk file (e.g.
 wmic.exe)."
 
-
 Hence, instead of `wmic memorychip get capacity`, use:
 
 ```
 Get-CimInstance -ClassName Win32_PhysicalMemory | Select-Object capacity
 ```
 
-The rest are examples of `wmic` use.  For a full list of commands use
+The rest are examples of `wmic` use. For a full list of commands use
 `wmic -?`.
 
 ## wmic bios

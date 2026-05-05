@@ -1,8 +1,20 @@
 # Shared markdownlint config — works with markdownlint-cli, markdownlint-cli2,
 # VS Code markdownlint extension.
 
+# Heading increments — many pages preserve copied outline levels
+MD001: false
+
 # List style — repo uses both dash and asterisk depending on context
-#MD004: false
+MD004: false
+
+# Hard tabs — common in copied command/device output
+MD010: false
+
+# Multiple blank lines — some excluded/generated notes preserve visual spacing
+MD012: false
+
+# Shell prompts — command snippets commonly include prompts without output
+MD014: false
 
 # Line length
 MD013: false
@@ -11,10 +23,16 @@ MD013: false
 MD022: false
 
 # Duplicate headings — structured docs share common section names across files
-#MD024: false
+MD024: false
 
 # Multiple H1s — Hugo derives page title from frontmatter; body H1 is expected
-#MD025: false
+MD025: false
+
+# Heading punctuation — command-reference headings often include literal punctuation
+MD026: false
+
+# Ordered-list numbering — repo uses explicit step numbers in some docs
+MD029: false
 
 # Blanks around fences — same compact-section rationale
 MD031: false
@@ -23,13 +41,38 @@ MD031: false
 MD032: false
 
 # Inline HTML — intentionally used for Hugo shortcodes and section layouts
-#MD033: false
+MD033: false
+
+# Bare URLs — many note pages intentionally keep raw reference URLs
+MD034: false
+
+# Emphasis spacing — physics/math notes use asterisks as multiplication
+MD037: false
+
+# Spaces in code spans — existing docs sometimes include significant trailing chars
+MD038: false
+
+# Spaces in link text — preserve existing prose unless a page is being edited
+MD039: false
 
 # Fenced code language — informational improvement, not a blocking error
 MD040: false
 
+# First line H1 — some pages are captured command output wrapped in fences
+MD041: false
+
+# Image alt text — older posts use raw HTML image blocks
+MD045: false
+
 # Fragment links — Hugo generates anchors differently from markdownlint's expectations
-#MD051: false
+MD051: false
+
+# Reference and empty links — some notes intentionally keep placeholders/raw labels
+MD052: false
+MD042: false
+
+# Descriptive link text — short labels like "More" are used in index-style notes
+MD059: false
 
 # Table pipe style — cosmetic
 MD055: false

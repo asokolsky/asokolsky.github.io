@@ -5,7 +5,7 @@ better for me than reading [documentation](https://docs.gomplate.ca/).
 
 Other (python) template engines:
 
-* [jinja2](https://jinja.palletsprojects.com/en/stable/)
+- [jinja2](https://jinja.palletsprojects.com/en/stable/)
 
 ## Install
 
@@ -30,6 +30,7 @@ foo=bar
 ## Use with AWS Secrets Manager
 
 Provided you stored the secret like this:
+
 ```sh
 aws secretsmanager create-secret \
     --name pass-secret \
@@ -38,6 +39,7 @@ aws secretsmanager create-secret \
 ```
 
 You can retrieve it:
+
 ```sh
 echo 'foo={{ (ds "secrets").foo }}' | \
     gomplate -d 'secrets=aws+sm:pass-secret?type=application/json'

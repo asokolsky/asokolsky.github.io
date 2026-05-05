@@ -63,6 +63,7 @@ postmap /etc/postfix/sasl_passwd
 ```
 
 Create `/etc/alias.db`
+
 ```sh
 postalias /etc/aliases
 ```
@@ -81,6 +82,7 @@ mail -s "test" asokolsky@yahoo.com < /tmp/crap
 ```
 
 Then check output of:
+
 ```sh
 journalctl --no-pager --since=today
 ```

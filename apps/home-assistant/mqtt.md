@@ -2,10 +2,10 @@
 
 Discussion: https://community.home-assistant.io/t/pulling-hardware-sensor-data-from-linux-servers-and-posting-them-to-mqtt/54808
 
-* do NOT use
-[MQTT add-on](https://github.com/home-assistant/addons/blob/master/mosquitto/DOCS.md).
-It will be deprecated.
-* do a [stand-alone MQTT install](/apps/mqtt.html).
+- do NOT use
+  [MQTT add-on](https://github.com/home-assistant/addons/blob/master/mosquitto/DOCS.md).
+  It will be deprecated.
+- do a [stand-alone MQTT install](/apps/mqtt.html).
 
 Add [integration](https://www.home-assistant.io/integrations/mqtt/) to it.
 
@@ -45,12 +45,11 @@ mqtt:
       unique_id: "suprox_cpu_temperature"
 ```
 
-
 ### TODO: [MQTT Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
 
 https://www.hwinfo.com/forum/threads/hwinfo-integration-into-home-assistant-via-mqtt.8302/
 
 TODO: MQTT Device Discovery:
 
-* [MQTT Discovery](https://www.home-assistant.io/docs/mqtt/discovery/)
-* [MQTT Device Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)
+- [MQTT Discovery](https://www.home-assistant.io/docs/mqtt/discovery/)
+- [MQTT Device Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery)

@@ -22,11 +22,13 @@ sudo snap install --classic certbot
 ```
 
 You may need:
+
 ```sh
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
 Get the cert:
+
 ```sh
 sudo certbot certonly --nginx
 ```

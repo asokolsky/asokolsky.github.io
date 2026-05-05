@@ -4,8 +4,6 @@
 
 [Udemy CKA Prep Course](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14224074#overview)
 
-
-
 Certified Kubernetes Administrator: https://www.cncf.io/certification/cka/
 
 [Exam Curriculum](https://github.com/cncf/curriculum)
@@ -17,6 +15,5 @@ Certified Kubernetes Administrator: https://www.cncf.io/certification/cka/
 [kubernetes-the-hard-way using VirtualBox](https://github.com/mmumshad/kubernetes-the-hard-way)
 
 [Notes from CKA Course](https://github.com/kodekloudhub/certified-kubernetes-administrator-course)
-
 
 https://medium.com/@artem_lajko/challenge-accepted-mastering-cka-ckad-and-cks-certifications-in-one-month-5e87fa7bf9a6

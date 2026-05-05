@@ -16,6 +16,7 @@ feat: add hat wobble
 |
 +-------> Type: chore, docs, feat, fix, refactor, style, or test.
 ```
+
 - `feat`: (new feature for the user, not a new feature for build script)
 - `fix`: (bug fix for the user, not a fix to a build script)
 - `docs`: (changes to the documentation)
@@ -29,6 +30,7 @@ feat: add hat wobble
 ## Use Commitizen
 
 [commitizen](https://commitizen-tools.github.io/commitizen/)
+
 > is a release management tool designed for teams.
 >
 > By default, commitizen uses
@@ -42,6 +44,7 @@ To bypass pre-commit or commit-msg or push-time hooks use git option `--no-verif
 ## Use Commitlint
 
 [commitlint](https://github.com/conventional-changelog/commitlint)
+
 > checks if your commit messages meet the
 > [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) format.
 

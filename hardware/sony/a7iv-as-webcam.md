@@ -23,6 +23,7 @@ EMEET SmartCam S800: EMEET Smar (usb-0000:00:14.0-5):
 ```
 
 ## Camera Capabilities
+
 ```
 alex@duo > v4l2-ctl --all --device /dev/video2
 Driver Info:
@@ -122,6 +123,7 @@ Format Metadata Capture:
 ```
 
 Identify the supported formats:
+
 ```
 alex@duo > v4l2-ctl --list-formats-ext --device /dev/video2
 ioctl: VIDIOC_ENUM_FMT
@@ -142,6 +144,7 @@ ioctl: VIDIOC_ENUM_FMT
 ## Live View
 
 Using NV12 (the most commonly used [8-bit 4:2:0 format](https://en.wikipedia.org/wiki/YCbCr#4:2:0)) codec ([recommended](https://learn.microsoft.com/en-us/windows/win32/medfound/recommended-8-bit-yuv-formats-for-video-rendering#nv12)):
+
 ```sh
 vlc --meta-title='Portrait Camera' \
     --meta-description='Portrait Camera Live Feed' \
@@ -149,6 +152,7 @@ vlc --meta-title='Portrait Camera' \
 ```
 
 Using MJPG codec:
+
 ```sh
 vlc --meta-title='Portrait Camera' \
     --meta-description='Portrait Camera Live Feed' \

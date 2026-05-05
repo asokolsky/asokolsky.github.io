@@ -76,6 +76,7 @@ gh api user | jq -r '"\(.name) \(.login)"'
 ## gh api
 
 Use of GitHub API:
+
 ```sh
 TEAM_NAME="foo-bar" ORG="baz"
 gh api graphql -f query='
@@ -102,7 +103,8 @@ gh api graphql -f query='
 
 1. Login into your office github account
 
-2. Login into personal account:
+1. Login into personal account:
+
 ```
 > gh auth login
 ? Where do you use GitHub? GitHub.com
@@ -120,6 +122,7 @@ The minimum required scopes are 'repo', 'read:org', 'admin:public_key'.
 ```
 
 3. Confirm you logged into both, the last one (personal) is active:
+
 ```
 > gh auth status
 github.com
@@ -133,12 +136,14 @@ github.com
 ```
 
 4. Switch back to office account:
+
 ```
 > gh auth switch --user asokolsky4foobar
 ✓ Switched active account for github.com to asokolsky4foobar
 ```
 
 5. Confirm office account as being active:
+
 ```
 > gh auth status
 github.com

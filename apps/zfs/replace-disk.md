@@ -3,6 +3,7 @@
 ## Replace a disk in a raidz(2)
 
 ### 1. Take the disk offline
+
 ```sh
 zpool offline vault da3
 shutdown
@@ -17,6 +18,7 @@ zpool replace vault 1464662681387557667 /dev/disk/by-id/ata-KINGSTON_SV300S37A12
 ```
 
 In case it fails as in:
+
 ```console
 root@nass:~# zpool replace tank -f /dev/sda
 invalid vdev specification
@@ -61,20 +63,21 @@ zpool set autoexpand=on tank
 zpool online -e tank da0
 ```
 
-Insert disk.  Then in XigmaNAS GUI:
+Insert disk. Then in XigmaNAS GUI:
 
-* Diagnostics\Information now has:
+- Diagnostics\\Information now has:
+
 ```
 da5     WDC WD40EFRX-68WT0N0      n/a      3815448MB     WD-WCC4E0018993      5400 rpm      6.0 Gb/s      Available , Enabled      mps0      LSI SAS2008      n/a      ONLINE
 ```
 
-* However Disks\Management does not have da5
+- However Disks\\Management does not have da5
 
 To remedy:
 
-* In Disks\Management !!!!!! Import Disks - now da5 is listed
+- In Disks\\Management !!!!!! Import Disks - now da5 is listed
 
-* In Disks\Format format with ZFS
+- In Disks\\Format format with ZFS
 
 ```console
 kern.geom.debugflags: 0 -> 16
@@ -93,8 +96,8 @@ kern.geom.debugflags: 16 -> 0
 Done!
 ```
 
-* Create virtual device VeryTemp with one HD.
-* Create a pool VeryTemp from that virtual device
+- Create virtual device VeryTemp with one HD.
+- Create a pool VeryTemp from that virtual device
 
 ```sh
 cp -pR /mnt/vault/movies .

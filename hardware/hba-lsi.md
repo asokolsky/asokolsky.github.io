@@ -19,8 +19,8 @@ Must read:
 Given that I will boot from the NVME device (NOT the device attached to the HBA),
 I will:
 
-* wipe the ROM/BIOS clean and
-* install the latest firmware.
+- wipe the ROM/BIOS clean and
+- install the latest firmware.
 
 ## Prepare the UEFI USB stick
 
@@ -51,6 +51,7 @@ Press F12 to get the boot prompt.
 
 In the motherboard BIOS I chose to disable the CSM -
 [compatibility support mode](http://www.rodsbooks.com/efi-bootloaders/csm-good-bad-ugly.html)
+
 - this reduces the number of boot options available to UEFI only.
 
 I had to look for an option to `invoke the UEFI shell` and worked only when I

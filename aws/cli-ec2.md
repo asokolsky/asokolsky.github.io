@@ -9,22 +9,26 @@ export AWS_PROFILE=default
 ```
 
 Create the key-pair:
+
 ```
 aws ec2 create-key-pair --key-name _name_ --key-type ed25519 \
     --query "KeyMaterial" --output text > _name_.pem
 ```
 
 then:
+
 ```
 chmod 400 _name_.pem
 ```
 
 To create a `.pub` public key from `.pem`:
+
 ```
 ssh-keygen -y -f _name_.pem > _name_.pub
 ```
 
 Delete the key-pair:
+
 ```sh
 aws ec2 delete-key-pair --key-name _name_
 ```
@@ -58,7 +62,7 @@ function refresh_ec2_instances()
 
 2. Call this function at shell prompt to update `~/.ec2instances.txt`
 
-3. Search the `~/.ec2instances.txt` for IPs
+1. Search the `~/.ec2instances.txt` for IPs
 
 ```sh
 # find IPs of instances of interest:
@@ -78,11 +82,13 @@ TBD
 ```
 
 Find the instance by an IP:
+
 ```sh
 aws ec2 describe-instances --filter Name=private-ip-address,Values=$ip
 ```
 
 Find the instance by name:
+
 ```sh
 aws ec2 describe-instances --filter Name=tag:Name,Values=$name
 ```
@@ -100,11 +106,13 @@ aws autoscaling terminate-instance-in-auto-scaling-group --instance-id  _id_ --s
 ### Transit Gateways
 
 Use [describe-transit-gateways](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-transit-gateways.html):
+
 ```sh
 aws ec2 describe-transit-gateways
 ```
 
 and then [delete-transit-gateway](https://docs.aws.amazon.com/cli/latest/reference/ec2/delete-transit-gateway.html):
+
 ```sh
 aws ec2 delete-transit-gateway --transit-gateway-id <value>
 ```
@@ -112,6 +120,7 @@ aws ec2 delete-transit-gateway --transit-gateway-id <value>
 ### Route Tables vs Transit Gateway Route Tables
 
 Note that [describe-route-tables](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-route-tables.html) and [describe-transit-gateway-route-tables](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-transit-gateway-route-tables.html) operate on different types of objects!
+
 ```sh
 aws ec2 describe-route-tables
 ```
@@ -128,12 +137,14 @@ aws ec2 describe-transit-gateway-route-tables --transit-gateway-route-table-ids 
 aws ec2 describe-transit-gateway-attachments
 ```
 
-and then [delete-transit-gateway-vpc-attachment]:
+and then \[delete-transit-gateway-vpc-attachment\]:
+
 ```sh
 aws ec2 delete-transit-gateway-vpc-attachment --transit-gateway-attachment-id _id_
 ```
 
 To locate attachments to a TGW by id:
+
 ```sh
 aws ec2 describe-transit-gateway-attachments --filters Name=transit-gateway-id,Values=_id_
 ```
@@ -141,11 +152,13 @@ aws ec2 describe-transit-gateway-attachments --filters Name=transit-gateway-id,V
 ## VPCs
 
 Use [describe-vpcs](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-vpcs.html):
+
 ```sh
 aws ec2 describe-vpcs
 ```
 
 then [delete-vpc](https://docs.aws.amazon.com/cli/latest/reference/ec2/delete-vpc.html) only after you delete all the gateways and resources associated with the VPC.
+
 ```sh
 aws ec2 delete-vpc --vpc-id _id_
 ```
@@ -155,11 +168,13 @@ aws ec2 delete-vpc --vpc-id _id_
 ## Subnets
 
 Use [describe-subnets](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-subnets.html):
+
 ```sh
 aws ec2 describe-subnets
 ```
 
 then [delete-subnet](https://docs.aws.amazon.com/cli/latest/reference/ec2/delete-subnet.html):
+
 ```sh
 aws ec2 delete-subnet --subnet-id _id_
 ```
@@ -178,6 +193,7 @@ aws ec2 describe-network-interfaces \
 ## VPN Connection and Tunnels
 
 Use [describe-vpn-connections](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-vpn-connections.html) to retrieve gateway configuration:
+
 ```sh
 aws ec2 describe-vpn-connections \
     --filter 'Name=vpn-connection-id,Values=vpn-12345678' \
@@ -186,6 +202,7 @@ aws ec2 describe-vpn-connections \
 ```
 
 Retrieve the pre-shared key:
+
 ```sh
 aws ec2 describe-vpn-connections \
     --filter 'Name=vpn-connection-id,Values=vpn-12345678' \
@@ -194,6 +211,7 @@ aws ec2 describe-vpn-connections \
 ```
 
 Use [modify-vpn-tunnel-options](https://docs.aws.amazon.com/cli/latest/reference/ec2/modify-vpn-tunnel-options.html) to replace the pre-shared key:
+
 ```sh
 aws ec2 modify-vpn-tunnel-options \
     --vpn-connection-id vpn-12345678 \
@@ -204,6 +222,7 @@ aws ec2 modify-vpn-tunnel-options \
 ## Find AMI ID
 
 From [finding-ami-ids](https://www.fundamentals-of-devops.com/resources/2025/02/24/finding-ami-ids/#aws-cli) - to find out ID of the most recent Ubuntu 24.04 AMI in us-east-2:
+
 ```sh
 ami_id=$(aws ec2 describe-images \
     --region us-east-2 \
@@ -214,6 +233,7 @@ ami_id=$(aws ec2 describe-images \
 ```
 
 then run it:
+
 ```sh
 aws ec2 run-instances --region us-east-2 --image-id "$ami_id" \
     --instance-type "t2.micro"

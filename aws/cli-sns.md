@@ -7,11 +7,13 @@
 ## One Way of accessing SNS messages via CLI
 
 Create an SQS queue:
+
 ```sh
 aws sqs create-queue --queue-name MySNSQueue
 ```
 
 Subscribe the SQS queue to your SNS topic:
+
 ```sh
 aws sns subscribe --topic-arn arn:aws:sns:us-west-2:123456789012:my-topic \
     --protocol sqs \
@@ -19,11 +21,13 @@ aws sns subscribe --topic-arn arn:aws:sns:us-west-2:123456789012:my-topic \
 ```
 
 The above returns subscription arn you can use to unsubscribe:
+
 ```sh
 aws sns unsubscribe --subscription-arn arn:aws:sns:us-west-2:123456789012:my-topic:1328f057-de93-4c15-512e-8bb22EXAMPLE
 ```
 
 Receive messages from the SQS queue:
+
 ```sh
 aws sqs receive-message --queue-url https://sqs.REGION.amazonaws.
 ```
@@ -48,11 +52,13 @@ aws sns publish --topic-arn arn:aws:sns:us-west-2:123456789012:my-topic \
 ## Listing topics and subscriptions
 
 List topics:
+
 ```sh
 aws sns list-topics
 ```
 
 List subscriptions:
+
 ```sh
 aws sns list-subscriptions
 ```

@@ -2,18 +2,18 @@
 
 ## CLI
 
-Run `tmux _command_`.  The following are excerpts from the man page.
+Run `tmux _command_`. The following are excerpts from the man page.
 
-Command | Description
---------|------------
-`attach-session [-t target-session]`|Create a new client in the current terminal and attach it to the target-session.
-`detach-client [-s target-session] [-t target-client]`|Detach the current client if bound to a key, the client specified with `-t`, or all clients currently attached to the session specified by `-s`.
-`info`|Show every session, window, pane, etc...
-`kill-server`|Kill the tmux server and clients and destroy all sessions.
-`kill-session [-aC] [-t target-session]`|Destroy the given session, closing any windows linked to it and no other sessions, and detaching all clients attached to it.  If -a is given, all sessions but the specified one is killed.  The -C flag clears alerts (bell, activity, or silence) in all windows linked to the session.
-`list-clients [-t target-session]`|List clients attached to the server. If target-session is specified, list only clients connected to that session.
-`list-commands [command]`|List the syntax of command or - if omitted - of all commands supported by tmux.
-`list-sessions`|List all sessions managed by the server.
+| Command                                                | Description                                                                                                                                                                                                                                                                             |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `attach-session [-t target-session]`                   | Create a new client in the current terminal and attach it to the target-session.                                                                                                                                                                                                        |
+| `detach-client [-s target-session] [-t target-client]` | Detach the current client if bound to a key, the client specified with `-t`, or all clients currently attached to the session specified by `-s`.                                                                                                                                        |
+| `info`                                                 | Show every session, window, pane, etc...                                                                                                                                                                                                                                                |
+| `kill-server`                                          | Kill the tmux server and clients and destroy all sessions.                                                                                                                                                                                                                              |
+| `kill-session [-aC] [-t target-session]`               | Destroy the given session, closing any windows linked to it and no other sessions, and detaching all clients attached to it. If -a is given, all sessions but the specified one is killed. The -C flag clears alerts (bell, activity, or silence) in all windows linked to the session. |
+| `list-clients [-t target-session]`                     | List clients attached to the server. If target-session is specified, list only clients connected to that session.                                                                                                                                                                       |
+| `list-commands [command]`                              | List the syntax of command or - if omitted - of all commands supported by tmux.                                                                                                                                                                                                         |
+| `list-sessions`                                        | List all sessions managed by the server.                                                                                                                                                                                                                                                |
 
 Also see CLI column below.
 
@@ -21,38 +21,39 @@ Also see CLI column below.
 
 Interaction modes:
 
-* regular
-* copy
-* command
+- regular
+- copy
+- command
 
-Task | KB
------|---
-Show all shortcuts|ctrl-b ?
-Enter Copy mode|ctrl-b  (
-Enter Copy mode and scroll one page up|ctrl-b  PgUp
-Quit Copy mode|ctrl-b q
-Enter Command Mode|ctrl-b :
+| Task                                   | KB          |
+| -------------------------------------- | ----------- |
+| Show all shortcuts                     | ctrl-b ?    |
+| Enter Copy mode                        | ctrl-b (    |
+| Enter Copy mode and scroll one page up | ctrl-b PgUp |
+| Quit Copy mode                         | ctrl-b q    |
+| Enter Command Mode                     | ctrl-b :    |
 
 ## Sessions
 
 Session name is displayed (by default) in the status bar on the left, e.g. `[0]`.
 
-Management Task | KB | CLI
-----------------|----|---
-Start a new session| |`tmux new [-s ses]`
-Kill session ses| |`tmux kill-ses -t ses`
-list sessions|ctrl-b s|`tmux ls`
-Attach to last session| |`tmux at`
-Attach to a session _ses_| |`tmux at -t ses`
-rename the current session|ctrl-b  $|
-detach from the current session|ctrl-b  d|
+| Management Task                 | KB       | CLI                    |
+| ------------------------------- | -------- | ---------------------- |
+| Start a new session             |          | `tmux new [-s ses]`    |
+| Kill session ses                |          | `tmux kill-ses -t ses` |
+| list sessions                   | ctrl-b s | `tmux ls`              |
+| Attach to last session          |          | `tmux at`              |
+| Attach to a session _ses_       |          | `tmux at -t ses`       |
+| rename the current session      | ctrl-b $ |                        |
+| detach from the current session | ctrl-b d |                        |
 
-Navigation Task | KB
-----------------|---
-Move to prev|ctrl-b  (
-Move to next session|ctrl-b )
+| Navigation Task      | KB       |
+| -------------------- | -------- |
+| Move to prev         | ctrl-b ( |
+| Move to next session | ctrl-b ) |
 
 ### Command
+
 `: attach -d` Detach others on the session
 (Maximize window by detach other clients)
 
@@ -61,27 +62,27 @@ Move to next session|ctrl-b )
 By default, window info is displayed int he status bar on the left, e.g.
 `0:bash*`, where:
 
-* `0` - window # in this session;
-* `bash` - name of the process running;
-* `*` - means this is the window you’re looking at.
+- `0` - window # in this session;
+- `bash` - name of the process running;
+- `*` - means this is the window you’re looking at.
 
 Each time you create a new window in a tmux session, its window number and the
 name of the program running in it are added to the status bar.
 
-Management Task | KB | CLI
-----------------|----|---
-Create window _win_|ctrl-b c|`tmux new -s ses -n win`
-Close current window|ctrl-b &|
-Rename current window|ctrl-b ,|
-List windows|ctrl-b w|
-Split horizontally|ctrl-b %|
-Split vertically|ctrl-b "|
+| Management Task       | KB       | CLI                      |
+| --------------------- | -------- | ------------------------ |
+| Create window _win_   | ctrl-b c | `tmux new -s ses -n win` |
+| Close current window  | ctrl-b & |                          |
+| Rename current window | ctrl-b , |                          |
+| List windows          | ctrl-b w |                          |
+| Split horizontally    | ctrl-b % |                          |
+| Split vertically      | ctrl-b " |                          |
 
-Navigation Task | KB
-----------------|---
-Move to prev window|ctrl-b p
-Move to next window|ctrl-b n
-Switch/select window by number|ctrl-b 0…9
+| Navigation Task                | KB         |
+| ------------------------------ | ---------- |
+| Move to prev window            | ctrl-b p   |
+| Move to next window            | ctrl-b n   |
+| Switch/select window by number | ctrl-b 0…9 |
 
 ### Commands
 
@@ -92,36 +93,32 @@ and 1(dst)
 
 ## Panes
 
+| Management Task            | KB       |
+| -------------------------- | -------- |
+| Split pane vertically      | ctrl-b % |
+| Split pane horizontally    | ctrl-b " |
+| Kill the current pane      | ctrl-b x |
+| Convert pane into a window | ctrl-b ! |
+| show pane numbers          | ctrl-b q |
 
-Management Task | KB
-----------------|---
-Split pane vertically|ctrl-b %
-Split pane horizontally|ctrl-b "
-Kill the current pane|ctrl-b x
-Convert pane into a window|ctrl-b !
-show pane numbers|ctrl-b q
+| Navigation Task                  | KB            |
+| -------------------------------- | ------------- |
+| swap with next pane              | ctrl-b {      |
+| swap with previous pane          | ctrl-b }      |
+| Switch to pane in that direction | ctrl-b ↑      |
+| Switch to pane in that direction | ctrl-b ↓      |
+| Switch to pane in that direction | ctrl-b ←      |
+| Switch to pane in that direction | ctrl-b →      |
+| Switch to pane                   | ctrl-b q 0..9 |
+| toggle between panes             | ctrl-b o      |
 
-
-Navigation Task | KB
-----------------|---
-swap with next pane|ctrl-b {
-swap with previous pane|ctrl-b }
-Switch to pane in that direction|ctrl-b ↑
-Switch to pane in that direction|ctrl-b ↓
-Switch to pane in that direction|ctrl-b ←
-Switch to pane in that direction|ctrl-b →
-Switch to pane|ctrl-b q 0..9
-toggle between panes|ctrl-b o
-
-
-
-Presentation Task | KB
-------------------|---
-Toggle last active pane|ctrl-b ;
-Toggle between pane layouts|ctrl-b Spacebar
-Toggle pane zoom|ctrl-b z
-Resize current pane height, holding second key is optional|ctrl-b ctrl-↑, ctrl-b ctrl-↓
-Resize current pane width, holding second key is optional|ctrl-b ctrl-←, ctrl-b ctrl-→
+| Presentation Task                                          | KB                           |
+| ---------------------------------------------------------- | ---------------------------- |
+| Toggle last active pane                                    | ctrl-b ;                     |
+| Toggle between pane layouts                                | ctrl-b Spacebar              |
+| Toggle pane zoom                                           | ctrl-b z                     |
+| Resize current pane height, holding second key is optional | ctrl-b ctrl-↑, ctrl-b ctrl-↓ |
+| Resize current pane width, holding second key is optional  | ctrl-b ctrl-←, ctrl-b ctrl-→ |
 
 ### Commands
 
@@ -129,29 +126,29 @@ Resize current pane width, holding second key is optional|ctrl-b ctrl-←, ctrl-
 
 ## Copy Mode
 
-KB | Task
----|-----
-Ctrl + b [|Enter copy mode
-Ctrl + b PgUp|Enter copy mode and scroll one page up
-q|Quit mode
-g|Go to top line
-G|Go to bottom line
-↑|Scroll up
-↓|Scroll down
-h|Move cursor left
-j|Move cursor down
-k|Move cursor up
-l|Move cursor right
-w|Move cursor forward one word at a time
-b|Move cursor backward one word at a time
-/|Search forward
-?|Search backward
-n|Next keyword occurrence
-N|Previous keyword occurrence
-Spacebar|Start selection
-Esc|Clear selection
-Enter|Copy selection
-Ctrl + b ]|Paste contents of buffer_0
+| KB            | Task                                    |
+| ------------- | --------------------------------------- |
+| Ctrl + b \[   | Enter copy mode                         |
+| Ctrl + b PgUp | Enter copy mode and scroll one page up  |
+| q             | Quit mode                               |
+| g             | Go to top line                          |
+| G             | Go to bottom line                       |
+| ↑             | Scroll up                               |
+| ↓             | Scroll down                             |
+| h             | Move cursor left                        |
+| j             | Move cursor down                        |
+| k             | Move cursor up                          |
+| l             | Move cursor right                       |
+| w             | Move cursor forward one word at a time  |
+| b             | Move cursor backward one word at a time |
+| /             | Search forward                          |
+| ?             | Search backward                         |
+| n             | Next keyword occurrence                 |
+| N             | Previous keyword occurrence             |
+| Spacebar      | Start selection                         |
+| Esc           | Clear selection                         |
+| Enter         | Copy selection                          |
+| Ctrl + b \]   | Paste contents of buffer_0              |
 
 ## Misc Commands
 

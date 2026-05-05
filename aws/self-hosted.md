@@ -2,7 +2,7 @@
 
 Would it not be nice to host AWS on your (home) LAN?
 
-* https://docs.localstack.cloud/user-guide/aws/feature-coverage/
+- https://docs.localstack.cloud/user-guide/aws/feature-coverage/
 
 ## S3
 
@@ -25,6 +25,7 @@ aws configure set default.s3.signature_version s3v4
 ```
 
 Verify the install:
+
 ```
 > aws --endpoint-url https://nass:9000 s3 ls
 
@@ -54,11 +55,13 @@ apt upgrade
 ```
 
 Install OpenJDK JRE:
+
 ```sh
 apt install default-jre
 ```
 
 Verify:
+
 ```console
 root@dynamo:~# java -version
 openjdk version "11.0.14" 2022-01-18
@@ -68,6 +71,7 @@ OpenJDK 64-Bit Server VM (build 11.0.14+9-Ubuntu-0ubuntu2.20.04, mixed mode, sha
 
 Install
 [DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html):
+
 ```sh
 wget https://s3.us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_latest.tar.gz
 mkdir -p /usr/lib/dynamodb
@@ -77,11 +81,12 @@ tar xfz dynamodb_local_latest.tar.gz
 ```
 
 Run it:
+
 ```
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
 ```
 
-Make it a service.  Create `/etc/systemd/system/dynamodb.service`:
+Make it a service. Create `/etc/systemd/system/dynamodb.service`:
 
 ```
 [Unit]
@@ -110,17 +115,16 @@ sudo /usr/bin/java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.ja
 ```
 
 Register the service:
+
 ```sh
 systemctl daemon-reload
 systemctl enable dynamodb
 systemctl start dynamodb
 ```
 
-
 ### Use
 
 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.UsageNotes.html
-
 
 ```cmd
 PS C:\Users\asoko> aws dynamodb list-tables --endpoint-url http://dynamo:8000
