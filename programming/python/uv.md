@@ -1,7 +1,10 @@
 # uv
 
-[repo](https://github.com/astral-sh/uv), [documentation](https://docs.astral.sh/uv).
+[Repo](https://github.com/astral-sh/uv),
+[documentation](https://docs.astral.sh/uv).
 See also [uv-vs-pip](./uv-vs-pip.html).
+
+[Cheatsheet](https://mathspp.com/blog/uv-cheatsheet)
 
 ## Install uv
 
@@ -64,15 +67,13 @@ https://docs.astral.sh/uv/concepts/projects/dependencies/
 uv add requests
 ```
 
-This adds
+This adds to `pyproject.toml`:
 
 ```
 dependencies = [
     "requests>=2.32.3",
 ]
 ```
-
-to `pyproject.toml`.
 
 Alternatively, to add the dependencies from `requirements.txt`:
 
@@ -84,6 +85,12 @@ uv add -r requirements.txt
 
 ```sh
 uv add --upgrade requests
+```
+
+or upgrade all
+
+```sh
+uv lock --upgrade
 ```
 
 ### Remove Project Dependency
@@ -98,6 +105,12 @@ To list the dependencies:
 
 ```sh
 uv pip list
+```
+
+or better yet:
+
+```sh
+uv tree
 ```
 
 ### Project Dependency Groups

@@ -104,3 +104,7 @@ brew install stats
 ```
 
 Then in finder apps launch it.
+
+## Secure Enclave use for ssh
+
+See [secure-enclave](secure-enclave.md).
