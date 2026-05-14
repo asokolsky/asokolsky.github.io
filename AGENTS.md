@@ -13,8 +13,12 @@ command output, and pipe tables.
 - Run `mise format` after Markdown edits.
 - Run `mise pre-commit-run` before finishing changes that affect Markdown,
   formatter config, hook config, or generated formatting.
-- The formatter is `mdformat` with `gfm` and `frontmatter` enabled through
-  `.mdformat.toml`.
+- The source of truth for Markdown formatting behavior is `.mdformat.toml`.
+  Keep mdformat options there.
+- The source of truth for the formatter command and pinned formatter packages is
+  the `format` task in `mise.toml`; pre-commit should call that task instead of
+  duplicating mdformat flags or versions.
+- The formatter is `mdformat` with `gfm` and `frontmatter` enabled.
 - Keep YAML frontmatter fenced with `---`. If frontmatter becomes a horizontal
   rule plus a heading, fix the formatter config or the file syntax before
   continuing.
