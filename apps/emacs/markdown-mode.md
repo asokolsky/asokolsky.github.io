@@ -7,4 +7,4 @@
 
 To install:
 
-M-x package-install RET markdown-mode RET
+`M-x package-install RET markdown-mode RET`

@@ -1,20 +1,26 @@
 {
-    "editor.fontFamily": "'Cascadia Mono Light','Source Code Pro',Consolas,monospace",
-    "editor.fontLigatures": true,
-    "editor.rulers": [80],
-    "editor.wordWrap": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "security.workspace.trust.untrustedFiles": "newWindow",
-    "terminal.integrated.allowChords": false,
-    "terminal.integrated.commandsToSkipShell": [
-        "-workbench.action.quickOpen"
-    ],
-    "terminal.integrated.scrollback": 10000,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    }
+  "application.shellEnvironmentResolutionTimeout": 15,
+  "cSpell.userWords": ["asokolsky"],
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.useCtrlEnterToSend": true,
+  "editor.fontFamily": "'Cascadia Mono Light','Source Code Pro',Consolas,monospace",
+  "editor.fontLigatures": false,
+  "editor.rulers": [80],
+  "editor.wordWrap": "on",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.replaceTagsWhenPull": true,
+  "makefile.configureOnOpen": false,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "-workbench.action.quickOpen"
+  ],
+  "terminal.integrated.scrollback": 100000,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  }
 }
