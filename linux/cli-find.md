@@ -32,6 +32,12 @@ Find an empty file within the current directory:
 find . -type f -empty
 ```
 
+Find big/large/huge files under `var`:
+
+```sh
+find /var -type f -size +100M
+```
+
 Find all `*.db` files (ignoring text case) modified in the last 7 days by a user `exampleuser`:
 
 ```sh

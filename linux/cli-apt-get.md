@@ -37,3 +37,22 @@ dpkg -S /bin/ls
 APT_GET_OPTIONS="-o DPkg::Lock::Timeout=60"
 sudo apt-get "${APT_GET_OPTIONS}" install -y _package_
 ```
+
+## Clean-up
+
+Free space in `/var/cache/apt/archives/` - from most to least conservative...
+
+Remove Unused Dependencies - removes packages that were installed as dependencies but are no longer needed:
+
+```sh
+apt autoremove
+```
+Partial (Conservative) Clean - removes only outdated package files that can no longer be downloaded.
+```sh
+apt autoclean
+```
+
+Total Clean - recommended for space - removes all downloaded .deb package files from the cache.
+```sh
+apt clean
+```
