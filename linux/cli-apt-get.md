@@ -47,12 +47,15 @@ Remove Unused Dependencies - removes packages that were installed as dependencie
 ```sh
 apt autoremove
 ```
+
 Partial (Conservative) Clean - removes only outdated package files that can no longer be downloaded.
+
 ```sh
 apt autoclean
 ```
 
 Total Clean - recommended for space - removes all downloaded .deb package files from the cache.
+
 ```sh
 apt clean
 ```

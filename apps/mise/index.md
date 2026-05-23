@@ -9,18 +9,19 @@
 
 [Install it](https://mise.jdx.dev/installing-mise.html).
 
-I use `zsh` with `oh-my-zsh` and added mise plugin to my `.zshrc`. Then:
+I use `zsh` with `oh-my-zsh` and added mise plugin to my `.zshrc`.
+
+## Troubleshooting
+
+### Error: usage CLI not found. This is required for completions to work in mise.
+
+Resolution - install usage globally:
 
 ```sh
 mise use -g usage
 ```
 
-I ran into:
-
-```
-mise use -g usage
-mise WARN  GitHub rate limit exceeded. Resets at 2026-04-03 15:35:38 -07:00
-```
+### WARN GitHub rate limit exceeded.
 
 Resolution from [Troubleshooting](https://mise.jdx.dev/troubleshooting.html):
 pass [a token](https://mise.jdx.dev/dev-tools/github-tokens.html#setting-a-token-via-environment-variable).
