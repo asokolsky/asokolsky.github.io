@@ -3,6 +3,7 @@
 ## PROS
 
 - declarative paradigm works
+- ubiquity - runs on anything from controller to a supercomputer,
 
 ## CONS
 
