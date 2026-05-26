@@ -98,7 +98,7 @@ Ethernet:
 
 ## List USB Hardware
 
-Use `SPUSBDataType`:
+Use `SPUSBDataType` or better yet `SPUSBHostDataType`:
 
 ```
 > system_profiler SPUSBDataType
