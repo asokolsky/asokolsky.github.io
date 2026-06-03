@@ -8,28 +8,40 @@ Related: [systemctl](cli-systemctl.html)
 
 Is in `/etc/systemd/journald.conf`.
 
-## Show Service Log
+## Environment Vars
+
+`$SYSTEMD_PAGER` overwrites `$PAGER`. Setting this to "" or "cat"
+is equivalent to passing `--no-pager`.
+
+## Show...
+
+Show _service-name_ log
 
 ```sh
 journalctl --no-pager -u _service-name_
 ```
 
-## Show events since the last boot
+Show events since the last boot
 
 ```sh
 journalctl -b
 ```
 
-## Show today events
+Show today events
 
 ```sh
 journalctl --since=today
 ```
 
-## Show (follow) current events
+Show (follow) current events
 
 ```sh
 journalctl -f
+```
+Show the Last 50 error-level logs
+
+```sh
+journalctl -p err -n 50
 ```
 
 ## Log Size Control
@@ -59,8 +71,3 @@ Explain the messages from the very beginning:
 ```sh
 journalctl -x --no-pager
 ```
-
-## Environment Vars
-
-`$SYSTEMD_PAGER` overwrites `$PAGER`. Setting this to "" or "cat"
-is equivalent to passing `--no-pager`.

@@ -1,6 +1,6 @@
 # gcloud UX exercise
 
-## Installing Prerequistites
+## Installing Prerequisites
 
 Followed [docs](https://cloud.google.com/sdk/docs/install):
 
@@ -208,7 +208,7 @@ If none of this works, please try completing the study from a different device.
 When you're ready click on Continue, we'll take you through a quick system check to make sure everything is working fine.
 ```
 
-## Troubleshooting:
+## Troubleshooting
 
 - disabled pfBlockerNG `pfb_dnsbl` service and `pfb_filter` firewall filter
   service

@@ -52,3 +52,15 @@ echo -n "%21%20" | python3 -c "import sys; from urllib.parse import unquote; pri
 
 - [Bash scripting cheatsheet](https://devhints.io/bash)
 - [Cute cheat-sheet](https://pbs.twimg.com/media/FnBbebzaYAIkq1w?format=jpg&name=large)
+
+## Troubleshooting
+
+A server is acting slow at 2am? Here are the commands to run — in this order:
+
+1. `top -c` - Who's eating CPU? What's the load average vs core count?
+2. `iostat -xz 1 5` - Is it disk I/O? High await or %util tells the real story.
+3. `free -h` - Is swap being used heavily? That's your first red flag.
+4. `ss -tulnp` - What's [listening](cli-ss.html)? Anything unexpected open?
+5. `df -hT` - Disk full?
+6. `dmesg | tail -30` - Kernel / hardware errors show up here first.
+7. `journalctl -p err -n 50` - Last 50 error-level logs.
