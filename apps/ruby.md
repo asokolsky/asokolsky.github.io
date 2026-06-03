@@ -1,5 +1,23 @@
 # Ruby
 
+## Use mise
+
+Global install ruby [using mise](https://mise.jdx.dev/lang/ruby.html):
+
+```sh
+mise use -g ruby@3.4.9
+```
+
+To make the above work I had to:
+
+```sh
+sudo apt install libffi-dev libyaml-dev
+```
+
+## Use rbenv
+
+The following is obsolete.  Use mise approach above.
+
 Install [rbenv](https://github.com/rbenv/rbenv):
 
 ```sh
@@ -60,4 +78,23 @@ Lock it for your project by defining `.ruby-version`:
 
 ```
 3.0.3
+```
+
+## Bundler
+
+Install [bundler](https://bundler.io/) with:
+
+```sh
+sudo gem install bundler
+```
+
+produces:
+
+```txt
+Fetching bundler-4.0.13.gem
+Successfully installed bundler-4.0.13
+Parsing documentation for bundler-4.0.13
+Installing ri documentation for bundler-4.0.13
+Done installing documentation for bundler after 0 seconds
+1 gem installed
 ```
