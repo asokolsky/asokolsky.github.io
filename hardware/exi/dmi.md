@@ -4,7 +4,6 @@
 
 ```
 alex@exi > sudo dmidecode
-[sudo] password for alex:
 # dmidecode 3.5
 Getting SMBIOS data from sysfs.
 SMBIOS 3.5.0 present.
@@ -13,8 +12,8 @@ Table at 0x69AE5000.
 Handle 0x0000, DMI type 0, 26 bytes
 BIOS Information
 	Vendor: American Megatrends International, LLC.
-	Version: 10.01
-	Release Date: 09/30/2024
+	Version: 12.01
+	Release Date: 09/24/2025
 	Address: 0xF0000
 	Runtime Size: 64 kB
 	ROM Size: 16 MB
@@ -144,14 +143,14 @@ Handle 0x0008, DMI type 9, 17 bytes
 System Slot Information
 	Designation: M2_1
 	Type: x1 PCI Express
-	Current Usage: Available
+	Current Usage: In Use
 	Length: Short
 	ID: 33
 	Characteristics:
 		3.3 V is provided
 		Opening is shared
 		PME signal is supported
-	Bus Address: 0000:06:00.0
+	Bus Address: 0000:02:00.0
 
 Handle 0x0009, DMI type 9, 17 bytes
 System Slot Information
@@ -164,7 +163,7 @@ System Slot Information
 		3.3 V is provided
 		Opening is shared
 		PME signal is supported
-	Bus Address: 0000:02:00.0
+	Bus Address: 0000:03:00.0
 
 Handle 0x000A, DMI type 9, 17 bytes
 System Slot Information
@@ -430,7 +429,7 @@ Handle 0x001C, DMI type 221, 26 bytes
 OEM-specific Type
 	Header and Data:
 		DD 1A 1C 00 03 01 00 0C 00 AD 50 00 02 00 00 00
-		00 36 00 03 00 FF FF FF FF FF
+		00 3A 00 03 00 FF FF FF FF FF
 	Strings:
 		Reference Code - CPU
 		uCode Version

@@ -16,7 +16,7 @@ sudo apt install libffi-dev libyaml-dev
 
 ## Use rbenv
 
-The following is obsolete.  Use mise approach above.
+The following is obsolete. Use mise approach above.
 
 Install [rbenv](https://github.com/rbenv/rbenv):
 

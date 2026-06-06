@@ -38,6 +38,7 @@ Show (follow) current events
 ```sh
 journalctl -f
 ```
+
 Show the Last 50 error-level logs
 
 ```sh
