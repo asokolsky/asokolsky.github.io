@@ -12,7 +12,7 @@
 | Motherboard | ASRock Z370M-ITX/ac LGA 1151 Intel Z370 HDMI SATA 6Gb/s USB 3.1 Mini ITX        |
 | RAM         | Crucial Pro 2x16GB DDR4 3200MT/s CP2K16G4DFRA32A                                |
 | Ethernet    | onboard I219-V, I211                                                            |
-| GPU         | NVIDIA GeForce RTX 3050 LP 6GB, [more](nvidia-smi.html)                         |
+| GPU         | NVIDIA GeForce RTX 3050 LP 6GB, [nvidia-smi](nvidia-smi.html)                   |
 | SSD         | 500GB WD Blue SN550 NVMe M.2 2280, 3D NAND, Up to 2,400 MB/s - WDS500G2B0C      |
 | PSU         | 300W TFX12V PSU                                                                 |
 | Case        | [IN-WIN CE685.FH300TB3 MicroATX case](https://www.newegg.com/p/N82E16811108109) |

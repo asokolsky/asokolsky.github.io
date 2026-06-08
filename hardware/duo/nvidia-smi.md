@@ -1,5 +1,7 @@
 # nvidia-smi
 
+[man nvidia-smi](https://manpages.org/nvidia-smi)
+
 ```
 alex@duo > nvidia-smi
 Fri Mar  7 11:57:56 2025
