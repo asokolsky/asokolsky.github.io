@@ -53,3 +53,20 @@ GCC version:  gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04)
 ```
 
 reboot helped
+
+## nvitop
+
+```sh
+# 1. Install pipx from the Ubuntu repositories
+sudo apt update && sudo apt install -y pipx
+
+# 2. Add the pipx binary folder to your Zsh path configuration
+pipx ensurepath
+
+# 3. Reload your terminal shell to apply the new path changes
+source ~/.zshrc
+
+# 4. Install and run nvitop
+pipx install nvitop
+nvitop
+```
