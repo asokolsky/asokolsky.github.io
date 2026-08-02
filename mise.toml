@@ -7,17 +7,16 @@ ruff = 'latest'
 
 [tasks.versions]
 description = "Show versions of the toolchain components"
-run = [
-    'mise ls',
-]
 dir = "{{cwd}}"
+run = """
+  mise ls
+"""
 
 [tasks.clean]
 description = "Do local clean"
-run = [
-    'find . -type d -name .venv -prune -exec rm -fr {} \;',
-    'find . -type d -name venv -prune -exec rm -fr {} \;',
-]
+run = """
+  rm -fr **/.venv/ **/venv/
+"""
 
 [tasks.format]
 description = "Format Markdown files in-place"
