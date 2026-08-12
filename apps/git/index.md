@@ -10,6 +10,7 @@
 - [git squash](squash-commits.html)
 - [Using Multiple GitHub Accounts](multiple-gh-accounts.html)
 - [FAQs](faq.html)
+- [Worktree Workflow](worktree.html)
 
 And more:
 

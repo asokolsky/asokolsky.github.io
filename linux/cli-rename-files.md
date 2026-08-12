@@ -4,7 +4,7 @@
 
 What worked for me:
 
-- install mmv using `sudo apt install mmv`;
+- install mmv using `sudo apt install mmv` or `brew install mmv`;
 - [mmv man page](https://www.systutorials.com/docs/linux/man/1-mmv/) has good
   examples;
 - use it

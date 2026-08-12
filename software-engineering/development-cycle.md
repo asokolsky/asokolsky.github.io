@@ -93,7 +93,7 @@ At this phase you many need to:
 - [resolve merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts);
 - [rebase your branch](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase).
 
-See [Merge vs Rebase Workflow](/apps/git/workflow.html)
+See [Merge vs Rebase Workflow](/apps/git/merge-vs-rebase-workflow.html)
 
 ## 5. Merge the pull request
 
