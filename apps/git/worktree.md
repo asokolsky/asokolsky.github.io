@@ -1,24 +1,25 @@
 # Git Worktree Workflow
 
-Git worktrees let one repository have multiple checked-out branches in separate directories. DLI developers use them to isolate concurrent issues, merge requests, reviews, and urgent fixes without repeatedly switching or stashing the main worktree.
+Git worktrees let one repo have multiple checked-out branches in separate directories. Developers use them to isolate concurrent issues, merge requests, reviews, and urgent fixes without repeatedly switching or stashing the main worktree.
 
 ## Terminology
 
-This document uses Git's worktree terminology:
+This doc uses Git's worktree terminology:
 
-- Repository — the shared Git object database and administrative data used by all worktrees.
-- Worktree — a checked-out working directory plus its associated Git state.
-- Main worktree — the first worktree created by `git clone` or `git init`. Git documentation calls this the main worktree even when the repository's default branch has another name.
-- Linked worktree — an additional worktree created with `git worktree add` and linked to the same repository.
-- Projects root — the local parent directory that contains main worktrees and the sibling `.worktrees` directory. This is a convention in this document, not Git terminology.
-- Default branch — the repository's primary integration branch, commonly `main` or `master`. It is distinct from the term main worktree.
+- Repo: the shared Git object database and administrative data used by all worktrees.
+- Superproject: a Git repo that contains one or more submodules. It tracks each submodule by its path and expected commit, while each submodule remains a separate Git repo with its own history and working tree.
+- Worktree: a checked-out working directory plus its associated Git state.
+- Main worktree: the first worktree created by `git clone` or `git init`. Git documentation calls this the main worktree even when the repo default branch has another name.
+- Linked worktree: an additional worktree created with `git worktree add` and linked to the same repo.
+- Projects root: the local parent directory that contains main worktrees and the sibling `.worktrees` directory. This is a convention in this document, not Git terminology.
+- Default branch: the repo's primary integration branch, commonly `main` or `master`. It is distinct from the term main worktree.
 
 ## Benefits
 
-- Stable Main Worktree. Keep the main worktree on the default branch and free of task changes. It remains a reliable place to fetch remote state, inspect repository-wide status, and manage linked worktrees.
+- Stable Main. Keep the main worktree on the default branch and free of task changes. It remains a reliable place to fetch remote state, inspect repo-wide status, and manage linked worktrees.
 - Safer Concurrent Work. Each task gets its own directory, branch, dependency state, and untracked files. Formatting, staging, tests, or cleanup in one task are less likely to affect another.
 - Faster Context Switching. Move between tasks by changing directories instead of stashing partial work or repeatedly switching branches. Long-running builds and local services can remain associated with their linked worktree.
-- Exact Merge/Pull Request Reviews. A detached linked worktree can inspect the exact merge request head without moving the main worktree or confusing local changes with the submitted diff.
+- Exact Merge Request Reviews. A detached linked worktree can inspect the exact merge request head without moving the main worktree or confusing local changes with the submitted diff.
 - Explicit Cleanup. Task directories make completed and abandoned work visible. A standard cleanup check prevents clean but unmerged commits, untracked files, or submodule changes from being deleted accidentally.
 
 ## When To Use A Worktree
@@ -26,7 +27,7 @@ This document uses Git's worktree terminology:
 Use a linked worktree for:
 
 - Issue- or merge-request-driven implementation
-- Concurrent development tasks in the same repository
+- Concurrent development tasks in the same repo
 - Urgent fixes while another task is incomplete
 - Exact-head merge request review
 - Work that runs task-specific builds, services, or dependency installation
@@ -35,6 +36,13 @@ A linked worktree is optional for a brief read-only inspection when the main wor
 
 ## Directory Layout
 
+Use the projects root appropriate to the workstation:
+
+| OS    | Example Projects Root    |
+| ----- | ------------------------ |
+| macOS | `/Users/{user}/Projects` |
+| Linux | `/home/{user}/Projects`  |
+
 Keep main and linked worktrees separate beneath a common projects root:
 
 ```text
@@ -42,23 +50,25 @@ Keep main and linked worktrees separate beneath a common projects root:
 {projects-root}/.worktrees/{repo}/{work-id}-{short-slug}
 ```
 
-Use the projects root appropriate to the workstation:
+Reasons for the choice of location and naming of the `.worktrees` directory:
 
-| Operating System | Example Projects Root |
-|---|---|
-| macOS | `/Users/{user}/Projects` |
-| Linux | `/home/{user}/Projects` |
+- Isolation from the main worktree: linked worktrees do not appear inside repo-wide file searches, formatters, build contexts, or recursive tools started from the main worktree.
+- Central discovery: one hidden directory groups linked worktrees across repo, making active tasks and cleanup candidates easy to inspect.
+- Repo grouping: the `{repo}` level prevents task names from different repos from colliding and keeps ownership visible in paths.
+- Predictable automation: tools and agents can derive linked-worktree paths without inventing a new location for every task.
+- Sibling lifecycle: removing or recloning the main worktree does not make a nested linked-worktree directory look like ordinary repo content.
 
-You can choose another absolute projects root, just use the same root consistently for main worktrees and `.worktrees`.
+The `.worktrees` name keeps this operational directory out of normal directory listings while remaining explicit when requested. It is not a Git requirement: another organization-wide location is valid when used consistently and kept outside main worktrees.
 
-For example, a developer working in `my-repo` could have this directory tree:
+For example, a developer working in the `my-repo` would have this:
 
 ```text
 {projects-root}/
-├── my-repo/                         # Main worktree on main
+├── my-repo/                           # Main worktree on main
 └── .worktrees/
     └── my-repo/
-        ├── issue-123-foo-bar/         # Issue implementation
+        ├── issue-963-foo-bar/         # Issue implementation
+        ├── mr-236-bar-baz/            # Exact-head MR review
         └── fix-connection-timeout/    # Independent urgent fix
 ```
 
@@ -68,16 +78,16 @@ Do not create a linked worktree inside the main worktree.
 
 Use lowercase kebab-case and short descriptive slugs.
 
-| Work Type | Directory Pattern | Example |
-|---|---|---|
-| Merge request | `mr-{iid}-{slug}` | `mr-161-china-migration-runbook` |
-| Issue | `issue-{iid}-{slug}` | `issue-883-immutable-delivery` |
-| Feature | `feat-{slug}` | `feat-authenticated-smoke` |
-| Fix | `fix-{slug}` | `fix-capacity-reservation-races` |
-| Documentation | `docs-{slug}` | `docs-deployment-runbook` |
-| Experiment | `experiment-{slug}` | `experiment-cache-policy` |
+| Work Type     | Directory Pattern    | Example                        |
+| ------------- | -------------------- | ------------------------------ |
+| Merge request | `mr-{iid}-{slug}`    | `mr-161-foo-bar`               |
+| Issue         | `issue-{iid}-{slug}` | `issue-883-immutable-delivery` |
+| Feature       | `feat-{slug}`        | `feat-authenticated-smoke`     |
+| Fix           | `fix-{slug}`         | `fix-race-condition`           |
+| Documentation | `docs-{slug}`        | `docs-deployment-runbook`      |
+| Experiment    | `experiment-{slug}`  | `experiment-cache-policy`      |
 
-Repository branch naming rules still apply. The branch and worktree directory do not need identical names.
+Repo branch naming rules still apply. The branch and worktree directory do not need identical names.
 
 ## Create Or Reuse A Worktree
 
@@ -98,7 +108,7 @@ git worktree add \
   origin/main
 ```
 
-Follow repository-specific instructions when the default branch is not `main` or the task has a prescribed base branch.
+Follow repo-specific instructions when the default branch is not `main` or the task has a prescribed base branch.
 
 ## Review A Merge Request At Its Exact Head
 
@@ -124,18 +134,29 @@ Verify that the checked-out commit matches the merge request's current head befo
 - Preserve unrelated or pre-existing changes.
 - Run formatting, tests, builds, and local services from the linked worktree.
 - Inspect `git diff --cached` before committing.
-- Follow the repository's commit and merge request procedures.
+- Follow the repo's commit and merge request procedures.
 
 ## Decide Whether Cleanup Is Safe
 
 Do not remove a worktree until:
 
 1. Its exact path and associated branch are known.
-2. Its superproject and initialized submodules contain no modified, staged, or untracked files.
-3. Its commits are merged, squash-merged, preserved remotely, or explicitly approved for discard.
-4. Associated merge request, pipeline, deployment, or review work has reached the required outcome.
+1. Its superproject and initialized submodules contain no modified, staged, or untracked files.
+1. Its commits are merged, squash-merged, preserved remotely, or explicitly approved for discard.
+1. Associated merge request, pipeline, deployment, or review work has reached the required outcome.
 
 A clean status alone does not make cleanup safe. A clean branch can still contain commits that exist nowhere else.
+
+Inspect the superproject without honoring submodule ignore configuration:
+
+```bash
+git -C /absolute/worktree/path status \
+  --porcelain=v1 \
+  --untracked-files=all \
+  --ignore-submodules=none
+```
+
+Stop if this check produces dirty-state output or exits unsuccessfully.
 
 Squash merges need special care because the original branch commits are not ancestors of the squash commit. Confirm the live merge request head and recorded squash commit rather than relying on a single `git cherry` result.
 
@@ -155,16 +176,19 @@ Exit status `0` confirms that the commit is an ancestor of `origin/main`. A nonz
 Verify all of the following:
 
 1. The live merge request state is `merged`.
-2. GitLab reports the expected source `sha` and a non-null `squash_commit_sha`.
-3. The local branch tip equals the recorded merge request head SHA. Preserve or review any later local commits separately.
-4. The squash commit is reachable from the refreshed target:
+
+1. GitLab reports the expected source `sha` and a non-null `squash_commit_sha`.
+
+1. The local branch tip equals the recorded merge request head SHA. Preserve or review any later local commits separately.
+
+1. The squash commit is reachable from the refreshed target:
 
    ```bash
    git fetch origin main
    git merge-base --is-ancestor {squash-commit-sha} origin/main
    ```
 
-5. The aggregate merge request change matches the squash commit change:
+1. The aggregate merge request change matches the squash commit change:
 
    ```bash
    git diff --binary {mr-base-sha}..{mr-head-sha} |
@@ -186,12 +210,13 @@ Matching aggregate patch IDs provide strong evidence that the squash commit pres
 
 ## Remove A Completed Worktree
 
-Remove the worktree through Git, then delete its local branch and prune metadata:
+Preferred: use [cleanup-worktrees.sh](cleanup-worktrees.sh).
+
+Manual steps: remove the worktree through Git, then delete its local branch and verify the remaining worktrees:
 
 ```bash
 git worktree remove /absolute/worktree/path
 git branch -d {branch-name}
-git worktree prune
 git worktree list
 ```
 
@@ -201,16 +226,7 @@ Do not substitute recursive filesystem deletion for `git worktree remove`.
 
 ## Protect Submodule Work
 
-Before forced submodule deinitialization or worktree removal, inspect the superproject without honoring submodule ignore configuration:
-
-```bash
-git -C /absolute/worktree/path status \
-  --porcelain=v1 \
-  --untracked-files=all \
-  --ignore-submodules=none
-```
-
-Then inspect every initialized submodule recursively from inside that submodule:
+In addition to the superproject audit under [Decide Whether Cleanup Is Safe](#decide-whether-cleanup-is-safe), inspect every initialized submodule recursively from inside that submodule before forced submodule deinitialization or worktree removal:
 
 ```bash
 git -C /absolute/worktree/path submodule foreach --recursive '
@@ -242,36 +258,7 @@ git worktree remove --force /absolute/worktree/path
 
 ## Keep Remote Cleanup Separate
 
-Removing a local worktree and branch does not authorize deletion of its remote branch. Delete remote branches only when the merge request workflow or repository owner calls for it.
-
-Use one shell invocation to resolve the exact ref, delete it, and verify that same ref. This preserves the variable and the status returned directly by `git ls-remote`:
-
-```bash
-remote_ref="refs/heads/{branch-name}"
-remote_output="$(git ls-remote --exit-code --heads origin "$remote_ref")"
-result=$?
-test "$result" -eq 0 || exit "$result"
-
-IFS=$'\t' read -r remote_oid resolved_ref extra <<< "$remote_output"
-test -n "$remote_oid" || exit 1
-test "$resolved_ref" = "$remote_ref" || exit 1
-test -z "$extra" || exit 1
-
-git push \
-  --force-with-lease="$remote_ref:$remote_oid" \
-  origin \
-  ":$remote_ref"
-
-if git ls-remote --exit-code --heads origin "$remote_ref"; then
-  echo "Remote branch still exists: $remote_ref" >&2
-  exit 1
-else
-  result=$?
-  test "$result" -eq 2 || exit "$result"
-fi
-```
-
-The initial lookup must resolve exactly the intended ref. The explicit lease makes deletion fail if the remote ref no longer points to the captured object ID. In the final lookup, exit status `2` confirms that the previously resolved ref is absent; any other nonzero status is a lookup failure, not deletion evidence.
+Removing a local worktree and branch does not authorize deletion of its remote branch. Delete remote branches only when the merge request workflow or repo owner calls for it.
 
 ## Troubleshooting
 
