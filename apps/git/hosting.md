@@ -7,6 +7,6 @@
 | Company     | [Microsoft](https://en.wikipedia.org/wiki/Microsoft) | [GitLab](https://en.wikipedia.org/wiki/GitLab) | [Atlassian](https://en.wikipedia.org/wiki/Atlassian)                  |
 | .           | **Public** repo                                      | pricing                                        |                                                                       |
 | `<=5` users | $0                                                   | $0                                             | $0                                                                    |
-| `>5` users  | $0                                                   | $0                                             | [$3/user/month](https://www.atlassian.com/software/bitbucket/pricing) |
+| `>5` users  | $0                                                   | $0                                             | [$2/user/month](https://www.atlassian.com/software/bitbucket/pricing) |
 | .           | **Private** repo                                     | pricing                                        |                                                                       |
-| .           | [$0](https://github.com/pricing)                     | [$0](https://about.gitlab.com/pricing/)        | [$3/user/month](https://www.atlassian.com/software/bitbucket/pricing) |
+| . | [$0](https://github.com/pricing) | [$0](https://about.gitlab.com/pricing/)  | [$2/user/month](https://www.atlassian.com/software/bitbucket/pricing) |
