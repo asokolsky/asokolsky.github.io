@@ -9,4 +9,4 @@
 | `<=5` users | $0                                                   | $0                                             | $0                                                                    |
 | `>5` users  | $0                                                   | $0                                             | [$2/user/month](https://www.atlassian.com/software/bitbucket/pricing) |
 | .           | **Private** repo                                     | pricing                                        |                                                                       |
-| . | [$0](https://github.com/pricing) | [$0](https://about.gitlab.com/pricing/)  | [$2/user/month](https://www.atlassian.com/software/bitbucket/pricing) |
+| .           | [$0](https://github.com/pricing)                     | [$0](https://about.gitlab.com/pricing/)        | [$2/user/month](https://www.atlassian.com/software/bitbucket/pricing) |
