@@ -90,11 +90,11 @@ supports-test: no
 supports-eeprom-access: no
 supports-register-dump: no
 supports-priv-flags: no
-
+```
 
 ## Display NIC statistics
 
-Use `ethtool -S enp1s0` or, better yet,  `watch -d "ethtool -S eno1"`.
+Use `ethtool -S enp1s0` or, better yet, `watch -d "ethtool -S eno1"`.
 
 ```
 
@@ -139,13 +139,11 @@ rx_mac_missed: 0
 rx_tcam_dropped: 0
 tdu: 0
 rdu: 0
-
 ```
 
 ## NIC test
 
 ```
-
 root@pmox3:~# ethtool -t eno1
 The test result is PASS
 The test extra info:
@@ -154,10 +152,63 @@ Eeprom test (offline) 0
 Interrupt test (offline) 0
 Loopback test (offline) 0
 Link test (on/offline) 0
-
 ```
 
+but
 
+```
 root@pmox3:~# ethtool -t enp1s0
 Cannot test: Operation not supported
+```
+
+## rtl8125b Connecting at 100 Mbps
+
+```
+alex@exi > sudo ethtool enp4s0
+[sudo] password for alex:
+Settings for enp4s0:
+	Supported ports: [ TP	 MII ]
+	Supported link modes:   10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
+	                        2500baseT/Full
+	Supported pause frame use: Symmetric Receive-only
+	Supports auto-negotiation: Yes
+	Supported FEC modes: Not reported
+	Advertised link modes:  10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
+	                        2500baseT/Full
+	Advertised pause frame use: Symmetric Receive-only
+	Advertised auto-negotiation: Yes
+	Advertised FEC modes: Not reported
+	Link partner advertised link modes:  10baseT/Half 10baseT/Full
+	                                     100baseT/Half 100baseT/Full
+	                                     1000baseT/Full
+	Link partner advertised pause frame use: No
+	Link partner advertised auto-negotiation: Yes
+	Link partner advertised FEC modes: Not reported
+	Speed: 100Mb/s
+	Duplex: Full
+	Auto-negotiation: on
+	master-slave cfg: preferred slave
+	Port: Twisted Pair
+	PHYAD: 0
+	Transceiver: internal
+	MDI-X: Unknown
+	Supports Wake-on: pumbg
+	Wake-on: g
+	Link detected: yes
+```
+
+Trying to solve it - just unplug the ethernet cable and plug it back in.
+If this does not help:
+
+```
+# unload and reload the default kernel driver:
+sudo modprobe -r r8169 && sudo modprobe r8169
+# restart NetworkManager to refresh the connection:
+sudo systemctl restart NetworkManager
+# refresh DHCP lease
+sudo dhclient -v enp4s0
 ```
