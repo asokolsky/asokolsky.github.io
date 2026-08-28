@@ -190,9 +190,5 @@ kube-proxy:
 
 ## YAML manifests
 
-Always have:
-
-- apiVersion
-- kind
-- metadata
-- spec
+See [Kubernetes manifest best practices](manifest-best-practices.html) for object fields,
+multi-document YAML, declarative management, and validation.
