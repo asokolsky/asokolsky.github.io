@@ -26,7 +26,7 @@ Depending on the platform, the [user settings](https://code.visualstudio.com/doc
 | OS      | Path                                                                                       |
 | ------- | ------------------------------------------------------------------------------------------ |
 | Windows | `%APPDATA%\Code\User\`, where `%APPDATA%` is usually `C:\Users\_username_\AppData\Roaming` |
-| MacOS   | `/Users/_username_/Library/Application Support/Code/User/`                                 |
+| MacOS   | `~/Library/Application Support/Code/User/`                                 |
 | Linux   | `~/.config/Code/User/`                                                                     |
 
 ### settings.json
