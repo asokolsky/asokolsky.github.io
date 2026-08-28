@@ -1,7 +1,8 @@
 # K8s Topics
 
 - k8s [concepts](concepts.html) and
-  [implementations](k8s-implementations.html)
+  [implementations](k8s-implementations.html), and
+  [manifest best practices](manifest-best-practices.html)
 - `kubectl` [installation](kubectl-install.html),
   a [cheat sheet](kubectl.html), [profiles](kubectl-manage-profile.html)
 - use `kubectl` to manage [pods](kubectl-pods.html), [nodes](kubectl-nodes.html),
