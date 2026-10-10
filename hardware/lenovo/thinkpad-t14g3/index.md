@@ -1,5 +1,7 @@
 # Lenovo Thinkpad T14 Gen 3
 
+Retired.
+
 ## Specifications
 
 [Specs](https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_T14_Gen_3_Intel/ThinkPad_T14_Gen_3_Intel_Spec.pdf)

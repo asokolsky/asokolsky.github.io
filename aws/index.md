@@ -50,3 +50,8 @@ example use: [aws-describe](https://github.com/asokolsky/aws-describe)
 ## Good Read
 
 [finding ami ids](https://www.fundamentals-of-devops.com/resources/2025/02/24/finding-ami-ids/)
+
+## Open Source Alternatives
+
+* [Spinifex](https://github.com/mulgadc/spinifex)
+* [MinIO](https://github.com/minio/minio)
