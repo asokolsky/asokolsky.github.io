@@ -7,6 +7,7 @@ especially after it is serialized.
 NOTE:
 
 The color.py approach was sensible before Python 3.11, but should no longer be the preferred style:
+
 - [`Color(str, Enum)` (line 9)](color.py:9) is now superseded by StrEnum.
 - The custom [`__repr__` (line 40)](color.py:40) changes interactive/container display; it is not what enables string serialization.
 - [`Color._value2member_map_` (line 38)](color.py:38) accesses a private implementation detail.
@@ -67,12 +68,14 @@ class Color(StrEnum):
 ```
 
 Parse external input explicitly:
+
 ```python
 color = Color(raw_value)  # raises ValueError for unknown input
 ```
 
 The [`PersistedEnum` (line 30)](https://github.com/asokolsky/agent-orchestra/blob/main/src/agent_orchestra/persisted_enum.py:30) style is stronger when values are written to evidence, databases, or files:
+
 - [`values()` (line 33)](https://github.com/asokolsky/agent-orchestra/blob/main/src/agent_orchestra/persisted_enum.py:33) derives validation data from the members.
 - [`decode()` (line 39)](https://github.com/asokolsky/agent-orchestra/blob/main/src/agent_orchestra/persisted_enum.py:39) rejects non-strings and unknown future values at the read boundary.
 - The injected failure function translates malformed persisted data into the subsystem’s stable domain error.
-That failure callback would be unnecessary abstraction for a simple color enum, but it is justified for agent-orchestra’s persistence contract.
+  That failure callback would be unnecessary abstraction for a simple color enum, but it is justified for agent-orchestra’s persistence contract.

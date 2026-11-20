@@ -53,5 +53,5 @@ example use: [aws-describe](https://github.com/asokolsky/aws-describe)
 
 ## Open Source Alternatives
 
-* [Spinifex](https://github.com/mulgadc/spinifex)
-* [MinIO](https://github.com/minio/minio)
+- [Spinifex](https://github.com/mulgadc/spinifex)
+- [MinIO](https://github.com/minio/minio)

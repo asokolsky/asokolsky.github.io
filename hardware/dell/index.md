@@ -16,17 +16,17 @@
 ![U3824DW Connectors](U3824DW-connectors.avif "Connectors")
 
 1. Security lock slot (based on Kensington Security Slot™)
-2. Power connector
-3. 2x HDMI 2.1
-4. DisplayPort 1.4
-5. USB Type-C upstream port (video and data). (Alternate mode with DisplayPort 1.4, Power Delivery up to 90W)
-6. Audio line-out port
-7. USB Type-C upstream port (data only, 10 Gbps, USB 3.2 Gen 2)
-8. 4x USB Type-A downstream ports (SuperSpeed USB 10 Gbps, USB 3.2 Gen 2)
-9. RJ45 Ethernet port, 2.5GbE
-10. Stand lock
-11. USB Type-A downstream port (SuperSpeed USB 10 Gbps, USB 3.2 Gen 2) with BC1.2 charging capability at 2A (max)
-12. 2x USB-C downstream ports (SuperSpeed USB 10 Gbps, USB 3.2 Gen 2) with charging capability at 15W (max)
-13. Speakers
-14. Power On/Off button
-15. Joystick
+1. Power connector
+1. 2x HDMI 2.1
+1. DisplayPort 1.4
+1. USB Type-C upstream port (video and data). (Alternate mode with DisplayPort 1.4, Power Delivery up to 90W)
+1. Audio line-out port
+1. USB Type-C upstream port (data only, 10 Gbps, USB 3.2 Gen 2)
+1. 4x USB Type-A downstream ports (SuperSpeed USB 10 Gbps, USB 3.2 Gen 2)
+1. RJ45 Ethernet port, 2.5GbE
+1. Stand lock
+1. USB Type-A downstream port (SuperSpeed USB 10 Gbps, USB 3.2 Gen 2) with BC1.2 charging capability at 2A (max)
+1. 2x USB-C downstream ports (SuperSpeed USB 10 Gbps, USB 3.2 Gen 2) with charging capability at 15W (max)
+1. Speakers
+1. Power On/Off button
+1. Joystick
