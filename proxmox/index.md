@@ -40,6 +40,7 @@ In a VM:
 
 In an LXC container:
 
+- [Create, check, and upgrade an LXC from an OCI image](lxc-from-oci.html)
 - [mqtt](lxc-mqtt.html)
 - [octoprint](lxc-octoprint.html)
 - [myspeed](lxc-myspeed.html)
